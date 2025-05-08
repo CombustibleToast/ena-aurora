@@ -34,6 +34,11 @@ shipyard-console-menu-engine-label = Engine:{" "}
 
 shipyard-console-purchase-available = Purchase
 shipyard-console-guidebook = Manual
+# Monolith start
+shipyard-console-unassign-deed = Unassign
+shipyard-console-deed-unassigned = Deed unassigned from ID card successfully.
+shipyard-console-confirm-unassign = Are you sure?
+# Monolith end
 
 # Keep these in enum order for ease of validation.
 shipyard-console-category-All = All
