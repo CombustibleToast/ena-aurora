@@ -4,6 +4,7 @@
   keycode: 'd'
   frequency: 1022
   color: "#CC6633"
+  maxRange: 500
 
 # Aurora Song - Changed id from "Nfsd" to "Sle" (Station Law Enforcement)
 - type: radioChannel
