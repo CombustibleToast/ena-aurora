@@ -41,3 +41,21 @@
       amount: 1
   products:
     Salsa: 5
+
+#Special Dough
+
+- type: reaction
+  id: CreateRiceDough
+  impact: Low
+  quantized: true
+  conserveEnergy: false
+  requiredMixerCategories:
+  - Stir
+  reactants:
+    Rice:
+      amount: 40
+    Water:
+      amount: 10
+  effects:
+    - !type:CreateEntityReactionEffect
+      entity: FoodRiceDough
