@@ -58,7 +58,6 @@
     vendPrice: 2000 # eat it
   - type: PortableScrubber
     baseTransferRate: 1
-    TransferRate: 1
     amPlant: true
     partRatingTransferRateModifier: 2.0
     filterGases:
