@@ -19,10 +19,13 @@
           - "reagent-effect-aphrodisiac-mild3"
           - "reagent-effect-aphrodisiac-mild4"
           - "reagent-effect-aphrodisiac-mild5"
-        probability: 0.035
+        probability: 1
         conditions:
           - !type:ReagentThreshold
             max: 50
+          - !type:Consent
+            EffectTypes:
+              - Aphrodisiac
       - !type:PopupMessage # Overdose causes nausea and vomiting
         type: Local
         visualType: Medium
