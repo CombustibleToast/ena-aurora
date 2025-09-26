@@ -51,12 +51,18 @@
             - !type:NFIsHumanoid
             - !type:ReagentThreshold
               min: 15
+            - !type:Consent # Aurora Song
+              EffectTypes:
+                - Polymorph
         - !type:AdjustReagent
           reagent: Catgirlium
           amount: -2
           conditions:
             - !type:ReagentThreshold
               min: 15
+            - !type:Consent # Aurora Song
+              EffectTypes:
+                - Polymorph
         - !type:GenericStatusEffect
           key: Stutter
           component: ScrambledAccent
@@ -76,6 +82,9 @@
         conditions:
         - !type:ReagentThreshold
           min: 15
+        - !type:Consent # Aurora Song
+          EffectTypes:
+            - Polymorph
         damage:
           types:
             Asphyxiation: 2
@@ -98,9 +107,15 @@
             - !type:NFIsHumanoid
             - !type:ReagentThreshold
               min: 20
+            - !type:Consent # Aurora Song
+              EffectTypes:
+                - Polymorph
         - !type:AdjustReagent
           reagent: Davisicium
           amount: -3
           conditions:
             - !type:ReagentThreshold
               min: 20
+            - !type:Consent # Aurora Song
+              EffectTypes:
+                - Polymorph
