@@ -1,3 +1,4 @@
+using Content.Shared.Humanoid.Prototypes; // Misfit - Species Trait Hiding
 using Content.Shared.Whitelist;
 using Robust.Shared.Prototypes;
 
@@ -60,4 +61,11 @@ public sealed partial class TraitPrototype : IPrototype
     /// </summary>
     [DataField]
     public ProtoId<TraitCategoryPrototype>? Category;
+
+    /// Misfit - Species Trait Hiding
+    /// <summary>
+    /// Species blacklist for certain traits, this applies to the menu as well, hence its separation.
+    /// </summary>
+    [DataField]
+    public ProtoId<SpeciesPrototype>[] SpeciesBlacklist = [];
 }

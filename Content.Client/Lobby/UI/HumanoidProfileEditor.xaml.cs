@@ -241,6 +241,7 @@ namespace Content.Client.Lobby.UI
                 SetSpecies(selectedSpeciesId);
                 UpdateHairPickers();
                 OnSkinColorOnValueChanged();
+                RefreshTraits(); // Misfit - Add trait hiding.
 
                 // Aurora: Update height/width slider limits based on species
                 var speciesProto = _prototypeManager.Index<SpeciesPrototype>(selectedSpeciesId);
@@ -585,6 +586,14 @@ namespace Content.Client.Lobby.UI
 
             foreach (var trait in traits)
             {
+                // Begin Misfit - Add trait hiding
+                if (Profile?.Species is { } selectedSpecies && trait.SpeciesBlacklist.Contains(selectedSpecies))
+                {
+                    Profile = Profile?.WithoutTraitPreference(trait.ID, _prototypeManager);
+                    continue;
+                }
+                // End Misfit
+
                 if (trait.Category == null)
                 {
                     defaultTraits.Add(trait.ID);
