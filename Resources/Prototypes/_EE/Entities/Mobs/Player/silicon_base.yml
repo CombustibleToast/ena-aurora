@@ -194,6 +194,7 @@
         - CanPilot
         - FootstepSound
         - DoorBumpOpener
+        - SiliconOrIPCEmotes # DeltaV
     - type: Hands
     - type: Inventory
       templateId: human

@@ -464,6 +464,12 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+    Boop: # DeltaV (EE)
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg      
+    Whirr: # DeltaV (EE)
+      collection: IPCWhirrs
+      params:
+        variation: 0
 
 - type: emoteSounds
   id: UnisexSiliconSyndicate
@@ -486,6 +492,12 @@
       path: /Audio/Items/bikehorn.ogg
     Ping:
       path: /Audio/Effects/Cargo/ping.ogg
+    Boop: # DeltaV (EE)
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg      
+    Whirr: # DeltaV (EE)
+      collection: IPCWhirrs
+      params:
+        variation: 0
 
 - type: emoteSounds
   id: UnisexSiliconXenoborg
@@ -506,6 +518,12 @@
       collection: XenoborgBikeHorn
     Ping:
       collection: XenoborgPing
+    Boop: # DeltaV (EE)
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg      
+    Whirr: # DeltaV (EE)
+      collection: IPCWhirrs
+      params:
+        variation: 0
 
 # body emotes
 - type: emoteSounds

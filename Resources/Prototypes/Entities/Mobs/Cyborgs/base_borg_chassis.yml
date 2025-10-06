@@ -245,6 +245,7 @@
     - FootstepSound
     - CanPilot
     - SiliconEmotes
+    - SiliconOrIPCEmotes # DeltaV
     - Unimplantable
   - type: Emoting
   - type: GuideHelp

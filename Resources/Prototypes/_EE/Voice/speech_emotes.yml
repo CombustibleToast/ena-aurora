@@ -8,13 +8,18 @@
   id: Boop
   name: chat-emote-name-boop
   category: Vocal
-  available: false
-  chatMessages: [ boops ]
+  whitelist:
+    tags: # DeltaV - let borgs, bots, and IPCs use it
+    - SiliconOrIPCEmotes
+  chatMessages: [ boops. ] # DeltaV - period
   chatTriggers:
     - boops
 
 - type: emote
   id: Whirr # uncategorized as it is generic
+  whitelist:
+    tags: # DeltaV - let borgs, bots, and IPCs use it
+    - SiliconOrIPCEmotes
   name: chat-emote-name-whirr
   available: false
   chatMessages: [ whirrs ]

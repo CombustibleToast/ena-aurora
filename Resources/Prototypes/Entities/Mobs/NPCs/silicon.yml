@@ -25,6 +25,7 @@
     tags:
     - DoorBumpOpener
     - SiliconEmotes
+    - SiliconOrIPCEmotes # DeltaV
     - Unimplantable
   - type: MobState
     allowedStates:
@@ -104,6 +105,7 @@
     tags:
     - DoorBumpOpener
     - SiliconEmotes
+    - SiliconOrIPCEmotes # DeltaV
     - Bot
     - Unimplantable
   - type: Body
@@ -466,6 +468,7 @@
     - DoorBumpOpener
     - FootstepSound
     - SiliconEmotes
+    - SiliconOrIPCEmotes # DeltaV
     - Bot
     - Unimplantable
   - type: ActiveRadio
