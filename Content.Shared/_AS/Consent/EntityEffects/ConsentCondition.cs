@@ -7,7 +7,7 @@ namespace Content.Shared._AS.Consent.EntityEffects;
 
 public sealed partial class Consent : EntityEffectCondition
 {
-    [DataField]
+    [DataField(required: true)]
     public List<ProtoId<ConsentTogglePrototype>> EffectTypes = default!;
 
     public override bool Condition(EntityEffectBaseArgs args)
