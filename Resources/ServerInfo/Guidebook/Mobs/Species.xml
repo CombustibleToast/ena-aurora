@@ -29,6 +29,6 @@
   <GuideEntityEmbed Entity="MobIPCDummy" Caption="I.P.C."/>
   <GuideEntityEmbed Entity="MobRodentia" Caption="Rodentia"/>
   <GuideEntityEmbed Entity="MobFeroxi" Caption="Feroxi"/>
+  <GuideEntityEmbed Entity="MobOvinia" Caption="Ovinia"/>
   </Box>
-
 </Document>
