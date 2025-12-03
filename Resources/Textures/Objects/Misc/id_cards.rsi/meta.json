@@ -233,6 +233,9 @@
             "name": "idwizard"
         },
         {
+            "name": "mantis"
+        },
+        {
             "name": "gold-inhand-left",
             "directions": 4
         },

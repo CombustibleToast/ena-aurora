@@ -28,6 +28,9 @@
         !type:DamageTrigger
         damage: 50
       behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak # TheDen - It's weird they just disappear
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetSteel1:

@@ -1,0 +1,54 @@
+# SPDX-FileCopyrightText: 2024 Dakota Haven
+# SPDX-FileCopyrightText: 2024 Fansana
+# SPDX-FileCopyrightText: 2024 FoxxoTrystan
+# SPDX-FileCopyrightText: 2024 ShatteredSwords
+# SPDX-FileCopyrightText: 2024 cynical
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 BlitzTheSquishy
+# SPDX-FileCopyrightText: 2025 DeNatus
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+#Psionic Mantis - ForensicMantis
+- type: entity
+  parent: ClothingHandsBase
+  id: ClothingHandsMantisEpiWarmers
+  name: mantis arm-warmers
+  description: A pair of rather nice arm-warmers, styled for a mantis.
+  components:
+  - type: Sprite # TheDen - Redid the mantis uniforms without removing the old items
+    sprite: _Floof/Clothing/Departmental/Epistemics/mantisepiwarmer.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Departmental/Epistemics/mantisepiwarmer.rsi
+  - type: Fiber
+    fiberMaterial: fibers-synthetic
+    fiberColor: fibers-blue
+  - type: FingerprintMask
+
+- type: entity
+  parent: [ClothingShoesBaseSocks, ClothingShoesMilitaryBase] #TheDen
+  id: ClothingUnderSocksMantisEpi
+  name: mantis thigh-high socks
+  description: A pair of thigh-high socks, styled for a mantis
+  components:
+  - type: Sprite # TheDen - Redid the mantis uniforms without removing the old items
+    sprite: _Floof/Clothing/Departmental/Epistemics/mantisepisocks.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Departmental/Epistemics/mantisepisocks.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformMantisEpiThong
+  name: mantis thong
+  description: Styled for a mantis, but is this even considered a piece of clothing?
+  components:
+  - type: Sprite # TheDen - Redid the mantis uniforms without removing the old items
+    sprite: _Floof/Clothing/Departmental/Epistemics/mantisepithong.rsi
+  - type: Clothing
+    sprite: _Floof/Clothing/Departmental/Epistemics/mantisepithong.rsi
+  - type: Tag #DeltaV, needed for species with nonhuman legs/can only wear skirts
+    tags:
+    - Skirt

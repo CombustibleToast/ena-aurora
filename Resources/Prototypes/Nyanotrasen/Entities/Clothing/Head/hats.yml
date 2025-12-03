@@ -38,6 +38,22 @@
 
 - type: entity
   parent: ClothingHeadBase
+  id: ClothingHeadHatFezMantis
+  name: dated mantis fez
+  description: "A fine red fez with a gold tassel. All the company would pay for prior to the mantis equipment refresh." # TheDen
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Head/Hats/mantis_fez.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Head/Hats/mantis_fez.rsi
+  - type: Tag # TheDen
+    tags:
+    - WhitelistChameleon
+    - MantisBeltStorable
+
+- type: entity
+  parent: ClothingHeadBase
   id: ClothingHeadPrisonGuard
   name: prison guard's hat
   description: Grants full immunity from denying others basic human rights, dignity, or respect.

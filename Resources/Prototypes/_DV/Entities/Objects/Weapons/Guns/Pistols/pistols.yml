@@ -1,0 +1,59 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2024 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2024 Tryded
+# SPDX-FileCopyrightText: 2024 VMSolidus
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Dvir
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: psi-breaker
+  parent: [BaseWeaponPistol, BaseMantisContraband]
+  id: WeaponPistolPsiBreaker
+  suffix: DO NOT MAP # Mantes shouldn't get free lethals
+  description: "A gloomy pistol with an amaranth grip. Provides no tactical advantage. Uses .38 special ammo." # TheDen
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Pistols/psibreaker.rsi
+  - type: Gun
+    fireRate: 3.5
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazinePistolSpecialMindbreaker
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazinePistolSpecial
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeSpecialMindbreaker
+        priority: 1
+        whitelist:
+          tags:
+          - CartridgeSpecial
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: Clothing # TheDen
+    sprite: _DV/Objects/Weapons/Guns/Pistols/psibreaker.rsi
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+  - type: Tag # TheDen
+    tags:
+    - Sidearm
+    - MantisBeltStorable
