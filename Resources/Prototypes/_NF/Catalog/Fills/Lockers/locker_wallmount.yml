@@ -354,6 +354,15 @@
     - id: PlantBag
     - id: BoxMouthSwab
     - id: Dropper
+  id: LockerWallColorHydroponicsEmpty
+  suffix: Empty, Frontier
+  parent: [LockerWallColorHydroponics, BaseStructureWallmount]
+  name: botanist wall locker
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: base
+    stateDoorOpen: open
+    stateDoorClosed: door
 
 - type: entity
   id: LockerWallColorHydroponicsFilled
@@ -372,4 +381,13 @@
     stateBaseClosed: base
     stateDoorOpen: open
     stateDoorClosed: door
+  parent: LockerWallColorPilot
+  id: LockerWallColorPilotFilled
+  suffix: Filled, Frontier
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: NFStorageFillGearPilot
+
 # endregion
