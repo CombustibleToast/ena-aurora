@@ -309,7 +309,7 @@
   components:
   - type: MobThrowableOnHit
   - type: Stamina
-    critThreshold: 0
+    critThreshold: 100
 
 - type: entity
   id: MobStaminaSpecial
