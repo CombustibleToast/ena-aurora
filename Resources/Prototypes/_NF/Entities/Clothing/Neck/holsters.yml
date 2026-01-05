@@ -98,6 +98,9 @@
       neck:
       - state: equipped-NECK
         color: "#515151"
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK
+        color: "#515151"
   - type: Item
     inhandVisuals:
       left:
@@ -148,6 +151,9 @@
     sprite: _NF/Clothing/Neck/Misc/holster_thigh_sheath.rsi
     clothingVisuals:
       neck:
+      - state: equipped-NECK
+        color: "#515151"
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK
         color: "#515151"
   - type: Item

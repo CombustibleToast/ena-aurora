@@ -38,6 +38,14 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#96A3B0"
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK
+        color: "#A396B0"
+        map: [ "wizard_stole_base" ]
+      - state: equipped-NECK-unshaded-01
+        map: [ "wizard_stole_runes" ]
+        shader: unshaded
+        color: "#96A3B0"
   - type: RandomSprite
     available:
       - wizard_stole_base:
@@ -77,6 +85,14 @@
   - type: Clothing
     clothingVisuals:
       neck:
+      - state: equipped-NECK
+        color: "#7A003D"
+        map: [ "wizard_stole_base" ]
+      - state: equipped-NECK-unshaded-01
+        map: [ "wizard_stole_runes" ]
+        shader: unshaded
+        color: "#7A3D00"
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK
         color: "#7A003D"
         map: [ "wizard_stole_base" ]
@@ -130,6 +146,14 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#AB769E"
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK
+        color: "#8376AB"
+        map: [ "wizard_stole_base" ]
+      - state: equipped-NECK-unshaded-01
+        map: [ "wizard_stole_runes" ]
+        shader: unshaded
+        color: "#AB769E"
   - type: RandomSprite
     available:
       - wizard_stole_base:
@@ -169,6 +193,14 @@
   - type: Clothing
     clothingVisuals:
       neck:
+      - state: equipped-NECK
+        color: "#422424"
+        map: [ "wizard_stole_base" ]
+      - state: equipped-NECK-unshaded-01
+        map: [ "wizard_stole_runes" ]
+        shader: unshaded
+        color: "#6e3c3c"
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK
         color: "#422424"
         map: [ "wizard_stole_base" ]
@@ -223,6 +255,14 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#A65746"
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK
+        color: "#4593a5"
+        map: [ "wizard_stole_base" ]
+      - state: equipped-NECK-unshaded-01
+        map: [ "wizard_stole_runes" ]
+        shader: unshaded
+        color: "#A65746"
   - type: TemperatureProtection
     heatingCoefficient: 0.005
     coolingCoefficient: 0.05
@@ -256,6 +296,10 @@
     sprite: _NF/Clothing/Neck/Cloaks/wizard_cloak_holding.rsi
     clothingVisuals:
       neck:
+      - state: equipped-NECK
+      - state: equipped-NECK-unshaded
+        shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK
       - state: equipped-NECK-unshaded
         shader: unshaded
