@@ -12,6 +12,8 @@
         components:
         - IdCard
     licenseName: LicenseContrabandHandling
+  - type: AccessReader
+    access: [["Bailiff"], ["HeadOfSecurity"]]
   - type: ActivatableUIRequiresAccess
   - type: ActivatableUI
     key: enum.LicenseConsoleUiKey.Key
