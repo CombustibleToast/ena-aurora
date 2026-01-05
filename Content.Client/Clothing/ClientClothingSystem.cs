@@ -41,6 +41,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"outerClothing", "OUTERCLOTHING"},
         {Jumpsuit, "INNERCLOTHING"},
         {"neck", "NECK"},
+        {"neck2", "NECK"}, // Aurora's Song - second neck slot
         {"back", "BACKPACK"},
         {"belt", "BELT"},
         {"gloves", "HAND"},
@@ -303,6 +304,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         }
 
         // add the new layers
+        var firstLayer = true; // Aurora's Song - second neck slot
         foreach (var (key, layerData) in ev.Layers)
         {
             if (!revealedLayers.Add(key))
@@ -313,7 +315,17 @@ public sealed class ClientClothingSystem : ClothingSystem
 
             if (slotLayerExists)
             {
-                index++;
+                // Aurora's Song - second neck slot - start
+                // For neck2, insert at the bookmark position on the first layer so it renders behind neck
+                if (slot == "neck2" && firstLayer)
+                {
+                    firstLayer = false;
+                }
+                else
+                {
+                    index++;
+                }
+                // Aurora's Song - second neck slot - end
                 // note that every insertion requires reshuffling & remapping all the existing layers.
                 _sprite.AddBlankLayer((equipee, sprite), index);
                 _sprite.LayerMapSet((equipee, sprite), key, index);
