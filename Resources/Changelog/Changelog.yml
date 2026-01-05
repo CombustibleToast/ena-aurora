@@ -5512,3 +5512,10 @@ Entries:
   id: 8908
   time: '2026-01-05T03:45:40.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/671
+- author: Vandanna
+  changes:
+    - type: Add
+      message: sidearm and ammo loadout groups for Contractors
+  id: 8909
+  time: '2026-01-05T17:21:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/676
