@@ -5526,3 +5526,14 @@ Entries:
   id: 8910
   time: '2026-01-05T23:36:08.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/669
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: .25 mags now render properly again
+    - type: Fix
+      message: .25 mags use their in-hand sprites now
+    - type: Tweak
+      message: .25 rubber mags use normal sprite states
+  id: 8911
+  time: '2026-01-05T23:53:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/673
