@@ -5505,3 +5505,10 @@ Entries:
   id: 8907
   time: '2025-12-19T19:55:57.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/664
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: access requirements on the CHL PC
+  id: 8908
+  time: '2026-01-05T03:45:40.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/671
