@@ -33,7 +33,7 @@
       uiWindowPos: 1,2
       strippingWindowPos: 1,1
       displayName: Mask
-    - name: neck2 # Aurora's Song - second neck slot
+    - name: neckalt # Aurora's Song - second neck slot
       slotTexture: neck
       slotFlags: NECK
       uiWindowPos: 2,2

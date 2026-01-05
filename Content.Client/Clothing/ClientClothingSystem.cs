@@ -41,7 +41,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         {"outerClothing", "OUTERCLOTHING"},
         {Jumpsuit, "INNERCLOTHING"},
         {"neck", "NECK"},
-        {"neck2", "NECK"}, // Aurora's Song - second neck slot
+        {"neckalt", "NECK"}, // Aurora's Song - second neck slot
         {"back", "BACKPACK"},
         {"belt", "BELT"},
         {"gloves", "HAND"},
@@ -282,7 +282,7 @@ public sealed class ClientClothingSystem : ClothingSystem
 
         // temporary, until layer draw depths get added. Basically: a layer with the key "slot" is being used as a
         // bookmark to determine where in the list of layers we should insert the clothing layers.
-        var bookmarkSlot = slot == "neck2" ? "neck" : slot; // Aurora's Song: neck2 shares neck bookmark
+        var bookmarkSlot = slot == "neckalt" ? "neck" : slot; // Aurora's Song: neckalt shares neck bookmark
         var slotLayerExists = _sprite.LayerMapTryGet((equipee, sprite), bookmarkSlot, out var index, false);
 
         // Select displacement maps
@@ -305,7 +305,7 @@ public sealed class ClientClothingSystem : ClothingSystem
         }
 
         // add the new layers
-        // Aurora's Song - Track first layer for neck2 slot to control rendering order
+        // Aurora's Song - Track first layer for neckalt slot to control rendering order
         var firstLayer = true;
         foreach (var (key, layerData) in ev.Layers)
         {
@@ -317,12 +317,12 @@ public sealed class ClientClothingSystem : ClothingSystem
 
             if (slotLayerExists)
             {
-                // Aurora's Song - neck2 doesn't increment on first layer, making it render behind neck items
-                if (slot == "neck2" && firstLayer)
+                // Aurora's Song - neckalt doesn't increment on first layer, making it render behind neck items
+                if (slot == "neckalt" && firstLayer)
                     firstLayer = false;
                 else
                     index++;
-                // Aurora's Song - end neck2 layering logic
+                // Aurora's Song - end neckalt layering logic
                 // note that every insertion requires reshuffling & remapping all the existing layers.
                 _sprite.AddBlankLayer((equipee, sprite), index);
                 _sprite.LayerMapSet((equipee, sprite), key, index);
