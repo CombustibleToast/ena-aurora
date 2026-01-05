@@ -89,11 +89,6 @@
   - NFSpeedLoaderPistol45
   - NFMagazineClipRifle20
   - NFMagazineRifle30
-  - ASMagazinePistol40Empty # Aurora Song
-  - ASMagazinePistol40 # Aurora Song
-  - ASMagazineSubMachineGun40Empty # Aurora Song
-  - ASMagazineSubMachineGun40 # Aurora Song
-  - ASAmmunitionBoxPistol40 # Aurora Song
 
 - type: latheRecipePack
   id: NFMercenaryTechfabDynamicDeprecated
@@ -197,3 +192,7 @@
   - NFSpeedLoaderPistol45
   - NFMagazineClipRifle20
   - NFMagazineRifle30
+  - ASMagazinePistol40Empty # Aurora Song
+  - ASMagazinePistol40 # Aurora Song
+  - ASMagazineSubMachineGun40Empty # Aurora Song
+  - ASMagazineSubMachineGun40 # Aurora Song
