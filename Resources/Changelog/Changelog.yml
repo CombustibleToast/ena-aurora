@@ -5519,3 +5519,10 @@ Entries:
   id: 8909
   time: '2026-01-05T17:21:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/676
+- author: Vandanna
+  changes:
+    - type: Add
+      message: a second neck slot
+  id: 8910
+  time: '2026-01-05T23:36:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/669
