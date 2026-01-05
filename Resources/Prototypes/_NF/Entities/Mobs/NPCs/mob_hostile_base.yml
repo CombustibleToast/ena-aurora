@@ -309,7 +309,7 @@
   components:
   - type: MobThrowableOnHit
   - type: Stamina
-    critThreshold: 100
+    critThreshold: 100 # Aurora's Song - new stamina threshold
 
 - type: entity
   id: MobStaminaSpecial
