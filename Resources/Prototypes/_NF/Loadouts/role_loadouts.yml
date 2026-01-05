@@ -22,6 +22,8 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorSidearm # Aurora's Song
+  - ContractorAmmo # Aurora's Song
   - NFSpeciesSpecific
 
 - type: roleLoadout
