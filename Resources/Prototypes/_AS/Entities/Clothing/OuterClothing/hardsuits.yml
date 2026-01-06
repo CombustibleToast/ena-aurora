@@ -147,25 +147,20 @@
       outerClothing:
       - state: equipped-OUTERCLOTHING
   - type: PressureProtection
-    highPressureMultiplier: 0.02
+    highPressureMultiplier: 0.05
     lowPressureMultiplier: 1000
-  - type: TemperatureProtection
-    heatingCoefficient: 0.001
-    coolingCoefficient: 0.001
   - type: ExplosionResistance
-    damageCoefficient: 0.2
-  - type: FireProtection
-    reduction: 0.8
+    damageCoefficient: 0.5
   - type: StaminaResistance
-    damageCoefficient: 0.6
+    damageCoefficient: 0.75
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.6
-        Slash: 0.6
-        Piercing: 0.6
-        Heat: 0.2
-        Radiation: 0.01
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
         Caustic: 0.5
   - type: Item
     size: Huge
