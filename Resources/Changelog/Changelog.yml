@@ -5537,3 +5537,10 @@ Entries:
   id: 8911
   time: '2026-01-05T23:53:39.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/673
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: mob stamina thresholds
+  id: 8912
+  time: '2026-01-06T00:05:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/677
