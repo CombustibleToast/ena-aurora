@@ -40,6 +40,7 @@
   - OtherRecipes
   - MedicinalRecipes
   - SecretRecipes
+  - DeepFriedRecipes # DeltaV
 
 - type: guideEntry
   id: PizzaRecipes
