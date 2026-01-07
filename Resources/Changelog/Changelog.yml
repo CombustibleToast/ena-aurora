@@ -5576,3 +5576,12 @@ Entries:
   id: 8916
   time: '2026-01-07T07:17:04.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/680
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: medical vends now carry empty medkits
+    - type: Fix
+      message: liberation station restocks now work again
+  id: 8917
+  time: '2026-01-07T17:42:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/681
