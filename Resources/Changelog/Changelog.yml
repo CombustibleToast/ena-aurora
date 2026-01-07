@@ -5569,3 +5569,10 @@ Entries:
   id: 8915
   time: '2026-01-06T23:15:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/679
+- author: Leostel
+  changes:
+    - type: Tweak
+      message: Oni no longer suck at magic.
+  id: 8916
+  time: '2026-01-07T07:17:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/680
