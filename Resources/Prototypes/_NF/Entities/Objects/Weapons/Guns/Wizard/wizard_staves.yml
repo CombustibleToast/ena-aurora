@@ -67,6 +67,7 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 1
+  - type: NFOniFriendlyGun # AS: Staves aren't guns. Oni wizards are valid too
 
 - type: entity
   abstract: true
