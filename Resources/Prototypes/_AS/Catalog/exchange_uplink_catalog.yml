@@ -60,6 +60,21 @@
       tags:
       - ExchangeUplink
 
+- type: listing
+  id: UplinkMilitarySurplusHardsuit
+  name: uplink-exchange-military-surplus-hardsuit-name
+  description: uplink-exchange-military-surplus-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMilitarySurplus
+  cost:
+    ExchangeCoin: 30
+  categories:
+  - UplinkExchangeHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
 # Weapons
 - type: listing
   id: UplinkExchangeAP4C

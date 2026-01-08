@@ -98,3 +98,29 @@
       head:
       - state: on-equipped-HELMET
         shader: unshaded
+
+# Aurora's Song - Military Surplus Helmet
+- type: entity
+  parent: ClothingHeadHelmetHardsuitMercenary
+  id: ClothingHeadHelmetHardsuitMilitarySurplus
+  name: military surplus hardsuit helmet
+  description: The helmet for a military surplus hardsuit, equipped with advanced optics and night vision.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_surplus.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_surplus.rsi
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: "#88ff88"
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: on-equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded

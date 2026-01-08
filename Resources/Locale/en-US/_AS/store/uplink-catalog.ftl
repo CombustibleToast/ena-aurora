@@ -94,6 +94,9 @@ uplink-exchange-fort-armor-desc = A bulky set of thick tactical armor.
 uplink-exchange-fort-helmet-name = Fort Helmet
 uplink-exchange-fort-helmet-desc = A sturdy tactical helmet and face mask.
 
+uplink-exchange-military-surplus-hardsuit-name = Military Surplus Hardsuit
+uplink-exchange-military-surplus-hardsuit-desc = Auroran MilSurp hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
+
 uplink-exchange-spesos-name = 3000 spesos
 uplink-exchange-spesos-desc = A stack of 3000 spesos, hard currency.
 

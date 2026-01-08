@@ -5555,3 +5555,10 @@ Entries:
   id: 8913
   time: '2026-01-06T00:22:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/670
+- author: Vandanna
+  changes:
+    - type: Add
+      message: add the MilSurp hardsuit, by C1trus
+  id: 8914
+  time: '2026-01-06T20:43:07.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/678
