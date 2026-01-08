@@ -75,6 +75,7 @@ uplink-sle-softsuit-patrol-desc = The standard-issue SLE space proof suit for pa
 
 # region ExchangeVend - Aurora
 store-category-exchangehardsuits = EVA Suits
+store-category-exchangearmor = Armor
 store-category-exchangeweapons = Weapons
 store-category-exchangeutility = Utility
 store-category-exchangeammo = Ammunition
