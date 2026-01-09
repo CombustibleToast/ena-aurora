@@ -5601,3 +5601,10 @@ Entries:
   id: 8919
   time: '2026-01-09T07:49:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/683
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: AS Logo update
+  id: 8920
+  time: '2026-01-09T07:58:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/684
