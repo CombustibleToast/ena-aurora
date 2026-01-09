@@ -5585,3 +5585,12 @@ Entries:
   id: 8917
   time: '2026-01-07T17:42:28.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/681
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: >-
+        hardsuits with unshaded layers not properly transforming between
+        different species wearers
+  id: 8918
+  time: '2026-01-09T07:13:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/682
