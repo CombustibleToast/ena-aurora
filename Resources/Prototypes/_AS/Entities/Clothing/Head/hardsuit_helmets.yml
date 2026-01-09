@@ -90,6 +90,26 @@
       - state: off-equipped-HELMET
       - state: equipped-HELMET-unshaded
         shader: unshaded
+      head-vox:
+      - state: off-equipped-HELMET-vox
+      - state: equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: off-equipped-HELMET-vulpkanin
+      - state: equipped-HELMET-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: off-equipped-HELMET-reptilian
+      - state: equipped-HELMET-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: off-equipped-HELMET-felinid
+      - state: equipped-HELMET-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: off-equipped-HELMET-feroxi
+      - state: equipped-HELMET-unshaded-feroxi
+        shader: unshaded
   - type: PointLight
     color: "#00ffff"
   - type: ToggleableVisuals
@@ -97,6 +117,21 @@
     clothingVisuals:
       head:
       - state: on-equipped-HELMET
+        shader: unshaded
+      head-vox:
+      - state: on-equipped-HELMET-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: on-equipped-HELMET-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: on-equipped-HELMET-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: on-equipped-HELMET-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: on-equipped-HELMET-feroxi
         shader: unshaded
 
 # Aurora's Song - Military Surplus Helmet
@@ -115,6 +150,26 @@
       - state: off-equipped-HELMET
       - state: equipped-HELMET-unshaded
         shader: unshaded
+      head-vox:
+      - state: off-equipped-HELMET-vox
+      - state: equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: off-equipped-HELMET-vulpkanin
+      - state: equipped-HELMET-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: off-equipped-HELMET-reptilian
+      - state: equipped-HELMET-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: off-equipped-HELMET-felinid
+      - state: equipped-HELMET-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: off-equipped-HELMET-feroxi
+      - state: equipped-HELMET-unshaded-feroxi
+        shader: unshaded
   - type: PointLight
     color: "#88ff88"
   - type: ToggleableVisuals
@@ -123,4 +178,24 @@
       head:
       - state: on-equipped-HELMET
       - state: equipped-HELMET-unshaded
+        shader: unshaded
+      head-vox:
+      - state: on-equipped-HELMET-vox
+      - state: equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: on-equipped-HELMET-vulpkanin
+      - state: equipped-HELMET-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: on-equipped-HELMET-reptilian
+      - state: equipped-HELMET-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: on-equipped-HELMET-felinid
+      - state: equipped-HELMET-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: on-equipped-HELMET-feroxi
+      - state: equipped-HELMET-unshaded-feroxi
         shader: unshaded
