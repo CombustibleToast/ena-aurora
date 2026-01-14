@@ -1,0 +1,18 @@
+# Aurora Song - Security Weapon Variants
+
+# Active stun baton variant (spawns already turned on)
+# Used for hostile NPCs so they spawn with weapon ready
+- type: entity
+  id: StunbatonActive
+  parent: Stunbaton
+  suffix: active
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ItemToggle
+    activated: true
+
+# SLE Deployable Barrier (alias for backwards compatibility)
+- type: entity
+  id: ASSLEDeployableBarrier
+  parent: DeployableBarrier
+  suffix: SLE, Deprecated

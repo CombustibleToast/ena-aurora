@@ -6,6 +6,6 @@
 - type: startingGear
   id: MobSecDogLaikaGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity
+    eyes: ASClothingEyesGlassesSLE
     id: DeputyIDCard
 

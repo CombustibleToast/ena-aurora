@@ -156,5 +156,19 @@
   - MercenaryClothingBeltMilitaryWebbing
   - MercenaryClothingBeltMilitaryWebbingMed
   - MercenaryClothingBeltSecurity
+  - ChestRigToolsLoadoutAS # Aurora Song
+  - MercRigToolsLoadoutAS # Aurora Song
+  - MedicRigToolsLoadoutAS # Aurora Song
+  - MedicRigMedicalLoadoutAS # Aurora Song
   subgroups:
   - ContractorBelt
+
+
+- type: loadoutGroup # Aurora Song
+  id: MercenaryNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - MercenaryClothingNeckMantleMercenary
+  subgroups:
+  - ContractorNeck 

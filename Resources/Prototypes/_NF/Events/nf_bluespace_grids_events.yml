@@ -38,8 +38,8 @@
         paths:
         - /Maps/_NF/Bluespace/cache.yml
     rewardAccounts:
-      Nfsd: 0.25
-      Frontier: 0.25
+      Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+      Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
       Medical: 0.25
       Edison: 0.25
 
@@ -82,8 +82,8 @@
         paths:
         - /Maps/_NF/Bluespace/vault.yml
     rewardAccounts:
-      Nfsd: 0.25
-      Frontier: 0.25
+      Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+      Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
       Medical: 0.25
       Edison: 0.25
 - type: entity
@@ -126,8 +126,8 @@
         paths:
         - /Maps/_NF/Bluespace/vaultsmall.yml
     rewardAccounts:
-      Nfsd: 0.25
-      Frontier: 0.25
+      Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+      Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
       Medical: 0.25
       Edison: 0.25
 - type: entity
@@ -208,7 +208,7 @@
         - type: ForceAnchor
         - type: DeletionCensusExempt
         paths:
-        - /Maps/_NF/Bluespace/wizardprobealt.yml
+        - /Maps/_NF/Bluespace/wizardtower.yml
 
 - type: entity
   id: BluespaceBloodMoon

@@ -13,6 +13,7 @@
     NFMagazineClipRifle20Empty: 6
   # Ammo boxes
     NFAmmunitionBoxPistol35: 6
+    ASAmmunitionBoxPistol40: 6 # Aurora's Song
     NFAmmunitionBoxRifle20: 6
     NFAmmunitionBoxRifle30: 6
     NFAmmunitionBoxShellShotgunBuckshot: 6
@@ -33,6 +34,7 @@
     NFMagazineLowCapacityRifle30Empty: 4294967295
   # Ammo boxes
     NFAmmunitionBoxPistol35: 4294967295
+    ASAmmunitionBoxPistol40: 4294967295 # Aurora's Song
     NFAmmunitionBoxRifle20: 4294967295
     NFAmmunitionBoxRifle30: 4294967295
     NFAmmunitionBoxShellShotgunBuckshot: 4294967295

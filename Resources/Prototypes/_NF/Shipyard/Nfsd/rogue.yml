@@ -1,3 +1,4 @@
+# Aurora Song - Paths changed to point to SLE (blue) shuttles in _AS namespace
 - type: vessel
   id: Rogue
   parent: BaseVessel
@@ -8,7 +9,7 @@
   group: Custom
   access: Security
   mapchecker_group_override: Security  # Treat this as a security vessel for mapchecker purposes
-  shuttlePath: /Maps/_NF/Shuttles/Nfsd/rogue.yml
+  shuttlePath: /Maps/_AS/Shuttles/Sle/rogue.yml
   guidebookPage: Null
   class:
   - Fighter
@@ -18,7 +19,7 @@
 - type: gameMap
   id: Rogue
   mapName: 'NSF Rogue'
-  mapPath: /Maps/_NF/Shuttles/Nfsd/rogue.yml
+  mapPath: /Maps/_AS/Shuttles/Sle/rogue.yml
   minPlayers: 0
   stations:
     Rogue:

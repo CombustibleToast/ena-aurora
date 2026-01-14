@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   parent: [ClothingHandsButcherable, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband added ContrabandClothing as parent
   id: ClothingHandsGlovesNorthStarRaiden
   name: Ultima Gauntlets
@@ -28,3 +28,31 @@
   - type: Actions
   - type: StaticPrice
     price: 100000
+
+# Aurora Song - SLE (Security Logistics Enforcement) gloves
+- type: entity
+  parent: ClothingHandsGlovesCombat
+  id: ASClothingHandsGlovesCombatSLEDarkBlue
+  name: SLE combat gloves
+  description: Insulated gloves for Security Logistics Enforcement officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Hands/Gloves/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Hands/Gloves/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Fiber
+    fiberColor: fibers-dark-blue
+
+- type: entity
+  parent: ASClothingHandsGlovesCombatSLEDarkBlue
+  id: ASClothingHandsGlovesCombatSLELightBlue
+  name: SLE combat gloves
+  description: Insulated gloves for Security Logistics Enforcement officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Hands/Gloves/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Hands/Gloves/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Fiber
+    fiberColor: fibers-light-blue
+

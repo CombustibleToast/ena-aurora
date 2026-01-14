@@ -31,8 +31,8 @@
 - type: entity
   parent: BaseHyperlinkBook
   id: HyperlinkBookNfsdSop
-  name: SLE SOP manual
-  description: A book defining SLE standard operating procedures.
+  name: NFSD SOP manual
+  description: A book defining NFSD standard operating procedures.
   components:
   - type: Sprite
     sprite: _NF/Objects/Misc/books.rsi

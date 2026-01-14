@@ -1,0 +1,85 @@
+# SLE Filled Locker Prototypes using _AS items
+- type: entity
+  id: ASLockerSLESilverDetectiveFilled
+  suffix: Detective, Filled
+  parent: ASLockerSLEDetective
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillASLockerSLEDetective
+  - type: AccessReader
+    access: [["Detective"]]
+
+- type: entityTable
+  id: FillASLockerSLEDetective
+  table: !type:AllSelector
+    children:
+    - id: BoxForensicPad
+    - id: DrinkDetFlask
+    - id: BoxEvidenceMarkers
+    - id: HandLabeler
+
+- type: entity
+  id: ASLockerSLESecurityFilled
+  parent: LockerSecurityFilled
+  suffix: SLE, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillASLockerSLESecurity
+
+- type: entityTable
+  id: FillASLockerSLESecurity
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FillLockerSecurity
+    - id: ASClothingHeadHelmetSLE
+    - id: ASClothingOuterArmorSLE
+
+- type: entity
+  id: ASClosetSLEBombFilled
+  parent: ClosetBombFilled
+  suffix: SLE, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillASClosetSLEBomb
+
+- type: entityTable
+  id: FillASClosetSLEBomb
+  table: !type:AllSelector
+    children:
+    - !type:NestedSelector
+      tableId: FillClosetBomb
+    - id: Wirecutter
+    - id: Screwdriver
+    - id: Multitool
+
+- type: entity
+  id: ASLockerSLESheriffFilled
+  suffix: Sheriff, Filled
+  parent: ASLockerSLESheriff
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillASLockerSLESheriff
+
+- type: entityTable
+  id: FillASLockerSLESheriff
+  table: !type:AllSelector
+    children:
+    - id: ClothingHeadHatBeretCommissioner # Using existing commissioner beret until SLE sheriff beret is created
+    - id: ASClothingOuterCoatSLEFormalSheriff
+    - id: ASClothingHeadsetSLEGreenCommon # Using green common headset until gold command headset is created
+    - id: ASClothingNeckSLEBadgeSheriff
+    - id: ShriffIDCard
+    - id: BoxHandcuff
+    - id: CommsComputerCircuitboard
+    - id: MedalCaseNfsd
+    - id: Demag
+    - id: ASWeaponShotgunBailiff

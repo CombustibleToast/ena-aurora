@@ -1,0 +1,135 @@
+# Aurora Song - Mercenary Spawners
+# Based on NF Mercenary spawners with AS namespace
+
+#region space
+- type: entity
+  name: mercenary spawner
+  id: ASMercenarySpawnerNovalite
+  parent: MarkerBase
+  suffix: AI, Hostile, Novalite
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/color.rsi
+      state: equipped-INNERCLOTHING
+      color: "#404029"
+    - sprite: Clothing/Shoes/Boots/mercboots.rsi
+      state: equipped-FEET
+    - sprite: Clothing/Hands/Gloves/mercbattle.rsi
+      state: equipped-HAND
+    - sprite: Clothing/OuterClothing/Vests/mercwebvest.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Mask/merc.rsi
+      state: equipped-MASK
+    - sprite: Clothing/Head/Helmets/merc_helmet.rsi
+      state: equipped-HELMET
+    - sprite: _NF/Objects/Weapons/Guns/Rifles/novalitec1.rsi
+      state: wielded-inhand-right
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMercenarySoldierNovalite
+
+- type: entity
+  name: mercenary spawner
+  id: ASMercenarySpawnerShotgunner
+  parent: MarkerBase
+  suffix: AI, Hostile, Shotgunner
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/color.rsi
+      state: equipped-INNERCLOTHING
+      color: "#3d5c87"
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+    - sprite: Clothing/Hands/Gloves/fingerless.rsi
+      state: equipped-HAND
+    - sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Mask/gas.rsi
+      state: equipped-MASK
+    - sprite: Clothing/Head/Helmets/security.rsi
+      state: equipped-HELMET
+    - sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
+      state: wielded-inhand-right
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMercenaryBreacherShotgun
+
+- type: entity
+  name: mercenary spawner
+  id: ASMercenarySpawnerMedic
+  parent: MarkerBase
+  suffix: AI, Hostile, Medic
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/color.rsi
+      state: equipped-INNERCLOTHING
+      color: "#2e687a"
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+    - sprite: Clothing/Hands/Gloves/fingerless.rsi
+      state: equipped-HAND
+    - sprite: Clothing/OuterClothing/Armor/security_slim.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Mask/medicalsecurity.rsi
+      state: equipped-MASK
+    - sprite: Clothing/Head/Helmets/light_riot.rsi
+      state: equipped-HELMET
+    - sprite: Objects/Specific/Medical/Surgery/saw.rsi
+      state: electric-inhand-right
+    - sprite: Objects/Weapons/Guns/Battery/laser_retro.rsi
+      state: inhand-right-3
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMercenarySpecialistMedic
+
+- type: entity
+  name: mercenary boss spawner
+  id: ASMercenarySpawnerCaptain
+  parent: MarkerBase
+  suffix: AI, Hostile, Captain
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/color.rsi
+      state: equipped-INNERCLOTHING
+      color: "#d3bf86"
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+    - sprite: Clothing/OuterClothing/Armor/bulletproof.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Mask/gassecurity.rsi
+      state: equipped-MASK
+    - sprite: Clothing/Head/Helmets/security.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Belt/militarywebbing.rsi
+      state: equipped-BELT
+    - sprite: Clothing/Neck/mantles/qmmantle.rsi
+      state: equipped-NECK
+    - sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+      state: equipped-NECK-off
+    - sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
+      state: equipped-NECK-on
+      color: "#a9b6bd"
+      shader: unshaded
+  - type: ConditionalSpawner
+    prototypes:
+    - MobMercenaryCaptain

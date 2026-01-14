@@ -232,6 +232,16 @@
     - Wristwatch
 
 #T1
+- type: loadout # Aurora Song: Add AAC Tablet to contractor backpack items
+  id: ContractorAACTablet
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  storage:
+    back:
+    - AACTablet
+
 - type: loadout
   id: ContractorBasketball
   effects:
@@ -458,6 +468,16 @@
   storage:
     back:
     - CrayonMagic
+
+- type: loadout
+  id: ContractorSprayPainterMagic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 30000
+  storage:
+    back:
+    - SprayPainterMagic
 
 #bureaucracy
 #T0

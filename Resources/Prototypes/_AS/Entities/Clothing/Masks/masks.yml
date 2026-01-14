@@ -1,0 +1,26 @@
+# Aurora Song - SLE (Security Logistics Enforcement) masks
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
+  id: ASClothingMaskGasSLE
+  name: SLE gas mask
+  description: A standard issue Security Logistics Enforcement gas mask.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Mask/sle.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Mask/sle.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: CatWearable
+
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSwat ]
+  id: ASClothingMaskGasSLESheriff
+  name: SLE sheriff gas mask
+  description: A gas mask worthy of an SLE sheriff.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Mask/sle_sheriff.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Mask/sle_sheriff.rsi # Aurora Song - Using SLE-recolored sprites
+

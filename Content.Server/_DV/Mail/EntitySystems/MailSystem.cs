@@ -239,7 +239,7 @@ namespace Content.Server._DV.Mail.EntitySystems
             _popupSystem.PopupEntity(Loc.GetString("mail-unlocked-reward", ("bounty", component.Bounty)), uid, args.User); // Frontier - Remove the mention of station income
             component.IsProfitable = false;
 
-            _bank.TrySectorDeposit(SectorBankAccount.Frontier, component.Bounty, LedgerEntryType.MailDelivered);
+            _bank.TrySectorDeposit(SectorBankAccount.Aurora, component.Bounty, LedgerEntryType.MailDelivered); // Aurora Song - Changed from Frontier to Aurora
         }
 
         private void OnExamined(EntityUid uid, MailComponent component, ExaminedEvent args)
@@ -291,7 +291,7 @@ namespace Content.Server._DV.Mail.EntitySystems
                 _appearanceSystem.SetData(uid, MailVisuals.IsPriorityInactive, true);
 
             // Frontier: no need for this, but this uses our sector bank accounts
-            //_bank.TrySectorWithdraw(SectorBankAccount.Frontier, component.Penalty, LedgerEntryType.MailPenalty); // Frontier - Dont remove money.
+            //_bank.TrySectorWithdraw(SectorBankAccount.Aurora, component.Penalty, LedgerEntryType.MailPenalty); // Frontier - Dont remove money. Aurora Song - Changed from Frontier to Aurora
         }
 
         private void OnDestruction(EntityUid uid, MailComponent component, DestructionEventArgs args)
@@ -543,12 +543,13 @@ namespace Content.Server._DV.Mail.EntitySystems
                 Loc.GetString(mailEntityStrings.NameAddressed, // Frontier: move constant to MailEntityString
                 ("recipient", recipient.Name)));
 
-            var accessReader = EnsureComp<AccessReaderComponent>(uid);
-            // Frontier: TODO - should this be removed for Frontier?
-            foreach (var access in recipient.AccessTags)
-            {
-                accessReader.AccessLists.Add([access]);
-            }
+            // Frontier: - remove access reader checks
+            // var accessReader = EnsureComp<AccessReaderComponent>(uid);
+            // foreach (var access in recipient.AccessTags)
+            // {
+            //     accessReader.AccessLists.Add([access]);
+            // }
+            // End Frontier
         }
 
         /// <summary>

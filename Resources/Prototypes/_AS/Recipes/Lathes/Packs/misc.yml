@@ -4,3 +4,25 @@
     - ClothingNeckShockCollar
     - LeashBasic
     - ClothingNeckCollarCmd
+
+- type: latheRecipePack
+  id: ASBlueMagentaColorFlashlights
+  recipes:
+    - BlueFloodlight
+    - MagentaFloodlight
+    - MagentaFlashlight
+    - BlueFlashlight
+
+# Aurora Song: Small machines pack
+- type: latheRecipePack
+  id: ASSmallMachines
+  recipes:
+    - AACTablet
+
+- type: latheRecipePack
+  id: ASBlueMagentaLights
+  recipes:
+    - MagentaLedLightBulb
+    - MagentaLedLightTube
+    - BlueLedLightBulb
+    - BlueLedLightTube

@@ -1,0 +1,115 @@
+# Aurora Song - SLE Weapon Racks
+# Gun rack - standard
+- type: entity
+  id: ASStructureGunRackWallmountedSLE
+  parent: StructureGunRackWallmounted
+  suffix: SLE, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-gun-wall
+      color: "#2a4a7c"  # SLE dark blue
+    - state: lock
+      color: "#7a9cc6"  # SLE light blue
+    - state: base-gun-wall-decal
+      color: "#5a7aac"  # SLE medium blue
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["Security"] ]
+  - type: LockVisuals
+  - type: Lock
+    locked: true
+  - type: ItemSlotsLock
+    slots:
+    - weapon1
+    - weapon2
+    - weapon3
+    - weapon4
+    - weapon5
+
+# Deprecated alias for backwards compatibility with maps
+- type: entity
+  id: ASStructureGunRackSLE
+  parent: ASStructureGunRackWallmountedSLE
+  suffix: SLE, Deprecated
+
+# Melee weapon rack
+- type: entity
+  id: ASStructureMeleeWeaponRackSLE
+  parent: StructureMeleeWeaponRack
+  suffix: SLE, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-melee
+      color: "#2a4a7c"  # SLE dark blue
+    - state: lock
+      color: "#7a9cc6"  # SLE light blue
+    - state: base-melee-decal
+      color: "#5a7aac"  # SLE medium blue
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["Security"] ]
+  - type: LockVisuals
+  - type: Lock
+    locked: true
+  - type: ItemSlotsLock
+    slots:
+    - weapon1
+    - weapon2
+    - weapon3
+    - weapon4
+    - weapon5
+
+# Pistol rack - standard
+- type: entity
+  id: ASStructurePistolRackSLE
+  parent: StructurePistolRack
+  suffix: SLE, Empty
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol
+      color: "#2a4a7c"  # SLE dark blue
+    - state: lock
+      color: "#7a9cc6"  # SLE light blue
+    - state: base-pistol-decal
+      color: "#5a7aac"  # SLE medium blue
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["Security"] ]
+
+# Pistol rack - wallmounted
+- type: entity
+  id: ASStructurePistolRackWallmountedSLE
+  parent: StructurePistolRackWallmounted
+  suffix: SLE, Empty, Wallmount
+  components:
+  - type: Sprite
+    layers:
+    - state: base-pistol-wall
+      color: "#2a4a7c"  # SLE dark blue
+    - state: lock
+      color: "#7a9cc6"  # SLE light blue
+    - state: base-pistol-wall-decal
+      color: "#5a7aac"  # SLE medium blue
+    - state: locked
+      map: [ enum.LockVisualLayers.Lock ]
+      shader: unshaded
+  - type: AccessReader
+    access: [ ["Security"] ]
+  - type: LockVisuals
+  - type: Lock
+    locked: true
+  - type: ItemSlotsLock
+    slots:
+    - weapon1
+    - weapon2
+    - weapon3
+    - weapon4

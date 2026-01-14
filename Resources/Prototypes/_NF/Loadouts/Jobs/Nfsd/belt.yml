@@ -1,18 +1,19 @@
 - type: loadout
   id: NfsdWebbing
-  name: SLE webbing (filled)
+  name: NFSD webbing (filled)
   equipment:
-    belt: ClothingBeltNfsdWebbingFilled
+    belt: ASClothingBeltSLEWebbingFilled # Aurora Song - Changed to use SLE prototype
 
 - type: loadout
   id: NfsdBelt
-  name: SLE belt (filled)
+  name: NFSD belt (filled)
   equipment:
-    belt: ClothingBeltNfsdFilled
+    belt: ASClothingBeltSLEFilled # Aurora Song - Changed to use SLE prototype
 
 # Brigmedic
 - type: loadout
   id: BrigmedicClothingBeltBrigmedicWebbing
-  name: SLE webbing (filled)
+  name: brigmedic webbing (filled)
   equipment:
-    belt: ClothingBeltNfsdWebbingFilledBrigmedic
+    belt: ASClothingBeltSLEWebbingFilledBrigmedic # Aurora Song - Changed to use SLE prototype
+

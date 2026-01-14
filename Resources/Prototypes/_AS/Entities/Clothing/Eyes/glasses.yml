@@ -1,0 +1,37 @@
+# Aurora Song - SLE (Security Logistics Enforcement) glasses
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: ClothingEyesGlassesSecurity
+  id: ASClothingEyesGlassesSLE
+  name: SLE glasses
+  description: Upgraded sunglasses that provide flash immunity and a security HUD.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Glasses/sle_glasses.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Glasses/sle_glasses.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: [ClothingEyesGlassesSecurity, ShowMedicalIcons]
+  id: ASClothingEyesGlassesSLECorpsman
+  name: SLE corpsman glasses
+  description: Specialized eyewear for SLE Corpsmen combining security identification with medical diagnostic capabilities. Provides flash immunity and both security and medical HUD overlays.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Glasses/sle_corps_glasses.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Glasses/sle_corps_glasses.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingEyesGlassesSLECorpsman
+  id: ASClothingEyesGlassesMedic
+  name: medic glasses
+  description: Medical diagnostic eyewear with flash protection. Displays health bars and status icons for quick patient assessment.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Glasses/sle_corps_glasses.rsi # Aurora Song - Using SLE-recolored sprites
+    color: "#FFF5E0"
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Glasses/sle_corps_glasses.rsi # Aurora Song - Using SLE-recolored sprites
+

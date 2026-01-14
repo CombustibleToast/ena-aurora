@@ -68,7 +68,7 @@
     - Service
     - Supply
     - Traffic # Frontier
-    - Nfsd # Frontier
+    - Sle # Frontier - Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
     extraCount: 1
     lightBreakChancePerSecond: 0.0003
     doorToggleChancePerSecond: 0.001

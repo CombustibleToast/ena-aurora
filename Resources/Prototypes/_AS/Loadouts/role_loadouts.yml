@@ -1,17 +1,17 @@
 ﻿- type: roleLoadout
   id: JobMedic
   groups:
-  - ContractorHead
+  - MedicHead
   - ContractorNeck
   - MedicalJumpsuit
   - ContractorGloves
   - ContractorBackpack
-  - ContractorOuterClothing
+  - MedicOuterClothing
   - ContractorForcedOuterClothing
   - ContractorShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
+  - MedicGlasses
+  - MedicBelt
   - MedEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
@@ -47,4 +47,5 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+
 

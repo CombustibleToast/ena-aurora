@@ -1,0 +1,441 @@
+﻿# Aurora Song - AS Bluespace Bounty Events
+# Examples of bounty objectives for bluespace error events
+# Based on New Frontier's bluespace error system with bounty extensions
+#
+# OBJECTIVE TYPES:
+# - captureTargets: Must be ALIVE + CUFFED (success when mob is alive AND has cuffs)
+# - eliminationTargets: Must be DEAD (success when mob is dead)
+# - removalTargets: Must be REMOVED from grid (success when entity no longer on grid)
+# - rescueTargets: Must be ALIVE + NOT CUFFED (success when mob is alive AND has no cuffs)
+
+## Test event - all objective types for debugging
+#- type: entity
+#  id: ASBluespaceTestBounty
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    startAnnouncement: station-event-bluespace-bounty-test-start
+#    startAudio:
+#      path: /Audio/Announcements/attention.ogg
+#    earliestStart: 1
+#    weight: 100
+#    duration: 60
+#    maxDuration: 65
+#  - type: BluespaceErrorBountyRule
+#    includeGridValue: false  # Optional - defaults to true. Set to false to only award bounty objectives (no salvage value)
+#    announcementChannels:
+#    - Common
+#    - Sle # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
+#    - Medical
+#    groups:
+#      grid: !type:GridSpawnGroup
+#        nameLoc:
+#        - station-event-bluespace-name-TestBountyGrid
+#        minimumDistance: 500
+#        maximumDistance: 1000
+#        addComponents:
+#        - type: Gravity
+#          enabled: true
+#          inherent: true
+#        - type: IFF
+#          color: "#FF0000"
+#        - type: LinkedLifecycleGridParent
+#        - type: ProtectedGrid
+#        - type: DeletionCensusExempt
+#        paths:
+#        - /Maps/_AS/Bluespace/Test/testobjbox.yml
+#    rewardAccounts:
+#      Sle: 0.5 # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
+#      Frontier: 0.5
+#    captureTargets:
+#      MobHuman:
+#        count: 1
+#        reward: 1000
+#        penalty: 500
+#    eliminationTargets:
+#      MobMouse:
+#        count: 1
+#        reward: 200
+#        penalty: 100
+#    removalTargets:
+#      CrateGenericSteel:
+#        count: 1
+#        reward: 300
+#        penalty: 150
+#    # Rescue objectives: Target must be ALIVE and NOT CUFFED at event end
+#    # Success = mob is alive AND has no cuffs (CuffedHandCount == 0)
+#    # Failure = mob is dead OR cuffed
+#    rescueTargets:
+#      MobVulpkanin:
+#        count: 1
+#        reward: 1000
+#        penalty: 500
+
+# Capture Mission - Quell the Prison Riot
+# Aurora Song - Uses 4-announcement system: incoming (T+0) -> arrival (T+30m) -> warning (T+50m) -> end (T+55m)
+# duration values are in seconds, reoccurrenceDelay/ earliestStart is in minutes
+- type: entity
+  id: ASBluespacePrisonRiot
+  parent: BaseStationEventShortDelay
+  components:
+  - type: GameRule
+    delay:
+      min: 1800  # 30 minutes - delay before grid spawns
+      max: 1800
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-prison-riot-incoming  # Aurora Song - "Prison ship detected, arriving in 30 minutes"
+    arrivalAnnouncement: station-event-bluespace-prison-riot-arrived  # Aurora Song - "Prison ship has arrived!"
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    arrivalAudio:  # Aurora Song - Play audio when ship arrives
+      path: /Audio/Announcements/attention.ogg
+    warningAnnouncement: station-event-bluespace-prison-riot-warning  # "Prison ship departing in 5 minutes"
+    warningDurationLeft: 300  # 5 minutes before event ends
+    endAnnouncement: station-event-bluespace-prison-riot-end  # "Prison ship has departed"
+    earliestStart: 120 # 2 hours after shift start minimum before event can trigger
+    weight: 1
+    duration: 1500  # 25 minutes after grid spawns
+    maxDuration: 2100
+    reoccurrenceDelay: 240 # 4 hours
+    requiredJobs:
+      SeniorOfficer: 1
+  - type: BluespaceErrorBountyRule
+    includeGridValue: false
+    announcementChannels:
+    - Sle
+    - Medical
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-prison-ship
+        minimumDistance: 1500
+        maximumDistance: 2500
+        nameWarp: true  # Rename warp points to match the grid name
+        hideWarp: false  # Make warp points visible (not admin-only)
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          flags: None
+          color: "#FF4500"
+          readOnly: true
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: ForceAnchor
+        - type: DeletionCensusExempt
+        paths:
+        - /Maps/_AS/Bluespace/Objective/riotsuppression.yml
+    rewardAccounts:
+      Sle: 1.0
+    captureTargets:
+      MobHostilePrisoner:
+        count: 25
+        reward: 2500
+        penalty: 1250
+      MobHostileArmedPrisoner:
+        count: 9
+        reward: 3500
+        penalty: 1750
+      MobHostileRiotPrisoner:
+        count: 5
+        reward: 5000
+        penalty: 2500
+
+# Confiscation Mission - Smuggler Ship Interception
+# Aurora Song - Uses 4-announcement system: incoming (T+0) -> arrival (T+15m) -> warning (T+25m) -> end (T+30m)
+# duration values are in seconds, reoccurrenceDelay/ earliestStart is in minutes
+- type: entity
+  id: ASBluespaceSmugglerInterception
+  parent: BaseStationEventShortDelay
+  components:
+  - type: GameRule
+    delay:
+      min: 900  # 15 minutes - delay before grid spawns
+      max: 900
+  - type: StationEvent
+    startAnnouncement: station-event-bluespace-smuggler-interception-incoming  # Aurora Song - "Smuggler vessel detected, arriving in 15 minutes"
+    arrivalAnnouncement: station-event-bluespace-smuggler-interception-arrived  # Aurora Song - "Smuggler vessel has arrived!"
+    startAudio:
+      path: /Audio/Announcements/attention.ogg
+    arrivalAudio:  # Aurora Song - Play audio when ship arrives
+      path: /Audio/Announcements/attention.ogg
+    warningAnnouncement: station-event-bluespace-smuggler-interception-warning  # "Smuggler vessel departing in 5 minutes"
+    warningDurationLeft: 300  # 5 minutes before event ends
+    endAnnouncement: station-event-bluespace-smuggler-interception-end  # "Smuggler vessel has departed"
+    earliestStart: 120 # 2 hours after shift start minimum before event can trigger
+    weight: 3
+    duration: 900  # 15 minutes after grid spawns
+    maxDuration: 2400
+    reoccurrenceDelay: 120 # 2 hours
+    requiredJobs:
+      SeniorOfficer: 1
+  - type: BluespaceErrorBountyRule
+    includeGridValue: false
+    announcementChannels:
+    - Sle
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-smuggler-vessel
+        minimumDistance: 1500
+        maximumDistance: 2500
+        nameWarp: true  # Rename warp points to match the grid name
+        hideWarp: false  # Make warp points visible (not admin-only)
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          flags: None
+          color: "#8B4513"
+          readOnly: true
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: ForceAnchor
+        - type: DeletionCensusExempt
+        paths:
+        - /Maps/_AS/Bluespace/Objective/bulkersmugglerintercept.yml
+        - /Maps/_AS/Bluespace/Objective/bargesmugglerintercept.yml
+        - /Maps/_AS/Bluespace/Objective/mulesmugglerintercept.yml
+    rewardAccounts:
+      Sle: 1.0
+    eliminationTargets:
+      MobMercenaryCaptain:
+        count: 1
+        reward: 10000
+        penalty: 5000
+      MobMercenarySpecialistMedic:
+        count: 2
+        reward: 3000
+        penalty: 1500
+      MobMercenaryBreacherShotgun:
+        count: 2
+        reward: 3000
+        penalty: 1500
+      MobMercenarySoldierNovalite:
+        count: 5
+        reward: 2000
+        penalty: 1000
+    removalTargets:
+      ASCrateSuppliesLocked:
+        count: 10
+        reward: 1500
+        penalty: 750
+
+
+# ============================================================================
+# EXAMPLE EVENTS BELOW - All lines commented out
+# Remove the # from each line to enable an example
+# ============================================================================
+
+## Example bounty event - capture a specific syndicate agent
+#- type: entity
+#  id: ASBluespaceSyndicateAgentBounty
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    startAnnouncement: station-event-bluespace-bounty-start-announcement
+#    startAudio:
+#      path: /Audio/Announcements/attention.ogg
+#    warningAnnouncement: station-event-bluespace-bounty-warning-announcement
+#    endAnnouncement: station-event-bluespace-bounty-end-announcement
+#    earliestStart: 100
+#    weight: 3
+#    duration: 1200
+#    maxDuration: 1800
+#    reoccurrenceDelay: 480
+#    requiredJobs:
+#      Deputy: 3
+#  - type: BluespaceErrorBountyRule
+#    groups:
+#      grid: !type:GridSpawnGroup
+#        nameLoc:
+#        - station-event-bluespace-name-SyndicateEscape
+#        minimumDistance: 1500
+#        maximumDistance: 2500
+#        addComponents:
+#        - type: Gravity
+#          enabled: true
+#          inherent: true
+#        - type: IFF
+#          color: "#E10F9B"
+#        - type: Shuttle
+#        - type: LinkedLifecycleGridParent
+#        - type: ProtectedGrid
+#          preventArtifactTriggers: true
+#        - type: PreventPilot
+#        - type: ForceAnchor
+#        - type: DeletionCensusExempt
+#        paths:
+#        - /Maps/_NF/Bluespace/syndicateagent.yml
+#    includeGridValue: false  # Set to false to only award bounty objectives (no salvage value). Defaults to true.
+#    rewardAccounts:
+#      Sle: 0.5 # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
+#      Frontier: 0.3
+#      Medical: 0.2
+#    captureTargets:
+#      MobSyndicateAgentNukeops:
+#        count: 1
+#        reward: 3000
+#        penalty: 1500
+#      MobSyndicateCommanderNukeops:
+#        count: 1
+#        reward: 5000
+#        penalty: 2500
+#
+## Example: Medical patient rescue (must NOT be cuffed)
+#- type: entity
+#  id: ASBluespaceMedicalRescueBounty
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    startAnnouncement: station-event-bluespace-medical-rescue-start
+#    startAudio:
+#      path: /Audio/Announcements/attention.ogg
+#    warningAnnouncement: station-event-bluespace-medical-rescue-warning
+#    endAnnouncement: station-event-bluespace-medical-rescue-end
+#    earliestStart: 50
+#    weight: 5
+#    duration: 900
+#    maxDuration: 1500
+#  - type: BluespaceErrorBountyRule
+#    groups:
+#      grid: !type:GridSpawnGroup
+#        nameLoc:
+#        - station-event-bluespace-name-AbandonedMedical
+#        minimumDistance: 1500
+#        maximumDistance: 2500
+#        addComponents:
+#        - type: Gravity
+#          enabled: true
+#          inherent: true
+#        - type: IFF
+#        - type: LinkedLifecycleGridParent
+#        - type: ProtectedGrid
+#        - type: DeletionCensusExempt
+#        paths:
+#        - /Maps/_NF/Bluespace/medicalrescue.yml
+#    rewardAccounts:
+#      Medical: 0.6
+#      Frontier: 0.4
+#    rescueTargets:
+#      MobHumanScientist:
+#        count: 2
+#        reward: 1500
+#        penalty: 750
+#      MobHumanDoctor:
+#        count: 1
+#        reward: 2000
+#        penalty: 1000
+#
+## Example: Contraband removal (reward scales with removed items)
+#- type: entity
+#  id: ASBluespaceContrabandRemovalBounty
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    startAnnouncement: station-event-bluespace-contraband-start
+#    startAudio:
+#      path: /Audio/Announcements/attention.ogg
+#    warningAnnouncement: station-event-bluespace-contraband-warning
+#    endAnnouncement: station-event-bluespace-contraband-end
+#    earliestStart: 75
+#    weight: 4
+#    duration: 1000
+#    maxDuration: 1600
+#  - type: BluespaceErrorBountyRule
+#    groups:
+#      grid: !type:GridSpawnGroup
+#        nameLoc:
+#        - station-event-bluespace-name-SmugglerDen
+#        minimumDistance: 1500
+#        maximumDistance: 2500
+#        addComponents:
+#        - type: Gravity
+#          enabled: true
+#          inherent: true
+#        - type: IFF
+#          color: "#FF6B00"
+#        - type: LinkedLifecycleGridParent
+#        - type: ProtectedGrid
+#        - type: DeletionCensusExempt
+#        paths:
+#        - /Maps/_NF/Bluespace/smugglerden.yml
+#    rewardAccounts:
+#      Sle: 0.7 # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
+#      Frontier: 0.3
+#    removalTargets:
+#      CrateContraband:
+#        count: 5
+#        reward: 500
+#        penalty: 250
+#      WeaponLaserCarbine:
+#        count: 8
+#        reward: 300
+#        penalty: 150
+#      ExplosivesC4:
+#        count: 3
+#        reward: 800
+#        penalty: 400
+#    captureTargets:
+#      MobSmugglerCargoTechnician:
+#        count: 2
+#        reward: 2000
+#        penalty: 1000
+#
+## Example: Pest extermination (must be dead)
+#- type: entity
+#  id: ASBluespacePestExterminationBounty
+#  parent: BaseStationEventShortDelay
+#  components:
+#  - type: StationEvent
+#    startAnnouncement: station-event-bluespace-pest-start
+#    startAudio:
+#      path: /Audio/Announcements/attention.ogg
+#    warningAnnouncement: station-event-bluespace-pest-warning
+#    endAnnouncement: station-event-bluespace-pest-end
+#    earliestStart: 60
+#    weight: 5
+#    duration: 800
+#    maxDuration: 1400
+#  - type: BluespaceErrorBountyRule
+#    groups:
+#      grid: !type:GridSpawnGroup
+#        nameLoc:
+#        - station-event-bluespace-name-InfestedStation
+#        minimumDistance: 1500
+#        maximumDistance: 2500
+#        addComponents:
+#        - type: Gravity
+#          enabled: true
+#          inherent: true
+#        - type: IFF
+#          color: "#00FF00"
+#        - type: LinkedLifecycleGridParent
+#        - type: ProtectedGrid
+#        - type: DeletionCensusExempt
+#        paths:
+#        - /Maps/_NF/Bluespace/infestedstation.yml
+#    rewardAccounts:
+#      Sle: 0.4 # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
+#      Frontier: 0.4
+#      Medical: 0.2
+#    eliminationTargets:
+#      MobHostileSpaceSpider:
+#        count: 12
+#        reward: 200
+#        penalty: 100
+#      MobHostileSpaceSpiderQueen:
+#        count: 1
+#        reward: 2000
+#        penalty: 1000
+#    rescueTargets:
+#      MobHumanMiner:
+#        count: 3
+#        reward: 1000
+#        penalty: 500

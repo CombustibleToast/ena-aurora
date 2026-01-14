@@ -5,7 +5,7 @@
     proto: NFOuterSuitRequired
   price: 0
   equipment:
-    outerClothing: ClothingOuterEVASuitNfsd
+    outerClothing: ASClothingOuterEVASuitSLE # Aurora Song - Changed from ClothingOuterEVASuitNfsd
 
 - type: loadout
   id: NfsdOuterClothing
@@ -13,4 +13,4 @@
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
   equipment:
-    outerClothing: ClothingOuterArmorNfsd
+    outerClothing: ASClothingOuterArmorSLE # Aurora Song - Changed from ClothingOuterArmorNfsd

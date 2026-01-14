@@ -75,6 +75,7 @@ uplink-sle-softsuit-patrol-desc = The standard-issue SLE space proof suit for pa
 
 # region ExchangeVend - Aurora
 store-category-exchangehardsuits = EVA Suits
+store-category-exchangearmor = Armor
 store-category-exchangeweapons = Weapons
 store-category-exchangeutility = Utility
 store-category-exchangeammo = Ammunition
@@ -87,8 +88,21 @@ uplink-exchange-debranded-hardsuit-desc = A Cybersun hardsuit with the paint str
 uplink-exchange-debranded-elite-hardsuit-name = Debranded Elite Armored Hardsuit
 uplink-exchange-debranded-elite-hardsuit-desc = An Elite Cybersun hardsuit with the paint stripped and trackers removed.
 
-uplink-exchange-spesos-name = 5000 spesos
-uplink-exchange-spesos-desc = A stack of 5000 spesos, hard currency.
+uplink-exchange-fort-armor-name = Fort Armor
+uplink-exchange-fort-armor-desc = A bulky set of thick tactical armor.
 
-uplink-exchange-spesos2-name = 25,000 spesos
-uplink-exchange-spesos2-desc = A stack of 25,000 spesos, hard currency.
+uplink-exchange-fort-helmet-name = Fort Helmet
+uplink-exchange-fort-helmet-desc = A sturdy tactical helmet and face mask.
+
+uplink-exchange-military-surplus-hardsuit-name = Military Surplus Hardsuit
+uplink-exchange-military-surplus-hardsuit-desc = Auroran MilSurp hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
+
+uplink-exchange-spesos-name = 3000 spesos
+uplink-exchange-spesos-desc = A stack of 3000 spesos, hard currency.
+
+uplink-exchange-spesos2-name = 15,000 spesos
+uplink-exchange-spesos2-desc = A stack of 15,000 spesos, hard currency.
+
+uplink-exchange-ap4c-name = AP4C SMG
+uplink-exchange-ap4c-desc = A compact submachine gun chambered in .40 pistol. Battle-tested and reliable.
+

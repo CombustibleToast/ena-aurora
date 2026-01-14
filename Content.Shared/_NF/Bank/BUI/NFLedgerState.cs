@@ -39,6 +39,7 @@ public enum LedgerEntryType : byte
     StationDepositAssetsSold,
     StationDepositOther,
     // Expense entries
+    DepartmentTax, // Aurora Song - Department bonus dispensation machine withdrawals
     MailPenalty,
     ShuttleRecordFees,
     StationWithdrawalPayroll,
@@ -47,5 +48,5 @@ public enum LedgerEntryType : byte
     StationWithdrawalBounty,
     StationWithdrawalOther,
     // Utility values
-    FirstExpense = MailPenalty,
+    FirstExpense = DepartmentTax, // Aurora Song - Updated to reflect department bonus machine as first expense type
 }

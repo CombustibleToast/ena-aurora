@@ -293,8 +293,8 @@
   - type: NFCargoOrderConsole # Frontier: use NF variant
     # removeLimitAccess: [ "Quartermaster" ] # Frontier
     taxAccounts: # Frontier
-      Frontier: 0.25 # Frontier
-      Nfsd: 0.15 # Frontier
+      Aurora: 0.25 # Frontier - Aurora Song - Changed from Frontier to Aurora
+      Sle: 0.15 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   - type: ActivatableUI
     verbText: qm-clipboard-computer-verb-text
     key: enum.NFCargoConsoleUiKey.Orders # Frontier: NF prefix

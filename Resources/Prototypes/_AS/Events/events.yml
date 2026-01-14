@@ -1,0 +1,57 @@
+# Aurora Song - Bluespace Triage Event
+# Based on New Frontier Station 14's Bluespace Grid Event
+# Original implementation: https://github.com/new-frontiers-14/frontier-station-14
+
+# duration values are in seconds, reoccurrenceDelay/ earliestStart is in minutes
+- type: entity
+  id: ASBluespaceTriageEvent
+  parent: BaseStationEventShortDelay
+  name: Aurora Song Bluespace Monitoring
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StationEvent
+    startRadioAnnouncement: as-event-bluespace-grid-start-announcement
+    startRadioAnnouncementChannel: Medical
+    warningRadioAnnouncement: as-event-bluespace-grid-warning-announcement
+    warningRadioAnnouncementChannel: Medical
+    endRadioAnnouncement: as-event-bluespace-grid-end-announcement
+    endRadioAnnouncementChannel: Medical
+    earliestStart: 30  # 30 minutes after shift start minimum before event can trigger
+    weight: 5
+    duration: 1500 # 25 minutes
+    maxDuration: 2100 # 35 minutes
+    reoccurrenceDelay: 90 # 1.5 hours
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameDataset: NamesAmbulance
+        nameDatasetType: Nanotrasen
+        minCount: 2
+        maxCount: 3
+        minimumDistance: 500
+        maximumDistance: 1500
+        addComponents:
+        - type: IFF
+          color: "#57b8f0"
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: DeletionCensusExempt
+        paths:
+        # Add your grid map files here
+        - /Maps/_AS/Shuttles/Triage/tyne.yml
+        - /Maps/_AS/Shuttles/Triage/tyne_merc.yml
+        - /Maps/_AS/Shuttles/Triage/tyne_xeno.yml
+        - /Maps/_AS/Shuttles/Triage/searchlight.yml
+        - /Maps/_AS/Shuttles/Triage/searchlight_merc.yml
+        - /Maps/_AS/Shuttles/Triage/searchlight_xeno.yml
+        - /Maps/_AS/Shuttles/Triage/caduceus.yml
+        - /Maps/_AS/Shuttles/Triage/caduceus_merc.yml
+        - /Maps/_AS/Shuttles/Triage/caduceus_xeno.yml
+        - /Maps/_AS/Shuttles/Triage/apothecary.yml
+        - /Maps/_AS/Shuttles/Triage/apothecary_merc.yml
+        - /Maps/_AS/Shuttles/Triage/apothecary_xeno.yml
+  - type: ActiveRadio
+    channels:
+    - Medical

@@ -1,0 +1,66 @@
+# Corpse entities and presets
+# SLE Officer Corpse for event grids
+# Uses medical bounty spawner system for proper corpse appearance
+- type: entity
+  parent: SpawnRandomHumanoidCorpseMedicalBounty
+  id: ASMobSLEOfficerCorpse
+  suffix: Dead, SLE Officer, Medical Bounty
+  name: SLE officer
+  description: A deceased Sector Law Enforcement officer. They appear to have injuries that require treatment.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBouncySLEOfficer
+
+# Loadout entity for SLE officers
+- type: entity
+  id: ASRandomLoadoutSLEOfficer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Loadout
+    prototypes:
+    - ASSLEOfficerCorpseGear
+
+# Loadout settings for SLE officers (randomHumanoidSettings version)
+- type: randomHumanoidSettings
+  id: ASRandomLoadoutSLEOfficer
+  components:
+  - type: Loadout
+    prototypes:
+    - ASSLEOfficerCorpseGear
+
+# Random humanoid settings for SLE officers - inherits AS medical bounty behavior
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, ASRandomLoadoutSLEOfficer]
+  id: ASMedicalBouncySLEOfficer
+  randomizeName: true
+  speciesBlacklist:
+  - Arachnid
+  - Diona
+  - Dwarf
+  - Feroxi
+  - Gingerbread
+  - Goblin
+  - IPC
+  - Moth
+  - Oni
+  - Rodentia
+  - Sheleg
+  - Skeleton
+  - SlimePerson
+  - Tajaran
+  - Vox
+  components:
+  - type: ASMedicalBounty
+    bountyId: ASSLEOfficerInjured  # Specific light bounty for SLE officers
+
+- type: startingGear
+  id: ASSLEOfficerCorpseGear
+  equipment:
+    head: ASClothingHeadHatSLEBeretBrown
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    jumpsuit: ASClothingUniformJumpsuitSLE
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    neck: ASClothingNeckSLEBadgeSecurity

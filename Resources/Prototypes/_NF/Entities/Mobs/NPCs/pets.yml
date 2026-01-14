@@ -132,10 +132,10 @@
   - type: FlashImmunity
   - type: IntrinsicRadioTransmitter
     channels:
-    - Nfsd
+    - Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   - type: ActiveRadio
     channels:
-    - Nfsd
+    - Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   - type: MeleeWeapon
     damage:
       types:
@@ -368,7 +368,7 @@
     implants:
     - RedLightImplant
     - DissonantWhispersImplant
-    - MedicalTrackingImplant
+ #   - MedicalTrackingImplant # Aurora: Remove medical tracker
   - type: IntrinsicRadioTransmitter
     channels:
     - Science

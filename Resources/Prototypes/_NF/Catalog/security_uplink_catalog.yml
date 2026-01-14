@@ -183,7 +183,7 @@
   id: UplinkSecurityMk32
   name:  uplink-security-mk58S-name #Auroar
   description: uplink-security-mk58S-desc #Aurora
-  productEntity: ASWeaponPistolMK58SLE #Aurora
+  productEntity: ASWeaponPistolMk58SLE #Aurora
   icon: { sprite: _AS/Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 2
@@ -431,8 +431,8 @@
   id: UplinkSecurityHolo
   name:  uplink-security-holo-name
   description: uplink-security-holo-desc
-  productEntity: HoloprojectorNfsd
-  icon: { sprite: _NF/Objects/Devices/Holoprojectors/nfsd.rsi, state: icon }
+  productEntity: ASHoloprojectorSLE
+  icon: { sprite: _AS/Objects/Devices/Holoprojectors/sle.rsi, state: icon, color: "#4a6fa5" }
   cost:
     FrontierUplinkCoin: 1
   categories:
@@ -447,8 +447,8 @@
   id: UplinkSecurityJetpack
   name:  uplink-security-jetpack-name
   description: uplink-security-jetpack-desc
-  productEntity: JetpackNfsdFilled
-  icon: { sprite: _NF/Objects/Tanks/Jetpacks/nfsd.rsi, state: icon }
+  productEntity: ASJetpackSLEFilled
+  icon: { sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 1
   categories:
@@ -463,8 +463,8 @@
   id: UplinkSecurityMagboots
   name:  uplink-security-magboots-name
   description: uplink-security-magboots-desc
-  productEntity: ClothingShoesBootsMagNfsdFilled
-  icon: { sprite: _NF/Clothing/Shoes/Boots/magboots-nfsd.rsi, state: icon }
+  productEntity: ASClothingShoesBootsMagSLEFilled
+  icon: { sprite: _AS/Clothing/Shoes/Boots/magboots-sle.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 1
   categories:
@@ -479,8 +479,8 @@
   id: UplinkNfsdTechfab
   name:  uplink-security-techfab-name
   description: uplink-security-techfab-desc
-  productEntity: NfsdTechFabCircuitboard
-  icon: { sprite: _NF/Objects/Misc/module.rsi, state: nfsd }
+  productEntity: ASTechFabSLECircuitboard
+  icon: { sprite: _AS/Objects/Misc/module.rsi, state: sle }
   cost:
     FrontierUplinkCoin: 5
   categories:
@@ -860,8 +860,8 @@
   id: UplinkSecurityEnergyShield
   name:  uplink-security-energyshield-name
   description: uplink-security-energyshield-desc
-  productEntity: EnergyShieldNfsd
-  icon: { sprite: _NF/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
+  productEntity: ASEnergyShieldSLE
+  icon: { sprite: _AS/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
   cost:
     FrontierUplinkCoin: 8
   categories:
@@ -881,8 +881,8 @@
   id: UplinkSecuritySwat
   name:  uplink-security-swat-name
   description: uplink-security-swat-desc
-  productEntity: ClothingMaskGasSheriff
-  icon: { sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi, state: icon}
+  productEntity: ASClothingMaskGasSLESheriff
+  icon: { sprite: _AS/Clothing/Mask/sle_sheriff.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -998,7 +998,7 @@
   id: UplinkSecurityEmpGrenadeBox
   name:  uplink-security-empgrenade-box-name
   description: uplink-security-empgrenade-box-desc
-  productEntity: BoxEMPGrenadesNfsd
+  productEntity: BoxEMPGrenadesSLE
   icon: { sprite: Objects/Weapons/Grenades/empgrenade.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 2
@@ -1064,6 +1064,22 @@
           - SecurityUplink
 
 - type: listing
+  id: UplinkSecurityStingerGrenadeBox
+  name:  uplink-security-stingergrenade-box-name
+  description: uplink-security-stingergrenade-box-desc
+  productEntity: BoxStingerGrenadesNfsd
+  icon: { sprite: Objects/Weapons/Grenades/stingergrenade.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
   id: UplinkSecurityBreachingChargesBox
   name:  uplink-security-breachingcharge-box-name
   description: uplink-security-breachingcharge-box-desc
@@ -1088,8 +1104,8 @@
   id: UplinkSecurityHoverbikeNfsdFlatpack
   name:  uplink-security-hoverbike-name
   description: uplink-security-hoverbike-desc
-  productEntity: HoverbikeNfsdFlatpack
-  icon: { sprite: _NF/Objects/Vehicles/hoverbike.rsi, state: vehicle }
+  productEntity: HoverbikeSLEFlatpack
+  icon: { sprite: _AS/Objects/Vehicles/hoverbike.rsi, state: vehicle }
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -1109,8 +1125,8 @@
   id: UplinkSecurityLethalArmory
   name:  uplink-security-lethalarmory-name
   description: uplink-security-lethalarmory-desc
-  productEntity: CrateArmoryLethalNfsd
-  icon: { sprite: _NF/Structures/Storage/Crates/nfsd_secure2.rsi, state: icon }
+  productEntity: ASCrateArmoryLethalSLE
+  icon: { sprite: _AS/Structures/Storage/Crates/sle_secure2.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 15
   categories:
@@ -1130,8 +1146,8 @@
   id: UplinkSecurityTrackingBundle
   name: uplink-security-trackingdart-bundle-name
   description: uplink-security-trackingdart-bundle-desc
-  productEntity: ClothingBackpackDuffelNfsdTrackingBundle
-  icon: { sprite: _NF/Clothing/Back/Duffels/nfsd_brown.rsi, state: icon }
+  productEntity: ASClothingBackpackDuffelSLETrackingBundle
+  icon: { sprite: _AS/Clothing/Back/Duffels/sle_brown.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
   categories:
@@ -1146,8 +1162,8 @@
   id: UplinkSecurityEmpBundle
   name: uplink-security-emp-bundle-name
   description: uplink-security-emp-bundle-desc
-  productEntity: ClothingBackpackDuffelNfsdEmpBundle
-  icon: { sprite: _NF/Clothing/Back/Duffels/nfsd_brown.rsi, state: icon }
+  productEntity: ASClothingBackpackDuffelSLEEmpBundle
+  icon: { sprite: _AS/Clothing/Back/Duffels/sle_brown.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
   categories:
@@ -1162,8 +1178,8 @@
   id: UplinkSecurityNonLethalArmory
   name:  uplink-security-nonlethalarmory-name
   description: uplink-security-nonlethalarmory-desc
-  productEntity: CrateArmoryNonLethalNfsd
-  icon: { sprite: _NF/Structures/Storage/Crates/nfsd_secure1.rsi, state: icon }
+  productEntity: ASCrateArmoryNonLethalSLE
+  icon: { sprite: _AS/Structures/Storage/Crates/sle_secure1.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 10
   categories:

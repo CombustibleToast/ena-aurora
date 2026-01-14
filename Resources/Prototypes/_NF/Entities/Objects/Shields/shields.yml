@@ -1,5 +1,5 @@
 - type: entity
-  name: SLE energy shield
+  name: NFSD energy shield
   parent: [BaseC2ContrabandUnredeemable, EnergyShield]
   id: EnergyShieldNfsd
   components:

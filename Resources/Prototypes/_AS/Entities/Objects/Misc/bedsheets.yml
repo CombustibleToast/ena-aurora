@@ -1,0 +1,37 @@
+# Aurora Song - SLE Bedsheets
+# Using NFSD sprites with color-shifting to SLE blue tones
+- type: entity
+  id: ASBedsheetSLE
+  parent: BedsheetBase
+  name: SLE bedsheet
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/bedsheets.rsi
+    state: sheetnfsd
+    color: "#4a6fa5"  # SLE blue
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Bedsheets/Nfsd/nfsd.rsi
+
+- type: entity
+  id: ASBedsheetSLEBrigmedic
+  parent: BedsheetBase
+  name: brigmedic bedsheet
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/bedsheets.rsi
+    state: sheetnfsdbrigmed
+    color: "#5a8fc5"  # SLE light blue
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Bedsheets/Nfsd/nfsd_brigmed.rsi
+
+- type: entity
+  id: ASBedsheetSLESheriff
+  parent: BedsheetBase
+  name: sheriff bedsheet
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/bedsheets.rsi
+    state: sheetnfsdsheriff
+    color: "#2a4a7c"  # SLE dark blue
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Bedsheets/Nfsd/nfsd_sheriff.rsi

@@ -1,21 +1,21 @@
 - type: loadout
   id: BrigmedicClothingUniformJumpsuitBrigmedic
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNfsd
+    jumpsuit: ASClothingUniformJumpsuitSLE
 
 - type: loadout
   id: BrigmedicClothingUniformJumpskirtBrigmedic
   equipment:
-    jumpsuit: ClothingUniformJumpskirtNfsd
+    jumpsuit: ASClothingUniformJumpskirtSLE
 
 # Aurora Song
 - type: loadout
   id: BrigmedicClothingUniformJumpsuitSle
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSle
+    jumpsuit: ASClothingUniformJumpsuitSLE
 
 - type: loadout
   id: BrigmedicClothingUniformJumpskirtSle
   equipment:
-    jumpsuit: ClothingUniformJumpskirtSle
+    jumpsuit: ASClothingUniformJumpskirtSLE
 # Aurora Song

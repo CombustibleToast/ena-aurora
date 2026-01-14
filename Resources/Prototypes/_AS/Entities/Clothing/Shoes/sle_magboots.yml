@@ -1,0 +1,22 @@
+# Aurora Song - SLE Magboots
+# Using recolored sprites from master branch
+
+- type: entity
+  parent: ClothingShoesBootsMagSecurity
+  id: ASClothingShoesBootsMagSLE
+  name: SLE magboots
+  description: Magnetic boots issued to SLE personnel for extravehicular activity.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Shoes/Boots/magboots-sle.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Shoes/Boots/magboots-sle.rsi
+  - type: Magboots
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.9
+
+- type: entity
+  parent: [ASClothingShoesBootsMagSLE, ClothingShoesBootsSecFilled]
+  id: ASClothingShoesBootsMagSLEFilled
+  suffix: Filled

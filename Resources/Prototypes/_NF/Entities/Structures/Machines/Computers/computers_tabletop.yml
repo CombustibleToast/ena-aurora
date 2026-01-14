@@ -744,7 +744,7 @@
   suffix: Frontier, Tabletop
   components:
   - type: StationBankATM
-    account: Frontier
+    account: Aurora # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseComputerTabletopStationAdminBankATM
@@ -753,7 +753,7 @@
   suffix: NFSD, Tabletop
   components:
   - type: StationBankATM
-    account: Nfsd
+    account: Sle # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
 
 - type: entity
   parent: BaseComputerTabletopStationAdminBankATM

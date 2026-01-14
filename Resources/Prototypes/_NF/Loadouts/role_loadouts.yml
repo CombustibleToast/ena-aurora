@@ -22,6 +22,8 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - ContractorSidearm # Aurora's Song
+  - ContractorAmmo # Aurora's Song
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -53,7 +55,7 @@
   id: JobMercenary
   groups:
   - MercenaryHead
-  - ContractorNeck
+  - MercenaryNeck # Aurora Song
   - MercenaryJumpsuit
   - MercenaryGloves
   - MercenaryBackpack
@@ -72,6 +74,9 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - MercenaryLongarm # Aurora's Song
+  - MercenarySidearm # Aurora's Song
+  - MercenaryAmmo # Aurora's Song
   - NFSpeciesSpecific
 
 # region Frontier
@@ -151,7 +156,7 @@
   - StcForcedOuterClothing
   - StcShoes
   - ContractorFace
-  - ContractorGlasses
+  - StcGlasses
   - ContractorBelt
   - StcEars
   - ContractorBoxSurvival
@@ -174,8 +179,8 @@
   - StationRepForcedOuterClothing
   - ContractorShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
+  - StationRepGlasses
+  - StationRepBelt
   - StationRepEars
   - ContractorBoxSurvival
   - StationRepPDA
@@ -218,12 +223,12 @@
   - DocJumpsuit
   - DocGloves
   - DocBackpack
-  - ContractorOuterClothing
+  - MedicOuterClothing
   - DocForcedOuterClothing
   - DocShoes
   - ContractorFace
-  - ContractorGlasses
-  - ContractorBelt
+  - MedicGlasses # Aurora Song
+  - MedicBelt
   - DocEars
   - ContractorBoxSurvival
   - DocPDA

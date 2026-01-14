@@ -1,0 +1,45 @@
+# Aurora Song - SLE EVA Locker Fills
+
+- type: entity
+  parent: [ASLockerBaseSecure, LockerEvacRepair]
+  id: ASLockerEVASLE
+  name: SLE EVA locker
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle
+    stateDoorOpen: sle_open
+    stateDoorClosed: sle_door
+
+- type: entity
+  parent: ASLockerEVASLE
+  id: ASLockerEVASLEFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: ASClothingOuterEVASuitSLE
+        amount: 2
+      - id: ASClothingShoesBootsMagSLEFilled
+        amount: 2
+      - id: ASJetpackSLEFilled
+        amount: 2
+      - id: GasAnalyzer
+      - id: HolofanProjector
+
+# Aurora Song - SLE Wall EVA Locker Filled
+- type: entity
+  parent: ASLockerWallEVAColorSLE
+  id: ASLockerWallEVAColorSLEFilled
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASClothingOuterEVASuitSLE
+    - id: ASJetpackSLEFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
+
+# Alias for backward compatibility with maps
+- type: entity
+  parent: ASLockerWallEVAColorSLEFilled
+  id: ASLockerWallEVASLEFilled

@@ -1,0 +1,49 @@
+# Aurora Song - SLE Machine Circuitboards
+
+# Thruster Circuitboard
+- type: entity
+  id: ThrusterSLEMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: SLE thruster machine board
+  description: A machine printed circuit board for an SLE thruster.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: ASThrusterSLE
+    requirements:
+      Capacitor: 3
+    stackRequirements:
+      Steel: 5
+
+# Gyroscope Circuitboard
+- type: entity
+  id: GyroscopeSLEMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: SLE gyroscope machine board
+  description: A machine printed circuit board for an SLE gyroscope.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: ASGyroscopeSLE
+    requirements:
+      Capacitor: 3
+    stackRequirements:
+      Steel: 5
+
+# Small Gyroscope Circuitboard
+- type: entity
+  id: SmallGyroscopeSLEMachineCircuitboard
+  parent: BaseMachineCircuitboard
+  name: small SLE gyroscope machine board
+  description: A machine printed circuit board for a small SLE gyroscope.
+  components:
+  - type: Sprite
+    state: science
+  - type: MachineBoard
+    prototype: SmallASGyroscopeSLE
+    requirements:
+      Capacitor: 2
+    stackRequirements:
+      Steel: 3

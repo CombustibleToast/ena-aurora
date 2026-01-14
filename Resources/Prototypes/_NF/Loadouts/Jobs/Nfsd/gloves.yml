@@ -2,9 +2,10 @@
 - type: loadout
   id: NfsdClothingHandsGlovesCombatNfsdBrown
   equipment:
-    gloves: ClothingHandsGlovesCombatNfsdBrown
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue # Aurora Song - Changed to use SLE prototype
 
 - type: loadout
   id: NfsdClothingHandsGlovesCombatNfsdCream
   equipment:
-    gloves: ClothingHandsGlovesCombatNfsdCream
+    gloves: ASClothingHandsGlovesCombatSLELightBlue # Aurora Song - Changed to use SLE prototype
+

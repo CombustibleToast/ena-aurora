@@ -1,26 +1,26 @@
 - type: loadout
   id: SheriffClothingUniformJumpsuitSheriff
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNfsdTacGray
+    jumpsuit: ASClothingUniformJumpsuitSLETacGray
 
 - type: loadout
   id: SheriffClothingUniformJumpskirtSheriff
   equipment:
-    jumpsuit: ClothingUniformJumpskirtNfsd
+    jumpsuit: ASClothingUniformJumpskirtSLE
 
 # Aurora Song
 - type: loadout
   id: SheriffClothingUniformJumpsuitNfsd
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNfsd
+    jumpsuit: ASClothingUniformJumpsuitSLE
 
 - type: loadout
   id: SheriffClothingUniformJumpsuitSle
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSle
+    jumpsuit: ASClothingUniformJumpsuitSLE
 
 - type: loadout
   id: SheriffClothingUniformJumpskirtSle
   equipment:
-    jumpsuit: ClothingUniformJumpskirtSle
+    jumpsuit: ASClothingUniformJumpskirtSLE
 # Aurora Song

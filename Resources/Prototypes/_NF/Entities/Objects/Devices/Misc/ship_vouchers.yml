@@ -26,7 +26,7 @@
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherNfsdSergeant
-  name: SLE sergeant ship voucher
+  name: NFSD sergeant ship voucher
   description: Allows for one free small to medium NFSD ship purchase. Destroyed on sale.
   components:
   - type: Sprite
@@ -46,7 +46,7 @@
 - type: entity
   parent: ShipVoucherNfsdSergeant
   id: ShipVoucherNfsdBailiff
-  name: SLE Lieutenant ship voucher
+  name: NFSD Lieutenant ship voucher
   description: Allows for one free small to capital ship purchase. Destroyed on sale.
   components:
   - type: Sprite

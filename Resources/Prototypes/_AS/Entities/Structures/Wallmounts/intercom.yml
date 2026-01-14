@@ -1,0 +1,13 @@
+- type: entity
+  id: ASIntercomSLE
+  parent: IntercomSecurity
+  suffix: SLE
+  components:
+  - type: ContainerFill
+    containers:
+      board:
+      - IntercomElectronics
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyNfsd
+      - EncryptionKeyTraffic

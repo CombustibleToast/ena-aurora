@@ -19,8 +19,7 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
     /// <summary>
     ///     Default ID of <see cref="TypingIndicatorPrototype"/>
     /// </summary>
-    [ValidatePrototypeId<TypingIndicatorPrototype>]
-    public const string InitialIndicatorId = "default";
+    public static readonly ProtoId<TypingIndicatorPrototype> InitialIndicatorId = "default";
 
     public override void Initialize()
     {
@@ -82,7 +81,7 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
         }
 
         SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
-        SetTypingIndicatorState(uid.Value, ev.State);
+        SetTypingIndicatorEnabled(uid.Value, ev.IsTyping);
     }
 
     private void SetTypingIndicatorState(EntityUid uid, TypingIndicatorState state, AppearanceComponent? appearance = null)
@@ -91,6 +90,15 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
             return;
 
         _appearance.SetData(uid, TypingIndicatorVisuals.State, state, appearance);
+    }
+
+    /// <summary>
+    /// DeltaV: Enables or disables the typing indicator
+    /// </summary>
+    private void SetTypingIndicatorEnabled(EntityUid uid, bool enabled)
+    {
+        var state = enabled ? TypingIndicatorState.Typing : TypingIndicatorState.None;
+        SetTypingIndicatorState(uid, state);
     }
 
     /// <summary>

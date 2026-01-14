@@ -4,7 +4,7 @@
   - !type:GroupLoadoutEffect
     proto: NFCoatCapable
   equipment:
-    outerClothing: ClothingOuterCoatNfsdFormalSheriff
+    outerClothing: ASClothingOuterCoatSLEFormalSheriff
 
 - type: loadout
   id: SheriffClothingOuterArmorBulletproof

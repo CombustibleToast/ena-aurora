@@ -1,0 +1,86 @@
+# Aurora Song - AS Mob Spawners
+# Simple mob spawners for testing and events
+
+- type: entity
+  name: Human Spawner
+  id: ASSpawnMobHuman
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Species/Human/parts.rsi
+        state: full
+  - type: ConditionalSpawner
+    prototypes:
+      - MobHuman
+
+- type: entity
+  name: Vulpkanin Spawner
+  id: ASSpawnMobVulpkanin
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi
+        state: full
+  - type: ConditionalSpawner
+    prototypes:
+      - MobVulpkanin
+
+- type: entity
+  name: Mouse Spawner
+  id: ASSpawnMobMouse
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Animals/mouse.rsi
+        state: mouse-0
+  - type: ConditionalSpawner
+    prototypes:
+      - MobMouse
+
+- type: entity
+  name: Hostile Prisoner Spawner
+  id: SpawnMobHostilePrisoner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Mobs/Species/Human/parts.rsi
+        state: full
+  - type: ConditionalSpawner
+    prototypes:
+      - MobHostilePrisoner
+
+- type: entity
+  name: Riot Prisoner Spawner
+  id: SpawnMobHostileRiotPrisoner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Clothing/Head/Helmets/light_riot.rsi
+        state: icon
+  - type: ConditionalSpawner
+    prototypes:
+      - MobHostileRiotPrisoner
+
+- type: entity
+  name: Armed Prisoner Spawner
+  id: SpawnMobHostileArmedPrisoner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: red
+      - sprite: Objects/Weapons/Melee/stunbaton.rsi
+        state: stunbaton_off
+  - type: ConditionalSpawner
+    prototypes:
+      - MobHostileArmedPrisoner

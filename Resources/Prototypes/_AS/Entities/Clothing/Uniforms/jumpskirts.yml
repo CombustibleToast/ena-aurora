@@ -8,3 +8,27 @@
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
+
+# Aurora Song - Additional SLE jumpskirt variants using NFSD sprites
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLE
+  name: SLE jumpskirt
+  description: A long sleeved jumpskirt produced for Security Logistics Enforcement officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShort
+  name: SLE jumpskirt (short)
+  description: A short sleeved jumpskirt produced for Security Logistics Enforcement officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
+

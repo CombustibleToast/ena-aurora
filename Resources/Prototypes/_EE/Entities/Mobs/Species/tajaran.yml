@@ -38,9 +38,9 @@
     spawned:
     - id: FoodMeatHuman
       amount: 5
-  - type: TemperatureProtection # fur is a good insulator, actually
-    heatingCoefficient: 0.7 # Aurora Song 0.1>0.7,
-    coolingCoefficient: 0.7 # Aurora Song 0.1>0.7, Tajaran couldnt be cooled down before
+  #- type: TemperatureProtection # fur is a good insulator, actually Aurora song: So, I know we
+  #  heatingCoefficient: 0.7 # Aurora Song 0.1>0.7,
+  #  coolingCoefficient: 0.7 # Aurora Song 0.1>0.7, Tajaran couldnt be cooled down before
   # - type: Flammable Aurora's Song commented out
   #   fireStackIncreaseMultiplier: 1.35 # until you light it up, cuz it's oily too
   # - type: NightVision
@@ -106,11 +106,11 @@
   # - FelinidEmotes Aurora's Song
   # - type: FootPrints Aurora's Song
   - type: Temperature
-    coldDamageThreshold: 248.15 # -25 degrees centigrade, like 12 degrees below normal
+    coldDamageThreshold:  248.15 # -25 degrees centigrade, like 12 degrees below normal
     currentTemperature: 311.76  # Body temperature of cat
     heatDamage:
       types:
-        Cold: 0.65 # in line with cold resist
+        Cold: 0.5 # in line with cold resist # Aurora: 50% resistance
     coldDamage:
       types:
         Heat: 2 # poor kitty

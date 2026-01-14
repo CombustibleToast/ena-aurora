@@ -37,7 +37,7 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
 
     private void OnCvarChanged(bool value)
     {
-        var humanoidQuery = EntityManager.AllEntityQueryEnumerator<HumanoidAppearanceComponent, SpriteComponent>();
+        var humanoidQuery = AllEntityQuery<HumanoidAppearanceComponent, SpriteComponent>();
         while (humanoidQuery.MoveNext(out var uid, out var humanoidComp, out var spriteComp))
         {
             UpdateSprite((uid, humanoidComp, spriteComp));
@@ -237,10 +237,10 @@ public sealed class HumanoidAppearanceSystem : SharedHumanoidAppearanceSystem
         humanoid.Species = profile.Species;
         humanoid.SkinColor = profile.Appearance.SkinColor;
         humanoid.EyeColor = profile.Appearance.EyeColor;
-        humanoid.Height = profile.Appearance.Height;
-        humanoid.Width = profile.Appearance.Width;
+        humanoid.Height = profile.Appearance.Height; // Aurora Change
+        humanoid.Width = profile.Appearance.Width; // Aurora Change
 
-        // Apply scaling for client-side preview (width, height)
+        // Apply scaling for client-side preview (width, height) Aurora Change
         var sprite = Comp<SpriteComponent>(uid);
         sprite.Scale = new Vector2(profile.Appearance.Width, profile.Appearance.Height);
 

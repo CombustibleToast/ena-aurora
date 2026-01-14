@@ -1,0 +1,37 @@
+# Aurora Song - SLE Forms
+# SLE paperwork templates for law enforcement operations
+
+# Filled Folder
+- type: entity
+  id: ASFillSLEForms
+  abstract: true
+  components:
+  - type: StorageFill
+    contents:
+    - id: PaperWrittenNfsdWarrant
+    - id: PaperWrittenNfsdReport
+    - id: PaperWrittenNfsdArrestWarrant
+    - id: PaperWrittenNfsdArrestReport
+    - id: PaperWrittenNfsdDutyLog
+    - id: PaperWrittenNfsdAuthorization
+    - id: PaperWrittenNfsdContrabandAmnesty
+    - id: PaperWrittenNfsdContrabandTurnover
+    - id: PaperWrittenNfsdContrabandPermit
+    - id: Paper
+      prob: 0.5
+    - id: Paper
+      prob: 0.5
+
+- type: entity
+  id: ASBoxFolderSLEForms
+  parent: [ASFillSLEForms, BoxFolderPalGreen]
+  name: SLE form folder
+  description: A folder filled with SLE paperwork templates.
+  suffix: Forms, Green
+
+- type: entity
+  id: ASBoxFolderSLEFormsBrown
+  parent: [ASFillSLEForms, BoxFolderPalBrown]
+  name: SLE form folder
+  description: A folder filled with SLE paperwork templates.
+  suffix: Forms, Brown

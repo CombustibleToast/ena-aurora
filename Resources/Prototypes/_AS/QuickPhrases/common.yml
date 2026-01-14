@@ -1,0 +1,29 @@
+# Aurora Song: AAC Tablet QuickPhrase prototypes for common phrases
+
+- type: quickPhrase
+  id: Dock
+  text: phrase-dock
+  tab: Common
+  group: Navigation
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: Undock
+  text: phrase-undock
+  tab: Common
+  group: Navigation
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: EnRoute
+  text: phrase-en-route
+  tab: Common
+  group: Navigation
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: ReadyForTakeoff
+  text: phrase-ready-for-takeoff
+  tab: Common
+  group: Navigation
+  styleClass: ButtonColorGreen

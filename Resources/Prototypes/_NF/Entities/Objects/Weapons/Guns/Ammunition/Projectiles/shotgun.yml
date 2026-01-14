@@ -186,7 +186,7 @@
       types:
         Blunt: 10
   - type: StaminaDamageOnCollide
-    damage: 30 # 4 hits to stun
+    damage: 35 # 3 hits to stun | Aurora, 4 -> 3
 
 - type: entity
   categories: [ HideSpawnMenu ]

@@ -56,7 +56,7 @@
   minLimit: 1
   loadouts:
   - NfsdClothingHandsGlovesCombatNfsdBrown
-  - NfsdClothingHandsGlovesCombatNfsdCream
+  - NfsdClothingHandsGlovesCombatNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
   - NfsdClothingHandsGlovesCombatNfsdBrown
 
@@ -65,10 +65,10 @@
   name: loadout-group-contractor-gloves
   minLimit: 1
   loadouts:
-  - NfsdClothingHandsGlovesCombatNfsdCream
+  - NfsdClothingHandsGlovesCombatNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
   - NfsdClothingHandsGlovesCombatNfsdBrown
   fallbacks:
-  - NfsdClothingHandsGlovesCombatNfsdCream
+  - NfsdClothingHandsGlovesCombatNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
 
 - type: loadoutGroup
   id: NfsdBelt
@@ -102,9 +102,10 @@
   name: loadout-group-contractor-face
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
-  - NfsdClothingMaskGasNfsd
+  - NfsdClothingMaskGasNfsd # Aurora Song - Gives gas mask in storage for all species
+  - NfsdVoxClothingMaskGasNfsd # Aurora Song - Equips gas mask for Vox only (species-filtered)
   fallbacks:
-  - NfsdClothingMaskGasNfsd
+  - NfsdClothingMaskGasNfsd # Aurora Song - Updated to use _AS SLE prototypes
 
 - type: loadoutGroup
   id: NfsdGlasses
@@ -121,33 +122,33 @@
   name: loadout-group-contractor-ears
   minLimit: 1
   loadouts:
-  - NfsdClothingHeadsetNfsdBrown
-  - NfsdClothingHeadsetNfsdCream
-  - NfsdClothingHeadsetNfsdGreen
+  - NfsdClothingHeadsetNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
-  - NfsdClothingHeadsetNfsdBrown
+  - NfsdClothingHeadsetNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
 
 - type: loadoutGroup
   id: NfsdEarsCream
   name: loadout-group-contractor-ears
   minLimit: 1
   loadouts:
-  - NfsdClothingHeadsetNfsdBrown
-  - NfsdClothingHeadsetNfsdCream
-  - NfsdClothingHeadsetNfsdGreen
+  - NfsdClothingHeadsetNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
-  - NfsdClothingHeadsetNfsdCream
+  - NfsdClothingHeadsetNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
 
 - type: loadoutGroup
   id: NfsdEarsGreen
   name: loadout-group-contractor-ears
   minLimit: 1
   loadouts:
-  - NfsdClothingHeadsetNfsdBrown
-  - NfsdClothingHeadsetNfsdCream
-  - NfsdClothingHeadsetNfsdGreen
+  - NfsdClothingHeadsetNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetNfsdCream # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
-  - NfsdClothingHeadsetNfsdGreen
+  - NfsdClothingHeadsetNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
 
 # Senior officer headsets
 - type: loadoutGroup
@@ -155,30 +156,31 @@
   name: loadout-group-contractor-ears
   minLimit: 1
   loadouts:
-  - NfsdClothingHeadsetAltNfsdBrown
-  - NfsdClothingHeadsetAltNfsdCreamandBrown
-  - NfsdClothingHeadsetAltNfsdGreen
+  - NfsdClothingHeadsetAltNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetAltNfsdCreamandBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetAltNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
-  - NfsdClothingHeadsetAltNfsdBrown
+  - NfsdClothingHeadsetAltNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
 
 - type: loadoutGroup
   id: NfsdEarsAltCream
   name: loadout-group-contractor-ears
   minLimit: 1
   loadouts:
-  - NfsdClothingHeadsetAltNfsdBrown
-  - NfsdClothingHeadsetAltNfsdCreamandBrown
-  - NfsdClothingHeadsetAltNfsdGreen
+  - NfsdClothingHeadsetAltNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetAltNfsdCreamandBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetAltNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
-  - NfsdClothingHeadsetAltNfsdCreamandBrown
+  - NfsdClothingHeadsetAltNfsdCreamandBrown # Aurora Song - Updated to use _AS SLE prototypes
 
 - type: loadoutGroup
   id: NfsdEarsAltGreen
   name: loadout-group-contractor-ears
   minLimit: 1
   loadouts:
-  - NfsdClothingHeadsetAltNfsdBrown
-  - NfsdClothingHeadsetAltNfsdCreamandBrown
-  - NfsdClothingHeadsetAltNfsdGreen
+  - NfsdClothingHeadsetAltNfsdBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetAltNfsdCreamandBrown # Aurora Song - Updated to use _AS SLE prototypes
+  - NfsdClothingHeadsetAltNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
   fallbacks:
-  - NfsdClothingHeadsetAltNfsdGreen
+  - NfsdClothingHeadsetAltNfsdGreen # Aurora Song - Updated to use _AS SLE prototypes
+

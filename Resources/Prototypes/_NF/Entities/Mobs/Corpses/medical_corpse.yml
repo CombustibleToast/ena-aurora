@@ -73,6 +73,9 @@
 
 - type: randomHumanoidSettings
   id: MedicalBounty
+  randomizeName: true # Patients should have names (easier to remember)
+  speciesBlacklist:
+  - IPC # Aurora Song - IPCs don't work well with medical damage mechanics
   components:
   - type: StinkyTrait
   - type: Carriable # Carrying system from nyanotrasen.
@@ -89,8 +92,6 @@
     useArgumentEntity: true
     # Medical bounty-specific fields
   - type: MedicalBounty
-  - type: RandomHumanoidAppearance
-    randomizeName: true # Patients should have names (easier to remember)
   - type: NpcFactionMember
     factions:
     - NanoTrasen # Unsure about this one, but friendly turrets shouldn't gun them down

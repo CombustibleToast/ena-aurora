@@ -54,7 +54,7 @@ namespace Content.Client.Lobby.UI
         private readonly MarkingManager _markingManager;
         private readonly JobRequirementsManager _requirements;
         private readonly LobbyUIController _controller;
-        private readonly SpriteSystem _sprite;
+        private readonly SpriteSystem _sprite;  // Aurora
 
         // CCvar.
         private int _maxNameLength;
@@ -108,13 +108,15 @@ namespace Content.Client.Lobby.UI
 
         private bool _isDirty;
 
-        [ValidatePrototypeId<GuideEntryPrototype>]
-        private const string DefaultSpeciesGuidebook = "Species";
+        private static readonly ProtoId<GuideEntryPrototype> DefaultSpeciesGuidebook = "Species";
 
         public event Action<List<ProtoId<GuideEntryPrototype>>>? OnOpenGuidebook;
 
         private ISawmill _sawmill;
 
+        private EntityUid? _previewEntity;
+
+        private SpriteView _spriteview = default!;
         public HumanoidProfileEditor(
             IClientPreferencesManager preferencesManager,
             IConfigurationManager configurationManager,
@@ -234,9 +236,23 @@ namespace Content.Client.Lobby.UI
             SpeciesButton.OnItemSelected += args =>
             {
                 SpeciesButton.SelectId(args.Id);
-                SetSpecies(_species[args.Id].ID);
+                var selectedSpeciesId = _species[args.Id].ID;
+
+                SetSpecies(selectedSpeciesId);
                 UpdateHairPickers();
                 OnSkinColorOnValueChanged();
+
+                // Aurora: Update height/width slider limits based on species
+                var speciesProto = _prototypeManager.Index<SpeciesPrototype>(selectedSpeciesId);
+
+                HeightSlider.MinValue = speciesProto.MinHeight;
+                HeightSlider.MaxValue = speciesProto.MaxHeight;
+                WidthSlider.MinValue = speciesProto.MinWidth;
+                WidthSlider.MaxValue = speciesProto.MaxWidth;
+
+                // Aurora: Reset sliders to midpoint
+                HeightSlider.Value = (speciesProto.MinHeight + speciesProto.MaxHeight) / 2f;
+                WidthSlider.Value = (speciesProto.MinWidth + speciesProto.MaxWidth) / 2f;
             };
 
             #endregion Species
@@ -795,7 +811,18 @@ namespace Content.Client.Lobby.UI
             // Check and set the dirty flag to enable the save/reset buttons as appropriate.
             SetDirty();
         }
+        // Aurora: scale with size
+        private void UpdateSpriteViewScale()
+        {
+            if (SpriteView == null || Profile == null)
+                return;
 
+            const float baseZoom = 8f; // matches your XAML Scale="8 8"
+            var width = Profile.Appearance.Width;
+            var height = Profile.Appearance.Height;
+
+            SpriteView.Scale = new Vector2(width * baseZoom, height * baseZoom);
+        }
         // DEN - Humanoid Skin Tones
         private void UpdateSkinFurToggleVisibility()
         {
@@ -881,9 +908,9 @@ namespace Content.Client.Lobby.UI
             var species = Profile?.Species ?? SharedHumanoidAppearanceSystem.DefaultSpecies;
             var page = DefaultSpeciesGuidebook;
             if (_prototypeManager.HasIndex<GuideEntryPrototype>(species))
-                page = species;
+                page = new ProtoId<GuideEntryPrototype>(species.Id); // Gross. See above todo comment.
 
-            if (_prototypeManager.TryIndex<GuideEntryPrototype>(DefaultSpeciesGuidebook, out var guideRoot))
+            if (_prototypeManager.TryIndex(DefaultSpeciesGuidebook, out var guideRoot))
             {
                 var dict = new Dictionary<ProtoId<GuideEntryPrototype>, GuideEntry>();
                 dict.Add(DefaultSpeciesGuidebook, guideRoot);
@@ -1383,33 +1410,70 @@ namespace Content.Client.Lobby.UI
             Profile = Profile?.WithSpawnPriorityPreference(newSpawnPriority);
             SetDirty();
         }
-
+// Aurora: Sliders
         private void SetHeight(float newHeight)
         {
-            Profile = Profile?.WithCharacterAppearance(Profile.Appearance.WithHeight(newHeight));
+            if (Profile != null &&
+                _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
+            {
+                newHeight = Math.Clamp(newHeight, species.MinHeight, species.MaxHeight);
+
+                var appearance = Profile.Appearance.WithHeight(newHeight);
+                Profile = Profile.WithCharacterAppearance(appearance);
+            }
+
             SetDirty();
             ReloadPreview();
+            UpdateSpriteViewScale();
         }
 
         private void ResetHeight()
         {
-            SetHeight(1.0f);
+            if (Profile != null &&
+                _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
+            {
+                var midpoint = (species.MinHeight + species.MaxHeight) / 2f;
+                SetHeight(midpoint);
+
+                if (HeightSlider != null)
+                    HeightSlider.Value = midpoint;
+            }
+
             UpdateHeightControls();
         }
 
         private void SetWidth(float newWidth)
         {
-            Profile = Profile?.WithCharacterAppearance(Profile.Appearance.WithWidth(newWidth));
+            if (Profile != null &&
+                _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
+            {
+                newWidth = Math.Clamp(newWidth, species.MinWidth, species.MaxWidth);
+
+                var appearance = Profile.Appearance.WithWidth(newWidth);
+                Profile = Profile.WithCharacterAppearance(appearance);
+            }
+
             SetDirty();
             ReloadPreview();
+            UpdateSpriteViewScale();
         }
 
         private void ResetWidth()
         {
-            SetWidth(1.0f);
+            if (Profile != null &&
+                _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var species))
+            {
+                var midpoint = (species.MinWidth + species.MaxWidth) / 2f;
+                SetWidth(midpoint);
+
+                if (WidthSlider != null)
+                    WidthSlider.Value = midpoint;
+            }
+
             UpdateWidthControls();
         }
 
+        // Aurora: Sliders end
         public bool IsDirty
         {
             get => _isDirty;
@@ -1676,17 +1740,13 @@ namespace Content.Client.Lobby.UI
             {
                 return;
             }
-            var hairMarking = Profile.Appearance.HairStyleId switch
-            {
-                HairStyles.DefaultHairStyle => new List<Marking>(),
-                _ => new() { new(Profile.Appearance.HairStyleId, new List<Color>() { Profile.Appearance.HairColor }) },
-            };
+            var hairMarking = Profile.Appearance.HairStyleId == HairStyles.DefaultHairStyle
+                ? new List<Marking>()
+                : new() { new(Profile.Appearance.HairStyleId, new List<Color>() { Profile.Appearance.HairColor }) };
 
-            var facialHairMarking = Profile.Appearance.FacialHairStyleId switch
-            {
-                HairStyles.DefaultFacialHairStyle => new List<Marking>(),
-                _ => new() { new(Profile.Appearance.FacialHairStyleId, new List<Color>() { Profile.Appearance.FacialHairColor }) },
-            };
+            var facialHairMarking = Profile.Appearance.FacialHairStyleId == HairStyles.DefaultFacialHairStyle
+                ? new List<Marking>()
+                : new() { new(Profile.Appearance.FacialHairStyleId, new List<Color>() { Profile.Appearance.FacialHairColor }) };
 
             HairStylePicker.UpdateData(
                 hairMarking,

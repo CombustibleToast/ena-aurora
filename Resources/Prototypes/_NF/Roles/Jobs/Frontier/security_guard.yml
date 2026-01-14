@@ -21,7 +21,7 @@
   - External
   - Mercenary
   - Captain
-  - Frontier
+  - Aurora # Aurora Song - Changed from Frontier to Aurora
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant ]
@@ -33,7 +33,7 @@
   id: SecurityGuardGear
   equipment:
     eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: NFMagazineHighCapacityPistol35
   storage:
     back:

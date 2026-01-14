@@ -1,0 +1,137 @@
+# Aurora Song - AS Medical Bounty System
+# Based on New Frontier Station 14's Medical Bounty System
+# Original implementation: https://github.com/new-frontiers-14/frontier-station-14
+# Patient entities spawned on medical beds with AS medical bounties
+# These patients need to be healed and redeemed for rewards
+
+# Base spawner entities (referenced in medicalbed.yml)
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountyService
+  name: AS medical bounty patient
+  suffix: Service
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Markers/jobs.rsi
+    layers:
+    - state: green
+    - sprite: Mobs/Species/Human/parts.rsi
+      state: full
+      rotation: 90
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountyService
+
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountyEngineering
+  suffix: Engineering
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountyEngineering
+
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountyCargo
+  suffix: Cargo
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountyCargo
+
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountyMedical
+  suffix: Medical
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountyMedical
+
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountyScience
+  suffix: Science
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountyScience
+
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountySecurity
+  suffix: Security
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountySecurity
+
+- type: entity
+  id: ASSpawnRandomHumanoidPatientMedicalBountyCommand
+  suffix: Command
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: RandomHumanoidSpawner
+    settings: ASMedicalBountyCommand
+
+# Base humanoid settings for AS medical bounty patients
+- type: randomHumanoidSettings
+  id: ASMedicalBountyBase
+  randomizeName: true # Patients should have names
+  speciesBlacklist:
+  - IPC # IPCs don't work well with medical damage mechanics
+  components:
+#  - type: StinkyTrait # Aurora Song: Disabled for now, may re-enable later
+  - type: Carriable # Carrying system
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatRotten
+      amount: 5
+  - type: TriggerOnBeingGibbed
+  - type: GibOnTrigger
+    deleteItems: true
+    deleteOrgans: true
+    gib: false
+    useArgumentEntity: true
+  # Aurora Song: AS Medical bounty-specific component
+  - type: ASMedicalBounty
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen # Friendly turrets shouldn't attack patients
+  - type: DisableSuitSensors # Should never show up on suit sensors
+    removeRegistration: true
+  - type: SSDIndicator
+    icon: MedSSDIcon
+    preventSleep: true
+  # Vocalizer for random patient dialogue
+  - type: Vocalizer
+    minVocalizeInterval: 45
+    maxVocalizeInterval: 180
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: asmedicalpatientchatter
+
+# Department-specific settings (inherit from base + department loadout)
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutService]
+  id: ASMedicalBountyService
+
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutEngineering]
+  id: ASMedicalBountyEngineering
+
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutCargo]
+  id: ASMedicalBountyCargo
+
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutMedical]
+  id: ASMedicalBountyMedical
+
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutScience]
+  id: ASMedicalBountyScience
+
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutSecurity]
+  id: ASMedicalBountySecurity
+
+- type: randomHumanoidSettings
+  parent: [ASMedicalBountyBase, NFRandomLoadoutCommand]
+  id: ASMedicalBountyCommand

@@ -1,0 +1,126 @@
+# SLE Sign Prototypes
+- type: entity
+  parent: BaseSign
+  id: ASBaseSign
+  abstract: true
+  components:
+    - type: Sprite
+      sprite: _AS/Structures/Wallmounts/signs.rsi
+
+# Directional Signs
+- type: entity
+  parent: BaseSignDirectional
+  id: ASBaseSignDirectional
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/signs.rsi
+
+- type: entity
+  parent: ASBaseSignDirectional
+  id: ASSignDirectionalSLE
+  name: SLE outpost sign
+  description: A direction sign, pointing out which way an SLE outpost is.
+  components:
+  - type: Sprite
+    state: direction_nfsd
+
+# Room Signs
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLE
+  name: SLE sign
+  description: A sign that marks the area beyond as an SLE area.
+  components:
+  - type: Sprite
+    state: nfsd
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEArmoury
+  name: armory sign
+  description: A sign that marks the area beyond as an SLE armory.
+  components:
+  - type: Sprite
+    state: armoury
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEBrief
+  name: briefing sign
+  description: A sign that marks the area beyond as an SLE briefing room.
+  components:
+  - type: Sprite
+    state: brief
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEBrig
+  name: brig sign
+  description: A sign that marks the area beyond as an SLE brig.
+  components:
+  - type: Sprite
+    state: brig
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEBrigmed
+  name: medbay sign
+  description: A sign that marks the area beyond as an SLE medbay.
+  components:
+  - type: Sprite
+    state: brigmed
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEDetective
+  name: detective sign
+  description: A sign that marks the area beyond as an SLE detective's office.
+  components:
+  - type: Sprite
+    state: detective
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLELaw
+  name: lawyer sign
+  description: A sign that marks the area beyond as an SLE lawyer's office.
+  components:
+  - type: Sprite
+    state: law
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLERange
+  name: shooting range sign
+  description: A sign that marks the area beyond as an SLE shooting range.
+  components:
+  - type: Sprite
+    state: range
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEEvidence
+  name: evidence sign
+  description: A sign that marks the area beyond as an SLE evidence room.
+  components:
+  - type: Sprite
+    state: evidence
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEGenpop
+  name: genpop sign
+  description: A sign that marks the area beyond as an SLE genpop brig.
+  components:
+  - type: Sprite
+    state: genpop
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignSLEInterrogation
+  name: interrogation sign
+  description: A sign that marks the area beyond as an SLE interrogation room.
+  components:
+  - type: Sprite
+    state: interrogation

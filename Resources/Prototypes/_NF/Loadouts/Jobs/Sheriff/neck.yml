@@ -2,12 +2,12 @@
 - type: loadout
   id: SheriffClothingNeckMantleSheriff
   equipment:
-    neck: ClothingNeckMantleSheriff
+    neck: ASClothingNeckMantleSheriff
 
 - type: loadout
   id: SheriffClothingNeckCloakSheriff
   equipment:
-    neck: ClothingNeckCloakSheriff
+    neck: ASClothingNeckCloakSheriff
 
 - type: loadout
   id: SheriffClothingNeckNfsdBadgeSheriff

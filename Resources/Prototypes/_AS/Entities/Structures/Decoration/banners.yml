@@ -1,0 +1,25 @@
+- type: entity
+  id: ASBannerSLE
+  parent: BannerBase
+  name: SLE banner
+  description: A banner displaying the colors of the Sector Law Enforcement.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: sle-banner
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
+  id: ASFlagSLE
+  parent: BannerBase
+  name: SLE flag
+  description: A flag displaying the colors of the Sector Law Enforcement.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: sle-flag
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode

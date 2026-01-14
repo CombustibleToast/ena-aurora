@@ -19,11 +19,11 @@
   components:
   - type: SectorBank
     accounts:
-      Frontier:
+      Aurora: # Aurora Song - Changed from Frontier to Aurora
         !type:SectorBankAccountInfo
         balance: 8000
         increasePerSecond: 1 # TODO: move to ~65K per hour (~18/s), about enough for minimum wage for Frontier employees
-      Nfsd:
+      Sle: # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
         !type:SectorBankAccountInfo
         balance: 8000
         increasePerSecond: 25 # 90K per hour, will offset the "Loss" of the vault money

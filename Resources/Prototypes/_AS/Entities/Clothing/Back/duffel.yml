@@ -1,0 +1,21 @@
+# Aurora Song - SLE (Security Logistics Enforcement) duffel bags
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: ClothingBackpackDuffelSecurity
+  id: ASClothingBackpackDuffelSLEBrown
+  name: SLE duffel
+  description: A large duffel bag used by Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Back/Duffels/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingBackpackDuffelSLEBrown
+  id: ASClothingBackpackDuffelSLECream
+  name: SLE duffel
+  description: A large duffel bag used by Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Back/Duffels/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
+

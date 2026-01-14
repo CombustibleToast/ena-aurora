@@ -55,8 +55,6 @@
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - SheriffClothingMaskSheriff
-  fallbacks:
-  - SheriffClothingMaskSheriff
 
 - type: loadoutGroup
   id: SheriffEars

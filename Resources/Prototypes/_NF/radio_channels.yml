@@ -5,8 +5,9 @@
   frequency: 1022
   color: "#CC6633"
 
+# Aurora Song - Changed id from "Nfsd" to "Sle" (Station Law Enforcement)
 - type: radioChannel
-  id: Nfsd
+  id: Sle
   name: chat-radio-nfsd
   keycode: 's'
   frequency: 1023

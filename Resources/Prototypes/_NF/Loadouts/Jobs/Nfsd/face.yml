@@ -2,7 +2,7 @@
   id: SheriffClothingMaskSheriff
   storage:
     back:
-    - ClothingMaskGasSheriff
+    - ASClothingMaskGasSLESheriff
 
 - type: loadout
   id: BrigmedicClothingMaskBrigmedic
@@ -14,7 +14,7 @@
   id: NfsdClothingMaskGasNfsd
   storage:
     back:
-    - ClothingMaskGasNfsd
+    - ASClothingMaskGasSLE
 
 - type: loadout
   id: NfsdVoxClothingMaskGasNfsd
@@ -22,4 +22,5 @@
   - !type:GroupLoadoutEffect
     proto: EffectSpeciesVox
   equipment:
-    mask: ClothingMaskGasNfsd
+    mask: ASClothingMaskGasSLE
+

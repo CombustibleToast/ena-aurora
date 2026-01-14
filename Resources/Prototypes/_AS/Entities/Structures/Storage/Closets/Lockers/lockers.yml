@@ -11,3 +11,170 @@
     stateDoorClosed: cmo_door
   - type: AccessReader
     access: [["HeadOfPersonnel"]]
+
+# SLE Locker Base Prototypes
+- type: entity
+  id: ASLockerBaseSecure
+  parent: LockerBaseSecure
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Storage/closet.rsi
+
+# SLE Evidence
+- type: entity
+  id: ASLockerSLEEvidence
+  parent: [ASLockerBaseSecure, LockerSecurity]
+  name: SLE locker
+  suffix: Evidence
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle
+    stateDoorOpen: sle_open
+    stateDoorClosed: sle_evidence_door
+
+# SLE Blank
+- type: entity
+  id: ASLockerSLEBlank
+  parent: [ASLockerBaseSecure, LockerSecurity]
+  name: SLE locker
+  suffix: Blank
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle
+    stateDoorOpen: sle_open
+    stateDoorClosed: sle_door_blank
+
+# SLE Badge
+- type: entity
+  id: ASLockerSLEBadge
+  parent: [ASLockerBaseSecure, LockerSecurity]
+  name: SLE locker
+  suffix: Badge
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle
+    stateDoorOpen: sle_open
+    stateDoorClosed: sle_door
+
+# SLE Copper (Rookie/Cadet)
+- type: entity
+  id: ASLockerSLECopper
+  parent: [ASLockerBaseSecure, LockerSecurity]
+  name: SLE locker
+  suffix: Copper
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle_copper
+    stateDoorOpen: sle_copper_open
+    stateDoorClosed: sle_copper_door
+
+# SLE Silver (Officer/Deputy)
+- type: entity
+  id: ASLockerSLESilver
+  parent: [ASLockerBaseSecure, LockerSecurity]
+  name: SLE locker
+  suffix: Silver
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle_silver
+    stateDoorOpen: sle_silver_open
+    stateDoorClosed: sle_silver_door
+
+# SLE Detective
+- type: entity
+  id: ASLockerSLEDetective
+  parent: [ASLockerBaseSecure, LockerSecurity]
+  name: SLE locker
+  suffix: Detective
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle_silver
+    stateDoorOpen: sle_silver_open
+    stateDoorClosed: sle_detective_silver_door
+
+# SLE Brigmedic
+- type: entity
+  id: ASLockerSLEBrigmedic
+  parent: ASLockerBaseSecure
+  name: SLE locker
+  suffix: Brigmedic
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle_brigmed
+    stateDoorOpen: sle_brigmed_open
+    stateDoorClosed: sle_brigmed_door
+  - type: AccessReader
+    access: [["Brigmedic"]]
+
+# SLE Gold - Sergeant
+- type: entity
+  id: ASLockerSLESergeant
+  parent: ASLockerBaseSecure
+  name: SLE locker
+  suffix: Sergeant
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle_gold
+    stateDoorOpen: sle_gold_open
+    stateDoorClosed: sle_gold_door
+  - type: AccessReader
+    access: [["Sergeant"]]
+
+# SLE Gold - Bailiff/Lieutenant
+- type: entity
+  id: ASLockerSLEBailiff
+  parent: ASLockerSLESergeant
+  name: SLE locker
+  suffix: Bailiff
+  components:
+  - type: AccessReader
+    access: [["Bailiff"]]
+
+# SLE Sheriff/Commissioner
+- type: entity
+  id: ASLockerSLESheriff
+  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, ASLockerBaseSecure, LockerHeadOfSecurity]
+  name: SLE locker
+  suffix: Sheriff
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: sle_sheriff
+    stateDoorOpen: sle_sheriff_open
+    stateDoorClosed: sle_sheriff_door
+  - type: AccessReader
+    access: [["HeadOfSecurity"]]
+
+# Aurora Song - SLE Wall EVA Locker
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ASLockerWallEVAColorSLE
+  parent: NFBaseLockerGridInvWallColor
+  name: SLE EVA wall locker
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+      color: "#4a6fa5"  # SLE blue
+    - state: fillEva-0
+      map: ["enum.StorageFillLayers.Fill"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+      color: "#4a6fa5"  # SLE blue
+    - state: door-decal-line-01
+      map: [ decal1 ]
+      color: "#2a4a7c"  # SLE dark blue
+    - state: door-decal-eva-02
+      map: [ decal2 ]
+      color: "#2a4a7c"  # SLE dark blue
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+  - type: AccessReader
+    access: [['Security']]
+  - type: StorageFillVisualizer
+    maxFillLevels: 6
+    fillBaseName: fillEva

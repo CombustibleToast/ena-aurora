@@ -1,0 +1,22 @@
+# Aurora Song - SLE grenade box definitions
+
+- type: entity
+  name: box of SLE items
+  parent: BoxCardboard
+  id: ASBoxBundleSLE
+  description: A box full of SLE items.
+  components:
+  - type: Sprite
+    layers:
+      - state: box_security
+
+- type: entity
+  name: box of EMP grenades
+  parent: ASBoxBundleSLE
+  id: BoxEMPGrenadesSLE
+  description: A box full of EMP grenades.
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFGrenadeEMP
+        amount: 4

@@ -47,9 +47,32 @@
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
 
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
+  id: ASWeaponShotgunFalchion
+  name: Falchion
+  description: |-
+    The first home-grown custom weapon used by the colonial forces. A reliable weapon. It can survive rapid depressurization, being dropped in a plasma pool, a direct blast from a cannon, and still it will function just fine.
+  components:
+  - type: Gun
+    fireRate: 1.8
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
+    sprite: _AS/Objects/Weapons/Guns/Shotguns/combatpump_inhands_64x.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Shotguns/combatpump.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Shotguns/combatpump.rsi
+  - type: BallisticAmmoProvider
+    capacity: 6
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-colonial-weapon-manufacturer
+
 # Surplus
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ] # Contraband status adjusted | Aurora
+  parent: [ BaseC2ContrabandUnredeemable,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]
   id: ASWeaponShotgunSurpFalchion
   name: Falchion
   description: |-

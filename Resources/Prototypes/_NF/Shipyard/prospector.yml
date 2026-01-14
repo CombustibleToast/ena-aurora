@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NC Prospector
   description: A small mining vessel designed to assist salvage operations.
-  price: 21500 # 19706 0.05 20691.3
+  price: 21600 # 19706 0.05 20691.3 | Updated to 21600 (min: 21560.77)
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/prospector.yml

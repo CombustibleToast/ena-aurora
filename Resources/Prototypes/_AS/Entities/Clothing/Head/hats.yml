@@ -9,3 +9,29 @@
   - type: Clothing
     sprite: _AS/Clothing/Head/Hats/beret_commissioner.rsi
   - type: HamsterWearable
+
+- type: entity
+  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing]
+  id: ClothingHeadBeretSyndie
+  name: syndicate beret
+  description: First coined by Gorlex's best of the best and later adopted by the rest of the Syndicate, They will never let the others forget that fact
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/beret_syndicate.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/beret_syndicate.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatBeretMedic
+  name: medical beret
+  description: A sterile blue beret with a gold badge.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/beret_medic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/beret_medic.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable

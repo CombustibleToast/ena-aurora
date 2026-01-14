@@ -69,7 +69,18 @@ public sealed partial class PowerCellSystem : SharedPowerCellSystem
         }
 
         var frac = args.Charge / args.MaxCharge;
-        var level = (byte)ContentHelpers.RoundToNearestLevels(frac, 1, PowerCellComponent.PowerCellVisualsLevels);
+        // Aurora's Song - Have the battery display relative charge levels visually
+        byte level = frac switch
+        {
+            >= 1.0f => PowerCellComponent.PowerCellVisualsLevels // Full charge (green/o2)
+            ,
+            > 0f => 1 // Partial charge (yellow/o1)
+            ,
+            0f => 0 // Empty (no overlay)
+            ,
+            _ => 0 // Shouldn't happen, but catches edge cases with a discard
+        };
+
         _sharedAppearanceSystem.SetData(uid, PowerCellVisuals.ChargeLevel, level);
 
         // If this power cell is inside a cell-slot, inform that entity that the power has changed (for updating visuals n such).

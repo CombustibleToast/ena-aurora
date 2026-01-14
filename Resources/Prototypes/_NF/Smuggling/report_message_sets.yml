@@ -1,6 +1,6 @@
 - type: smugglingReportMessageSet
   id: Nfsd
-  channel: Nfsd
+  channel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   messageSets:
   - prob: 0.8
     messages:

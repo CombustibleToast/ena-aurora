@@ -23,3 +23,28 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsPrisoner ]
+
+# Aurora Song - SLE (Security Logistics Enforcement) airlocks
+# region Standard
+- type: entity
+  parent: Airlock
+  id: ASAirlockSLE
+  suffix: SLE
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Standard/sle.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+# endregion
+
+# region Glass
+- type: entity
+  parent: AirlockGlass
+  id: ASAirlockSLEGlass
+  suffix: SLE
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Glass/sle.rsi
+  - type: Wires
+    layoutId: AirlockSecurity
+# endregion

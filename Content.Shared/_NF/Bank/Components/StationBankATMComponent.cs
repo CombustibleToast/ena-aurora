@@ -33,8 +33,8 @@ public sealed partial class StationBankATMComponent : Component
 public enum SectorBankAccount : byte
 {
     Invalid, // No assigned account.
-    Frontier,
-    Nfsd,
+    Aurora, // Aurora Song - Renamed from Frontier to Aurora
+    Sle, // Aurora Song - Renamed from Nfsd to Sle (Sector Law Enforcement)
     Medical,
     Edison,
 }

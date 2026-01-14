@@ -28,7 +28,7 @@
 - type: startingGear
   id: CadetGear
   equipment:
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: BookSecurity
   storage:
     back:
@@ -45,11 +45,12 @@
   hasMindShield: true
   equipment:
     head: ClothingHeadHatNfsdBeretBrown
-    mask: ClothingMaskGasNfsd
-    eyes: ClothingEyesGlassesNfsd
-    outerClothing: ClothingOuterArmorNfsd
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterArmorSLE
     neck: ClothingNeckNfsdBadgeSecurityCadet
-    belt: ClothingBeltNfsdFilled
-    gloves: ClothingHandsGlovesCombatNfsdBrown
-    shoes: ClothingShoesBootsNfsdBrownFilled
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+
 

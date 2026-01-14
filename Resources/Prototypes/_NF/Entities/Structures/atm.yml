@@ -143,7 +143,7 @@
         type: BankATMMenuBoundUserInterface
   - type: BankATM
     taxAccounts:
-      Frontier: 0.3 # The scandal!
+      Aurora: 0.3 # The scandal! - Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   suffix: Wallmount, BlackMarket
@@ -167,7 +167,7 @@
         type: BankATMMenuBoundUserInterface
   - type: BankATM
     taxAccounts:
-      Frontier: 0.3 # The scandal!
+      Aurora: 0.3 # The scandal! - Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   name: station administration console
@@ -222,7 +222,7 @@
   suffix: Frontier
   components:
   - type: StationBankATM
-    account: Frontier
+    account: Aurora # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseStationAdminBankATM
@@ -231,7 +231,7 @@
   suffix: NFSD
   components:
   - type: StationBankATM
-    account: Nfsd
+    account: Sle # Aurora Song - Changed from Nfsd to Sle (Station Law Enforcement)
 
 - type: entity
   parent: BaseStationAdminBankATM

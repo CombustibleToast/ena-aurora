@@ -16,16 +16,14 @@
 - type: loadoutGroup
   id: NfsdSpeciesSpecific
   name: loadout-group-breath-tool # if visible, rename
-  minLimit: 3
-  maxLimit: 3
+  minLimit: 2
+  maxLimit: 2 # Aurora Song - Reduced from 3 to 2 (removed gas mask to prevent duplicates)
   hidden: true
   loadouts:
   - LoadoutTankHarness
-  - NfsdVoxClothingMaskGasNfsd
-  - LoadoutSpeciesVoxNitrogen
+  - LoadoutSpeciesVoxNitrogen # Aurora Song - Gas mask removed from here to prevent duplicates with face loadout
   fallbacks:
   - LoadoutTankHarness
-  - NfsdVoxClothingMaskGasNfsd
   - LoadoutSpeciesVoxNitrogen
 
 # Forced EVA
@@ -171,3 +169,4 @@
   - MercenaryForcedClothingOuterEVASuitMercenary
   fallbacks:
   - MercenaryForcedClothingOuterEVASuitMercenary
+

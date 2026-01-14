@@ -1,9 +1,10 @@
 - type: loadout
   id: NfsdClothingEyesGlasses
   equipment:
-    eyes: ClothingEyesGlassesNfsd
+    eyes: ASClothingEyesGlassesSLE
 
 - type: loadout
   id: BrigmedicClothingEyesGlasses
   equipment:
-    eyes: ClothingEyesHudNfsdMed
+    eyes: ASClothingEyesGlassesSLECorpsman
+

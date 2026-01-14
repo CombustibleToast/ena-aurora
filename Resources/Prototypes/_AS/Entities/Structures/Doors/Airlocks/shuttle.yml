@@ -1,0 +1,40 @@
+# Aurora Song - SLE Shuttle Airlocks
+- type: entity
+  id: ASAirlockShuttleAssemblySLE
+  parent: AirlockShuttleAssembly
+  name: external airlock assembly
+  suffix: SLE, Docking
+  description: An incomplete structure necessary for connecting two space craft together.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Standard/docksle.rsi
+    state: closed
+
+- type: entity
+  id: ASAirlockGlassShuttleSLE
+  parent: AirlockGlassShuttle
+  name: external airlock
+  suffix: SLE, Glass, Docking
+  description: Necessary for connecting two space craft together.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Glass/docksle.rsi
+
+- type: entity
+  id: ASAirlockGlassShuttleSLELocked
+  parent: ASAirlockGlassShuttleSLE
+  suffix: SLE, Glass, Docking, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  id: ASAirlockShuttleSLE
+  parent: AirlockShuttle
+  name: external airlock
+  suffix: SLE, Docking
+  description: Necessary for connecting two space craft together.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Standard/docksle.rsi

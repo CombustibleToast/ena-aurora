@@ -63,7 +63,7 @@
     contents:
     - id: NFWeaponPistolUniversalExpedition
       amount: 1
-    - id: NFMagazineHighCapacityPistol35
+    - id: NFMagazinePistol45 # Now chambered in .45 | Aurora Song
       amount: 2
 
 - type: entity
@@ -338,7 +338,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleAssaultSm
+    - id: NFWeaponRifleAssaultSmExpedition # Corrected to be using the expedition version of the gun | Aurora Song
       amount: 1
     - id: NFMagazineRifle30
       amount: 2
@@ -392,7 +392,7 @@
     contents:
     - id: NFWeaponRifleAssaultJackdawExpedition
       amount: 1
-    - id: ASMagazineCaselessRifle
+    - id: ASMagazineCaselessRifle # Aurora Song
       amount: 2
 
 #region Energy
@@ -486,16 +486,16 @@
     - id: NFWeaponEnergyRifleSniperXrayCannonExpedition
       amount: 1
 
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongTemperatureGunExpedition
-  suffix: Dungeon, Temperature Gun
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponEnergyRifleTemperatureExpedition
-      amount: 1
+#- type: entity
+#  parent: WeaponCaseLong
+#  id: WeaponCaseLongTemperatureGunExpedition
+#  suffix: Dungeon, Temperature Gun
+#  categories: [ HideSpawnMenu ]
+#  components:
+#  - type: StorageFill
+#    contents:
+#    - id: NFWeaponEnergyRifleTemperatureExpedition
+#      amount: 1
 
 #region Sniper
 - type: entity
@@ -534,7 +534,7 @@
     contents:
     - id: NFWeaponRifleRepeaterExpedition
       amount: 1
-    - id: NFAmmunitionBoxRifle20
+    - id: NFAmmunitionBoxPistol45  # Back to .45 for the Repeater | Aurora Song
       amount: 2
 
 - type: entity

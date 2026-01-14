@@ -103,7 +103,7 @@
       - Critical
       - Dead
     - type: Rattle
-      radioChannel: "Nfsd"
+      radioChannel: "Sle" # Aurora Song - Changed from "Nfsd" to "Sle"
     # End Frontier: no sensor, add rattle
 
 #Traitor implants

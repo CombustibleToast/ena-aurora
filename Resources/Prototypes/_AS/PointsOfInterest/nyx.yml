@@ -15,7 +15,7 @@
   minimumDistance: 4000
   maximumDistance: 6000
   spawnGroup: SyndicateFOB
-  gridPath: /Maps/_AS/POI/Nyx.yml
+  gridPath: /Maps/_AS/POI/nyx.yml
   hideWarp: true
   addComponents:
   - type: IFF
@@ -27,7 +27,7 @@
 - type: gameMap
   id: Nyx
   mapName: 'Nyx Autonomous Observation Vessel'
-  mapPath: /Maps/_AS/POI/Nyx.yml
+  mapPath: /Maps/_AS/POI/nyx.yml
   minPlayers: 0
   stations:
     Nyx:

@@ -48,4 +48,4 @@
   id: ComputerShuttleRecords
   components:
   - type: ShuttleRecordsConsole
-    account: Frontier
+    account: Aurora # Aurora Song - Changed from Frontier to Aurora

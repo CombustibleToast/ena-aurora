@@ -1,0 +1,102 @@
+# Aurora Song - SLE (Security Logistics Enforcement) airlock access variants
+# Locked airlocks with specific access requirements
+
+- type: entity
+  parent: ASAirlockSLEGlass
+  id: ASAirlockSLEGlassLocked
+  suffix: SLE, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: ASAirlockSLE
+  id: ASAirlockSLELocked
+  suffix: SLE, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: ASAirlockSLE
+  id: ASAirlockSLEBrigLocked
+  suffix: SLE, Brig, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: ASAirlockSLEGlass
+  id: ASAirlockSLEBrigGlassLocked
+  suffix: SLE, Brig, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: ASAirlockSLE
+  id: ASAirlockSLEDetectiveLocked
+  suffix: SLE, Detective, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDetective ]
+
+- type: entity
+  parent: ASAirlockSLEGlass
+  id: ASAirlockSLEDetectiveGlassLocked
+  suffix: SLE, Detective, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsDetective ]
+
+- type: entity
+  parent: ASAirlockSLE
+  id: ASAirlockSLEArmoryLocked
+  suffix: Armory, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArmory ]
+
+- type: entity
+  parent: ASAirlockSLEGlass
+  id: ASAirlockSLEArmoryGlassLocked
+  suffix: Armory, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsArmory ]
+
+- type: entity
+  parent: ASAirlockSLE
+  id: ASAirlockSLEPrisonerLocked
+  suffix: SLE, Prisoner, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPrisoner ]
+
+- type: entity
+  parent: ASAirlockSLEGlass
+  id: ASAirlockSLEPrisonerGlassLocked
+  suffix: SLE, Prisoner, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsPrisoner ]
+
+# SLE External Airlocks
+- type: entity
+  parent: ASAirlockExternalGlassSLE
+  id: ASAirlockExternalGlassSLELocked
+  suffix: SLE, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]

@@ -1,3 +1,4 @@
+#SLE Hardsuits
 - type: entity
   parent: ASClothingOuterHardsuitBaseSle
   id: ClothingOuterHardsuitSleCombat
@@ -24,3 +25,164 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.85
     sprintModifier: 0.75
+
+#Mercenary Hardsuit - Aurora - Moved from NF namespace to AS, as it is so substantially changed it is effectively a new item
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMercenary # Aurora: stats were of luxury mining hardsuit, adjusted to be more effective as a rare find or mid-game tool, with even a late-game usage-case. Available from mercennary vendors, and as rare loot.
+  name: mercenary hardsuit
+  description: An armored vacuum suit favored by mercenaries.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.6 # Removed 10%
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.70
+        Slash: 0.70
+        Piercing: 0.60
+        Heat: 0.65
+        Radiation: 0.6
+        Caustic: 0.8
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMercenary
+
+- type: entity
+  parent: ClothingOuterHardsuitMercenary
+  id: ClothingOuterHardsuitPrivateSecurity # stats are of merc hardsuit, clone of mercenary hardsuit with different appearance, for aesthetics
+  name: private security hardsuit
+  description: An armored vacuum suit favored by private security contractors. Painted blue.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/private_security.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/private_security.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
+
+- type: entity
+  parent: ClothingOuterHardsuitMercenary
+  id: ClothingOuterHardsuitMedicArmored # stats are of merc hardsuit, but for Outpost medic use, with different appearance
+  name: medic armored hardsuit
+  description: An armored vacuum suit employed by outpost medics, for protection during S&R operations.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: unshaded
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-unshaded-harpy
+        shader: unshaded
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
+
+- type: entity
+  parent:
+  - ClothingOuterHardsuitSyndie
+  - ContrabandClothing
+  id: ClothingOuterHardsuitSyndieMedicUnremoveable
+  name: syndicate hardsuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
+
+
+- type: entity
+  parent:
+  - ClothingOuterHardsuitWizardBrick
+  - ContrabandClothing
+  id: ClothingOuterHardsuitWizardBrickUnremoveable
+  name: brick wizard hardsuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: _NF/Clothing/OuterClothing/Hardsuits/brickwizard.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/OuterClothing/Hardsuits/brickwizard.rsi
+
+- type: entity
+  parent:
+  - ClothingOuterHardsuitWizard
+  - ContrabandClothing
+  id: ClothingOuterHardsuitWizardUnremoveable
+  name: brick wizard hardsuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
+
+# Aurora's Song - Military Surplus Suit
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitarySurplus
+  name: military surplus hardsuit
+  description: Auroran MilSurp hardsuit, with advanced features removed. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_surplus.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_surplus.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: Item
+    size: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplus
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon

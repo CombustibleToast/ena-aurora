@@ -2,40 +2,40 @@
 - type: loadout
   id: NfsdClothingBackpackNfsdBrown
   equipment:
-    back: ClothingBackpackNfsdBrown
+    back: ASClothingBackpackSLEBrown # Aurora Song - Changed from ClothingBackpackNfsdBrown
 
 - type: loadout
   id: NfsdClothingBackpackSatchelNfsdBrown
   equipment:
-    back: ClothingBackpackSatchelNfsdBrown
+    back: ASClothingBackpackSatchelSLEBrown # Aurora Song - Changed from ClothingBackpackSatchelNfsdBrown
 
 - type: loadout
   id: NfsdClothingBackpackDuffelNfsdBrown
   equipment:
-    back: ClothingBackpackDuffelNfsdBrown
+    back: ASClothingBackpackDuffelSLEBrown # Aurora Song - Changed from ClothingBackpackDuffelNfsdBrown
 
 - type: loadout
   id: NfsdClothingBackpackMessengerNfsdBrown
   equipment:
-    back: ClothingBackpackMessengerNfsdBrown
+    back: ASClothingBackpackMessengerSLEBrown # Aurora Song - Changed from ClothingBackpackMessengerNfsdBrown
 
 # Cream
 - type: loadout
   id: NfsdClothingBackpackNfsdCream
   equipment:
-    back: ClothingBackpackNfsdCream
+    back: ASClothingBackpackSLECream # Aurora Song - Changed from ClothingBackpackNfsdCream
 
 - type: loadout
   id: NfsdClothingBackpackSatchelNfsdCream
   equipment:
-    back: ClothingBackpackSatchelNfsdCream
+    back: ASClothingBackpackSatchelSLECream # Aurora Song - Changed from ClothingBackpackSatchelNfsdCream
 
 - type: loadout
   id: NfsdClothingBackpackDuffelNfsdCream
   equipment:
-    back: ClothingBackpackDuffelNfsdCream
+    back: ASClothingBackpackDuffelSLECream # Aurora Song - Changed from ClothingBackpackDuffelNfsdCream
 
 - type: loadout
   id: NfsdClothingBackpackMessengerNfsdCream
   equipment:
-    back: ClothingBackpackMessengerNfsdCream
+    back: ASClothingBackpackMessengerSLECream # Aurora Song - Changed from ClothingBackpackMessengerNfsdCream

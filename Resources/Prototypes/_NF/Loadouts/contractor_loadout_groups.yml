@@ -81,9 +81,9 @@
   - ContractorClothingUniformJumpskirtBH
   - ContractorClothingUniformJumpsuitBHGrey
   - ContractorClothingUniformJumpskirtBHGrey
-  #- ContractorUniformScrubsColorGreen
-  #- ContractorUniformScrubsColorBlue
-  #- ContractorUniformScrubsColorPurple
+  #- ContractorUniformScrubsColorGreen Aurora Song
+  #- ContractorUniformScrubsColorBlue Aurora Song
+  #- ContractorUniformScrubsColorPurple Aurora Song
   - ContractorClothingUniformJumpsuitParamedic
   - ContractorClothingUniformJumpskirtParamedic
   - ContractorClothingUniformJumpsuitVirology
@@ -311,7 +311,7 @@
   name: loadout-group-contractor-outerclothing
   minLimit: 0
   loadouts:
-  - ContractorClothingOuterHardsuitVoidParamed
+#  - ContractorClothingOuterHardsuitVoidParamed # Aurora - disabled for now
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
   - ContractorClothingOuterApron
@@ -633,7 +633,7 @@
   - ContractorClothingNeckTieRed
   - ContractorClothingNeckTieSci
   - ContractorClothingNeckLawyerbadge
-  - ContractorClothingNeckHeadphones
+  - ContractorClothingMultipleHeadphones
   - ContractorClothingNeckCrucifix
   - ContractorClothingNeckBellCollar
   - ContractorCDDogtags
@@ -791,6 +791,7 @@
   - ContractorFlippoEngravedLighter
   - ContractorDrinkFlaskOld
   - ContractorDrinkShinyFlask
+  - ContractorAACTablet # Aurora Song: AAC Tablet backpack item
   - ContractorDrinkFlask
   - ContractorDrinkVacuumFlask
   - ContractorFlashlightLantern
@@ -816,6 +817,7 @@
   - ContractorMysterySpaceBladeBox
   - ContractorHoloGraffitiProjector # Punkish (might be annoying)
   - ContractorCrayonMagic
+  - ContractorSprayPainterMagic
     # Bureaucracy
   - ContractorBoxFolderMedicalDoctor
   - ContractorBrbSign

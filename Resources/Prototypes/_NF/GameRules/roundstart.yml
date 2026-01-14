@@ -21,10 +21,10 @@
   id: MajorBluespaceEventsTable
   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
     children:
-    - id: BluespaceCacheError
+#    - id: BluespaceCacheError # Aurora
     - id: BluespaceCave
-    - id: BluespaceVaultError
-    - id: BluespaceVaultSmallError
+#    - id: BluespaceVaultError # Aurora
+#    - id: BluespaceVaultSmallError # Aurora
     - id: BluespaceSyndicateFTLInterception
     - id: BluespaceWizardFederationScout
     - id: BluespaceBloodMoon
@@ -50,6 +50,7 @@
     - id: BluespaceDungeonChromite
     - id: BluespaceDungeonSnow
     - id: BluespaceDungeonCave
+    - id: BluespaceDungeonCaveZombie
 
 - type: entity
   id: BluespaceSalvageEventScheduler

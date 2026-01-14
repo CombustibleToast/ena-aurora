@@ -9,7 +9,7 @@
   - type: Contraband
     severity: Class1
     # Pretty much everyone.
-    allowedDepartments: [ Civilian, Security, Command, Frontier, CentralCommand ]
+    allowedDepartments: [ Civilian, Security, Command, Aurora, CentralCommand ] # Aurora Song - Changed Frontier to Aurora
 
 - type: entity
   parent: BaseC1Contraband

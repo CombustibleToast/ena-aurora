@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 261.2.1
+  engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 09/18/2025 18:18:17
-  entityCount: 4705
+  time: 11/14/2025 06:52:23
+  entityCount: 4706
 maps: []
 grids:
 - 1
@@ -2545,7 +2545,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -11.5,-22.5
       parent: 1
-- proto: AirlockExternalGlassNfsdLocked
+- proto: ASAirlockExternalGlassSLELocked
   entities:
   - uid: 13
     components:
@@ -2859,7 +2859,7 @@ entities:
       parent: 1
     - type: Docking
       name: PUB-1C
-- proto: AirlockNfsd
+- proto: ASAirlockSLE
   entities:
   - uid: 858
     components:
@@ -2879,14 +2879,14 @@ entities:
       rot: 3.141592653589793 rad
       pos: 15.5,-12.5
       parent: 1
-- proto: AirlockNfsdArmoryGlassLocked
+- proto: ASAirlockSLEArmoryGlassLocked
   entities:
   - uid: 2815
     components:
     - type: Transform
       pos: -1.5,11.5
       parent: 1
-- proto: AirlockNfsdGlassLocked
+- proto: ASAirlockSLEGlassLocked
   entities:
   - uid: 879
     components:
@@ -2922,7 +2922,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -42714.047
+      secondsUntilStateChange: -42749.508
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2975,7 +2975,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -58060.367
+      secondsUntilStateChange: -58095.83
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2986,7 +2986,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15908.511
+      secondsUntilStateChange: -15943.972
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3017,7 +3017,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -58063.9
+      secondsUntilStateChange: -58099.36
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3033,7 +3033,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -58845.434
+      secondsUntilStateChange: -58880.895
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3069,7 +3069,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -60173.465
+      secondsUntilStateChange: -60208.926
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3179,7 +3179,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -41847.418
+      secondsUntilStateChange: -41882.88
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3225,7 +3225,7 @@ entities:
     - type: Transform
       pos: 19.5,-5.5
       parent: 1
-- proto: AirlockNfsdLocked
+- proto: ASAirlockSLELocked
   entities:
   - uid: 940
     components:
@@ -3233,7 +3233,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -21.5,0.5
       parent: 1
-- proto: AirlockPrisonerGlassLocked
+- proto: ASAirlockSLEPrisonerGlassLocked
   entities:
   - uid: 2608
     components:
@@ -5067,7 +5067,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -14.5,-6.5
       parent: 1
-- proto: BedsheetNfsd
+- proto: ASBedsheetSLE
   entities:
   - uid: 3757
     components:
@@ -11549,6 +11549,13 @@ entities:
     components:
     - type: Transform
       pos: -12.518295,-10.474403
+      parent: 1
+- proto: DepartmentBonusMachineSle
+  entities:
+  - uid: 1008
+    components:
+    - type: Transform
+      pos: 17.5,-1.5
       parent: 1
 - proto: DisposalBend
   entities:
@@ -22097,7 +22104,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67158.55
+      secondsUntilStateChange: -67194.01
       state: Opening
   - uid: 3347
     components:
@@ -22105,7 +22112,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67156.914
+      secondsUntilStateChange: -67192.375
       state: Opening
   - uid: 3348
     components:
@@ -22113,7 +22120,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67155.55
+      secondsUntilStateChange: -67191.01
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22278,14 +22285,14 @@ entities:
     - type: Transform
       pos: -9.5,-4.5
       parent: 1
-- proto: LockerNfsdBailiff
+- proto: ASLockerSLEBailiff
   entities:
   - uid: 423
     components:
     - type: Transform
       pos: 7.5,21.5
       parent: 1
-- proto: LockerNfsdCopper
+- proto: ASLockerSLECopper
   entities:
   - uid: 3875
     components:
@@ -22312,7 +22319,7 @@ entities:
     - type: Transform
       pos: 6.5,4.5
       parent: 1
-- proto: LockerNfsdEvidence
+- proto: ASLockerSLEEvidence
   entities:
   - uid: 3862
     components:
@@ -22329,7 +22336,7 @@ entities:
     - type: Transform
       pos: 7.5,8.5
       parent: 1
-- proto: LockerNfsdSergeant
+- proto: ASLockerSLESergeant
   entities:
   - uid: 3874
     components:
@@ -22341,14 +22348,14 @@ entities:
     - type: Transform
       pos: 3.5,6.5
       parent: 1
-- proto: LockerNfsdSheriffFilled
+- proto: ASLockerSLESheriffFilled
   entities:
   - uid: 2286
     components:
     - type: Transform
       pos: -6.5,8.5
       parent: 1
-- proto: LockerNfsdSilverDetectiveFilled
+- proto: ASLockerSLESilverDetectiveFilled
   entities:
   - uid: 1016
     components:
@@ -24378,7 +24385,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -21.5,-0.5
       parent: 1
-- proto: SignNfsdBrief
+- proto: ASSignSLEBrief
   entities:
   - uid: 3590
     components:
@@ -24386,14 +24393,14 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 12.5,-22.5
       parent: 1
-- proto: SignNfsdDetective
+- proto: ASSignSLEDetective
   entities:
   - uid: 3773
     components:
     - type: Transform
       pos: -13.5,12.5
       parent: 1
-- proto: SignNfsdEvidence
+- proto: ASSignSLEEvidence
   entities:
   - uid: 3419
     components:
@@ -24407,7 +24414,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 2.5,9.5
       parent: 1
-- proto: SignNfsdInterrogation
+- proto: ASSignSLEInterrogation
   entities:
   - uid: 3424
     components:
@@ -24415,7 +24422,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 2.5,24.5
       parent: 1
-- proto: SignNfsdRange
+- proto: ASSignSLERange
   entities:
   - uid: 3569
     components:
@@ -25812,14 +25819,14 @@ entities:
     - type: Transform
       pos: -11.5,11.5
       parent: 1
-- proto: VendingMachineNfsdDrobe
+- proto: ASVendingMachineSLEDrobe
   entities:
   - uid: 4151
     components:
     - type: Transform
       pos: 19.5,3.5
       parent: 1
-- proto: VendingMachineNfsdTech
+- proto: ASVendingMachineSLETech
   entities:
   - uid: 4152
     components:
@@ -30748,7 +30755,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -66194.22
+      secondsUntilStateChange: -66229.68
       state: Opening
     - type: Airlock
       autoClose: False
@@ -31161,3 +31168,7 @@ entities:
       pos: 9.5,-29.5
       parent: 1
 ...
+
+
+
+

@@ -555,8 +555,8 @@
   - VehicleHoverbikeMailcarrier
   - BaseC2ContrabandUnredeemable
   id: NFVehicleHoverbikeNfsd
-  name: SLE hoverbike
-  description: An SLE issued turbine with bike handles. Very safe.
+  name: NFSD hoverbike
+  description: An NFSD issued turbine with bike handles. Very safe.
   components:
   - type: Vehicle
     sirenSound:

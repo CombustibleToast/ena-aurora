@@ -4,16 +4,21 @@
   parent: SuitStorageBase
   suffix: Syndicate EVA, Advanced
   components:
-  - type: StorageFill
-    contents:
-#        - id: NitrogenTankFilled
-#        - id: OxygenTankFilled
-        - id: NFTankO2N2EqualFilled # Frontier
-        - id: ClothingOuterEVASuitSyndicate
-        - id: ClothingHeadHelmetSyndicate
-        - id: ClothingShoesBootsMagSyndie
-        - id: ClothingMaskGasSyndicate
-        - id: JetpackBlackFilled # Frontier
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageEVASyndicateAdvanced
+
+- type: entityTable
+  id: FillSuitStorageEVASyndicateAdvanced
+  table: !type:AllSelector
+    children:
+    - id: NFTankO2N2EqualFilled
+    - id: ClothingOuterEVASuitSyndicate
+    - id: ClothingHeadHelmetSyndicate
+    - id: ClothingShoesBootsMagSyndie
+    - id: ClothingMaskGasSyndicate
+    - id: JetpackBlackFilled
 
 #Syndicate EVA without syndicate gas mask
 - type: entity
@@ -21,11 +26,17 @@
   parent: SuitStorageBase
   suffix: Syndicate EVA, No Mask
   components:
-  - type: StorageFill
-    contents:
-        # - id: OxygenTankFilled # Frontier
-        - id: NFTankO2N2EqualFilled # Frontier
-        - id: ClothingOuterEVASuitSyndicate
-        - id: ClothingHeadHelmetSyndicate
-        - id: ClothingMaskPilot # Aurora
-        - id: JetpackBlackFilled # Frontier
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageEVASyndicateNoMask
+
+- type: entityTable
+  id: FillSuitStorageEVASyndicateNoMask
+  table: !type:AllSelector
+    children:
+    - id: NFTankO2N2EqualFilled
+    - id: ClothingOuterEVASuitSyndicate
+    - id: ClothingHeadHelmetSyndicate
+    - id: ClothingMaskPilot
+    - id: JetpackBlackFilled

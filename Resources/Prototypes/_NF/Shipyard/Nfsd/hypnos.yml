@@ -7,6 +7,7 @@
 # Discord: MagnusCrowe
 
 # Shuttle Notes:
+# Aurora Song - Paths changed to point to SLE (blue) shuttles in _AS namespace
 #
 - type: vessel
   id: Hypnos
@@ -17,7 +18,7 @@
   category: Medium
   group: Security
   access: Sergeant
-  shuttlePath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
+  shuttlePath: /Maps/_AS/Shuttles/Sle/hypnos.yml
   class:
   - Pursuit
   engine:
@@ -26,7 +27,7 @@
 - type: gameMap
   id: Hypnos
   mapName: 'NSF Hypnos'
-  mapPath: /Maps/_NF/Shuttles/Nfsd/hypnos.yml
+  mapPath: /Maps/_AS/Shuttles/Sle/hypnos.yml
   minPlayers: 0
   stations:
     Hypnos:

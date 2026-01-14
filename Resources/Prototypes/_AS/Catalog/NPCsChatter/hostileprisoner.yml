@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: hostileprisonerchatter
+  values:
+    prefix: advertisement-hostileprisoner-
+    count: 5

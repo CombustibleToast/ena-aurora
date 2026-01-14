@@ -1,0 +1,19 @@
+# Aurora Song: AAC Tablet safety/threat phrases
+phrase-hostile-syndicate = Syndicate
+phrase-hostile-pirate = pirate
+phrase-hostile-pirate-captain = Pirate Captain
+phrase-hostile-pirate-first-mate = Pirate First Mate
+phrase-hostile-wizard = wizard
+phrase-hostile-nukies = nukies
+phrase-hostile-traitor = traitor
+phrase-hostile-changeling = changeling
+phrase-hostile-cultist = cultist
+phrase-hostile-revolutionary = revolutionary
+phrase-hostile-zombie = zombie
+phrase-hostile-dragon = dragon
+phrase-hostile-blob = blob
+phrase-hostile-rat-king = rat king
+phrase-hostile-revenant = revenant
+phrase-hostile-ninja = ninja
+phrase-hostile-thief = thief
+phrase-hostile-heretic = heretic

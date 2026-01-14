@@ -1,0 +1,16 @@
+# Aurora Song - SLE Shuttle Cannons
+- type: entity
+  id: ASShuttleGunFriendshipSLE
+  parent: [BaseStructureDisableToolUse, ShuttleGunFriendship]
+  suffix: SLE
+  components:
+  - type: Machine
+    board: Null
+
+- type: entity
+  id: ASShuttleGunDusterSLE
+  parent: [BaseStructureDisableToolUse, ShuttleGunDuster]
+  suffix: SLE
+  components:
+  - type: Machine
+    board: Null

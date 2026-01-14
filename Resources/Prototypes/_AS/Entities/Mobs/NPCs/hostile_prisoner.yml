@@ -1,0 +1,168 @@
+# Aurora Song - Hostile Prisoner NPC
+# A violent prisoner armed with a makeshift glass shiv
+
+- type: entity
+  id: MobHostilePrisoner
+  name: hostile prisoner
+  parent:
+  - MobStaminaSpecial
+  - MobMovementSpeedModifierMelee
+  - MobHumanoidHostileBase
+  - MobHumanoidHostileAISimpleMelee
+  - MobHumanoidInvetory
+  description: A dangerous prisoner wielding a makeshift glass shiv. Desperate and violent.
+  components:
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - Flashed
+  - type: Stamina
+    critThreshold: 100
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: MeleeWeapon
+    attackRate: 1.0
+    damage:
+      types:
+        Slash: 8
+        Piercing: 5
+  - type: Vocalizer
+    minVocalizeInterval: 30
+    maxVocalizeInterval: 120
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: hostileprisonerchatter
+  - type: Loadout
+    prototypes:
+    - MobHostilePrisonerGear
+
+# Loadout for the hostile prisoner
+- type: startingGear
+  id: MobHostilePrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorOrange
+  inhand:
+  - ReinforcedShiv
+
+# Riot Prisoner - More dangerous variant with stolen riot gear
+- type: entity
+  id: MobHostileRiotPrisoner
+  name: riot prisoner
+  parent:
+  - MobStaminaSpecial
+  - MobMovementSpeedModifierMelee
+  - MobHumanoidHostileBase
+  - MobHumanoidHostileAISimpleMelee
+  - MobHumanoidInvetory
+  description: A violent prisoner who has stolen security riot gear. Heavily armored and wielding a combat knife.
+  components:
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - Flashed
+  - type: Stamina
+    critThreshold: 100
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: MeleeWeapon
+    attackRate: 1.0
+    damage:
+      types:
+        Slash: 12
+        Piercing: 8
+  - type: Vocalizer
+    minVocalizeInterval: 30
+    maxVocalizeInterval: 120
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: hostileprisonerchatter
+  - type: Loadout
+    prototypes:
+    - MobHostileRiotPrisonerGear
+
+# Loadout for the riot prisoner
+- type: startingGear
+  id: MobHostileRiotPrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorOrange
+    outerClothing: ClothingOuterArmorRiot
+    head: ClothingHeadHelmetRiot
+  inhand:
+  - CombatKnife
+
+# Armed Prisoner - Has riot armor and stun baton
+- type: entity
+  id: MobHostileArmedPrisoner
+  name: armed prisoner
+  parent:
+  - MobStaminaSpecial
+  - MobMovementSpeedModifierMelee
+  - MobHumanoidHostileBase
+  - MobHumanoidHostileAISimpleMelee
+  - MobHumanoidInvetory
+  description: A dangerous prisoner wearing stolen riot armor and wielding a stun baton.
+  components:
+  - type: StatusEffects
+    allowed:
+    - Stun
+    - KnockedDown
+    - SlowedDown
+    - Stutter
+    - Electrocution
+    - ForcedSleep
+    - TemporaryBlindness
+    - Pacified
+    - Flashed
+  - type: Stamina
+    critThreshold: 100
+  - type: RandomHumanoidAppearance
+    randomizeName: false
+  - type: NpcFactionMember
+    factions:
+    - SimpleHostile
+  - type: MeleeWeapon
+    attackRate: 1.0
+    damage:
+      types:
+        Blunt: 10
+  - type: Vocalizer
+    minVocalizeInterval: 30
+    maxVocalizeInterval: 120
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: hostileprisonerchatter
+  - type: Loadout
+    prototypes:
+    - MobHostileArmedPrisonerGear
+
+# Loadout for the armed prisoner
+- type: startingGear
+  id: MobHostileArmedPrisonerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPrisoner
+    shoes: ClothingShoesColorOrange
+    outerClothing: ClothingOuterArmorRiot
+  inhand:
+  - StunbatonActive

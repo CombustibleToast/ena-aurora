@@ -1,0 +1,12 @@
+#Free medical options for Medic
+- type: loadout
+  id: MedicClothingEyesHudMedical
+  price: 0
+  equipment:
+    eyes: ClothingEyesHudMedical
+
+- type: loadout
+  id: MedicClothingEyesGlassesMedic
+  price: 500
+  equipment:
+    eyes: ASClothingEyesGlassesMedic

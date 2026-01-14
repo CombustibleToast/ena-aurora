@@ -1,0 +1,80 @@
+# Aurora Song - SLE (Security Logistics Enforcement) vending machine inventories
+
+- type: vendingMachineInventory
+  id: ASSLEDrobeInventory
+  startingInventory:
+    ASClothingBackpackSLEBrown: 6
+    ASClothingBackpackSatchelSLEBrown: 6
+    ASClothingBackpackDuffelSLEBrown: 6
+    ASClothingBackpackMessengerSLEBrown: 6
+    ASClothingBackpackSLECream: 2
+    ASClothingBackpackSatchelSLECream: 2
+    ASClothingBackpackDuffelSLECream: 2
+    ASClothingBackpackMessengerSLECream: 2
+    ASClothingHeadHatSLEBeretGreen: 6
+    ASClothingHeadHatSLEBeretBrown: 6
+    ASClothingHeadHatSLEBeretCream: 6
+    ASClothingHeadHatSLECampaign: 6
+    ASClothingHeadHatSLESmallCampaign: 6
+    ASClothingHandsGlovesCombatSLEDarkBlue: 6
+    ASClothingHandsGlovesCombatSLELightBlue: 6
+    ASClothingUniformJumpskirtSLE: 6
+    ASClothingUniformJumpskirtSLEShort: 6
+    ASClothingUniformJumpsuitSLE: 6
+    ASClothingUniformJumpsuitSLEShort: 6
+    ASClothingUniformJumpsuitSLETacBlack: 6
+    ASClothingUniformJumpsuitSLETacGray: 6
+    ASClothingUniformJumpsuitSLETacCamo: 6
+    ASClothingUniformJumpsuitSLETacCream: 6
+    ASClothingHeadsetSLEGreenCommon: 6
+    ASClothingHeadsetSLEBrownCommon: 6
+    ASClothingHeadsetSLECreamCommon: 6
+    ASClothingHeadHelmetSLE: 6
+    ASClothingOuterArmorSLE: 6
+    ASClothingOuterCoatSLEBomber: 6
+    ASClothingOuterCoatSLELongCoat: 6
+    ASClothingOuterCoatSLEFormal: 6
+    ASClothingMaskGasSLE: 8
+    NfsdWhistle: 3
+    ClothingEyesBlindfold: 3
+    ASClothingShoesBootsSLEDarkBlue: 6
+    ASClothingShoesBootsSLELightBlue: 6
+    ASClothingShoesBootsMagSLE: 3
+    ASClothingOuterEVASuitSLE: 6
+    ClothingOuterEVASuitPrisoner: 6
+  contrabandInventory:
+    ClothingUniformJumpskirtOfLife: 3
+
+- type: vendingMachineInventory
+  id: ASSLETechInventory
+  startingInventory:
+    Flash: 5
+    Handcuffs: 8
+    Zipties: 10
+    ForensicPad: 4
+    Flare: 6
+    Stunbaton: 4
+    WeaponDisabler: 2
+    ClothingEyesGlassesSecurity: 2
+    ASClothingEyesGlassesSLE: 2
+    EncryptionKeySecurity: 4
+    ClothingEyesHudSecurity: 4
+    ClothingBeltSecurityFilled: 3
+    ASClothingBeltSLEFilled: 3
+    ASClothingBeltSLEWebbingFilled: 2
+    RiotShield: 2
+    RiotLaserShield: 2
+    RiotBulletShield: 2
+    Bola: 4
+    Crowbar: 4
+    GasAnalyzer: 2
+    ClothingHandsGlovesColorYellow: 2
+    trayScanner: 2
+    Wrench: 2
+    Welder: 2
+    Wirecutter: 2
+    Screwdriver: 2
+    CableHVStack: 1
+    CableMVStack: 1
+    CableApcStack: 2
+

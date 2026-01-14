@@ -18,7 +18,7 @@
   - Maintenance
   - Service
   - Mail # Frontier
-  - Frontier # Frontier
+  - Aurora # Frontier - Aurora Song - Changed from Frontier to Aurora
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant ]

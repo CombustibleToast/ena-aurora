@@ -1,0 +1,123 @@
+# Aurora Song - Department Bonus Dispensation Machine Entities
+
+- type: entity
+  id: DepartmentBonusMachineBase
+  parent: [BaseStructureIndestructible, BaseStructureDisableAnchoring, BaseMachinePowered]
+  abstract: true
+  name: department bonus machine
+  description: Periodically allocates a percentage of a department's budget for staff bonuses. Requires department access to dispense.
+  categories: [ HideSpawnMenu ]
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Machines/bounty_dispensers.rsi
+    snapCardinals: true
+    noRot: true
+  - type: ApcPowerReceiver
+    powerLoad: 200
+  - type: UserInterface
+    interfaces:
+      enum.DepartmentBonusDispensationMachineUiKey.Key:
+        type: DepartmentBonusDispensationMachineBoundUserInterface
+  - type: ActivatableUIRequiresPower
+  - type: ActivatableUI
+    key: enum.DepartmentBonusDispensationMachineUiKey.Key
+  - type: ActivatableUIRequiresAccess
+  - type: DepartmentBonusDispensationMachine
+    ejectSound:
+      path: /Audio/Effects/Cargo/ping.ogg
+
+
+# SLE Department Bonus Machine
+- type: entity
+  id: DepartmentBonusMachineSle
+  parent: DepartmentBonusMachineBase
+  name: SLE bonus machine
+  description: Periodically allocates a percentage of the SLE Department's budget for staff bonuses.
+  components:
+  - type: Sprite
+    layers:
+    - state: dispenser_sle
+  - type: DepartmentBonusDispensationMachine
+    targetDepartment: Sle
+    allocationRate: 0.1
+    withdrawalInterval: 3600  # 1 hour
+  - type: AccessReader
+    access: [["Security"]]
+
+# Central Department Bonus Machine
+- type: entity
+  id: DepartmentBonusMachineCentral
+  parent: DepartmentBonusMachineBase
+  name: Central bonus machine
+  description: Periodically allocates 10% of the Central Department's budget for staff bonuses.
+  components:
+  - type: Sprite
+    layers:
+    - state: dispenser_sr
+  - type: DepartmentBonusDispensationMachine
+    targetDepartment: Aurora # Aurora Song - Changed from Frontier to Aurora
+    allocationRate: 0.1
+    withdrawalInterval: 3600  # 1 hour
+  - type: AccessReader
+    access: [["Aurora"]] # Aurora Song - Changed from Frontier to Aurora
+
+# Medical Department Bonus Machine
+- type: entity
+  id: DepartmentBonusMachineMedical
+  parent: DepartmentBonusMachineBase
+  name: Medical bonus machine
+  description: Periodically allocates 10% of the Medical Department's budget for staff bonuses.
+  components:
+  - type: Sprite
+    layers:
+    - state: dispenser_cmo
+  - type: DepartmentBonusDispensationMachine
+    targetDepartment: Medical
+    allocationRate: 0.1
+    withdrawalInterval: 3600  # 1 hour
+  - type: AccessReader
+    access: [["Medical"]]
+
+## Logistics Department Bonus Machine
+#- type: entity
+#  id: DepartmentBonusMachineLogistics
+#  parent: DepartmentBonusMachineBase
+#  name: Logistics bonus machine
+#  description: Periodically allocates 10% of the Logistics Department's budget for staff bonuses.
+#  components:
+#  - type: DepartmentBonusDispensationMachine
+#    targetDepartment: Logistics
+#    taxRate: 0.1
+#    withdrawalInterval: 300  # 5 minutes
+#  - type: AccessReader
+#    access: [["Cargo"]]
+#
+## Engineering Department Bonus Machine
+#- type: entity
+#  id: DepartmentBonusMachineEngineering
+#  parent: DepartmentBonusMachineBase
+#  name: Engineering bonus machine
+#  description: Periodically allocates 10% of the Engineering Department's budget for staff bonuses.
+#  components:
+#  - type: DepartmentBonusDispensationMachine
+#    targetDepartment: Engineering
+#    taxRate: 0.1
+#    withdrawalInterval: 300  # 5 minutes
+#  - type: AccessReader
+#    access: [["Engineering"]]
+#
+## Science Department Bonus Machine
+#- type: entity
+#  id: DepartmentBonusMachineScience
+#  parent: DepartmentBonusMachineBase
+#  name: Science bonus machine
+#  description: Periodically allocates 10% of the Science Department's budget for staff bonuses.
+#  components:
+#  - type: DepartmentBonusDispensationMachine
+#    targetDepartment: Science
+#    taxRate: 0.1
+#    withdrawalInterval: 300  # 5 minutes
+#  - type: AccessReader
+#    access: [["Research"]]

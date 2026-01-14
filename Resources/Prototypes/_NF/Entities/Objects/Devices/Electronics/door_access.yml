@@ -5,7 +5,7 @@
   suffix: Frontier, Locked
   components:
   - type: AccessReader
-    access: [["Frontier"]]
+    access: [["Aurora"]] # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: DoorElectronics

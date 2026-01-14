@@ -1,0 +1,14 @@
+# Aurora Song: Species QuickPhrases for AAC Tablet
+# Aurora Song specific species not included in DeltaV
+# Uses DeltaV's base types for proper tab/group inheritance
+
+- type: quickPhrase
+  parent: BaseSpeciesPhrase
+  id: BaseAuroraCrewSpeciesPhrase
+  group: Crew
+  abstract: true
+
+- type: quickPhrase
+  id: SpeciesTajaranPhrase
+  parent: BaseAuroraCrewSpeciesPhrase
+  text: species-name-tajaran

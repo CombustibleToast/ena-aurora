@@ -1,0 +1,8 @@
+# Aurora Song - AS Medical Bounty System
+# Vocalizer dataset for medical patients
+
+- type: localizedDataset
+  id: asmedicalpatientchatter
+  values:
+    prefix: advertisement-asmedicalpatient-
+    count: 25

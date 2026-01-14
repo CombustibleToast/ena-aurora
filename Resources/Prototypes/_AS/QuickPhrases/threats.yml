@@ -1,0 +1,127 @@
+# Aurora Song: AAC Tablet QuickPhrase prototypes for safety/threats
+
+- type: quickPhrase
+  id: HostileSyndicate
+  text: phrase-hostile-syndicate
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostilePirate
+  text: phrase-hostile-pirate
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostilePirateCaptain
+  text: phrase-hostile-pirate-captain
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostilePirateFirstMate
+  text: phrase-hostile-pirate-first-mate
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileWizard
+  text: phrase-hostile-wizard
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileNukies
+  text: phrase-hostile-nukies
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileTraitor
+  text: phrase-hostile-traitor
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileChangeling
+  text: phrase-hostile-changeling
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileCultist
+  text: phrase-hostile-cultist
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileRevolutionary
+  text: phrase-hostile-revolutionary
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileZombie
+  text: phrase-hostile-zombie
+  tab: Safety
+  group: Creatures
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileDragon
+  text: phrase-hostile-dragon
+  tab: Safety
+  group: Creatures
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileBlob
+  text: phrase-hostile-blob
+  tab: Safety
+  group: Creatures
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileRatKing
+  text: phrase-hostile-rat-king
+  tab: Safety
+  group: Creatures
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileRevenant
+  text: phrase-hostile-revenant
+  tab: Safety
+  group: Creatures
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileNinja
+  text: phrase-hostile-ninja
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileThief
+  text: phrase-hostile-thief
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileHeretic
+  text: phrase-hostile-heretic
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed

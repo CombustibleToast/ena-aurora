@@ -4,4 +4,4 @@
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable
   equipment:
-    head: ClothingHeadHatNfsdBeretBrown
+    head: ASClothingHeadHatSLEBeretBrown

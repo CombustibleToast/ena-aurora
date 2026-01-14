@@ -5,6 +5,7 @@ using Robust.Client.Graphics;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using System.Linq;
+using System.Numerics;
 using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
 namespace Content.Client.Holopad;
@@ -47,7 +48,10 @@ public sealed class HolopadSystem : SharedHolopadSystem
         if (!HasComp<HolopadUserComponent>(uid))
             return;
 
-        var netEv = new HolopadUserTypingChangedEvent(GetNetEntity(uid.Value), ev.State);
+        // Aurora Song: Convert bool to enum - DeltaV changed TypingChangedEvent to use bool,
+        // but our HolopadUserTypingChangedEvent still expects TypingIndicatorState enum
+        var state = ev.IsTyping ? TypingIndicatorState.Typing : TypingIndicatorState.None;
+        var netEv = new HolopadUserTypingChangedEvent(GetNetEntity(uid.Value), state);
         RaiseNetworkEvent(netEv);
     }
 
@@ -107,7 +111,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
         // Remove shading from all layers (except displacement maps)
         for (var i = 0; i < hologramSprite.AllLayers.Count(); i++)
         {
-            if (_sprite.TryGetLayer((hologram, hologramSprite), i, out var layer, false) && layer.ShaderPrototype != "DisplacedStencilDraw")
+            if (_sprite.TryGetLayer((hologram, hologramSprite), i, out var layer, false) && layer.ShaderPrototype != "DisplacedDraw")
                 hologramSprite.LayerSetShader(i, "unshaded");
         }
 

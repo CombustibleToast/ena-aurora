@@ -1,0 +1,12 @@
+- type: entity
+  name: SLE Officer Corpse Spawner
+  id: ASSLEOfficerCorpseSpawner
+  parent: SalvageHumanCorpseSpawner
+  components:
+  - type: Sprite
+    layers:
+      - state: security_officer
+      - state: green
+  - type: ConditionalSpawner
+    prototypes:
+      - ASMobSLEOfficerCorpse

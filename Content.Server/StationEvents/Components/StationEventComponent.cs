@@ -25,6 +25,9 @@ public sealed partial class StationEventComponent : Component
     public string? StartAnnouncement;
 
     [DataField]
+    public string? ArrivalAnnouncement; // Aurora Song
+
+    [DataField]
     public string? WarningAnnouncement; // Frontier
 
     [DataField]
@@ -34,6 +37,9 @@ public sealed partial class StationEventComponent : Component
     public Color StartAnnouncementColor = Color.Gold;
 
     [DataField]
+    public Color ArrivalAnnouncementColor = Color.Gold; // Aurora Song
+
+    [DataField]
     public Color WarningAnnouncementColor = Color.Gold; // Frontier
 
     [DataField]
@@ -41,6 +47,9 @@ public sealed partial class StationEventComponent : Component
 
     [DataField]
     public SoundSpecifier? StartAudio;
+
+    [DataField]
+    public SoundSpecifier? ArrivalAudio; // Aurora Song
 
     [DataField]
     public SoundSpecifier? WarningAudio; // Frontier
@@ -55,6 +64,9 @@ public sealed partial class StationEventComponent : Component
     public string? StartRadioAnnouncement; // Frontier
 
     [DataField]
+    public string? ArrivalRadioAnnouncement; // Aurora Song
+
+    [DataField]
     public string? WarningRadioAnnouncement; // Frontier
 
     [DataField]
@@ -62,6 +74,9 @@ public sealed partial class StationEventComponent : Component
 
     [DataField]
     public ProtoId<RadioChannelPrototype> StartRadioAnnouncementChannel = "Supply"; // Frontier
+
+    [DataField]
+    public ProtoId<RadioChannelPrototype> ArrivalRadioAnnouncementChannel = "Supply"; // Aurora Song
 
     [DataField]
     public ProtoId<RadioChannelPrototype> WarningRadioAnnouncementChannel = "Supply"; // Frontier
@@ -144,4 +159,10 @@ public sealed partial class StationEventComponent : Component
     /// </summary>
     [DataField]
     public bool WarningAnnounced;
+
+    /// <summary>
+    ///     Aurora Song: True if the arrival announcement has already been sent.
+    /// </summary>
+    [DataField]
+    public bool ArrivalAnnounced;
 }

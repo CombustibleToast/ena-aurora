@@ -1,0 +1,94 @@
+# Aurora Song - SLE (Security Logistics Enforcement) messenger bags
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: ClothingBackpackMessengerContractor
+  id: ASClothingBackpackMessengerSLEBrown
+  name: SLE messenger bag
+  description: A versatile messenger bag used by Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Back/Messenger/color.rsi
+    layers:
+    - state: icon-base
+      color: "#2a4a7c"  # SLE dark blue
+    - state: icon-base-top
+      color: "#7a9cc6"  # SLE light blue
+    - state: icon-sling
+      color: "#537045"  # SLE green accent
+    - state: icon-clasp
+      color: "#e1af4e"  # Gold clasp
+  - type: Clothing
+    sprite: _NF/Clothing/Back/Messenger/color.rsi
+    clothingVisuals:
+      back:
+      - state: base-equipped-BACKPACK
+        color: "#2a4a7c"  # SLE dark blue
+      - state: base-top-equipped-BACKPACK
+        color: "#7a9cc6"  # SLE light blue
+      - state: sling-equipped-BACKPACK
+        color: "#537045"  # SLE green accent
+      - state: clasp-equipped-BACKPACK
+        color: "#e1af4e"  # Gold clasp
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-inhand-left
+        color: "#2a4a7c"  # SLE dark blue
+      - state: base-top-inhand-left
+        color: "#7a9cc6"  # SLE light blue
+      - state: clasp-inhand-left
+        color: "#e1af4e"  # Gold clasp
+      right:
+      - state: base-inhand-right
+        color: "#2a4a7c"  # SLE dark blue
+      - state: base-top-inhand-right
+        color: "#7a9cc6"  # SLE light blue
+      - state: clasp-inhand-right
+        color: "#e1af4e"  # Gold clasp
+
+- type: entity
+  parent: ClothingBackpackMessengerContractor
+  id: ASClothingBackpackMessengerSLECream
+  name: SLE messenger bag
+  description: A versatile messenger bag used by Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Back/Messenger/color.rsi
+    layers:
+    - state: icon-base
+      color: "#7a9cc6"  # SLE light blue
+    - state: icon-decor
+      color: "#537045"  # SLE green accent
+    - state: icon-sling
+      color: "#537045"  # SLE green accent
+    - state: icon-clasp
+      color: "#e1af4e"  # Gold clasp
+  - type: Clothing
+    sprite: _NF/Clothing/Back/Messenger/color.rsi
+    clothingVisuals:
+      back:
+      - state: base-equipped-BACKPACK
+        color: "#7a9cc6"  # SLE light blue
+      - state: decor-equipped-BACKPACK
+        color: "#537045"  # SLE green accent
+      - state: sling-equipped-BACKPACK
+        color: "#537045"  # SLE green accent
+      - state: clasp-equipped-BACKPACK
+        color: "#e1af4e"  # Gold clasp
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: base-inhand-left
+        color: "#7a9cc6"  # SLE light blue
+      - state: decor-inhand-left
+        color: "#537045"  # SLE green accent
+      - state: clasp-inhand-left
+        color: "#e1af4e"  # Gold clasp
+      right:
+      - state: base-inhand-right
+        color: "#7a9cc6"  # SLE light blue
+      - state: decor-inhand-right
+        color: "#537045"  # SLE green accent
+      - state: clasp-inhand-right
+        color: "#e1af4e"  # Gold clasp

@@ -1,0 +1,13 @@
+# Aurora Song - SLE Energy Shield
+- type: entity
+  name: SLE energy shield
+  parent: [BaseC2ContrabandUnredeemable, EnergyShield]
+  id: ASEnergyShieldSLE
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Melee/e_shield.rsi
+    color: "#4a6fa5"  # SLE blue tint
+  - type: Item
+    sprite: _AS/Objects/Weapons/Melee/e_shield.rsi
+  - type: PointLight
+    color: "#4a6fa5"  # SLE blue

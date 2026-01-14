@@ -1,0 +1,105 @@
+# Aurora Song - SLE (Security Logistics Enforcement) badges
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ASClothingNeckSLEBadge
+  name: SLE badge
+  description: Respect my authority!
+  abstract: true
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_bronze_badge.rsi # Aurora Song - Using SLE-recolored sprites
+    layers: []
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_bronze_badge.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeSecurityCadet
+  name: Rookie badge
+  suffix: Bronze - Rookie
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeSecurity
+  suffix: Silver - Officer
+  name: Officer badge
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_silver_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_silver_badge.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeSecurityBrigmedic
+  suffix: Silver - Brigmedic
+  name: Corpsman badge
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_silvercross_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_silvercross_badge.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeDetective
+  suffix: Silver - Detective
+  name: detective badge
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_silver_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_silver_badge.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeSeniorOfficer
+  suffix: Gold - Sergeant
+  name: sergeant badge
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_gold_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_gold_badge.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeWarden
+  suffix: Gold - Lieutenant
+  name: Lieutenant badge
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_gold_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_gold_badge.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingNeckSLEBadge
+  id: ASClothingNeckSLEBadgeSheriff
+  suffix: Star - Commissioner
+  name: Commissioner badge
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Scarfs/sle_star_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Scarfs/sle_star_badge.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: EmbeddableProjectile # pointy
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ASClothingNeckPublicAffairsLiaisonBadge
+  name: public affairs liaison badge
+  description: A badge for grade 4 paperwork wizards affiliated with the SLE.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Neck/Misc/palbadge.rsi
+    scale: 0.5, 0.5
+  - type: Clothing
+    sprite: _NF/Clothing/Neck/Misc/palbadge.rsi
+  - type: TypingIndicatorClothing
+    proto: pal
+

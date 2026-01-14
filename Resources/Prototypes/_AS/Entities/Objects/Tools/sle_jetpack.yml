@@ -1,0 +1,35 @@
+# Aurora Song - SLE Jetpack
+# Using recolored sprites from master branch
+
+- type: entity
+  parent: JetpackSecurity
+  id: ASJetpackSLE
+  name: orange SLE jetpack
+  suffix: Empty
+  description: A jetpack issued to SLE personnel for extravehicular activity. Features SLE's distinctive orange colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi
+  - type: Item
+    sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi
+  - type: Tag
+    tags:
+      - EmagImmune
+
+- type: entity
+  parent: JetpackSecurityFilled
+  id: ASJetpackSLEFilled
+  name: orange SLE jetpack
+  suffix: Filled
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi
+  - type: Item
+    sprite: _AS/Objects/Tanks/Jetpacks/sle.rsi
+  - type: Tag
+    tags:
+      - EmagImmune

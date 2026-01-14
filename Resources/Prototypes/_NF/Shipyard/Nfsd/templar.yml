@@ -1,3 +1,4 @@
+# Aurora Song - Paths changed to point to SLE (blue) shuttles in _AS namespace
 - type: vessel
   id: Templar
   parent: BaseVessel
@@ -7,7 +8,7 @@
   category: Small
   group: Security
   access: Security
-  shuttlePath: /Maps/_NF/Shuttles/Nfsd/templar.yml
+  shuttlePath: /Maps/_AS/Shuttles/Sle/templar.yml
   guidebookPage: Null
   class:
   - Pursuit
@@ -17,7 +18,7 @@
 - type: gameMap
   id: Templar
   mapName: 'NSF Templar'
-  mapPath: /Maps/_NF/Shuttles/Nfsd/templar.yml
+  mapPath: /Maps/_AS/Shuttles/Sle/templar.yml
   minPlayers: 0
   stations:
     Templar:

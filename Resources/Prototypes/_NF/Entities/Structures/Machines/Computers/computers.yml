@@ -558,7 +558,7 @@
   suffix: Local
   components:
   - type: NFDroneConsoleTarget
-    id: Frontier
+    id: Aurora # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseComputerTrafficRemote
@@ -568,7 +568,7 @@
   suffix: Remote
   components:
   - type: NFDroneConsole
-    id: Frontier
+    id: Aurora # Aurora Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseComputerTrafficLocal

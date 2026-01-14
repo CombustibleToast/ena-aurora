@@ -1,26 +1,26 @@
 - type: loadout
   id: SeniorOfficerClothingUniformJumpsuitSeniorOfficer
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNfsdTacBlack
+    jumpsuit: ASClothingUniformJumpsuitSLETacBlack
 
 - type: loadout
   id: SeniorOfficerClothingUniformJumpskirtSeniorOfficer
   equipment:
-    jumpsuit: ClothingUniformJumpskirtNfsd
+    jumpsuit: ASClothingUniformJumpskirtSLE
 
 # Aurora Song
 - type: loadout
   id: SeniorOfficerClothingUniformJumpsuitNfsd
   equipment:
-    jumpsuit: ClothingUniformJumpsuitNfsd
+    jumpsuit: ASClothingUniformJumpsuitSLE
 
 - type: loadout
   id: SeniorOfficerClothingUniformJumpsuitSle
   equipment:
-    jumpsuit: ClothingUniformJumpsuitSle
+    jumpsuit: ASClothingUniformJumpsuitSLE
 
 - type: loadout
   id: SeniorOfficerClothingUniformJumpskirtSle
   equipment:
-    jumpsuit: ClothingUniformJumpskirtSle
+    jumpsuit: ASClothingUniformJumpskirtSLE
 # Aurora Song

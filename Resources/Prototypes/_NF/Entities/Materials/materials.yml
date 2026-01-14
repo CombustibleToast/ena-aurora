@@ -48,6 +48,10 @@
   - type: PhysicalComposition
     materialComposition:
       Anomalite: 100
+  - type: Tag # Aurora
+    tags:
+    - RawMaterial
+    - Ore
 
 - type: entity
   parent: MaterialAnomalite

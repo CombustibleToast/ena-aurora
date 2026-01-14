@@ -50,16 +50,16 @@
 - type: startingGear
   id: SheriffGear
   equipment:
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: NFWeaponEnergyPistolLaserX01Multiphase
   storage:
     back:
-    - NfsdTechFabFlatpack
+    - ASTechFabSLEFlatpack
     - Multitool
-    - HoloprojectorNfsd
+    - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
     - DoorRemoteNfsd
     - BaseSecurityUplinkRadioSheriff
-    - RubberStampSheriff
+    - ASRubberStampSheriff # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
   licenses:
   - LicenseContrabandHandling
 
@@ -68,11 +68,12 @@
   job: Sheriff
   hasMindShield: true
   equipment:
-    head: ClothingHeadHatNfsdCampaignFilled
-    mask: ClothingMaskGasSheriff
-    eyes: ClothingEyesGlassesNfsd
-    outerClothing: ClothingOuterCoatNfsdFormalSheriff
+    head: ASClothingHeadHatSLECampaign
+    mask: ASClothingMaskGasSLESheriff
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterCoatSLEFormalSheriff
     neck: ClothingNeckNfsdBadgeSheriff
-    belt: ClothingBeltNfsdFilled
-    gloves: ClothingHandsGlovesCombatNfsdCream
-    shoes: ClothingShoesBootsNfsdBrown
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLELightBlue
+    shoes: ASClothingShoesBootsSLEDarkBlue
+

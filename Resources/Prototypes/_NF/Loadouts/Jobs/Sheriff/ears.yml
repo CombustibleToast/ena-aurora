@@ -1,14 +1,14 @@
 - type: loadout
   id: SheriffClothingHeadsetAltNfsdBrownCentcom
   equipment:
-    ears: ClothingHeadsetAltNfsdBrownCentcom
+    ears: ASClothingHeadsetAltSLEBrownCentcom
 
 - type: loadout
   id: SheriffClothingHeadsetAltNfsdCreamandBrownCentcom
   equipment:
-    ears: ClothingHeadsetAltNfsdCreamandBrownCentcom
+    ears: ASClothingHeadsetAltSLECreamandBrownCentcom
 
 - type: loadout
   id: SheriffClothingHeadsetAltNfsdGreenCentcom
   equipment:
-    ears: ClothingHeadsetAltNfsdGreenCentcom
+    ears: ASClothingHeadsetAltSLEGreenCentcom

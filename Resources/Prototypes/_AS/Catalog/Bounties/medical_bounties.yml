@@ -1,0 +1,310 @@
+# Aurora Song - AS Medical Bounty System
+# Based on New Frontier Station 14's Medical Bounty System
+# Original implementation: https://github.com/new-frontiers-14/frontier-station-14
+# Medical bounty prototypes for AS patients spawned in medical beds
+# These define the damage/reagent profiles and rewards for healing patients
+
+- type: aSMedicalBounty
+  id: ASMurderedBlunt
+  damageSets:
+    Blunt:
+      min: 70
+      max: 140
+      value: 60
+      penalty: 30
+    Asphyxiation:
+      min: 30
+      max: 50
+      value: 20
+      penalty: 10
+  baseReward: 4000 # Damage: 100-190 total (70-140 Blunt + 30-50 Asphyx) | Reward: ~12K-17K (2x NF's 4K-8K)
+
+- type: aSMedicalBounty
+  id: ASMurderedPierce
+  damageSets:
+    Piercing:
+      min: 70
+      max: 140
+      value: 60
+      penalty: 30
+    Bloodloss:
+      min: 30
+      max: 50
+      value: 20
+      penalty: 10
+  baseReward: 4000 # Damage: 100-190 total (70-140 Pierce + 30-50 Blood) | Reward: ~12K-17K (2x NF's 4K-8K)
+
+- type: aSMedicalBounty
+  id: ASMurderedSlash
+  damageSets:
+    Slash:
+      min: 70
+      max: 140
+      value: 60
+      penalty: 30
+    Bloodloss:
+      min: 30
+      max: 50
+      value: 20
+      penalty: 10
+  baseReward: 4000 # Damage: 100-190 total (70-140 Slash + 30-50 Blood) | Reward: ~12K-17K (2x NF's 4K-8K)
+
+- type: aSMedicalBounty
+  id: ASMildBruteMix
+  damageSets:
+    Blunt:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Piercing:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Slash:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Bloodloss:
+      min: 20
+      max: 40
+      value: 20
+      penalty: 10
+  baseReward: 4000 # Damage: 100-200 total (20-40 each: Blunt, Pierce, Slash, Blood) | Reward: ~13K-18K (2x NF's 5K-8K)
+
+- type: aSMedicalBounty
+  id: ASSuffocated
+  damageSets:
+    Asphyxiation:
+      min: 70
+      max: 140
+      value: 40
+      penalty: 20
+    Bloodloss:
+      min: 30
+      max: 50
+      value: 20
+      penalty: 10
+  baseReward: 4000 # Damage: 100-190 total (70-140 Asphyx + 30-50 Blood) | Reward: ~11K-16K (2x NF's 4K-8K)
+
+- type: aSMedicalBounty
+  id: ASPlasmaFire
+  damageSets:
+    Heat:
+      min: 100
+      max: 190
+      value: 20
+      penalty: 10
+  baseReward: 6000 # Damage: 100-190 total (Heat only) | Reward: ~10K-13K (2x NF's ~10K-32K at lower range)
+
+- type: aSMedicalBounty
+  id: ASSpaced
+  damageSets:
+    Blunt:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Piercing:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Slash:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Cold:
+      min: 20
+      max: 40
+      value: 20
+      penalty: 10
+  baseReward: 2000 # Damage: 100-200 total (20-40 each: Blunt, Pierce, Slash, Cold) | Reward: ~11K-15K (2x NF's ~8.5K-24K at lower-mid range)
+
+- type: aSMedicalBounty
+  id: ASMildBurnMix
+  damageSets:
+    Heat:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Cold:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Shock:
+      min: 20
+      max: 40
+      value: 60
+      penalty: 30
+    Caustic:
+      min: 20
+      max: 40
+      value: 20
+      penalty: 10
+  baseReward: 4000 # Damage: 100-200 total (20-40 each: Heat, Cold, Shock, Caustic) | Reward: ~13K-18K (2x NF's 4K-8K)
+
+- type: aSMedicalBounty
+  id: ASInsuls
+  damageSets:
+    Heat:
+      min: 40
+      max: 80
+      value: 30
+      penalty: 15
+    Shock:
+      min: 60
+      max: 110
+      value: 20
+      penalty: 10
+  baseReward: 3000 # Damage: 100-190 total (40-80 Heat + 60-110 Shock) | Reward: ~9K-13K (2x NF's 7.5K-11.5K at lower range)
+
+- type: aSMedicalBounty
+  id: ASAcidSlimes
+  damageSets:
+    Caustic:
+      min: 100
+      max: 190
+      value: 40
+      penalty: 20
+  baseReward: 6000 # Damage: 100-190 total (Caustic only) | Reward: ~14K-20K (2x NF's 8K-12K)
+
+- type: aSMedicalBounty
+  id: ASSpiderAttackMild
+  damageSets:
+    Poison:
+      min: 50
+      max: 95
+      value: 30
+      penalty: 15
+    Asphyxiation:
+      min: 50
+      max: 95
+      value: 20
+      penalty: 10
+  reagents:
+    Mechanotoxin:
+      min: 30
+      max: 50
+      value: 40
+  baseReward: 8500 # Damage: 100-190 total (50-95 Poison + 50-95 Asphyx) + 30-50u Mechanotoxin | Reward: ~14K-19K (2x NF's 6.6K-10.5K)
+
+- type: aSMedicalBounty
+  id: ASSpiderAttack
+  damageSets:
+    Poison:
+      min: 100
+      max: 190
+      value: 30
+      penalty: 15
+  reagents:
+    Mechanotoxin:
+      min: 30
+      max: 50
+      value: 40
+  baseReward: 8500 # Damage: 100-190 total (Poison only) + 30-50u Mechanotoxin | Reward: ~14K-20K (2x NF's 7.1K-10.5K)
+
+- type: aSMedicalBounty
+  id: ASDeliciousMushroom
+  damageSets:
+    Poison:
+      min: 50
+      max: 95
+      value: 30
+      penalty: 15
+    Asphyxiation:
+      min: 50
+      max: 95
+      value: 20
+      penalty: 10
+  reagents:
+    Amatoxin:
+      min: 30
+      max: 50
+      value: 60
+  baseReward: 9000 # Damage: 100-190 total (50-95 Poison + 50-95 Asphyx) + 30-50u Amatoxin | Reward: ~15K-21K (2x NF's 6.4K-10.5K)
+
+- type: aSMedicalBounty
+  id: ASHyperpacmanGoneWrong
+  damageSets:
+    Radiation:
+      min: 40
+      max: 80
+      value: 30
+      penalty: 15
+    Cellular:
+      min: 30
+      max: 60
+      value: 50
+      penalty: 25
+    Asphyxiation:
+      min: 30
+      max: 50
+      value: 20
+      penalty: 10
+  baseReward: 4500 # Damage: 100-190 total (40-80 Rad + 30-60 Cell + 30-50 Asphyx) | Reward: ~12K-19K (2x NF's ~6.25K-19K at mid range)
+
+- type: aSMedicalBounty
+  id: ASAsphyxAndCellular
+  damageSets:
+    Asphyxiation:
+      min: 60
+      max: 120
+      value: 20
+      penalty: 10
+    Cellular:
+      min: 40
+      max: 70
+      value: 50
+      penalty: 25
+  baseReward: 4000 # Damage: 100-190 total (60-120 Asphyx + 40-70 Cell) | Reward: ~10K-17K (2x NF's 5.5K-9.5K)
+
+- type: aSMedicalBounty
+  id: ASDeliciousUranium
+  damageSets:
+    Radiation:
+      min: 30
+      max: 70
+      value: 30
+      penalty: 15
+    Cellular:
+      min: 30
+      max: 60
+      value: 50
+      penalty: 25
+    Asphyxiation: # Value padding
+      min: 30
+      max: 60
+      value: 20
+      penalty: 10
+  reagents:
+    Uranium:
+      min: 30
+      max: 50
+      value: 50
+    Radium:
+      min: 30
+      max: 50
+      value: 50
+  baseReward: 4500 # Damage: 90-190 total (30-70 Rad + 30-60 Cell + 30-60 Asphyx) + 30-50u each Uranium/Radium | Reward: ~14K-24K (2x NF's 5.3K-13.5K)
+
+# Light bounty for SLE officer corpses found on triage shuttles
+- type: aSMedicalBounty
+  id: ASSLEOfficerInjured
+  damageSets:
+    Blunt:
+      min: 40
+      max: 60
+      value: 40
+      penalty: 20
+    Asphyxiation:
+      min: 40
+      max: 60
+      value: 30
+      penalty: 15
+  baseReward: 3000 # Damage: 80-120 total (40-60 Blunt + 40-60 Asphyx) | Reward: ~6K-9K

@@ -91,7 +91,8 @@ public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem 
             state = _isClientTyping ? TypingIndicatorState.Typing : TypingIndicatorState.Idle;
 
         // send a networked event to server
-        RaisePredictiveEvent(new TypingChangedEvent(state));
+        // Aurora Song: Convert enum state to bool for DeltaV's new TypingChangedEvent signature
+        RaisePredictiveEvent(new TypingChangedEvent(state == TypingIndicatorState.Typing));
     }
 
     private void OnShowTypingChanged(bool showTyping)

@@ -22,6 +22,7 @@
 # Tajaran
 # Vox
 # Vulpkanin
+# Fairy
 
 # "Standard [Body Part]" - Species' whose base body sprites have the same silhouettes / position as humans.
 # Not included are anything where that body part has a different silhouette. If the species has a
@@ -88,10 +89,24 @@
 
 - type: marking
   abstract: true
+  id: BaseSpeciesIPC
+  speciesRestriction: [IPC]
+  preferredSpecies: [IPC]
+
+- type: marking
+  abstract: true
   id: BaseSpeciesMoth
   speciesRestriction: [Moth]
+  preferredSpecies: [Moth]
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesRodentia
+  speciesRestriction: [Rodentia]
+  preferredSpecies: [Rodentia]
 
 - type: marking
   abstract: true
   id: BaseSpeciesVox
   speciesRestriction: [Vox]
+  preferredSpecies: [Vox]

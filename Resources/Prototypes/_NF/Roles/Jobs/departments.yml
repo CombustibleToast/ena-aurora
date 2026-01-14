@@ -1,5 +1,5 @@
 - type: department
-  id: Frontier
+  id: Aurora # Aurora Song - Changed from Frontier to Aurora
   name: department-Frontier
   description: department-NF-description
   color: "#334E6D"

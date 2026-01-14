@@ -6,6 +6,7 @@ using Content.Shared.CCVar;
 using Content.Shared.Examine;
 using Content.Shared.Random.Helpers;
 using Content.Shared.Salvage.Expeditions;
+using Content.Shared.Shuttles.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.CPUJob.JobQueues;
 using Robust.Shared.CPUJob.JobQueues.Queues;
@@ -30,7 +31,7 @@ public sealed partial class SalvageSystem
      * Handles setup / teardown of salvage expeditions.
      */
 
-    private const int MissionLimit = 6; // Frontier: 3<5 #Hardlight 5<6 :3
+    private const int MissionLimit = 6; // Frontier: 3<5 Aurora Song 5>6
 
     private readonly JobQueue _salvageQueue = new();
     private readonly List<(SpawnSalvageMissionJob Job, CancellationTokenSource CancelToken)> _salvageJobs = new();
@@ -119,6 +120,15 @@ public sealed partial class SalvageSystem
     private void OnExpeditionShutdown(EntityUid uid, SalvageExpeditionComponent component, ComponentShutdown args)
     {
         // component.Stream = _audio.Stop(component.Stream); // Frontier: moved to client
+
+        // First wipe any disks referencing us
+        var disks = AllEntityQuery<ShuttleDestinationCoordinatesComponent>();
+        while (disks.MoveNext(out var disk, out var diskComp)
+               && diskComp.Destination == uid)
+        {
+            diskComp.Destination = null;
+            Dirty(disk, diskComp);
+        }
 
         foreach (var (job, cancelToken) in _salvageJobs.ToArray())
         {

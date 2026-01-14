@@ -1,0 +1,18 @@
+# Aurora Song - SLE Telecom Server
+- type: entity
+  parent: TelecomServer
+  id: ASTelecomServerFilledSLE
+  suffix: Ship, SLE
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyCargo
+      - EncryptionKeyEngineering
+      - EncryptionKeyMedical
+      - EncryptionKeyScience
+      - EncryptionKeySecurity
+      - EncryptionKeyService
+      - EncryptionKeyNfsd
+      - EncryptionKeyTraffic

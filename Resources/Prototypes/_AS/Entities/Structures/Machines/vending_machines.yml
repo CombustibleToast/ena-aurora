@@ -74,7 +74,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: PointLight
     radius: 1.5
-    energy: 1.3
+    energy: 1.6
     color: "#0492c2"
   - type: UserInterface
     interfaces:
@@ -119,15 +119,31 @@
     #     shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Physics
+    bodyType: Static
+    canCollide: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.45,0.25,0.45"
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        density: 200
+        hard: true
   - type: PointLight
     radius: 1.5
-    energy: 1.3
+    energy: 1.6
     color: "#C24F1F"
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
         type: StoreBoundUserInterface
   - type: ActivatableUI
+    singleUser: true
     key: enum.StoreUiKey.Key
   - type: Tag
     tags:
@@ -138,3 +154,95 @@
   - type: AccessReader
     access: [["Security"]]
   - type: ActivatableUIRequiresAccess
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, BaseStructureDisableScrewing, VendingMachine]
+  id: MedicGearVend
+  name: Medic Gear Vending machine
+  suffix: POI
+  description: A vending machine stocked with medical supplies and gear.
+  components:
+    - type: VendingMachine
+      pack: MedicGearVendPOIInventory
+      dispenseOnHitChance: 0
+      dispenseOnHitThreshold: 0
+      offState: off
+      brokenState: broken
+      normalState: normal-unshaded
+      ejectState: eject-unshaded
+      denyState: deny-unshaded
+      ejectDelay: 3
+    - type: DatasetVocalizer
+      dataset: NanoMedAds
+    - type: Sprite
+      sprite: _AS/Structures/Machines/VendingMachines/medicgearvend.rsi
+      layers:
+      - state: "off"
+        map: ["enum.VendingMachineVisualLayers.Base"]
+      - state: "off"
+        map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+        shader: unshaded
+      - state: panel
+        map: ["enum.WiresVisualLayers.MaintenancePanel"]
+    - type: PointLight
+      radius: 1.5
+      energy: 1.6
+      color: "#0492c2"
+    - type: AccessReader
+      access: [["Medical"]]
+    - type: ActivatableUIRequiresAccess
+    - type: MarketModifier
+      mod: 5
+
+# Aurora Song - SLE (Security Logistics Enforcement) vending machines
+- type: entity
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  id: ASVendingMachineSLEDrobe
+  name: SLEDrobe
+  description: A vending machine for Security Logistics Enforcement clothing and equipment.
+  components:
+  - type: VendingMachine
+    pack: ASSLEDrobeInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: DatasetVocalizer
+    dataset: NfsdDrobeAds # Aurora Song - Reusing voice lines
+  - type: Sprite
+    sprite: _AS/Structures/Machines/VendingMachines/sledrobe.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  id: ASVendingMachineSLETech
+  name: SLETech
+  description: A vending machine for Security Logistics Enforcement technical equipment.
+  components:
+  - type: VendingMachine
+    pack: ASSLETechInventory
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: DatasetVocalizer
+    dataset: NfsdDrobeAds # Aurora Song - Reusing voice lines
+  - type: Sprite
+    sprite: _AS/Structures/Machines/VendingMachines/sletech.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["Security"]]

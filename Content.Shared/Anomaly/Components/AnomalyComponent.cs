@@ -136,6 +136,14 @@ public sealed partial class AnomalyComponent : Component
     /// </summary>
     [DataField]
     public SoundSpecifier? SupercriticalSoundAtAnimationStart;
+
+    /// <summary>
+    /// The length of the animation before it goes supercritical in seconds.
+    /// </summary>
+    ///
+    [DataField, AutoNetworkedField]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public TimeSpan SupercriticalDuration = TimeSpan.FromSeconds(10f);
     #endregion
 
     /// <summary>
@@ -199,14 +207,14 @@ public sealed partial class AnomalyComponent : Component
     /// This doesn't include the point bonus for being unstable.
     /// </summary>
     [DataField]
-    public int MaxPointsPerSecond = 75; // Frontier: 70<30 Aurora revert
+    public int MaxPointsPerSecond = 75; // Frontier: 70<30 Aurora 30>75
 
     /// <summary>
     /// The multiplier applied to the point value for the
     /// anomaly being above the <see cref="GrowthThreshold"/>
     /// </summary>
     [DataField]
-    public float GrowingPointMultiplier = 1.5f; // Frontier: 1.5<1.2
+    public float GrowingPointMultiplier = 1.5f;
     #endregion
 
     /// <summary>

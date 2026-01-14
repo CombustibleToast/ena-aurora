@@ -55,8 +55,8 @@
 - type: entity
   parent: BaseSignDirectionalNF
   id: SignDirectionalNfsd
-  name: SLE outpost sign
-  description: A direction sign, pointing out which way an SLE outpost is.
+  name: NFSD outpost sign
+  description: A direction sign, pointing out which way an NFSD outpost is.
   components:
   - type: Sprite
     state: direction_nfsd
@@ -91,8 +91,8 @@
 - type: entity
   parent: NFBaseSign
   id: SignNfsd
-  name: SLE sign
-  description: A sign that marks the area beyond as an SLE area.
+  name: NFSD sign
+  description: A sign that marks the area beyond as an NFSD area.
   components:
   - type: Sprite
     state: nfsd
@@ -101,7 +101,7 @@
   parent: NFBaseSign
   id: SignNfsdArmoury
   name: armory sign
-  description: A sign that marks the area beyond as an SLE armory.
+  description: A sign that marks the area beyond as an NFSD armory.
   components:
   - type: Sprite
     state: armoury
@@ -110,7 +110,7 @@
   parent: NFBaseSign
   id: SignNfsdBrief
   name: briefing sign
-  description: A sign that marks the area beyond as an SLE briefing room.
+  description: A sign that marks the area beyond as an NFSD briefing room.
   components:
   - type: Sprite
     state: brief
@@ -119,7 +119,7 @@
   parent: NFBaseSign
   id: SignNfsdBrig
   name: brig sign
-  description: A sign that marks the area beyond as an SLE brig.
+  description: A sign that marks the area beyond as an NFSD brig.
   components:
   - type: Sprite
     state: brig
@@ -128,7 +128,7 @@
   parent: NFBaseSign
   id: SignNfsdBrigmed
   name: medbay sign
-  description: A sign that marks the area beyond as an SLE medbay.
+  description: A sign that marks the area beyond as an NFSD medbay.
   components:
   - type: Sprite
     state: brigmed
@@ -137,7 +137,7 @@
   parent: NFBaseSign
   id: SignNfsdDetective
   name: detective sign
-  description: A sign that marks the area beyond as an SLE detective's office.
+  description: A sign that marks the area beyond as an NFSD detective's office.
   components:
   - type: Sprite
     state: detective
@@ -146,7 +146,7 @@
   parent: NFBaseSign
   id: SignNfsdLaw
   name: lawyer sign
-  description: A sign that marks the area beyond as an SLE lawyer's office.
+  description: A sign that marks the area beyond as an NFSD lawyer's office.
   components:
   - type: Sprite
     state: law
@@ -155,7 +155,7 @@
   parent: NFBaseSign
   id: SignNfsdRange
   name: shooting range sign
-  description: A sign that marks the area beyond as an SLE shooting range.
+  description: A sign that marks the area beyond as an NFSD shooting range.
   components:
   - type: Sprite
     state: range
@@ -164,7 +164,7 @@
   parent: NFBaseSign
   id: SignNfsdEvidence
   name: evidence sign
-  description: A sign that marks the area beyond as an SLE evidence room.
+  description: A sign that marks the area beyond as an NFSD evidence room.
   components:
   - type: Sprite
     state: evidence
@@ -173,7 +173,7 @@
   parent: NFBaseSign
   id: SignNfsdGenpop
   name: genpop sign
-  description: A sign that marks the area beyond as an SLE genpop brig.
+  description: A sign that marks the area beyond as an NFSD genpop brig.
   components:
   - type: Sprite
     state: genpop

@@ -1,3 +1,4 @@
+# Aurora Song - Paths changed to point to SLE (blue) shuttles in _AS namespace
 - type: vessel
   id: Wasp
   parent: BaseVessel
@@ -7,7 +8,7 @@
   category: Large
   group: Security
   access: Bailiff
-  shuttlePath: /Maps/_NF/Shuttles/Nfsd/wasp.yml
+  shuttlePath: /Maps/_AS/Shuttles/Sle/wasp.yml
   guidebookPage: Null
   class:
   - Capital
@@ -19,7 +20,7 @@
 - type: gameMap
   id: Wasp
   mapName: 'NSF Wasp'
-  mapPath: /Maps/_NF/Shuttles/Nfsd/wasp.yml
+  mapPath: /Maps/_AS/Shuttles/Sle/wasp.yml
   minPlayers: 0
   stations:
     Wasp:

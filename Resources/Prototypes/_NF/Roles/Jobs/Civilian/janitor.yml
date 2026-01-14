@@ -18,7 +18,7 @@
   - Janitor
   - Maintenance
   - External
-  - Frontier
+  - Aurora # Aurora Song - Changed from Frontier to Aurora
   special:
   - !type:GiveItemOnHolidaySpecial
     holiday: GarbageDay

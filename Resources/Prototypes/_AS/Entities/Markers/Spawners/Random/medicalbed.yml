@@ -1,0 +1,57 @@
+# Aurora Song - AS Medical Bounty System
+# Based on New Frontier's Medical Bounty System
+# Original implementation by New Frontier Station
+# Spawner for filled medical beds with a patient
+- type: entity
+  id: ASMedicalBedFilledSpawner
+  name: medical bed + patient spawner
+  parent: MarkerBase
+  suffix: Filled, Random
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: Structures/Furniture/furniture.rsi
+      state: bed
+    - state: red
+  - type: RandomSpawner
+    deleteSpawnerAfterSpawn: true
+    prototypes:
+      - ASMedicalBedFilled
+    chance: 1
+    offset: 0.0
+
+# Actual filled bed entity. This entity IS the bed and uses a second-stage random spawner for the patient.
+# offset kept at 0 so the patient appears on the bed tile.
+- type: entity
+  parent: MedicalBed
+  id: ASMedicalBedFilled
+  name: filled medical bed
+  suffix: Random
+  components:
+  - type: RandomSpawner
+    deleteSpawnerAfterSpawn: false
+    prototypes:
+      - ASSpawnRandomHumanoidPatientMedicalBountyService
+      - ASSpawnRandomHumanoidPatientMedicalBountyService
+      - ASSpawnRandomHumanoidPatientMedicalBountyService
+      - ASSpawnRandomHumanoidPatientMedicalBountyService
+      - ASSpawnRandomHumanoidPatientMedicalBountyService
+      - ASSpawnRandomHumanoidPatientMedicalBountyMedical
+      - ASSpawnRandomHumanoidPatientMedicalBountyMedical
+      - ASSpawnRandomHumanoidPatientMedicalBountyMedical
+      - ASSpawnRandomHumanoidPatientMedicalBountyMedical
+      - ASSpawnRandomHumanoidPatientMedicalBountyCargo
+      - ASSpawnRandomHumanoidPatientMedicalBountyCargo
+      - ASSpawnRandomHumanoidPatientMedicalBountyCargo
+      - ASSpawnRandomHumanoidPatientMedicalBountyEngineering
+      - ASSpawnRandomHumanoidPatientMedicalBountyEngineering
+      - ASSpawnRandomHumanoidPatientMedicalBountyEngineering
+      - ASSpawnRandomHumanoidPatientMedicalBountyScience
+      - ASSpawnRandomHumanoidPatientMedicalBountyScience
+      - ASSpawnRandomHumanoidPatientMedicalBountySecurity
+      - ASSpawnRandomHumanoidPatientMedicalBountySecurity
+      - ASSpawnRandomHumanoidPatientMedicalBountyCommand
+    chance: 1
+    offset: 0.0

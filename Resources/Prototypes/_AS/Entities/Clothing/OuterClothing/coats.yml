@@ -1,0 +1,58 @@
+# Aurora Song - SLE (Security Logistics Enforcement) coats
+# Prototypes for Aurora Song's SLE faction outer coats
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  id: ASClothingOuterCoatSLEBomber
+  name: SLE bomber
+  description: A stylish bomber jacket worn by Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_bomber.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_bomber.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  id: ASClothingOuterCoatSLEBomberBrigmed
+  name: SLE corpsman bomber
+  description: A brigmedic bomber jacket with medical insignia. Blood may stain.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_brigmed_bomber.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_brigmed_bomber.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  id: ASClothingOuterCoatSLEFormal
+  name: SLE formal coat
+  description: A formal dress coat for Security Logistics Enforcement officers. Snazzy.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_formal.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_formal.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  id: ASClothingOuterCoatSLEFormalSheriff
+  name: SLE commissioner's formal coat
+  description: The Commissioner's formal dress coat. Very snazzy.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_sheriff_formal.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_sheriff_formal.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  id: ASClothingOuterCoatSLELongCoat
+  name: SLE long coat
+  description: A long duster coat favored by SLE personnel. Big iron on his hip...
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_long.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Misc/sle_long.rsi # Aurora Song - Using SLE-recolored sprites
+

@@ -44,19 +44,20 @@ public sealed class RandomHumanoidSystem : EntitySystem
 
         _metaData.SetEntityName(humanoid, prototype.RandomizeName ? profile.Name : name);
 
-        _humanoid.LoadProfile(humanoid, profile);
-
         if (prototype.Components != null)
         {
             foreach (var entry in prototype.Components.Values)
             {
                 var comp = (Component)_serialization.CreateCopy(entry.Component, notNullableOverride: true);
-                EntityManager.RemoveComponent(humanoid, comp.GetType());
-                EntityManager.AddComponent(humanoid, comp);
+                RemComp(humanoid, comp.GetType());
+                AddComp(humanoid, comp);
             }
         }
 
         EntityManager.InitializeAndStartEntity(humanoid);
+
+        // Aurora Song: Load profile AFTER initialization to prevent it from being overwritten by OnInit's DefaultWithSpecies call
+        _humanoid.LoadProfile(humanoid, profile);
 
         return humanoid;
     }

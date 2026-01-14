@@ -1,0 +1,34 @@
+# Aurora Song - SLE (Security Logistics Enforcement) boots
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: ClothingShoesBootsCombat
+  id: ASClothingShoesBootsSLEDarkBlue
+  name: SLE dark blue boots
+  description: Stylish boots for running in circles on a deck during emergencies.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Shoes/Boots/sle_brown_boots.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Shoes/Boots/sle_brown_boots.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ClothingShoesBootsCombat
+  id: ASClothingShoesBootsSLELightBlue
+  name: SLE light blue boots
+  description: Stylish boots for running in circles on a deck during emergencies.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Shoes/Boots/sle_cream_boots.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Shoes/Boots/sle_cream_boots.rsi # Aurora Song - Using SLE-recolored sprites
+
+# Filled variants with knife storage
+- type: entity
+  id: ASClothingShoesBootsSLEDarkBlueFilled
+  parent: [ASClothingShoesBootsSLEDarkBlue, ClothingShoesBootsCombatFilled]
+
+- type: entity
+  id: ASClothingShoesBootsSLELightBlueFilled
+  parent: [ASClothingShoesBootsSLELightBlue, ClothingShoesBootsCombatFilled]
+

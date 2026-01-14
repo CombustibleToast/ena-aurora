@@ -34,7 +34,7 @@
       - Detective # Frontier - moved down
       - Engineering
       - External
-      - Frontier # Frontier
+      - Aurora # Frontier - Aurora Song - Changed from Frontier to Aurora
       # - Hydroponics # Frontier
       - Janitor
       # - Kitchen # Frontier
@@ -44,6 +44,7 @@
       - Medical
       - Mercenary # Frontier
       - ChiefEngineer # Frontier: reordered for "Plant Manager"
+      - Prisoner # Aurora Song
       # - Quartermaster # Frontier
       # - Research # Frontier
       # - ResearchDirector # Frontier
@@ -55,6 +56,8 @@
       - HeadOfPersonnel # Frontier: reordered for "Station Representative"
       - StationTrafficController # Frontier
       # - Theatre # Frontier
+      - GenpopEnter
+      - GenpopLeave
       privilegedIdSlot:
         name: id-card-console-privileged-id
         ejectSound: /Audio/Machines/id_swipe.ogg
@@ -113,7 +116,7 @@
     - EmergencyShuttleRepealAll
     - Engineering
     - External
-    - Frontier # Frontier
+    - Aurora # Frontier - Aurora Song - Changed from Frontier to Aurora
     - Hydroponics
     - Janitor
     - Kitchen
@@ -124,6 +127,7 @@
     - Mercenary # Frontier
     - ChiefEngineer # Frontier: reordered for "Plant Manager"
     - Pirate # Frontier
+    - Prisoner # Aurora Song
     - Quartermaster
     - Research
     - ResearchDirector

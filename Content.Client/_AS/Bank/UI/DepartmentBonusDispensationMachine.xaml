@@ -1,0 +1,47 @@
+<controls:FancyWindow
+    xmlns="https://spacestation14.io"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+    Title="{Loc 'department-bonus-machine-title'}"
+    MinSize="350 250">
+    <BoxContainer Orientation="Vertical">
+        <!-- Header -->
+        <BoxContainer Orientation="Vertical" Margin="5">
+            <Label Text="{Loc 'department-bonus-machine-title'}" StyleClasses="LabelHeading"/>
+            <Label Name="DepartmentLabel" Text="Department: Unknown" Access="Public"/>
+        </BoxContainer>
+
+        <!-- Status Section -->
+        <BoxContainer Orientation="Vertical" Margin="5">
+            <PanelContainer StyleClasses="AngleRect">
+                <BoxContainer Orientation="Vertical" Margin="10">
+                    <Label Text="{Loc 'department-bonus-machine-info'}"/>
+                    <BoxContainer Orientation="Horizontal" Margin="0 5">
+                        <Label Text="{Loc 'department-bonus-machine-rate'}"/>
+                        <Label Name="RateLabel" Text="10%" Margin="5 0" Access="Public"/>
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" Margin="0 5">
+                        <Label Text="{Loc 'department-bonus-machine-stored'}"/>
+                        <Label Name="StoredLabel" Text="0 / 100000" Margin="5 0" Access="Public"/>
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" Margin="0 5">
+                        <Label Text="{Loc 'department-bonus-machine-next-withdrawal'}"/>
+                        <Label Name="NextWithdrawalLabel" Text="0 spesos" Margin="5 0" Access="Public"/>
+                    </BoxContainer>
+                    <BoxContainer Orientation="Horizontal" Margin="0 5">
+                        <Label Text="{Loc 'department-bonus-machine-next'}"/>
+                        <Label Name="NextPayoutLabel" Text="5:00" Margin="5 0" Access="Public"/>
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+        </BoxContainer>
+
+        <!-- Action Button -->
+        <BoxContainer Orientation="Vertical" Margin="5" VerticalAlignment="Bottom">
+            <Button Name="EjectButton"
+                    Text="{Loc 'department-bonus-machine-dispense'}"
+                    StyleClasses="ButtonColorGreen"
+                    MinHeight="40"
+                    Access="Public"/>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

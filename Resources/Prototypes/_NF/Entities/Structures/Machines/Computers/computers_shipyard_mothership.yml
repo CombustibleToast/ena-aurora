@@ -39,7 +39,7 @@
       state: telesci_key
   - type: ShipyardConsole
     newJobTitle: null
-    shipyardChannel: Nfsd
+    shipyardChannel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
     newAccessLevels: [Captain, Security, Brig]
   - type: ShipyardListing
     shuttles:

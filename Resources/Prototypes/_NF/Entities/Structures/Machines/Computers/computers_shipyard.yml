@@ -75,7 +75,7 @@
       enum.ShipyardConsoleUiKey.Security:
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
-    shipyardChannel: Nfsd
+    shipyardChannel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
     newAccessLevels: [Captain, Security, Brig]
 
 - type: entity
@@ -102,7 +102,7 @@
       enum.ShipyardConsoleUiKey.Security:
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
-    shipyardChannel: Nfsd
+    shipyardChannel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
     newAccessLevels: [Captain, Security, Brig]
 
 - type: entity

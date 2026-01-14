@@ -753,7 +753,7 @@
   result: NFMetalShield
   materials:
     Steel: 600
-    Glass: 200
+    Glass: 400
 
 # region Misc
 - type: latheRecipe
@@ -830,3 +830,7 @@
 - type: latheRecipe
   parent: PortableRecharger
   id: NFPortableRecharger
+
+- type: latheRecipe
+  parent: ClothingBackpackHarmpack
+  id: NFClothingBackpackHarmpack

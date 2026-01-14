@@ -1,0 +1,89 @@
+# Aurora Song: Location-related quick phrases for AAC Tablet
+# Only includes Aurora Song-specific locations not in DeltaV
+# Uses DeltaV's existing base types (BaseCivilianLocationPhrase, etc.)
+
+# Aurora Song: Police department location base type
+- type: quickPhrase
+  parent: [ BasePolicePhrase, BaseLocationPhrase ]
+  abstract: true
+  id: BasePoliceLocationPhrase
+
+# Civilian
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationTheAlleyPhrase
+  text: station-beacon-the-alley
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationTinniasPhrase
+  text: station-beacon-tinnias
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationBahamasPhrase
+  text: station-beacon-bahamas
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationTradePhrase
+  text: station-beacon-trade
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: ASLeoLocationOutpostPhrase
+  text: station-beacon-outpost
+
+# Engineering
+
+- type: quickPhrase
+  parent: BaseEngineeringLocationPhrase
+  id: LocationPowerPlantPhrase
+  text: station-beacon-power-plant
+
+# Science/Mining
+
+- type: quickPhrase
+  parent: BaseEngineeringLocationPhrase
+  id: LocationGeodePhrase
+  text: station-beacon-geode
+
+- type: quickPhrase
+  parent: BaseEngineeringLocationPhrase
+  id: LocationAsteroidPhrase
+  text: station-beacon-asteroid
+
+- type: quickPhrase
+  parent: BaseEngineeringLocationPhrase
+  id: LocationWreckPhrase
+  text: station-beacon-wreck
+
+# Police
+
+- type: quickPhrase
+  parent: BasePoliceLocationPhrase
+  id: LocationSLEOutpostPhrase
+  text: station-beacon-sle-outpost
+
+- type: quickPhrase
+  parent: BasePoliceLocationPhrase
+  id: LocationGenPopPhrase
+  text: station-beacon-genpop
+
+- type: quickPhrase
+  parent: BasePoliceLocationPhrase
+  id: LocationLockerRoomPhrase
+  text: station-beacon-locker-room
+
+# Security
+
+- type: quickPhrase
+  parent: BaseSecurityLocationPhrase
+  id: LocationBarrierStationPhrase
+  text: station-beacon-barrier-station
+
+- type: quickPhrase
+  parent: BaseSecurityLocationPhrase
+  id: LocationUIVPhrase
+  text: station-beacon-uiv

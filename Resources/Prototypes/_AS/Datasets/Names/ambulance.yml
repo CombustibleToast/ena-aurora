@@ -1,0 +1,5 @@
+- type: localizedDataset
+  id: NamesAmbulance
+  values:
+    prefix: names-ambulance-dataset-
+    count: 1

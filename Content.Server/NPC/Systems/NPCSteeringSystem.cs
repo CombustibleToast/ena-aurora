@@ -9,7 +9,10 @@ using Content.Server.NPC.Pathfinding;
 using Content.Shared.CCVar;
 using Content.Shared.Climbing.Systems;
 using Content.Shared.CombatMode;
+using Content.Shared.Ghost;
 using Content.Shared.Interaction;
+using Content.Shared.Mobs;
+using Content.Shared.Mobs.Components;
 using Content.Shared.Movement.Components;
 using Content.Shared.Movement.Events;
 using Content.Shared.Movement.Systems;
@@ -30,11 +33,19 @@ using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using Content.Shared.Prying.Systems;
 using Microsoft.Extensions.ObjectPool;
+using Prometheus;
+using Robust.Server.Player;
 
 namespace Content.Server.NPC.Systems;
 
 public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
 {
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
+
+    private static readonly Gauge ActiveSteeringGauge = Metrics.CreateGauge(
+        "npc_steering_active_count",
+        "Amount of NPCs trying to actively do steering");
+
     /*
      * We use context steering to determine which way to move.
      * This involves creating an array of possible directions and assigning a value for the desireability of each direction.
@@ -86,6 +97,8 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
     private readonly HashSet<ICommonSession> _subscribedSessions = new();
 
     private object _obstacles = new();
+
+    private int _activeSteeringCount;
 
     public override void Initialize()
     {
@@ -205,7 +218,7 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         if (!Resolve(uid, ref component, false))
             return;
 
-        if (EntityManager.TryGetComponent(uid, out InputMoverComponent? controller))
+        if (TryComp(uid, out InputMoverComponent? controller))
         {
             controller.CurTickSprintMovement = Vector2.Zero;
 
@@ -216,6 +229,41 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         component.PathfindToken?.Cancel();
         component.PathfindToken = null;
         RemComp<NPCSteeringComponent>(uid);
+    }
+
+    public (EntityUid Entity, float Distance)? GetNearestPlayerEntity(Vector2 from)
+    {
+        var allPlayerData = _playerManager.GetAllPlayerData();
+        (EntityUid Entity, float Distance)? closest = null;
+
+        foreach (var playerData in allPlayerData)
+        {
+            var exists = _playerManager.TryGetSessionById(playerData.UserId, out var session);
+
+            if (!exists || session == null
+                || session.AttachedEntity is not { Valid: true } playerEnt
+                || HasComp<GhostComponent>(playerEnt)
+                || TryComp<MobStateComponent>(playerEnt, out var state) && state.CurrentState != MobState.Alive)
+                continue;
+
+            var pos = _transform.GetWorldPosition(playerEnt);
+
+            if (closest is null)
+            {
+                closest = (playerEnt, Vector2.Distance(pos, from));
+                continue;
+            }
+
+            var closestData = closest.Value;
+            var distance = Vector2.Distance(pos, from);
+
+            if (distance < closestData.Distance)
+            {
+                closest = (playerEnt, distance);
+            }
+        }
+
+        return closest;
     }
 
     public override void Update(float frameTime)
@@ -244,12 +292,15 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
         };
         var curTime = _timing.CurTime;
 
+        _activeSteeringCount = 0;
+
         Parallel.For(0, index, options, i =>
         {
             var (uid, steering, mover, xform) = npcs[i];
             Steer(uid, steering, mover, xform, frameTime, curTime);
         });
 
+        ActiveSteeringGauge.Set(_activeSteeringCount);
 
         if (_subscribedSessions.Count > 0)
         {
@@ -323,6 +374,8 @@ public sealed partial class NPCSteeringSystem : SharedNPCSteeringSystem
             steering.Status = SteeringStatus.NoPath;
             return;
         }
+
+        Interlocked.Increment(ref _activeSteeringCount);
 
         var agentRadius = steering.Radius;
         var worldPos = _transform.GetWorldPosition(xform);

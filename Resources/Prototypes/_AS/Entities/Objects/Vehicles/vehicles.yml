@@ -1,0 +1,118 @@
+﻿- type: entity
+  id: ASThroneOzymandias
+  parent: VehicleHoverchair
+  name: Ozymandias' Throne
+  description: A luxurious hoverchair, the whole chassis of gold engraved with some pictorial script. You feel a strange urge to kneel before it.
+  components:
+  - type: HealOnBuckle
+    damage:
+      types:
+        Piercing: -1
+        Blunt: -1
+        Slash: -1
+        Cold: -1
+        Heat: -1
+        Radiation: -1
+        Bloodloss: -1
+        Poison: -1
+        Cellular: -1
+        Shock: -1
+        Caustic: -1
+
+# SLE Hoverbike
+- type: entity
+  parent:
+  - VehicleHoverbikeMailcarrier
+  - BaseC2ContrabandUnredeemable
+  id: ASVehicleHoverbikeSLE
+  name: SLE hoverbike
+  description: An SLE issued turbine with bike handles. Very safe.
+  components:
+  - type: Vehicle
+    sirenSound:
+      collection: PoliceSiren
+      params:
+        variation: 0.125
+  - type: MovementSpeedModifier
+    acceleration: 1.9
+    friction: 1.4
+    baseWalkSpeed: 4.3
+    baseSprintSpeed: 6.8
+  - type: Sprite
+    sprite: _AS/Objects/Vehicles/hoverbike.rsi
+    layers:
+    - state: hull
+      color: "#4a6fa5" # SLE blue
+    - state: engine
+      map: ["enum.VehicleVisualLayers.AutoAnimate"]
+    - state: slestar
+    - state: lights
+      shader: unshaded
+    noRot: true
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          requireAll: true
+          tags:
+          - VehicleKey
+          - HoverbikeKeys
+        priority: 1
+        insertSound:
+          path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+          params:
+            volume: -5
+      slebaton:
+        name: stunbaton
+        whitelist:
+          components:
+            - Stunbaton
+        priority: 2
+  - type: ItemMapper
+    mapLayers:
+      slebaton:
+        whitelist:
+          components:
+            - Stunbaton
+    sprite: _AS/Objects/Vehicles/hoverbike.rsi
+  - type: Appearance
+  - type: RotatingLight
+    speed: 190
+  - type: PointLight
+    enabled: false
+    radius: 7
+    energy: 3
+    color: "#4a6fa5" # SLE blue
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: Tag
+    tags:
+      - DoorBumpOpener
+      - EmagImmune
+
+- type: entity
+  parent: ASVehicleHoverbikeSLE
+  id: ASVehicleHoverbikeSLEKey
+  suffix: With key
+  components:
+  - type: ItemSlots
+    slots:
+      key_slot:
+        name: vehicle-slot-component-slot-name-keys
+        whitelist:
+          requireAll: true
+          tags:
+          - VehicleKey
+          - HoverbikeKeys
+        startingItem: VehicleKeyHoverbikeNF
+        priority: 1
+        insertSound:
+          path: /Audio/Effects/Vehicle/vehiclestartup.ogg
+          params:
+            volume: -5
+      slebaton:
+        name: stunbaton
+        whitelist:
+          components:
+            - Stunbaton
+        priority: 2

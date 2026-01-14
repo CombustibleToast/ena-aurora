@@ -40,7 +40,7 @@
 - type: startingGear
   id: SeniorOfficerGear
   equipment:
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
   storage:
     back:
     - Flash
@@ -57,10 +57,11 @@
   hasMindShield: true
   equipment:
     head: ClothingHeadHatNfsdBeretBrown
-    mask: ClothingMaskGasNfsd
-    eyes: ClothingEyesGlassesNfsd
-    outerClothing: ClothingOuterArmorNfsd
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterArmorSLE
     neck: ClothingNeckNfsdBadgeSeniorOfficer
-    belt: ClothingBeltNfsdFilled
-    gloves: ClothingHandsGlovesCombatNfsdBrown
-    shoes: ClothingShoesBootsNfsdBrownFilled
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+

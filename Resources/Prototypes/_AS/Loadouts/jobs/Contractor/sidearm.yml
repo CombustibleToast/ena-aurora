@@ -1,0 +1,33 @@
+# Sidearm loadouts for Contractor
+
+- type: loadoutGroup
+  id: ContractorSidearm
+  name: loadout-group-mercenary-sidearm
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - ContractorSidearmMK58
+  - ContractorSidearmLaserPistol
+  - ContractorSidearmDisabler
+
+# Loadouts
+- type: loadout
+  id: ContractorSidearmMK58
+  price: 3800
+  storage:
+    back:
+    - NFWeaponPistolMk58
+
+- type: loadout
+  id: ContractorSidearmLaserPistol
+  price: 4500
+  storage:
+    back:
+    - NFWeaponEnergyPistolLaser
+
+- type: loadout
+  id: ContractorSidearmDisabler
+  price: 3800
+  storage:
+    back:
+    - NFWeaponEnergyPistolDisabler

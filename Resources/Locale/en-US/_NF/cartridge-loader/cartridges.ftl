@@ -14,19 +14,21 @@ ledger-balance = Balance:
 ledger-no-balance = N/A
 
 ledger-tab-Frontier = Frontier Outpost
-ledger-tab-Nfsd = SLE
+ledger-tab-Nfsd = NFSD
 ledger-tab-Medical = Medical Dispatch
 ledger-tab-Edison = Edison
 # Fallback, if this displays, something's wrong.
 ledger-tab-Unknown = Unknown
 
-ledger-entry-type-TickingIncome = NT Subsidies
+# Aurora Song: Changed from "NT Subsidies" to "Govt. Subsidies"
+ledger-entry-type-TickingIncome = Govt. Subsidies
 ledger-entry-type-VendorTax = Vendor Taxes
 ledger-entry-type-CargoTax = Cargo Taxes
 ledger-entry-type-MailDelivered = Mail Payments
 ledger-entry-type-BlackMarketAtmTax = Anon. Benefactors
 ledger-entry-type-BlackMarketShipyardTax = Anon. Scrap Resale
-ledger-entry-type-BluespaceReward = Guard Duty Rewards
+# Aurora Song: Changed from "Guard Duty Rewards" to "Patrol Rewards"
+ledger-entry-type-BluespaceReward = Patrol Rewards
 ledger-entry-type-MedicalBountyTax = Medical Bounties
 ledger-entry-type-AntiSmugglingBonus = Anti-Smuggling
 ledger-entry-type-PowerTransmission = Energy Exports

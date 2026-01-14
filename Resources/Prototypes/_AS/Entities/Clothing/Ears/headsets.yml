@@ -1,0 +1,57 @@
+# Aurora Song - SLE (Security Logistics Enforcement) headsets
+# Prototypes for Aurora Song's SLE faction equipment
+
+- type: entity
+  parent: ClothingHeadset
+  id: ASClothingHeadsetSLEBrown
+  name: SLE headset
+  description: An updated headset for Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_brown.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_brown.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyNfsd
+
+- type: entity
+  parent: ASClothingHeadsetSLEBrown
+  id: ASClothingHeadsetSLEGreen
+  name: SLE headset
+  description: An updated headset for Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_green.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_green.rsi # Aurora Song - Using SLE-recolored sprites
+
+- type: entity
+  parent: ASClothingHeadsetSLEBrown
+  id: ASClothingHeadsetSLECream
+  name: SLE headset
+  description: An updated headset for Security Logistics Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_cb.rsi # Aurora Song - Using SLE-recolored sprites
+  - type: Clothing
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_cb.rsi # Aurora Song - Using SLE-recolored sprites
+
+# Common Versions - can be used without keys
+- type: entity
+  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLEBrown]
+  id: ASClothingHeadsetSLEBrownCommon
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLEGreen]
+  id: ASClothingHeadsetSLEGreenCommon
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLECream]
+  id: ASClothingHeadsetSLECreamCommon
+  categories: [ HideSpawnMenu ]
+

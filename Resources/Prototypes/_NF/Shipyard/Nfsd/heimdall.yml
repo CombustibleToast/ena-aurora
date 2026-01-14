@@ -7,7 +7,8 @@
 # Discord: Tych0
 
 # Shuttle Notes:
-# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing. 
+# Aurora Song - Paths changed to point to SLE (blue) shuttles in _AS namespace
+# Keeping watch for Ragnarök. As soon as someone adds ship horns they better make a Gjallarhorn for this thing.
 - type: vessel
   id: Heimdall
   name: NSF Heimdall
@@ -17,7 +18,7 @@
   category: Small
   group: Security
   access: Detective
-  shuttlePath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
+  shuttlePath: /Maps/_AS/Shuttles/Sle/heimdall.yml
   guidebookPage: Null
   class:
   - Detective
@@ -27,7 +28,7 @@
 - type: gameMap
   id: Heimdall
   mapName: 'NSF Heimdall'
-  mapPath: /Maps/_NF/Shuttles/Nfsd/heimdall.yml
+  mapPath: /Maps/_AS/Shuttles/Sle/heimdall.yml
   minPlayers: 0
   stations:
     Heimdall:
