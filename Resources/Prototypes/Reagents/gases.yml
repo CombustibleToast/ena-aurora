@@ -16,7 +16,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Feroxi ] # Aurora's Song - Add feroxi
+          type: [ Human, Animal, Rat, Plant, Feroxi, Harpy ] # Aurora's Song - Add feroxi and harpy
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -47,7 +47,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Feroxi, Avali ] # Aurora's Song - Add feroxi # Moffstation
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Feroxi, Avali, Harpy ] # Aurora's Song - Add feroxi and harpy
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -124,6 +124,11 @@
         minScale: 1.5
         clear: True
         time: 5
+      - !type:Oxygenate # Aurora Song- Harpy air quality sensitivty
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -8
   reactiveEffects:
     Flammable:
       methods: [ Touch ]
@@ -169,6 +174,11 @@
         minScale: 1.5
         clear: True
         time: 5
+      - !type:Oxygenate # Aurora Song- Harpy air quality sensitivty
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -8
 
 - type: reagent
   id: CarbonDioxide
@@ -197,9 +207,14 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant ]
+          type: [ Plant, Harpy ] # Aurora Song - Harpy air quality sensitivty
           inverted: true
         factor: -4
+      - !type:Oxygenate # Aurora Song - Harpy more sensitive to air quality
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -12
     Respiration:
       effects:
       - !type:Oxygenate
@@ -222,12 +237,17 @@
       - !type:Oxygenate # carbon dioxide displaces oxygen from the bloodstream, causing asphyxiation
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant ]
+          type: [ Plant, Harpy ] # Aurora Song- Harpy air quality sensitivty
           inverted: true
         factor: -4
       # We need a metabolism effect on reagent removal
       #- !type:AdjustAlert
       #  alertType: CarbonDioxide
+      - !type:Oxygenate # Aurora Song- Harpy air quality sensitivty
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -12
 
 - type: reagent
   id: Nitrogen
@@ -408,3 +428,8 @@
         messages: [ "frezon-euphoric" ]
         probability: 0.1
         minScale: 1
+      - !type:Oxygenate # Aurora Song- Harpy air quality sensitivty
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -4
