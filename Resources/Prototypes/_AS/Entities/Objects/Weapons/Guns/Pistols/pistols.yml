@@ -24,3 +24,16 @@
   parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMk58SLE ]
   suffix: Frontier, Less-lethal
 
+#region Aurora
+
+- type: entity
+  id: ASWeaponPistolHZ-1-3
+  parent: [ ASBaseWeaponPistolChamber40, ASBaseWeaponFramePistolHazardZone ]
+  name: HZ-1-3
+  description: A handgun designed for law enforcement, but dropped out of popularity.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Pistols/hz-1-3.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Pistols/hz-1-3.rsi
+  - type: NFWeaponDetails
