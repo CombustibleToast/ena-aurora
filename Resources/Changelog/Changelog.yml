@@ -5636,3 +5636,12 @@ Entries:
   id: 8924
   time: '2026-01-23T13:28:25.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/690
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Private Security Hardsuit resprite by ZingoDult
+    - type: Fix
+      message: Medic Hardsuit Helmet flashlight
+  id: 8925
+  time: '2026-01-23T15:59:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/689
