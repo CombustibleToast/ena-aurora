@@ -70,10 +70,69 @@
   components:
   - type: Sprite
     sprite: _AS/Clothing/Head/Hardsuits/private_security.rsi
+    layers:
+    - state: icon
+    - state: icon-flash
+      visible: false
+      map: [ "light" ]
   - type: Clothing
     sprite: _AS/Clothing/Head/Hardsuits/private_security.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-head
+      - state: equipped-head-unshaded
+        shader: unshaded
+      head-vox:
+      - state: equipped-head-vox
+      - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: equipped-head-felinid
+      - state: equipped-head-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: equipped-head-feroxi
+      - state: equipped-head-unshaded-feroxi
+        shader: unshaded
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-head-light
+        shader: unshaded
+      head-vox:
+      - state: equipped-head-light-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: equipped-head-light-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: equipped-head-light-feroxi
+        shader: unshaded
   - type: PointLight
+    enabled: false
     color: "#00ffff"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
 
 - type: entity
   parent: ClothingHeadHelmetHardsuitMercenary
@@ -83,56 +142,69 @@
   components:
   - type: Sprite
     sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
+    layers:
+    - state: icon
+    - state: icon-flash
+      visible: false
+      map: [ "light" ]
   - type: Clothing
     sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
     clothingVisuals:
       head:
-      - state: off-equipped-HELMET
-      - state: equipped-HELMET-unshaded
+      - state: equipped-head
+      - state: equipped-head-unshaded
         shader: unshaded
       head-vox:
-      - state: off-equipped-HELMET-vox
-      - state: equipped-HELMET-unshaded-vox
+      - state: equipped-head-vox
+      - state: equipped-head-unshaded-vox
         shader: unshaded
       head-vulpkanin:
-      - state: off-equipped-HELMET-vulpkanin
-      - state: equipped-HELMET-unshaded-vulpkanin
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
         shader: unshaded
       head-reptilian:
-      - state: off-equipped-HELMET-reptilian
-      - state: equipped-HELMET-unshaded-reptilian
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
         shader: unshaded
       head-felinid:
-      - state: off-equipped-HELMET-felinid
-      - state: equipped-HELMET-unshaded-felinid
+      - state: equipped-head-felinid
+      - state: equipped-head-unshaded-felinid
         shader: unshaded
       head-feroxi:
-      - state: off-equipped-HELMET-feroxi
-      - state: equipped-HELMET-unshaded-feroxi
+      - state: equipped-head-feroxi
+      - state: equipped-head-unshaded-feroxi
         shader: unshaded
-  - type: PointLight
-    color: "#00ffff"
+  - type: HandheldLight
+    addPrefix: false
   - type: ToggleableVisuals
     spriteLayer: light
     clothingVisuals:
       head:
-      - state: on-equipped-HELMET
+      - state: equipped-head-light
         shader: unshaded
       head-vox:
-      - state: on-equipped-HELMET-vox
+      - state: equipped-head-light-vox
         shader: unshaded
       head-vulpkanin:
-      - state: on-equipped-HELMET-vulpkanin
+      - state: equipped-head-light-vulpkanin
         shader: unshaded
       head-reptilian:
-      - state: on-equipped-HELMET-reptilian
+      - state: equipped-head-light-reptilian
         shader: unshaded
       head-felinid:
-      - state: on-equipped-HELMET-felinid
+      - state: equipped-head-light-felinid
         shader: unshaded
       head-feroxi:
-      - state: on-equipped-HELMET-feroxi
+      - state: equipped-head-light-feroxi
         shader: unshaded
+  - type: PointLight
+    enabled: false
+    color: "#00ffff"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
 
 # Aurora's Song - Military Surplus Helmet
 - type: entity
