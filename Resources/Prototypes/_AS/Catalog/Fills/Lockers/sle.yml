@@ -83,3 +83,5 @@
     - id: MedalCaseNfsd
     - id: Demag
     - id: ASWeaponShotgunBailiff
+    - id: NFAmmunitionBoxShellShotgunBuckshot
+      amount: 2

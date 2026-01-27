@@ -619,6 +619,9 @@
     sprite: Clothing/Belt/mercwebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/mercwebbing.rsi
+  - type: StaticPrice
+    price: 500
+    vendPrice: 500 # Aurora's Song - vend price set statically to avoid multipliers
 
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
@@ -645,6 +648,7 @@
     damageCoefficient: 0.1
   - type: StaticPrice
     price: 500
+    vendPrice: 500 # Aurora's Song - vend price set statically to avoid multipliers
 
 - type: entity
   parent: [NFClothingSBeltStorageHolsterMedkitBase, ContentsExplosionResistanceBase, BaseC1Contraband]

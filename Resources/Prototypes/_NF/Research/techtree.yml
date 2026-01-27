@@ -1797,7 +1797,7 @@
   #- NFAmmunitionBoxShellShotgunOverpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineDrumRifle20Empty
+  #- NFMagazineDrumRifle20Empty # Aurora's Song - Removed from research, added to loot pools
   - MagazineAsmgtUniversalEmpty
   technologyPrerequisites:
   - NFImprovedPistolAmmo
