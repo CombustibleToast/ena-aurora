@@ -17,6 +17,7 @@
   - type: ExtensionCableReceiver
   - type: Anchorable
   - type: Airtight
+    airBlocked: false
     requiresPower: true
 
 - type: entity
@@ -37,4 +38,5 @@
   - type: ExtensionCableReceiver
   - type: Anchorable
   - type: Airtight
+    airBlocked: false
     requiresPower: true

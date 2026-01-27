@@ -27,8 +27,6 @@ namespace Content.Server.Atmos.EntitySystems
 
         private void OnAirtightInit(Entity<AirtightComponent> airtight, ref ComponentInit args)
         {
-            if (airtight.Comp.RequiresPower) /// Aurora's Song - Set initial airtight state, if requires power is true
-                SetAirblocked(airtight, false);
             // TODO AIRTIGHT what FixAirBlockedDirectionInitialize even for?
             if (!airtight.Comp.FixAirBlockedDirectionInitialize)
             {
