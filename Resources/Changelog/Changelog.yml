@@ -5645,3 +5645,30 @@ Entries:
   id: 8925
   time: '2026-01-23T15:59:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/689
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Missing decals/ tiles, Petrel, SLEO, The Alley
+    - type: Add
+      message: vendors, QoL on SLEO
+    - type: Add
+      message: ShadyCig vendor on The Alley
+    - type: Fix
+      message: Power wiring on SLEO
+    - type: Fix
+      message: Mule Smuggler Intercept spawners
+    - type: Fix
+      message: High Pressure Ammo research no longer shows unlocking drums
+    - type: Remove
+      message: sex crate from Cargo Request inventory
+    - type: Add
+      message: spare 12g buckshot boxes to Commissioner locker fill
+    - type: Tweak
+      message: chest rig/ webbing prices in vendors
+    - type: Tweak
+      message: labeling in loadouts for rig/ webbing
+    - type: Add
+      message: powered tiny/ directional fans, found in flatpackvend
+  id: 8926
+  time: '2026-01-27T23:38:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/693
