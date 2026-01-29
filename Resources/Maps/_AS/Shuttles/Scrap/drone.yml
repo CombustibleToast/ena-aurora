@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 12/07/2025 07:22:24
-  entityCount: 469
+  time: 01/29/2026 03:15:11
+  entityCount: 470
 maps: []
 grids:
 - 1
@@ -2483,6 +2483,15 @@ entities:
     components:
     - type: Transform
       pos: -4.5,-3.5
+      parent: 1
+- proto: SinkStemlessWater
+  entities:
+  - uid: 470
+    components:
+    - type: MetaData
+      desc: Do you even want to know where the water comes from?
+    - type: Transform
+      pos: -2.5,-0.5
       parent: 1
 - proto: SMESBasic
   entities:
