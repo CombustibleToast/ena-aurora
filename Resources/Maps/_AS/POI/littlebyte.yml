@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 01/29/2026 16:53:48
-  entityCount: 6619
+  time: 01/29/2026 17:08:00
+  entityCount: 6622
 maps: []
 grids:
 - 2
@@ -19026,6 +19026,13 @@ entities:
     - type: Transform
       pos: -5.5,9.5
       parent: 2
+- proto: ComputerBankATM
+  entities:
+  - uid: 6620
+    components:
+    - type: Transform
+      pos: -3.5,5.5
+      parent: 2
 - proto: ComputerTabletopPowerMonitoring
   entities:
   - uid: 1781
@@ -19055,6 +19062,20 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 6.5,-22.5
+      parent: 2
+- proto: ComputerWallmountBankATM
+  entities:
+  - uid: 6621
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 29.5,-2.5
+      parent: 2
+  - uid: 6622
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -30.5,-2.5
       parent: 2
 - proto: ComputerWallmountRadar
   entities:
@@ -21529,12 +21550,9 @@ entities:
   - uid: 2173
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      rot: -1.5707963267948966 rad
       pos: -23.5,-8.5
       parent: 2
-    - type: Door
-      secondsUntilStateChange: -71146.984
-      state: Opening
 - proto: FenceWoodSmallStraight
   entities:
   - uid: 2174
@@ -41079,7 +41097,7 @@ entities:
       pos: 15.5,-16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -153471.27
+      secondsUntilStateChange: -153613.77
       state: Opening
   - uid: 4879
     components:
