@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 01/29/2026 13:30:21
-  entityCount: 6612
+  time: 01/29/2026 13:41:02
+  entityCount: 6611
 maps: []
 grids:
 - 2
@@ -21534,7 +21534,7 @@ entities:
       pos: -23.5,-8.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -59529.836
+      secondsUntilStateChange: -59592.46
       state: Opening
 - proto: FenceWoodSmallStraight
   entities:
@@ -40765,14 +40765,8 @@ entities:
   - uid: 4840
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: -3.5,-30.5
-      parent: 2
-  - uid: 4841
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 2.5,-30.5
+      rot: 1.5707963267948966 rad
+      pos: 6.5,-33.5
       parent: 2
 - proto: WarpPoint
   entities:
@@ -41024,7 +41018,7 @@ entities:
       pos: 15.5,-16.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -141854.11
+      secondsUntilStateChange: -141916.73
       state: Opening
   - uid: 4879
     components:
