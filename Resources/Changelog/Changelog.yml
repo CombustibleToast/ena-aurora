@@ -5672,3 +5672,10 @@ Entries:
   id: 8926
   time: '2026-01-27T23:38:01.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/693
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: SLE suit sprites add cat ears
+  id: 8927
+  time: '2026-01-30T17:19:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/696
