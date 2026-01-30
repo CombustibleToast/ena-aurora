@@ -22,3 +22,15 @@
       - id: NFWeaponLauncherGrenadeNfsd
       - id: NFGrenadeEMP
         amount: 10
+
+- type: entity
+  parent: NFClothingBackpackDuffelColorGreen
+  id: NFClothingBackpackDuffelColorGreenAgriBundle
+  name: green duffel
+  suffix: Filled, Agriculture Bundle
+  components:
+  - type: StorageFill
+    contents:
+      - id: BoxAgrichem
+      - id: CannabisSeeds
+      - id: NettleSeeds
