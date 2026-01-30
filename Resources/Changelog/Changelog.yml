@@ -5679,3 +5679,22 @@ Entries:
   id: 8927
   time: '2026-01-30T17:19:38.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/696
+- author: emergency-ketchup and LizArmchair
+  changes:
+    - type: Add
+      message: Little-Byte Key, new Rest Stop
+    - type: Tweak
+      message: Little-Byte Key's CAV system
+    - type: Add
+      message: towel laying
+    - type: Remove
+      message: Tinnia's/ Bahama's Spawns
+    - type: Add
+      message: fills for service supplies
+    - type: Fix
+      message: wood secret doors not connecting
+    - type: Add
+      message: custom lights
+  id: 8928
+  time: '2026-01-30T17:20:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/694
