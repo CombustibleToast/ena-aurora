@@ -42,7 +42,7 @@
     - BoxFolderMedicalDoctor
     - RubberStampDoc
     - ShipVoucherAuroraMedic # Aurora - Medic voucher for free ship
-    - ASWeaponPistolMk58SLELessLethal # Aurora - LTL sidearm for DoC
+    - ASWeaponPistolMk58SLessLethal # Aurora - LTL sidearm for DoC
   licenses:
   - LicenseContrabandHandling
 

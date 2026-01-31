@@ -36,7 +36,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Edison Power Plant'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/banner_engineering.png # Aurora Song
+          iconPath: /Textures/_AS/Icons/Stations/engisci-banner.png # Aurora Song
           stationSubtext: frontier-lobby-edison-subtext
           stationDescription: frontier-lobby-edison-description
           lobbySortOrder: 5

@@ -29,7 +29,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Arrival Relay'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/medic.png
+          iconPath: /Textures/_AS/Icons/Stations/bus-banner.png
           stationSubtext: 'frontier-lobby-arrivals-subtext'
           stationDescription: 'frontier-lobby-arrivals-description'
           lobbySortOrder: 5

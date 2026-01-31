@@ -24257,7 +24257,7 @@ entities:
       removedMasks: 20
     - type: PlaceableSurface
       isPlaceable: True
-- proto: ASLockerSLEBailiff
+- proto: ASLockerSLELieutenant
   entities:
   - uid: 1090
     components:
@@ -24325,7 +24325,7 @@ entities:
       removedMasks: 20
     - type: PlaceableSurface
       isPlaceable: True
-- proto: ASLockerSLEBrigmedic
+- proto: ASLockerSLECorpsman
   entities:
   - uid: 1112
     components:

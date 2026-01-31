@@ -95,7 +95,7 @@
 
 # SLE Brigmedic
 - type: entity
-  id: ASLockerSLEBrigmedic
+  id: ASLockerSLECorpsman
   parent: ASLockerBaseSecure
   name: SLE locker
   suffix: Brigmedic
@@ -123,7 +123,7 @@
 
 # SLE Gold - Bailiff/Lieutenant
 - type: entity
-  id: ASLockerSLEBailiff
+  id: ASLockerSLELieutenant
   parent: ASLockerSLESergeant
   name: SLE locker
   suffix: Bailiff
