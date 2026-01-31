@@ -57,9 +57,9 @@
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
   - type: Sprite
-    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+    sprite: _AS/Objects/Weapons/Guns/Pistols/universals.rsi
   - type: Clothing
-    sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi
+    sprite: _AS/Objects/Weapons/Guns/Pistols/universals.rsi
 
 #region DeltaV: rubber
 - type: entity

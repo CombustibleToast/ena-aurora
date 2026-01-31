@@ -203,7 +203,7 @@
   name:  uplink-security-mk32S-name
   description: uplink-security-mk32S-desc
   productEntity: ASWeaponPistolUniversalS
-  icon: { sprite: _DV/Objects/Weapons/Guns/Pistols/universal.rsi, state: icon }
+  icon: { sprite: _AS/Objects/Weapons/Guns/Pistols/universals.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 10
   categories:
