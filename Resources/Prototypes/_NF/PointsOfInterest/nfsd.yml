@@ -37,7 +37,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'NFSD Outpost'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/palceholder-banner.png # Aurora Song's - placeholder POI disabled
+          iconPath: /Textures/_AS/Icons/Stations/placeholder-banner.png # Aurora Song's - placeholder POI disabled
           stationSubtext: 'frontier-lobby-nfsd-subtext'
           stationDescription: 'frontier-lobby-nfsd-description'
           lobbySortOrder: 2
