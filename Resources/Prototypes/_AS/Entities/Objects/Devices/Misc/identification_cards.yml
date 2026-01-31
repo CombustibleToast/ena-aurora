@@ -59,7 +59,7 @@
 
 - type: entity
   parent: ASRookieIDCard
-  id: ASCorpsmanNFIDCard
+  id: ASCorpsmanIDCard
   name: Corpsman ID card
   components:
   - type: PresetIdCard
