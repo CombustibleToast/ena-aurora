@@ -59,7 +59,7 @@
     - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
     - DoorRemoteNfsd
     - BaseSecurityUplinkRadioSheriff
-    - ASRubberStampSheriff # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
+    - ASRubberStampCommissioner # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
   licenses:
   - LicenseContrabandHandling
 

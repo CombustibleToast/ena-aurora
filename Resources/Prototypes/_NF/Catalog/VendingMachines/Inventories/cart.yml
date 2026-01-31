@@ -47,7 +47,7 @@
     NFPrisonerPDA: 4294967295 #infinite
     NFPrisonerIDCard: 4294967295 #infinite
     ClothingHeadsetPrison: 4294967295 #infinite
-    RubberStampPal: 3
+    ASRubberStampPal: 3 # Aurora's Song - changed to AS version
     RubberStampApproved: 4294967295 #Infinite
     RubberStampDenied: 4294967295 #Infinite
     Pen: 4294967295 #Infinite

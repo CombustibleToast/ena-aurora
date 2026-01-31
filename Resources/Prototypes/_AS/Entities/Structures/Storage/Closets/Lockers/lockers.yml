@@ -133,7 +133,7 @@
 
 # SLE Sheriff/Commissioner
 - type: entity
-  id: ASLockerSLESheriff
+  id: ASLockerSLECommissioner
   parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, ASLockerBaseSecure, LockerHeadOfSecurity]
   name: SLE locker
   suffix: Sheriff

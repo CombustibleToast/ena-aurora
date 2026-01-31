@@ -49,7 +49,7 @@
     sle-brigmedic: ASLockerSLEBrigmedic # Aurora
     sle-gold: ASLockerSLESergeant # Aurora
     sle-bailiff: ASLockerSLEBailiff # Aurora
-    sle-sheriff: ASLockerSLESheriff # Aurora
+    sle-commissioner: ASLockerSLECommissioner # Aurora
 
 - type: paintableGroup
   id: Closet

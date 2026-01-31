@@ -11489,7 +11489,7 @@ entities:
     - type: Transform
       pos: 28.5,-4.5
       parent: 1
-- proto: ASLockerSLESheriff
+- proto: ASLockerSLECommissioner
   entities:
   - uid: 673
     components:

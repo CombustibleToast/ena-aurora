@@ -60,17 +60,17 @@
     - id: Multitool
 
 - type: entity
-  id: ASLockerSLESheriffFilled
-  suffix: Sheriff, Filled
-  parent: ASLockerSLESheriff
+  id: ASLockerSLECommissionerFilled
+  suffix: Commissioner, Filled
+  parent: ASLockerSLECommissioner
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: FillASLockerSLESheriff
+        tableId: FillASLockerSLECommissioner
 
 - type: entityTable
-  id: FillASLockerSLESheriff
+  id: FillASLockerSLECommissioner
   table: !type:AllSelector
     children:
     - id: ClothingHeadHatBeretCommissioner
