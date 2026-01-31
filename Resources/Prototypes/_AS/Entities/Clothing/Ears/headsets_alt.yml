@@ -3,7 +3,7 @@
 
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ASClothingHeadsetAltSLEBrown
+  id: ASClothingHeadsetAltSLENavy
   name: SLE over-ear headset
   description: An updated over-ear headset for Sector Law Enforcement personnel.
   components:
@@ -14,36 +14,36 @@
       - EncryptionKeyNfsd
       - EncryptionKeyCommand
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrown
-  id: ASClothingHeadsetAltSLEGreen
+  parent: ASClothingHeadsetAltSLENavy
+  id: ASClothingHeadsetAltSLEOrange
   name: SLE over-ear headset
   description: An updated over-ear headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrown
-  id: ASClothingHeadsetAltSLECreamandBrown
+  parent: ASClothingHeadsetAltSLENavy
+  id: ASClothingHeadsetAltSLECobalt
   name: SLE over-ear headset
   description: An updated over-ear headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
 
 # Centcom/Sheriff variants with station master encryption
 - type: entity
   parent: [ClothingHeadsetAlt, BaseCommandContraband]
-  id: ASClothingHeadsetAltSLEBrownCentcom
+  id: ASClothingHeadsetAltSLENavyCentcom
   name: sheriff's over-ear headset
   categories: [ HideSpawnMenu ]
   components:
@@ -52,29 +52,29 @@
       key_slots:
       - EncryptionKeyStationMaster
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrownCentcom
-  id: ASClothingHeadsetAltSLEGreenCentcom
+  parent: ASClothingHeadsetAltSLENavyCentcom
+  id: ASClothingHeadsetAltSLEOrangeCentcom
   name: sheriff's over-ear headset
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrownCentcom
-  id: ASClothingHeadsetAltSLECreamandBrownCentcom
+  parent: ASClothingHeadsetAltSLENavyCentcom
+  id: ASClothingHeadsetAltSLECobaltCentcom
   name: sheriff's over-ear headset
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
 

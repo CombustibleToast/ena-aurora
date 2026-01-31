@@ -8,9 +8,9 @@
   description: An updated headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_navy.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_navy.rsi # Aurora Song - Using SLE-recolored sprites
   - type: ContainerFill
     containers:
       key_slots:
@@ -24,9 +24,9 @@
   description: An updated headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_orange.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_orange.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
   parent: ASClothingHeadsetSLENavy
@@ -35,9 +35,9 @@
   description: An updated headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
 
 # Common Versions - can be used without keys
 - type: entity

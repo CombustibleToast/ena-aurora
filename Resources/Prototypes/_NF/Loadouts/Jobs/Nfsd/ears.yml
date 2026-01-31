@@ -11,7 +11,7 @@
 - type: loadout
   id: NfsdClothingHeadsetNfsdGreen
   equipment:
-    ears: ASClothingHeadsetSLEOOrange
+    ears: ASClothingHeadsetSLEOrange
 
 - type: loadout
   id: NfsdClothingHeadsetAltNfsdBrown
@@ -26,5 +26,5 @@
 - type: loadout
   id: NfsdClothingHeadsetAltNfsdGreen
   equipment:
-    ears: ASClothingHeadsetAltSLEOOrange
+    ears: ASClothingHeadsetAltSLEOrange
 
