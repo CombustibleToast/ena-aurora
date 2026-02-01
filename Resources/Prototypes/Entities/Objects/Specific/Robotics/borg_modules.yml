@@ -1640,6 +1640,9 @@
   name: hand shipmind module
   description: A versatile module capable of holding almost anything alongside wielding an integrated set of tools. The manipulators are incompatible with firearms.
   components:
+  - type: Tag
+    tags:
+    - BorgModuleShipmind
   - type: Sprite
     layers:
     - state: xenoborg_generic
@@ -1652,7 +1655,7 @@
     - Screwdriver
     - Wirecutter
     - Multitool
-    - RefuelingWelder
+    - WelderExperimental
   - type: DroppableBorgModule
     moduleId: Hands
     items: []
@@ -1666,7 +1669,7 @@
         - Gun
       displayName: borg-placeholder-display-name-universal
   - type: BorgModule
-    default: true
+    defaultModule: true
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-tool-module }
   
@@ -1676,6 +1679,9 @@
   name: space movement shipmind module
   description: Module that helps a shipmind chassis move better in space.
   components:
+  - type: Tag
+    tags:
+    - BorgModuleShipmind
   - type: Sprite
     layers:
     - state: xenoborg_scout
@@ -1689,7 +1695,7 @@
     - WeaponGrapplingGun
     - JetpackShipmind
   - type: BorgModule
-    default: true
+    defaultModule: true
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-space-movement-module }
 
@@ -1699,6 +1705,9 @@
   name: shipmind combat module
   description: Module with a heavy energy cannon and disabler smg.
   components:
+  - type: Tag
+    tags:
+    - BorgModuleShipmind
   - type: Sprite
     layers:
     - state: xenoborg_heavy
@@ -1708,6 +1717,7 @@
     items: 
     - WeaponXrayCannonCyborg
     - WeaponDisablerSMGCyborg
-
+  - type: BorgModule
+    defaultModule: true
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: xenoborg-laser2-module }

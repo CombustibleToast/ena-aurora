@@ -142,6 +142,9 @@
   id: BorgModuleSyndicateAssault
 
 - type: Tag
+  id: BorgModuleShipmind
+
+- type: Tag
   id: Bot
 
 - type: Tag

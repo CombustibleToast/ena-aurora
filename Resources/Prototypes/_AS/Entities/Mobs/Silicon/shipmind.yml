@@ -97,7 +97,6 @@
     rules: ghost-role-information-Shipmind-core-rules
     raffle:
       settings: default
-    prototype: ShipmindAICore
     mindRoles:
       - MindRoleSubvertedSilicon
   - type: GhostTakeoverAvailable
@@ -137,9 +136,7 @@
       maxModules: 3
       moduleWhitelist:
         tags:
-          - ShipmindModuleHand
-          - ShipmindSpaceMovement
-          - ShipmindModuleCombat
+          - BorgModuleShipmind
       hasMindState: remote_eyes
       noMindState: remote_eyes_empty
     - type: ShowHealthBars
