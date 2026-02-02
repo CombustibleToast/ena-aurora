@@ -5723,3 +5723,10 @@ Entries:
   id: 8931
   time: '2026-02-01T22:52:46.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/698
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Added holopad, recharger and EVA lockers to the Drone
+  id: 8932
+  time: '2026-02-02T05:20:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/701
