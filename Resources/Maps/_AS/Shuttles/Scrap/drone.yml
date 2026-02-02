@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 01/29/2026 03:15:11
-  entityCount: 470
+  time: 02/02/2026 03:43:45
+  entityCount: 474
 maps: []
 grids:
 - 1
@@ -2130,6 +2130,18 @@ entities:
     - type: Transform
       pos: 3.5,-4.5
       parent: 1
+- proto: LockerWallEVAColorScientistFilled
+  entities:
+  - uid: 473
+    components:
+    - type: Transform
+      pos: 5.5,0.5
+      parent: 1
+  - uid: 474
+    components:
+    - type: Transform
+      pos: -4.5,0.5
+      parent: 1
 - proto: LockerWallMaterialsFuelUraniumFilled2
   entities:
   - uid: 285
@@ -2179,6 +2191,13 @@ entities:
     components:
     - type: Transform
       pos: -5.5,-4.5
+      parent: 1
+- proto: NFHolopadShip
+  entities:
+  - uid: 471
+    components:
+    - type: Transform
+      pos: 0.5,2.5
       parent: 1
 - proto: NFLockerScienceFilled
   entities:
@@ -3105,6 +3124,13 @@ entities:
     components:
     - type: Transform
       pos: 5.5,-3.5
+      parent: 1
+- proto: WallWeaponCapacitorRecharger
+  entities:
+  - uid: 472
+    components:
+    - type: Transform
+      pos: -3.5,0.5
       parent: 1
 - proto: WarpPoint
   entities:
