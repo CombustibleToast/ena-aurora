@@ -5730,3 +5730,10 @@ Entries:
   id: 8932
   time: '2026-02-02T05:20:30.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/701
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: prison riot wasn't spawning correctly
+  id: 8933
+  time: '2026-02-03T18:43:11.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/703
