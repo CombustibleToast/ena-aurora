@@ -12,6 +12,7 @@ using Content.Shared._NF.Shipyard.Prototypes;
 using Content.Shared._NF.Shipyard.Components;
 using Content.Shared.Access.Systems;
 using Content.Shared.Access.Components;
+using Content.Shared.Chat; // Einstein Engines - Languages
 using Content.Shared.Ghost;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -33,6 +34,7 @@ using Content.Shared.Preferences;
 using Content.Server.Shuttles.Components;
 using Content.Server._NF.Station.Components;
 using System.Text.RegularExpressions;
+using Content.Server.Shuttles.Systems;
 using Content.Shared.UserInterface;
 using Robust.Shared.Audio.Systems;
 using Content.Shared.Access;
@@ -203,6 +205,15 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
             vesselInfo.Vessel = vessel.ID;
         }
+
+        // Add FTLLockComponent to the shuttle with Enabled set to true
+        // We need to use the ShuttleConsoleSystem to properly set the Enabled property
+        EnsureComp<FTLLockComponent>(shuttleUid);
+
+        // Get the ShuttleConsoleSystem which has proper access to modify FTLLockComponent.Enabled
+        var shuttleConsoleSystem = Get<ShuttleConsoleSystem>();
+        var dockedEntities = new List<NetEntity>();
+        shuttleConsoleSystem.ToggleFTLLock(shuttleUid, dockedEntities, true);
 
         if (TryComp<AccessComponent>(targetId, out var newCap))
         {
