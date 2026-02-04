@@ -1,10 +1,10 @@
-using Content.Shared.Shuttles.Components;
 using Robust.Shared.GameStates;
+using Robust.Shared.Analyzers;
 
-namespace Content.Client.Shuttles.Components;
+namespace Content.Shared.Shuttles.Components;
 
 /// <summary>
-/// Client-side component that controls whether a shuttle will FTL with docked shuttles or automatically undock.
+/// Component that controls whether a shuttle will FTL with docked shuttles or automatically undock.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentState]
 public sealed partial class FTLLockComponent : Component
@@ -14,4 +14,4 @@ public sealed partial class FTLLockComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool Enabled = true;
-} 
+}
