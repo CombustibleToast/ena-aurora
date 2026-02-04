@@ -142,36 +142,19 @@ public sealed partial class DockingScreen : BoxContainer
         foreach (var dock in shuttleDocks)
         {
             if (!dock.Connected || dock.GridDockedWith == null || !_ourDockButtons.TryGetValue(dock.Entity, out var button))
-            {
-                Logger.DebugS("shuttle", "Error case A from FTLLockPressed");
                 continue;
-            }
-
 
             if (button.ChildCount == 0)
-            {
-                Logger.DebugS("shuttle", "Error case B from FTLLockPressed");
                 continue;
-            }
 
-
-            var buttonContainer = button.GetChild(0) as BoxContainer;
+            var buttonContainer = button.GetChild(1) as BoxContainer;
             if (buttonContainer == null || buttonContainer.ChildCount < 2)
-            {
-                Logger.DebugS("shuttle", "Error case C from FTLLockPressed");
                 continue;
-            }
-
 
             var lockIndicator = buttonContainer.GetChild(1) as Label;
             if (lockIndicator == null)
-            {
-                Logger.DebugS("shuttle", "Error case D from FTLLockPressed");
                 continue;
-            }
 
-            Logger.DebugS("shuttle", "Success from FTLLockPressed");
-            Logger.DebugS("shuttle", $"enabled = {enabled}");
             // Use the pressed button state to update indicators
             lockIndicator.Text = enabled ? "LOCKED" : "UNLOCKED";
             lockIndicator.FontColorOverride = enabled ? Color.Red : Color.Green;
@@ -210,7 +193,6 @@ public sealed partial class DockingScreen : BoxContainer
         UpdateFTLLockButton(shuttle);
 
         // Update lock status indicators on all dock buttons
-        Logger.DebugS("shuttle", "Running UpdateDockLockIndicators from UpdateState");
         UpdateDockLockIndicators(shuttle);
     }
 
@@ -286,42 +268,26 @@ public sealed partial class DockingScreen : BoxContainer
 
     private void UpdateDockLockIndicators(EntityUid? shuttle)
     {
-        Logger.DebugS("shuttle", "Running UpdateDockLockIndicators");
-        Logger.DebugS("shuttle", $"Shuttle = {shuttle}");
+
         if (shuttle == null)
             return;
 
         var netEntity = _entManager.GetNetEntity(shuttle.Value);
-        Logger.DebugS("shuttle", $"netEntity = {netEntity}");
         if (!Docks.TryGetValue(netEntity, out var shuttleDocks))
-        {
-            Logger.DebugS("shuttle", "A");
             return;
-        }
-
 
         foreach (var dock in shuttleDocks)
         {
             if (!_ourDockButtons.TryGetValue(dock.Entity, out var button))
-            {
-                Logger.DebugS("shuttle", "Error case A from UpdateDockLockIndicators");
                 continue;
-            }
-
 
             // Find the lock indicator label in the button's children
             if (button.ChildCount == 0)
-            {
-                Logger.DebugS("shuttle", "Error case B from UpdateDockLockIndicators");
                 continue;
-            }
 
-            var buttonContainer = button.GetChild(0) as BoxContainer;
+            var buttonContainer = button.GetChild(1) as BoxContainer;
             if (buttonContainer == null)
-            {
-                Logger.DebugS("shuttle", "Error case C from UpdateDockLockIndicators");
                 continue;
-            }
 
             // Only update if connected to another grid
             if (!dock.Connected || dock.GridDockedWith == null)
@@ -335,14 +301,12 @@ public sealed partial class DockingScreen : BoxContainer
                         buttonContainer.RemoveChild(existingIndicator);
                     }
                 }
-                Logger.DebugS("shuttle", "Error case D from UpdateDockLockIndicators");
                 continue;
             }
 
             // Update or add lock status
             // Use the button state for consistency across the UI
             bool isLocked = FTLLockEnabledButton.Pressed;
-            Logger.DebugS("shuttle", $"isLocked = {isLocked}");
             var dockedEntity = _entManager.GetEntity(dock.GridDockedWith.Value);
 
             // Log the actual state we're seeing vs what we're showing
@@ -446,7 +410,6 @@ public sealed partial class DockingScreen : BoxContainer
                 }
 
                 // Add a lock icon/indicator for the connected grid
-                Logger.DebugS("shuttle", "Success from BuildDocks");
                 var lockIndicator = new Label
                 {
                     Text = isLocked ? "LOCKED" : "UNLOCKED",

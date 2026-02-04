@@ -21,8 +21,8 @@
     <controls:BoxContainer Name="RightDisplayDock"
                            VerticalAlignment="Top"
                            HorizontalAlignment="Center"
-                           MinWidth="256"
-                           MaxWidth="256"
+                           MinWidth="288"
+                           MaxWidth="288"
                            Align="Center"
                            Margin="5 5 5 5"
                            Orientation="Vertical">
