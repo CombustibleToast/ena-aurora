@@ -160,6 +160,10 @@ public sealed partial class ShuttleConsoleSystem
 
         if (!_shuttle.FTLFree(shuttleUid.Value, targetCoordinates, targetAngle, exclusions))
         {
+            if (!_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out _))
+            {
+                _popup.PopupEntity(Loc.GetString("shuttle-no-ftl"), ent.Owner, PopupType.Medium);
+            }
             return;
         }
 
