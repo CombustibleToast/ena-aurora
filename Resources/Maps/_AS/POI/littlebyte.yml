@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 02/01/2026 09:00:22
-  entityCount: 6629
+  time: 02/05/2026 10:08:34
+  entityCount: 6636
 maps: []
 grids:
 - 2
@@ -175,7 +175,7 @@ entities:
     - type: Fixtures
       fixtures: {}
     - type: BecomesStation
-      id: Empty
+      id: littlebytekey
     - type: OccluderTree
     - type: Shuttle
       dampingModifier: 0.25
@@ -19138,6 +19138,11 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -30.5,-2.5
       parent: 2
+  - uid: 6630
+    components:
+    - type: Transform
+      pos: 1.5,-26.5
+      parent: 2
 - proto: ComputerWallmountRadar
   entities:
   - uid: 1668
@@ -19169,6 +19174,11 @@ entities:
     components:
     - type: Transform
       pos: 29.5,2.5
+      parent: 2
+  - uid: 6631
+    components:
+    - type: Transform
+      pos: 4.5,-26.5
       parent: 2
 - proto: ConveyorBelt
   entities:
@@ -23331,6 +23341,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -14.5,10.5
+      parent: 2
+    - type: Fixtures
+      fixtures: {}
+  - uid: 6634
+    components:
+    - type: Transform
+      pos: -1.5,10.5
       parent: 2
     - type: Fixtures
       fixtures: {}
@@ -32442,6 +32459,18 @@ entities:
     - type: Transform
       pos: 4.5,-32.5
       parent: 2
+- proto: HandLabeler
+  entities:
+  - uid: 6635
+    components:
+    - type: Transform
+      pos: -3.4619942,11.453921
+      parent: 2
+  - uid: 6636
+    components:
+    - type: Transform
+      pos: 1.9183285,-2.5151486
+      parent: 2
 - proto: HospitalCurtainsOpen
   entities:
   - uid: 1812
@@ -38687,6 +38716,20 @@ entities:
     components:
     - type: Transform
       pos: -8.5,10.5
+      parent: 2
+- proto: VendingMachineRestockChefvend
+  entities:
+  - uid: 6633
+    components:
+    - type: Transform
+      pos: -3.4539094,10.622358
+      parent: 2
+- proto: VendingMachineRestockDinnerware
+  entities:
+  - uid: 6632
+    components:
+    - type: Transform
+      pos: -3.558076,10.955923
       parent: 2
 - proto: VendingMachineSeeds
   entities:
