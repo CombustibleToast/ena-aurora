@@ -54,7 +54,7 @@
     sprite: _Mono/Structures/ShuttleComponents/drive_heavy_core.rsi
     state: control
   product: CrateEngineeringFTLDrive160
-  cost: 10000
+  cost: 100000
   category: cargoproduct-category-name-shuttle
   group: market
 
