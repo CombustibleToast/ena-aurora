@@ -5753,3 +5753,10 @@ Entries:
   id: 8935
   time: '2026-02-05T18:34:29.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/702
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: adds a FTL drive to the Petrel
+  id: 8936
+  time: '2026-02-05T18:46:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/706
