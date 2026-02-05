@@ -11,6 +11,9 @@ using Content.Shared.Station.Components;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Audio;
+using Robust.Shared.Audio.Components;
+using Robust.Shared.Audio.Systems;
 
 namespace Content.Server.Shuttles.Systems;
 
@@ -18,6 +21,12 @@ public sealed partial class ShuttleConsoleSystem
 {
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly SharedShuttleSystem _sharedShuttle = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+
+    private readonly SoundSpecifier _errorSound = new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg")
+    {
+        Params = AudioParams.Default.WithVolume(-5f),
+    };
 
     private const float ShuttleFTLRange = 512f;
     private const float ShuttleFTLMassThreshold = 100f; // Mono: now a soft limit, ships under the limit just stop you from shorter distance
@@ -143,7 +152,8 @@ public sealed partial class ShuttleConsoleSystem
         // Check shuttle can even FTL
         if (!_shuttle.CanFTL(shuttleUid.Value, out var reason))
         {
-             _popup.PopupEntity(reason, ent.Owner, PopupType.Medium);
+            _popup.PopupEntity(reason, ent.Owner, PopupType.Medium);
+            _audio.PlayPvs(_errorSound, ent.Owner);
             return;
         }
 
@@ -163,6 +173,7 @@ public sealed partial class ShuttleConsoleSystem
             if (!_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out _))
             {
                 _popup.PopupEntity(Loc.GetString("shuttle-no-ftl"), ent.Owner, PopupType.Medium);
+                _audio.PlayPvs(_errorSound, ent.Owner);
             }
             return;
         }
@@ -233,6 +244,7 @@ public sealed partial class ShuttleConsoleSystem
             }
 
             _popup.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), ent.Owner, PopupType.Medium);
+            _audio.PlayPvs(_errorSound, ent.Owner);
             UpdateConsoles(shuttleUid.Value);
             return;
         }
