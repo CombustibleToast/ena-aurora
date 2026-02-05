@@ -143,7 +143,7 @@ public sealed partial class ShuttleConsoleSystem
         // Check shuttle can even FTL
         if (!_shuttle.CanFTL(shuttleUid.Value, out var reason))
         {
-            // TODO: Session popup
+             _popup.PopupEntity(reason, ent.Owner, PopupType.Medium);
             return;
         }
 

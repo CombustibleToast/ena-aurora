@@ -247,12 +247,24 @@ public sealed partial class ShuttleSystem
 
         if (TryComp<PhysicsComponent>(shuttleUid, out var shuttlePhysics))
         {
-
-            // Too large to FTL
-            if (FTLMassLimit > 0 &&  shuttlePhysics.Mass > FTLMassLimit)
+            if (TryGetFTLDrive(shuttleUid, out _, out var drive))
             {
-                reason = Loc.GetString("shuttle-console-mass");
-                return false;
+                var adjustedMass = shuttlePhysics.Mass * drive.DriveMassMultiplier;
+                // Too large to FTL even with modifiers from the drive
+                if (FTLMassLimit > 0 && adjustedMass > FTLMassLimit)
+                {
+                    reason = Loc.GetString("shuttle-console-mass");
+                    return false;
+                }
+            }
+            else
+            {
+                // Too large to FTL
+                if (FTLMassLimit > 0 &&  shuttlePhysics.Mass > FTLMassLimit)
+                {
+                    reason = Loc.GetString("shuttle-console-mass");
+                    return false;
+                }
             }
         }
 

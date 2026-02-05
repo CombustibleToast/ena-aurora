@@ -30,3 +30,25 @@
     entity: MachineFTLDrive25S
   - type: StaticPrice
     price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDrive160Flatpack
+  name: CTLA-160 heavy bluespace core flatpack
+  description: A flatpack used for constructing a CTLA-160 heavy bluespace core.
+  components:
+  - type: Flatpack
+    entity: MachineHeavyFTLDriveCore
+  - type: StaticPrice
+    price: 7500
+
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDrive160ConsoleFlatpack
+  name: CTLA-160 heavy bluespace console flatpack
+  description: A flatpack used for constructing a CTLA-160 heavy bluespace console.
+  components:
+  - type: Flatpack
+    entity: MachineHeavyFTLDriveConsole
+  - type: StaticPrice
+    price: 5000
