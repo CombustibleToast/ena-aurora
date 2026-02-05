@@ -424,6 +424,12 @@ public sealed partial class ShuttleSystem
 
         var hyperspace = EnsureComp<FTLComponent>(shuttleUid);
         SetupFTL(hyperspace, startupTime, hyperspaceTime, priorityTag);
+        _thruster.DisableLinearThrusters(component);
+        _thruster.EnableLinearThrustDirection(component, DirectionFlag.North);
+        _thruster.SetAngularThrust(component, false);
+        var audio = _audio.PlayPvs(_startupSound, shuttleUid);
+        _audio.SetGridAudio(audio);
+        hyperspace.StartupStream = audio?.Entity;
 
         if (TryComp<DockingComponent>(target, out var dock) && dock.Docked && dock.DockedWith != null)
         {
