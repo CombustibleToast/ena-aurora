@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 02/05/2026 10:08:34
+  time: 02/05/2026 20:10:50
   entityCount: 6636
 maps: []
 grids:
@@ -32936,19 +32936,6 @@ entities:
       parent: 3573
     - type: Physics
       canCollide: False
-- proto: LockableButton
-  entities:
-  - uid: 3575
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -15.5,6.5
-      parent: 2
-    - type: DeviceLinkSource
-      linkedPorts:
-        1787:
-        - - Pressed
-          - Forward
 - proto: LockerJanitorFilled
   entities:
   - uid: 3576
@@ -36527,6 +36514,21 @@ entities:
       open: False
     - type: AtmosPipeColor
       color: '#00CAE0FF'
+- proto: SignalSwitchDirectional
+  entities:
+  - uid: 3575
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -15.5,6.5
+      parent: 2
+    - type: DeviceLinkSource
+      linkedPorts:
+        1787:
+        - - On
+          - Forward
+        - - Off
+          - Off
 - proto: SignAtmos
   entities:
   - uid: 4206
