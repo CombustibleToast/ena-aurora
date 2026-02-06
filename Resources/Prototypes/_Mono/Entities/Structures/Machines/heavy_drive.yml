@@ -6,6 +6,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: DisableToolUse
+    anchoring: false
+  - type: StaticPrice
+    price: 1500
   - type: Transform
     anchored: true
     noRot: false
@@ -52,6 +56,10 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: DisableToolUse
+    anchoring: false
+  - type: StaticPrice
+    price: 1500
   - type: Transform
     anchored: true
     noRot: false

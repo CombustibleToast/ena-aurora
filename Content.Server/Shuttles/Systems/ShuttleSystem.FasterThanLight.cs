@@ -14,6 +14,7 @@ using Content.Shared.Maps;
 using Content.Shared.Parallax;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
+using Content.Shared.Popups;
 using Content.Shared.StatusEffect;
 using Content.Shared.Timing;
 using Content.Shared.Whitelist;
@@ -36,10 +37,14 @@ namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleSystem
 {
+    [Dependency] private readonly SharedPopupSystem _popup = default!;
     /*
      * This is a way to move a shuttle from one location to another, via an intermediate map for fanciness.
      */
-
+    private readonly SoundSpecifier _errorSound = new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg")
+    {
+        Params = AudioParams.Default.WithVolume(-5f),
+    };
     private readonly SoundSpecifier _startupSound = new SoundPathSpecifier("/Audio/Effects/Shuttle/hyperspace_begin.ogg")
     {
         Params = AudioParams.Default.WithVolume(-5f),
@@ -261,7 +266,7 @@ public sealed partial class ShuttleSystem
             else
             {
                 // Too large to FTL
-                if (FTLMassLimit > 0 &&  shuttlePhysics.Mass > FTLMassLimit)
+                if (FTLMassLimit > 0 && shuttlePhysics.Mass > FTLMassLimit)
                 {
                     reason = Loc.GetString("shuttle-console-mass");
                     return false;
@@ -596,6 +601,16 @@ public sealed partial class ShuttleSystem
                 if (!CanFTL(dockedUid, out var reason))
                 {
                     Log.Warning($"Cannot FTL due to docked shuttle {ToPrettyString(dockedUid)}: {reason}");
+                    var consoleQuery = EntityQueryEnumerator<ShuttleConsoleComponent, TransformComponent>();
+
+                    while (consoleQuery.MoveNext(out var consoleUid, out _, out var xform))
+                    {
+                        if (xform.GridUid != uid)
+                            continue;
+
+                        _popup.PopupEntity(reason, consoleUid, PopupType.Medium);
+                        _audio.PlayPvs(_errorSound, consoleUid);
+                    }
                     canAllFTL = false;
                     break;
                 }

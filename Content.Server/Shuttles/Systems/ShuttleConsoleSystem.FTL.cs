@@ -4,6 +4,7 @@ using Content.Server.Shuttles.Events;
 using Content.Shared._Mono.Ships;
 using Content.Shared.Popups;
 using Content.Shared.Shuttles.BUIStates;
+using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Events;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Shuttles.UI.MapObjects;
@@ -201,7 +202,10 @@ public sealed partial class ShuttleConsoleSystem
             // If we have a docked entity, get its grid
             if (TryComp<TransformComponent>(dock.DockedWith.Value, out var dockedXform) && dockedXform.GridUid != null)
             {
-                dockedGrids.Add(dockedXform.GridUid.Value);
+                if (TryComp<FTLLockComponent>(dockedXform.GridUid.Value, out var ftlLock) && ftlLock.Enabled)
+                {
+                    dockedGrids.Add(dockedXform.GridUid.Value);
+                }
 
                 // Check if we're docked to another grid
                 var parentGridUid = dockedXform.GridUid.Value;
@@ -221,7 +225,10 @@ public sealed partial class ShuttleConsoleSystem
                         siblingDockedXform.GridUid != null &&
                         siblingDockedXform.GridUid != shuttleUid.Value)
                     {
-                        dockedGrids.Add(siblingDockedXform.GridUid.Value);
+                        if (TryComp<FTLLockComponent>(siblingDockedXform.GridUid.Value, out var childLock) && childLock.Enabled)
+                        {
+                            dockedGrids.Add(siblingDockedXform.GridUid.Value);
+                        }
                     }
                 }
             }
