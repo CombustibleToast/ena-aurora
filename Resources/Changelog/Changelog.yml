@@ -5767,3 +5767,14 @@ Entries:
   id: 8937
   time: '2026-02-06T04:56:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/709
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaked the rules for mass exclusion to now cause ships you are docked
+        with to mass lock you unless you are FTL Locked together
+    - type: Fix
+      message: Made the Heavy core parts movable
+  id: 8938
+  time: '2026-02-06T07:12:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/708
