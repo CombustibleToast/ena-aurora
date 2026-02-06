@@ -5760,3 +5760,10 @@ Entries:
   id: 8936
   time: '2026-02-05T18:46:10.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/706
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: changed consent menu icon and location
+  id: 8937
+  time: '2026-02-06T04:56:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/709
