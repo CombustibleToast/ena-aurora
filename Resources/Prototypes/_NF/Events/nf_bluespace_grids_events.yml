@@ -372,7 +372,7 @@
     minimumPlayers: 2 
     weight: 1
     duration: 1
-    reoccurrenceDelay: 360 # 6 hours
+    reoccurrenceDelay: 720 # 12 hours, once per shift 
   - type: BluespaceErrorRule
     deleteGridsOnEnd: false
     anchorAfterWarp: false
