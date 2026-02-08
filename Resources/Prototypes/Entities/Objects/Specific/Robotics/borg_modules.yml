@@ -1648,7 +1648,7 @@
     - state: xenoborg_generic
     - state: icon-xenoborg-tools
   - type: ItemBorgModule
-    moduleId: ShipmindHand # Frontier
+    moduleId: ShipmindHand 
     items:
     - Crowbar
     - Wrench
@@ -1687,7 +1687,7 @@
     - state: xenoborg_scout
     - state: icon-xenoborg-space-movement
   - type: ItemBorgModule
-    moduleId: ShipmindSpaceMovement # Frontier
+    moduleId: ShipmindSpaceMovement 
     items:
     - HandheldGPSBasic
     - HandHeldMassScannerBorg

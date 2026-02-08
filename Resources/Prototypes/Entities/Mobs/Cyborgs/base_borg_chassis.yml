@@ -107,7 +107,7 @@
   #  doAfterDelay: 10
   #  allowSelfRepair: false
   - type: WeldingHealable
-    allowSelfHeal: true
+    allowSelfHeal: true # Aurora
   # End DeltaV Changes
   - type: BorgChassis
   - type: LockingWhitelist

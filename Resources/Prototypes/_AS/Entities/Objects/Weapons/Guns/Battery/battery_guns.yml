@@ -181,9 +181,9 @@
     zeroVisible: true
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
+  categories: [ HideSpawnMenu ] # Renamed Xray Cannon for cyborgs.
   name: volatile particle driver
-  parent: [BaseWeaponBattery, BaseC3Contraband] # Frontier: BaseSecurityContraband<BaseC3Contraband
+  parent: [BaseWeaponBattery, BaseC3Contraband] 
   id: WeaponXrayCannonCyborg
   description: An advanced energy weapon that uses high-energy particles to damage targets.
   components:
@@ -201,7 +201,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
-    proto: NFXrayLaser # Frontier: use NF variant
+    proto: NFXrayLaser 
     fireCost: 200
   - type: MagazineVisuals
     magState: mag
@@ -217,7 +217,7 @@
 
 - type: entity
   name: disabler SMG
-  parent: [ BaseWeaponBattery, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ BaseWeaponBattery, BaseC2ContrabandUnredeemable ] 
   id: WeaponDisablerSMGCyborg
   description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
   components:
@@ -243,7 +243,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: NFBulletDisablerSmg # Frontier: use NF variant
+    proto: NFBulletDisablerSmg 
     fireCost: 25
   - type: MagazineVisuals
     magState: mag

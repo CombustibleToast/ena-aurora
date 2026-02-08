@@ -7,7 +7,7 @@ using Content.Shared._Corvax.Silicons.Borgs.Components;
 using Content.Shared.Actions;
 using Content.Shared.Mind;
 using Content.Shared.Chat;
-using Content.Shared.Database;
+using Content.Shared.Database; // AS
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.StationAi;
@@ -30,7 +30,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly MetaDataSystem _metaSystem = default!;
+    [Dependency] private readonly MetaDataSystem _metaSystem = default!; // AS
     private EntityCoordinates? _coordinates;
 
     public override void Initialize()
@@ -92,7 +92,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
     private void OnReturnMindIntoAi(Entity<AiRemoteControllerComponent> entity, ref ReturnMindIntoAiEvent args)
     {
         ReturnMindIntoAi(entity);
-        _metaSystem.SetEntityName(entity, "Empty Remote Chassis");
+        _metaSystem.SetEntityName(entity, "Empty Remote Chassis"); // AS
     }
     public void AiTakeControl(EntityUid ai, EntityUid entity)
     {
@@ -105,7 +105,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
         if (!TryComp<AiRemoteControllerComponent>(entity, out var aiRemoteComp))
             return;
         if (_stationAiSystem.TryGetCore(ai, out var stationAiCore) && stationAiCore.Comp?.RemoteEntity != null
-                && (Transform(stationAiCore).WorldPosition - Transform(entity).WorldPosition).Length() > 256 // Should be enough range to work with without being able to snipe another chassis a few miles away
+                && (Transform(stationAiCore).WorldPosition - Transform(entity).WorldPosition).Length() > 256 // AS: Changed range and made this use world position
             )
         {
             var msg = Loc.GetString("ai-remote-out-of-range");
@@ -134,7 +134,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
         _mind.ControlMob(ai, entity);
         aiRemoteComp.AiHolder = ai;
         aiRemoteComp.LinkedMind = mindId;
-        if (TryComp<NameModifierComponent>(ai, out var nameModifierComponent))
+        if (TryComp<NameModifierComponent>(ai, out var nameModifierComponent)) // AS: Make it rename things to represent its being remoted.
         {
             _metaSystem.SetEntityName(entity, nameModifierComponent.BaseName + " Remote Chassis");
         }
@@ -168,10 +168,10 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
                 DisplayName = Comp<MetaDataComponent>(queryUid).EntityName,
                 DevicePosX = Transform(queryUid).WorldPosition.X,
                 DevicePosY = Transform(queryUid).WorldPosition.Y,
-                DeviceDistance = (Transform(uid).WorldPosition - Transform(queryUid).WorldPosition).Length()
+                DeviceDistance = (Transform(uid).WorldPosition - Transform(queryUid).WorldPosition).Length() // AS: World position over relative and device distance.
             };
             if (_stationAiSystem.TryGetCore(uid, out var stationAiCore) && stationAiCore.Comp?.RemoteEntity != null
-                    && (Transform(stationAiCore).WorldPosition - Transform(queryUid).WorldPosition).Length() < 4096
+                    && (Transform(stationAiCore).WorldPosition - Transform(queryUid).WorldPosition).Length() < 4096 // AS: World position over relative
                 )
             {
                 remoteDevices.Add(data);

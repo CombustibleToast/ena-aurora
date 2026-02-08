@@ -327,7 +327,7 @@
     weightlessFriction: 0.3
     weightlessModifier: 1
 
-- type: entity
+- type: entity # AS
   parent: [ JetpackXenoborg ]
   id: JetpackShipmind
   name: shipmind chassis jetpack
