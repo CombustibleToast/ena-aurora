@@ -411,6 +411,8 @@ entities:
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
+    - type: SpreaderGrid
+    - type: NavMap
     - type: BecomesStation
       id: Nyx
 - proto: AirlockHatch
