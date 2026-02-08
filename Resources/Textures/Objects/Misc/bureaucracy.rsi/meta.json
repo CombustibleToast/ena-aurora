@@ -269,6 +269,12 @@
     },
     {
       "name": "paper_stamp-as-colonial-representative"
+    },
+    {
+      "name": "paper_stamp-as-site-manager"
+    },
+    {
+      "name": "paper_stamp-as-site-worker"
     }
   ]
 }

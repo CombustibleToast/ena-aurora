@@ -6,3 +6,5 @@ job-supervisors-asdetective = the Lieutenant
 job-supervisors-corpsman = the Lieutenant
 job-supervisors-commissioner = the Commissioner
 job-supervisors-colonial-representative = the Colonial Representative
+job-supervisors-site-manager = the Site Manager
+job-supervisors-site-worker = the Site Manager

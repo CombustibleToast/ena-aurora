@@ -22,13 +22,13 @@
 
 - type: quickPhrase
   parent: BaseEngineeringJobPhrase
-  id: JobPlantTechnician
-  text: job-name-plant-technician  # Uses NF locale
+  id: JobSiteWorker
+  text: job-name-site-worker
 
 - type: quickPhrase
   parent: BaseEngineeringJobPhrase
-  id: JobPlantManager
-  text: job-name-plant-manager  # Uses NF locale
+  id: JobSiteManager
+  text: job-name-site-manager
 
 - type: quickPhrase
   parent: BaseEngineeringJobPhrase

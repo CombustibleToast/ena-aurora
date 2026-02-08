@@ -42,3 +42,32 @@
       - state: green
       - sprite: _AS/Markers/jobs.rsi
         state: cr
+
+#region Engineering
+
+- type: entity
+  parent: SpawnPointChiefEngineer
+  id: SpawnPointSiteManager
+  name: site manager
+  components:
+  - type: SpawnPoint
+    job_id: SiteManager
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: site-manager
+
+- type: entity
+  parent: SpawnPointStationEngineer
+  id: SpawnPointSiteWorker
+  name: site worker
+  components:
+  - type: SpawnPoint
+    job_id: SiteWorker
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: site-worker
+

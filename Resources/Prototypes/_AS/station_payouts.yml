@@ -97,13 +97,13 @@
   payPerHour: 15000
   job: Rookie
 
-#Edison
+#Damascus
 - type: stationPay
   id: TechnicianPay
   payPerHour: 15000
-  job: PlantTechnician
+  job: SiteWorker
 
 - type: stationPay
   id: managerPay
   payPerHour: 30000
-  job: PlantManager
+  job: SiteManager

@@ -21,6 +21,12 @@
     },
     {
       "name": "stamp-cr"
+    },
+    {
+      "name": "stamp-site-manager"
+    },
+    {
+      "name": "stamp-site-worker"
     }
   ]
 }

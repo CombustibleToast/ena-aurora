@@ -302,3 +302,54 @@
   - ContractorEncryptionKey
   - ContractorHandItems
   - NFSpeciesSpecific
+
+#region Engineering
+
+- type: roleLoadout
+  id: JobSiteManager
+  groups:
+  - SiteManagerHead
+  - SiteManagerNeck
+  - SiteManagerJumpsuit
+  - SiteManagerGloves
+  - SiteManagerBackpack
+  - SiteManagerOuterClothing
+  - SiteManagerShoes
+  - SiteManagerBelt
+  - SiteManagerEars
+  - ContractorFace
+  - SiteManagerGlasses
+  - SiteManagerPDA
+  - ContractorBackpackItems
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+- type: roleLoadout
+  id: JobSiteWorker
+  groups:
+  - SiteWorkerHead
+  - SiteWorkerNeck
+  - SiteWorkerJumpsuit
+  - SiteWorkerGloves
+  - SiteWorkerBackpack
+  - SiteWorkerOuterClothing
+  - SiteWorkerShoes
+  - SiteWorkerFace
+  - SiteWorkerBelt
+  - SiteWorkerEars
+  - SiteWorkerGlasses
+  - SiteWorkerPDA
+  - ContractorBackpackItems
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorHandItems
+  - NFSpeciesSpecific
+

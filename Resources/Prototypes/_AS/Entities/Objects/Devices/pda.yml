@@ -1,6 +1,47 @@
 #region Base
 
 - type: entity
+  abstract: true
+  parent: BasePDA
+  id: ASBasePDA
+  name: PDA
+  description: Personal Data Assistant.
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda
+  - type: Sprite
+    sprite: _AS/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+    state: pda
+  - type: Pda
+    paiSlot:
+      priority: -4
+      whitelist:
+        components:
+        - PAI
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
   parent: BasePDA
   id: ASBaseSecurityPDA # copy of BaseSecurityPDA from NF with different sprite directory
   abstract: true
@@ -322,3 +363,58 @@
     - AstroNavCartridge
     - LedgerCartridge
     - MailMetricsCartridge
+
+#region Engineering-Science
+
+- type: entity
+  parent: [ASBasePDA, BaseCommandContraband]
+  id: ASSiteManagerPDA
+  name: site manager PDA
+  description: Looks like it's been used to fix everything on the station.
+  components:
+  - type: Pda
+    id: ASSiteManagerIDCard
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-sitemanager
+  - type: PdaBorderColor
+    borderColor: "#E88D28"
+    accentHColor: "#C69B27"
+  - type: Icon
+    state: pda-sitemanager
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - LedgerCartridge
+
+- type: entity
+  parent: ASBasePDA
+  id: ASSiteWorkerPDA
+  name: site worker PDA
+  description: Smells like ozone and burnt insulation.
+  components:
+  - type: Pda
+    id: ASSiteWorkerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-siteworker
+  - type: PdaBorderColor
+    borderColor: "#C69B27"
+    accentVColor: "#E88D28"
+  - type: Icon
+    state: pda-siteworker

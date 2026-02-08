@@ -140,3 +140,32 @@
     - state: idcolonialrepresentative
   - type: Item
     heldPrefix: silver
+
+#region Engineering
+
+- type: entity
+  parent: [CEIDCard, BaseCommandContraband]
+  id: ASSiteManagerIDCard
+  name: site manager ID card
+  components:
+  - type: PresetIdCard
+    job: SiteManager
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idsitemanager
+
+- type: entity
+  parent: EngineeringIDCard
+  id: ASSiteWorkerIDCard
+  name: site worker ID card
+  components:
+  - type: PresetIdCard
+    job: SiteWorker
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idsiteworker
+

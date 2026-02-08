@@ -1,0 +1,15 @@
+# Site Worker Neck Items
+- type: loadout
+  id: SiteWorkerNeckScarfStripedOrange
+  equipment:
+    neck: ClothingNeckScarfStripedOrange
+
+- type: loadout
+  id: SiteWorkerNeckTieOrange
+  equipment:
+    neck: ClothingNeckTieOrange
+
+- type: loadout
+  id: SiteWorkerNeckScarfStripedPurple
+  equipment:
+    neck: ClothingNeckScarfStripedPurple

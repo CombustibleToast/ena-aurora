@@ -66,10 +66,31 @@
   allowSelection: false # Frontier: no impersonating command staff, literally 1984
 
 - type: jobIcon
-  parent: JobIconHeadOfPersonnel # Aurora Song: TODO - create custom colonialrepresentative sprite
+  parent: JobIconHeadOfPersonnel
   id: JobIconColonialRepresentative
   jobName: job-name-colonial-representative
   allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+#region Engineering
+
+- type: jobIcon
+  parent: JobIconChiefEngineer
+  id: JobIconSiteManager
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: sitemanager
+  jobName: job-name-site-manager
+  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+- type: jobIcon
+  parent: JobIconStationEngineer
+  id: JobIconSiteWorker
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: siteworker
+  jobName: job-name-site-worker
+
+#region Other
 
 - type: jobIcon
   parent: JobIcon

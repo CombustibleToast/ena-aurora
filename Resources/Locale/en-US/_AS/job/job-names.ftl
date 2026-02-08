@@ -2,6 +2,8 @@
 job-name-station-representative = Station Representative
 job-name-colonial-representative = Colonial Representative
 job-name-commissioner = Commissioner
+job-name-site-manager = Site Manager
+job-name-site-worker = Site Worker
 job-name-medic = Medic
 job-name-lieutenant = Lieutenant
 job-name-corpsman = Corpsman

@@ -79,7 +79,7 @@
   # - StationRepresentative # Frontier - Aurora Song: moved to _AS as ColonialRepresentative
   - ColonialRepresentative # Aurora's Song - Colonial Representative
   - Commissioner # Aurora's Song - switched Sheriff to Commissioner
-  - PlantManager # Frontier
+  - SiteManager # Aurora's Song - switched PlantManager to SiteManager
   - StationTrafficController # Frontier
   primary: false
   weight: 100
@@ -97,8 +97,8 @@
   # - ChiefEngineer # Frontier
   # - StationEngineer # Frontier
   # - TechnicalAssistant # Frontier
-  - PlantManager # Frontier
-  - PlantTechnician # Frontier
+  - SiteManager # Aurora's Song - switched PlantManager to SiteManager
+  - SiteWorker # Aurora's Song - switched PlantTechnician to SiteWorker
 
 - type: department
   id: Medical

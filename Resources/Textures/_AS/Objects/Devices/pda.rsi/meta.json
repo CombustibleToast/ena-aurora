@@ -40,6 +40,12 @@
 		{
             "name": "pda-cr"
         },
+		{
+            "name": "pda-sitemanager"
+        },
+		{
+            "name": "pda-siteworker"
+        },
         {
             "name": "id_overlay"
         },
