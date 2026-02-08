@@ -23,20 +23,15 @@ public sealed partial class TriggerOnMobstateChangeComponent : Component
     [DataField("preventSuicide")]
     public bool PreventSuicide = false;
 
-
-    /// <summary>
-    /// If false, this component will not trigger / is not allowed to work.
-    /// </summary>
-    [ViewVariables]
-    [DataField("enabled")]
-    public bool Enabled = true;
-
-
+    // Coyote
     // the timer cancel token
     [ViewVariables]
     public CancellationTokenSource RattleCancelToken = new();
 
-    // The delay before the implant sends the message again
+    // Coyote
+    /// <summary>
+    /// The delay before the implant sends the message again
+    /// </summary>
     [DataField]
     public TimeSpan RattleRefireDelay = TimeSpan.FromMinutes(20);
 }

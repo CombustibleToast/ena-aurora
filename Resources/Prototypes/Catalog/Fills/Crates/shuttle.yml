@@ -18,6 +18,7 @@
     contents:
       - id: GyroscopeFlatpack
 
+# Aurora: FTL Drives
 - type: entity
   parent: CrateEngineering
   id: CrateEngineeringFTLDrive25
@@ -58,3 +59,4 @@
     contents:
       - id: FTLDrive160Flatpack
       - id: FTLDrive160ConsoleFlatpack
+# End Aurora: FTL Drives

@@ -8,7 +8,7 @@ using Content.Shared.Chat;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.EntityEffects;
+using Content.Shared.EntityEffects; // AS
 using Content.Shared.NPC; //AS
 using Content.Shared.Damage; //AS
 using Content.Shared.Damage.Prototypes; //AS
@@ -21,20 +21,18 @@ using Content.Shared.Mind.Components; // AS
 using Content.Shared.Mobs.Components; // AS
 using Content.Shared.Warps; // AS
 using Robust.Shared.Map.Components;
-using Robust.Server.GameObjects;
+using Robust.Server.GameObjects; // AS
 using Robust.Shared.Player;
 using Robust.Shared.Map; // Frontier
 using Content.Server.GameTicking; // Frontier
 using Content.Server._NF.Salvage.Expeditions.Structure; // Frontier
 using Content.Server._NF.Salvage.Expeditions;
-using Content.Server.Buckle.Systems;
-using Content.Shared.Buckle.Components;
-using Content.Shared.Mind.Components;
-using Content.Shared.Salvage;
-using Content.Shared.Warps;
-using Robust.Server.Player;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
+using Content.Shared.Mind.Components; // AS
+using Content.Shared.Salvage; // AS
+using Content.Shared.Warps; // AS
+using Robust.Server.Player;// Coyote
+using Robust.Shared.Audio; // AS
+using Robust.Shared.Audio.Systems; //AS
 using Robust.Shared.Enums; // Frontier
 
 namespace Content.Server.Salvage;
@@ -47,8 +45,8 @@ public sealed partial class SalvageSystem
 
     [Dependency] private readonly MobStateSystem _mobState = default!;
     [Dependency] private readonly GameTicker _gameTicker = default!; // Frontier
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly IPlayerManager _players = default!;
+    [Dependency] private readonly DamageableSystem _damageable = default!; // AS
+    [Dependency] private readonly IPlayerManager _players = default!; // Coyote
 
     private void InitializeRunner()
     {
@@ -217,7 +215,7 @@ public sealed partial class SalvageSystem
             var remaining = comp.EndTime - _timing.CurTime;
             var audioLength = _audio.GetAudioLength(comp.SelectedSong);
 
-            AbortIfWiped(uid, comp); // Frontier
+            AbortIfWiped(uid, comp); // Coyote
 
             if (comp.Stage < ExpeditionStage.FinalCountdown && remaining < TimeSpan.FromSeconds(45))
             {
@@ -385,11 +383,11 @@ public sealed partial class SalvageSystem
                                     Spawn("EffectFlashBluespaceQuiet", mobXform.Coordinates);
                                     break;
                                 }
-                            } // End AS
+                            } 
                         }
                     }
                 }
-            }
+            } // End AS
 
             if (remaining < TimeSpan.Zero)
             {
@@ -461,10 +459,11 @@ public sealed partial class SalvageSystem
         // End Frontier: mission-specific logic
     }
 
+    // Coyote
     /// <summary>
     /// Checks if everyone on the map worth caring about is dead, and aborts the expedition if so.
-    /// Honestly, as long as one person is not in crit and not SSD, we consider the expedition salvageable.
     /// </summary>
+    // Honestly, as long as one person is not in crit and not SSD, we consider the expedition salvageable.
     private void AbortIfWiped(EntityUid mapUid, SalvageExpeditionComponent component)
     {
         // give it a 30 second grade after first check to avoid instant aborts

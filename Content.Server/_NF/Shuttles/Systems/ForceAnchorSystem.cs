@@ -17,9 +17,10 @@ public sealed partial class ForceAnchorSystem : EntitySystem
         base.Initialize();
         SubscribeLocalEvent<ForceAnchorComponent, MapInitEvent>(OnForceAnchorMapInit);
         SubscribeLocalEvent<ForceAnchorPostFTLComponent, FTLCompletedEvent>(OnForceAnchorPostFTLCompleted);
-        SubscribeLocalEvent<ConsoleFTLAttemptEvent>(OnConsoleFTLAttempt, before: new[] { typeof(ShuttleSystem) });
+        SubscribeLocalEvent<ConsoleFTLAttemptEvent>(OnConsoleFTLAttempt, before: new[] { typeof(ShuttleSystem) }); // Mono
     }
 
+    // Mono
     /// <summary>
     /// Prevents grids with ForceAnchor component from using FTL travel
     /// </summary>

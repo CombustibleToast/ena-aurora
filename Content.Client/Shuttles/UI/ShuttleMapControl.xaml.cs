@@ -14,7 +14,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
-using Robust.Shared.Prototypes;
+using Robust.Shared.Prototypes; // Mono
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
@@ -25,7 +25,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IInputManager _inputs = default!;
-    [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly IMapManager _mapManager = default!; // Mono
     [Dependency] private readonly IEntityManager _entManager = default!; // Frontier
 
     private readonly SharedMapSystem _mapSystem;
@@ -49,6 +49,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     /// </summary>
     public bool FtlMode;
 
+    // Mono
     /// <summary>
     /// Shows only the FTL range circle without cursor targeting elements.
     /// </summary>
@@ -80,7 +81,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     private readonly Dictionary<Color, List<(Vector2, string)>> _strings = new();
     private readonly List<ShuttleExclusionObject> _viewportExclusions = new();
 
-    public ShuttleMapControl() : base(256f, 4096f, 512f)
+    public ShuttleMapControl() : base(256f, 4096f, 512f) // Mono 512 to 4096
     {
         RobustXamlLoader.Load(this);
         _mapSystem = EntManager.System<SharedMapSystem>();
@@ -122,14 +123,14 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         {
             if (args.Function == EngineKeyFunctions.UIClick)
             {
-                var mapUid = _mapManager.GetMapEntityId(ViewingMap);
+                var mapUid = _mapManager.GetMapEntityId(ViewingMap); // Mono: GetMapOrInvalid -> GetMapEntityId
 
                 var beaconsOnly = EntManager.TryGetComponent(mapUid, out FTLDestinationComponent? destComp) &&
                                   destComp.BeaconsOnly;
 
                 var mapTransform = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);
 
-                if (beaconsOnly && TryGetBeacon(_beacons, mapTransform, args.RelativePixelPosition, PixelRect, out var foundBeacon, out _))
+                if (beaconsOnly && TryGetBeacon(_beacons, mapTransform, args.RelativePixelPosition, PixelRect, out var foundBeacon, out _)) // Mono: Use pixels
                 {
                     RequestBeaconFTL?.Invoke(foundBeacon.Entity, _ftlAngle);
                 }
@@ -193,7 +194,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Remove offset so we can floor.
         var botLeft = new Vector2(0f, 0f);
-        var topRight = botLeft + PixelSize;
+        var topRight = botLeft + PixelSize; // Mono: Pixels
 
         var flooredBL = botLeft - originBL;
 
@@ -263,7 +264,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         DrawParallax(handle);
 
-        var viewedMapUid = _mapManager.GetMapEntityId(ViewingMap);
+        var viewedMapUid = _mapManager.GetMapEntityId(ViewingMap); // Mono: GetMapOrInvalid -> GetMapEntityId
         var matty = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);
         var realTime = _timing.RealTime;
         var viewBox = new Box2(Offset - WorldRangeVector, Offset + WorldRangeVector);
@@ -272,7 +273,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Draw our FTL range + no FTL zones
         // Do it up here because we want this layered below most things.
-        if (FtlMode || ShowFTLRangeOnly)
+        if (FtlMode || ShowFTLRangeOnly) // Mono
         {
             if (EntManager.TryGetComponent<TransformComponent>(_shuttleEntity, out var shuttleXform))
             {
@@ -423,7 +424,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         var mouseLocalPos = GetLocalPosition(mousePos);
 
         // Draw dotted line from our own shuttle entity to mouse.
-        if (FtlMode && !ShowFTLRangeOnly)
+        if (FtlMode && !ShowFTLRangeOnly) // Mono
         {
             if (mousePos.Window != WindowId.Invalid)
             {
@@ -630,6 +631,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         }
     }
 
+    // Mono
     /// <summary>
     /// Draw the coordinate data with a custom color.
     /// </summary>
