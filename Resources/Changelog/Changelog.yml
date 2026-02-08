@@ -5760,3 +5760,62 @@ Entries:
   id: 8936
   time: '2026-02-05T18:46:10.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/706
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: changed consent menu icon and location
+  id: 8937
+  time: '2026-02-06T04:56:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/709
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaked the rules for mass exclusion to now cause ships you are docked
+        with to mass lock you unless you are FTL Locked together
+    - type: Fix
+      message: Made the Heavy core parts movable
+  id: 8938
+  time: '2026-02-06T07:12:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/708
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: fix buttons on LBK and Petrel
+  id: 8939
+  time: '2026-02-06T11:38:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/707
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Ported pr 2130 from the den
+    - type: Tweak
+      message: Moved oxycrem and LBN to the lewd chem tab
+  id: 8940
+  time: '2026-02-08T03:38:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/713
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Being left behind on an expedition is no longer round removing.
+    - type: Tweak
+      message: Expeditions auto abort after some time if all players are dead.
+    - type: Add
+      message: Medical alarms are retriggered after FTL ends
+  id: 8941
+  time: '2026-02-08T03:39:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/711
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Ore bags now fit in backpacks
+  id: 8942
+  time: '2026-02-08T03:49:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/710
+- author: BudaLope
+  changes:
+    - type: Remove
+      message: Removed many NSFW Items
+  id: 8943
+  time: '2026-02-08T03:52:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/714

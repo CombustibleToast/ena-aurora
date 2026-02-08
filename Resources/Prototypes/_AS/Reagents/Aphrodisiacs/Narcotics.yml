@@ -1,7 +1,7 @@
 - type: reagent
   id: ForceFemDrugs
   name: reagent-name-forcefem
-  group: Narcotics
+  group: Aphrodisiacs
   desc: reagent-desc-forcefem
   physicalDesc: reagent-physical-desc-girly
   flavor: cinnamon
@@ -86,7 +86,7 @@
 - type: reagent
   id: MilkingDrugs
   name: reagent-name-milkdrug
-  group: Narcotics
+  group: Aphrodisiacs
   desc: reagent-desc-milkdrug
   physicalDesc: reagent-physical-desc-creamy
   flavor: milk

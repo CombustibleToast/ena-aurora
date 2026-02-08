@@ -24952,13 +24952,6 @@ entities:
     - type: Transform
       pos: -14.780909,17.569311
       parent: 1
-- proto: LeashBasic
-  entities:
-  - uid: 4628
-    components:
-    - type: Transform
-      pos: -7.3596025,5.8338804
-      parent: 1
 - proto: LessLethalVendingMachinePOI
   entities:
   - uid: 793

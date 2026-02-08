@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: CNS Petrel
   description: A surplus military dropship outfitted for expeditions.
-  price: 46750 # ~34000 appraise, ~30% markup
+  price: 60000 # ~45930 appraise, ~30% markup
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_AS/Shuttles/Expedition/petrel.yml
