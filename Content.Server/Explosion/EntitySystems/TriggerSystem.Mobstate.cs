@@ -44,9 +44,6 @@ public sealed partial class TriggerSystem
         EntityUid? stateChangerUid = null,
         bool retry = false)
     {
-        if (!component.Enabled)
-            return;
-
         //This chains Mobstate Changed triggers with OnUseTimerTrigger if they have it
         //Very useful for things that require a mobstate change and a timer
         if (TryComp<OnUseTimerTriggerComponent>(uid, out var timerTrigger))
@@ -89,8 +86,6 @@ public sealed partial class TriggerSystem
             || Deleted(changedStateMobUid))
             return;
         if (!HasComp<MobStateComponent>(changedStateMobUid))
-            return;
-        if (!component.Enabled)
             return;
         var stat = Comp<MobStateComponent>(changedStateMobUid).CurrentState;
         if (component.MobState.Contains(stat))
