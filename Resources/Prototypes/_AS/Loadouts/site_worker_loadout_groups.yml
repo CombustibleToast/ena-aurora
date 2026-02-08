@@ -41,7 +41,6 @@
   minLimit: 0
   loadouts:
   - SiteWorkerNeckScarfStripedOrange
-  - SiteWorkerNeckTieOrange
   - SiteWorkerNeckScarfStripedPurple
 
 - type: loadoutGroup

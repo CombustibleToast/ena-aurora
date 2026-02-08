@@ -5,11 +5,6 @@
     neck: ClothingNeckScarfStripedOrange
 
 - type: loadout
-  id: SiteWorkerNeckTieOrange
-  equipment:
-    neck: ClothingNeckTieOrange
-
-- type: loadout
   id: SiteWorkerNeckScarfStripedPurple
   equipment:
     neck: ClothingNeckScarfStripedPurple
