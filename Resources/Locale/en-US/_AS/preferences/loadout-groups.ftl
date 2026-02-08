@@ -8,6 +8,9 @@ loadout-group-medic-outerclothing = outer clothing
 loadout-group-medic-pda = PDA
 loadout-group-medic-cartridge = PDA cartridges
 
+# Service Worker
+loadout-group-service-worker-pda = PDA
+
 # Mercenary
 loadout-group-mercenary-longarm = longarm
 loadout-group-mercenary-sidearm = sidearm

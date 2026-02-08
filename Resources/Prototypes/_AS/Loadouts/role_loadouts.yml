@@ -1,4 +1,4 @@
-﻿#region Medical
+#region Medical
 
 - type: roleLoadout
   id: JobMedic
@@ -44,7 +44,7 @@
   - ContractorEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
-  - ContractorPDA
+  - ServiceWorkerPDA
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter

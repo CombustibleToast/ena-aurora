@@ -46,6 +46,12 @@
 		{
             "name": "pda-siteworker"
         },
+		{
+            "name": "pda-internservice"
+        },
+		{
+            "name": "pda-paramedic"
+        },
         {
             "name": "id_overlay"
         },

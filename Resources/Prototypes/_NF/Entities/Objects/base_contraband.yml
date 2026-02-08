@@ -52,6 +52,14 @@
   - type: Contraband
     allowedDepartments: [ Medical ]
 
+- type: entity # Aurora's Song - added for Service
+  parent: BaseC2ContrabandUnredeemable
+  id: BaseC2ContrabandServiceUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Service ]
+
 - type: entity
   parent: BaseC2ContrabandUnredeemable
   id: BaseC2ExpeditionContraband

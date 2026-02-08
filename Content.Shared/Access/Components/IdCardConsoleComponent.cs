@@ -44,7 +44,7 @@ public sealed partial class IdCardConsoleComponent : Component
     {
         "Armory",
         "Aurora", // Aurora's Song - Changed from Frontier to Aurora and moved up
-        //"Atmospherics",
+        "Atmospherics",
         //"Bar",
         "Brig",
         "Captain",
@@ -71,8 +71,8 @@ public sealed partial class IdCardConsoleComponent : Component
         "ChiefEngineer", // Frontier: moved down, alphabetic w.r.t. "Plant Manager"
         "Prisoner", // Aurora's Song
         //"Quartermaster",
-        //"Research",
-        //"ResearchDirector",
+        "Research",
+        "ResearchDirector",
         //"Salvage",
         "Security",
         "Sergeant", // Frontier

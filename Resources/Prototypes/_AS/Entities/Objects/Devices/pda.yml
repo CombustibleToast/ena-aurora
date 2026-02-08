@@ -63,13 +63,13 @@
 #region Medical
 
 - type: entity
-  parent: [ParamedicPDA, BaseC2ContrabandMedicalUnredeemable]
+  parent: [ASBasePDA, BaseC2ContrabandMedicalUnredeemable]
   id: ASMedicPDA
   name: Medic PDA
   description: It smells like disinfectant.
   components:
   - type: Pda
-    id: MedicIDCard
+    id: ASMedicIDCard
     penSlot:
       priority: -1
       whitelist:
@@ -84,7 +84,7 @@
         !type:String
         pda-paramedic
   - type: Icon
-    sprite: _NF/Objects/Devices/pda.rsi
+    sprite: _AS/Objects/Devices/pda.rsi
     state: pda-paramedic
   - type: CartridgeLoader
     preinstalled:
@@ -95,6 +95,41 @@
     - BountyContractsCartridge
     - AstroNavCartridge
     - MedTekCartridge
+
+#region Service
+
+- type: entity
+  parent: [ASBasePDA, BaseC2ContrabandServiceUnredeemable]
+  id: ASServiceWorkerPDA
+  name: Service Worker PDA
+  description: It smells like disinfectant.
+  components:
+  - type: Pda
+    id: ASServiceWorkerIDCard
+    penSlot:
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#2a4b5b"
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-internservice
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+    state: pda-internservice
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
 
 #region SLE
 
