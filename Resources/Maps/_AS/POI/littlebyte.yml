@@ -1636,7 +1636,6 @@ entities:
           decals:
             713: -10.083823,-21.044413
             714: -8.385906,-20.929829
-    - type: SpreaderGrid
     - type: ImplicitRoof
     - type: GridAtmosphere
       version: 2
