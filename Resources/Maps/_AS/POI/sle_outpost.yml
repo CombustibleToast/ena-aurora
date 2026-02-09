@@ -2160,6 +2160,8 @@ entities:
       id: Sleo
     - type: IFF
       color: '#6690CCFF'
+    - type: SpreaderGrid
+    - type: NavMap
     - type: ImplicitRoof
 - proto: AirAlarm
   entities:
@@ -11647,7 +11649,7 @@ entities:
     - type: Transform
       pos: 15.5,-33.5
       parent: 1
-- proto: ComputerShipyardNfsd
+- proto: ComputerShipyardSLE
   entities:
   - uid: 4519
     components:

@@ -13,7 +13,7 @@
         - IdCard
     licenseName: LicenseContrabandHandling
   - type: AccessReader
-    access: [["Bailiff"], ["HeadOfSecurity"]]
+    access: [["Lieutenant"], ["HeadOfSecurity"]] # Aurora's Song - changed from Bailiff to Lieutenant
   - type: ActivatableUIRequiresAccess
   - type: ActivatableUI
     key: enum.LicenseConsoleUiKey.Key

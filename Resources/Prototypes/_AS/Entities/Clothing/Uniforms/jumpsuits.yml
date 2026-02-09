@@ -1,13 +1,4 @@
-- type: entity
-  parent: ClothingUniformBase
-  id: ClothingUniformJumpsuitSle
-  name: SLE jumpsuit
-  description: A long sleeved jumpsuit produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
-  components:
-  - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jumpsuit.rsi
-  - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jumpsuit.rsi
+#region Branded
 
 - type: entity
   parent: ClothingUniformBase
@@ -42,6 +33,41 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/cyn_suit.rsi
 
+#region SLE
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLE
+  name: SLE jumpsuit
+  description: A long-sleeved jumpsuit for SLE Officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShort
+  name: SLE short-sleeve jumpsuit
+  description: A short-sleeved jumpsuit for SLE Officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassic
+  name: SLE classic jumpsuit
+  description: A classic jumpsuit for SLE Officers. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+
 - type: entity
   parent: ClothingUniformBase
   id: ASClothingUniformJumpsuitPublicAffairsLiaison
@@ -52,3 +78,62 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
+
+#region SLE Tactical
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLETacBlack
+  name: SLE tactical jumpsuit
+  description: A tactical jumpsuit for officers in the field.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_black.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_black.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLETacGray
+  name: SLE tactical jumpsuit
+  description: A tactical jumpsuit for officers in the field.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_gray.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_gray.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLETacCamo
+  name: SLE tactical jumpsuit
+  description: A tactical jumpsuit for officers in the field.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_camo.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_camo.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLETacCream
+  name: SLE tactical jumpsuit
+  description: A tactical jumpsuit for officers in the field.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_cream.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_cream.rsi
+
+#region Command
+
+- type: entity
+  parent: ClothingUniformJumpsuitHoP
+  id: ASClothingUniformJumpsuitColonialRepresentative
+  name: colonial representative's uniform
+  description: A distinguished outfit for the frontier's colonial representative. Every detail speaks of authority and colonial administration.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/cr.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/cr.rsi

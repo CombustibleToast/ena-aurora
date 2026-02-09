@@ -1,22 +1,19 @@
-# Aurora Song - SLE (Sector Law Enforcement) backpacks
-# Prototypes for Aurora Song's SLE faction equipment
-# Original NFSD prototypes remain in _NF namespace for backward compatibility
+#region SLE
 
 - type: entity
   parent: ClothingBackpackSecurity
-  id: ASClothingBackpackSLEBrown
+  id: ASClothingBackpackSLENavy
   name: SLE backpack
   description: A sturdy backpack used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Back/Backpacks/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Back/Backpacks/sle_navy.rsi
 
 - type: entity
-  parent: ASClothingBackpackSLEBrown
-  id: ASClothingBackpackSLECream
+  parent: ASClothingBackpackSLENavy
+  id: ASClothingBackpackSLECorpsman
   name: SLE backpack
   description: A sturdy backpack used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Back/Backpacks/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
-
+    sprite: _AS/Clothing/Back/Backpacks/sle_corpsman.rsi

@@ -3,7 +3,7 @@
     "license": "CC-BY-SA-3.0",
     "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/59f2a4e10e5ba36033c9734ddebfbbdc6157472d, pda-brigmedic made by PuroSlavKing (Github) | pda-brigmedic resprited by Hülle#2562 (Discord)",
     "extra_copyright": [
-        "Resprites and recolors for NFSD to SLE by Vandanna/ Cygnall (discord/ github)"
+        "Resprites and recolors for NFSD to SLE and Aurora's Song branding by Vandanna/ Cygnall (discord/ github)"
     ],
     "size": {
         "x": 32,
@@ -36,6 +36,21 @@
         },
         {
             "name": "pda-commissioner"
+        },
+		{
+            "name": "pda-cr"
+        },
+		{
+            "name": "pda-sitemanager"
+        },
+		{
+            "name": "pda-siteworker"
+        },
+		{
+            "name": "pda-internservice"
+        },
+		{
+            "name": "pda-paramedic"
         },
         {
             "name": "id_overlay"

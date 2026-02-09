@@ -488,7 +488,7 @@
     - state: default
     - state: idbrigmedic
   - type: PresetIdCard # Frontier
-    job: Brigmedic # Frontier
+    job: Corpsman # Aurora's Song - Switched to Corpsman
 
 - type: entity
   parent: IDCardStandard
@@ -859,7 +859,7 @@
     - state: default
     - state: idseniorofficer
   - type: PresetIdCard
-    job: SeniorOfficer
+    job: Sergeant # Aurora's Song - Switched to Sergeant
 
 - type: entity
   parent: IDCardStandard

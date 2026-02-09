@@ -1,9 +1,9 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e | Resprited for mercenary, pilot and ert_mailcarrier by erhardsteinhauer (discord) and edited by Whatstone (discord), nfsd by GhostPrince and GentleButter(discord).  pirate cards and icons, idnfsddetective/contractor/plant* by Whatstone (Discord)",
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/d917f4c2a088419d5c3aec7656b7ff8cebd1822e | idintern-service by spanky-spanky (Github) | service icons darkened by frobnic8 (Discord and Github)| Resprited for mercenary, pilot and ert_mailcarrier by erhardsteinhauer (discord) and edited by Whatstone (discord), nfsd by GhostPrince and GentleButter(discord).  pirate cards and icons, idnfsddetective/contractor/plant* by Whatstone (Discord)",
   "extra_copyright": [
-        "Resprites and recolors for NFSD to SLE by Vandanna/ Cygnall (discord/ github)"
+        "Resprites and recolors for NFSD to SLE and Aurora's Song branding by Vandanna/ Cygnall (discord/ github)"
     ],
   "size": {
     "x": 32,
@@ -112,7 +112,22 @@
       "name": "idstationtrafficcontroller"
     },
     {
+      "name": "idcolonialrepresentative"
+    },
+    {
+      "name": "idsitemanager"
+    },
+    {
+      "name": "idsiteworker"
+    },
+    {
       "name": "idvalet"
+    },
+    {
+      "name": "idintern-service"
+    },
+    {
+      "name": "idparamedic"
     },
     {
       "name": "sle"

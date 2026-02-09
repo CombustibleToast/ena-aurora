@@ -1,0 +1,85 @@
+- type: entity
+  abstract: true
+  parent: NFClothingBeltStorageHolsterBase
+  id: ASClothingRigStorageHolsterBase
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ItemSlots # DeltaV - add sidearm slot
+    slots:
+      holster:
+        name: clothing-belt-sidearm
+        whitelist:
+          tags:
+          - Sidearm
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
+    mapLayers:
+      baton_rig:
+        whitelist:
+          components:
+          - Stunbaton
+      gasgrenade:
+        whitelist:
+          tags:
+            - Grenade
+      slp_rig:
+        whitelist:
+          tags:
+          - Sidearm
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
+
+- type: entity
+  abstract: true
+  parent: ASClothingRigStorageHolsterBase
+  id: ASClothingSRigStorageHolsterMedkitBase
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ItemSlots # add medkit slot
+    slots:
+      holster:
+        name: clothing-belt-sidearm
+        priority: -1 # always the first thing out
+        whitelist:
+          tags:
+          - Sidearm
+        insertOnInteract: true
+      medkit:
+        name: clothing-belt-medkit
+        whitelist:
+          tags:
+          - Medkit
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper # add stowed medkit sprite
+    mapLayers:
+      baton_rig:
+        whitelist:
+          components:
+          - Stunbaton
+      gasgrenade:
+        whitelist:
+          tags:
+            - Grenade
+      slp_rig:
+        whitelist:
+          tags:
+          - Sidearm
+      medkit_rig:
+        whitelist:
+          tags:
+          - Medkit
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
+      medkit: !type:ContainerSlot {}

@@ -41,3 +41,59 @@
   - type: Sprite
     sprite: _AS/Objects/Misc/stamps.rsi
     state: stamp-pal
+
+#region Command
+
+- type: entity
+  parent: RubberStampBase
+  id: ASRubberStampColonialRepresentative
+  name: colonial representative's rubber stamp
+  description: A rubber stamp for stamping important colonial documents.
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-colonial-representative
+    stampState: "paper_stamp-as-colonial-representative"
+    stampedColor: "#1C4D8D"
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-cr
+  - type: Item
+    sprite: _AS/Objects/Misc/stamps.rsi
+
+#region Engineering
+
+- type: entity
+  parent: [RubberStampBase, BaseCommandContraband]
+  id: ASRubberStampSiteManager
+  name: site manager's rubber stamp
+  description: A rubber stamp for stamping important engineering documents.
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-site-manager
+    stampState: "paper_stamp-as-site-manager"
+    stampedColor: "#C7C7C7"
+    protected: True
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-site-manager
+  - type: Item
+    sprite: _AS/Objects/Misc/stamps.rsi
+
+- type: entity
+  parent: RubberStampBase
+  id: ASRubberStampSiteWorker
+  name: site worker's rubber stamp
+  description: A rubber stamp for stamping engineering work orders.
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-site-worker
+    stampState: "paper_stamp-as-site-worker"
+    stampedColor: "#959595"
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-site-worker
+  - type: Item
+    sprite: _AS/Objects/Misc/stamps.rsi

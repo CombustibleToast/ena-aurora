@@ -1136,10 +1136,10 @@
   parent: NFBaseBeltRecipe
   result: NFPouchPrivateSecurity
 
-- type: latheRecipe
-  id: NFPouchNfsd
-  parent: NFBaseBeltRecipe
-  result: NFPouchNfsd
+# - type: latheRecipe # Removed in favor of SLE pouch
+#   id: NFPouchNfsd
+#   parent: NFBaseBeltRecipe
+#   result: NFPouchNfsd
 
 - type: latheRecipe
   id: NFPouchJanitor

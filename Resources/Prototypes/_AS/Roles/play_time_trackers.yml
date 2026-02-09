@@ -3,3 +3,9 @@
 
 - type: playTimeTracker
   id: JobService
+
+- type: playTimeTracker
+  id: JobSiteManager
+
+- type: playTimeTracker
+  id: JobSiteWorker
