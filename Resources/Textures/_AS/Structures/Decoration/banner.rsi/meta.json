@@ -11,6 +11,18 @@
       "name": "sle-banner"
     },
     {
+      "name": "as-banner"
+    },
+    {
+      "name": "bus-banner"
+    },
+    {
+      "name": "engisci-banner"
+    },
+    {
+      "name": "merc-banner"
+    },
+    {
       "name": "sle-flag"
     }
   ]

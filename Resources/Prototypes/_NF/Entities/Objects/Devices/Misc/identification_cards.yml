@@ -64,7 +64,7 @@
   name: NFSD cadet ID card
   components:
   - type: PresetIdCard
-    job: Cadet
+    job: Rookie
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -81,7 +81,7 @@
   name: NFSD deputy ID card
   components:
   - type: PresetIdCard
-    job: Deputy
+    job: Officer
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -94,7 +94,7 @@
   name: NFSD brigmedic ID card
   components:
   - type: PresetIdCard
-    job: Brigmedic
+    job: Corpsman
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -107,7 +107,7 @@
   name: NFSD sergeant ID card
   components:
   - type: PresetIdCard
-    job: SeniorOfficer
+    job: Sergeant
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -120,7 +120,7 @@
   name: NFSD bailiff ID card
   components:
   - type: PresetIdCard
-    job: Bailiff
+    job: Lieutenant
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -133,7 +133,7 @@
   name: NFSD sheriff ID card
   components:
   - type: PresetIdCard
-    job: Sheriff
+    job: Commissioner
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -148,7 +148,7 @@
   name: NFSD detective ID card
   components:
   - type: PresetIdCard
-    job: NFDetective
+    job: ASDetective
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -182,7 +182,7 @@
   name: station representative ID card
   components:
   - type: PresetIdCard
-    job: StationRepresentative
+    job: ColonialRepresentative # Aurora Song's - changed from StationRepresentative to ColonialRepresentative
 
 - type: entity
   parent: ValetIDCard
@@ -286,37 +286,37 @@
   - type: Item
     heldPrefix: silver
 
-- type: entity
-  parent: IDCardStandard
-  id: PlantTechnicianIDCard
-  name: plant technician ID card
-  components:
-  - type: PresetIdCard
-    job: PlantTechnician
-  - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
-    layers:
-    - state: default
-    - state: idplanttechnician
-  - type: Clothing
-    sprite: _NF/Objects/Misc/id_cards.rsi
+#- type: entity
+#  parent: IDCardStandard
+#  id: PlantTechnicianIDCard
+#  name: plant technician ID card
+#  components:
+#  - type: PresetIdCard
+#    job: PlantTechnician
+#  - type: Sprite
+#    sprite: _NF/Objects/Misc/id_cards.rsi
+#    layers:
+#    - state: default
+#    - state: idplanttechnician
+#  - type: Clothing
+#    sprite: _NF/Objects/Misc/id_cards.rsi
 
-- type: entity
-  parent: [IDCardStandard, BaseCommandContraband]
-  id: PlantManagerIDCard
-  name: plant manager ID card
-  components:
-  - type: PresetIdCard
-    job: PlantManager
-  - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
-    layers:
-    - state: silver
-    - state: idplantmanager
-  - type: Clothing
-    sprite: _NF/Objects/Misc/id_cards.rsi
-  - type: Item
-    heldPrefix: silver
+#- type: entity
+#  parent: [IDCardStandard, BaseCommandContraband]
+#  id: PlantManagerIDCard
+#  name: plant manager ID card
+#  components:
+#  - type: PresetIdCard
+#    job: PlantManager
+#  - type: Sprite
+#    sprite: _NF/Objects/Misc/id_cards.rsi
+#    layers:
+#    - state: silver
+#    - state: idplantmanager
+#  - type: Clothing
+#    sprite: _NF/Objects/Misc/id_cards.rsi
+#  - type: Item
+#    heldPrefix: silver
 
 # Cats
 - type: entity
@@ -328,12 +328,18 @@
     name: Clippy
 
 - type: entity
-  parent: PlantTechnicianIDCard
+  parent: IDCardStandard
   id: CurieIDCard
   name: curie ID card
   components:
   - type: PresetIdCard
     name: Curie
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
 
 - type: entity
   parent: NFPirateFirstMateIDCard

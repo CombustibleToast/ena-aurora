@@ -65,10 +65,7 @@
 #           - SecurityUplink
 #     - !type:BuyerJobCondition
 #       whitelist:
-#         - Bailiff
-#         - SeniorOfficer
-#         - Sheriff
-
+#         - Lieutenant`n#         - Sergeant`n#         - Commissioner`n
 # - type: listing
 #   id: UplinkSecurityCombatHardsuit
 #   name:  uplink-security-hardsuit-combat-name
@@ -102,10 +99,7 @@
 #           - SecurityUplink
 #     - !type:BuyerJobCondition
 #       whitelist:
-#         - Bailiff
-#         - SeniorOfficer
-#         - Sheriff
-
+#         - Lieutenant`n#         - Sergeant`n#         - Commissioner`n
 # - type: listing
 #   id: UplinkSecurityHardsuitSheriff
 #   name:  uplink-security-hardsuit-sheriff-name
@@ -123,8 +117,7 @@
 #           - SecurityUplink
 #     - !type:BuyerJobCondition
 #       whitelist:
-#         - Sheriff
-
+#         - Commissioner`n
 # - type: listing
 #   id: UplinkSecurityHardsuitSyndieReverseEngineered
 #   name:  uplink-security-hardsuit-experimental-name
@@ -142,8 +135,7 @@
 #           - SecurityUplink
 #     - !type:BuyerJobCondition
 #       whitelist:
-#         - Sheriff
-
+#         - Commissioner`n
 # Begin Aurora Song
 - type: listing
   id: UplinkSleCombatHardsuit
@@ -230,10 +222,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityStunbaton
@@ -283,10 +275,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityLecter
@@ -304,10 +296,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityVulcan
@@ -325,10 +317,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityLaserCarbine
@@ -346,10 +338,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityLaserCannon
@@ -367,8 +359,8 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityDisablerSMG
@@ -386,10 +378,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityWT550
@@ -407,9 +399,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityEnergyGun
@@ -427,9 +419,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityEmpRpg
@@ -447,8 +439,8 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner
 
 #region utililty
 - type: listing
@@ -515,8 +507,8 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityKey
@@ -534,8 +526,8 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityEmpRocket
@@ -553,8 +545,8 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityThrusterKit
@@ -572,10 +564,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 #region magazines
 - type: listing
@@ -610,10 +602,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityMagazineRifle30Overpressure
@@ -631,10 +623,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityMagazineSubMachineGunTopMounted35Overpressure
@@ -652,9 +644,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityMagazineSubMachineGunTopMounted35Rubber
@@ -672,9 +664,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityPistolMagazineRubber
@@ -708,10 +700,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurity30RifleMagazineRubber
@@ -729,10 +721,10 @@
         tags:
         - SecurityUplink
     - !type:BuyerJobCondition
-        whitelist:
-          - Bailiff
-          - SeniorOfficer
-          - Sheriff
+        whitelist: # Aurora's Song - Switched NFSD to SLE roles
+          - Lieutenant
+          - Sergeant
+          - Commissioner
 
 - type: listing
   id: UplinkSecurityHypo
@@ -750,9 +742,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Brigmedic
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Corpsman
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityAmbuzol
@@ -770,9 +762,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Brigmedic
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Corpsman
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityMedkit
@@ -790,9 +782,9 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Brigmedic
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Corpsman
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityInspector
@@ -858,10 +850,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityHammer
@@ -879,10 +871,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityTeleShield
@@ -916,17 +908,17 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecuritySwat
   name:  uplink-security-swat-name
   description: uplink-security-swat-desc
-  productEntity: ASClothingMaskGasSLESheriff
-  icon: { sprite: _AS/Clothing/Mask/sle_sheriff.rsi, state: icon}
+  productEntity: ASClothingMaskGasSLECommissioner
+  icon: { sprite: _AS/Clothing/Mask/sle_commissioner.rsi, state: icon}
   cost:
     FrontierUplinkCoin: 3
   categories:
@@ -937,10 +929,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecuritySpeedloader
@@ -1054,10 +1046,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecuritySmokeGrenadeBox
@@ -1139,10 +1131,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityHoverbikeNfsdFlatpack
@@ -1160,10 +1152,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityLethalArmory
@@ -1181,17 +1173,17 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityTrackingBundle
   name: uplink-security-trackingdart-bundle-name
   description: uplink-security-trackingdart-bundle-desc
   productEntity: ASClothingBackpackDuffelSLETrackingBundle
-  icon: { sprite: _AS/Clothing/Back/Duffels/sle_brown.rsi, state: icon }
+  icon: { sprite: _AS/Clothing/Back/Duffels/sle_navy.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
   categories:
@@ -1207,7 +1199,7 @@
   name: uplink-security-emp-bundle-name
   description: uplink-security-emp-bundle-desc
   productEntity: ASClothingBackpackDuffelSLEEmpBundle
-  icon: { sprite: _AS/Clothing/Back/Duffels/sle_brown.rsi, state: icon }
+  icon: { sprite: _AS/Clothing/Back/Duffels/sle_navy.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
   categories:
@@ -1234,10 +1226,10 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Bailiff
-        - SeniorOfficer
-        - Sheriff
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
 
 - type: listing
   id: UplinkSecurityEmpGrenadeAmmo
@@ -1303,5 +1295,5 @@
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist:
-        - Sheriff
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner

@@ -9316,7 +9316,7 @@ entities:
     - type: Transform
       pos: 12.810785,16.716284
       parent: 2
-- proto: ASBoxFolderSr
+- proto: ASBoxFolderCR
   entities:
   - uid: 487
     components:
@@ -22859,7 +22859,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,15.5
       parent: 2
-- proto: ComputerShipyardSr
+- proto: ASComputerShipyardCR
   entities:
   - uid: 2864
     components:
@@ -26857,7 +26857,7 @@ entities:
     - type: Transform
       pos: 50.5,10.5
       parent: 2
-- proto: DresserStationRepresentativeFilled
+- proto: ASDresserColonialRepresentativeFilled
   entities:
   - uid: 3475
     components:
@@ -46202,7 +46202,7 @@ entities:
     - type: Transform
       pos: 40.502724,18.50681
       parent: 2
-- proto: LockerStationRepresentativeFilled
+- proto: ASLockerColonialRepresentativeFilled
   entities:
   - uid: 5608
     components:
@@ -53083,7 +53083,7 @@ entities:
     - type: Transform
       pos: 38.5,5.5
       parent: 2
-- proto: SpawnPointStationRepresentative
+- proto: SpawnPointColonialRepresentative
   entities:
   - uid: 6599
     components:

@@ -1,36 +1,37 @@
+#region SLE
+
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtSle
-  name: SLE jumpskirt
-  description: A long sleeved jumpskirt produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
-  components:
-  - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
-  - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
-
-# Aurora Song - Additional SLE jumpskirt variants using NFSD sprites
-- type: entity
-  parent: ClothingUniformSkirtBase
   id: ASClothingUniformJumpskirtSLE
   name: SLE jumpskirt
-  description: A long sleeved jumpskirt produced for Sector Law Enforcement officers.
+  description: A long-sleeved jumpskirt for SLE Officers.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ASClothingUniformJumpskirtSLEShort
-  name: SLE jumpskirt (short)
-  description: A short sleeved jumpskirt produced for Sector Law Enforcement officers.
+  name: SLE short-sleeve jumpskirt
+  description: A short-sleeved jumpskirt for SLE Officers.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassic
+  name: SLE classic jumpskirt
+  description: A classic jumpsuit for SLE Officers. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -42,3 +43,16 @@
     sprite: _AS/Clothing/Uniforms/Jumpskirt/public_affairs.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpskirt/public_affairs.rsi
+
+#region Command
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtColonialRepresentative
+  name: colonial representative's jumpskirt
+  description: A distinguished skirt-suit for the frontier's colonial representative. Every detail speaks of authority and colonial administration.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/cr.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/cr.rsi

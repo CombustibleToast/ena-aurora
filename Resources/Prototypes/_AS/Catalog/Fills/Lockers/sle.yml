@@ -73,10 +73,10 @@
   id: FillASLockerSLECommissioner
   table: !type:AllSelector
     children:
-    - id: ClothingHeadHatBeretCommissioner
-    - id: ASClothingOuterCoatSLEFormalSheriff
+    - id: ASClothingHeadHatBeretCommissioner
+    - id: ASClothingOuterCoatSLEFormalCommissioner
     - id: ASClothingHeadsetSLEOrangeCommon
-    - id: ASClothingNeckSLEBadgeSheriff
+    - id: ASClothingNeckSLEBadgeCommissioner
     - id: ASCommissionerIDCard
     - id: BoxHandcuff
     - id: CommsComputerCircuitboard

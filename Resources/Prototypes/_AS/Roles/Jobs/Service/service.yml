@@ -1,4 +1,4 @@
-﻿- type: job
+- type: job
   id: Service
   name: job-name-service-worker
   description: job-description-Service
@@ -30,7 +30,8 @@
   id: ServiceGear
   storage:
     back:
-    - EncryptionKeyService # Frontier
+    - EncryptionKeyService
+    - ShipVoucherAuroraService
 
 - type: chameleonOutfit
   id: ServiceChameleonOutfit

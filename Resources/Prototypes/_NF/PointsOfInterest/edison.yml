@@ -42,5 +42,5 @@
           lobbySortOrder: 5
         - type: StationJobs
           availableJobs:
-            PlantManager: [ 1, 1 ]
-            PlantTechnician: [ 0, 0 ]
+            SiteManager: [ 1, 1 ]
+            SiteWorker: [ 0, 0 ]

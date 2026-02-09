@@ -33,6 +33,12 @@
         },
         {
             "name": "aspublicaffairsliaison"
+        },
+        {
+            "name": "siteworker"
+        },
+        {
+            "name": "sitemanager"
         }
     ]
 }

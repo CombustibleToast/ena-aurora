@@ -45,4 +45,5 @@
     whitelist:
       tags:
       - NFBlueprintNfsdTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient
