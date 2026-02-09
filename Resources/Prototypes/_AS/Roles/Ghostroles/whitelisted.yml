@@ -1,0 +1,8 @@
+- type: ghostRole
+  id: AIShipmind
+  name: ghost-role-information-Shipmind-core
+  description: ghost-role-information-Shipmind-core-description
+  rules: ghost-role-information-Shipmind-core-rules
+  entityPrototype: StationAiBrainShipmind
+  whitelisted: true
+  reregisterOnGhost: true

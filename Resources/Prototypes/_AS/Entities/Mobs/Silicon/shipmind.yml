@@ -85,10 +85,82 @@
 
 - type: entity
   id: StationAiBrainShipmind
-  parent: StationAiBrain
+  parent: BaseItem
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
+  - type: BlockMovement
+    blockInteraction: false
+  - type: SiliconLawBound
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+        requireInputValidation: false
+  - type: ComplexInteraction
+  - type: Actions
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+  - type: Eye
+    drawFov: false
+  - type: Examiner
+  - type: InputMover
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Tag
+    tags:
+    - HideContextMenu
+    - StationAi
+    - NoConsoleSound
+    - CannotSuicide
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true
+  - type: StationAiCustomization
+    protoIds:
+      StationAiCoreIconography: StationAiIconAi
+      StationAiHolograms: StationAiHologramFemale
   - type: Sprite
+    sprite: Objects/Specific/Robotics/mmi.rsi
+    layers:
+    - state: posibrain
+      map: ["base"]
+    visible: false
+  - type: Input
+    context: human
+  - type: Organ
+  - type: Brain
+  - type: BorgBrain
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+  - type: NameIdentifier
+    group: PositronicBrain
+  - type: DoAfter
+  - type: TypingIndicator
+    proto: robot
+  - type: MobState
+    allowedStates:
+    - Alive
+  - type: Appearance
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: ChangeVoiceInContainer
+    whitelist:
+      components:
+      - SecretStash
   - type: SiliconLawProvider
     laws: shipmind
   - type: GhostRole
