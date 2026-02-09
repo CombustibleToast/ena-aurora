@@ -5864,3 +5864,12 @@ Entries:
   id: 8948
   time: '2026-02-09T14:28:36.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/719
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Being whitelisted for the server does not mean you are whitelisted for
+        all roles.
+  id: 8949
+  time: '2026-02-09T17:55:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/720
