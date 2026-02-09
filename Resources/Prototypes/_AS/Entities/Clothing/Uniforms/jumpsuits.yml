@@ -33,7 +33,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/cyn_suit.rsi
 
-#region SLE
+#region SLE Base
 
 - type: entity
   parent: ClothingUniformBase
@@ -78,6 +78,324 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
+
+#region SLE Rookie
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLERookie
+  name: SLE jumpsuit
+  suffix: Rookie
+  description: A long-sleeved jumpsuit for SLE Rookies.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-rke
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShortRookie
+  name: SLE short-sleeve jumpsuit
+  suffix: Rookie
+  description: A short-sleeved jumpsuit for SLE Rookies.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-rke
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassicRookie
+  name: SLE classic jumpsuit
+  suffix: Rookie
+  description: A classic jumpsuit for SLE Rookies. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-rke
+
+#region SLE Officer
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEOfficer
+  name: SLE jumpsuit
+  suffix: Officer
+  description: A long-sleeved jumpsuit for SLE Officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-off
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShortOfficer
+  name: SLE short-sleeve jumpsuit
+  suffix: Officer
+  description: A short-sleeved jumpsuit for SLE Officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-off
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassicOfficer
+  name: SLE classic jumpsuit
+  suffix: Officer
+  description: A classic jumpsuit for SLE Officers. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-off
+
+#region SLE Sergeant
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLESergeant
+  name: SLE jumpsuit
+  suffix: Sergeant
+  description: A long-sleeved jumpsuit for SLE Sergeants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-sgt
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShortSergeant
+  name: SLE short-sleeve jumpsuit
+  suffix: Sergeant
+  description: A short-sleeved jumpsuit for SLE Sergeants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-sgt
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassicSergeant
+  name: SLE classic jumpsuit
+  suffix: Sergeant
+  description: A classic jumpsuit for SLE Sergeants. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-sgt
+
+#region SLE Lieutenant
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLELieutenant
+  name: SLE jumpsuit
+  suffix: Lieutenant
+  description: A long-sleeved jumpsuit for SLE Lieutenants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-lt
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShortLieutenant
+  name: SLE short-sleeve jumpsuit
+  suffix: Lieutenant
+  description: A short-sleeved jumpsuit for SLE Lieutenants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-lt
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassicLieutenant
+  name: SLE classic jumpsuit
+  suffix: Lieutenant
+  description: A classic jumpsuit for SLE Lieutenants. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-lt
+
+#region SLE Corpsman
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLECorpsman
+  name: SLE jumpsuit
+  suffix: Corpsman
+  description: A long-sleeved jumpsuit for SLE Corpsmen.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-crp
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShortCorpsman
+  name: SLE short-sleeve jumpsuit
+  suffix: Corpsman
+  description: A short-sleeved jumpsuit for SLE Corpsmen.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-crp
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassicCorpsman
+  name: SLE classic jumpsuit
+  suffix: Corpsman
+  description: A classic jumpsuit for SLE Corpsmen. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-crp
+
+#region SLE Commissioner
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLECommissioner
+  name: SLE jumpsuit
+  suffix: Commissioner
+  description: A long-sleeved jumpsuit for SLE Commissioners.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-com
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEShortCommissioner
+  name: SLE short-sleeve jumpsuit
+  suffix: Commissioner
+  description: A short-sleeved jumpsuit for SLE Commissioners.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-com
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitSLEClassicCommissioner
+  name: SLE classic jumpsuit
+  suffix: Commissioner
+  description: A classic jumpsuit for SLE Commissioners. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+  - type: Clothing
+    clothingVisuals:
+      innerClothing:
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
+        state: equipped-INNERCLOTHING
+      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
+        state: decal-com
 
 #region SLE Tactical
 
