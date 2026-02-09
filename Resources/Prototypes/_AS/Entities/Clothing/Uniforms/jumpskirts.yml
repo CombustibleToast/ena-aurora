@@ -56,12 +56,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-rke
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-rke
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -73,12 +72,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-rke
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-rke
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -90,12 +88,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-rke
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-rke
 
 #region SLE Officer
 
@@ -109,12 +106,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-off
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-off
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -126,12 +122,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-off
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-off
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -143,12 +138,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-off
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-off
 
 #region SLE Sergeant
 
@@ -162,12 +156,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-sgt
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-sgt
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -179,12 +172,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-sgt
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-sgt
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -196,12 +188,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-sgt
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-sgt
 
 #region SLE Lieutenant
 
@@ -215,12 +206,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-lt
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-lt
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -232,12 +222,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-lt
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-lt
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -249,12 +238,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-lt
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-lt
 
 #region SLE Corpsman
 
@@ -268,12 +256,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-crp
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-crp
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -285,12 +272,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-crp
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-crp
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -302,12 +288,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-crp
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-crp
 
 #region SLE Commissioner
 
@@ -321,16 +306,15 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-com
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-com
 
 - type: entity
   parent: ClothingUniformSkirtBase
-  id: ASClothingUniformJumpskirtSLEShortOfficer
+  id: ASClothingUniformJumpskirtSLEShortCommissioner
   name: SLE short-sleeve jumpskirt
   suffix: Commissioner
   description: A short-sleeved jumpskirt for SLE Commissioners.
@@ -338,12 +322,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-com
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-com
 
 - type: entity
   parent: ClothingUniformSkirtBase
@@ -355,12 +338,11 @@
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
   - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
     clothingVisuals:
-      innerClothing:
-      - sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
-        state: equipped-INNERCLOTHING
-      - sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_decals.rsi
-        state: decal-com
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-com
 
 #region Command
 
