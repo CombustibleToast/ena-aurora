@@ -1,4 +1,4 @@
-#Aurora's Song - Change Frontier Outpost to the central station, Frontier to Aurora, NFSD to SLE
+#Aurora's Song - Change Frontier Outpost to the central station, Frontier to Aurora, NFSD to SLE, SR to CR, Sheriff to Commissioner
 nf-tips-dataset-1 = If you're on fire, you can click the alert on the right of your screen to stop, drop, and roll.
 nf-tips-dataset-2 = You can view and edit all keybindings used in-game at any time through the Options menu.
 nf-tips-dataset-3 = You can access the in-game guidebook through the escape menu, or by pressing Numpad 0 by default.
@@ -92,7 +92,7 @@ nf-tips-dataset-89 = If you accidentally left the game for a long time, you can 
 nf-tips-dataset-90 = If you see a person who's fallen SSD, make sure to drag them to cryo and shove them into a cryopod. It will prevent them from being robbed, and will allow the player to return to the body later!
 nf-tips-dataset-91 = Watch out for food trucks such as the Skipper or the McCargo - they can offer delicious food for a reasonable price!
 nf-tips-dataset-92 = Meals cooked by chefs are more filling, more flavorful, and in some cases can even boost your movement speed for a short time!
-nf-tips-dataset-93 = Each ID card can have a shuttle attached to it. If you need to purchase an additional shuttle, you can ask your local SR for another ID!
+nf-tips-dataset-93 = Each ID card can have a shuttle attached to it. If you need to purchase an additional shuttle, you can ask your local CR for another ID!
 nf-tips-dataset-94 = The Station Representative can rename your shuttle! Usually it's enough to hand your ID and ask them to do it.
 nf-tips-dataset-95 = If your ship has a big crew, use specific radio keys (check the AstroVend) or HandiComms to talk with your crewmates.
 nf-tips-dataset-96 = HandiComms work on multiple frequencies, and across extremely long distances.
@@ -109,7 +109,7 @@ nf-tips-dataset-106 = SLE has access to long range radar! If you're an outlaw, w
 nf-tips-dataset-107 = Large ships like the Crescent can act as motherships. They tend to have shipyard consoles, which allow you to purchase and sell other smaller ships!
 nf-tips-dataset-108 = Remember to read Space Law, it comes with your PDA! It contains some useful info, for example: you can start a mutiny if your captain is found to be in violation of the Space Law.
 nf-tips-dataset-109 = Your PDA has a pre-installed news application. Check it out, perhaps the local reporter has posted some interesting news?
-nf-tips-dataset-110 = There's a special app installed in your PDA, which allows you to see posted bounties. If you can fulfill one of them, you can ask the local SR or Sheriff for a reward!
+nf-tips-dataset-110 = There's a special app installed in your PDA, which allows you to see posted bounties. If you can fulfill one of them, you can ask the local CR or Commissioner for a reward!
 nf-tips-dataset-111 = Remember, the central station has a 200m wide safe-zone. It's forbidden to engage in antagonist behavior or damage property in any way within that limit!
 nf-tips-dataset-112 = If you're using an IFF console, remember to turn your IFF on within 500m of Frontier, or you'll risk facing SLE on your ship!
 nf-tips-dataset-113 = Going on an expedition alone is very risky! Make sure to always have a crewmate to save you in case you get ambushed by a xeno queen.

@@ -1,5 +1,5 @@
 job-description-medical = Follow the DoC's orders, revive downed citizens, and mix chems for the good of the sector!
-job-description-Service = Work on the central station and follow the SR's orders!
+job-description-Service = Work on the central station and follow the CR's orders!
 
 # SLE Jobs
 job-description-lieutenant = Patrol your assigned vessel, ensure that no one is stealing from the armory, and make sure that all prisoners are processed and let out when their time is up.
