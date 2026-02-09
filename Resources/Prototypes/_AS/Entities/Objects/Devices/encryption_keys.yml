@@ -2,7 +2,7 @@
   parent: [EncryptionKey, RecyclableItemDeviceTiny]
   id: EncryptionKeyShipboard
   name: shipboard encryption key
-  description: An encryption key for the shipboard channel. Limited to a 100 meters range.
+  description: An encryption key for the shipboard channel. Limited to a 60 meters range.
   components:
   - type: EncryptionKey
     channels:
