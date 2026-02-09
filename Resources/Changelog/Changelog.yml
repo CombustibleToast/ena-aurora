@@ -5850,3 +5850,10 @@ Entries:
   id: 8946
   time: '2026-02-09T08:21:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/715
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: shipboard desc to 60, color hex to beige
+  id: 8947
+  time: '2026-02-09T11:36:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/718
