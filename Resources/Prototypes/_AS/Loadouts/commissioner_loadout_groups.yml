@@ -9,14 +9,7 @@
   - CommissionerClothingUniformJumpskirtSLEShort
   - CommissionerClothingUniformJumpsuitSLEClassic
   - CommissionerClothingUniformJumpskirtSLEClassic
-  fallbacks:
-  - CommissionerClothingUniformJumpsuitCommissioner
-  - CommissionerClothingUniformJumpsuitSLE
-  - CommissionerClothingUniformJumpskirtSLE
-  - CommissionerClothingUniformJumpsuitSLEShort
-  - CommissionerClothingUniformJumpskirtSLEShort
-  - CommissionerClothingUniformJumpsuitSLEClassic
-  - CommissionerClothingUniformJumpskirtSLEClassic
+
 
 - type: loadoutGroup
   id: CommissionerOuterClothing

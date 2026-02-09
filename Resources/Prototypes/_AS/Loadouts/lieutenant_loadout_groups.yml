@@ -9,14 +9,6 @@
   - LieutenantClothingUniformJumpskirtSLEShort
   - LieutenantClothingUniformJumpsuitSLEClassic
   - LieutenantClothingUniformJumpskirtSLEClassic
-  fallbacks:
-  - LieutenantClothingUniformJumpsuitLieutenant
-  - LieutenantClothingUniformJumpsuitSLE
-  - LieutenantClothingUniformJumpskirtSLE
-  - LieutenantClothingUniformJumpsuitSLEShort
-  - LieutenantClothingUniformJumpskirtSLEShort
-  - LieutenantClothingUniformJumpsuitSLEClassic
-  - LieutenantClothingUniformJumpskirtSLEClassic
 
 - type: loadoutGroup
   id: LieutenantOuterClothing

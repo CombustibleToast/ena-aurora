@@ -8,13 +8,6 @@
   - SergeantClothingUniformJumpskirtSLEShort
   - SergeantClothingUniformJumpsuitSLEClassic
   - SergeantClothingUniformJumpskirtSLEClassic
-  fallbacks:
-  - SergeantClothingUniformJumpsuitSLE
-  - SergeantClothingUniformJumpskirtSLE
-  - SergeantClothingUniformJumpsuitSLEShort
-  - SergeantClothingUniformJumpskirtSLEShort
-  - SergeantClothingUniformJumpsuitSLEClassic
-  - SergeantClothingUniformJumpskirtSLEClassic
 
 - type: loadoutGroup
   id: SergeantOuterClothing

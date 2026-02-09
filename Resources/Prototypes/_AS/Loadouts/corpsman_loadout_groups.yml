@@ -8,13 +8,6 @@
   - CorpsmanClothingUniformJumpskirtSLEShort
   - CorpsmanClothingUniformJumpsuitSLEClassic
   - CorpsmanClothingUniformJumpskirtSLEClassic
-  fallbacks:
-  - CorpsmanClothingUniformJumpsuitSLE
-  - CorpsmanClothingUniformJumpskirtSLE
-  - CorpsmanClothingUniformJumpsuitSLEShort
-  - CorpsmanClothingUniformJumpskirtSLEShort
-  - CorpsmanClothingUniformJumpsuitSLEClassic
-  - CorpsmanClothingUniformJumpskirtSLEClassic
 
 - type: loadoutGroup
   id: CorpsmanOuterClothing

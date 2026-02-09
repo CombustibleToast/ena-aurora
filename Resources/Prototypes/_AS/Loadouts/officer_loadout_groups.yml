@@ -8,13 +8,6 @@
   - OfficerClothingUniformJumpskirtSLEShort
   - OfficerClothingUniformJumpsuitSLEClassic
   - OfficerClothingUniformJumpskirtSLEClassic
-  fallbacks:
-  - OfficerClothingUniformJumpsuitSLE
-  - OfficerClothingUniformJumpskirtSLE
-  - OfficerClothingUniformJumpsuitSLEShort
-  - OfficerClothingUniformJumpskirtSLEShort
-  - OfficerClothingUniformJumpsuitSLEClassic
-  - OfficerClothingUniformJumpskirtSLEClassic
 
 - type: loadoutGroup
   id: OfficerOuterClothing

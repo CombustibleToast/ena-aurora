@@ -6,11 +6,6 @@
   - RookieClothingUniformJumpskirtSLE
   - RookieClothingUniformJumpsuitSLEShort
   - RookieClothingUniformJumpskirtSLEShort
-  fallbacks:
-  - RookieClothingUniformJumpsuitSLE
-  - RookieClothingUniformJumpskirtSLE
-  - RookieClothingUniformJumpsuitSLEShort
-  - RookieClothingUniformJumpskirtSLEShort
 
 - type: loadoutGroup
   id: RookieOuterClothing
