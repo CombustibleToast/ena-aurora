@@ -55,12 +55,12 @@ public sealed partial class DepartmentWhitelistPanel : PanelContainer
     // Frontier: global whitelist handling
     private void OnButtonPressed(ProtoId<JobPrototype> thisJob, CheckBox button) // AS: Removing global whitelists from role whitelist checks
     {
-        OnSetJob?.Invoke(thisJob, button.Pressed);
+        OnSetJob?.Invoke(thisJob, button.Pressed); // AS: Removing global whitelists from role whitelist checks
     }
 
     private void OnDepartmentPressed(DepartmentPrototype department, IPrototypeManager proto, HashSet<ProtoId<JobPrototype>> whitelists) // AS: Removing global whitelists from role whitelist checks
     {
-
+        // AS: Removing global whitelists from role whitelist checks
         foreach (var id in department.Roles)
         {
             // only request to whitelist roles that aren't already whitelisted, and vice versa - Frontier: roles must be whitelisted

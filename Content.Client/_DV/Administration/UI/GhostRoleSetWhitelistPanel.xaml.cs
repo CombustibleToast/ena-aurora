@@ -43,6 +43,7 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
 
     private void OnDepartmentPressed(List<ProtoId<GhostRolePrototype>> ghostRoleList, HashSet<ProtoId<GhostRolePrototype>> whitelists) // AS: Removing global whitelists from role whitelist checks
     {
+        // AS: Removing global whitelists from role whitelist checks
         foreach (var id in ghostRoleList)
         {
             // only request to whitelist roles that aren't already whitelisted, and vice versa

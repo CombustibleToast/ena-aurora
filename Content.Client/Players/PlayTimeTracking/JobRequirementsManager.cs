@@ -102,7 +102,16 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         }
 
         if (!CheckWhitelist(job, out reason))
+        {
+            if (!CheckRoleRequirements(job, profile, out var timeReq)) // AS: Make it show time reqs alongside whitelist req
+            {
+                reason.PushNewline();
+                reason.AddMarkupPermissive(Loc.GetString("role-requirement-necessary"));
+                reason.PushNewline();
+                reason.AddMarkupPermissive(timeReq.ToMarkup());
+            }
             return false;
+        }
 
         var player = _playerManager.LocalSession;
         if (player == null)
