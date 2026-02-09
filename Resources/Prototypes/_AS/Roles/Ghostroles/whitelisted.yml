@@ -5,4 +5,3 @@
   rules: ghost-role-information-Shipmind-core-rules
   entityPrototype: StationAiBrainShipmind
   whitelisted: true
-  reregisterOnGhost: true
