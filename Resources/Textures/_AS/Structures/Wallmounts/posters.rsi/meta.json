@@ -9,6 +9,9 @@
     "states": [
         {
             "name": "as_poster_sle_pinpointer"
+        },
+        {
+            "name": "as_poster_aurora"
         }
     ]
 }

@@ -25,6 +25,19 @@
     node: BannerSecurityNode
 
 - type: entity
+  id: ASBannerAS2
+  parent: BannerBase
+  name: Aurora Sector banner
+  description: A banner proudly representing the Aurora Sector.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: as-banner-2
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
   id: ASBannerBus
   parent: BannerBase
   name: Bus banner
