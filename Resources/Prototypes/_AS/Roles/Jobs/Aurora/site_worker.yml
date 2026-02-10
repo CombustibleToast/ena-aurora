@@ -6,9 +6,9 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 43200 # 12 hrs
-    - !type:RoleTimeRequirement
-      role: JobStationEngineer
-      time: 3600 # 1 hr as station engineer
+ #   - !type:RoleTimeRequirement
+ #     role: JobStationEngineer
+ #     time: 3600 # 1 hr as station engineer
   startingGear: SiteWorkerGear
   alwaysUseSpawner: true
   icon: "JobIconSiteWorker"

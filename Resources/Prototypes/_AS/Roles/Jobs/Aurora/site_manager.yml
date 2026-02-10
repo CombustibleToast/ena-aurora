@@ -7,8 +7,8 @@
     - !type:OverallPlaytimeRequirement
       time: 72000 # 20 hrs
     - !type:RoleTimeRequirement
-      role: JobStationEngineer
-      time: 10800 # 3 hrs as station engineer
+      role: JobSiteWorker
+      time: 10800 # 3 hrs as site worker
   whitelisted: true
   startingGear: SiteManagerGear
   alwaysUseSpawner: true
