@@ -2,6 +2,9 @@
     "version": 1,
     "license": "CC-BY-SA-3.0",
     "copyright": "Made by Ci1rus for Aurora's Song.",
+    "extra_copyright":	[
+	"rank decals made by Vandanna/ Cygnall (discord/ github)"
+	],
     "size": {
         "x": 32,
         "y": 32
