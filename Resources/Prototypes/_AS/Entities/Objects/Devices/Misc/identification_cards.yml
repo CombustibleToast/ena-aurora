@@ -1,4 +1,5 @@
-﻿- type: entity
+﻿#region Medical
+- type: entity
   parent: IDCardStandard
   id: MedicIDCard
   name: Medic ID Card
@@ -11,3 +12,114 @@
     - state: idmedicaldoctor
   - type: Item
     heldPrefix: medic #temporary to OBSERVE
+
+#region SLE
+- type: entity
+  parent: IDCardStandard
+  id: ASPublicAffairsIDCard
+  name: public affairs liaison ID card
+  components:
+  - type: PresetIdCard
+    job: PublicAffairsLiaison
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idaspublicaffairsliaison
+
+- type: entity
+  parent: IDCardStandard
+  id: ASRookieIDCard
+  name: Rookie ID card
+  components:
+  - type: PresetIdCard
+    job: Cadet
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslerookie
+  - type: Clothing
+    sprite: _AS/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: sle
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASOfficerIDCard
+  name: Officer ID card
+  components:
+  - type: PresetIdCard
+    job: Deputy
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idsleofficer
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASCorpsmanIDCard
+  name: Corpsman ID card
+  components:
+  - type: PresetIdCard
+    job: Brigmedic
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslecorpsman
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASSergeantIDCard
+  name: Sergeant ID card
+  components:
+  - type: PresetIdCard
+    job: SeniorOfficer
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslesergeant
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASLieutenantIDCard
+  name: Lieutenant ID card
+  components:
+  - type: PresetIdCard
+    job: Bailiff
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslelieutenant
+
+- type: entity
+  parent: [ASRookieIDCard, BaseCommandContraband]
+  id: ASCommissionerIDCard
+  name: Commissioner ID card
+  components:
+  - type: PresetIdCard
+    job: Sheriff
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idslecommissioner
+  - type: Item
+    heldPrefix: silver
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASDetectiveIDCard
+  name: Detective ID card
+  components:
+  - type: PresetIdCard
+    job: NFDetective
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idsledetective

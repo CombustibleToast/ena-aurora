@@ -23,7 +23,7 @@
   description: A direction sign, pointing out which way an SLE outpost is.
   components:
   - type: Sprite
-    state: direction_nfsd
+    state: direction_sle
 
 # Room Signs
 - type: entity
@@ -33,7 +33,7 @@
   description: A sign that marks the area beyond as an SLE area.
   components:
   - type: Sprite
-    state: nfsd
+    state: sle
 
 - type: entity
   parent: ASBaseSign

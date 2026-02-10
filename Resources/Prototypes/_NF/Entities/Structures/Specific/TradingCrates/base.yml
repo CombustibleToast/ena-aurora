@@ -119,7 +119,7 @@
       FrontierUplinkCoin: 3
       Doubloon: 2
   - type: ShipyardSellCondition
-    blockSale: true
+    blockSale: false # AS True>False
     reason: shipyard-console-contraband-onboard
     allowedShipyardTypes:
     - Syndicate

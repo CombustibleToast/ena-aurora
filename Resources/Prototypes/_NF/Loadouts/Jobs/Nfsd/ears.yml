@@ -1,30 +1,30 @@
 - type: loadout
   id: NfsdClothingHeadsetNfsdBrown
   equipment:
-    ears: ASClothingHeadsetSLEBrown
+    ears: ASClothingHeadsetSLENavy
 
 - type: loadout
   id: NfsdClothingHeadsetNfsdCream
   equipment:
-    ears: ASClothingHeadsetSLECream
+    ears: ASClothingHeadsetSLECobalt
 
 - type: loadout
   id: NfsdClothingHeadsetNfsdGreen
   equipment:
-    ears: ASClothingHeadsetSLEGreen
+    ears: ASClothingHeadsetSLEOrange
 
 - type: loadout
   id: NfsdClothingHeadsetAltNfsdBrown
   equipment:
-    ears: ASClothingHeadsetAltSLEBrown
+    ears: ASClothingHeadsetAltSLENavy
 
 - type: loadout
   id: NfsdClothingHeadsetAltNfsdCreamandBrown
   equipment:
-    ears: ASClothingHeadsetAltSLECreamandBrown
+    ears: ASClothingHeadsetAltSLECobalt
 
 - type: loadout
   id: NfsdClothingHeadsetAltNfsdGreen
   equipment:
-    ears: ASClothingHeadsetAltSLEGreen
+    ears: ASClothingHeadsetAltSLEOrange
 

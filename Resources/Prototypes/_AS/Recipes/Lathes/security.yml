@@ -133,3 +133,14 @@
     Steel: 5000 # box - free, 200 [bullets] * 25 [Steel per bullet]
 
 #endregion
+
+#region Misc
+- type: latheRecipe
+  id: ASClothingEyesHudSLE
+  parent: ClothingEyesHudSecurity
+  result: ASClothingEyesHudSLE
+
+- type: latheRecipe
+  id: ASHoloprojectorSLE
+  parent: HoloprojectorSecurity
+  result: ASHoloprojectorSLEEmpty

@@ -50,7 +50,7 @@
 - type: startingGear
   id: SheriffGear
   equipment:
-    pocket1: ASWeaponPistolMk58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLessLethal
     pocket2: NFWeaponEnergyPistolLaserX01Multiphase
   storage:
     back:
@@ -59,7 +59,7 @@
     - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
     - DoorRemoteNfsd
     - BaseSecurityUplinkRadioSheriff
-    - ASRubberStampSheriff # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
+    - ASRubberStampCommissioner # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
   licenses:
   - LicenseContrabandHandling
 

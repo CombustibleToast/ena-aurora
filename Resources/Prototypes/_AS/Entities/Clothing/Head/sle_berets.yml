@@ -1,32 +1,65 @@
 - type: entity
   parent: ClothingHeadBase
-  id: ASClothingHeadHatSLEBeretGreen
-  name: green SLE beret
-  description: A stylish green beret for Security Logistics Enforcement personnel.
+  id: ASClothingHeadHatSLEBeretOrange
+  name: orange SLE beret
+  description: A stylish orange beret for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Head/Hats/sle_beret_green.rsi
+    sprite: _AS/Clothing/Head/Hats/sle_beret_orange.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Head/Hats/sle_beret_green.rsi
+    sprite: _AS/Clothing/Head/Hats/sle_beret_orange.rsi
 
 - type: entity
   parent: ClothingHeadBase
-  id: ASClothingHeadHatSLEBeretBrown
-  name: brown SLE beret
-  description: A stylish brown beret for Security Logistics Enforcement personnel.
+  id: ASClothingHeadHatSLEBeretBigOrange
+  name: orange SLE beret
+  description: A stylish orange beret for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Head/Hats/sle_beret_brown.rsi
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_orange.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Head/Hats/sle_beret_brown.rsi
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_orange.rsi
 
 - type: entity
   parent: ClothingHeadBase
-  id: ASClothingHeadHatSLEBeretCream
-  name: cream SLE beret
-  description: A stylish cream beret for Security Logistics Enforcement personnel.
+  id: ASClothingHeadHatSLEBeretNavy
+  name: navy SLE beret
+  description: A stylish navy beret for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Head/Hats/sle_beret_cream.rsi
+    sprite: _AS/Clothing/Head/Hats/sle_beret_navy.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Head/Hats/sle_beret_cream.rsi
+    sprite: _AS/Clothing/Head/Hats/sle_beret_navy.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretBigNavy
+  name: navy SLE beret
+  description: A stylish navy beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_navy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_navy.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretCobalt
+  name: cobalt SLE beret
+  description: A stylish cobalt beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_cobalt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_cobalt.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretBigCobalt
+  name: cobalt SLE beret
+  description: A stylish cobalt beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_cobalt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_cobalt.rsi

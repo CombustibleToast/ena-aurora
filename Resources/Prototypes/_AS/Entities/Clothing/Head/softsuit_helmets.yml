@@ -57,3 +57,12 @@
         color: "#2a4a7c"  # SLE dark blue
       - state: equipped-head-visor
         color: "#7aa5d5"  # SLE bright blue
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 2
+    color: red
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RotatingLight
+    speed: 360

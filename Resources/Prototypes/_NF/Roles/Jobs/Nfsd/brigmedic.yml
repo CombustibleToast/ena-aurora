@@ -34,7 +34,7 @@
 - type: startingGear
   id: BrigmedicGear
   equipment:
-    pocket1: ASWeaponPistolMk58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLessLethal
   storage:
     back:
     - EncryptionKeyMedical

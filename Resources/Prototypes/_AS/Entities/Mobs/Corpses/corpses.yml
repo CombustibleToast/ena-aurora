@@ -57,7 +57,7 @@
 - type: startingGear
   id: ASSLEOfficerCorpseGear
   equipment:
-    head: ASClothingHeadHatSLEBeretBrown
+    head: ASClothingHeadHatSLEBeretBigNavy
     mask: ASClothingMaskGasSLE
     eyes: ASClothingEyesGlassesSLE
     jumpsuit: ASClothingUniformJumpsuitSLE

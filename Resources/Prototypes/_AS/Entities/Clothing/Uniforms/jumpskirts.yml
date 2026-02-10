@@ -14,7 +14,7 @@
   parent: ClothingUniformSkirtBase
   id: ASClothingUniformJumpskirtSLE
   name: SLE jumpskirt
-  description: A long sleeved jumpskirt produced for Security Logistics Enforcement officers.
+  description: A long sleeved jumpskirt produced for Sector Law Enforcement officers.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
@@ -25,10 +25,20 @@
   parent: ClothingUniformSkirtBase
   id: ASClothingUniformJumpskirtSLEShort
   name: SLE jumpskirt (short)
-  description: A short sleeved jumpskirt produced for Security Logistics Enforcement officers.
+  description: A short sleeved jumpskirt produced for Sector Law Enforcement officers.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
 
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtPublicAffairsLiaison
+  name: public affairs liaison jumpskirt
+  description: A starched and pressed skirt suit for the public affairs liaison.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/public_affairs.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/public_affairs.rsi

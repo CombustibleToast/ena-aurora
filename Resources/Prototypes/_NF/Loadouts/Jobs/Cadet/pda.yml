@@ -1,5 +1,4 @@
 - type: loadout
   id: CadetCadetPDA
   equipment:
-    id: CadetPDA
-    
+    id: ASRookiePDA

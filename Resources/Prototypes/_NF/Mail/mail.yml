@@ -727,8 +727,8 @@
   components:
   - type: Mail
     contents:
-    - id: NFHyperlinkBookSpaceLaw
-    - id: HyperlinkBookNfsdSop
+    - id: ASHyperlinkBookSpaceLaw # Aurora's Song - Changed to AS version
+    - id: HyperlinkBookSLESop # Aurora's Song - Changed to AS version
     - id: PaperMailNFSpaceLaw
 
 # Frontier Mail (Pony Express?)

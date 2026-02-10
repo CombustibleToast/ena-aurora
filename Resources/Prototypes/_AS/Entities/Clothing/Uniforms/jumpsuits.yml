@@ -42,3 +42,13 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/cyn_suit.rsi
 
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitPublicAffairsLiaison
+  name: public affairs liaison jumpsuit
+  description: A starched and pressed suit for the public affairs liaison.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/public_affairs.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/public_affairs.rsi

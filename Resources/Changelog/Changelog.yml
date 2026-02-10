@@ -5622,3 +5622,218 @@ Entries:
   id: 8922
   time: '2026-01-15T00:24:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/688
+- author: Zenixic
+  changes:
+    - type: Fix
+      message: Fixed bar signs being blank.
+  id: 8923
+  time: '2026-01-22T19:33:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/691
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Reflavored the Hauler derelict
+  id: 8924
+  time: '2026-01-23T13:28:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/690
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Private Security Hardsuit resprite by ZingoDult
+    - type: Fix
+      message: Medic Hardsuit Helmet flashlight
+  id: 8925
+  time: '2026-01-23T15:59:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/689
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Missing decals/ tiles, Petrel, SLEO, The Alley
+    - type: Add
+      message: vendors, QoL on SLEO
+    - type: Add
+      message: ShadyCig vendor on The Alley
+    - type: Fix
+      message: Power wiring on SLEO
+    - type: Fix
+      message: Mule Smuggler Intercept spawners
+    - type: Fix
+      message: High Pressure Ammo research no longer shows unlocking drums
+    - type: Remove
+      message: sex crate from Cargo Request inventory
+    - type: Add
+      message: spare 12g buckshot boxes to Commissioner locker fill
+    - type: Tweak
+      message: chest rig/ webbing prices in vendors
+    - type: Tweak
+      message: labeling in loadouts for rig/ webbing
+    - type: Add
+      message: powered tiny/ directional fans, found in flatpackvend
+  id: 8926
+  time: '2026-01-27T23:38:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/693
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: SLE suit sprites add cat ears
+  id: 8927
+  time: '2026-01-30T17:19:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/696
+- author: emergency-ketchup and LizArmchair
+  changes:
+    - type: Add
+      message: Little-Byte Key, new Rest Stop
+    - type: Tweak
+      message: Little-Byte Key's CAV system
+    - type: Add
+      message: towel laying
+    - type: Remove
+      message: Tinnia's/ Bahama's Spawns
+    - type: Add
+      message: fills for service supplies
+    - type: Fix
+      message: wood secret doors not connecting
+    - type: Add
+      message: custom lights
+  id: 8928
+  time: '2026-01-30T17:20:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/694
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added a new shuttle to the scrapyard, the XED Drone
+  id: 8929
+  time: '2026-02-01T06:09:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/695
+- author: emergency-ketchup
+  changes:
+    - type: Tweak
+      message: Little-Byte Key QoL changes
+  id: 8930
+  time: '2026-02-01T10:42:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/700
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: further rebrands SLE to 95% feature-complete items, gear, subsystems
+    - type: Tweak
+      message: revert NFSD back to their original forms
+    - type: Tweak
+      message: further rebrands Aurora Sector from NF/ NT branding
+  id: 8931
+  time: '2026-02-01T22:52:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/698
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Added holopad, recharger and EVA lockers to the Drone
+  id: 8932
+  time: '2026-02-02T05:20:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/701
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: prison riot wasn't spawning correctly
+  id: 8933
+  time: '2026-02-03T18:43:11.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/703
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: add a few QoL to LBK
+    - type: Tweak
+      message: maintenance on LBK and Petrel
+  id: 8934
+  time: '2026-02-05T17:16:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/705
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Added FTL Drives and the ability to FTL
+  id: 8935
+  time: '2026-02-05T18:34:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/702
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: adds a FTL drive to the Petrel
+  id: 8936
+  time: '2026-02-05T18:46:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/706
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: changed consent menu icon and location
+  id: 8937
+  time: '2026-02-06T04:56:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/709
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Tweaked the rules for mass exclusion to now cause ships you are docked
+        with to mass lock you unless you are FTL Locked together
+    - type: Fix
+      message: Made the Heavy core parts movable
+  id: 8938
+  time: '2026-02-06T07:12:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/708
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: fix buttons on LBK and Petrel
+  id: 8939
+  time: '2026-02-06T11:38:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/707
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Ported pr 2130 from the den
+    - type: Tweak
+      message: Moved oxycrem and LBN to the lewd chem tab
+  id: 8940
+  time: '2026-02-08T03:38:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/713
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Being left behind on an expedition is no longer round removing.
+    - type: Tweak
+      message: Expeditions auto abort after some time if all players are dead.
+    - type: Add
+      message: Medical alarms are retriggered after FTL ends
+  id: 8941
+  time: '2026-02-08T03:39:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/711
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Ore bags now fit in backpacks
+  id: 8942
+  time: '2026-02-08T03:49:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/710
+- author: BudaLope
+  changes:
+    - type: Remove
+      message: Removed many NSFW Items
+  id: 8943
+  time: '2026-02-08T03:52:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/714
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Can now sell ships with contraband crates aboard
+  id: 8944
+  time: '2026-02-08T04:50:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/712
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Traffic to Shortband (750m), Common to Broadband (Unlimited)
+    - type: Add
+      message: Shipboard radio channel (60m)
+    - type: Tweak
+      message: Shipboard channel key is free in the loadout
+  id: 8945
+  time: '2026-02-08T18:09:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/716

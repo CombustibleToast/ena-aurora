@@ -1,11 +1,11 @@
-# Aurora Song - SLE (Security Logistics Enforcement) coats
+# Aurora Song - SLE (Sector Law Enforcement) coats
 # Prototypes for Aurora Song's SLE faction outer coats
 
 - type: entity
   parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingOuterCoatSLEBomber
   name: SLE bomber
-  description: A stylish bomber jacket worn by Security Logistics Enforcement personnel.
+  description: A stylish bomber jacket worn by Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _AS/Clothing/OuterClothing/Misc/sle_bomber.rsi # Aurora Song - Using SLE-recolored sprites
@@ -27,7 +27,7 @@
   parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingOuterCoatSLEFormal
   name: SLE formal coat
-  description: A formal dress coat for Security Logistics Enforcement officers. Snazzy.
+  description: A formal dress coat for Sector Law Enforcement officers. Snazzy.
   components:
   - type: Sprite
     sprite: _AS/Clothing/OuterClothing/Misc/sle_formal.rsi # Aurora Song - Using SLE-recolored sprites

@@ -29,12 +29,12 @@
   - type: StaticPrice
     price: 100000
 
-# Aurora Song - SLE (Security Logistics Enforcement) gloves
+# Aurora Song - SLE (Sector Law Enforcement) gloves
 - type: entity
   parent: ClothingHandsGlovesCombat
   id: ASClothingHandsGlovesCombatSLEDarkBlue
   name: SLE combat gloves
-  description: Insulated gloves for Security Logistics Enforcement officers.
+  description: Insulated gloves for Sector Law Enforcement officers.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Hands/Gloves/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
@@ -47,7 +47,7 @@
   parent: ASClothingHandsGlovesCombatSLEDarkBlue
   id: ASClothingHandsGlovesCombatSLELightBlue
   name: SLE combat gloves
-  description: Insulated gloves for Security Logistics Enforcement officers.
+  description: Insulated gloves for Sector Law Enforcement officers.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Hands/Gloves/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites

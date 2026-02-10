@@ -1,11 +1,11 @@
-# Aurora Song - SLE (Security Logistics Enforcement) belts
+# Aurora Song - SLE (Sector Law Enforcement) belts
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingBeltAssault ]
   id: ASClothingBeltSLE
   name: SLE belt
-  description: A tactical assault belt for Security Logistics Enforcement personnel.
+  description: A tactical assault belt for Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Belt/sle_belt.rsi # Aurora Song - Using SLE-recolored sprites
@@ -16,7 +16,7 @@
   parent: [ BaseC2ContrabandUnredeemable, ClothingBeltSecurityWebbing ]
   id: ASClothingBeltSLEWebbing
   name: SLE webbing
-  description: A tactical assault webbing for Security Logistics Enforcement personnel.
+  description: A tactical assault webbing for Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Belt/sle_webbing.rsi # Aurora Song - Using SLE-recolored sprites

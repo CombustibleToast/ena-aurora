@@ -866,7 +866,6 @@
   - ContractorHandheldCrewMonitor
   - ContractorHypoMini
   - ContractorBible
-  - LeashBasic # Floofstation
 
 - type: loadoutGroup
   id: ContractorFace
@@ -913,9 +912,10 @@
   id: ContractorEncryptionKey
   name: loadout-group-contractor-encryption-key
   minLimit: 0
-  maxLimit: 5
+  maxLimit: 6 # Aurora's Song - Increased to 6 to match total possible keys
   loadouts:
   - ContractorEncryptionKeyTraffic
+  - ContractorEncryptionKeyShipboard # Aurora's Song - Shipboard encryption key added
   - ContractorEncryptionKeyMedical
   - ContractorEncryptionKeyCargo
   - ContractorEncryptionKeyEngineering

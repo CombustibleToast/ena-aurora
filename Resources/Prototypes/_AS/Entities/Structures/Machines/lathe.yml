@@ -33,14 +33,14 @@
     - NFBasicEVAToolsStatic
     - NFMaterialElectronicsStatic
     - ReportingStatic # DeltaV
-    - NfsdWeaponsStatic
-    - NfsdPracticeStatic
-    - NfsdAmmoStatic
+    - SLEWeaponsStatic
+    - SLEPracticeStatic
+    - SLEAmmoStatic
     - NFMercenaryMagazineStatic
     - NFMercenaryStorageStatic
-    - NfsdToolsStatic
-    - NfsdTargetsStatic
-    - NfsdBoardsStatic
+    - SLEToolsStatic
+    - SLETargetsStatic
+    - SLEBoardsStatic
   - type: BlueprintReceiver
     whitelist:
       tags:

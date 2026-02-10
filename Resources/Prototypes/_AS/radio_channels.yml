@@ -1,0 +1,7 @@
+- type: radioChannel
+  id: Shipboard
+  name: chat-radio-shipboard
+  keycode: 'l'
+  frequency: 1124
+  color: "#40e0d0"
+  maxRange: 60

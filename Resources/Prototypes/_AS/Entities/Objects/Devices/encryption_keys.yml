@@ -1,0 +1,17 @@
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyShipboard
+  name: shipboard encryption key
+  description: An encryption key for the shipboard channel. Limited to a 100 meters range.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Shipboard
+    defaultChannel: Shipboard
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: ship_label

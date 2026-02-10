@@ -1,0 +1,251 @@
+#region Base
+
+- type: entity
+  parent: BasePDA
+  id: ASBaseSecurityPDA # copy of BaseSecurityPDA from NF with different sprite directory
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Devices/pda.rsi
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - WantedListCartridge
+
+#region SLE
+
+- type: entity
+  parent: [ASBaseSecurityPDA, BaseCommandContraband]
+  id: ASCommissionerPDA
+  name: commissioner PDA
+  description: Whosoever bears this PDA is the law.
+  components:
+  - type: Pda
+    id: ASCommissionerIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-commissioner
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-commissioner
+  - type: CartridgeLoader # Extended with the ledger
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - WantedListCartridge
+    - LedgerCartridge
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASRookiePDA
+  name: rookie PDA
+  description: Whosoever bears this PDA could be the law.
+  components:
+  - type: Pda
+    id: ASRookieIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-rookie
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-rookie
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASOfficerPDA
+  name: officer PDA
+  description: Whosoever bears this PDA is close to being the law.
+  components:
+  - type: Pda
+    id: ASOfficerIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-officer
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-officer
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASCorpsmanPDA
+  name: corpsman PDA
+  description: Whosoever bears this PDA heals the law.
+  components:
+  - type: Pda
+    id: ASCorpsmanIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-corpsman
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-corpsman
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASSergeantPDA
+  name: sergeant PDA
+  description: Whosoever bears this PDA puts the law on their back.
+  components:
+  - type: Pda
+    id: ASSergeantIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-assergeant
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-assergeant
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASLieutenantPDA
+  name: bailiff PDA
+  description: Whosoever bears this PDA puts the law on their back.
+  components:
+  - type: Pda
+    id: ASLieutenantIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lieutenant
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-lieutenant
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASDetectivePDA
+  name: detective PDA
+  description: Smells like rain... pouring down the rooftops...
+  components:
+  - type: Pda
+    id: ASDetectiveIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-asdetective
+  - type: PdaBorderColor
+    borderColor: "#122E50"
+  - type: Icon
+    state: pda-asdetective
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASPublicAffairsLiaisonPDA
+  name: public affairs liaison PDA
+  description: Paperwork, paperwork, paperwork!
+  components:
+  - type: Pda
+    id: ASPublicAffairsIDCard
+    penSlot:
+      startingItem: PublicAffairsPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-aspal
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-aspal

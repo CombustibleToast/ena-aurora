@@ -90,70 +90,70 @@
     state: piratefirstmate
   jobName: job-name-nf-pirate-first-mate
 
-# region NFSD
+# region SLE # Aurora's Song - changed to Sector Law Enforcement
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconCadetNF
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsdcadet
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slerookie
   jobName: job-name-cadet-nf
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconDeputy
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsddeputy
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: sleofficer
   jobName: job-name-deputy
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconPublicAffairsLiaison
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: publicaffairsliaison
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: aspublicaffairsliaison
   jobName: job-name-pal
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconNFDetective
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsddetective
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: sledetective
   jobName: job-name-detective-nf
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconBrigmedicNF
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsdbrigmed
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slecorpsman
   jobName: job-name-brigmedic
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconSergeant
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsdsergeant
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slesergeant
   jobName: job-name-senior-officer
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconBailiff
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsdbailiff
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slelieutenant
   jobName: job-name-bailiff
 
 - type: jobIcon
   parent: JobIcon
   id: JobIconSheriff
   icon:
-    sprite: /Textures/_NF/Interface/Misc/job_icons.rsi
-    state: nfsdsheriff
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slecommissioner
   jobName: job-name-sheriff
   allowSelection: false # Frontier: no impersonating command staff, literally 1984
 

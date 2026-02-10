@@ -1,9 +1,9 @@
 - type: loadout
   id: PalClothingUniformJumpsuitPublicAffairsLiaison
   equipment:
-    jumpsuit: ClothingUniformJumpsuitPublicAffairsLiaison
+    jumpsuit: ASClothingUniformJumpsuitPublicAffairsLiaison # Aurora's Song - changed to AS version
 
 - type: loadout
   id: PalClothingUniformJumpskirtPublicAffairsLiaison
   equipment:
-    jumpsuit: ClothingUniformJumpskirtPublicAffairsLiaison
+    jumpsuit: ASClothingUniformJumpskirtPublicAffairsLiaison # Aurora's Song - changed to AS version

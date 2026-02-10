@@ -1,11 +1,11 @@
-# Aurora Song - SLE (Security Logistics Enforcement) messenger bags
+# Aurora Song - SLE (Sector Law Enforcement) messenger bags
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
   parent: ClothingBackpackMessengerContractor
   id: ASClothingBackpackMessengerSLEBrown
   name: SLE messenger bag
-  description: A versatile messenger bag used by Security Logistics Enforcement personnel.
+  description: A versatile messenger bag used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Back/Messenger/color.rsi
@@ -15,7 +15,7 @@
     - state: icon-base-top
       color: "#7a9cc6"  # SLE light blue
     - state: icon-sling
-      color: "#537045"  # SLE green accent
+      color: "#E9823C"  # SLE orange accent
     - state: icon-clasp
       color: "#e1af4e"  # Gold clasp
   - type: Clothing
@@ -27,7 +27,7 @@
       - state: base-top-equipped-BACKPACK
         color: "#7a9cc6"  # SLE light blue
       - state: sling-equipped-BACKPACK
-        color: "#537045"  # SLE green accent
+        color: "#E9823C"  # SLE orange accent
       - state: clasp-equipped-BACKPACK
         color: "#e1af4e"  # Gold clasp
   - type: Item
@@ -51,7 +51,7 @@
   parent: ClothingBackpackMessengerContractor
   id: ASClothingBackpackMessengerSLECream
   name: SLE messenger bag
-  description: A versatile messenger bag used by Security Logistics Enforcement personnel.
+  description: A versatile messenger bag used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Back/Messenger/color.rsi

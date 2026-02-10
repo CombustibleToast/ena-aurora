@@ -46,8 +46,8 @@
 - type: startingGear
   id: BailiffGear
   equipment:
-    pocket1: ASWeaponPistolMk58SLELessLethal
-    pocket2: HoloprojectorNfsd
+    pocket1: ASWeaponPistolMk58SLessLethal
+    pocket2: ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
   storage:
     back:
     - Flash
@@ -55,7 +55,7 @@
     - NFMagazineHighCapacityPistol35Rubber
     - BaseSecurityUplinkRadioOfficer
     - ShipVoucherNfsdBailiff
-    - RubberStampBailiff
+    - ASRubberStampLieutenant
   licenses:
   - LicenseContrabandHandling
 

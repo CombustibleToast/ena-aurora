@@ -179,14 +179,33 @@
 # End Aurora Song
 
 #region weapons
+
+# Aurora's Song - mk58 and mk32 variants replace NF14 NFSD pistols
+
 - type: listing
-  id: UplinkSecurityMk32
-  name:  uplink-security-mk58S-name #Auroar
-  description: uplink-security-mk58S-desc #Aurora
-  productEntity: ASWeaponPistolMk58SLE #Aurora
+  id: UplinkSecurityMk58S # Aurora's Song - Mk58-S in uplink
+  name:  uplink-security-mk58S-name
+  description: uplink-security-mk58S-desc
+  productEntity: ASWeaponPistolMk58S
   icon: { sprite: _AS/Objects/Weapons/Guns/Pistols/mk58.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityMk32S # Aurora's Song - mk32 .45 variant in uplink
+  name:  uplink-security-mk32S-name
+  description: uplink-security-mk32S-desc
+  productEntity: ASWeaponPistolUniversalS
+  icon: { sprite: _AS/Objects/Weapons/Guns/Pistols/universals.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 10
   categories:
     - UplinkSecurityWeapons
   conditions:
@@ -210,6 +229,11 @@
       whitelist:
         tags:
           - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - SeniorOfficer
+        - Sheriff
 
 - type: listing
   id: UplinkSecurityStunbaton
@@ -616,7 +640,27 @@
   id: UplinkSecurityMagazineSubMachineGunTopMounted35Overpressure
   name:  uplink-security-wt550magazine-name
   description: uplink-security-wt550magazine-desc
-  productEntity: NFMagazineSubMachineGunTopMounted35Overpressure
+  productEntity: NFBoxMagazineSubMachineGunTopMounted35Overpressure
+  icon: { sprite: _NF/Objects/Storage/boxes.rsi, state: icon-magazine }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist:
+        - Bailiff
+        - Sheriff
+
+- type: listing
+  id: UplinkSecurityMagazineSubMachineGunTopMounted35Rubber
+  name:  uplink-security-wt550magazine-rubber-name
+  description: uplink-security-wt550magazine-rubber-desc
+  productEntity: NFBoxMagazineSubMachineGunTopMounted35Rubber
   icon: { sprite: _NF/Objects/Storage/boxes.rsi, state: icon-magazine }
   cost:
     FrontierUplinkCoin: 1

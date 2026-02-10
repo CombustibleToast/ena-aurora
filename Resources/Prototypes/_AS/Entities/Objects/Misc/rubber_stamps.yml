@@ -1,0 +1,43 @@
+#region SLE
+- type: entity
+  name: Commissioner's rubber stamp
+  parent: [RubberStampBase, BaseCommandContraband]
+  id: ASRubberStampCommissioner
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-commissioner
+    stampedColor: "#4a6fa5"
+    stampState: "paper_stamp-as-commissioner"
+    protected: True
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-commissioner
+
+- type: entity
+  name: Lieutenant's rubber stamp
+  parent: RubberStampBase
+  id: ASRubberStampLieutenant
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-lieutenant
+    stampedColor: "#2A4F63"
+    stampState: "paper_stamp-as-lieutenant"
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-lieutenant
+
+- type: entity
+  name: public affairs liaison's rubber stamp
+  parent: RubberStampBase
+  id: ASRubberStampPal
+  categories: [ DoNotMap ]
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-pal
+    stampedColor: "#98bbc2"
+    stampState: "paper_stamp-as-pal"
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-pal

@@ -31,14 +31,14 @@
 - type: startingGear
   id: PublicAffairGear
   equipment:
-    pocket1: NFHyperlinkBookSpaceLaw
+    pocket1: ASHyperlinkBookSpaceLaw # Aurora's Song - Changed to AS version
     pocket2: BoxFolderClipboardPal
   storage:
     back:
     - Flash
-    - BoxFolderPalBrown
-    - BoxFolderNfsdForms
-    - RubberStampPal
+    - BoxFolderPalNavy # Aurora's Song - Changed to AS version
+    - ASBoxFolderSLEForms # Aurora's Song - Changed to AS version
+    - ASRubberStampPal # Aurora's Song - Changed to AS version
   licenses:
   - LicenseContrabandHandling
 

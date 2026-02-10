@@ -1,3 +1,54 @@
+#region chamber
+
+- type: entity
+  id: ASBaseWeaponPistolChamber45Overpressure
+  parent: NFBaseWeaponPistolChamber45
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazinePistol45Overpressure
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - NFMagazinePistol45
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgePistol45Overpressure
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgePistol45
+
+- type: entity
+  id: ASBaseWeaponPistolChamber45Rubber
+  parent: NFBaseWeaponPistolChamber45
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazinePistol45Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - NFMagazinePistol45
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgePistol45Rubber
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgePistol45
 #region manufacturer
 - type: entity
   id: ASBaseWeaponFramePistolHazardZone

@@ -12,7 +12,7 @@
 - type: loadout
   id: NfsdClothingBackpackDuffelNfsdBrown
   equipment:
-    back: ASClothingBackpackDuffelSLEBrown # Aurora Song - Changed from ClothingBackpackDuffelNfsdBrown
+    back: ASClothingBackpackDuffelSLENavy # Aurora Song - Changed from ClothingBackpackDuffelNfsdBrown
 
 - type: loadout
   id: NfsdClothingBackpackMessengerNfsdBrown
@@ -33,7 +33,7 @@
 - type: loadout
   id: NfsdClothingBackpackDuffelNfsdCream
   equipment:
-    back: ASClothingBackpackDuffelSLECream # Aurora Song - Changed from ClothingBackpackDuffelNfsdCream
+    back: ASClothingBackpackDuffelSLECorpsman # Aurora Song - Changed from ClothingBackpackDuffelNfsdCream
 
 - type: loadout
   id: NfsdClothingBackpackMessengerNfsdCream

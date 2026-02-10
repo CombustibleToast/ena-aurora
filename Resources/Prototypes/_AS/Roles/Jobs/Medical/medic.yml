@@ -26,7 +26,7 @@
 - type: startingGear
   id: MedicGear
   equipment:
-    pocket1: ASWeaponPistolMk58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLessLethal
     pocket2: MedicalAppraisalTool
   storage:
     back:

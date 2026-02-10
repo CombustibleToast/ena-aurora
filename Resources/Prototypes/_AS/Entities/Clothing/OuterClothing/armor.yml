@@ -1,11 +1,11 @@
-# Aurora Song - SLE (Security Logistics Enforcement) armor
+# Aurora Song - SLE (Sector Law Enforcement) armor
 # Prototypes for Aurora Song's SLE faction outer armor
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC2ContrabandUnredeemable ]
   id: ASClothingOuterArmorSLE
   name: SLE armor
-  description: Standard issue tactical armor for Security Logistics Enforcement personnel. Provides comprehensive protection.
+  description: Standard issue tactical armor for Sector Law Enforcement personnel. Provides comprehensive protection.
   components:
   - type: Sprite
     sprite: _AS/Clothing/OuterClothing/Armor/sle_armor.rsi # Aurora Song - Using SLE-recolored sprites

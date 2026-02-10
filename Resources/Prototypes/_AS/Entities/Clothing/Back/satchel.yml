@@ -1,11 +1,11 @@
-# Aurora Song - SLE (Security Logistics Enforcement) satchels
+# Aurora Song - SLE (Sector Law Enforcement) satchels
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
   parent: ClothingBackpackSatchelSecurity
   id: ASClothingBackpackSatchelSLEBrown
   name: SLE satchel
-  description: A tactical satchel used by Security Logistics Enforcement personnel.
+  description: A tactical satchel used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Back/Satchels/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
@@ -14,7 +14,7 @@
   parent: ASClothingBackpackSatchelSLEBrown
   id: ASClothingBackpackSatchelSLECream
   name: SLE satchel
-  description: A tactical satchel used by Security Logistics Enforcement personnel.
+  description: A tactical satchel used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Back/Satchels/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites

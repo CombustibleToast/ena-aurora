@@ -79,7 +79,7 @@
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC2ContrabandUnredeemable ]
   id: ClothingOuterArmorNfsd
-  name: SLE armor
+  name: NFSD armor
   description: Get shot, maybe survive?
   components:
   - type: Sprite

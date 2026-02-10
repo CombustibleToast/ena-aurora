@@ -1,5 +1,4 @@
 - type: loadout
   id: BailiffBailiffPDA
   equipment:
-    id: BailiffPDA
-    
+    id: ASLieutenantPDA
