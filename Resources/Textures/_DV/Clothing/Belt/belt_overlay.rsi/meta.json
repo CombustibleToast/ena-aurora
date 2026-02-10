@@ -42,6 +42,12 @@
         },
         {
             "name": "medkit_rig"
+        },
+        {
+            "name": "slp_beltalt"
+        },
+        {
+            "name": "baton_beltalt"
         }
     ]
 }

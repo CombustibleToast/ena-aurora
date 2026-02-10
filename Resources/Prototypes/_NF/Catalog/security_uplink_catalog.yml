@@ -154,6 +154,102 @@
           - SecurityUplink
 
 - type: listing
+  id: UplinkSleCombatHardsuitRookie
+  name:  uplink-sle-hardsuit-combat-rookie-name
+  description: uplink-sle-hardsuit-combat-rookie-desc
+  productEntity: ClothingOuterHardsuitSleCombatRookie
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon-rke-shop }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSleCombatHardsuitOfficer
+  name:  uplink-sle-hardsuit-combat-officer-name
+  description: uplink-sle-hardsuit-combat-officer-desc
+  productEntity: ClothingOuterHardsuitSleCombatOfficer
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon-off-shop }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSleCombatHardsuitSergeant
+  name:  uplink-sle-hardsuit-combat-sergeant-name
+  description: uplink-sle-hardsuit-combat-sergeant-desc
+  productEntity: ClothingOuterHardsuitSleCombatSergeant
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon-sgt-shop }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSleCombatHardsuitLieutenant
+  name:  uplink-sle-hardsuit-combat-lieutenant-name
+  description: uplink-sle-hardsuit-combat-lieutenant-desc
+  productEntity: ClothingOuterHardsuitSleCombatLieutenant
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon-lt-shop }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSleCombatHardsuitCorpsman
+  name:  uplink-sle-hardsuit-combat-corpsman-name
+  description: uplink-sle-hardsuit-combat-corpsman-desc
+  productEntity: ClothingOuterHardsuitSleCombatCorpsman
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon-crp-shop }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSleCombatHardsuitCommissioner
+  name:  uplink-sle-hardsuit-combat-commissioner-name
+  description: uplink-sle-hardsuit-combat-commissioner-desc
+  productEntity: ClothingOuterHardsuitSleCombatCommissioner
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi, state: icon-com-shop }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityHardsuits
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
   id: UplinkSleSoftsuitPatrol
   name:  uplink-sle-softsuit-patrol-name
   description: uplink-sle-softsuit-patrol-desc

@@ -1,7 +1,7 @@
 #region SLE
 
 - type: entity
-  parent: [ ASClothingRigStorageHolsterBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ASClothingBeltStorageHolsterBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingBeltSLE
   name: SLE belt
   description: A tactical assault belt for Sector Law Enforcement personnel.

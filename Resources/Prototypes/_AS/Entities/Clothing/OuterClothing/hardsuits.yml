@@ -18,13 +18,13 @@
       coefficients:
         Blunt: 0.5
         Slash: 0.6
-        Piercing: 0.6
+        Piercing: 0.55 #buff 40% to 45% piercing resist
         Heat: 0.60
         Radiation: 0.50
         Caustic: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.75
+    walkModifier: 0.9 #increased speed from .85 to .9, this suit can be painful to wear
+    sprintModifier: 0.9 #increased speed from .75 to .9, this suit can be painful to wear
 
 - type: entity
   parent: ClothingOuterHardsuitSleCombat
@@ -35,12 +35,146 @@
   components:
   - type: Sprite
     sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-rke
   - type: Clothing
     sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
       - state: equipped-OUTERCLOTHING-rke
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-rke-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-rke-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatOfficer
+  name: SLE combat suit
+  suffix: Officer
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-off
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-off
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-off-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-off-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatSergeant
+  name: SLE combat suit
+  suffix: Sergeant
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-sgt
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-sgt
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-sgt-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-sgt-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatLieutenant
+  name: SLE combat suit
+  suffix: Lieutenant
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-lt
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-lt
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-lt-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-lt-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatCorpsman
+  name: SLE combat suit
+  suffix: Corpsman
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-crp
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-crp
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-crp-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-crp-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatCommissioner
+  name: SLE combat suit
+  suffix: Commissioner
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-com
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-com
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-com-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-com-vox
 
 #region Mercenary
 #Aurora - Moved from NF namespace to AS, as it is so substantially changed it is effectively a new item

@@ -1,6 +1,43 @@
 - type: entity
   abstract: true
   parent: NFClothingBeltStorageHolsterBase
+  id: ASClothingBeltStorageHolsterBase
+  components:
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: ItemSlots # DeltaV - add sidearm slot
+    slots:
+      holster:
+        name: clothing-belt-sidearm
+        whitelist:
+          tags:
+          - Sidearm
+        insertOnInteract: true
+  - type: Appearance
+  - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
+    mapLayers:
+      baton_beltalt:
+        whitelist:
+          components:
+          - Stunbaton
+      gasgrenade:
+        whitelist:
+          tags:
+            - Grenade
+      slp_beltalt:
+        whitelist:
+          tags:
+          - Sidearm
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
+
+- type: entity
+  abstract: true
+  parent: NFClothingBeltStorageHolsterBase
   id: ASClothingRigStorageHolsterBase
   components:
   - type: ExplosionResistance

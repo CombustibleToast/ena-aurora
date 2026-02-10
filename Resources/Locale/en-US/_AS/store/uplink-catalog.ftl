@@ -68,7 +68,25 @@ uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacke
 
 # region Security Uplink
 uplink-sle-hardsuit-combat-name = SLE Combat Suit
-uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-rookie-name = SLE Rookie Combat Suit
+uplink-sle-hardsuit-combat-rookie-desc = A heavily armored SLE suit. Marked for Rookies. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-officer-name = SLE Officer Combat Suit
+uplink-sle-hardsuit-combat-officer-desc = A heavily armored SLE suit. Marked for Officers. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-sergeant-name = SLE Sergeant Combat Suit
+uplink-sle-hardsuit-combat-sergeant-desc = A heavily armored SLE suit. Marked for Sergeants. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-lieutenant-name = SLE Lieutenant Combat Suit
+uplink-sle-hardsuit-combat-lieutenant-desc = A heavily armored SLE suit. Marked for Lieutenants. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-corpsman-name = SLE Corpsman Combat Suit
+uplink-sle-hardsuit-combat-corpsman-desc = A heavily armored SLE suit. Marked for Corpsmen. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-commissioner-name = SLE Commissioner Combat Suit
+uplink-sle-hardsuit-combat-commissioner-desc = A heavily armored SLE suit. Marked for the Commissioner. Space proof, with thick armor plating.
 
 uplink-sle-softsuit-patrol-name = SLE Patrol Softsuit
 uplink-sle-softsuit-patrol-desc = The standard-issue SLE space proof suit for patrol duty.
