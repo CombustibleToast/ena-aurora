@@ -67,6 +67,7 @@
   parent: [ ASBaseWeaponPistolChamber45Rubber, ASWeaponPistolUniversalS ]
   suffix: Frontier, Less-lethal
   components: *universalComponents
+
 #region Aurora
 
 - type: entity
