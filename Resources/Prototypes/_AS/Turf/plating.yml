@@ -1,0 +1,6 @@
+- type: tile
+  id: DebugLatticeRadarInvisble
+  parent: Lattice
+  name: radar invisible lattice
+  sprite: /Textures/Tiles/lattice.png
+  invisible: true

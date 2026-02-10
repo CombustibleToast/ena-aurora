@@ -153,6 +153,8 @@ public partial class BaseShuttleControl : MapGridControl
 
                 // Mono - drawing logic rewritten
                 var def = (ContentTileDefinition)_tileDef[tileRef.Value.Tile.TypeId];
+                if (def.Invisible == true) // AS
+                    continue;
                 _gridTileList.Add((index, def));
 
                 // since our shape has to be convex, just draw it by taking our first vertex as origin
