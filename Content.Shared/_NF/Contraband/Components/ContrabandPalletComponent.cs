@@ -13,8 +13,8 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField("cashType", serverOnly: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
     public string RewardType = "FrontierUplinkCoin";
 
-    [DataField]
-    public EntProtoId RewardCashPrototype = "ExchangeCoin"; // SpaceCash5000 > ExchangeCoin | switched from cash to ExchangeCoin as economy experiment - Aurora
+    [ViewVariables(VVAccess.ReadWrite), DataField("altCashType", serverOnly: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
+    public string RewardTypeAlternate = "ExchangeCoin"; // AS: Allow alt reward currencies
 
     [DataField]
     public SoundSpecifier ErrorSound = new SoundCollectionSpecifier("CargoError"); // Aurora: add deny sound
