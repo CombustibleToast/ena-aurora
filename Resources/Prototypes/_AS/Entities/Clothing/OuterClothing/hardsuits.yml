@@ -1,4 +1,4 @@
-#SLE Hardsuits
+#region SLE Hardsuits
 - type: entity
   parent: ASClothingOuterHardsuitBaseSle
   id: ClothingOuterHardsuitSleCombat
@@ -26,7 +26,24 @@
     walkModifier: 0.85
     sprintModifier: 0.75
 
-#Mercenary Hardsuit - Aurora - Moved from NF namespace to AS, as it is so substantially changed it is effectively a new item
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatRookie
+  name: SLE combat suit
+  suffix: Rookie
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-rke
+
+#region Mercenary
+#Aurora - Moved from NF namespace to AS, as it is so substantially changed it is effectively a new item
 - type: entity
   parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
   id: ClothingOuterHardsuitMercenary # Aurora: stats were of luxury mining hardsuit, adjusted to be more effective as a rare find or mid-game tool, with even a late-game usage-case. Available from mercennary vendors, and as rare loot.
@@ -84,6 +101,8 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
 
+#region Medical
+
 - type: entity
   parent: ClothingOuterHardsuitMercenary
   id: ClothingOuterHardsuitMedicArmored # stats are of merc hardsuit, but for Outpost medic use, with different appearance
@@ -110,6 +129,8 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
 
+#region Syndicate
+
 - type: entity
   parent:
   - ClothingOuterHardsuitSyndie
@@ -124,6 +145,7 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
 
+#region Wizard
 
 - type: entity
   parent:
@@ -153,7 +175,7 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
 
-# Aurora's Song - Military Surplus Suit
+# region Military Surplus
 - type: entity
   parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
   id: ClothingOuterHardsuitMilitarySurplus

@@ -2,6 +2,9 @@
     "version": 1,
     "license": "CC-BY-SA-3.0",
     "copyright": "Made by Ci1rus for Aurora's Song.",
+    "extra_copyright":	[
+	"rank decals made by Vandanna/ Cygnall (discord/ github)"
+	],
     "size": {
         "x": 32,
         "y": 32
@@ -28,6 +31,30 @@
         },
         {
             "name": "inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-rke",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-off",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-sgt",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-lt",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-crp",
+            "directions": 4
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-com",
             "directions": 4
         }
     ]
