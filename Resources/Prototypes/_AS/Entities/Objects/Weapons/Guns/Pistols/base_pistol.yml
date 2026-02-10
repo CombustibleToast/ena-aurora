@@ -10,7 +10,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
       params:
-        pitch: 0.85
+        pitch: 0.80
         volume: -2
   - type: ItemSlots
     slots:
@@ -82,6 +82,7 @@
         whitelist:
           tags:
             - NFCartridgePistol45
+
 #region manufacturer
 - type: entity
   id: ASBaseWeaponFramePistolHazardZone
@@ -91,8 +92,10 @@
   - type: Gun
     minAngle: 1
     maxAngle: 22
-    angleIncrease: 4
-    angleDecay: 4
+    angleIncrease: 2.8
+    angleDecay: 3.8
     fireRate: 3.5
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-hzi
+  - type: StaticPrice
+    price: 300
