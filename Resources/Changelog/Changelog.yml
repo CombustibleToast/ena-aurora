@@ -5880,3 +5880,10 @@ Entries:
   id: 8950
   time: '2026-02-09T18:10:17.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/721
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Site roles now selectable
+  id: 8951
+  time: '2026-02-10T01:09:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/722
