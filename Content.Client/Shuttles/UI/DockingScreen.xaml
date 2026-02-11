@@ -2,8 +2,8 @@
                HorizontalExpand="True"
                xmlns:controls="https://spacestation14.io"
                xmlns:controls1="clr-namespace:Content.Client.UserInterface.Controls"
-               xmlns:ui="clr-namespace:Content.Client.Shuttles.UI"
-               xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client">
+               xmlns:ui="clr-namespace:Content.Client.Shuttles.UI" 
+               xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"> <!-- Mono: Move it back to Robust-->
     <ui:ShuttleDockControl Name="DockingControl"
                        MouseFilter="Stop"
                        VerticalAlignment="Stretch"
@@ -26,7 +26,7 @@
                            Align="Center"
                            Margin="5 5 5 5"
                            Orientation="Vertical">
-        <!-- FTL Lock Section -->
+        <!-- Mono: FTL Lock Section -->
         <controls1:StripeBack MinSize="48 48">
             <controls:Label Text="{controls:Loc 'FTL Lock'}" HorizontalAlignment="Center"/>
         </controls1:StripeBack>
@@ -48,7 +48,7 @@
         </controls:BoxContainer>
         </controls:PanelContainer>
 
-        <!-- Docks Section -->
+        <!-- Mono: Docks Section -->
         <controls1:StripeBack MinSize="48 48">
             <controls:Label Text="{controls:Loc 'Docks'}" HorizontalAlignment="Center"/>
         </controls1:StripeBack>

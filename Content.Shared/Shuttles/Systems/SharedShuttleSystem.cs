@@ -26,8 +26,8 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly SharedPowerReceiverSystem _powerReceiverSystem = default!;
 
-    public const float FTLRange = 0f;
-    public const float FTLBufferRange = 20f;
+    public const float FTLRange = 0f; // Mono 256 -> 0
+    public const float FTLBufferRange = 20f; // Mono 8 -> 20
     public const float TileDensityMultiplier = 0.5f;
 
     private EntityQuery<MapGridComponent> _gridQuery;
@@ -61,7 +61,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     /// </summary>
     public bool CanFTLTo(EntityUid shuttleUid, MapId targetMap, EntityUid consoleUid)
     {
-        var mapUid = _mapManager.GetMapEntityId(targetMap);
+        var mapUid = _mapManager.GetMapEntityId(targetMap); // Mono GetMapOrInvalid -> GetMapEntityId
         var shuttleMap = _xformQuery.GetComponent(shuttleUid).MapID;
 
         if (shuttleMap == targetMap)
@@ -304,6 +304,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         return true;
     }
 
+    // Mono
     /// <summary>
     /// Returns the given EntityCoordinates with the distance clamped to the maximum FTL range of the given shuttle.
     /// </summary>

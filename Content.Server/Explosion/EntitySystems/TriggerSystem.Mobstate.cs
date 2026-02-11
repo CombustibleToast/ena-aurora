@@ -1,11 +1,11 @@
-﻿using System.Threading;
+﻿using System.Threading; // Coyote
 using Content.Server.Explosion.Components;
 using Content.Shared.Explosion.Components;
 using Content.Shared.Implants;
 using Content.Shared.Interaction.Events;
 using Content.Shared.Mobs;
-using Content.Shared.Mobs.Components;
-using Robust.Shared.Timing;
+using Content.Shared.Mobs.Components; // Coyote
+using Robust.Shared.Timing; // Coyote
 
 namespace Content.Server.Explosion.EntitySystems;
 
@@ -18,13 +18,13 @@ public sealed partial class TriggerSystem
 
         SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<SuicideEvent>>(OnSuicideRelay);
         SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<MobStateChangedEvent>>(OnMobStateRelay);
-        SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<ReTriggerRattleImplantEvent>>(OnFtlArriveRelay);
+        SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<ReTriggerRattleImplantEvent>>(OnFtlArriveRelay); // Coyote
     }
 
     private void OnMobStateChanged(EntityUid uid, TriggerOnMobstateChangeComponent component, MobStateChangedEvent args)
     {
-        component.RattleCancelToken.Cancel();
-        component.RattleCancelToken = new CancellationTokenSource();
+        component.RattleCancelToken.Cancel(); // Coyote
+        component.RattleCancelToken = new CancellationTokenSource(); // Coyote
         if (!component.MobState.Contains(args.NewMobState))
             return;
 
@@ -33,7 +33,7 @@ public sealed partial class TriggerSystem
             component,
             args.Target,
             args.NewMobState,
-            args.Origin);
+            args.Origin); // Coyote
     }
 
     private void TryRunTrigger(
@@ -44,9 +44,6 @@ public sealed partial class TriggerSystem
         EntityUid? stateChangerUid = null,
         bool retry = false)
     {
-        if (!component.Enabled)
-            return;
-
         //This chains Mobstate Changed triggers with OnUseTimerTrigger if they have it
         //Very useful for things that require a mobstate change and a timer
         if (TryComp<OnUseTimerTriggerComponent>(uid, out var timerTrigger))
@@ -61,19 +58,19 @@ public sealed partial class TriggerSystem
         }
         else
         {
-            Dictionary<string, object> extraData = new()
+            Dictionary<string, object> extraData = new() // Coyote
             {
                 { "isRetry", retry }
             };
             Trigger(uid, extras: extraData);
         }
 
-        // then run it again
+        // Coyote: Then run it again
         component.RattleCancelToken.Cancel();
         component.RattleCancelToken = new CancellationTokenSource();
         Robust.Shared.Timing.Timer.Spawn(component.RattleRefireDelay, () => CheckAndTryRefire(uid, component, changedStateMobUid), component.RattleCancelToken.Token);
     }
-
+    // Coyote
     /// <summary>
     /// Check if the trigger can be retriggered and does so if possible
     /// </summary>
@@ -89,8 +86,6 @@ public sealed partial class TriggerSystem
             || Deleted(changedStateMobUid))
             return;
         if (!HasComp<MobStateComponent>(changedStateMobUid))
-            return;
-        if (!component.Enabled)
             return;
         var stat = Comp<MobStateComponent>(changedStateMobUid).CurrentState;
         if (component.MobState.Contains(stat))
@@ -133,7 +128,7 @@ public sealed partial class TriggerSystem
             component,
             args.Event);
     }
-
+    // Coyote
     /// <summary>
     /// When ftl arrives, try to retrigger their medical alerts
     /// </summary>

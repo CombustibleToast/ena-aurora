@@ -1,6 +1,6 @@
 using Robust.Shared.Serialization;
 
-namespace Content.Shared.Shuttles.Events;
+namespace Content.Shared.Shuttles.Events; // Mono
 
 /// <summary>
 /// Raised on the client when it wishes to undock all docking ports at once.

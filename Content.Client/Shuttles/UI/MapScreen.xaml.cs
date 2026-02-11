@@ -119,7 +119,7 @@ public sealed partial class MapScreen : BoxContainer
         //frontier - we only allow pre-approved vessels to FTL
         if (!_entManager.HasComponent<ShuttleFTLComponent>(_shuttleEntity))
         {
-            MapFTLButton.Visible = true;
+            MapFTLButton.Visible = true; // Mono
         }
         else
         {
@@ -192,7 +192,7 @@ public sealed partial class MapScreen : BoxContainer
     {
         MapRadar.FtlMode = obj.Pressed;
 
-        // When FTL button is toggled, disable the ShowFTLRangeOnly mode
+        // Mono: When FTL button is toggled, disable the ShowFTLRangeOnly mode
         if (obj.Pressed)
         {
             MapRadar.ShowFTLRangeOnly = false;
@@ -236,7 +236,7 @@ public sealed partial class MapScreen : BoxContainer
 
         RebuildMapObjects();
 
-        // Immediately add all objects to the map instead of queueing them
+        // Mono: Immediately add all objects to the map instead of queueing them
         foreach (var mapObj in _pendingMapObjects)
         {
             AddMapObject(mapObj.mapId, mapObj.mapobj);
@@ -254,10 +254,10 @@ public sealed partial class MapScreen : BoxContainer
 
     private void MapRebuildPressed(BaseButton.ButtonEventArgs obj)
     {
-        MapRadar.ShowFTLRangeOnly = true;
+        MapRadar.ShowFTLRangeOnly = true; // Mono
         PingMap();
 
-        // Reset range back after map pinging is complete.
+        // Mono: Reset range back after map pinging is complete.
         MapRadar.ShowFTLRangeOnly = !MapFTLButton.Pressed;
     }
 

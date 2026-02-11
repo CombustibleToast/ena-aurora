@@ -65,7 +65,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         {
             subs.Event<ShuttleConsoleFTLBeaconMessage>(OnBeaconFTLMessage);
             subs.Event<ShuttleConsoleFTLPositionMessage>(OnPositionFTLMessage);
-            subs.Event<ToggleFTLLockRequestMessage>(OnToggleFTLLock);
+            subs.Event<ToggleFTLLockRequestMessage>(OnToggleFTLLock); // Mono
             subs.Event<BoundUIClosedEvent>(OnConsoleUIClose);
         });
 
@@ -220,6 +220,7 @@ public sealed partial class ShuttleConsoleSystem : SharedShuttleConsoleSystem
         }
     }
 
+    // Mono
     /// <summary>
     /// Handles FTL lock toggling for docked shuttles
     /// </summary>

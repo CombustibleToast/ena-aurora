@@ -6,7 +6,7 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: DisableToolUse
+  - type: DisableToolUse # AS: Make them wrenchable
     anchoring: false
   - type: StaticPrice
     price: 1500
@@ -56,7 +56,7 @@
   placement:
     mode: SnapgridCenter
   components:
-  - type: DisableToolUse
+  - type: DisableToolUse # AS: Make them wrenchable
     anchoring: false
   - type: StaticPrice
     price: 1500

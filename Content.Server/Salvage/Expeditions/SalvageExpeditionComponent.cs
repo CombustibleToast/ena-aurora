@@ -62,8 +62,9 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
     // public ResolvedSoundSpecifier SelectedSong;
     // End Frontier: moved to Shared
 
+    // Coyote
     /// <summary>
-    /// next time to check for autoabort
+    /// Next time to check for autoabort
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public TimeSpan NextAutoAbortCheck = TimeSpan.Zero;

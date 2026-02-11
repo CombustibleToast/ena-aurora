@@ -1,5 +1,5 @@
-using System.Linq;
-using System.Threading;
+using System.Linq; // Coyote
+using System.Threading; // Coyote
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
 using Content.Server.Explosion.Components;
@@ -37,7 +37,7 @@ using Content.Server.Station.Systems;
 using Content.Shared.Humanoid;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Robust.Shared.Timing;
+using Robust.Shared.Timing; // Coyote
 using Robust.Shared.Utility;
 using Content.Shared.Body.Components; // Frontier: Gib organs
 
@@ -50,7 +50,7 @@ namespace Content.Server.Explosion.EntitySystems
     {
         public EntityUid Triggered { get; }
         public EntityUid? User { get; }
-        public Dictionary<string, object> Extras { get; } = new();
+        public Dictionary<string, object> Extras { get; } = new(); // Coyote
 
         public TriggerEvent(EntityUid triggered, EntityUid? user = null)
         {
@@ -58,6 +58,7 @@ namespace Content.Server.Explosion.EntitySystems
             User = user;
         }
 
+        // Coyote
         public void AddExtra(string extra, object value)
         {
             Extras[extra] = value;
@@ -270,6 +271,7 @@ namespace Content.Server.Explosion.EntitySystems
 
             if (implanted.ImplantedEntity == null)
                 return;
+            // Coyote
             if (!TryComp<MobStateComponent>(implanted.ImplantedEntity, out var mobstate)
                 || mobstate.CurrentState == MobState.Alive)
                 return;
@@ -294,7 +296,7 @@ namespace Content.Server.Explosion.EntitySystems
             if (TryComp<HumanoidAppearanceComponent>(implanted.ImplantedEntity, out var species))
                 speciesText = $" ({species!.Species})";
 
-            string localeKey;
+            string localeKey; // Coyote
 
             if (args.Extras.TryGetValue("isRetry", out var retryObj)
                 && retryObj is bool obj
@@ -319,7 +321,7 @@ namespace Content.Server.Explosion.EntitySystems
                 message,
                 _prototypeManager.Index<RadioChannelPrototype>(component.RadioChannel),
                 uid);
-
+            // End Coyote
             args.Handled = true;
         }
         // End Frontier
@@ -378,7 +380,7 @@ namespace Content.Server.Explosion.EntitySystems
             ent.Comp.NextTrigger = _timing.CurTime + ent.Comp.Delay;
         }
 
-        public bool Trigger(EntityUid trigger, EntityUid? user = null, Dictionary<string, object>? extras = null)
+        public bool Trigger(EntityUid trigger, EntityUid? user = null, Dictionary<string, object>? extras = null) // Coyote
         {
             var beforeTriggerEvent = new BeforeTriggerEvent(trigger, user);
             RaiseLocalEvent(trigger, ref beforeTriggerEvent);
@@ -386,7 +388,7 @@ namespace Content.Server.Explosion.EntitySystems
                 return false;
 
             var triggerEvent = new TriggerEvent(trigger, user);
-            if (extras != null)
+            if (extras != null) // Coyote
             {
                 foreach (var (key, value) in extras)
                 {

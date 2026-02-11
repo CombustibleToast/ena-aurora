@@ -1,4 +1,5 @@
-- type: entity
+# Aurora: add flatpacks
+- type: entity 
   parent: BaseFlatpack
   id: FTLDriveFlatpack
   name: CTLA-25 bluespace drive flatpack

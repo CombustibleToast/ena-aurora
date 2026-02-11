@@ -19,6 +19,7 @@ public sealed partial class FTLComponent : Component
     [ViewVariables]
     public FTLState State = FTLState.Available;
 
+    // Mono
     /// <summary>
     /// If this shuttle is part of a docked group doing FTL, this is the main shuttle controlling the FTL.
     /// </summary>

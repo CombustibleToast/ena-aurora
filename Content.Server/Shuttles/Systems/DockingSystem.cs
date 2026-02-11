@@ -59,7 +59,7 @@ namespace Content.Server.Shuttles.Systems
             // in which case I would also add their subs here.
             SubscribeLocalEvent<ShuttleConsoleComponent, DockRequestMessage>(OnRequestDock);
             SubscribeLocalEvent<ShuttleConsoleComponent, UndockRequestMessage>(OnRequestUndock);
-            SubscribeLocalEvent<ShuttleConsoleComponent, UndockAllRequestMessage>(OnRequestUndockAll);
+            SubscribeLocalEvent<ShuttleConsoleComponent, UndockAllRequestMessage>(OnRequestUndockAll); // Mono
         }
 
         public void UndockDocks(EntityUid gridUid)
@@ -339,7 +339,7 @@ namespace Content.Server.Shuttles.Systems
             if (dock.Comp.DockedWith == null)
                 return;
 
-            // Check if either shuttle is in FTL before undocking
+            // Mono: Check if either shuttle is in FTL before undocking
             var otherDockUid = dock.Comp.DockedWith.Value;
             var shuttleUid = Transform(dock).GridUid;
             var otherShuttleUid = Transform(otherDockUid).GridUid;
@@ -369,7 +369,7 @@ namespace Content.Server.Shuttles.Systems
             Cleanup(dock.Owner, dock);
             _console.RefreshShuttleConsoles();
 
-            // If undocking occurred during FTL travel, we need to update the FTL components
+            // Mono: If undocking occurred during FTL travel, we need to update the FTL components
             if (dockedInFTL && ftlSourceShuttle != null && ftlComp != null)
             {
                 // The linked shuttle should be the main shuttle controlling FTL
@@ -524,6 +524,7 @@ namespace Content.Server.Shuttles.Systems
                 new MapCoordinates(worldPosB, xformB.MapID), worldRotB);
         }
 
+        // Mono
         private void OnRequestUndockAll(EntityUid uid, ShuttleConsoleComponent component, UndockAllRequestMessage args)
         {
             if (args.DockEntities.Count == 0)

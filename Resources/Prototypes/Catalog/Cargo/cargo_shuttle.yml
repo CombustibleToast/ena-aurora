@@ -18,7 +18,8 @@
   category: cargoproduct-category-name-shuttle
   group: market
 
-- type: cargoProduct
+# Aurora: FTL Drives
+- type: cargoProduct 
   id: ShuttleFTLDrive25
   icon:
     sprite: _Mono/Structures/ShuttleComponents/drive.rsi 
@@ -57,6 +58,7 @@
   cost: 100000
   category: cargoproduct-category-name-shuttle
   group: market
+# End Aurora: FTL Drives
 
 # - type: cargoProduct
   # id: ShuttlePowerKit

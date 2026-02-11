@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "license": "CC-BY-SA-3.0",
+    "copyright": "crypt states modified by Flareguy for Space Station 14",
+    "extra_copyright": [
+        "ship_label created by Vandanna/ Cygnall (discord/ github) for Aurora's Song"
+    ],
+    "size": {
+        "x": 32,
+        "y": 32
+    },
+    "states": [
+        {
+            "name": "crypt_gray"
+        },
+        {
+            "name": "crypt_silver"
+        },
+        {
+            "name": "ship_label"
+        }
+    ]
+}

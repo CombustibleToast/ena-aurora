@@ -1,7 +1,7 @@
 using Robust.Shared.GameStates;
 using Robust.Shared.Analyzers;
 
-namespace Content.Shared.Shuttles.Components;
+namespace Content.Shared.Shuttles.Components; // Mono
 
 /// <summary>
 /// Component that controls whether a shuttle will FTL with docked shuttles or automatically undock.

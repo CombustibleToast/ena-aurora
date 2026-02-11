@@ -4,6 +4,12 @@
   encryptionKeys:
   - EncryptionKeyTraffic
 
+- type: loadout # Aurora's Song - Shipboard encryption key added
+  id: ContractorEncryptionKeyShipboard
+  price: 0
+  encryptionKeys:
+  - EncryptionKeyShipboard
+
 - type: loadout
   id: ContractorEncryptionKeyMedical
   hideEffects:

@@ -5819,3 +5819,21 @@ Entries:
   id: 8943
   time: '2026-02-08T03:52:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/714
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Can now sell ships with contraband crates aboard
+  id: 8944
+  time: '2026-02-08T04:50:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/712
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Traffic to Shortband (750m), Common to Broadband (Unlimited)
+    - type: Add
+      message: Shipboard radio channel (60m)
+    - type: Tweak
+      message: Shipboard channel key is free in the loadout
+  id: 8945
+  time: '2026-02-08T18:09:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/716
