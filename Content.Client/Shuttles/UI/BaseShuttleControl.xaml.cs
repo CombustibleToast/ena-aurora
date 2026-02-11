@@ -151,7 +151,7 @@ public partial class BaseShuttleControl : MapGridControl
             {
                 var index = tileRef.Value.GridIndices;
 
-                // Mono - drawing logic rewritten
+                // Mono - drawing logic rewritten start
                 var def = (ContentTileDefinition)_tileDef[tileRef.Value.Tile.TypeId];
                 if (def.Invisible == true) // AS
                     continue;
@@ -192,6 +192,7 @@ public partial class BaseShuttleControl : MapGridControl
                 }
                 _gridNeighborSet[index] = dirFlag;
             }
+            // Mono - drawing logic rewritten end
 
             gridData.EdgeIndex = gridData.Vertices.Count;
             _edges.Clear();
@@ -232,6 +233,7 @@ public partial class BaseShuttleControl : MapGridControl
                     prev = vert;
                 }
             }
+            // Mono - drawing logic rewritten end
 
             // Decompose the edges into longer lines to save data.
             // Now we decompose the lines into longer lines (less data to send to the GPU)
