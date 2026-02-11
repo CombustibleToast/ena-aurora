@@ -5912,3 +5912,10 @@ Entries:
   id: 8954
   time: '2026-02-11T08:46:58.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/726
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Plastitanium diagonals mesh properly again
+  id: 8955
+  time: '2026-02-11T20:14:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/727
