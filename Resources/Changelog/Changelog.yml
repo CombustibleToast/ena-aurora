@@ -5894,3 +5894,14 @@ Entries:
   id: 8952
   time: '2026-02-11T05:28:35.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/725
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: >-
+        Added many diagonal variants of lattices and platings for use by
+        mappers.
+    - type: Tweak
+      message: Changed the radar system to be able to draw these new diagonals.
+  id: 8953
+  time: '2026-02-11T06:12:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/724
