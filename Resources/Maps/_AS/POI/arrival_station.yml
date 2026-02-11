@@ -52,7 +52,6 @@ entities:
     - type: Fixtures
       fixtures: {}
     - type: OccluderTree
-    - type: SpreaderGrid
     - type: NavMap
     - type: Shuttle
       dampingModifier: 0.25

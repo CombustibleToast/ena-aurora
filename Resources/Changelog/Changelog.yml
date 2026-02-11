@@ -5837,3 +5837,71 @@ Entries:
   id: 8945
   time: '2026-02-08T18:09:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/716
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: SLE Loadouts
+    - type: Remove
+      message: Station Representative, Plant Manager, Plant Technician
+    - type: Add
+      message: Colonial Representative, Site Manager, Site Worker
+    - type: Add
+      message: Aurora's Song branded items
+  id: 8946
+  time: '2026-02-09T08:21:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/715
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: shipboard desc to 60, color hex to beige
+  id: 8947
+  time: '2026-02-09T11:36:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/718
+- author: Vandanna
+  changes:
+    - type: Remove
+      message: SpreaderGrid from multiple POIs
+  id: 8948
+  time: '2026-02-09T14:28:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/719
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Being whitelisted for the server does not mean you are whitelisted for
+        all roles.
+  id: 8949
+  time: '2026-02-09T17:55:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/720
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Corpsman Loadout shows again
+  id: 8950
+  time: '2026-02-09T18:10:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/721
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Site roles now selectable
+  id: 8951
+  time: '2026-02-10T01:09:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/722
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Fixed diagonal windows not separating rooms.
+  id: 8952
+  time: '2026-02-11T05:28:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/725
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: >-
+        Added many diagonal variants of lattices and platings for use by
+        mappers.
+    - type: Tweak
+      message: Changed the radar system to be able to draw these new diagonals.
+  id: 8953
+  time: '2026-02-11T06:12:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/724

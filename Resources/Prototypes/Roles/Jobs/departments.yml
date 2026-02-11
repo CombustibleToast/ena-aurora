@@ -39,7 +39,7 @@
   id: CentralCommand
   name: department-CentralCommand
   description: department-NFCentralCommand-description # Frontier
-  color: "#0c344d"
+  color: "#000080" # AS 0c344d -> 000080
   roles:
   - CentralCommandOfficial
 #  - CBURN # Frontier
@@ -113,7 +113,7 @@
   id: Security
   name: department-Security
   description: department-NFSecurity-description # Frontier
-  color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
+  color: "#687EA6" # AS: 5C7D4D -> 687EA6
   weight: 1 # Frontier: 20<1 - accounted for in jobs
   roles: # Aurora's Song - switched NFSD to SLE roles
 #  - Detective # Frontier

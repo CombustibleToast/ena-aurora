@@ -22,6 +22,7 @@
     - !type:RoleTimeRequirement
       role: JobSeniorOfficer
       time: 21600 # 6 hours
+  whitelisted: true
   startingGear: LieutenantGear
   icon: JobIconLieutenant
   supervisors: job-supervisors-commissioner
