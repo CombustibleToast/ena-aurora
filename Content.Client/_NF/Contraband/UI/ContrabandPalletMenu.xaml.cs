@@ -52,12 +52,11 @@ public sealed partial class ContrabandPalletMenu : FancyWindow
     {
         // TODO: switch currency function by currency in component
         AppraisalLabel.Text = Loc.GetString($"{_locPrefix}contraband-console-menu-points-amount", ("amount", BankSystemExtensions.ToIndependentString(amount)));
-        if(_locPrefix == "") // AS: Allow alt reward currencies | Hacky as hell but its the best I could come up with.
+        if (_locPrefix == "") // AS: Allow alt reward currencies | Hacky as hell but its the best I could come up with.
         {
             AppraisalLabel.Text += " & ";
             AppraisalLabel.Text += Loc.GetString("contraband-console-menu-points-amount-alt", ("altAmount", BankSystemExtensions.ToIndependentString(altAmount)));
         }
-        
     }
 
     public void SetCount(int count)

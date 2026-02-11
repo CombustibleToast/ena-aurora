@@ -69,6 +69,7 @@
     severity: Class2Expedition
     turnInValues: &oneFUC
       FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
       Doubloon: 1
 
 - type: entity
@@ -100,6 +101,7 @@
     severity: Class3Expedition
     turnInValues:
       FrontierUplinkCoin: 2
+      ExchangeCoin: 2 # AS
       Doubloon: 2
 
 - type: entity
@@ -159,6 +161,7 @@
   - type: Contraband
     turnInValues:
       FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
       Doubloon: 0
 
 - type: entity
