@@ -5905,3 +5905,10 @@ Entries:
   id: 8953
   time: '2026-02-11T06:12:59.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/724
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Minor adjustments to the Petrel for testing (diagonals, map, atmos)
+  id: 8954
+  time: '2026-02-11T08:46:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/726
