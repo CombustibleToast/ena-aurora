@@ -153,6 +153,7 @@
     sprite: _NF/Structures/Windows/plastitanium_window_diagonal.rsi # Frontier
     state: state0
   - type: IconSmooth
+    key: walls # AS
     mode: Diagonal
     base: state
   - type: Fixtures
