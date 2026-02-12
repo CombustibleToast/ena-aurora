@@ -122,6 +122,7 @@
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
   - type: ContrabandPalletConsole
+    cashType: FrontierUplinkCoin # AS
     altCashType: ExchangeCoin
   - type: ActivatableUI
     key: enum.ContrabandPalletConsoleUiKey.Contraband
@@ -316,7 +317,7 @@
 
 - type: entity
   name: plunder exchange computer
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseComputer] # AS: I hate parenting
+  parent: ComputerContrabandPalletConsole
   id: ComputerContrabandPalletConsolePirate
   description: Fence yer ill-gotten goods here! And keep yer pile orderly.
   components:
@@ -339,6 +340,7 @@
     key: enum.ContrabandPalletConsoleUiKey.Contraband
   - type: ContrabandPalletConsole
     cashType: Doubloon
+    altCashType: Null
     faction: Pirates
     licenseRequired: Null
     locStringPrefix: pirate-

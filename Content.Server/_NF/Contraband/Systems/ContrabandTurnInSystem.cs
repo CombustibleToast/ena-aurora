@@ -193,15 +193,15 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 if (TryComp<ContrabandComponent>(ent, out var comp)
                     && !toSell.Contains(ent)
                     && comp.TurnInValues is { } turnInValues
-                    && (turnInValues.ContainsKey(console.Comp.RewardType) || turnInValues.ContainsKey(console.Comp.RewardTypeAlternate))) // AS: Allow alt reward currencies
+                    && (console.Comp.RewardType != null && turnInValues.ContainsKey(console.Comp.RewardType) || console.Comp.RewardTypeAlternate != null && turnInValues.ContainsKey(console.Comp.RewardTypeAlternate))) // AS: Allow alt reward currencies
                 {
                     toSell.Add(ent);
-                    if (turnInValues.ContainsKey(console.Comp.RewardTypeAlternate)) // Begin AS: Allow alt reward currencies
+                    if (console.Comp.RewardTypeAlternate != null && turnInValues.ContainsKey(console.Comp.RewardTypeAlternate)) // Begin AS: Allow alt reward currencies
                     {
                         var altValue = comp.TurnInValues[console.Comp.RewardTypeAlternate];
                         altAmount += altValue;
                     }
-                    if (turnInValues.ContainsKey(console.Comp.RewardType))
+                    if (console.Comp.RewardType != null && turnInValues.ContainsKey(console.Comp.RewardType))
                     {
                         var value = comp.TurnInValues[console.Comp.RewardType];
                         amount += value;
@@ -265,20 +265,33 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 
         var outputQuery = EntityQueryEnumerator<ScuOutputComponent, TransformComponent>(); // Begin AS: Makes pirate contraband selling usable
         var output = uid.ToCoordinates();
+        var outputSent = false;
         while (outputQuery.MoveNext(out var _, out var xform))
         {
             if (xform.GridUid == gridUid)
+            {
                 output = _scuOutput.ToCoordinates();
+                outputSent = true;
+            }
         }
 
-        if (component.RewardType != "")
+        if (component.RewardType != null) 
         {
             var rewardPrototype = _protoMan.Index<StackPrototype>(component.RewardType); // AS: Allow alt reward currencies
             var stackUid = _stack.Spawn(reward, rewardPrototype, output); // AS: Allow alt reward currencies
-            _transform.SetLocalRotation(stackUid, Angle.Zero);
+            if (outputSent == false)
+            {
+                if (!_hands.TryPickupAnyHand(args.Actor, stackUid)) // If there wasn't a a ScuOutputComponent to send these too, try to pick them up
+                    _transform.SetLocalRotation(stackUid, Angle.Zero);
+            }
+            else
+            {
+                _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+            }
+
         }
 
-        if (component.RewardTypeAlternate != "")
+        if (component.RewardTypeAlternate != null) // AS
         {
             var altRewardPrototype = _protoMan.Index<StackPrototype>(component.RewardTypeAlternate); // AS: Allow alt reward currencies
             var altStackUid = _stack.Spawn(altReward, altRewardPrototype, args.Actor.ToCoordinates()); // AS: Allow alt reward currencies
@@ -305,12 +318,15 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
         GetPalletGoods(gridUid, ent, out _, out _, out _, out var toRegister); // AS: Allow alt reward currencies
 
-        // Award SCUs
-        var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
-        // 1 SCU per registered item
-        var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, _scuOutput.ToCoordinates());
+        // Award Primary currency (Probably SCU's) if we have one
+        if (ent.Comp.RewardType != null)
+        {
+            var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
+            // 1 SCU per registered item
+            var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, _scuOutput.ToCoordinates());
 
-        _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+            _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+        }
 
         //Exchange each item for their registered counterpart
         foreach (var oldEnt in toRegister)
