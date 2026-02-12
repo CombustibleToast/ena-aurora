@@ -8,21 +8,21 @@
 
 # Notes:
 #
-#- type: pointOfInterest
-#  id: Edison
-#  parent: BasePOI
-#  name: 'Edison Power Plant'
-#  minimumDistance: 3650
-#  maximumDistance: 5400
-#  minimumClearance: 1000
-#  spawnGroup: Required
-#  gridPath: /Maps/_NF/POI/edison.yml
-#  addComponents:
-#  - type: IFF
-#    color: "#3737F8"
-#  - type: SolarPoweredGrid
-#    trackOnInit: true
-#    doNotCull: true
+- type: pointOfInterest
+  id: Edison
+  parent: BasePOI
+  name: 'Edison Power Plant'
+  minimumDistance: 3650
+  maximumDistance: 5400
+  minimumClearance: 1000
+  spawnGroup: Required
+  gridPath: /Maps/_NF/POI/edison.yml
+  addComponents:
+  - type: IFF
+    color: "#3737F8"
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
 
 - type: gameMap
   id: Edison
