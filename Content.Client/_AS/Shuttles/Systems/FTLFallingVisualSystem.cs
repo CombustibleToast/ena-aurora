@@ -6,7 +6,7 @@ using Robust.Shared.Animations;
 namespace Content.Client._AS.Shuttles.Systems;
 
 /// <summary>
-///     Handles the falling animation for entities that fall into a chasm.
+///     Handles the falling animation for entities that fall into FTL SPace.
 /// </summary>
 public sealed class FTLFallingVisualsSystem : EntitySystem
 {

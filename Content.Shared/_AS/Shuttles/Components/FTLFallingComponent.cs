@@ -5,7 +5,7 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom;
 namespace Content.Shared._AS.Shuttles.Components;
 
 /// <summary>
-///     Added to entities which have started falling into a chasm.
+///     Added to entities which have started falling into FTL Space.
 /// </summary>
 [RegisterComponent, NetworkedComponent, AutoGenerateComponentPause]
 public sealed partial class FTLFallingComponent : Component

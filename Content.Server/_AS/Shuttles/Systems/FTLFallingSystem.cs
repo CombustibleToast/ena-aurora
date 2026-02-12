@@ -27,7 +27,7 @@ using Robust.Server.GameObjects;
 namespace Content.Server._AS.Shuttles.Systems;
 
 /// <summary>
-///     Handles making entities fall into chasms when stepped on.
+///     Handles making entities fall into FTL Space when stepping into space during transit
 /// </summary>
 public sealed class FTLFallingSystem : EntitySystem
 {
