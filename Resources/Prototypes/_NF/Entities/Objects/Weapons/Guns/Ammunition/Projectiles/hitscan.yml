@@ -19,7 +19,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_laser
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 60.0
 
 # Assault Rifles / Carbines
 - type: entity
@@ -42,7 +42,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_beam_heavy
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
 
 # Rifles
 - type: entity
@@ -65,7 +65,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_beam_heavy
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
 
 # Sniper Rifles
 - type: entity
@@ -88,7 +88,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_beam_heavy2
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
 
 # XRay
 - type: entity
@@ -112,7 +112,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_xray
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
 
 # Pulse
 - type: entity
@@ -135,7 +135,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_blue
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
 
 #region ShuttleLaser - Aurora
 # Shuttle
@@ -159,7 +159,7 @@
       sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
       state: impact_beam_heavy2
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
 #endregion ShuttleLaser - Aurora
 
 # Mobs
@@ -177,4 +177,4 @@
     travelFlash: *lightTravelFlash
     impactFlash: *lightImpactFlash
   - type: HitscanBasicRaycast
-    maxLength: 21
+    maxDistance: 21
