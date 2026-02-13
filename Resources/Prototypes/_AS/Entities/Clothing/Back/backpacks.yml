@@ -30,6 +30,7 @@
   - type: Storage
     grid:
     - 0,0,10,3
+    maxItemSize: Huge
 
 - type: entity
   parent: ClothingBackpackCAFLeader

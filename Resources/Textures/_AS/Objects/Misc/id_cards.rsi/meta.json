@@ -11,6 +11,9 @@
   },
   "states": [
 	{
+      "name": "admin"
+    }, 
+	{
       "name": "as_blue"
     },
     {

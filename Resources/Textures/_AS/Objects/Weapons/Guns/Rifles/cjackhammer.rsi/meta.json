@@ -20,6 +20,12 @@
             "name": "mag-0"
         },
         {
+            "name": "mag-1"
+        },
+        {
+            "name": "mag-2"
+        },
+        {
             "name": "inhand-left",
             "directions": 4
         },
@@ -39,7 +45,7 @@
             "name": "equipped-BACKPACK",
             "directions": 4
         },
-		{
+        {
             "name": "equipped-SUITSTORAGE",
             "directions": 4
         }
