@@ -76,3 +76,21 @@
       coefficients:
         Slash: 0.95
   - type: FingerprintMask
+
+#region Colonial Command
+
+- type: entity
+  parent: [ ClothingHandsGlovesCaptain, BaseColcommContraband ]
+  id: ASClothingHandsGlovesColonialOfficial
+  name: colonial official's gloves
+  description: Fine gloves befitting a colonial official.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Hands/Gloves/cr_gloves.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Hands/Gloves/cr_gloves.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+  - type: FingerprintMask

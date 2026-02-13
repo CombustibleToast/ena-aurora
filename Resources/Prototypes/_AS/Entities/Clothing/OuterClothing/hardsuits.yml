@@ -23,8 +23,8 @@
         Radiation: 0.50
         Caustic: 0.7
   - type: ClothingSpeedModifier
-    walkModifier: 0.9 #increased speed from .85 to .9, this suit can be painful to wear
-    sprintModifier: 0.9 #increased speed from .75 to .9, this suit can be painful to wear
+    walkModifier: 0.85
+    sprintModifier: 0.85 #increased speed from .75 to .85, this suit can be painful to wear because of the speed
 
 - type: entity
   parent: ClothingOuterHardsuitSleCombat
@@ -345,6 +345,257 @@
         Caustic: 0.5
   - type: Item
     size: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplus
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+#region Military
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitaryDark
+  name: military dark hardsuit
+  description: Auroran Military hardsuit. Worn by the Colonial Armed Forces. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#CFCFCF"
+    - state: icon-plate
+      color: "#252525"
+    - state: icon-detail
+      color: "#545454"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#CFCFCF"
+      - state: inhand-left-plate
+        color: "#252525"
+      - state: inhand-left-detail
+        color: "#545454"
+      right:
+      - state: inhand-right-fabric
+        color: "#CFCFCF"
+      - state: inhand-right-plate
+        color: "#252525"
+      - state: inhand-right-detail
+        color: "#545454"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#CFCFCF"
+      - state: plate
+        color: "#252525"
+      - state: detail
+        color: "#545454"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#CFCFCF"
+      - state: plate-harpy
+        color: "#252525"
+      - state: detail-harpy
+        color: "#545454"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#CFCFCF"
+      - state: plate-vox
+        color: "#252525"
+      - state: detail-vox
+        color: "#545454"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryDark
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitaryRGB
+  name: military rgb hardsuit
+  description: Auroran Military hardsuit. Worn by the Colonial Armed Forces. Designed for heavy combat engagements. Taste the rainbow.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#FF0000"
+    - state: icon-plate
+      color: "#00FF00"
+    - state: icon-detail
+      color: "#0000FF"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#FF0000"
+      - state: inhand-left-plate
+        color: "#00FF00"
+      - state: inhand-left-detail
+        color: "#0000FF"
+      right:
+      - state: inhand-right-fabric
+        color: "#FF0000"
+      - state: inhand-right-plate
+        color: "#00FF00"
+      - state: inhand-right-detail
+        color: "#0000FF"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#FF0000"
+      - state: plate
+        color: "#00FF00"
+      - state: detail
+        color: "#0000FF"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#FF0000"
+      - state: plate-harpy
+        color: "#00FF00"
+      - state: detail-harpy
+        color: "#0000FF"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#FF0000"
+      - state: plate-vox
+        color: "#00FF00"
+      - state: detail-vox
+        color: "#0000FF"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplus
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseColcommContraband]
+  id: ClothingOuterHardsuitMilitaryCAFLeader
+  name: CAF leader hardsuit
+  description: Auroran Military hardsuit. Worn by the Colonial Armed Forces. Designed for heavy combat engagements. Reinforced for durability and mobility. Leader colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#0F2854"
+    - state: icon-plate
+      color: "#4D4D4D"
+    - state: icon-detail
+      color: "#808080"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#0F2854"
+      - state: inhand-left-plate
+        color: "#4D4D4D"
+      - state: inhand-left-detail
+        color: "#808080"
+      right:
+      - state: inhand-right-fabric
+        color: "#0F2854"
+      - state: inhand-right-plate
+        color: "#4D4D4D"
+      - state: inhand-right-detail
+        color: "#808080"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#0F2854"
+      - state: plate
+        color: "#4D4D4D"
+      - state: detail
+        color: "#808080"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#0F2854"
+      - state: plate-harpy
+        color: "#4D4D4D"
+      - state: detail-harpy
+        color: "#808080"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#0F2854"
+      - state: plate-vox
+        color: "#4D4D4D"
+      - state: detail-vox
+        color: "#808080"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
+        Radiation: 0.65
+        Caustic: 0.65
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9

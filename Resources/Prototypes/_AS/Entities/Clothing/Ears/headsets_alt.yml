@@ -76,3 +76,19 @@
   - type: Clothing
     sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi
 
+#region Colonial Command
+
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseColcommCommandContraband]
+  id: ClothingHeadsetAltColCom
+  name: ColComm over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyColCom
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _AS/Clothing/Ears/Headsets/colcom.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Ears/Headsets/colcom.rsi

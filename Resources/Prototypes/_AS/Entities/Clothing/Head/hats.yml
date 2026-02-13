@@ -163,6 +163,18 @@
     sprite: _AS/Clothing/Head/Hats/cr_beret.rsi
   - type: HamsterWearable
 
+- type: entity
+  parent: [ ASClothingHeadHatColonialRepresentativeBeretBig, BaseColcommContraband ]
+  id: ASClothingHeadHatColonialOfficialBeretBig
+  name: colonial official's big beret
+  description: Stylish beret given to Colonial Officials. To help them stand out.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/cr_beret_big.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/cr_beret_big.rsi
+  - type: HamsterWearable
+
 #region Syndicate
 
 - type: entity

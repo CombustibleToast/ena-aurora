@@ -1,0 +1,10 @@
+- type: department
+  id: ColonialCommand
+  name: department-ColonialCommand
+  description: department-ColonialCommand-description
+  color: "#1C4D8D"
+  roles:
+  - ColonialCommandOfficial
+  - CAFLeader
+  editorHidden: true
+  weight: 120
