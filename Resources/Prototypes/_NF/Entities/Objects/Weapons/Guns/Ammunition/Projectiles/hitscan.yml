@@ -1,5 +1,5 @@
 # Pistols / SMGs
-- type: Entity
+- type: entity
   id: NFRedLightLaser
   parent: BasicHitscan
   categories: [ HideSpawnMenu ]
@@ -22,7 +22,7 @@
     maxLength: 21
 
 # Assault Rifles / Carbines
-- type: Entity
+- type: entity
   id: NFRedMediumLaser
   parent: BasicHitscan
   categories: [ HideSpawnMenu ]
