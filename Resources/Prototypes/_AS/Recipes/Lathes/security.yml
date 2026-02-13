@@ -1,5 +1,16 @@
 # Aurora Song
 
+#region .30 marksman rifle
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30Empty
+  result: ASMagazineMarksmanRifle30Empty
+  materials:
+    Steel: 30
+
+#endregion
+
 #region .40 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe

@@ -469,15 +469,15 @@
       - AstroNavCartridge
       - MailMetricsCartridge # Frontier
 
-- type: entity
-  parent: CAFLeaderPDA
-  id: CAFChaplainPDA
-  name: CAF Chaplain PDA
-  suffix: Chaplain
-  description: Blue for calm under pressure, it's blessed.
-  components:
-  - type: Pda
-    id: CAFChaplainIDCard
+#- type: entity # commenting out until CAF Chaplain role is added
+#  parent: CAFLeaderPDA
+#  id: CAFChaplainPDA
+#  name: CAF Chaplain PDA
+#  suffix: Chaplain
+#  description: Blue for calm under pressure, it's blessed.
+#  components:
+#  - type: Pda
+#    id: CAFChaplainIDCard
 
 - type: entity
   parent: CAFLeaderPDA
@@ -489,15 +489,15 @@
   - type: Pda
     id: CAFEngineerIDCard
 
-- type: entity
-  parent: CAFLeaderPDA
-  id: CAFJanitorPDA
-  name: CAF Janitor PDA
-  suffix: Janitor
-  description: Blue for calm under pressure, it's squeaky clean.
-  components:
-  - type: Pda
-    id: CAFJanitorIDCard
+#- type: entity # commenting out until CAF Janitor role is added
+#  parent: CAFLeaderPDA
+#  id: CAFJanitorPDA
+#  name: CAF Janitor PDA
+#  suffix: Janitor
+#  description: Blue for calm under pressure, it's squeaky clean.
+#  components:
+#  - type: Pda
+#    id: CAFJanitorIDCard
 
 - type: entity
   parent: CAFLeaderPDA

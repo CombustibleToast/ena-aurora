@@ -156,7 +156,7 @@
     eyes: ClothingEyesGlassesSecurity
     gloves: ClothingHandsGlovesCombat
     outerClothing: ClothingOuterHardsuitMilitaryCAFTrooper
-    id: CAFSecurityPDA
+    id: CAFTrooperPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltMilitaryWebbingSecurityFilled
     pocket1: NFWeaponPistolMk58 # Frontier: use NF variant

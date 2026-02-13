@@ -204,19 +204,19 @@
   - type: Item
     heldPrefix: gold
 
-- type: entity
-  parent: ASIDCardStandard
-  id: CAFChaplainIDCard
-  name: CAF chaplain ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: gold
-    - state: idmil # Maybe later make a unique one for chaplains
-  - type: PresetIdCard
-    job: CAFChaplain
-  - type: Item
-    heldPrefix: gold
+#- type: entity # commenting out until CAF Chaplain role is added
+#  parent: ASIDCardStandard
+#  id: CAFChaplainIDCard
+#  name: CAF chaplain ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: gold
+#    - state: idmil # Maybe later make a unique one for chaplains
+#  - type: PresetIdCard
+#    job: CAFChaplain
+#  - type: Item
+#    heldPrefix: gold
 
 - type: entity
   parent: ASIDCardStandard
@@ -230,17 +230,17 @@
   - type: PresetIdCard
     job: CAFEngineer
 
-- type: entity
-  parent: ASIDCardStandard
-  id: CAFJanitorIDCard
-  name: CAF janitor ID card
-  components:
-  - type: Sprite
-    layers:
-    - state: gold
-    - state: idmil # Maybe later make a unique one for janitors
-  - type: PresetIdCard
-    job: CAFJanitor
+#- type: entity # commenting out until CAF Janitor role is added
+#  parent: ASIDCardStandard
+#  id: CAFJanitorIDCard
+#  name: CAF janitor ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: gold
+#    - state: idmil # Maybe later make a unique one for janitors
+#  - type: PresetIdCard
+#    job: CAFJanitor
 
 - type: entity
   parent: ASIDCardStandard

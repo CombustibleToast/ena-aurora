@@ -27,9 +27,9 @@
 
 - type: entity
   parent: ASBaseSignDirectional
-  id: ASSignDirectionalSLE
-  name: SLE outpost sign
-  description: A direction sign, pointing out which the Colonial Representative's is.
+  id: ASSignDirectionalCR
+  name: Colonial Representative sign
+  description: A direction sign, pointing out which way the Colonial Representative's office is.
   components:
   - type: Sprite
     state: direction_cr
