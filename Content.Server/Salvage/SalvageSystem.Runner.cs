@@ -323,7 +323,7 @@ public sealed partial class SalvageSystem
                 }
             }
 
-            if (remaining < TimeSpan.FromSeconds(1)) // AS: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
+            if (remaining < TimeSpan.FromSeconds(2.5)) // AS: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
             {
                 var shuttleQuery = AllEntityQuery<ShuttleComponent, TransformComponent>();
 
