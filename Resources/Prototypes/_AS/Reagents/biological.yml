@@ -1,0 +1,25 @@
+- type: reagent
+  id: Oxidant
+  name: reagent-name-oxidant
+  group: Biological
+  desc: reagent-desc-oxidant
+  flavor: metallic
+  color: "#70c0bf"
+  recognizable: true
+  physicalDesc: reagent-physical-desc-viscous
+  metabolisms:
+    Poison:
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: ScrambledAccent
+      - !type:Vomit # Mercury that really doesn't taste or feel good to ingest.
+        probability: 0.1
+  footstepSound:
+    collection: FootstepBlood
+    params:
+      volume: 6

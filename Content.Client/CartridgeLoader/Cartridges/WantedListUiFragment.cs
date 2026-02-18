@@ -102,9 +102,12 @@ public sealed partial class WantedListUiFragment : BoxContainer
             "wanted-list-job-label",
             ("job", record.TargetInfo.JobTitle.ToLower())
         ));
+        var speciesText = record.TargetInfo.Species; // AS: Replika
+        if (record.TargetInfo.Replicant) // AS: Replika
+            speciesText = Loc.GetString("species-name-replicant", ("species", speciesText)); // AS: Replika
         TargetSpecies.SetMessage(GetLoc(
             "wanted-list-species-label",
-            ("species", record.TargetInfo.Species.ToLower())
+            ("species", speciesText.ToLower()) // AS: Replika
         ));
         TargetGender.SetMessage(GetLoc(
             "wanted-list-gender-label",

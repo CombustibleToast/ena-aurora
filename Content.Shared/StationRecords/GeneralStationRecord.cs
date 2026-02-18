@@ -68,4 +68,10 @@ public sealed record GeneralStationRecord
     /// </summary>
     [DataField]
     public string? DNA;
+    // AS
+    /// <summary>
+    ///     Whether the person is a replicant or not
+    /// </summary>
+    [DataField]
+    public bool Replicant;
 }
