@@ -12,9 +12,9 @@
   id: Damascus
   parent: BasePOI
   name: 'Damascus Manufactory'
-  minimumDistance: 3650
-  maximumDistance: 5400
-  minimumClearance: 1000
+  minimumDistance: 410
+  maximumDistance: 460
+  minimumClearance: 100
   spawnGroup: Required
   gridPath: /Maps/_AS/POI/damascus.yml
   addComponents:
