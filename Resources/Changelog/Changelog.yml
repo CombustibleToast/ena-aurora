@@ -5937,3 +5937,16 @@ Entries:
   id: 8957
   time: '2026-02-18T16:59:40.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/734
+- author: Vandanna
+  changes:
+    - type: Add
+      message: ColComm, and CAF
+    - type: Add
+      message: More signage and posters
+    - type: Tweak
+      message: IDs, various tooltips for branding
+    - type: Add
+      message: Jackhammer restricted variant for Commissioner and CAF
+  id: 8958
+  time: '2026-02-18T17:00:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/731
