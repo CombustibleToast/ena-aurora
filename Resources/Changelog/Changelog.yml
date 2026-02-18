@@ -5928,3 +5928,12 @@ Entries:
   id: 8956
   time: '2026-02-13T04:02:17.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/728
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Made the Exped Saviour System trigger 1.5 seconds sooner to hopefully
+        avoid any accidental body deletions.
+  id: 8957
+  time: '2026-02-18T16:59:40.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/734
