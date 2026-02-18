@@ -5905,3 +5905,57 @@ Entries:
   id: 8953
   time: '2026-02-11T06:12:59.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/724
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Minor adjustments to the Petrel for testing (diagonals, map, atmos)
+  id: 8954
+  time: '2026-02-11T08:46:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/726
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Plastitanium diagonals mesh properly again
+  id: 8955
+  time: '2026-02-11T20:14:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/727
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: >-
+        Added a new system that shunts you back into reality if you fall out of
+        your ship during FTL.
+  id: 8956
+  time: '2026-02-13T04:02:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/728
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Made the Exped Saviour System trigger 1.5 seconds sooner to hopefully
+        avoid any accidental body deletions.
+  id: 8957
+  time: '2026-02-18T16:59:40.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/734
+- author: Vandanna
+  changes:
+    - type: Add
+      message: ColComm, and CAF
+    - type: Add
+      message: More signage and posters
+    - type: Tweak
+      message: IDs, various tooltips for branding
+    - type: Add
+      message: Jackhammer restricted variant for Commissioner and CAF
+  id: 8958
+  time: '2026-02-18T17:00:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/731
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Dark Shuttle Walls/ Windows/ Airlocks
+    - type: Tweak
+      message: Base Shuttle Walls/ Airlocks
+  id: 8959
+  time: '2026-02-18T18:10:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/730

@@ -26,3 +26,12 @@ job-name-ppm-short = PPM
 job-name-civilian = Civilian
 job-name-citizen = Citizen
 job-name-technician = Technician
+
+# ColonialCommand
+job-name-colcomoff = Colonial Command Official
+job-name-caf = Colonial Armed Forces
+job-name-cafleader = CAF Leader
+job-name-cafchaplain = CAF Chaplain
+job-name-cafengineer = CAF Engineer
+job-name-caftrooper = CAF Trooper
+job-name-cafmedic = CAF Medic

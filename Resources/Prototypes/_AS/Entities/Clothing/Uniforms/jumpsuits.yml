@@ -437,3 +437,16 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/cr.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/cr.rsi
+
+#region Colonial Command
+
+- type: entity
+  parent: [ ClothingUniformBase, BaseColcommContraband ]
+  id: ASClothingUniformJumpsuitColcommFormal
+  name: Colonial Command official's jumpsuit
+  description: A formal jumpsuit worn by Colonial Command's officials.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/colcomformal.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/colcomformal.rsi

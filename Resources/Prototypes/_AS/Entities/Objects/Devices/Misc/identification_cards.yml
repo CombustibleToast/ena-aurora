@@ -172,6 +172,100 @@
   - type: Item
     heldPrefix: silver
 
+#region Colonial Command
+
+- type: entity
+  parent: ASIDCardStandard
+  id: ColcomIDCard
+  name: command officer ID card
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: as_blue
+    - state: idcolcom
+  - type: Item
+    heldPrefix: as_blue
+  - type: PresetIdCard
+    job: ColonialCommandOfficial
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFLeaderIDCard
+  name: CAF leader ID card
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: gold
+    - state: idmil
+  - type: PresetIdCard
+    job: CAFLeader
+  - type: Item
+    heldPrefix: gold
+
+#- type: entity # commenting out until CAF Chaplain role is added
+#  parent: ASIDCardStandard
+#  id: CAFChaplainIDCard
+#  name: CAF chaplain ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: gold
+#    - state: idmil # Maybe later make a unique one for chaplains
+#  - type: PresetIdCard
+#    job: CAFChaplain
+#  - type: Item
+#    heldPrefix: gold
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFEngineerIDCard
+  name: CAF engineer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idmil # Maybe later make a unique one for engineers
+  - type: PresetIdCard
+    job: CAFEngineer
+
+#- type: entity # commenting out until CAF Janitor role is added
+#  parent: ASIDCardStandard
+#  id: CAFJanitorIDCard
+#  name: CAF janitor ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: gold
+#    - state: idmil # Maybe later make a unique one for janitors
+#  - type: PresetIdCard
+#    job: CAFJanitor
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFMedicIDCard
+  name: CAF medic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idmil # Maybe later make a unique one for medics
+  - type: PresetIdCard
+    job: CAFMedical
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFTrooperIDCard
+  name: CAF trooper ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idmil # Maybe later make a unique one for trooper
+  - type: PresetIdCard
+    job: CAFTrooper
+
 #region Engineering
 
 - type: entity
@@ -200,3 +294,47 @@
     - state: default
     - state: idsiteworker
 
+#region Special
+
+- type: entity
+  parent: UniversalIDCard
+  id: ASUniversalIDCard
+  name: universal ID card
+  suffix: Admin
+  description: An ID card that gives you access beyond your wildest dreams.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: admin
+    - state: idadmin
+  - type: Clothing
+    sprite: _AS/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: as_blue
+  - type: IdCard
+    jobTitle: job-title-universal
+    jobIcon: JobIconAdmin
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+    - ColonialCommand
+    - NuclearOperative
+    - SyndicateAgent
+    - Wizard
+    - Xenoborg
+    - Pirate # Frontier
+  - type: Tag #  Ignore Chameleon tags
+    tags:
+    - DoorBumpOpener
+  - type: AgentIDCard
+  - type: ActivatableUI
+    key: enum.AgentIDCardUiKey.Key
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.AgentIDCardUiKey.Key:
+        type: AgentIDCardBoundUserInterface

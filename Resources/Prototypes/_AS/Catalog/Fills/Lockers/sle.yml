@@ -87,6 +87,9 @@
       amount: 2
     - id: NFAmmunitionBoxShellShotgunBeanbag
       amount: 2
+    - id: ASWeaponRifleMarksmanHZ-3-3-C
+    - id: ASMagazineMarksmanRifle30
+      amount: 2
     - id: ClothingOuterHardsuitSleCombat
     - id: ClothingOuterSoftsuitSlePatrol
     - id: ASJetpackSLEFilled

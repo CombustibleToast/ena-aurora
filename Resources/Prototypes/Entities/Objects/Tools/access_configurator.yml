@@ -140,6 +140,7 @@
     - StationTrafficController # Frontier
     - Theatre
     - CentralCommand
+    - ColonialCommand # Aurora's Song - Added Colonial Command access
     - NuclearOperative
     - SyndicateAgent
     - Wizard

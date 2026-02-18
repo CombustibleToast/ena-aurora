@@ -39,6 +39,12 @@
         },
         {
             "name": "sitemanager"
+        },
+        {
+            "name": "colcom"
+        },
+        {
+            "name": "mil"
         }
     ]
 }
