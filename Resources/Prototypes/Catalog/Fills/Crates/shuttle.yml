@@ -23,7 +23,7 @@
   parent: CrateEngineering
   id: CrateEngineeringFTLDrive25
   name: CTLA-25 bluespace drive crate
-  description: Contains a CTLA-25 bluespace drive flatpack.
+  description: Contains a CTLA-25 bluespace drive flatpack. Capable of jumping 5km with a small ship.
   components:
   - type: StorageFill
     contents:
@@ -33,7 +33,7 @@
   parent: CrateEngineering
   id: CrateEngineeringFTLDrive50
   name: CTLA-50 bluespace drive crate
-  description: Contains a CTLA-50 bluespace drive flatpack.
+  description: Contains a CTLA-50 bluespace drive flatpack. Capable of jumping 10km with a medium ship.
   components:
   - type: StorageFill
     contents:
@@ -43,7 +43,7 @@
   parent: CrateEngineering
   id: CrateEngineeringFTLDrive25S
   name: CTLA-25s bluespace drive crate
-  description: Contains a CTLA-25s bluespace drive flatpack.
+  description: Contains a CTLA-25s bluespace drive flatpack. Capable of jumping 5km with a small ship, but with upgrades for faster recharge and flight times.
   components:
   - type: StorageFill
     contents:
@@ -53,7 +53,7 @@
   parent: CrateEngineering
   id: CrateEngineeringFTLDrive160
   name: CTLA-160 bluespace drive crate
-  description: Contains the flatpacks needed to assemble a CTLA-160 heavy bluespace core.
+  description: Contains the flatpacks needed to assemble a CTLA-160 heavy bluespace core. Capable of jumping 25km with a large ship.
   components:
   - type: StorageFill
     contents:
