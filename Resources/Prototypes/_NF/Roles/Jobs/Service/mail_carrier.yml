@@ -40,7 +40,7 @@
     - HandheldCrewMonitor # Frontier
     - ShipVoucherFrontierMailCarrier # Frontier
     - MailMetricsCartridge # Frontier
-    - CrayonMagic # Aurora's Song - for labeling mail areas
+    - CrayonBox # Aurora's Song - for labeling mail areas
 
 - type: chameleonOutfit
   id: MailCarrierChameleonOutfit
