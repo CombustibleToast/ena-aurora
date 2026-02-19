@@ -10,9 +10,11 @@
     NFWeaponShotgunKammerer: 6
   # Magazines
     NFMagazinePistol35Empty: 6
+    NFMagazineSubMachineGun35Empty: 6 # Aurora's Song
     ASMagazinePistol40Empty: 6 # Aurora's Song
     NFMagazineLowCapacityRifle30Empty: 6
     NFMagazineClipRifle20Empty: 6
+    NFMagazineRifle20Empty: 6 # Aurora's Song
   # Ammo boxes
     NFAmmunitionBoxPistol35: 6
     ASAmmunitionBoxPistol40: 6 # Aurora's Song
@@ -33,9 +35,11 @@
     NFWeaponShotgunKammerer: 4294967295
   # Magazines
     NFMagazinePistol35Empty: 4294967295
+    NFMagazinePistol35Empty: 4294967295 # Aurora's Song
     ASMagazinePistol40Empty: 4294967295 # Aurora's Song
     NFMagazineClipRifle20Empty: 4294967295
     NFMagazineLowCapacityRifle30Empty: 4294967295
+    NFMagazineRifle20Empty: 4294967295 # Aurora's Song
   # Ammo boxes
     NFAmmunitionBoxPistol35: 4294967295
     ASAmmunitionBoxPistol40: 4294967295 # Aurora's Song
