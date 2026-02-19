@@ -12264,7 +12264,7 @@ entities:
     - type: Transform
       pos: 5.5,9.5
       parent: 1
-- proto: DefaultStationBeaconAuroraSLEFiring Range
+- proto: DefaultStationBeaconAuroraSLEFiringRange
   entities:
   - uid: 4844
     components:

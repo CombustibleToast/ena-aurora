@@ -103,7 +103,7 @@
 
 - type: entity
   parent: DefaultStationBeacon
-  id: DefaultStationBeaconAuroraSLEFiring Range
+  id: DefaultStationBeaconAuroraSLEFiringRange
   suffix: SLE, Firing Range
   components:
   - type: NavMapBeacon
