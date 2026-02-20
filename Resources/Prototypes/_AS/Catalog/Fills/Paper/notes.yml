@@ -39,7 +39,7 @@
   id: PaperOfficeScrubbingSystemGuide
   name: Scrubbing System Guide
   parent: PaperOffice
-  #categories: [ HideSpawnMenu ]
+  categories: [ HideSpawnMenu ]
   components:
   - type: Paper
     content: |2
