@@ -49,6 +49,7 @@
       path: /Audio/Ambience/Objects/anomaly_generator.ogg
   - type: Machine
     board: MachineDriveCTLA160Circuitboard
+  - type: ContainerContainer
 
 - type: entity
   id: MachineHeavyFTLDriveConsole
