@@ -47,6 +47,8 @@
     range: 5
     sound:
       path: /Audio/Ambience/Objects/anomaly_generator.ogg
+  - type: Machine
+    board: MachineDriveCTLA160Circuitboard
 
 - type: entity
   id: MachineHeavyFTLDriveConsole
