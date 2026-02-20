@@ -5968,3 +5968,12 @@ Entries:
   id: 8960
   time: '2026-02-20T16:59:45.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/723
+- author: turtleofmen and Vandanna
+  changes:
+    - type: Add
+      message: Damascus Manufactory
+    - type: Remove
+      message: Edison Power Plant
+  id: 8961
+  time: '2026-02-20T17:02:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/735
