@@ -89,13 +89,14 @@
     slots:
       holster:
         name: clothing-belt-sidearm
-        priority: -1 # always the first thing out
+        priority: 4 # higher number is higher priority
         whitelist:
           tags:
           - Sidearm
         insertOnInteract: true
       medkit:
         name: clothing-belt-medkit
+        priority: 3
         whitelist:
           tags:
           - Medkit

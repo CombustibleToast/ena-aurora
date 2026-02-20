@@ -88,7 +88,7 @@
     slots:
       holster:
         name: clothing-belt-sidearm
-        priority: 4 # always the first thing out
+        priority: 4 # higher number is higher priority
         whitelist:
           tags:
           - Sidearm
