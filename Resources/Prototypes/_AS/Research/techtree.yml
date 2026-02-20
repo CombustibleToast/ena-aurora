@@ -20,7 +20,7 @@
   name: as-research-technology-faster-than-light
   entityIcon: MachineFTLDrive
   discipline: NFEngineering
-  tier: 2
+  tier: 1
   cost: 5000
   recipeUnlocks:
   - MachineDriveCTLA25Circuitboard
@@ -33,7 +33,7 @@
   name: as-research-technology-faster-than-light-25s
   entityIcon: MachineFTLDrive25S
   discipline: NFEngineering
-  tier: 3
+  tier: 1
   cost: 10000
   recipeUnlocks:
   - MachineDriveCTLA25sCircuitboard
@@ -47,7 +47,7 @@
   name: as-research-technology-faster-than-light-50
   entityIcon: MachineFTLDrive50
   discipline: NFEngineering
-  tier: 3
+  tier: 1
   cost: 10000
   recipeUnlocks:
   - MachineDriveCTLA50Circuitboard
@@ -60,7 +60,7 @@
   name: as-research-technology-faster-than-light-160
   entityIcon: MachineHeavyFTLDriveCore
   discipline: NFEngineering
-  tier: 4
+  tier: 1
   cost: 15000
   recipeUnlocks:
   - MachineDriveCTLA160Circuitboard
@@ -76,7 +76,7 @@
   name: as-research-technology-laser-field-endurance
   entityIcon: ASWeaponBasinLasPistol
   discipline: NFArsenalMercenary
-  tier: 2
+  tier: 1
   cost: 12500
   recipeUnlocks:
   - ASWeaponBasinLasPistol
