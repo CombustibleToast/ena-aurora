@@ -2901,10 +2901,6 @@ entities:
     - type: Transform
       pos: -3.5,-0.5
       parent: 1
-    - type: Thruster
-      enabled: False
-    - type: ApcPowerReceiver
-      powerLoad: 1
 - proto: HospitalCurtainsOpen
   entities:
   - uid: 275
