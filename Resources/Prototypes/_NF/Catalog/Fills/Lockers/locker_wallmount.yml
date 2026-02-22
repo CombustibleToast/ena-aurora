@@ -354,15 +354,6 @@
     - id: PlantBag
     - id: BoxMouthSwab
     - id: Dropper
-  id: LockerWallColorHydroponicsEmpty
-  suffix: Empty, Frontier
-  parent: [LockerWallColorHydroponics, BaseStructureWallmount]
-  name: botanist wall locker
-  components:
-  - type: EntityStorageVisuals
-    stateBaseClosed: base
-    stateDoorOpen: open
-    stateDoorClosed: door
 
 - type: entity
   id: LockerWallColorHydroponicsFilled
@@ -381,6 +372,8 @@
     stateBaseClosed: base
     stateDoorOpen: open
     stateDoorClosed: door
+
+- type: entity
   parent: LockerWallColorPilot
   id: LockerWallColorPilotFilled
   suffix: Filled, Frontier
