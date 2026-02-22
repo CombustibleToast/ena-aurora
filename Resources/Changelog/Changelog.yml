@@ -6066,3 +6066,10 @@ Entries:
   id: 8966
   time: '2026-02-22T22:00:23.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/740
+- author: ErhardSteinhauer, Karlm4x
+  changes:
+    - type: Tweak
+      message: Brought the pathfinder up to new standards
+  id: 8967
+  time: '2026-02-22T22:59:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/742
