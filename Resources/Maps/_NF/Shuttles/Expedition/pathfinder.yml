@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 02/22/2026 21:47:53
+  time: 02/22/2026 21:55:03
   entityCount: 568
 maps: []
 grids:
@@ -436,7 +436,8 @@ entities:
             0: 61154
           1,0:
             0: 1
-            1: 292
+            1: 288
+            2: 4
           1,-1:
             0: 5588
             1: 32768
@@ -456,22 +457,27 @@ entities:
           1,-2:
             0: 30711
           2,-3:
-            1: 61440
+            2: 28672
+            1: 32768
           2,-2:
             0: 30576
           2,-1:
             0: 16
-            1: 584
+            1: 520
+            2: 64
           -2,0:
-            1: 132
+            2: 4
+            1: 128
           -3,-3:
-            1: 57344
+            1: 8192
+            2: 49152
           -3,-2:
             0: 52416
           -3,-1:
-            1: 2114
+            1: 2050
+            2: 64
           -2,-3:
-            1: 4096
+            2: 4096
           -2,-2:
             0: 65532
           -2,-1:
@@ -483,6 +489,21 @@ entities:
           moles:
           - 21.824879
           - 82.10312
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+          - 0
+        - volume: 2500
+          temperature: 293.15
+          moles:
+          - 0
+          - 0
           - 0
           - 0
           - 0
@@ -1736,7 +1757,7 @@ entities:
       parent: 1
 - proto: ComputerWallmountStationRecords
   entities:
-  - uid: 336
+  - uid: 300
     components:
     - type: Transform
       rot: 1.5707963267948966 rad
@@ -2764,10 +2785,10 @@ entities:
       pipeLayer: Secondary
 - proto: GravityGeneratorMini
   entities:
-  - uid: 506
+  - uid: 32
     components:
     - type: Transform
-      pos: 3.5,1.5
+      pos: 4.5,0.5
       parent: 1
 - proto: Grille
   entities:
@@ -2956,10 +2977,10 @@ entities:
       parent: 1
 - proto: MachineFTLDrive
   entities:
-  - uid: 32
+  - uid: 506
     components:
     - type: Transform
-      pos: 4.5,0.5
+      pos: 3.5,1.5
       parent: 1
 - proto: MachineMaterialSilo
   entities:
@@ -3091,17 +3112,17 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.5,-0.5
       parent: 1
+  - uid: 308
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -2.5,-3.5
+      parent: 1
   - uid: 324
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 1.5,-9.5
-      parent: 1
-  - uid: 378
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -2.5,-3.5
       parent: 1
   - uid: 560
     components:
@@ -3411,6 +3432,17 @@ entities:
         364:
         - - Pressed
           - Toggle
+  - uid: 302
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 0.5,-3.5
+      parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        520:
+        - - Pressed
+          - Toggle
   - uid: 358
     components:
     - type: Transform
@@ -3425,17 +3457,6 @@ entities:
         - - Pressed
           - Toggle
         36:
-        - - Pressed
-          - Toggle
-  - uid: 360
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 0.5,-3.5
-      parent: 1
-    - type: DeviceLinkSource
-      linkedPorts:
-        520:
         - - Pressed
           - Toggle
   - uid: 427
@@ -3985,27 +4006,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 9.5,-1.5
       parent: 1
-  - uid: 300
-    components:
-    - type: Transform
-      pos: -6.5,-0.5
-      parent: 1
-  - uid: 302
-    components:
-    - type: Transform
-      pos: -8.5,-1.5
-      parent: 1
   - uid: 307
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,-8.5
-      parent: 1
-  - uid: 308
-    components:
-    - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 4.5,2.5
       parent: 1
   - uid: 310
     components:
@@ -4027,13 +4032,18 @@ entities:
   - uid: 316
     components:
     - type: Transform
-      pos: -10.5,-3.5
+      pos: -6.5,-0.5
       parent: 1
   - uid: 317
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 11.5,-3.5
+      parent: 1
+  - uid: 336
+    components:
+    - type: Transform
+      pos: -10.5,-3.5
       parent: 1
   - uid: 343
     components:
@@ -4053,11 +4063,22 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,1.5
       parent: 1
+  - uid: 360
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,2.5
+      parent: 1
   - uid: 361
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 7.5,-0.5
+      parent: 1
+  - uid: 378
+    components:
+    - type: Transform
+      pos: -8.5,-1.5
       parent: 1
 - proto: WallSolid
   entities:
