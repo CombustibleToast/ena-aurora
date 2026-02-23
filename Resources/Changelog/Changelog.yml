@@ -6080,3 +6080,10 @@ Entries:
   id: 8968
   time: '2026-02-23T16:08:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/743
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Uncover the AME fuel locker on the Pathfinder, remove poster
+  id: 8969
+  time: '2026-02-23T16:37:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/745
