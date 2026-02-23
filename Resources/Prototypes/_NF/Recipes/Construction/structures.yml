@@ -54,20 +54,6 @@
   conditions:
     - !type:TileNotBlocked
 
-- type: construction # Aurora's Song - shuttle interior wall recipe was missing, despite being added back by NF, re-adding it here
-  id: ShuttleInteriorWall
-  name: construction-recipe-shuttle-interior-wall
-  graph: Girder
-  startNode: start
-  targetNode: shuttleInteriorWall
-  category: construction-category-structures
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
 - type: construction
   id: CrateStorageRackConstruction
   graph: CrateStorageRack

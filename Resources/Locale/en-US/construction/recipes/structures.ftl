@@ -26,7 +26,5 @@ construction-recipe-fence-wood-gate-small = small wooden fence gate
 construction-recipe-pinion-airlock = clockwork airlock
 construction-recipe-pinion-airlock-glass = glass clockwork airlock
 construction-recipe-airlock-glass-shuttle = glass shuttle airlock
-# Aurora's Song - add loc string for regular shuttle airlock
-construction-recipe-airlock-shuttle = shuttle airlock
 construction-recipe-plastic-flaps-clear = plastic flaps (clear)
 construction-recipe-plastic-flaps-opaque = plastic flaps (opaque)

@@ -151,26 +151,8 @@
               amount: 2
               doAfter: 1
         # End Frontier: interior shuttle wall
-
-        # Aurora's Song - Dark interior shuttle wall
-        - to: shuttleInteriorWallDark
-          completed:
-            - !type:SnapToGrid
-              southRotation: true
-          conditions:
-            - !type:EntityAnchored { }
-          steps:
-            - tool: Welding
-              doAfter: 1
-            - material: MetalRod
-              amount: 2
-              doAfter: 1
-            - material: Steel
-              amount: 2
-              doAfter: 1
-        # End Aurora
-
-        #Aurora's Song - create diagonal wall
+        
+        #Aurora - create diagonal wall
         - to: wallSolidDiagonal
           completed:
             - !type:SnapToGrid
@@ -183,7 +165,7 @@
             - material: Steel
               amount: 2
               doAfter: 1
-        # End Aurora
+        ##
 
     - node: wall
       entity: WallSolid
@@ -302,8 +284,8 @@
           steps:
             - tool: Prying
               doAfter: 5
-
-    # Aurora's Song - diagonal wall node
+              
+    #Aurora - diagonal wall node
     - node: wallSolidDiagonal
       entity: WallSolidDiagonal
       edges:
@@ -315,7 +297,6 @@
           steps:
             - tool: Welding
               doAfter: 10
-    # End Aurora
     ##
 
     - node: reinforcedGirder
@@ -331,7 +312,7 @@
             - material: Plasteel
               amount: 2
               doAfter: 1
-
+              
         #Mono - create diagonal reinforced wall
         - to: wallReinforcedDiagonal
           completed:
@@ -375,69 +356,6 @@
             - material: Plasteel
               amount: 1
               doAfter: 1
-
-        - to: diagonalshuttleWallThin # Aurora's Song - thin diagonal shuttle wall
-          conditions:
-            - !type:EntityAnchored { }
-          steps:
-            - tool: Prying
-              doAfter: 1
-            - material: Plasteel
-              amount: 1
-              doAfter: 1
-            - tool: Welding
-              doAfter: 2
-            - material: Steel
-              amount: 1
-              doAfter: 1
-
-        # Aurora's Song - Dark shuttle wall variants
-        - to: shuttleWallDark
-          completed:
-            - !type:SnapToGrid
-              southRotation: true
-          conditions:
-            - !type:EntityAnchored { }
-          steps:
-            - tool: Welding
-              doAfter: 1
-            - material: MetalRod
-              amount: 4
-              doAfter: 1
-            - material: Plasteel
-              amount: 2
-              doAfter: 1
-
-        - to: diagonalshuttleWallDark
-          conditions:
-            - !type:EntityAnchored { }
-          steps:
-            - tool: Anchoring
-              doAfter: 1
-            - material: Steel
-              amount: 1
-              doAfter: 1
-            - material: Plasteel
-              amount: 1
-              doAfter: 1
-            - tool: Welding
-              doAfter: 2
-
-        - to: diagonalshuttleWallDarkThin
-          conditions:
-            - !type:EntityAnchored { }
-          steps:
-            - tool: Cutting
-              doAfter: 1
-            - material: Steel
-              amount: 1
-              doAfter: 1
-            - material: Plasteel
-              amount: 1
-              doAfter: 1
-            - tool: Welding
-              doAfter: 3
-        # End Aurora
 
         - to: girder
           completed:
@@ -646,7 +564,7 @@
               doAfter: 1
             - tool: Cutting
               doAfter: 1
-
+              
     #Mono - diagonal reinforced wall node
     - node: wallReinforcedDiagonal
       entity: WallReinforcedDiagonal
@@ -719,133 +637,3 @@
             - tool: Screwing
               doAfter: 1
     # End Frontier: interior shuttle walls
-
-    # Aurora's Song - Dark shuttle wall variants
-    - node: shuttleWallDark
-      entity: WallShuttleDark
-      edges:
-        - to: reinforcedGirder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlasteel1
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: PartRodMetal1
-              amount: 4
-          steps:
-            - tool: Welding
-              doAfter: 10
-            - tool: Cutting
-              doAfter: 1
-              completed:
-                - !type:VisualizerDataInt
-                  key: "enum.ShuttleWallVisuals.DeconstructionStage"
-                  data: 5
-            - tool: Screwing
-              doAfter: 2
-            - tool: Welding
-              doAfter: 5
-              completed:
-                - !type:VisualizerDataInt
-                  key: "enum.ShuttleWallVisuals.DeconstructionStage"
-                  data: 4
-            - tool: Prying
-              doAfter: 2
-            - tool: Anchoring
-              doAfter: 1
-              completed:
-                - !type:VisualizerDataInt
-                  key: "enum.ShuttleWallVisuals.DeconstructionStage"
-                  data: 3
-            - tool: Welding
-              doAfter: 10
-              completed:
-                - !type:VisualizerDataInt
-                  key: "enum.ShuttleWallVisuals.DeconstructionStage"
-                  data: 2
-            - tool: Prying
-              doAfter: 1
-              completed:
-                - !type:VisualizerDataInt
-                  key: "enum.ShuttleWallVisuals.DeconstructionStage"
-                  data: 1
-            - tool: Screwing
-              doAfter: 1
-              completed:
-                - !type:VisualizerDataInt
-                  key: "enum.ShuttleWallVisuals.DeconstructionStage"
-                  data: 0
-            - tool: Cutting
-              doAfter: 4
-
-    - node: shuttleInteriorWallDark
-      entity: WallShuttleDarkInterior
-      edges:
-        - to: girder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: PartRodMetal1
-              amount: 2
-          steps:
-            - tool: Welding
-              doAfter: 10
-            - tool: Screwing
-              doAfter: 1
-
-    - node: diagonalshuttleWallDark
-      entity: WallShuttleDarkDiagonal
-      edges:
-        - to: reinforcedGirder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlasteel1
-              amount: 1
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 1
-          steps:
-          #To-Do: Add deconstruct visuals
-            - tool: Welding
-              doAfter: 5
-            - tool: Cutting
-              doAfter: 1
-
-    - node: diagonalshuttleWallThin
-      entity: WallShuttleDiagonalThin
-      edges:
-        - to: reinforcedGirder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlasteel1
-              amount: 1
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 1
-          steps:
-          #To-Do: Add deconstruct visuals
-            - tool: Welding
-              doAfter: 5
-            - tool: Cutting
-              doAfter: 1
-
-    - node: diagonalshuttleWallDarkThin
-      entity: WallShuttleDarkDiagonalThin
-      edges:
-        - to: reinforcedGirder
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlasteel1
-              amount: 1
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 1
-          steps:
-          #To-Do: Add deconstruct visuals
-            - tool: Welding
-              doAfter: 5
-            - tool: Cutting
-              doAfter: 1
-    # End Aurora
