@@ -1,0 +1,10 @@
+# InnerClothing
+- type: loadout
+  id: FlightsuitAtmos
+  equipment:
+    innerClothing: ClothingUniformAtmosFlightSuit
+
+- type: loadout
+  id: FlightskirtAtmos
+  equipment:
+    innerClothing: ClothingUniformAtmosFlightSkirt
