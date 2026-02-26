@@ -6108,3 +6108,10 @@ Entries:
   id: 8970
   time: '2026-02-24T21:13:19.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/746
+- author: Karlm4x
+  changes:
+    - type: Add
+      message: Adds a plushie of Shana McTavish
+  id: 8971
+  time: '2026-02-26T13:20:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/748
