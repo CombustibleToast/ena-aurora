@@ -528,7 +528,7 @@
 # Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband
+  parent: [ClothingBeltStorageBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband Aurora's Song: ClothingBeltAmmoProviderBase <
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -539,11 +539,13 @@
     sprite: Clothing/Belt/bandolier.rsi
   #- type: Item # Frontier
     #size: Huge # Frontier
-  - type: BallisticAmmoProvider
+  - type: Storage # Aurora's Song - Changed to 2 x 10 Storage that can hold any bullet
+    grid:
+    - 0,0,9,1
     whitelist:
       tags:
-        - ShellShotgun
-    capacity: 14
+        - CartridgeAmmo
+
 
 - type: entity
   parent: ClothingBeltBase
