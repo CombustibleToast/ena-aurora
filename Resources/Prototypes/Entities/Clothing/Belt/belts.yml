@@ -528,7 +528,7 @@
 # Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband Aurora's Song: ClothingBeltAmmoProviderBase <
+  parent: [ClothingBeltStorageBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband Aurora's Song: ClothingBeltAmmoProviderBase < ClothingBeltStorageBase
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
