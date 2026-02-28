@@ -6172,3 +6172,10 @@ Entries:
   id: 8976
   time: '2026-02-28T08:35:55.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/753
+- author: snezshiba
+  changes:
+    - type: Tweak
+      message: Changed bandolier to grid storage and allow any bullet
+  id: 8977
+  time: '2026-02-28T08:37:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/751
