@@ -151,3 +151,5 @@ uplink-exchange-spesos2-desc = A stack of 15,000 spesos, hard currency.
 uplink-exchange-ap4c-name = AP4C SMG
 uplink-exchange-ap4c-desc = A compact submachine gun chambered in .40 pistol. Battle-tested and reliable.
 
+uplink-exchange-mk32-name = Mk32 Universal
+uplink-exchange-mk32-desc = The Mark 32 Offensive Handgun. Has an OD-Green grip. Chambered in .45.
