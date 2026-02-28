@@ -433,7 +433,7 @@
     sprintModifier: 0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySWAT
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplusSWAT
   - type: Tag
     tags:
     - Hardsuit
@@ -516,7 +516,7 @@
     sprintModifier: 0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryHAZMAT
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplusHAZMAT
   - type: Tag
     tags:
     - Hardsuit
@@ -599,7 +599,7 @@
     sprintModifier: 0.9
   - type: HeldSpeedModifier
   - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryRiot
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplusRiot
   - type: Tag
     tags:
     - Hardsuit
