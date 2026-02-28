@@ -133,13 +133,13 @@ uplink-exchange-fort-helmet-desc = A sturdy tactical helmet and face mask.
 uplink-exchange-military-surplus-hardsuit-name = Military Surplus Hardsuit
 uplink-exchange-military-surplus-hardsuit-desc = Auroran MilSurp hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
 
-uplink-exchange-swat-surplus-hardsuit-name = Military Surplus Hardsuit
+uplink-exchange-swat-surplus-hardsuit-name = SWAT Surplus Hardsuit
 uplink-exchange-swat-surplus-hardsuit-desc = Auroran SWAT Surplus hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
 
-uplink-exchange-hazmat-surplus-hardsuit-name = Military Surplus Hardsuit
+uplink-exchange-hazmat-surplus-hardsuit-name = HAZMAT Surplus Hardsuit
 uplink-exchange-hazmat-surplus-hardsuit-desc = Auroran HAZMAT surplus hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
 
-uplink-exchange-riot-surplus-hardsuit-name = Military Surplus Hardsuit
+uplink-exchange-riot-surplus-hardsuit-name = Riot Control Surplus Hardsuit
 uplink-exchange-riot-surplus-hardsuit-desc = Auroran Riot control surplus hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
 
 uplink-exchange-spesos-name = 3000 spesos
