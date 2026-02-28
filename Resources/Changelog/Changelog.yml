@@ -6165,3 +6165,10 @@ Entries:
   id: 8975
   time: '2026-02-28T08:26:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/752
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Mk32 Universal to the ECVend
+  id: 8976
+  time: '2026-02-28T08:35:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/753
