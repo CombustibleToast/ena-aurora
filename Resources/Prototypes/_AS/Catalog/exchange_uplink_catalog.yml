@@ -49,7 +49,7 @@
   name: uplink-exchange-swat-surplus-hardsuit-name
   description: uplink-exchange-swat-surplus-hardsuit-desc
   productEntity: ClothingOuterHardsuitMilitarySurplusSWAT
-  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon_swat }
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon-swat }
   cost:
     ExchangeCoin: 30
   categories:
@@ -65,7 +65,7 @@
   name: uplink-exchange-hazmat-surplus-hardsuit-name
   description: uplink-exchange-hazmat-surplus-hardsuit-desc
   productEntity: ClothingOuterHardsuitMilitarySurplusHAZMAT
-  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon_hazmat }
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon-hazmat }
   cost:
     ExchangeCoin: 30
   categories:
@@ -81,7 +81,7 @@
   name: uplink-exchange-riot-surplus-hardsuit-name
   description: uplink-exchange-riot-surplus-hardsuit-desc
   productEntity: ClothingOuterHardsuitMilitarySurplusRiot
-  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon_riot }
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon-riot }
   cost:
     ExchangeCoin: 30
   categories:
