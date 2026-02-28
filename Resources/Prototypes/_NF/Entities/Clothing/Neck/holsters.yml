@@ -44,6 +44,8 @@
           - NFSpeedLoaderPistol35
           - NFSpeedLoaderPistol45
           - SpeedLoaderRifleHeavy
+          - ASMagazinePistol40 # Aurora's Song - Allow .40 mags to fit
+          - ASSpeedLoaderPistol40 # Aurora's Song - Allow .40 speedloaders to fit
           - ASMagazinePistolCaselessRifle # Aurora's Song - Allow Cobra mags to fit
   - type: ContainerContainer
     containers:

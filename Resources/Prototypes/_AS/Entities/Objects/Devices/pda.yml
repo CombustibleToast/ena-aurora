@@ -149,7 +149,7 @@
         - BookSpaceLaw
         - BookNfsdSop
     penSlot:
-      startingItem: PenCentcom
+      startingItem: PenColcom
       priority: -1
       whitelist:
         tags:
@@ -373,7 +373,7 @@
   - type: Pda
     id: ASColonialRepresentativeIDCard
     penSlot:
-      startingItem: PenCentcom
+      startingItem: PenColcom
       priority: -1
       whitelist:
         tags:
@@ -530,7 +530,7 @@
   - type: Pda
     id: ASSiteManagerIDCard
     penSlot:
-      startingItem: PenCentcom
+      startingItem: PenColcom
       priority: -1
       whitelist:
         tags:
@@ -582,6 +582,12 @@
   components:
   - type: Pda
     id: ASUniversalIDCard
+    penSlot:
+      startingItem: PenColcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
   - type: Appearance
     appearanceDataInit:
      enum.PdaVisuals.PdaType:

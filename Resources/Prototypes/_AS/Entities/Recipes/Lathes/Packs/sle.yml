@@ -62,6 +62,9 @@
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
   - MagazineAsmgtUniversalEmpty
+  - NFMagazineGrenadeEmpty
+  - NFGrenadeFlash
+  - NFGrenadeEMP
 
 - type: latheRecipePack
   id: SLEToolsStatic
@@ -87,6 +90,7 @@
   - NFBaseClothingNeckSheathThigh
   - LightTube
   - LightBulb
+  - ASJetpackSLE
 
 - type: latheRecipePack
   id: SLETargetsStatic

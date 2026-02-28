@@ -90,7 +90,7 @@
     - id: ASWeaponRifleMarksmanHZ-3-3-C
     - id: ASMagazineMarksmanRifle30
       amount: 2
-    - id: ClothingOuterHardsuitSleCombat
-    - id: ClothingOuterSoftsuitSlePatrol
+    - id: ClothingOuterHardsuitSleCombatCommissioner
+    - id: ClothingOuterSoftsuitSlePatrolCommissioner
     - id: ASJetpackSLEFilled
     - id: ASClothingShoesBootsMagSLEFilled

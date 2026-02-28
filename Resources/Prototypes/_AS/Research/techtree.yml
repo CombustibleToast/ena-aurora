@@ -24,6 +24,7 @@
   cost: 5000
   recipeUnlocks:
   - MachineDriveCTLA25Circuitboard
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFShuttlecraftThrust
   position: 2, 33
@@ -83,4 +84,4 @@
   - ASWeaponKasyreLasRifle
   technologyPrerequisites:
   - NFDeterrenceTechnologies
-  position: 4, 42
+  position: 4, 43

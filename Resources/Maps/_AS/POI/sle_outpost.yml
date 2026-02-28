@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 02/19/2026 16:56:35
-  entityCount: 4859
+  time: 02/28/2026 06:15:27
+  entityCount: 4858
 maps: []
 grids:
 - 1
@@ -3388,7 +3388,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -49514.367
+      secondsUntilStateChange: -49621.246
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3446,7 +3446,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -64860.688
+      secondsUntilStateChange: -64967.566
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3457,7 +3457,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -22708.828
+      secondsUntilStateChange: -22815.705
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3488,7 +3488,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -64864.22
+      secondsUntilStateChange: -64971.098
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3504,7 +3504,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -65645.75
+      secondsUntilStateChange: -65752.625
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3540,7 +3540,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66973.79
+      secondsUntilStateChange: -67080.664
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3644,7 +3644,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -48647.74
+      secondsUntilStateChange: -48754.617
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -11412,11 +11412,6 @@ entities:
     - type: Transform
       pos: 6.5,-6.5
       parent: 1
-  - uid: 3269
-    components:
-    - type: Transform
-      pos: 6.5,-7.5
-      parent: 1
   - uid: 3270
     components:
     - type: Transform
@@ -15330,18 +15325,18 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 3.5,-5.5
       parent: 1
-- proto: GasMixer
+- proto: GasMixerOn
   entities:
   - uid: 1901
     components:
     - type: Transform
       pos: 6.5,-7.5
       parent: 1
-    - type: AtmosPipeColor
-      color: '#0055CCFF'
     - type: GasMixer
       inletTwoConcentration: 0.79
       inletOneConcentration: 0.21
+    - type: AtmosPipeColor
+      color: '#0055CCFF'
 - proto: GasPassiveVent
   entities:
   - uid: 1897
@@ -22871,7 +22866,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -73958.86
+      secondsUntilStateChange: -74065.734
       state: Opening
   - uid: 3347
     components:
@@ -22879,7 +22874,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -73957.23
+      secondsUntilStateChange: -74064.1
       state: Opening
   - uid: 3348
     components:
@@ -22887,7 +22882,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -73955.86
+      secondsUntilStateChange: -74062.734
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -31252,7 +31247,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -72994.53
+      secondsUntilStateChange: -73101.41
       state: Opening
     - type: Airlock
       autoClose: False
