@@ -6124,3 +6124,10 @@ Entries:
   id: 8972
   time: '2026-02-26T13:41:14.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/747
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel mass scanner shape fix
+  id: 8973
+  time: '2026-02-28T06:06:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/749
