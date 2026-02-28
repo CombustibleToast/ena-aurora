@@ -24,6 +24,7 @@
   cost: 5000
   recipeUnlocks:
   - MachineDriveCTLA25Circuitboard
+  prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFShuttlecraftThrust
   position: 2, 33
