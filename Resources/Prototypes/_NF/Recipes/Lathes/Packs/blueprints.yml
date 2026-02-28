@@ -238,8 +238,8 @@
   # NFBasicShuttleArmament
   - NFGrenadeFlash
   - NFGrenadeEMP
-  # PersonalPropulsion
-  - JetpackNfsd
+#  # PersonalPropulsion # Aurora's Song - deprecated, removed
+#  - JetpackNfsd
 
 # region Salvage
 - type: latheRecipePack

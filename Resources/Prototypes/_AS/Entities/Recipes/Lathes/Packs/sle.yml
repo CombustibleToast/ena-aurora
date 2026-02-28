@@ -87,6 +87,7 @@
   - NFBaseClothingNeckSheathThigh
   - LightTube
   - LightBulb
+  - ASJetpackSLE
 
 - type: latheRecipePack
   id: SLETargetsStatic

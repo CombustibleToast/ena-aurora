@@ -1508,18 +1508,18 @@
   - NFAdvancedPersonalPropulsion  #Aurora: Make this high tier research
   position: 2, 37
 
-- type: technology
-  id: NFArsenalNfsdPropulsion
-  name: nf-research-technology-security-personal-propulsion
-  entityIcon: JetpackNfsd
-  discipline: NFArsenalNfsd
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - JetpackNfsd
-  technologyPrerequisites:
-  - NFArsenalMercenaryPropulsion
-  position: 1, 38
+#- type: technology # Aurora's Song - deprecated, commenting out
+#  id: NFArsenalNfsdPropulsion
+#  name: nf-research-technology-security-personal-propulsion
+#  entityIcon: JetpackNfsd
+#  discipline: NFArsenalNfsd
+#  tier: 1
+#  cost: 1000
+#  recipeUnlocks:
+#  - JetpackNfsd
+#  technologyPrerequisites:
+#  - NFArsenalMercenaryPropulsion
+#  position: 1, 38
 
 - type: technology
   id: NFAdvancedPersonalPropulsion
