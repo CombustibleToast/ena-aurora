@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 02/19/2026 10:31:46
-  entityCount: 3988
+  time: 03/02/2026 10:24:42
+  entityCount: 3989
 maps: []
 grids:
 - 2
@@ -23791,6 +23791,13 @@ entities:
     components:
     - type: Transform
       pos: 7.5,11.5
+      parent: 2
+- proto: VendingMachinePottedPlantVendPOI
+  entities:
+  - uid: 3989
+    components:
+    - type: Transform
+      pos: -6.5,-14.5
       parent: 2
 - proto: VendingMachinePride
   entities:
