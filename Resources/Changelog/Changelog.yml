@@ -6199,3 +6199,10 @@ Entries:
   id: 8979
   time: '2026-03-02T02:20:36.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/756
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Updated lattice(IFF shape) on the Drone, Scythe and BH ships
+  id: 8980
+  time: '2026-03-02T02:40:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/757
