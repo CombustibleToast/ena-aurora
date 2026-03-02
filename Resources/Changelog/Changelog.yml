@@ -6213,3 +6213,10 @@ Entries:
   id: 8981
   time: '2026-03-02T10:42:56.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/760
+- author: Superlagg, KodiCraft
+  changes:
+    - type: Tweak
+      message: Potted plants filter CO2, Ammonia, and NO2
+  id: 8982
+  time: '2026-03-02T10:44:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/759
