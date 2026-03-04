@@ -39,7 +39,7 @@
     back:
     - CigarCase
 
-- type: loadout
+- type: loadout # Aurora's Song
   id: ContractorHolocigar
   effects:
   - !type:GroupLoadoutEffect
