@@ -6,6 +6,6 @@
 - type: startingGear
   id: MobSecDogLaikaGear
   equipment:
-    eyes: ASClothingEyesGlassesSLE
-    id: DeputyIDCard
+    eyes: ASClothingEyesGlassesSLE # Aurora's Song
+    id: ASOfficerIDCard # Aurora's Song
 

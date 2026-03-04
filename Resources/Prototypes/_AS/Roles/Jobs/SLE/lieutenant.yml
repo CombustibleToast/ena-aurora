@@ -55,7 +55,7 @@
     - NFMagazineHighCapacityPistol35Overpressure
     - NFMagazineHighCapacityPistol35Rubber
     - BaseSecurityUplinkRadioOfficer
-    - ShipVoucherNfsdBailiff
+    - ASShipVoucherSLELieutenant
     - ASRubberStampLieutenant
   licenses:
   - LicenseContrabandHandling
