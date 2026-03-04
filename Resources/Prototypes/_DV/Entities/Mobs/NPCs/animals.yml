@@ -20,7 +20,7 @@
       - PetsNT
   - type: Sprite
     drawdepth: Mobs
-    sprite: DeltaV/Mobs/Pets/secdog.rsi
+    sprite: _DV/Mobs/Pets/secdog.rsi
     layers:
     - map: ["enum.DamageStateVisualLayers.Base"]
       state: secdog
