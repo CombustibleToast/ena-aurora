@@ -6241,3 +6241,20 @@ Entries:
   id: 8985
   time: '2026-03-04T06:56:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/764
+- author: snezshiba
+  changes:
+    - type: Add
+      message: SLE Ptech
+    - type: Fix
+      message: Sergeant and Lieutenant ship vouchers referring to NFSD instead of SLE.
+    - type: Fix
+      message: mail referring to Frontier Account instead of Aurora
+    - type: Fix
+      message: DOC and Contractor job description to not refer to NT
+    - type: Fix
+      message: typo in medic triage event announcement
+    - type: Fix
+      message: Laika's id to SLE officer instead of NFSD deputy
+  id: 8986
+  time: '2026-03-04T22:50:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/765
