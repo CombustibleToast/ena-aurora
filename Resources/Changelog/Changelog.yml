@@ -6227,3 +6227,10 @@ Entries:
   id: 8983
   time: '2026-03-04T02:39:42.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/761
+- author: ZigTag
+  changes:
+    - type: Add
+      message: mirrored cryobed sprites
+  id: 8984
+  time: '2026-03-04T04:40:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/762
