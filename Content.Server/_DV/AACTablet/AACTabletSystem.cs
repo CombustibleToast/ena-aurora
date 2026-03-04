@@ -2,13 +2,13 @@ using Content.Server.Chat.Systems;
 using Content.Server.Radio.Components; // starcup
 using Content.Server.Speech.Components;
 using Content.Shared.Chat;
-using Content.Shared.DeltaV.AACTablet;
+using Content.Shared._DV.AACTablet;
 using Content.Shared.IdentityManagement;
 using Robust.Server.GameObjects; // starcup
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 
-namespace Content.Server.DeltaV.AACTablet;
+namespace Content.Server._DV.AACTablet;
 
 public sealed partial class AACTabletSystem : EntitySystem // starcup: made partial
 {

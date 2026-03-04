@@ -1,11 +1,11 @@
 using Content.Client.Chat.TypingIndicator;
 using Content.Shared.Chat.TypingIndicator;
-using Content.Shared.DeltaV.AACTablet;
-using Content.Shared.DeltaV.QuickPhrase;
+using Content.Shared._DV.AACTablet;
+using Content.Shared._DV.QuickPhrase;
 using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 
-namespace Content.Client.DeltaV.AACTablet.UI;
+namespace Content.Client._DV.AACTablet.UI;
 
 public sealed partial class AACBoundUserInterface : BoundUserInterface // starcup: made partial
 {
