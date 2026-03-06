@@ -46,16 +46,10 @@
                 <!-- Vessels get added here by code -->
             </BoxContainer>
         </ScrollContainer>
-        <GridContainer Columns="4" HorizontalExpand="True" Margin="0 8 0 2"> <!-- Monolith - increase column to 4 -->
+        <GridContainer Columns="3" HorizontalExpand="True" Margin="0 8 0 2">
             <Button Name="TargetIdButton" Access="Public"/>
-            <!-- Monolith - Edit confirm button to account for unassign -->
-            <controls:ConfirmButton Name="SellShipButton"
+            <Button Name="SellShipButton"
                 Text="Sell"
-                ConfirmationText="{Loc 'shipyard-console-confirm-unassign'}"
-                Disabled="True" />
-            <controls:ConfirmButton Name="UnassignDeedButton"
-                Text="{Loc 'shipyard-console-unassign-deed'}"
-                ConfirmationText="{Loc 'shipyard-console-confirm-unassign'}"
                 Disabled="True" />
             <BoxContainer Orientation="Vertical">
                 <Label Text="{Loc 'shipyard-console-deed-label'}" />
@@ -63,16 +57,5 @@
                     Text=""/>
             </BoxContainer>
         </GridContainer>
-        <!-- Monolith Start - Add rename controls -->
-        <BoxContainer Orientation="Horizontal" Margin="0 2 0 2" Name="RenameContainer" Visible="False">
-            <LineEdit Name="RenameLineEdit"
-                      PlaceHolder="Name"
-                      MinWidth="140"
-                      Editable="False" />
-            <Button Name="RenameButton"
-                    Text="Rename"
-                    Disabled="True" />
-        </BoxContainer>
-        <!-- Monolith End -->
     </BoxContainer>
 </controls:FancyWindow>

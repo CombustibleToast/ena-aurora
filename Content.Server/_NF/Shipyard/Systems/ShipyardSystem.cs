@@ -74,8 +74,6 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         SubscribeLocalEvent<ShipyardConsoleComponent, BoundUIOpenedEvent>(OnConsoleUIOpened);
         SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsoleSellMessage>(OnSellMessage);
         SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsolePurchaseMessage>(OnPurchaseMessage);
-        SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsoleUnassignDeedMessage>(OnUnassignDeedMessage); // Mono
-        SubscribeLocalEvent<ShipyardConsoleComponent, ShipyardConsoleRenameMessage>(OnRenameMessage); // Mono
         SubscribeLocalEvent<ShipyardConsoleComponent, EntInsertedIntoContainerMessage>(OnItemSlotChanged);
         SubscribeLocalEvent<ShipyardConsoleComponent, EntRemovedFromContainerMessage>(OnItemSlotChanged);
         SubscribeLocalEvent<RoundRestartCleanupEvent>(OnRoundRestart);
@@ -342,29 +340,9 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (shuttle != null
              && _station.GetOwningStation(shuttle.Value) is { Valid: true } shuttleStation)
         {
-            // Update the primary deed
             shuttleDeed.ShuttleName = newName;
             shuttleDeed.ShuttleNameSuffix = newSuffix;
             Dirty(uid, shuttleDeed);
-
-            // Monolith Start
-            // Find and update all other deeds for the same ship
-            var query = EntityQueryEnumerator<ShuttleDeedComponent>();
-            while (query.MoveNext(out var deedEntity, out var deed))
-            {
-                // Skip the deed we already updated
-                if (deedEntity == uid)
-                    continue;
-
-                // Update deeds that reference the same shuttle
-                if (deed.ShuttleUid == shuttle)
-                {
-                    deed.ShuttleName = newName;
-                    deed.ShuttleNameSuffix = newSuffix;
-                    Dirty(deedEntity, deed);
-                }
-            }
-            // Monolith End
 
             var fullName = GetFullName(shuttleDeed);
             _station.RenameStation(shuttleStation, fullName, loud: false);
