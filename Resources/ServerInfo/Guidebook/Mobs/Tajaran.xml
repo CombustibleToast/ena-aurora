@@ -100,13 +100,13 @@
 
   - [color=#1e90ff]Cold Resistance[/color]: Tajara fare better against cold than humans, receiveing [color=#1e90ff]35% less cold damage[/color] and [color=#1e90ff]tolerating lower temperatures[/color].
 
-  - [color=#1e90ff]Hairballs[/color]: Tajara can spit out hairballs, which make other vomit when held.
+  <!-- - [color=#1e90ff]Hairballs[/color]: Tajara can spit out hairballs, which make other vomit when held. Aurora's Song - This was false information, commented out -->
 
   - [color=#1e90ff]Claws[/color]: Tajara unarmed attacks deal Slash damage instead of Blunt.
 
   - [color=#1e90ff]Reflexes[/color]: Tajara take less damage from high speed impacts.
 
-  - [color=#1e90ff]Small Body[/color]: Tajara can fit in duffelbags.
+  <!-- - [color=#1e90ff]Small Body[/color]: Tajara can fit in duffelbags. Aurora's Song - commented out due to this ability being removed -->
 
   <!-- - [color=#1e90ff]Night Vision[/color]: Tajara can see in darkness. Aurora Song Commented out-->
 
