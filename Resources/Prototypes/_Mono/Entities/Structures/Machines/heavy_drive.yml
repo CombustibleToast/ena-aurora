@@ -47,10 +47,22 @@
     range: 5
     sound:
       path: /Audio/Ambience/Objects/anomaly_generator.ogg
+  - type: Machine
+    board: MachineDriveCTLA160Circuitboard
+  - type: ContainerContainer
+    containers:
+      machine_board:
+        !type:Container
+        showEnts: false
+        occludes: true
+      machine_parts:
+        !type:Container
+        showEnts: false
+        occludes: true
 
 - type: entity
   id: MachineHeavyFTLDriveConsole
-  parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseMachinePowered]
+  parent: [BaseStructureDisableToolUse, BaseStructureDestructible, BaseComputer]
   name: CTLA-160 heavy bluespace console
   description: A console for a CTLA-160 heavy BSD. Just a power monitoring console to you, since you can't understand the rest.
   placement:
@@ -141,3 +153,5 @@
         enum.PowerDeviceVisualLayers.Powered:
           True: { visible: true }
           False: { visible: false }
+  - type: Computer # Aurora's Song - Added to allow construction of the console
+    board: ComputerDriveCTLA160ConsoleCircuitboard

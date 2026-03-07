@@ -1,7 +1,7 @@
 - type: species
   id: Gingerbread
   name: species-name-gingerbread
-  roundStart: false
+  roundStart: true # Aurora's Song - LALALALA ADDED FUNNY COOKIES INTO BEING PLAYABLE
   prototype: MobGingerbread
   sprites: MobGingerbreadSprites
   markingLimits: MobHumanMarkingLimits
@@ -13,6 +13,7 @@
   id: MobGingerbreadSprites
   sprites:
     Head: MobGingerbreadHead
+    Hair: MobHumanoidAnyMarking # Aurora's Song - Hair just so they can have a lil more customization
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
     Chest: MobGingerbreadTorso

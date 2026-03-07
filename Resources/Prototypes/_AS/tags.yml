@@ -1,4 +1,8 @@
-﻿#region .40 pistol
+﻿#region .30 rifle
+- type: Tag
+  id: ASMagazineMarksmanRifle30
+
+#region .40 pistol
 - type: Tag
   id: ASCartridgePistol40
 

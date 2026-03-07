@@ -1,4 +1,4 @@
-# Aurora Song - SLE uplink bundle definitions
+#region SLE
 
 - type: entity
   parent: ASClothingBackpackDuffelSLENavy

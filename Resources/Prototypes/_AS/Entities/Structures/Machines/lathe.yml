@@ -41,8 +41,10 @@
     - SLEToolsStatic
     - SLETargetsStatic
     - SLEBoardsStatic
+    - NFPaperAndPaperAccessories
   - type: BlueprintReceiver
     whitelist:
       tags:
       - NFBlueprintNfsdTechfab
+      - NFBlueprintAdvanced
   - type: OreSiloClient

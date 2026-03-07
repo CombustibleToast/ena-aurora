@@ -3,14 +3,14 @@
 - type: vendingMachineInventory
   id: ASSLEDrobeInventory
   startingInventory:
-    ASClothingBackpackSLEBrown: 6
-    ASClothingBackpackSatchelSLEBrown: 6
+    ASClothingBackpackSLENavy: 6
+    ASClothingBackpackSatchelSLENavy: 6
     ASClothingBackpackDuffelSLENavy: 6
-    ASClothingBackpackMessengerSLEBrown: 6
-    ASClothingBackpackSLECream: 2
-    ASClothingBackpackSatchelSLECream: 2
+    ASClothingBackpackMessengerSLENavy: 6
+    ASClothingBackpackSLECorpsman: 2
+    ASClothingBackpackSatchelSLECobalt: 2
     ASClothingBackpackDuffelSLECorpsman: 2
-    ASClothingBackpackMessengerSLECream: 2
+    ASClothingBackpackMessengerSLECobalt: 2
     ASClothingHeadHatSLEBeretOrange: 6
     ASClothingHeadHatSLEBeretNavy: 6
     ASClothingHeadHatSLEBeretCobalt: 6
@@ -67,6 +67,7 @@
     ClothingBeltSecurityFilled: 3
     ASClothingBeltSLEFilled: 3
     ASClothingBeltSLEWebbingFilled: 2
+    NFBaseClothingNeckHolsterThigh: 6
     NFBaseClothingNeckSheathThigh: 6
     RiotShield: 2
     RiotLaserShield: 2

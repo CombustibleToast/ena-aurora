@@ -1,17 +1,3 @@
-# Longarm loadouts for Mercenary
-
-- type: loadoutGroup
-  id: MercenaryLongarm
-  name: loadout-group-mercenary-longarm
-  minLimit: 0
-  maxLimit: 1
-  loadouts:
-  - MercenaryLongarmNovaliteC1
-  - MercenaryLongarmGestio
-  - MercenaryLongarmRepeater
-  - MercenaryLongarmKammerer
-
-# Loadouts
 - type: loadout
   id: MercenaryLongarmNovaliteC1
   price: 7500

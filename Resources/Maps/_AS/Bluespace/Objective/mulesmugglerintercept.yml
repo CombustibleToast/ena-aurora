@@ -668,7 +668,7 @@ entities:
     - type: Transform
       pos: 5.5,3.5
       parent: 1
-- proto: AirlockGlassShuttle
+- proto: AirlockShuttle
   entities:
   - uid: 5
     components:
@@ -3685,7 +3685,7 @@ entities:
     - type: Transform
       pos: -6.5,4.5
       parent: 1
-- proto: ReinforcedWindow
+- proto: ReinforcedWindowDungeon
   entities:
   - uid: 410
     components:

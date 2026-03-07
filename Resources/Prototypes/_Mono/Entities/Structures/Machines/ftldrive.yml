@@ -57,7 +57,7 @@
       intensitySlope: 4
       totalIntensity: 300
     - type: ApcPowerReceiver
-      powerLoad: 2000
+      powerLoad: 3000 # Aurora's Song - Increased power load for balancing
     - type: PointLight
       enabled: false
       color: "#349BEB" # beb color
@@ -109,8 +109,9 @@
       color: "#E6173E"
   - type: FTLDrive
     range: 10000
+    driveMassMultiplier: 0.50 # Aurora's Song - Allow slightly larger ships to FTL with this drive
   - type: ApcPowerReceiver
-    powerLoad: 4000
+    powerLoad: 6000 # Aurora's Song - Increased power load for balancing
   - type: PointLight
     enabled: false
     color: "#E6173E" # beb color
@@ -141,7 +142,7 @@
     hyperSpaceTime: 15
     startupTime: 4.2
   - type: ApcPowerReceiver
-    powerLoad: 4000
+    powerLoad: 4000 # Aurora's Song - Increased power load for balancing
   - type: PointLight
     enabled: false
     color: "#7E16F7" # beb color

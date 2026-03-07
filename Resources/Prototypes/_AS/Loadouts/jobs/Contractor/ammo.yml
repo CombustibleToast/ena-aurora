@@ -1,16 +1,3 @@
-- type: loadoutGroup
-  id: ContractorAmmo
-  name: loadout-group-mercenary-ammo
-  minLimit: 0
-  maxLimit: 3
-  loadouts:
-  - ContractorAmmoPistol35
-  - ContractorAmmoPistol35Rubber
-  - ContractorAmmoShotgun12Buckshot
-  - ContractorAmmoShotgun12Beanbag
-  - ContractorAmmoMagPistol35
-  - ContractorAmmoMagPistol35HighCap
-
 - type: loadout
   id: ContractorAmmoPistol35
   price: 300

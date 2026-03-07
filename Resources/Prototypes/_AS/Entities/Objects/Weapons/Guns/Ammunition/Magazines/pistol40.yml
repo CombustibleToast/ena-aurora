@@ -145,6 +145,14 @@
         color: "#ff8d00"
 
 - type: entity
+  id: ASMagazinePistol40OverpressureEmpty
+  name: pistol magazine (.40 pistol, fillable, overpressure)
+  parent: ASMagazinePistol40Overpressure
+  components:
+    - type: BallisticAmmoProvider
+      proto: null
+
+- type: entity
   id: ASMagazinePistol40Incendiary
   name: pistol magazine (.40 pistol, incendiary)
   parent: ASBaseMagazinePistol40
@@ -334,6 +342,14 @@
         color: "#ff8d00"
 
 - type: entity
+  id: ASMagazineHighCapacityPistol40OverpressureEmpty
+  name: high capacity pistol magazine (.40 pistol, fillable, overpressure)
+  parent: ASMagazineHighCapacityPistol40Overpressure
+  components:
+    - type: BallisticAmmoProvider
+      proto: null
+
+- type: entity
   id: ASMagazineHighCapacityPistol40Incendiary
   name: high capacity pistol magazine (.40 pistol, incendiary)
   parent: ASBaseMagazineHighCapacityPistol40
@@ -517,6 +533,14 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#ff8d00"
+
+- type: entity
+  id: ASMagazineSubMachineGun40OverpressureEmpty
+  name: smg magazine (.40 pistol, fillable, overpressure)
+  parent: ASMagazineSubMachineGun40Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
 
 - type: entity
   id: ASMagazineSubMachineGun40Incendiary

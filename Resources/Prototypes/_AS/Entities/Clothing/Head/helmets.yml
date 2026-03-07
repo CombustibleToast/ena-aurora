@@ -1,5 +1,5 @@
+#region Merc
 
-# Aurora's Song - Fort Helmet
 - type: entity
   parent: [ ClothingHeadHelmetBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingHeadHelmetFort
@@ -25,3 +25,16 @@
   # - type: HideLayerClothing Aurora's Song - Removed helmet hiding layers
     # layers:
       # Hair: HEAD
+
+#region SLE
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ASClothingHeadHelmetSLE
+  name: SLE helmet
+  description: An SLE issued helmet to protect your head.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Helmets/sle.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Helmets/sle.rsi

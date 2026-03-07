@@ -382,7 +382,7 @@
         - id: ASJetpackSLEFilled
         - id: ASClothingShoesBootsMagSLEFilled
   - type: AccessReader
-    access: [["Brigmedic"]]
+    access: [["Corpsman"]] # Aurora's Song - Changed from Brigmedic to Corpsman
 
 #Sergeant hardsuit
 - type: entity
@@ -394,7 +394,7 @@
     contents:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
-        - id: ASClothingMaskGasSLESheriff
+        - id: ASClothingMaskGasSLECommissioner
         - id: ASJetpackSLEFilled
         - id: ASClothingShoesBootsMagSLEFilled
   - type: AccessReader
@@ -410,7 +410,7 @@
     contents:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
-        - id: ASClothingMaskGasSLESheriff
+        - id: ASClothingMaskGasSLECommissioner
         - id: ASJetpackSLEFilled
         - id: ASClothingShoesBootsMagSLEFilled
   - type: AccessReader
@@ -426,7 +426,7 @@
     contents:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Sheriff Softsuit changed to SLE Patrol suit prior to full SLE refactor
-        - id: ASClothingMaskGasSLESheriff
+        - id: ASClothingMaskGasSLECommissioner
         - id: ASJetpackSLEFilled
         - id: ASClothingShoesBootsMagSLEFilled
   - type: AccessReader

@@ -117,6 +117,7 @@
   - type: Contraband
     turnInValues:
       FrontierUplinkCoin: 3
+      ExchangeCoin: 3 # AS
       Doubloon: 2
   - type: ShipyardSellCondition
     blockSale: false # AS True>False

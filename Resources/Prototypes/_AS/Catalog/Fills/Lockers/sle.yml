@@ -73,10 +73,10 @@
   id: FillASLockerSLECommissioner
   table: !type:AllSelector
     children:
-    - id: ClothingHeadHatBeretCommissioner
-    - id: ASClothingOuterCoatSLEFormalSheriff
+    - id: ASClothingHeadHatBeretCommissioner
+    - id: ASClothingOuterCoatSLEFormalCommissioner
     - id: ASClothingHeadsetSLEOrangeCommon
-    - id: ASClothingNeckSLEBadgeSheriff
+    - id: ASClothingNeckSLEBadgeCommissioner
     - id: ASCommissionerIDCard
     - id: BoxHandcuff
     - id: CommsComputerCircuitboard
@@ -87,7 +87,10 @@
       amount: 2
     - id: NFAmmunitionBoxShellShotgunBeanbag
       amount: 2
-    - id: ClothingOuterHardsuitSleCombat
-    - id: ClothingOuterSoftsuitSlePatrol
+    - id: ASWeaponRifleMarksmanHZ-3-3-C
+    - id: ASMagazineMarksmanRifle30
+      amount: 2
+    - id: ClothingOuterHardsuitSleCombatCommissioner
+    - id: ClothingOuterSoftsuitSlePatrolCommissioner
     - id: ASJetpackSLEFilled
     - id: ASClothingShoesBootsMagSLEFilled

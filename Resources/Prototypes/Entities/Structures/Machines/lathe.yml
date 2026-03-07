@@ -497,8 +497,9 @@
       idleState: icon
       runningState: icon
       staticPacks:
-      - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+      - SLEAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic, Aurora's Song - NFSD to SLE
       - NFMercenaryMagazineStatic
+      - NFPaperAndPaperAccessories # Aurora's Song - for paper and cardboard
     - type: MaterialStorage
       whitelist:
         tags:

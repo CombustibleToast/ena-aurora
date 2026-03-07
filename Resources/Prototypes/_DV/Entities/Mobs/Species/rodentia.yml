@@ -24,20 +24,20 @@
     allowedEmotes:
     - Squeak
     - Belch # Frontier
-  - type: Fixtures
-    fixtures: # TODO: This needs a second fixture just for mob collisions.
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.28
-        density: 140
-        restitution: 0.0
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
+  # - type: Fixtures
+    # fixtures: # TODO: This needs a second fixture just for mob collisions. Aurora's Song - Removed so they can drag things properly
+      # fix1:
+        # shape:
+          # !type:PhysShapeCircle
+          # radius: 0.28
+        # density: 140
+        # restitution: 0.0
+        # mask:
+        # - MobMask
+        # layer:
+        # - MobLayer
   - type: Sprite
-    scale: 0.8, 0.8
+    # scale: 0.8, 0.8 Aurora's Song - standardized them to human size by commenting this out. The default is 1,1
     layers:
       - map: [ "enum.HumanoidVisualLayers.Chest" ]
       - map: [ "enum.HumanoidVisualLayers.Head" ]

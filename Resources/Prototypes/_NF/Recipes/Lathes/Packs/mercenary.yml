@@ -72,23 +72,13 @@
   - NFAmmunitionBoxRifle20Rubber
   - ASAmmunitionBoxPistol40Practice # Aurora Song
 
-- type: latheRecipePack
+- type: latheRecipePack # Aurora's Song - removed magazines that weren't speed loaders from this list
   id: NFMercenarySpeedloadersStatic
   recipes:
-  - NFMagazinePistol35Empty
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
-  - NFMagazineClipRifle20Empty
-  - NFMagazineRifle20
-  - MagazineLightRifleLowCapacityEmpty
-  - NFMagazineRifle30Empty
-  - NFMagazinePistol35
-  - NFMagazineSubMachineGun35
-  - NFMagazineSubMachineGunTopMounted35
   - NFSpeedLoaderPistol35
   - NFSpeedLoaderPistol45
-  - NFMagazineClipRifle20
-  - NFMagazineRifle30
 
 - type: latheRecipePack
   id: NFMercenaryTechfabDynamicDeprecated
@@ -165,34 +155,33 @@
   - NFMagazineClipRifle20Empty
   - MagazineLightRifleLowCapacityEmpty
 
-- type: latheRecipePack
+- type: latheRecipePack # Aurora's Song - added empty +P mags and removed duplicate entries
   id: NFMercenaryMagazineStatic
   recipes:
-  - NFMagazineHighCapacityPistol35Empty
+#  - NFMagazineHighCapacityPistol35Empty # Aurora's Song - This is supposed to be a research goal
   - NFMagazinePistol45Empty
+  - NFMagazinePistol45OverpressureEmpty # Aurora's Song
   - NFMagazineSubMachineGun35Empty
+  - NFMagazineSubMachineGun35OverpressureEmpty # Aurora's Song
   - NFMagazineSubMachineGunTopMounted35Empty
+  - NFMagazineSubMachineGunTopMounted35OverpressureEmpty # Aurora's Song
   - NFMagazineRifle20Empty
+  - NFMagazineRifle20OverpressureEmpty # Aurora's Song
   - NFMagazineRifle30Empty
-  - NFSpeedLoaderPistol35Empty
-  - NFSpeedLoaderPistol45Empty
+  - NFMagazineRifle30OverpressureEmpty # Aurora's Song
   - MagazineAsmgtUniversalEmpty
   - NFMagazineClipRifle20Empty
   - NFMagazinePistol35Empty
-  - NFMagazineRifle20Empty
-  - NFMagazineRifle30Empty
+  - NFMagazinePistol35OverpressureEmpty # Aurora's Song
   - NFMagazinePistol45Empty
-  - NFMagazineHighCapacityPistol35Empty
-  - NFMagazineSubMachineGun35Empty
-  - NFMagazineSubMachineGunTopMounted35Empty
+  - NFMagazinePistol45OverpressureEmpty # Aurora's Song
   #- NFMagazineDrumRifle20Empty #Aurora: Drum mags are strong
-  - NFMagazineRifle30Empty
   - NFMagazinePistol35
-  - NFSpeedLoaderPistol35
-  - NFSpeedLoaderPistol45
   - NFMagazineClipRifle20
   - NFMagazineRifle30
   - ASMagazinePistol40Empty # Aurora Song
+  - ASMagazinePistol40OverpressureEmpty # Aurora Song
   - ASMagazinePistol40 # Aurora Song
   - ASMagazineSubMachineGun40Empty # Aurora Song
+  - ASMagazineSubMachineGun40OverpressureEmpty # Aurora Song
   - ASMagazineSubMachineGun40 # Aurora Song

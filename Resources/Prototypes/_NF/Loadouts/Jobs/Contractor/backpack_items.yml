@@ -39,6 +39,16 @@
     back:
     - CigarCase
 
+- type: loadout # Aurora's Song
+  id: ContractorHolocigar
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  storage:
+    back:
+    - holocigar
+
 - type: loadout
   id: ContractorNFAshtray
   effects:

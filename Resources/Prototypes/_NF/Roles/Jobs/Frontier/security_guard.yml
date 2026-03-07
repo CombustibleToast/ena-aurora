@@ -36,13 +36,16 @@
     pocket1: ASWeaponPistolMk58SLessLethal
     pocket2: NFMagazineHighCapacityPistol35
   storage:
-    back:
-    - EncryptionKeyService
-    - EncryptionKeySecurity
+    back: # Aurora's Song - moved encryption keys to the appropriate section
     - Flash
     - NFMagazineHighCapacityPistol35
     - NFMagazineHighCapacityPistol35Rubber
     - ShipVoucherFrontierGuard
+  encryptionKeys: # Aurora's Song - Added traffic, shipboard, service, and security encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  - EncryptionKeyService
+  - EncryptionKeySecurity
 
 - type: chameleonOutfit
   id: SecurityGuardChameleonOutfit

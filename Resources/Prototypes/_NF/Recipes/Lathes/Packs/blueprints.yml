@@ -99,6 +99,11 @@
   - MiniStationAnchorCircuitboard
   - SmallThrusterMachineCircuitboard
   - SmallGyroscopeMachineCircuitboard
+  - MachineDriveCTLA25Circuitboard # Aurora's Song
+  - MachineDriveCTLA25sCircuitboard # Aurora's Song
+  - MachineDriveCTLA50Circuitboard # Aurora's Song
+  - MachineDriveCTLA160Circuitboard # Aurora's Song
+  - ComputerDriveCTLA160ConsoleCircuitboard # Aurora's Song
   # AdvancedAtmospherics
   - HellfireFreezerMachineCircuitBoard
   - PortableScrubberMachineCircuitBoard
@@ -233,8 +238,8 @@
   # NFBasicShuttleArmament
   - NFGrenadeFlash
   - NFGrenadeEMP
-  # PersonalPropulsion
-  - JetpackNfsd
+#  # PersonalPropulsion # Aurora's Song - deprecated, removed
+#  - JetpackNfsd
 
 # region Salvage
 - type: latheRecipePack
@@ -456,12 +461,14 @@
   - NFForensicPad
   # ImprovedPistolAmmo
   - NFAmmunitionBoxPistol35Overpressure
-  - ASAmmunitionBoxPistol40Overpressure # Aurora Song
+  - ASAmmunitionBoxPistol40Overpressure # Aurora's Song
   - NFAmmunitionBoxPistol45Overpressure
   - NFMagazineHighCapacityPistol35Empty
-  - ASMagazineHighCapacityPistol40Empty # Aurora Song
+  - NFMagazineHighCapacityPistol35OverpressureEmpty # Aurora's Song
+  - ASMagazineHighCapacityPistol40Empty # Aurora's Song
+  - ASMagazineHighCapacityPistol40OverpressureEmpty # Aurora's Song
   - NFMagazineSubMachineGun35Empty
-  - ASMagazineSubMachineGun40Empty # Aurora Song
+  - ASMagazineSubMachineGun40Empty # Aurora's Song
   - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
   # ImprovedRifleAmmo

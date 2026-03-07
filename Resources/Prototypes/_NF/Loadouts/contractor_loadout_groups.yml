@@ -776,6 +776,7 @@
   - ContractorCigPackBlack
   - ContractorCigPackGreen
   - ContractorCigarCase
+  - ContractorHolocigar # Aurora's Song
   - ContractorNFAshtray
   - ContractorTapeRecorder
   - ContractorSmokingPipeFilledTobacco
@@ -957,3 +958,28 @@
   - ContractorBibleUserImplanter
   fallbacks:
   - ContractorMedicalTrackingImplanter
+
+# Aurora's Song Start - Below are the weapon groups for round-start C1 weaponry
+
+- type: loadoutGroup # Aurora's Song - Sidearms group for Contractor
+  id: ContractorSidearm
+  name: loadout-group-mercenary-sidearm
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - ContractorSidearmMK58
+  - ContractorSidearmLaserPistol
+  - ContractorSidearmDisabler
+
+- type: loadoutGroup # Aurora's Song - Ammo group for Contractor
+  id: ContractorAmmo
+  name: loadout-group-mercenary-ammo
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - ContractorAmmoPistol35
+  - ContractorAmmoPistol35Rubber
+  - ContractorAmmoShotgun12Buckshot
+  - ContractorAmmoShotgun12Beanbag
+  - ContractorAmmoMagPistol35
+  - ContractorAmmoMagPistol35HighCap

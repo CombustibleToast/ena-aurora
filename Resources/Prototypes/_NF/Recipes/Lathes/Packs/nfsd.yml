@@ -15,6 +15,7 @@
   recipes:
   # Ammo boxes
   #- NFAmmunitionBoxShellShotgunOverpressure
+  - NFAmmunitionBoxShellShotgunBuckshot # Aurora's Song
   - NFAmmunitionBoxShellShotgunSlug
   - NFAmmunitionBoxShellShotgunBeanbag
   - NFAmmunitionBoxRifle20
@@ -27,16 +28,16 @@
   - NFAmmunitionBoxRifle30Overpressure
   - NFAmmunitionBoxBigRifle30Overpressure
   - NFAmmunitionBoxRifle30Rubber
-  - ASAmmunitionBoxBigPistol35 # Aurora Song
-  - ASAmmunitionBoxBigPistol35Overpressure # Aurora Song
-  - ASAmmunitionBoxBigPistol40 # Aurora Song
-  - ASAmmunitionBoxBigPistol40Overpressure # Aurora Song
+  - ASAmmunitionBoxBigPistol35 # Aurora's Song
+  - ASAmmunitionBoxBigPistol35Overpressure # Aurora's Song
+  - ASAmmunitionBoxBigPistol40 # Aurora's Song
+  - ASAmmunitionBoxBigPistol40Overpressure # Aurora's Song
   - NFAmmunitionBoxPistol35
   - NFAmmunitionBoxPistol35Overpressure
   - NFAmmunitionBoxPistol35Rubber
-  - ASAmmunitionBoxPistol40 # Aurora Song
-  - ASAmmunitionBoxPistol40Overpressure # Aurora Song
-  - ASAmmunitionBoxPistol40Rubber # Aurora Song
+  - ASAmmunitionBoxPistol40 # Aurora's Song
+  - ASAmmunitionBoxPistol40Overpressure # Aurora's Song
+  - ASAmmunitionBoxPistol40Rubber # Aurora's Song
   - NFAmmunitionBoxPistol45
   - NFAmmunitionBoxPistol45Overpressure
   - NFAmmunitionBoxPistol45Rubber
@@ -45,8 +46,8 @@
   - NFMagazinePistol45Empty
   - NFMagazineSubMachineGun35Empty
   - NFMagazineSubMachineGunTopMounted35Empty
-  - ASMagazinePistol40Empty # Aurora Song
-  - ASMagazineSubMachineGun40Empty # Aurora Song
+  - ASMagazinePistol40Empty # Aurora's Song
+  - ASMagazineSubMachineGun40Empty # Aurora's Song
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
   - NFSpeedLoaderPistol35Empty

@@ -39,7 +39,8 @@
     # nfsd-brigmedic: LockerNfsdBrigmedic # Frontier
     # nfsd-gold: LockerNfsdSergeant # Frontier
     # nfsd-sheriff: LockerNfsdSheriff # Frontier
-    station-representative: LockerStationRepresentative # Frontier
+    # station-representative: LockerStationRepresentative # Frontier - Aurora Song: moved to Colonial Representative
+    colonial-representative: ASLockerColonialRepresentativeFilled # Aurora's Song - changed from Station Representative to Colonial Representative
     fsb: ClosetFsbEva # Frontier
     sle: ASLockerSLEBlank # Aurora
     sle-evidence: ASLockerSLEEvidence # Aurora

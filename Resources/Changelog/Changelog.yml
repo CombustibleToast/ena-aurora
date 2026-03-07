@@ -5837,3 +5837,455 @@ Entries:
   id: 8945
   time: '2026-02-08T18:09:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/716
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: SLE Loadouts
+    - type: Remove
+      message: Station Representative, Plant Manager, Plant Technician
+    - type: Add
+      message: Colonial Representative, Site Manager, Site Worker
+    - type: Add
+      message: Aurora's Song branded items
+  id: 8946
+  time: '2026-02-09T08:21:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/715
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: shipboard desc to 60, color hex to beige
+  id: 8947
+  time: '2026-02-09T11:36:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/718
+- author: Vandanna
+  changes:
+    - type: Remove
+      message: SpreaderGrid from multiple POIs
+  id: 8948
+  time: '2026-02-09T14:28:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/719
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Being whitelisted for the server does not mean you are whitelisted for
+        all roles.
+  id: 8949
+  time: '2026-02-09T17:55:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/720
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Corpsman Loadout shows again
+  id: 8950
+  time: '2026-02-09T18:10:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/721
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Site roles now selectable
+  id: 8951
+  time: '2026-02-10T01:09:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/722
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Fixed diagonal windows not separating rooms.
+  id: 8952
+  time: '2026-02-11T05:28:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/725
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: >-
+        Added many diagonal variants of lattices and platings for use by
+        mappers.
+    - type: Tweak
+      message: Changed the radar system to be able to draw these new diagonals.
+  id: 8953
+  time: '2026-02-11T06:12:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/724
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Minor adjustments to the Petrel for testing (diagonals, map, atmos)
+  id: 8954
+  time: '2026-02-11T08:46:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/726
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Plastitanium diagonals mesh properly again
+  id: 8955
+  time: '2026-02-11T20:14:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/727
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: >-
+        Added a new system that shunts you back into reality if you fall out of
+        your ship during FTL.
+  id: 8956
+  time: '2026-02-13T04:02:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/728
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Made the Exped Saviour System trigger 1.5 seconds sooner to hopefully
+        avoid any accidental body deletions.
+  id: 8957
+  time: '2026-02-18T16:59:40.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/734
+- author: Vandanna
+  changes:
+    - type: Add
+      message: ColComm, and CAF
+    - type: Add
+      message: More signage and posters
+    - type: Tweak
+      message: IDs, various tooltips for branding
+    - type: Add
+      message: Jackhammer restricted variant for Commissioner and CAF
+  id: 8958
+  time: '2026-02-18T17:00:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/731
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Dark Shuttle Walls/ Windows/ Airlocks
+    - type: Tweak
+      message: Base Shuttle Walls/ Airlocks
+  id: 8959
+  time: '2026-02-18T18:10:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/730
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Contraband can now be turned in for differing amounts of EC and SCU.
+    - type: Fix
+      message: The Pirate Contraband Console works again.
+  id: 8960
+  time: '2026-02-20T16:59:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/723
+- author: turtleofmen and Vandanna
+  changes:
+    - type: Add
+      message: Damascus Manufactory
+    - type: Remove
+      message: Edison Power Plant
+  id: 8961
+  time: '2026-02-20T17:02:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/735
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: map to Trade Spine, fix signage
+    - type: Add
+      message: paper/cardboard recipe to all TechFabs
+    - type: Tweak
+      message: give Mail Carriers a box of crayons
+    - type: Tweak
+      message: give the CR a cutter machine in their locker
+    - type: Tweak
+      message: allow dumping bags on Material Silos
+    - type: Tweak
+      message: add empty .35 smg and .20 rifle mags to the Pick-N-Pack
+    - type: Add
+      message: empty +P mags and make them printable
+    - type: Tweak
+      message: blacklist Fairies and Shelegs from patient/ corpse bounties
+    - type: Tweak
+      message: fixes such as signage and atmos on SLEO, add maps
+    - type: Tweak
+      message: items to MedicGearVend (labeler, syringes, spare glasses)
+    - type: Tweak
+      message: add experimental/ white cat plushie to plushie vend hackventory
+    - type: Tweak
+      message: FTL drives researchable and craftable
+    - type: Remove
+      message: 25S and 160 FTL drives from cargo request inventory
+    - type: Tweak
+      message: FTL drives power reqs and tonnage capability
+    - type: Tweak
+      message: let holsters to fit cobra mags
+    - type: Tweak
+      message: allow belts and rigs to fit knives, with sprite
+    - type: Fix
+      message: (backend) weapons loadouts to proper location
+    - type: Fix
+      message: Honk Bullets
+    - type: Fix
+      message: underwear duplicates
+    - type: Fix
+      message: give Tajarans underwear
+    - type: Fix
+      message: let Tajarans make cat sounds
+    - type: Tweak
+      message: make Prison Riot timer longer
+    - type: Tweak
+      message: Smuggler Intercept windows less cheesable
+  id: 8962
+  time: '2026-02-20T18:03:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/736
+- author: Karlm4x
+  changes:
+    - type: Add
+      message: Ports helium gas from NF
+  id: 8963
+  time: '2026-02-22T17:46:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/739
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Refactored how hitscan projectiles are now handled in code, turning them
+        into more modular entities
+  id: 8964
+  time: '2026-02-22T18:32:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/732
+- author: ErhardSteinhauer, Karlm4x
+  changes:
+    - type: Add
+      message: 'Added pilot colors to the Frontier color palette. '
+    - type: Add
+      message: Added pilot wall locker.
+    - type: Tweak
+      message: >-
+        Tweaked pilot webbing contents: replaced mass scanner, remote signaler
+        with welder and universal pinpointer.
+  id: 8965
+  time: '2026-02-22T21:09:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/741
+- author: Karlm4x
+  changes:
+    - type: Tweak
+      message: >-
+        Turns speso trees into gold leaf trees, making them more profitable to
+        grow
+  id: 8966
+  time: '2026-02-22T22:00:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/740
+- author: ErhardSteinhauer, Karlm4x
+  changes:
+    - type: Tweak
+      message: Brought the pathfinder up to new standards
+  id: 8967
+  time: '2026-02-22T22:59:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/742
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Petrel layout/ size improvements
+  id: 8968
+  time: '2026-02-23T16:08:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/743
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Uncover the AME fuel locker on the Pathfinder, remove poster
+  id: 8969
+  time: '2026-02-23T16:37:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/745
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: >-
+        Refactor encryption keys to ensure all roles start with Shortband and
+        Shipboard
+    - type: Fix
+      message: Make sure Site Workers start with Science
+    - type: Fix
+      message: Make sure Medical Roles always start with Medical
+    - type: Fix
+      message: STC encryption key implementation
+    - type: Tweak
+      message: Hide extra loadout keys from roles that start with them for free
+    - type: Fix
+      message: Loadout groups backend
+    - type: Add
+      message: Site Manager encryption key
+  id: 8970
+  time: '2026-02-24T21:13:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/746
+- author: Karlm4x
+  changes:
+    - type: Add
+      message: Adds a plushie of Shana McTavish
+  id: 8971
+  time: '2026-02-26T13:20:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/748
+- author: arimah, Karlm4x
+  changes:
+    - type: Add
+      message: >-
+        Adds shielded light from NF. Less light replacing if you can spare the
+        materials!
+  id: 8972
+  time: '2026-02-26T13:41:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/747
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel mass scanner shape fix
+  id: 8973
+  time: '2026-02-28T06:06:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/749
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Whitelist 40 mags for holsters
+    - type: Fix
+      message: Add the drop-leg holster to the SLETech
+    - type: Fix
+      message: Switch the Commissioner's locker to contain Comm suits
+    - type: Fix
+      message: Swap various CentComm pens for ColComm ones
+    - type: Tweak
+      message: Add the other basic armor (slim) to the BountyVend for variety
+    - type: Fix
+      message: Fix positioning of laser research on the research tree
+    - type: Remove
+      message: Remove NFSD jetpack research
+    - type: Tweak
+      message: Add SLE jetpacks to the fab
+    - type: Tweak
+      message: Add the less-lethal 40mm grenades to the SLEFab
+    - type: Fix
+      message: Fix a visual glitch with the FTL research
+    - type: Fix
+      message: Flip the SLE Outpost Distro Mixer to start On by default
+  id: 8974
+  time: '2026-02-28T06:53:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/750
+- author: Vandanna
+  changes:
+    - type: Add
+      message: SWAT, HAZMAT, Riot Surplus suits to ECVend
+  id: 8975
+  time: '2026-02-28T08:26:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/752
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Mk32 Universal to the ECVend
+  id: 8976
+  time: '2026-02-28T08:35:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/753
+- author: snezshiba
+  changes:
+    - type: Tweak
+      message: Changed bandolier to grid storage and allow any bullet
+  id: 8977
+  time: '2026-02-28T08:37:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/751
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: add bandoliers to bountyvend
+  id: 8978
+  time: '2026-02-28T08:51:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/754
+- author: Stegomancer
+  changes:
+    - type: Add
+      message: Bovine snout, Oni to snout whitelist
+    - type: Remove
+      message: NA
+    - type: Tweak
+      message: NA
+    - type: Fix
+      message: NA
+  id: 8979
+  time: '2026-03-02T02:20:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/756
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Updated lattice(IFF shape) on the Drone, Scythe and BH ships
+  id: 8980
+  time: '2026-03-02T02:40:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/757
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: add plant vends to TO and Trade Spine
+  id: 8981
+  time: '2026-03-02T10:42:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/760
+- author: Superlagg, KodiCraft
+  changes:
+    - type: Tweak
+      message: Potted plants filter CO2, Ammonia, and NO2
+  id: 8982
+  time: '2026-03-02T10:44:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/759
+- author: snezshiba
+  changes:
+    - type: Add
+      message: Added holocigar to loadouts and shadycigs contraband inventory
+  id: 8983
+  time: '2026-03-04T02:39:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/761
+- author: ZigTag
+  changes:
+    - type: Add
+      message: mirrored cryobed sprites
+  id: 8984
+  time: '2026-03-04T04:40:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/762
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: round timer is no longer scared of times over 24hr
+  id: 8985
+  time: '2026-03-04T06:56:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/764
+- author: snezshiba
+  changes:
+    - type: Add
+      message: SLE Ptech
+    - type: Fix
+      message: Sergeant and Lieutenant ship vouchers referring to NFSD instead of SLE.
+    - type: Fix
+      message: mail referring to Frontier Account instead of Aurora
+    - type: Fix
+      message: DOC and Contractor job description to not refer to NT
+    - type: Fix
+      message: typo in medic triage event announcement
+    - type: Fix
+      message: Laika's id to SLE officer instead of NFSD deputy
+  id: 8986
+  time: '2026-03-04T22:50:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/765
+- author: Zephyrpak
+  changes:
+    - type: Add
+      message: Gingerbread are now selectable as a roundstart species
+    - type: Tweak
+      message: Gingerbread now have hair
+    - type: Tweak
+      message: Their density has been standardized to be like humans
+  id: 8987
+  time: '2026-03-07T09:16:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/773
+- author: Zephyrpak
+  changes:
+    - type: Tweak
+      message: >-
+        Rodentia density has been standardized. They can now drag stuff just
+        fine!
+    - type: Tweak
+      message: >-
+        Rodentia sprite scaling has also been standardized. They are default as
+        tall as humans
+  id: 8988
+  time: '2026-03-07T09:19:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/772
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Vulpkanin and Feroxi now have their own gasmask/welding mask sprites
+  id: 8989
+  time: '2026-03-07T09:20:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/768

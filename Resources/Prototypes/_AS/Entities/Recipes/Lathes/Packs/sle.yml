@@ -42,16 +42,29 @@
   - NFAmmunitionBoxPistol45Rubber
   # Magazines (Empty)
   - NFMagazineHighCapacityPistol35Empty
+  - NFMagazineHighCapacityPistol35OverpressureEmpty
   - NFMagazinePistol45Empty
+  - NFMagazinePistol45OverpressureEmpty
   - NFMagazineSubMachineGun35Empty
+  - NFMagazineSubMachineGun35OverpressureEmpty
   - NFMagazineSubMachineGunTopMounted35Empty
-  - ASMagazinePistol40Empty # Aurora Song
-  - ASMagazineSubMachineGun40Empty # Aurora Song
+  - NFMagazineSubMachineGunTopMounted35OverpressureEmpty
+  - ASMagazinePistol40Empty
+  - ASMagazinePistol40OverpressureEmpty
+  - ASMagazineSubMachineGun40Empty
+  - ASMagazineSubMachineGun40OverpressureEmpty
   - NFMagazineRifle20Empty
+  - NFMagazineRifle20OverpressureEmpty
   - NFMagazineRifle30Empty
+  - NFMagazineRifle30OverpressureEmpty
+  - ASMagazineMarksmanRifle30Empty  # Adding marksman rifle for the Commissioner to refill
+  - ASMagazineMarksmanRifle30OverpressureEmpty # Adding marksman rifle for the Commissioner to refill
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
   - MagazineAsmgtUniversalEmpty
+  - NFMagazineGrenadeEmpty
+  - NFGrenadeFlash
+  - NFGrenadeEMP
 
 - type: latheRecipePack
   id: SLEToolsStatic
@@ -77,6 +90,7 @@
   - NFBaseClothingNeckSheathThigh
   - LightTube
   - LightBulb
+  - ASJetpackSLE
 
 - type: latheRecipePack
   id: SLETargetsStatic

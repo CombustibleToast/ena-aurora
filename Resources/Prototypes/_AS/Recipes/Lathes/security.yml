@@ -1,5 +1,23 @@
 # Aurora Song
 
+#region .30 marksman rifle
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30Empty
+  result: ASMagazineMarksmanRifle30Empty
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30OverpressureEmpty
+  result: ASMagazineMarksmanRifle30OverpressureEmpty
+  materials:
+    Steel: 30
+
+#endregion
+
 #region .40 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -65,6 +83,13 @@
 
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
+  id: ASMagazinePistol40OverpressureEmpty
+  result: ASMagazinePistol40OverpressureEmpty
+  materials:
+    Steel: 20
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
   id: ASMagazineHighCapacityPistol40Empty
   result: ASMagazineHighCapacityPistol40Empty
   materials:
@@ -72,8 +97,22 @@
 
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
+  id: ASMagazineHighCapacityPistol40OverpressureEmpty
+  result: ASMagazineHighCapacityPistol40OverpressureEmpty
+  materials:
+    Steel: 25
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
   id: ASMagazineSubMachineGun40Empty
   result: ASMagazineSubMachineGun40Empty
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineSubMachineGun40OverpressureEmpty
+  result: ASMagazineSubMachineGun40OverpressureEmpty
   materials:
     Steel: 30
 

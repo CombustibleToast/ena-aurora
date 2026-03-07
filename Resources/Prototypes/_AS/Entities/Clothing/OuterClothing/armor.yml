@@ -1,5 +1,4 @@
-# Aurora Song - SLE (Sector Law Enforcement) armor
-# Prototypes for Aurora Song's SLE faction outer armor
+#region SLE
 
 - type: entity
   parent: [ ClothingOuterBaseLarge, BaseC2ContrabandUnredeemable ]
@@ -26,8 +25,46 @@
     damageCoefficient: 0.60
   - type: GroupExamine
 
+#region Command
 
-# Aurora's Song - Fort Armor
+- type: entity
+  parent: ClothingOuterArmorBasic
+  id: ASClothingOuterArmorColonialRepresentativeCarapace
+  name: colonial representative's carapace
+  description: A high quality armored vest that protects against most attacks. Bears a symbol of colonial authority.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Armor/cr_carapace.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Armor/cr_carapace.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.6
+        Heat: 0.9
+
+- type: entity
+  parent: [ ClothingOuterArmorBasic, BaseColcommContraband ]
+  id: ASClothingOuterArmorColonialOfficialCarapace
+  name: colonial official's carapace
+  description: A high quality armored vest that protects against most attacks. Bears a symbol of colonial authority.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Armor/cr_carapace.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Armor/cr_carapace.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.75
+        Slash: 0.75
+        Piercing: 0.6
+        Heat: 0.9
+
+#region Mercenary
+
 - type: entity
   parent: [ ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseC2ContrabandUnredeemable ]
   id: ASClothingOuterArmorFort

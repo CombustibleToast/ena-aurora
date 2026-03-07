@@ -15,7 +15,8 @@
       [bold]Right:[/bold] VOX ATMOSPHERE- Oxygen will be drained, replaced gradually with nitrogen.
 
       This room has been outfitted with a robust, adjustable HVAC system suited for any race. Each change will take at least a minute to fully complete the transition - with varying times depending on certain conditions.
-      Signed.
+
+      Signed,
       JH, Atmospheric Consultant
 
 - type: entity # Creator: vandanna
@@ -33,3 +34,25 @@
       This is to provide safe egress if the beach area becomes depressurized.
 
       - Auroran Colonial Safety Commission
+
+- type: entity # Creator: turtleofmen (Jesper)
+  id: PaperOfficeScrubbingSystemGuide
+  name: Scrubbing System Guide
+  parent: PaperOffice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [bold]SCRUBBING SYSTEM GUIDE[/bold]
+
+      This system is designed to replace the standard method of spacing for scientific research, as it encouraged not to waste any gases when they cannot be easily replaced.
+
+      [bold]System function:[/bold]
+      It may look complicated, but it is simple: Any gas that enters the chamber will be indiscriminately removed, cooled, and sent to this station's waste system.
+
+      At this point these gases are filtered into their respective storage containers, assuming the resident atmospheric technicians have set up waste.
+
+      It does, naturally, require power to operate, though it should be operational from the start. Should you wish, for whatever reason, to change the scrubber settings, you can do so at the air alarm in the airlock entrance to the chamber.
+
+      Signed,
+      JH, Atmospheric Consultant
