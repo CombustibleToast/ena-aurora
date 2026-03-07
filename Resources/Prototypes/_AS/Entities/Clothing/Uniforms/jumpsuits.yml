@@ -450,3 +450,16 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/colcomformal.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/colcomformal.rsi
+
+#region Misc
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCoyotePants
+  name: coyote pants
+  description: A pair of common coyote cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/coyotepants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/coyotepants.rsi
