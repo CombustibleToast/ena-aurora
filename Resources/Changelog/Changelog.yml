@@ -6282,3 +6282,10 @@ Entries:
   id: 8988
   time: '2026-03-07T09:19:25.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/772
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Vulpkanin and Feroxi now have their own gasmask/welding mask sprites
+  id: 8989
+  time: '2026-03-07T09:20:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/768
