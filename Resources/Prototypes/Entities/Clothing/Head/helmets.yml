@@ -9,10 +9,10 @@
   - type: Tag
     tags:
     - WhitelistChameleon
-  - type: HideLayerClothing
-    layers:
-      HeadTop : HEAD
-      HeadSide : HEAD
+  #- type: HideLayerClothing # Aurora's Song - Removed helmet hiding layers
+    #layers:
+      #HeadTop : HEAD
+      #HeadSide : HEAD
 
 - type: entity
   parent: ClothingHeadHelmetBase
@@ -42,9 +42,9 @@
     tags:
     - WhitelistChameleon
     - SecurityHelmet
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  #- type: HideLayerClothing # Aurora's Song - Removed helmet hiding layers
+    #layers:
+      #Hair: HEAD
 
 #Mercenary Helmet
 - type: entity
@@ -57,9 +57,9 @@
     sprite: Clothing/Head/Helmets/merc_helmet.rsi
   - type: Clothing
     sprite: Clothing/Head/Helmets/merc_helmet.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  #- type: HideLayerClothing # Aurora's Song - Removed helmet hiding layers
+    #layers:
+      #Hair: HEAD
 
 #SWAT Helmet
 - type: entity
@@ -83,9 +83,9 @@
         Caustic: 0.95
   - type: ExplosionResistance
     damageCoefficient: 0.75
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  #- type: HideLayerClothing # Aurora's Song - Removed helmet hiding layers
+    #layers:
+      #Hair: HEAD
 
 #Syndicate SWAT Helmet
 - type: entity
@@ -99,9 +99,9 @@
     sprite: Clothing/Head/Helmets/swat_syndicate.rsi
   - type: Clothing
     sprite: Clothing/Head/Helmets/swat_syndicate.rsi
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  #- type: HideLayerClothing # Aurora's Song - Removed helmet hiding layers
+    #layers:
+      #Hair: HEAD
 
 #Light Riot Helmet
 - type: entity
@@ -121,9 +121,9 @@
         Blunt: 0.8
         Slash: 0.8
         Piercing: 0.95
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  #- type: HideLayerClothing # Aurora's Song - Removed helmet hiding layers
+    #layers:
+      #Hair: HEAD
 
 #Bombsuit Helmet
 - type: entity
@@ -540,9 +540,9 @@
   - type: Construction
     graph: HelmetJustice
     node: helmet
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  #- type: HideLayerClothing # Aurora's Song - removed helmet hiding layers
+    #layers:
+      #Hair: HEAD
 
 - type: entity
   parent: ClothingHeadHelmetJustice

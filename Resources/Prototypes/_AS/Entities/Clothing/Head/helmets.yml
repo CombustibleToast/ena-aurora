@@ -22,9 +22,9 @@
         Caustic: 0.8
   - type: ExplosionResistance
     damageCoefficient: 0.9
-  - type: HideLayerClothing
-    layers:
-      Hair: HEAD
+  # - type: HideLayerClothing Aurora's Song - Removed helmet hiding layers
+    # layers:
+      # Hair: HEAD
 
 #region SLE
 
