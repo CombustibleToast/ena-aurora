@@ -6326,3 +6326,10 @@ Entries:
   id: 8992
   time: '2026-03-07T09:44:36.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/766
+- author: snezshiba
+  changes:
+    - type: Add
+      message: Added Coyote Pants to loadouts
+  id: 8993
+  time: '2026-03-07T10:19:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/775
