@@ -6269,3 +6269,16 @@ Entries:
   id: 8987
   time: '2026-03-07T09:16:56.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/773
+- author: Zephyrpak
+  changes:
+    - type: Tweak
+      message: >-
+        Rodentia density has been standardized. They can now drag stuff just
+        fine!
+    - type: Tweak
+      message: >-
+        Rodentia sprite scaling has also been standardized. They are default as
+        tall as humans
+  id: 8988
+  time: '2026-03-07T09:19:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/772
