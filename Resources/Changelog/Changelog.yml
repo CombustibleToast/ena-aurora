@@ -6300,3 +6300,22 @@ Entries:
   id: 8990
   time: '2026-03-07T09:30:14.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/774
+- author: Zephyrpak
+  changes:
+    - type: Remove
+      message: >-
+        PseudoItem component is now gone. They can no longer be stuffed in
+        duffels to reflect that these are big cats
+    - type: Tweak
+      message: Height is now standardized to human to reflect guidebook lore
+    - type: Tweak
+      message: Changed their hit sound from a punch to a claw sound
+    - type: Tweak
+      message: >-
+        Remove mention of hairball from the guidebook (false info) and the
+        mention to be shoved into duffles
+    - type: Tweak
+      message: Tajaran are now as dense as humans, making it easier to drag things
+  id: 8991
+  time: '2026-03-07T09:37:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/771
