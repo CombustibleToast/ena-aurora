@@ -256,6 +256,12 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtColorPink
 
+- type: loadout # Aurora's Song - Shirtless Coyote Pants
+  id: ContractorClothingUniformJumpsuitCoyotePants
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCoyotePants
+
 #T1
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorDarkBlue
