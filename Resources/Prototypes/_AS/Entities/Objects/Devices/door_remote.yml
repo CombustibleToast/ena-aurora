@@ -1,0 +1,15 @@
+- type: entity
+  parent: [DoorRemoteDefault, BaseCommandContraband]
+  id: DoorRemoteSLE
+  name: SLE door remote
+  components:
+  - type: Sprite
+    layers:
+    - state: door_remotebase
+    - state: door_remotelightscolour
+      color: "#E37B40"
+    - state: door_remotescreencolour
+      color: "#2A4F63"
+  - type: Access
+    groups:
+    - AllNfsdAccess

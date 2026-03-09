@@ -57,7 +57,7 @@
     - ASTechFabSLEFlatpack
     - Multitool
     - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
-    - DoorRemoteNfsd
+    - DoorRemoteSLE
     - BaseSecurityUplinkRadioSheriff
     - ASRubberStampCommissioner # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
   licenses:
