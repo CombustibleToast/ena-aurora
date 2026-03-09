@@ -6333,3 +6333,22 @@ Entries:
   id: 8993
   time: '2026-03-07T10:19:04.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/775
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Cargo area added to Damascus (Nonfunctional)
+    - type: Add
+      message: Compressed matter to CE office
+    - type: Tweak
+      message: Damascus disposal rework
+    - type: Tweak
+      message: Damascus gas sell point rework
+    - type: Tweak
+      message: Damascus material silo moved to disposals
+    - type: Tweak
+      message: Trit chamber output reworked
+    - type: Tweak
+      message: Various cosmetic fixes including missing tiles and diagonal latticework
+  id: 8994
+  time: '2026-03-09T08:13:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/776
