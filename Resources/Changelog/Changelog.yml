@@ -6368,3 +6368,14 @@ Entries:
   id: 8996
   time: '2026-03-09T10:35:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/779
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Adds explosives to the SLE Uplink
+    - type: Tweak
+      message: further uplink refactors
+    - type: Fix
+      message: further remaining NFSD labels
+  id: 8997
+  time: '2026-03-09T10:36:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/778
