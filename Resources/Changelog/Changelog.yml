@@ -6361,3 +6361,10 @@ Entries:
   id: 8995
   time: '2026-03-09T09:13:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/777
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Petrel QoL and fixes
+  id: 8996
+  time: '2026-03-09T10:35:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/779
