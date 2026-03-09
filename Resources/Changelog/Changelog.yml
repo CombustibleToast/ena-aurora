@@ -6352,3 +6352,12 @@ Entries:
   id: 8994
   time: '2026-03-09T08:13:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/776
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Running lights, cosmetic decals, power cables to Harvester
+    - type: Tweak
+      message: Tile changes, Engi details
+  id: 8995
+  time: '2026-03-09T09:13:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/777
