@@ -1,4 +1,12 @@
-﻿# region Mercvend - Aurora
+﻿# region Sec Uplink
+uplink-security-explosivegrenades-box-name = Explosive Grenade Box
+uplink-security-explosivegrenades-box-desc = A box containing 4 HE grenades.
+uplink-security-magazine-grenade-blast-name = Blast Grenade Magazine
+uplink-security-magazine-grenade-blast-desc = A cannon magazine containing 4 blast grenade rounds.
+uplink-security-energy-sword-name = SLE Energy Sword
+uplink-security-energy-sword-desc = An energy sword with an orange blade, for the SLE.
+
+# region Mercvend - Aurora
 store-category-mercenaryhardsuits = EVA Suits
 store-category-mercenaryweapons = Weapons
 store-category-mercenaryutility = Utility

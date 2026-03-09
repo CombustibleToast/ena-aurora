@@ -6,7 +6,6 @@
   components:
   - type: Sprite
     sprite: _AS/Objects/Weapons/Melee/e_shield.rsi
-    color: "#4a6fa5"  # SLE blue tint
   - type: Item
     sprite: _AS/Objects/Weapons/Melee/e_shield.rsi
   - type: PointLight

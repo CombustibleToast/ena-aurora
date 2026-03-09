@@ -1,0 +1,10 @@
+- type: entity
+  name: SLE energy sword
+  parent: [BaseC2ContrabandUnredeemable, EnergySword]
+  id: EnergySwordSLE
+  description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
+  components:
+  - type: EnergySword
+    colorOptions:
+      - "#fc7703"
+    blockHacking: true

@@ -135,7 +135,7 @@
 #           - SecurityUplink
 #     - !type:BuyerJobCondition
 #       whitelist:
-#         - Commissioner`n
+#         - Commissioner
 # Begin Aurora Song
 - type: listing
   id: UplinkSleCombatHardsuit
@@ -660,6 +660,117 @@
       whitelist: # Aurora's Song - Switched Sheriff to Commissioner
         - Commissioner
 
+- type: listing
+  id: UplinkSecurityInspector
+  name:  uplink-security-inspector-name
+  description: uplink-security-inspector-desc
+  productEntity: NFWeaponRevolverInspector
+  icon: { sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 5 # made 5 SCU because it's in .45, but a revolver, half the mk32's price
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityTruncheon
+  name:  uplink-security-truncheon-name
+  description: uplink-security-truncheon-desc
+  productEntity: Truncheon
+  icon: { sprite: Objects/Weapons/Melee/truncheon.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityArmingSword
+  name:  uplink-security-armingsword-name
+  description: uplink-security-armingsword-desc
+  productEntity: PlasteelArmingSword
+  icon: { sprite: _NF/Objects/Weapons/Melee/armingsword.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityCaptainSword
+  name:  uplink-security-captainsword-name
+  description: uplink-security-captainsword-desc
+  productEntity: ClothingBeltSheathFilled
+  icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityHammer
+  name:  uplink-security-hammer-name
+  description: uplink-security-hammer-desc
+  productEntity: SecBreachingHammer
+  icon: { sprite: Nyanotrasen/Objects/Weapons/Melee/breaching_hammer.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkEnergySword
+  name:  uplink-security-energy-sword-name
+  description: uplink-security-energy-sword-desc
+  productEntity: EnergySwordSLE
+  icon: { sprite: _AS/Objects/Weapons/Melee/e_sword.rsi, state: icon_sle }
+  cost:
+    FrontierUplinkCoin: 10
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
 #region utililty
 - type: listing
   id: UplinkSecurityHolo
@@ -786,6 +897,175 @@
         - Lieutenant
         - Sergeant
         - Commissioner
+
+- type: listing
+  id: UplinkSecurityHypo
+  name:  uplink-security-hypo-name
+  description: uplink-security-hypo-desc
+  productEntity: HypoBrigmedic
+  icon: { sprite: _NF/Objects/Specific/Medical/hypobrigmedic.rsi, state: hypo }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Corpsman
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityAmbuzol
+  name:  uplink-security-ambuzol-name
+  description: uplink-security-ambuzol-desc
+  productEntity: SyringeAmbuzol
+  icon: { sprite: Objects/Specific/Chemistry/syringe.rsi, state: syringe_base0 }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Corpsman
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityMedkit
+  name:  uplink-security-medkit-name
+  description: uplink-security-medkit-desc
+  productEntity: MedkitCombatFilled
+  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit } # Frontier: _NF prefix
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Corpsman
+        - Commissioner
+
+- type: listing
+  id: UplinkSecuritySpaceBladeSec
+  name:  uplink-security-spaceblade-sec-name
+  description: uplink-security-spaceblade-sec-desc
+  productEntity: SpaceBladeSec
+  icon: { sprite: _NF/Objects/Fun/spaceblade.rsi, state: secblade }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityContrabandForensicsModule
+  name:  uplink-security-contraband-forensics-module-name
+  description: uplink-security-contraband-forensics-module-desc
+  productEntity: ContrabandForensicsModule
+  icon: { sprite: _NF/Objects/Devices/cartridge.rsi, state: contraband_forensics }
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityTeleShield
+  name:  uplink-security-teleshield-name
+  description: uplink-security-teleshield-desc
+  productEntity: TelescopicShield
+  icon: { sprite: Objects/Weapons/Melee/teleriot_shield.rsi, state: teleriot-on }
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityEnergyShield
+  name:  uplink-security-energyshield-name
+  description: uplink-security-energyshield-desc
+  productEntity: ASEnergyShieldSLE
+  icon: { sprite: _AS/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
+  cost:
+    FrontierUplinkCoin: 8
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkSecuritySwat
+  name:  uplink-security-swat-name
+  description: uplink-security-swat-desc
+  productEntity: ASClothingMaskGasSLECommissioner
+  icon: { sprite: _AS/Clothing/Mask/sle_commissioner.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityCash1000
+  name:  uplink-security-cash1000-name
+  description: uplink-security-cash1000-desc
+  productEntity: SpaceCash1000
+  icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000 }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
 
 #region magazines
 - type: listing
@@ -945,214 +1225,6 @@
           - Commissioner
 
 - type: listing
-  id: UplinkSecurityHypo
-  name:  uplink-security-hypo-name
-  description: uplink-security-hypo-desc
-  productEntity: HypoBrigmedic
-  icon: { sprite: _NF/Objects/Specific/Medical/hypobrigmedic.rsi, state: hypo }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Corpsman
-        - Commissioner
-
-- type: listing
-  id: UplinkSecurityAmbuzol
-  name:  uplink-security-ambuzol-name
-  description: uplink-security-ambuzol-desc
-  productEntity: SyringeAmbuzol
-  icon: { sprite: Objects/Specific/Chemistry/syringe.rsi, state: syringe_base0 }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Corpsman
-        - Commissioner
-
-- type: listing
-  id: UplinkSecurityMedkit
-  name:  uplink-security-medkit-name
-  description: uplink-security-medkit-desc
-  productEntity: MedkitCombatFilled
-  icon: { sprite: _NF/Objects/Specific/Medical/firstaidkits.rsi, state: blackkit } # Frontier: _NF prefix
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Corpsman
-        - Commissioner
-
-- type: listing
-  id: UplinkSecurityInspector
-  name:  uplink-security-inspector-name
-  description: uplink-security-inspector-desc
-  productEntity: NFWeaponRevolverInspector
-  icon: { sprite: Objects/Weapons/Guns/Revolvers/inspector.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityTruncheon
-  name:  uplink-security-truncheon-name
-  description: uplink-security-truncheon-desc
-  productEntity: Truncheon
-  icon: { sprite: Objects/Weapons/Melee/truncheon.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityArmingSword
-  name:  uplink-security-armingsword-name
-  description: uplink-security-armingsword-desc
-  productEntity: PlasteelArmingSword
-  icon: { sprite: _NF/Objects/Weapons/Melee/armingsword.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityCaptainSword
-  name:  uplink-security-captainsword-name
-  description: uplink-security-captainsword-desc
-  productEntity: ClothingBeltSheathFilled
-  icon: { sprite: Objects/Weapons/Melee/captain_sabre.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 8
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
-
-- type: listing
-  id: UplinkSecurityHammer
-  name:  uplink-security-hammer-name
-  description: uplink-security-hammer-desc
-  productEntity: SecBreachingHammer
-  icon: { sprite: Nyanotrasen/Objects/Weapons/Melee/breaching_hammer.rsi, state: icon }
-  cost:
-    FrontierUplinkCoin: 4
-  categories:
-    - UplinkSecurityWeapons
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
-
-- type: listing
-  id: UplinkSecurityTeleShield
-  name:  uplink-security-teleshield-name
-  description: uplink-security-teleshield-desc
-  productEntity: TelescopicShield
-  icon: { sprite: Objects/Weapons/Melee/teleriot_shield.rsi, state: teleriot-on }
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityEnergyShield
-  name:  uplink-security-energyshield-name
-  description: uplink-security-energyshield-desc
-  productEntity: ASEnergyShieldSLE
-  icon: { sprite: _AS/Objects/Weapons/Melee/e_shield.rsi, state: eshield-on }
-  cost:
-    FrontierUplinkCoin: 8
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
-
-- type: listing
-  id: UplinkSecuritySwat
-  name:  uplink-security-swat-name
-  description: uplink-security-swat-desc
-  productEntity: ASClothingMaskGasSLECommissioner
-  icon: { sprite: _AS/Clothing/Mask/sle_commissioner.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 3
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
-
-- type: listing
   id: UplinkSecuritySpeedloader
   name:  uplink-security-speedloader-name
   description: uplink-security-speedloader-desc
@@ -1232,74 +1304,7 @@
         tags:
           - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityCash1000
-  name:  uplink-security-cash1000-name
-  description: uplink-security-cash1000-desc
-  productEntity: SpaceCash1000
-  icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000 }
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
 
-- type: listing
-  id: UplinkSecurityEmpGrenadeBox
-  name:  uplink-security-empgrenade-box-name
-  description: uplink-security-empgrenade-box-desc
-  productEntity: BoxEMPGrenadesSLE
-  icon: { sprite: Objects/Weapons/Grenades/empgrenade.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityExplosives
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
-
-- type: listing
-  id: UplinkSecuritySmokeGrenadeBox
-  name:  uplink-security-smokegrenade-box-name
-  description: uplink-security-smokegrenade-box-desc
-  productEntity: BoxSmokeGrenades
-  icon: { sprite: Objects/Weapons/Grenades/smoke.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 1
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityTeargasGrenadeBox
-  name:  uplink-security-teargasgrenade-box-name
-  description: uplink-security-teargasgrenade-box-desc
-  productEntity: BoxTeargasGrenades
-  icon: { sprite: Objects/Weapons/Grenades/tear_gas.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityUtility
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
 
 - type: listing
   id: UplinkSecurityFlashbangGrenadeBox
@@ -1316,43 +1321,6 @@
       whitelist:
         tags:
           - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityStingerGrenadeBox
-  name:  uplink-security-stingergrenade-box-name
-  description: uplink-security-stingergrenade-box-desc
-  productEntity: BoxStingerGrenadesNfsd
-  icon: { sprite: Objects/Weapons/Grenades/stingergrenade.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 2
-  categories:
-    - UplinkSecurityExplosives
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-
-- type: listing
-  id: UplinkSecurityBreachingChargesBox
-  name:  uplink-security-breachingcharge-box-name
-  description: uplink-security-breachingcharge-box-desc
-  productEntity: BoxBreachingCharges
-  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon}
-  cost:
-    FrontierUplinkCoin: 3
-  categories:
-    - UplinkSecurityExplosives
-  conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-          - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched NFSD to SLE roles
-        - Lieutenant
-        - Sergeant
-        - Commissioner
 
 - type: listing
   id: UplinkSecurityHoverbikeNfsdFlatpack
@@ -1481,16 +1449,17 @@
         tags:
           - SecurityUplink
 
+#region explosives
 - type: listing
-  id: UplinkSecuritySpaceBladeSec
-  name:  uplink-security-spaceblade-sec-name
-  description: uplink-security-spaceblade-sec-desc
-  productEntity: SpaceBladeSec
-  icon: { sprite: _NF/Objects/Fun/spaceblade.rsi, state: secblade }
+  id: UplinkSecurityStingerGrenadeBox
+  name:  uplink-security-stingergrenade-box-name
+  description: uplink-security-stingergrenade-box-desc
+  productEntity: BoxStingerGrenadesNfsd
+  icon: { sprite: Objects/Weapons/Grenades/stingergrenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 1
+    FrontierUplinkCoin: 2
   categories:
-    - UplinkSecurityUtility
+    - UplinkSecurityExplosives
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
@@ -1498,20 +1467,116 @@
           - SecurityUplink
 
 - type: listing
-  id: UplinkSecurityContrabandForensicsModule
-  name:  uplink-security-contraband-forensics-module-name
-  description: uplink-security-contraband-forensics-module-desc
-  productEntity: ContrabandForensicsModule
-  icon: { sprite: _NF/Objects/Devices/cartridge.rsi, state: contraband_forensics }
+  id: UplinkSecurityEmpGrenadeBox
+  name:  uplink-security-empgrenade-box-name
+  description: uplink-security-empgrenade-box-desc
+  productEntity: BoxEMPGrenadesSLE
+  icon: { sprite: Objects/Weapons/Grenades/empgrenade.rsi, state: icon}
   cost:
-    FrontierUplinkCoin: 4
+    FrontierUplinkCoin: 2
   categories:
-    - UplinkSecurityUtility
+    - UplinkSecurityExplosives
   conditions:
     - !type:StoreWhitelistCondition
       whitelist:
         tags:
           - SecurityUplink
     - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched Sheriff to Commissioner
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityBreachingChargesBox
+  name:  uplink-security-breachingcharge-box-name
+  description: uplink-security-breachingcharge-box-desc
+  productEntity: BoxBreachingCharges
+  icon: { sprite: _DV/Objects/Weapons/Bombs/breaching.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 3
+  categories:
+    - UplinkSecurityExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkSecuritySmokeGrenadeBox
+  name:  uplink-security-smokegrenade-box-name
+  description: uplink-security-smokegrenade-box-desc
+  productEntity: BoxSmokeGrenades
+  icon: { sprite: Objects/Weapons/Grenades/smoke.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityTeargasGrenadeBox
+  name:  uplink-security-teargasgrenade-box-name
+  description: uplink-security-teargasgrenade-box-desc
+  productEntity: BoxTeargasGrenades
+  icon: { sprite: Objects/Weapons/Grenades/tear_gas.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 2
+  categories:
+    - UplinkSecurityExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing
+  id: UplinkSecurityExplosiveGrenadesBox
+  name:  uplink-security-explosivegrenades-box-name
+  description: uplink-security-explosivegrenades-box-desc
+  productEntity: BoxExplosiveGrenadesNfsd
+  icon: { sprite: Objects/Weapons/Grenades/grenade.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 5
+  categories:
+    - UplinkSecurityExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityMagazineGrenadeBlast
+  name:  uplink-security-magazine-grenade-blast-name
+  description: uplink-security-magazine-grenade-blast-desc
+  productEntity: NFMagazineGrenadeBlast
+  icon: { sprite: Objects/Weapons/Guns/Ammunition/Magazine/Grenade/grenade_cartridge.rsi, state: icon}
+  cost:
+    FrontierUplinkCoin: 20
+  categories:
+    - UplinkSecurityExplosives
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
         - Commissioner
