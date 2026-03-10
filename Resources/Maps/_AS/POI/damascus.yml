@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/09/2026 06:38:52
+  time: 03/10/2026 08:13:47
   entityCount: 7068
 maps: []
 grids:
@@ -635,10 +635,6 @@ entities:
             739: 30,10
             1285: -5,25
             1286: -5,31
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteCornerNe
-          decals:
             1356: 23,2
             1376: -9,2
         - node:
@@ -661,10 +657,6 @@ entities:
             653: -17,12
             694: 9,18
             733: 25,12
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteCornerNw
-          decals:
             1355: 21,2
             1373: -11,2
         - node:
@@ -690,10 +682,6 @@ entities:
             741: 30,6
             742: 29,4
             1287: -5,27
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteCornerSe
-          decals:
             1358: 23,1
             1378: -9,1
         - node:
@@ -718,10 +706,6 @@ entities:
             650: -18,6
             705: 18,4
             712: 25,4
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteCornerSw
-          decals:
             1359: 21,1
             1379: -11,1
         - node:
@@ -955,10 +939,6 @@ entities:
             743: 29,5
             1288: -5,28
             1289: -5,29
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteLineE
-          decals:
             1368: 23,3
             1374: -9,3
         - node:
@@ -1015,12 +995,6 @@ entities:
             color: '#EFB341FF'
             id: BrickTileWhiteLineN
           decals:
-            1357: 22,2
-            1377: -10,2
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteLineN
-          decals:
             362: -12,31
             363: -11,31
             364: -10,31
@@ -1073,6 +1047,8 @@ entities:
             799: -32,9
             800: -35,9
             801: -36,9
+            1357: 22,2
+            1377: -10,2
         - node:
             color: '#334E6DFF'
             id: BrickTileWhiteLineS
@@ -1106,13 +1082,6 @@ entities:
             1221: 31,39
             1222: 27,39
             1223: 26,39
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteLineS
-          decals:
-            1332: 22,10
-            1360: 22,1
-            1380: -10,1
         - node:
             color: '#EFB341FF'
             id: BrickTileWhiteLineS
@@ -1170,6 +1139,9 @@ entities:
             1291: -6,33
             1292: -7,33
             1293: -8,33
+            1332: 22,10
+            1360: 22,1
+            1380: -10,1
         - node:
             color: '#334E6DFF'
             id: BrickTileWhiteLineW
@@ -1221,12 +1193,6 @@ entities:
             color: '#EFB341FF'
             id: BrickTileWhiteLineW
           decals:
-            1369: 21,3
-            1375: -11,3
-        - node:
-            color: '#EFB341FF'
-            id: BrickTileWhiteLineW
-          decals:
             325: -3,23
             326: -3,25
             327: -3,26
@@ -1259,6 +1225,8 @@ entities:
             704: 18,5
             730: 25,8
             791: -7,8
+            1369: 21,3
+            1375: -11,3
         - node:
             color: '#FFFFFFFF'
             id: Caution
@@ -1906,23 +1874,28 @@ entities:
             0: 60893
           4,3:
             0: 4991
-            2: 18432
+            1: 16384
+            2: 2048
           4,-1:
             0: 6007
           4,4:
             0: 1
-            2: 4370
+            1: 2
+            2: 4368
           5,0:
-            2: 3840
+            2: 286
+            1: 1
+            0: 61152
           5,1:
-            0: 8176
+            0: 8180
           5,2:
             0: 65296
             1: 14
           5,3:
-            2: 3840
+            2: 3968
           6,0:
-            2: 3840
+            1: 1
+            2: 3856
             0: 49152
           6,1:
             0: 65534
@@ -1932,8 +1905,9 @@ entities:
             2: 3840
             0: 206
           7,0:
-            2: 33536
+            2: 33024
             0: 4096
+            1: 512
           7,1:
             0: 63283
             2: 2184
@@ -1942,7 +1916,8 @@ entities:
             2: 34816
           7,3:
             0: 19
-            2: 904
+            2: 392
+            1: 512
           8,1:
             2: 159
             0: 61440
@@ -2014,7 +1989,8 @@ entities:
             2: 4
           4,-5:
             0: 13072
-            2: 32803
+            2: 32801
+            1: 2
           5,-4:
             0: 816
             2: 17476
@@ -2027,12 +2003,12 @@ entities:
           5,-2:
             2: 17486
           5,-1:
-            2: 35908
-            1: 16384
+            2: 140
+            1: 64
           6,-2:
             2: 15
           6,-1:
-            2: 63488
+            2: 248
           6,-3:
             2: 32768
           7,-3:
@@ -2040,7 +2016,7 @@ entities:
           7,-2:
             2: 4369
           7,-1:
-            2: 4369
+            2: 17
           7,-4:
             2: 4369
           7,-5:
@@ -2049,7 +2025,7 @@ entities:
             0: 28672
             2: 2048
           -5,0:
-            2: 18432
+            1: 18432
           -4,1:
             0: 65535
           -5,1:
@@ -2065,31 +2041,36 @@ entities:
             2: 34816
           -5,3:
             0: 8
-            2: 2115
+            1: 2112
+            2: 3
           -3,0:
-            2: 3840
+            2: 286
+            1: 1
+            0: 61152
           -3,1:
-            0: 8176
+            0: 8180
           -3,2:
             0: 65296
             1: 14
           -3,3:
-            2: 12032
+            2: 12064
           -4,4:
             2: 34952
           -2,0:
-            2: 30532
+            1: 1
+            2: 30548
           -2,1:
             0: 30582
           -2,2:
             0: 63358
           -2,3:
-            2: 17168
+            2: 784
             0: 2254
+            1: 16384
           -1,2:
             0: 26487
           -2,4:
-            2: 8
+            1: 8
           -1,4:
             0: 3279
             2: 21264
@@ -2130,8 +2111,9 @@ entities:
             2: 20
             0: 52224
           -2,-5:
-            2: 12424
+            2: 12416
             0: 34816
+            1: 8
           -2,-1:
             0: 3276
           -1,-5:
@@ -2140,6 +2122,8 @@ entities:
           -4,-6:
             2: 4879
             1: 52240
+          -5,-6:
+            2: 28680
           -3,-6:
             2: 7
             1: 4352
@@ -2187,14 +2171,14 @@ entities:
           5,-6:
             2: 59252
           5,-7:
-            1: 4
-            2: 17608
+            1: 1024
+            2: 51200
           6,-7:
-            2: 143
+            2: 36608
           6,-6:
             2: 61440
           7,-7:
-            2: 4369
+            2: 4352
           6,-5:
             2: 8
           7,-6:
@@ -2220,8 +2204,6 @@ entities:
             2: 48
           -6,-6:
             2: 61440
-          -5,-6:
-            2: 28672
           0,5:
             0: 65535
           -1,5:
@@ -2283,7 +2265,8 @@ entities:
             0: 34952
             2: 32
           5,4:
-            2: 14016
+            1: 4672
+            2: 9344
             0: 51200
           5,8:
             0: 65399
@@ -2313,7 +2296,8 @@ entities:
             0: 13056
           8,5:
             0: 52851
-            2: 4360
+            2: 4352
+            1: 8
           8,6:
             2: 17
             0: 61134
@@ -2332,9 +2316,10 @@ entities:
           -3,7:
             0: 65535
           -4,8:
-            2: 8
+            1: 8
           -3,5:
-            2: 18432
+            2: 16384
+            1: 2048
           -2,5:
             0: 61440
           -2,6:
@@ -2394,10 +2379,12 @@ entities:
             0: 239
             2: 13072
           -1,10:
-            2: 62365
+            2: 62233
+            1: 132
           0,11:
-            2: 5425
+            2: 4401
             0: 14
+            1: 1024
           -1,11:
             2: 65423
           0,12:
@@ -2425,7 +2412,8 @@ entities:
             0: 65535
           3,10:
             0: 35
-            2: 4680
+            2: 4096
+            1: 584
           3,11:
             2: 16369
           3,12:
@@ -2439,7 +2427,8 @@ entities:
           -3,8:
             2: 17472
           -3,9:
-            2: 140
+            2: 12
+            1: 128
           -2,8:
             0: 65520
           -2,9:
@@ -2455,12 +2444,14 @@ entities:
           5,9:
             0: 65535
           4,10:
-            2: 8
+            1: 8
           5,10:
-            2: 50737
+            2: 33825
+            1: 16912
             0: 2254
           5,11:
-            2: 8968
+            2: 8960
+            1: 8
           5,12:
             2: 8994
           6,8:
@@ -2472,7 +2463,8 @@ entities:
           6,10:
             0: 36863
           6,11:
-            2: 49425
+            2: 49169
+            1: 256
             0: 204
           7,9:
             0: 62071
@@ -2489,10 +2481,11 @@ entities:
             0: 32462
           8,10:
             0: 819
-            2: 8
+            1: 8
           8,11:
             0: 17
-            2: 5188
+            2: 4164
+            1: 1024
           9,1:
             2: 143
             0: 61440
@@ -2574,14 +2567,14 @@ entities:
           5,13:
             2: 802
           9,5:
-            2: 16
+            1: 16
           9,7:
             2: 2
             1: 8736
           9,8:
             2: 2
           9,9:
-            2: 4096
+            1: 4096
         uniqueMixes:
         - volume: 2500
           temperature: 293.15
@@ -3287,7 +3280,7 @@ entities:
       pos: -1.5,1.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -61988.09
+      secondsUntilStateChange: -62048.133
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3308,7 +3301,7 @@ entities:
       pos: -8.5,-14.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -129208.945
+      secondsUntilStateChange: -129268.99
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3472,7 +3465,7 @@ entities:
       pos: 2.5,31.5
       parent: 3
     - type: Door
-      secondsUntilStateChange: -76770.32
+      secondsUntilStateChange: -76830.37
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3553,7 +3546,6 @@ entities:
   - uid: 7048
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -9.5,4.5
       parent: 3
 - proto: AirlockExternalGlass
@@ -6497,7 +6489,6 @@ entities:
   - uid: 5951
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: 20.5,0.5
       parent: 3
   - uid: 5955
@@ -9648,19 +9639,16 @@ entities:
   - uid: 7066
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: 24.5,0.5
       parent: 3
   - uid: 7067
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -7.5,0.5
       parent: 3
   - uid: 7068
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -11.5,0.5
       parent: 3
 - proto: AtmosFixNitrogenMarker
@@ -33447,13 +33435,11 @@ entities:
   - uid: 942
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: 22.5,0.5
       parent: 3
   - uid: 972
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: 23.5,0.5
       parent: 3
   - uid: 999
@@ -34279,25 +34265,21 @@ entities:
   - uid: 5092
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -8.5,0.5
       parent: 3
   - uid: 6017
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -10.5,0.5
       parent: 3
   - uid: 6022
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: 21.5,0.5
       parent: 3
   - uid: 6025
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -9.5,0.5
       parent: 3
   - uid: 6592
@@ -39008,7 +38990,6 @@ entities:
   - uid: 3113
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -8.5,0.5
       parent: 3
   - uid: 3440
@@ -39059,13 +39040,11 @@ entities:
   - uid: 7050
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -9.5,0.5
       parent: 3
   - uid: 7051
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -10.5,0.5
       parent: 3
 - proto: ReinforcedWindowDiagonal
@@ -42341,7 +42320,6 @@ entities:
   - uid: 1903
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -11.5,1.5
       parent: 3
   - uid: 1904
@@ -42397,7 +42375,6 @@ entities:
   - uid: 1965
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -11.5,2.5
       parent: 3
   - uid: 1975
@@ -44078,7 +44055,6 @@ entities:
   - uid: 6608
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -12.5,2.5
       parent: 3
   - uid: 6609
@@ -44141,13 +44117,11 @@ entities:
   - uid: 6988
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -7.5,2.5
       parent: 3
   - uid: 7047
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
       pos: -7.5,1.5
       parent: 3
 - proto: WallReinforcedDiagonal
