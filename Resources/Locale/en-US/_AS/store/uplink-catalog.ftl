@@ -1,16 +1,4 @@
-﻿# region Sec Uplink
-uplink-security-explosivegrenades-box-name = Explosive Grenade Box
-uplink-security-explosivegrenades-box-desc = A box containing 4 HE grenades.
-uplink-security-magazine-grenade-blast-name = Blast Grenade Magazine
-uplink-security-magazine-grenade-blast-desc = A cannon magazine containing 4 blast grenade rounds.
-uplink-security-energy-sword-name = SLE Energy Sword
-uplink-security-energy-sword-desc = An energy sword with an orange blade, for the SLE.
-uplink-security-frag-bundle-name = NGP-40 Fragmentation Bundle
-uplink-security-frag-bundle-desc = A bundle containing an NGP-40 type launcher, and ten fragmentation grenades.
-uplink-security-baton-bundle-name = NGP-40 Baton Bundle
-uplink-security-baton-bundle-desc = A bundle containing an NGP-40 type launcher, and ten baton grenades.
-
-# region Mercvend - Aurora
+﻿# region Mercvend - Aurora
 store-category-mercenaryhardsuits = EVA Suits
 store-category-mercenaryweapons = Weapons
 store-category-mercenaryutility = Utility
@@ -79,6 +67,22 @@ uplink-mercenary-30Rifle-OP-mags-name = .30 Rifle P+ Mags
 uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacked with P+. Hit hard, soldier.
 
 # region Security Uplink
+
+uplink-security-explosivegrenades-box-name = Explosive Grenade Box
+uplink-security-explosivegrenades-box-desc = A box containing 4 HE grenades.
+
+uplink-security-magazine-grenade-blast-name = Blast Grenade Magazine
+uplink-security-magazine-grenade-blast-desc = A cannon magazine containing 4 blast grenade rounds.
+
+uplink-security-energy-sword-name = SLE Energy Sword
+uplink-security-energy-sword-desc = An energy sword with an orange blade, for the SLE.
+
+uplink-security-frag-bundle-name = NGP-40 Fragmentation Bundle
+uplink-security-frag-bundle-desc = A bundle containing an NGP-40 type launcher, and ten fragmentation grenades.
+
+uplink-security-baton-bundle-name = NGP-40 Baton Bundle
+uplink-security-baton-bundle-desc = A bundle containing an NGP-40 type launcher, and ten baton grenades.
+
 uplink-sle-hardsuit-combat-name = SLE Combat Suit
 uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating.
 
