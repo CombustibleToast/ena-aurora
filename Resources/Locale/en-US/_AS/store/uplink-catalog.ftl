@@ -70,12 +70,16 @@ uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacke
 
 uplink-security-explosivegrenades-box-name = Explosive Grenade Box
 uplink-security-explosivegrenades-box-desc = A box containing 4 HE grenades.
+
 uplink-security-magazine-grenade-blast-name = Blast Grenade Magazine
 uplink-security-magazine-grenade-blast-desc = A cannon magazine containing 4 blast grenade rounds.
+
 uplink-security-energy-sword-name = SLE Energy Sword
 uplink-security-energy-sword-desc = An energy sword with an orange blade, for the SLE.
+
 uplink-security-frag-bundle-name = NGP-40 Fragmentation Bundle
 uplink-security-frag-bundle-desc = A bundle containing an NGP-40 type launcher, and ten fragmentation grenades.
+
 uplink-security-baton-bundle-name = NGP-40 Baton Bundle
 uplink-security-baton-bundle-desc = A bundle containing an NGP-40 type launcher, and ten baton grenades.
 
