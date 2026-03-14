@@ -6400,3 +6400,10 @@ Entries:
   id: 9000
   time: '2026-03-10T13:22:55.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/782
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Added the Replicant trait for characters to choose at creation.
+  id: 9001
+  time: '2026-03-14T07:07:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/784
