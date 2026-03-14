@@ -40,6 +40,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Timing; // Coyote
 using Robust.Shared.Utility;
 using Content.Shared.Body.Components; // Frontier: Gib organs
+using Content.Shared._AS.Traits; // AS: Replicants
 
 namespace Content.Server.Explosion.EntitySystems
 {
@@ -294,8 +295,17 @@ namespace Content.Server.Explosion.EntitySystems
             // Frontier: Gets species of the implant user
             var speciesText = $"";
             if (TryComp<HumanoidAppearanceComponent>(implanted.ImplantedEntity, out var species))
-                speciesText = $" ({species!.Species})";
+            {
 
+                if (HasComp<ReplicantComponent>(implanted.ImplantedEntity)) // AS: Replika
+                {
+                    speciesText = $" ({Loc.GetString("species-name-replicant", ("species", species!.Species))})";  // AS: Replika
+                }
+                else
+                {
+                    speciesText = $" ({species!.Species})";
+                }
+            }
             string localeKey; // Coyote
 
             if (args.Extras.TryGetValue("isRetry", out var retryObj)
