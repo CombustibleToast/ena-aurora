@@ -1,0 +1,7 @@
+- type: trait
+  id: Replicant
+  name: trait-replicant-name
+  description: trait-replicant-desc
+  category: Quirks
+  components:
+    - type: Replicant

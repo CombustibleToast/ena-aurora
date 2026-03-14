@@ -10,6 +10,7 @@ using Content.Shared.IdentityManagement;
 using Content.Shared.Inventory;
 using Content.Shared.Preferences;
 using Content.Shared.Sprite;
+using Content.Shared._AS.Traits; // AS
 using Robust.Shared;
 using Content.Shared.Sprite; // Aurora
 using Robust.Shared.Configuration;
@@ -112,6 +113,10 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
     {
         var identity = Identity.Entity(uid, EntityManager);
         var species = GetSpeciesRepresentation(component.Species).ToLower();
+        if (HasComp<ReplicantComponent>(uid)) // AS: Replika
+        {
+            species = Loc.GetString("species-name-replicant", ("species", species)).ToLower();  // AS: Replika
+        }
         var age = GetAgeRepresentation(component.Species, component.Age);
 
         args.PushText(Loc.GetString("humanoid-appearance-component-examine", ("user", identity), ("age", age), ("species", species)));

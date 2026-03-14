@@ -111,4 +111,11 @@ public abstract class SharedTypingIndicatorSystem : EntitySystem
         comp.TypingIndicatorOverridePrototype = protoId;
         Dirty(uid, comp);
     }
+
+    public void SetTypingIndicator(EntityUid uid, ProtoId<TypingIndicatorPrototype> protoId)  // AS: Replika
+    {
+        var comp = EnsureComp<TypingIndicatorComponent>(uid);
+        comp.TypingIndicatorPrototype = protoId;
+        Dirty(uid, comp);
+    }
 }

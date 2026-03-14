@@ -9,6 +9,7 @@ using Content.Shared.PDA;
 using Content.Shared.Preferences;
 using Content.Shared.Roles;
 using Content.Shared.StationRecords;
+using Content.Shared._AS.Traits; // AS
 using Robust.Shared.Enums;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -102,7 +103,8 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
         TryComp<FingerprintComponent>(player, out var fingerprintComponent);
         TryComp<DnaComponent>(player, out var dnaComponent);
 
-        CreateGeneralRecord(station, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Gender, jobId, fingerprintComponent?.Fingerprint, dnaComponent?.DNA, profile, records);
+        var replicant = HasComp<ReplicantComponent>(player); // AS: Replika
+        CreateGeneralRecord(station, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Gender, jobId, fingerprintComponent?.Fingerprint, dnaComponent?.DNA, replicant, profile, records); // AS: Replika
 
         /// Frontier: generate sector-wide station record
         if (TryComp<SpecialSectorStationRecordComponent>(player, out var specialRecord) && specialRecord.RecordGeneration == RecordGenerationType.NoRecord)
@@ -124,7 +126,7 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
                 dna = _forensics.GenerateDNA();
             }
 
-            CreateGeneralRecord(serviceEnt, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Gender, playerJob, fingerprint, dna, profile, stationRecords);
+            CreateGeneralRecord(serviceEnt, idUid.Value, profile.Name, profile.Age, profile.Species, profile.Gender, playerJob, fingerprint, dna, replicant, profile, stationRecords); // AS: Replika
         }
         /// End Frontier
     }
@@ -167,6 +169,7 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
         string jobId,
         string? mobFingerprint,
         string? dna,
+        bool replicant,  // AS: Replika
         HumanoidCharacterProfile profile,
         StationRecordsComponent records)
     {
@@ -192,7 +195,8 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
             Gender = gender,
             DisplayPriority = jobPrototype.RealDisplayWeight,
             Fingerprint = mobFingerprint,
-            DNA = dna
+            DNA = dna,
+            Replicant = replicant  // AS: Replika
         };
 
         var key = AddRecordEntry(station, record);

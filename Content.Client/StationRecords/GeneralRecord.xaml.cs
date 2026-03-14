@@ -17,7 +17,10 @@ public sealed partial class GeneralRecord : Control
         Age.Text = Loc.GetString("general-station-record-console-record-age", ("age", record.Age.ToString()));
         Title.Text = Loc.GetString("general-station-record-console-record-title",
             ("job", Loc.GetString(record.JobTitle)));
-        Species.Text = Loc.GetString("general-station-record-console-record-species", ("species", record.Species));
+        var speciesText = record.Species; // AS: Replika
+        if (record.Replicant) // AS: Replika
+            speciesText = Loc.GetString("species-name-replicant", ("species", speciesText)); // AS: Replika
+        Species.Text = Loc.GetString("general-station-record-console-record-species", ("species", speciesText)); // AS: Replika
         Gender.Text = Loc.GetString("general-station-record-console-record-gender",
             ("gender", record.Gender.ToString()));
         Fingerprint.Text = Loc.GetString("general-station-record-console-record-fingerprint",

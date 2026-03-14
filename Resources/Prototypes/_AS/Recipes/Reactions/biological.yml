@@ -1,0 +1,13 @@
+- type: reaction
+  id: OxidantBreakdown
+  source: true
+  requiredMixerCategories:
+  - Centrifuge
+  reactants:
+    Oxidant:
+      amount: 20
+  products:
+    Water: 13
+    Mercury: 2
+    Lead: 2
+    CarbonDioxide: 3
