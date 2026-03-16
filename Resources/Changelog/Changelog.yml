@@ -6416,3 +6416,10 @@ Entries:
   id: 9002
   time: '2026-03-16T06:29:02.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/785
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Modified some decals on the master, gave it an FTL drive!
+  id: 9003
+  time: '2026-03-16T06:29:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/786
