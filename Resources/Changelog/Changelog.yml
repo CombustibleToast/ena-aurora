@@ -6407,3 +6407,12 @@ Entries:
   id: 9001
   time: '2026-03-14T07:07:17.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/784
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Extended engineering on the Heartbeat.
+    - type: Add
+      message: 'Added an APU, a Material silo and a FTL drive to the Heartbeat. '
+  id: 9002
+  time: '2026-03-16T06:29:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/785
