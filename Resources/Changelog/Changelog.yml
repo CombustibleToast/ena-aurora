@@ -6423,3 +6423,14 @@ Entries:
   id: 9003
   time: '2026-03-16T06:29:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/786
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Fixed ghosts and pointer entities falling into FTL
+    - type: Fix
+      message: Fixed replicants being unsearchable via records
+    - type: Fix
+      message: Attempts to fix instances of being left behind despite the ESS
+  id: 9004
+  time: '2026-03-16T21:13:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/787
