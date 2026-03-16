@@ -8,7 +8,9 @@ using Content.Shared.Shuttles.Components;
 using Content.Shared.Damage;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind.Components;
+using Content.Shared.Ghost;
 using Content.Server.GameTicking;
+using Content.Server.Pointing.Components;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Network;
@@ -93,6 +95,8 @@ public sealed class FTLFallingSystem : EntitySystem
     private void OnEntityParentChanged(ref EntParentChangedMessage args)
     {
         if (!HasComp<FTLMapComponent>(args.Transform.ParentUid) || HasComp<MapGridComponent>(args.Entity))
+            return;
+        if (HasComp<GhostComponent>(args.Entity) || HasComp<PointingArrowComponent>(args.Entity))
             return;
         Log.Debug($"{args.Entity} went onto the FTL Map");
         StartFalling(args.Entity);

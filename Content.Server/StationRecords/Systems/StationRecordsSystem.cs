@@ -429,7 +429,9 @@ public sealed class StationRecordsSystem : SharedStationRecordsSystem
             StationRecordFilterType.Job =>
                 !someRecord.JobTitle.ToLower().Contains(filterLowerCaseValue),
             StationRecordFilterType.Species =>
-                !someRecord.Species.ToLower().Contains(filterLowerCaseValue),
+                someRecord.Replicant // Misfit - Add (AS: Replicant) to species record searching
+                    ? !$"{someRecord.Species} replicant".ToLower().Contains(filterLowerCaseValue)
+                    : !someRecord.Species.ToLower().Contains(filterLowerCaseValue),
             StationRecordFilterType.Prints => someRecord.Fingerprint != null
                 && IsFilterWithSomeCodeValue(someRecord.Fingerprint, filterLowerCaseValue),
             StationRecordFilterType.DNA => someRecord.DNA != null
