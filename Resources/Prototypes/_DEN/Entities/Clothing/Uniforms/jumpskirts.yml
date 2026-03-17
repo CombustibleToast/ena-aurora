@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2025 Shaman
+# SPDX-FileCopyrightText: 2025 Steven Higginbotham
 # SPDX-FileCopyrightText: 2025 portfiend
 # SPDX-FileCopyrightText: 2025 sheepie
 #
@@ -35,3 +37,14 @@
     unfoldVerbText: fold-flip-verb
   - type: FoldableClothing
     foldedEquippedPrefix: flipped
+
+- type: entity # So chameleon clothes can select the folded sprite
+  parent: ClothingUniformSkirtMantisOrnate
+  id: ClothingUniformSkirtMantisOrnateFlipped
+  suffix: Flipped
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+

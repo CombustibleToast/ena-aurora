@@ -1,7 +1,10 @@
+# SPDX-FileCopyrightText: 2025 Shaman
+# SPDX-FileCopyrightText: 2025 Steven Higginbotham
 # SPDX-FileCopyrightText: 2025 portfiend
+# SPDX-FileCopyrightText: 2026 Aikakakah
+# SPDX-FileCopyrightText: 2026 crekulon
 #
 # SPDX-License-Identifier: AGPL-3.0-or-later
-
 
 - type: entity
   parent: [ClothingNeckBase, BaseFoldable]
@@ -30,3 +33,13 @@
     unfoldVerbText: fold-flip-verb
   - type: FoldableClothing
     foldedEquippedPrefix: flipped
+
+- type: entity # So chameleon clothes can select the folded sprite
+  parent: ClothingNeckMantleMantisOrnate
+  id: ClothingNeckMantleMantisOrnateFlipped
+  suffix: Flipped
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
