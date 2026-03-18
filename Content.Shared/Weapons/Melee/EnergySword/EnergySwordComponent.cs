@@ -22,7 +22,12 @@ public sealed partial class EnergySwordComponent : Component
         Color.DodgerBlue,
         Color.Aqua,
         Color.MediumSpringGreen,
-        Color.MediumOrchid
+        Color.MediumOrchid,
+        Color.Orange, // Aurora: More color variations
+        Color.OrangeRed,
+        Color.Crimson,
+        Color.Fuchsia,
+        Color.Pink // Aurora: Colors End
     };
 
     /// <summary>
