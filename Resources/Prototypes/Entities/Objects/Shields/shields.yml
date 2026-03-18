@@ -59,6 +59,8 @@
                   max: 2
     - type: StaticPrice
       price: 50 # Frontier: 100<50 - TODO: material value rework
+    - type: Repairable # Aurora: Shield repairs
+      fuelCost: 15
 
 #Security Shields
 
