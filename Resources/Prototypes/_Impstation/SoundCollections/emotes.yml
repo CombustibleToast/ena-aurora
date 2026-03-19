@@ -1,4 +1,24 @@
 - type: soundCollection
+  id: Bubbles
+  files:
+    - /Audio/_Impstation/Voice/Slime/s_bubble.ogg
+
+- type: soundCollection
+  id: Pops
+  files:
+    - /Audio/_Impstation/Voice/Slime/s_pop.ogg
+
+- type: soundCollection
+  id: Cracks
+  files:
+    - /Audio/_Impstation/Effects/Emotes/knuckles.ogg
+
+- type: soundCollection
+  id: ReptilianHiss
+  files:
+    - /Audio/_Impstation/Voice/Reptillian/reptillian_hiss1.ogg
+
+- type: soundCollection
   id: MaleSlimeLaugh
   files:
     - /Audio/_Impstation/Voice/Slime/s_manlaugh1.ogg
@@ -84,14 +104,4 @@
   id: SlimeWhistles
   files:
     - /Audio/_Impstation/Voice/Slime/slimewhistle.ogg
-
-- type: soundCollection
-  id: Bubbles
-  files:
-    - /Audio/_Impstation/Voice/Slime/s_bubble.ogg
-
-- type: soundCollection
-  id: Pops
-  files:
-    - /Audio/_Impstation/Voice/Slime/s_pop.ogg
 
