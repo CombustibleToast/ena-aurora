@@ -6434,3 +6434,18 @@ Entries:
   id: 9004
   time: '2026-03-16T21:13:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/787
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Added a new Ghost Role, the Shipmind AI core, and its related content
+    - type: Tweak
+      message: Increased range AI can remote into cyborg chassis to 256 metres
+    - type: Fix
+      message: >-
+        Fixed the remote control system to use absolute coordinates rather than
+        relative
+    - type: Fix
+      message: Gave Syndicate Assault Cyborgs a reason to live again
+  id: 9005
+  time: '2026-03-19T16:00:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/697
