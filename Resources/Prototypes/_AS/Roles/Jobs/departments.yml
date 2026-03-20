@@ -11,3 +11,21 @@
   - CAFMedical
   editorHidden: true
   weight: 120
+
+- type: department
+  id: Aurora Medical Clinic
+  name: department-aurora-clinic
+  description: department-aurora-clinic-description
+  color: "#57b8f0"
+  roles:
+  - DirectorOfCare
+  - Medic
+
+- type: department
+  id: Damascus Manufactory
+  name: department-damascus
+  description: department-damascus-description
+  color: "#57b8f0"
+  roles:
+  - SiteManager
+  - SiteWorker
