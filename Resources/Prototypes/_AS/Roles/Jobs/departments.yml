@@ -13,7 +13,7 @@
   weight: 120
 
 - type: department
-  id: Aurora Medical Clinic
+  id: AuroraMedicalClinic
   name: department-aurora-clinic
   description: department-aurora-clinic-description
   color: "#57b8f0"
@@ -22,7 +22,7 @@
   - Medic
 
 - type: department
-  id: Damascus Manufactory
+  id: DamascusManufactory
   name: department-damascus
   description: department-damascus-description
   color: "#57b8f0"
