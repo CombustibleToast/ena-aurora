@@ -6463,3 +6463,22 @@ Entries:
   id: 9007
   time: '2026-03-20T03:06:53.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/791
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Med/Cryo signs in The Alley
+    - type: Tweak
+      message: Major cosmetic changes to engineering in the Alley
+    - type: Tweak
+      message: Main Alley room re-arranged and decorated
+    - type: Tweak
+      message: Minor decal changes in Alley's medical area
+    - type: Tweak
+      message: Minor cosmetic tile changes in Alley's maints and pathways
+    - type: Fix
+      message: Fixed mass scanner orientation on The Alley
+    - type: Fix
+      message: Fixed under-door missing tiles on The Alley
+  id: 9008
+  time: '2026-03-20T03:07:37.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/789
