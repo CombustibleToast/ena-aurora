@@ -6456,3 +6456,10 @@ Entries:
   id: 9006
   time: '2026-03-20T03:03:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/794
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: You can now weld shields to repair them!
+  id: 9007
+  time: '2026-03-20T03:06:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/791
