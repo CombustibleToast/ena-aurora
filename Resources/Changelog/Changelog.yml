@@ -6496,3 +6496,12 @@ Entries:
   id: 9010
   time: '2026-03-20T03:38:57.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/790
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Gold leaf has had its price increased
+    - type: Tweak
+      message: You can mutate gold leaf to give it seeds
+  id: 9011
+  time: '2026-03-20T04:44:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/792
