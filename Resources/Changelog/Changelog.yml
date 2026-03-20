@@ -6449,3 +6449,10 @@ Entries:
   id: 9005
   time: '2026-03-19T16:00:03.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/697
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added new esword colors!
+  id: 9006
+  time: '2026-03-20T03:03:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/794
