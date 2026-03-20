@@ -15,9 +15,9 @@
   potency: 10
   growthStages: 2
   idealLight: 6
-  seedless: true # clip your coupons
+  seedless: true
   preventSwabbing: true # don't swab your money.
-  permanentlySeedless: true
+  permanentlySeedless: false # Aurora: Eh, let them mutate it to have seeds, rewards mutation
 
 - type: seed
   id: pear

@@ -152,7 +152,7 @@
   - type: Item
     size: Tiny
   - type: StackPrice
-    price: 30
+    price: 100 # Aurora: 30<100
   - type: Stack
     stackType: GoldLeaf
     count: 1
