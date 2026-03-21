@@ -3,7 +3,7 @@ using System.Linq;
 using System.Numerics;
 using Content.Client.DisplacementMap;
 using Content.Client.Inventory;
-using Content.Shared._DV.Silicon.IPC; // DeltaV - IPC Snouts
+using Content.Shared._AS.Humanoid.Markings; // Aurora's Song - Custom species heads
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;
@@ -111,8 +111,9 @@ public sealed class ClientClothingSystem : ClothingSystem
         // Begin DeltaV Additions - IPC snouts
         var speciesId = inventory.SpeciesId;
 
-        if (TryComp(args.Equipee, out SnoutHelmetComponent? helmetComponent) && helmetComponent.EnableAlternateHelmet)
-            speciesId = helmetComponent.ReplacementRace;
+        // Aurora's Song - Head replacement for snouts instead of snouts (for slime animals)
+        if (TryComp(args.Equipee, out SnoutHelmetComponent? helmetComponent) && helmetComponent.AlternateHelmet != null)
+            speciesId = helmetComponent.AlternateHelmet;
 
         // first attempt to get species specific data.
         if (speciesId != null)

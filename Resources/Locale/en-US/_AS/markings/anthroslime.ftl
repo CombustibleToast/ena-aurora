@@ -1,3 +1,3 @@
-marking-SlimeVulpSnout = Vulpkanin Head
-marking-SlimeVulpEars = Vulpkanin Ears
-marking-SlimeVulpTail = Vulpkanin Tail
+marking-SlimeVulpkaninSnout = Vulpkanin Head
+marking-SlimeVulpkaninEars = Vulpkanin Ears
+marking-SlimeVulpkaninTail = Vulpkanin Tail

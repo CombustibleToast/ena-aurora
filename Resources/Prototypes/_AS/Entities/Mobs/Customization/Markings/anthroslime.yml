@@ -1,5 +1,5 @@
 - type: marking
-  id: SlimeVulpSnout
+  id: SlimeVulpkaninSnout
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [SlimePerson]
@@ -8,7 +8,7 @@
     state:  slime_vulp_head
 
 - type: marking
-  id: SlimeVulpEars
+  id: SlimeVulpkaninEars
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [SlimePerson]
@@ -17,7 +17,7 @@
     state:  slime_vulp_ears
 
 - type: marking
-  id: SlimeVulpTail
+  id: SlimeVulpkaninTail
   bodyPart: Tail
   markingCategory: Tail
   speciesRestriction: [SlimePerson]
