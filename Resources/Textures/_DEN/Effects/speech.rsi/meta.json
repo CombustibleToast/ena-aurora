@@ -8,6 +8,23 @@
     "copyright": "Ovinia sprites made by P4yn7",
     "states": [
         {
+            "name": "mantis0",
+            "delays": [
+                [
+                    0.1,
+                    0.3,
+                    0.1,
+                    0.1,
+                    0.4,
+                    0.1,
+                    0.1,
+                    0.3,
+                    0.5
+                ]
+            ]
+        },
+        {
+
             "name": "mantis1",
             "delays": [
                 [
