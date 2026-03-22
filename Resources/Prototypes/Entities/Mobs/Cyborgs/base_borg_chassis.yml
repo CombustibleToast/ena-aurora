@@ -157,6 +157,8 @@
   - type: Speech
     speechVerb: Robotic
     speechSounds: Borg
+    allowedEmotes:
+      - Scream # AS: Disregard all screaming from silicons, they cannot feel pain
   - type: Vocal
     sounds:
       Unsexed: UnisexSilicon
@@ -370,6 +372,7 @@
   - type: Vocal
     sounds:
       Unsexed: UnisexSiliconSyndicate
+    screamAction: null # AS Dont give them a button to scream if they can't
   - type: PointLight
     color: "#dd200b"
 
