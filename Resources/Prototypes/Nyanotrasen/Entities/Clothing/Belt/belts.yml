@@ -11,7 +11,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseMantisContraband] # If Epistemics needs their own belts, it should be a different item, really
+  parent: ClothingBeltStorageBase # If Epistemics needs their own belts, it should be a different item, really
   id: ClothingBeltMantis
   name: dated mantis belt # TheDen
   description: "A structured, layered sash designed to carry mantis equipment. All the company would pay for prior to the mantis equipment refresh, but it does have sheaths for certain weapons." # TheDen
@@ -105,25 +105,25 @@
   - type: GuideHelp
     guides: [ MantisGuide ]
 
-- type: entity
-  parent: ClothingBeltBase
-  id: ClothingBeltMartialBlack
-  name: black belt
-  description: This is the most martial of all the belts.
-  components:
-  - type: MeleeWeapon
-    attackRate: 1.25
-    range: 1.65
-    damage:
-      types:
-        Blunt: 1
-        Slash: 1
-  - type: Item
-    size: Small
-  - type: Sprite
-    sprite: Nyanotrasen/Clothing/Belt/Martial/black.rsi
-  - type: Clothing
-    sprite: Nyanotrasen/Clothing/Belt/Martial/black.rsi
+#- type: entity
+#  parent: ClothingBeltBase
+#  id: ClothingBeltMartialBlack
+#  name: black belt
+#  description: This is the most martial of all the belts.
+#  components:
+#  - type: MeleeWeapon
+#    attackRate: 1.25
+#    range: 1.65
+#    damage:
+#      types:
+#        Blunt: 1
+#        Slash: 1
+#  - type: Item
+#    size: Small
+#  - type: Sprite
+#    sprite: Nyanotrasen/Clothing/Belt/Martial/black.rsi
+#  - type: Clothing
+#    sprite: Nyanotrasen/Clothing/Belt/Martial/black.rsi
 
 - type: entity
   parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, ClothingSlotBase] # DeltaV - add parent ClothingSlotBase
