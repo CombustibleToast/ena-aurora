@@ -2,11 +2,15 @@ using Content.Server.Radio.Components;
 using Content.Shared.NameModifier.Components;
 using Content.Server.Silicons.Laws;
 using Content.Server.Chat.Managers;
+using Content.Server.Ghost.Roles; // AS
+using Content.Server.Ghost.Roles.Components; // AS
 using Content.Shared._Corvax.Silicons.Borgs;
 using Content.Shared._Corvax.Silicons.Borgs.Components;
 using Content.Shared.Actions;
 using Content.Shared.Mind;
+using Content.Shared.Mind.Components; // AS
 using Content.Shared.Chat;
+using Content.Shared.NameModifier.Components; // AS
 using Content.Shared.Database; // AS
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Silicons.StationAi;
@@ -31,6 +35,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
     [Dependency] private readonly IChatManager _chatManager = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly MetaDataSystem _metaSystem = default!; // AS
+    [Dependency] private readonly GhostRoleSystem _ghostSystem = default!; // AS
     private EntityCoordinates? _coordinates;
 
     public override void Initialize()
@@ -39,6 +44,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         SubscribeLocalEvent<AiRemoteControllerComponent, ReturnMindIntoAiEvent>(OnReturnMindIntoAi);
         SubscribeLocalEvent<AiRemoteControllerComponent, MapInitEvent>(OnMapInit);
+        SubscribeLocalEvent<AiRemoteControllerComponent, MindRemovedMessage>(OnMindRemoved);
         SubscribeLocalEvent<AiRemoteControllerComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<AiRemoteControllerComponent, GetVerbsEvent<AlternativeVerb>>(OnGetVerbs);
         SubscribeLocalEvent<StationAiHeldComponent, AiRemoteControllerComponent.RemoteDeviceActionMessage>(OnUiRemoteAction);
@@ -220,5 +226,28 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         var fromLaws = _lawSystem.GetLaws(from);
         _lawSystem.SetLawsSilent(fromLaws.Laws, to);
+    }
+
+    private void OnMindRemoved(EntityUid uid, AiRemoteControllerComponent component, MindRemovedMessage args) // AS: Logic to handle ghosting while connected to a borg
+    {
+        if (component.AiHolder == null || component.LinkedMind == null) // If these are null, then the mind removal was likely from the AI returning to their core and we don't need to do anything
+            return;
+
+        if (!TryComp<StationAiHeldComponent>(component.AiHolder.Value, out var stationAiHeldComp)) // Somehow, what we were connected to wasn't an AI. Don't want to mess with it
+            return;
+
+        if (stationAiHeldComp.CurrentConnectedEntity == uid) // The AI still shows as connected to us, which means we probably ghosted, so we should try and re-register the ghost role if it exists.
+        {
+            if (!TryComp(component.AiHolder.Value, out GhostRoleComponent? ghostRole)) // Same logic as OnMindRemoved from GhostRoleSystem
+                return;
+
+            if (!ghostRole.ReregisterOnGhost || component.LifeStage > ComponentLifeStage.Running)
+                return;
+
+            _ghostSystem.ReRegisterGhostRole(component.AiHolder.Value, ghostRole);
+
+            component.AiHolder = null;
+            component.LinkedMind = null; // Null these out to set them up for later
+        }
     }
 }

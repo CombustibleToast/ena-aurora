@@ -1,6 +1,7 @@
 ﻿using Content.Server.Chat.Systems;
 using Content.Server.Speech.Muting;
 using Content.Shared.Mobs;
+using Content.Shared.Mind.Components; // AS
 using Content.Shared.Speech.Muting;
 using Robust.Shared.Prototypes;
 
@@ -40,7 +41,14 @@ public sealed class DeathgaspSystem: EntitySystem
         if (HasComp<MutedComponent>(uid))
             return false;
 
-        _chat.TryEmoteWithChat(uid, component.Prototype, ignoreActionBlocker: true);
+        if (TryComp<MindContainerComponent>(uid, out var mind) && mind.HasMind) // AS: Add mind check to avoid spamming chat with NPC death gasps
+        {
+            _chat.TryEmoteWithChat(uid, component.Prototype, ignoreActionBlocker: true);
+        }
+        else
+        {
+            _chat.TryEmoteWithChat(uid, component.Prototype, ChatTransmitRange.HideChat, ignoreActionBlocker: true);
+        }
 
         return true;
     }

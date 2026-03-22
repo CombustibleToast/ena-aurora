@@ -1,8 +1,10 @@
 using System.Linq;
 using Content.Server.Chat.Managers;
 using Content.Server.Chat.Systems;
+using Content.Server.Ghost.Roles.Components; // AS
 using Content.Shared.Chat;
 using Content.Shared.Mind;
+using Content.Shared.Mind.Components; // AS
 using Content.Shared.Roles;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.StationAi;
@@ -28,6 +30,7 @@ public sealed class StationAiSystem : SharedStationAiSystem
         base.Initialize();
 
         SubscribeLocalEvent<ExpandICChatRecipientsEvent>(OnExpandICChatRecipients);
+        SubscribeLocalEvent<StationAiHeldComponent, MindAddedMessage>(OnMindAdded); // AS
     }
 
     private void OnExpandICChatRecipients(ExpandICChatRecipientsEvent ev)
@@ -129,5 +132,14 @@ public sealed class StationAiSystem : SharedStationAiSystem
 
         _chats.ChatMessageToMany(ChatChannel.Notifications, msg, msg, entity, false, true, filter.Recipients.Select(o => o.Channel));
         // Apparently there's no sound for this.
+    }
+
+    private void OnMindAdded(EntityUid uid, StationAiHeldComponent component, MindAddedMessage args) // AS: Ghost role workarounds
+    {
+        if (HasComp<GhostTakeoverAvailableComponent>(uid) && TryGetCore(uid, out var stationAiCore))
+        {
+            SwitchRemoteEntityMode(stationAiCore, true); // Resets the eye and camera
+
+        }
     }
 }

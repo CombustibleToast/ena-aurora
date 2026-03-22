@@ -96,11 +96,15 @@
     - Binary
     - Common
     - Science
+    - Shipboard # AS
+    - Traffic # AS
   - type: ActiveRadio
     channels:
     - Binary
     - Common
     - Science
+    - Shipboard # AS
+    - Traffic # AS
   - type: ZombieImmune
   # Begin DeltaV Changes - use IPC healing instead of 1 weld to heal everything
   #- type: Repairable

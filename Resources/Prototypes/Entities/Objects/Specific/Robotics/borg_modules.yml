@@ -1636,9 +1636,9 @@
 
 - type: entity # Aurora
   parent: [ BaseXenoborgModuleGeneric, BaseProviderBorgModule, BaseXenoborgContraband ]
-  id: ShipmindModuleHand
+  id: ShipmindModuleTool
   name: hand shipmind module
-  description: A versatile module capable of holding almost anything alongside wielding an integrated set of tools. The manipulators are incompatible with firearms.
+  description: A versatile toolset module for Shipminds.
   components:
   - type: Tag
     tags:
@@ -1656,18 +1656,6 @@
     - Wirecutter
     - Multitool
     - WelderExperimental
-  - type: DroppableBorgModule
-    moduleId: Hands
-    items: []
-    placeholders:
-    - id: ClothingHandsGlovesColorBlack
-      whitelist:
-        components:
-        - Item
-      blacklist:
-        components:
-        - Gun
-      displayName: borg-placeholder-display-name-universal
   - type: BorgModule
     defaultModule: true
   - type: BorgModuleIcon
@@ -1702,8 +1690,8 @@
 - type: entity
   parent: [ BaseXenoborgModuleHeavy, BaseProviderBorgModule, BaseXenoborgContraband ]
   id: ShipmindModuleCombat
-  name: shipmind combat module
-  description: Module with a heavy energy cannon and disabler smg.
+  name: shipmind combat module # Hand slot moved to here to avoid issues with trying to pick up items in your module
+  description: Module with a heavy energy cannon and disabler smg, alongside a pair of versatile manipulators that are incompatible with fire arms.
   components:
   - type: Tag
     tags:
@@ -1717,6 +1705,26 @@
     items: 
     - WeaponXrayCannonCyborg
     - WeaponDisablerSMGCyborg
+  - type: DroppableBorgModule
+    moduleId: Hands
+    items: []
+    placeholders:
+    - id: ClothingHandsGlovesColorBlack
+      whitelist:
+        components:
+        - Item
+      blacklist:
+        components:
+        - Gun
+      displayName: borg-placeholder-display-name-universal
+    - id: ClothingHandsGlovesColorBlack
+      whitelist:
+        components:
+        - Item
+      blacklist:
+        components:
+        - Gun
+      displayName: borg-placeholder-display-name-universal
   - type: BorgModule
     defaultModule: true
   - type: BorgModuleIcon
