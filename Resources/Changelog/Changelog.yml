@@ -6568,3 +6568,12 @@ Entries:
   id: 9018
   time: '2026-03-22T18:25:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/806
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: napsacks to hide in, and be thrown into deep space within.
+    - type: Tweak
+      message: everyone can now be stored, if they're short.
+  id: 9019
+  time: '2026-03-22T19:26:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/808
