@@ -6552,3 +6552,12 @@ Entries:
   id: 9016
   time: '2026-03-21T09:06:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/801
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added the greatsword from the den!
+    - type: Tweak
+      message: Made the kanbou t5
+  id: 9017
+  time: '2026-03-22T18:09:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/805

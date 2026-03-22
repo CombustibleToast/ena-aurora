@@ -18,10 +18,10 @@
   - type: ThrowingAngle
     angle: 180
   - type: Sprite
-    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantistailorsknife.rsi
+    sprite: _DEN/Objects/Weapons/Melee/tailorsknife.rsi
     state: icon
   - type: Item
-    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantistailorsknife.rsi
+    sprite: _DEN/Objects/Weapons/Melee/tailorsknife.rsi
 
 - type: entity
   parent: [TailorsKnife, BaseAntiPsionicWeapon]
@@ -173,3 +173,7 @@
     - Knife
     - MantisSickle
     - MantisBeltStorable
+    sprite: _DEN/Objects/Weapons/Melee/tailorsknife.rsi
+    state: icon
+  - type: Item
+    sprite: _DEN/Objects/Weapons/Melee/tailorsknife.rsi
