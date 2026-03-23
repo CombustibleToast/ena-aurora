@@ -27449,11 +27449,6 @@ entities:
       parent: 1
 - proto: ScrapCamera
   entities:
-  - uid: 2603
-    components:
-    - type: Transform
-      pos: -10.596045,-11.489996
-      parent: 1
   - uid: 5445
     components:
     - type: Transform
