@@ -6600,3 +6600,30 @@ Entries:
   id: 9022
   time: '2026-03-23T07:43:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/812
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Shipmind borg was given a second hand, and their hands have been moved
+        to their combat module to avoid issues
+    - type: Tweak
+      message: >-
+        Subtle messages are now bold-italicied, a light pink colour, and allow
+        highlighting the senders name
+    - type: Fix
+      message: Construction graph for 160 FTL Drive fixed
+    - type: Fix
+      message: Mindless NPC's no longer leave chat logs for deathgasps
+    - type: Fix
+      message: Numerous fixes to the ghost role logic of ghost-role based AI's
+    - type: Add
+      message: Cyborgs have Shipboard and Shortband comms by default
+    - type: Tweak
+      message: Numerous quality of life improvements for shipmind borgs.
+    - type: Fix
+      message: >-
+        Do not be concerned by silicons screaming. It is reflexive, and they
+        cannot feel pain.
+  id: 9023
+  time: '2026-03-23T07:50:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/809
