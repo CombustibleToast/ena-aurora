@@ -44,7 +44,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         SubscribeLocalEvent<AiRemoteControllerComponent, ReturnMindIntoAiEvent>(OnReturnMindIntoAi);
         SubscribeLocalEvent<AiRemoteControllerComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<AiRemoteControllerComponent, MindRemovedMessage>(OnMindRemoved);
+        SubscribeLocalEvent<AiRemoteControllerComponent, MindRemovedMessage>(OnMindRemoved); // AS
         SubscribeLocalEvent<AiRemoteControllerComponent, ComponentShutdown>(OnShutdown);
         SubscribeLocalEvent<AiRemoteControllerComponent, GetVerbsEvent<AlternativeVerb>>(OnGetVerbs);
         SubscribeLocalEvent<StationAiHeldComponent, AiRemoteControllerComponent.RemoteDeviceActionMessage>(OnUiRemoteAction);
