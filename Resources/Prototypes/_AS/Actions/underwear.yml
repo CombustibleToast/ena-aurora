@@ -1,0 +1,25 @@
+﻿- type: entity
+  parent: BaseAction
+  id: ActionToggleUndergarmentTop
+  name: ToggleUnderGarmentTop
+  description: Toggles your undershirt
+  components:
+  - type: Action
+    icon: Interface/Actions/scream.png
+    checkCanInteract: true
+    autoPopulate: false
+  - type: InstantAction
+    event: !type:ToggleUndergarmentTopActionEvent
+
+- type: entity
+  parent: BaseAction
+  id: ActionToggleUndergarmentBottom
+  name: ToggleUnderGarmentBottom
+  description: Toggles your undershirt
+  components:
+  - type: Action
+    icon: Interface/Actions/scream.png
+    checkCanInteract: true
+    autoPopulate: false
+  - type: InstantAction
+    event: !type:ToggleUndergarmentBottomActionEvent
