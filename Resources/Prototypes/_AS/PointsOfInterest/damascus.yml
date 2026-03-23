@@ -19,7 +19,7 @@
   gridPath: /Maps/_AS/POI/damascus.yml
   addComponents:
   - type: IFF
-    color: "#3737F8"
+    color: "#b0c4de"
   - type: SolarPoweredGrid
     trackOnInit: true
     doNotCull: true
@@ -43,4 +43,4 @@
         - type: StationJobs
           availableJobs:
             SiteManager: [ 1, 1 ]
-            SiteWorker: [ 4, 4 ]
+            SiteWorker: [ 8, 8 ]

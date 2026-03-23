@@ -1,0 +1,11 @@
+- type: localizedDataset
+  id: NamesFirstShipmind
+  values:
+    prefix: names-shipmind-first-dataset-
+    count: 10
+
+- type: localizedDataset
+  id: NamesLastShipmind
+  values:
+    prefix: names-shipmind-last-dataset-
+    count: 10

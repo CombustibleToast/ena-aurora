@@ -180,6 +180,82 @@
     steps: 5
     zeroVisible: true
 
+- type: entity
+  categories: [ HideSpawnMenu ] # Renamed Xray Cannon for cyborgs.
+  name: volatile particle driver
+  parent: [BaseWeaponBattery, BaseC3Contraband] 
+  id: WeaponXrayCannonCyborg
+  description: An advanced energy weapon that uses high-energy particles to damage targets.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-0
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/xray.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: NFXrayLaser 
+    fireCost: 200
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Battery
+    maxCharge: 4000
+    startingCharge: 4000
+  - type: BatterySelfRecharger # Recharges 1 shot per 5 seconds
+    autoRecharge: true
+    autoRechargeRate: 40
+
+- type: entity
+  name: disabler SMG
+  parent: [ BaseWeaponBattery, BaseC2ContrabandUnredeemable ] 
+  id: WeaponDisablerSMGCyborg
+  description: Advanced weapon that exhausts organic targets, weakening them until they collapse.
+  components:
+  - type: Item
+    size: Large
+  - type: Tag
+    tags:
+      - Taser
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/disabler_smg.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Gun
+    selectedMode: FullAuto
+    fireRate: 4.5
+    availableModes:
+      - SemiAuto
+      - FullAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: NFBulletDisablerSmg 
+    fireCost: 25
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 260
+  - type: BatterySelfRecharger # Recharges 1 shot per 1 seconds
+    autoRecharge: true
+    autoRechargeRate: 25
+
 # endregion - battery rifles | Aurora Song
 # region - battery pistols | Aurora Song
 - type: entity

@@ -22,3 +22,6 @@ name-format-ert = {$part0} {$part1}
 name-format-book = {$part0} {$part1}
 
 name-format-nuclear-operation = {$part0} {$part1}
+
+# <adjective>-annex-<noun>
+name-format-shipmind = {$part0}-Annex-{$part1}

@@ -338,3 +338,13 @@
     interfaces:
       enum.AgentIDCardUiKey.Key:
         type: AgentIDCardBoundUserInterface
+
+- type: entity
+  parent: ASIDCardStandard # Placeholder ID for an event ship to have a valid shuttledeed because NF code is strange.
+  id: AutonomousIDCard
+  name: certificate of autonomy
+  description: A certificate recongizing an automated vessel within corporate law.
+  components:
+  - type: Sprite
+    layers:
+    - state: autonomous

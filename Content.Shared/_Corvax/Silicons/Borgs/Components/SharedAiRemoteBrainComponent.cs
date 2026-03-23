@@ -51,6 +51,7 @@ public record struct RemoteDevicesData()
     public NetEntity NetEntityUid = NetEntity.Invalid;
     public float DevicePosX = 0.0f;
     public float DevicePosY = 0.0f;
+    public float DeviceDistance = 0.0f;
 }
 
 [Serializable, NetSerializable]

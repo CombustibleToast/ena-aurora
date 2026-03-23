@@ -2,6 +2,11 @@
 - type: entity
   parent: MagazineGrenadeEmpty
   id: NFMagazineGrenadeEmpty
+  components:
+  - type: BallisticAmmoProvider # Aurora's Song - whitelist grenades to be loaded into the mags
+    whitelist:
+      tags:
+        - NFCartridgeGrenade40mm
 
 - type: entity
   parent: MagazineGrenadeFrag
@@ -9,6 +14,9 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFGrenadeFrag
+    whitelist: # Aurora's Song - whitelist grenades to be loaded into the mags
+      tags:
+        - NFCartridgeGrenade40mm
 
 - type: entity
   parent: MagazineGrenadeEMP
@@ -16,6 +24,9 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFGrenadeEMP
+    whitelist: # Aurora's Song - whitelist grenades to be loaded into the mags
+      tags:
+        - NFCartridgeGrenade40mm
 
 - type: entity
   parent: MagazineGrenadeFlash
@@ -23,6 +34,9 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFGrenadeFlash
+    whitelist: # Aurora's Song - whitelist grenades to be loaded into the mags
+      tags:
+        - NFCartridgeGrenade40mm
 
 - type: entity
   parent: MagazineGrenadeBlast
@@ -30,6 +44,9 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFGrenadeBlast
+    whitelist: # Aurora's Song - whitelist grenades to be loaded into the mags
+      tags:
+        - NFCartridgeGrenade40mm
 
 - type: entity
   parent: MagazineGrenadeBaton
@@ -37,3 +54,6 @@
   components:
   - type: BallisticAmmoProvider
     proto: NFGrenadeBaton
+    whitelist: # Aurora's Song - whitelist grenades to be loaded into the mags
+      tags:
+        - NFCartridgeGrenade40mm

@@ -1,0 +1,10 @@
+names-shipmind-last-dataset-1 = Abundance
+names-shipmind-last-dataset-2 = Breakthrough
+names-shipmind-last-dataset-3 = Essence
+names-shipmind-last-dataset-4 = Horizon
+names-shipmind-last-dataset-5 = Justicar
+names-shipmind-last-dataset-6 = Memoir
+names-shipmind-last-dataset-7 = Obligation
+names-shipmind-last-dataset-8 = Patron
+names-shipmind-last-dataset-9 = Quandary
+names-shipmind-last-dataset-10 = Outsider

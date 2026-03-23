@@ -23,6 +23,25 @@
     - FullAuto
   - type: NFWeaponDetails
     class: weapon-details-class-light-machine-gun
+  
+- type: entity
+  id: NFBaseWeaponFrameLightMachineGunCyborg # Not wieldable, nor does it require it
+  parent: [ ASBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ] # Encumbrance adjusted for LMGs | Aurora
+  suffix: Frontier
+  abstract: true
+  components:
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 4 # Slightly less accurate than assault rifles | Aurora
+    maxAngle: 25 # Slightly less accurate than assault rifles | Aurora
+    angleIncrease: 4
+    angleDecay: 16 # high decay to encourage controlled bursts | Aurora
+    fireRate: 8 # LMGs fire fast, you suppress areas with them | Aurora
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+  - type: NFWeaponDetails
+    class: weapon-details-class-light-machine-gun
 
 #region manufacturer
 - type: entity

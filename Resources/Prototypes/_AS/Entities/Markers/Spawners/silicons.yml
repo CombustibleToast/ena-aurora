@@ -1,0 +1,27 @@
+- type: entity
+  name: Shipmind Cyborg Spawner
+  id: SpawnCyborgShipmind
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Mobs/Silicon/remotechassis.rsi
+        state: remote
+  - type: ConditionalSpawner
+    prototypes:
+      - BorgChassisShipmind
+
+- type: entity
+  name: Remote Cyborg Spawner
+  id: SpawnCyborgRemote
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Mobs/Silicon/chassis.rsi
+        state: robot
+  - type: ConditionalSpawner
+    prototypes:
+      - PlayerBorgRemote

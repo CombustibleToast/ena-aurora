@@ -1,0 +1,70 @@
+- type: entity
+  name: antique greatsword
+  parent: BaseSword
+  id: Greatsword
+  description: A massive blade more akin to a hunk of well forged metal on a stick, enhanced with bluespace tech, there are tally marks etched onto the base of the blade.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Melee/shieldblade.rsi
+    state: icon
+  - type: MeleeWeapon # Aurora: A lot of these values are changed and all the commented out stuff doesn't work on our fork or isn't viable on our fork
+    wideAnimationRotation: -135
+    attackRate: 0.75 # Aurora
+    range: 1.85
+    damage:
+      types:
+        Slash: 10
+        Blunt: 10
+        Structural: 20
+    bluntStaminaDamageFactor: 0.5 # Aurora
+    #heavyRateModifier: 2
+    #heavyRangeModifier: 1
+    #heavyDamageBaseModifier: 1
+    #heavyStaminaCost: 15
+    #maxTargets: 10
+    angle: 60
+    soundHit:
+      collection: MetalThud
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Slash: 20 # Same dps as a esword
+        Blunt: 20 # Same dps as a esword
+        Structural: 40 # Same as an e-sword
+    #staminaCost: 18
+  - type: MeleeRequiresWield
+  - type: EmbeddableProjectile
+  #- type: EmbedPassiveDamage
+ # - type: UseDelayOnMeleeHit
+ # - type: MeleeThrowOnHit
+ #   speed: 3
+ #   distance: 1
+    #lifetime: 1
+  - type: Reflect
+    reflectProb: .25
+    spread: 90
+  - type: ThrowingAngle
+    angle: 225
+  - type: Item
+    size: Ginormous
+  - type: Clothing
+    sprite: _DEN/Objects/Weapons/Melee/shieldblade.rsi
+    slots:
+    - Back
+    - suitStorage
+  - type: Wieldable # Aurora
+
+- type: entity
+  name: greatsword
+  parent: Greatsword
+  id: GreatswordBlueshield
+  description: A massive blade more akin to a hunk of well forged metal on a stick, enhanced with bluespace technology.
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Melee/shieldbladeblue.rsi
+    state: icon
+  - type: Clothing
+    sprite: _DEN/Objects/Weapons/Melee/shieldbladeblue.rsi
+    slots:
+    - Back
+    - suitStorage

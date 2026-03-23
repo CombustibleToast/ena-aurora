@@ -20,6 +20,7 @@
   displayWeight: 35
   canBeAntag: false
   access:
+  - Medical
   - Corpsman
   - Prisoner
   accessGroups:

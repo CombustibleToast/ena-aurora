@@ -1,0 +1,267 @@
+- type: entity
+  id: PlayerStationAiShipmind
+  parent: PlayerStationAiEmpty
+  suffix: Ghost role, Shipmind
+  components:
+  - type: ContainerComp
+    proto: AiHeldShipmind
+    container: station_ai_mind_slot
+  - type: ContainerFill
+    containers:
+      station_ai_mind_slot:
+      - StationAiBrainShipmind
+  - type: Sprite
+    sprite: Mobs/Silicon/station_ai.rsi
+    layers:
+    - state: base
+    - state: ai_empty
+      shader: unshaded
+    - state: ai
+      map: ["enum.StationAiVisualState.Key"]
+      shader: unshaded
+      visible: false
+  - type: Anchorable
+
+- type: entity
+  id: AiHeldShipmind
+  description: Components added / removed from an entity that gets inserted into an AI core.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+    - Common
+    - Traffic
+    - Shipboard
+    - Science
+    - Supply
+    - Engineering
+    - Medical
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+    - Traffic
+    - Science
+    - Supply
+    - Engineering
+    - Medical
+  - type: IgnoreUIRange
+  - type: StationAiHeld
+  - type: StationAiOverlay
+  - type: ShowElectrocutionHUD
+  - type: ActionGrant
+    actions:
+    - ActionJumpToCore
+    - ActionSurvCameraLights
+    - ActionAIViewLaws
+    - ActionOpenRemoteDevicesMenu # Corvax-Next-AiRemoteControl
+  - type: UserInterface
+    interfaces:
+      enum.RadarConsoleUiKey.Key:
+        type: RadarConsoleBoundUserInterface
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+      enum.RemoteDeviceUiKey.Key: # Corvax-Next-AiRemoteControl
+        type: RemoteDevicesBoundUserInterface
+  - type: IntrinsicUI
+    uis:
+      enum.RadarConsoleUiKey.Key:
+        toggleAction: ActionAGhostShowRadar
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: CrewMonitor
+    transmitFrequencyId: ShuttleTimer
+  - type: RadarConsole
+    followEntity: false
+  - type: HolographicAvatar
+    layerData:
+    - sprite: Mobs/Silicon/station_ai.rsi
+      state: default
+  - type: ShowJobIcons
+  - type: Tag
+    tags:
+    - CanPilot
+
+- type: entity
+  id: StationAiBrainShipmind
+  parent: BaseItem
+  categories: [ HideSpawnMenu, DoNotMap ]
+  components:
+  - type: BlockMovement
+    blockInteraction: false
+  - type: SiliconLawBound
+  - type: ActionGrant
+    actions:
+    - ActionViewLaws
+  - type: UserInterface
+    interfaces:
+      enum.SiliconLawsUiKey.Key:
+        type: SiliconLawBoundUserInterface
+        requireInputValidation: false
+  - type: ComplexInteraction
+  - type: Actions
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+  - type: Eye
+    drawFov: false
+  - type: Examiner
+  - type: InputMover
+  - type: Speech
+    speechVerb: Robotic
+    speechSounds: Borg
+  - type: Tag
+    tags:
+    - HideContextMenu
+    - StationAi
+    - NoConsoleSound
+    - CannotSuicide
+  - type: StartingMindRole
+    mindRole: "MindRoleSiliconBrain"
+    silent: true
+  - type: StationAiCustomization
+    protoIds:
+      StationAiCoreIconography: StationAiIconAi
+      StationAiHolograms: StationAiHologramFemale
+  - type: Sprite
+    sprite: Objects/Specific/Robotics/mmi.rsi
+    layers:
+    - state: posibrain
+      map: ["base"]
+    visible: false
+  - type: Input
+    context: human
+  - type: Organ
+  - type: Brain
+  - type: BorgBrain
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+    channels:
+    - Binary
+  - type: ActiveRadio
+    channels:
+    - Binary
+    - Common
+  - type: NameIdentifier
+    group: PositronicBrain
+  - type: DoAfter
+  - type: TypingIndicator
+    proto: robot
+  - type: MobState
+    allowedStates:
+    - Alive
+  - type: Appearance
+  - type: GuideHelp
+    guides:
+    - Cyborgs
+    - Robotics
+  - type: ChangeVoiceInContainer
+    whitelist:
+      components:
+      - SecretStash
+  - type: SiliconLawProvider
+    laws: shipmind
+  - type: GhostRole
+    name: ghost-role-information-Shipmind-core
+    description: ghost-role-information-Shipmind-core-description
+    rules: ghost-role-information-Shipmind-core-rules
+    raffle:
+      settings: default
+    mindRoles:
+      - MindRoleSubvertedSilicon
+  - type: GhostTakeoverAvailable
+  - type: RandomMetadata
+    nameSegments:
+    - NamesFirstShipmind
+    - NamesLastShipmind
+    nameFormat: name-format-shipmind
+
+- type: entity
+  id: BorgChassisShipmind
+  parent: [BaseBorgChassisNotIonStormable, ShowMedicalIcons]
+  name: Remote Shipmind Cyborg
+  description: An advanced cyborg chassis designed to be remote controlled by a Shipmind
+  components:
+    - type: Sprite
+      sprite: _AS/Mobs/Silicon/remotechassis.rsi
+      layers:
+        - state: remote
+          map: ["movement"]
+        - state: remote_eyes
+          map: ["enum.BorgVisualLayers.Light"]
+          shader: unshaded
+          visible: false
+        - state: remote_flashlight
+          shader: unshaded
+          map: ["light"]
+          visible: false
+    - type: SpriteMovement
+      movementLayers:
+        movement:
+          state: remote_moving
+      noMovementLayers:
+        movement:
+          state: remote
+    - type: BorgChassis
+      maxModules: 3
+      moduleWhitelist:
+        tags:
+          - BorgModuleShipmind
+      hasMindState: remote_eyes
+      noMindState: remote_eyes_empty
+    - type: ShowHealthBars
+    - type: InteractionPopup
+      interactSuccessString: petting-success-syndicate-cyborg
+      interactFailureString: petting-failure-syndicate-cyborg
+      interactSuccessSound:
+        path: /Audio/Ambience/Objects/periodic_beep.ogg
+    - type: SolutionScanner
+    - type: ContainerFill
+      containers:
+        borg_brain:
+          - AiRemoteBrain
+        borg_module:
+          - ShipmindModuleTool
+          - ShipmindModuleSpaceMovement
+          - ShipmindModuleCombat
+    - type: ItemSlots
+      slots:
+        cell_slot:
+          name: power-cell-slot-component-slot-name-default
+          startingItem: PowerCellHigh
+    - type: StartingMindRole
+      mindRole: "MindRoleSiliconBrain"
+      silent: true
+    - type: AiRemoteController
+    - type: LockingWhitelist
+      blacklist:
+        components:
+        - RoboticsConsole # Lets them unlock other borgs
+    - type: NpcFactionMember # Below is things from its previous parenting of BaseBorgChassisSyndicate, minus antag icons, to make it not an ion storm target
+      factions:
+      - Syndicate
+    - type: Access
+      tags:
+      - NuclearOperative
+      - SyndicateAgent
+    - type: AccessReader
+      access: [["SyndicateAgent"], ["NuclearOperative"]]
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Binary
+    - type: MovementAlwaysTouching
+    - type: Speech
+      speechSounds: SyndieBorg
+      allowedEmotes:
+        - Laugh
+        - Scream
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSiliconSyndicate
+    - type: PointLight
+      color: "#dd200b"
+      radius: 8
+    - type: Stripping # They have hands, let them put hats on their borgs. Or take things off people.

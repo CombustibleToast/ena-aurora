@@ -6434,3 +6434,203 @@ Entries:
   id: 9004
   time: '2026-03-16T21:13:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/787
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Added a new Ghost Role, the Shipmind AI core, and its related content
+    - type: Tweak
+      message: Increased range AI can remote into cyborg chassis to 256 metres
+    - type: Fix
+      message: >-
+        Fixed the remote control system to use absolute coordinates rather than
+        relative
+    - type: Fix
+      message: Gave Syndicate Assault Cyborgs a reason to live again
+  id: 9005
+  time: '2026-03-19T16:00:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/697
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added new esword colors!
+  id: 9006
+  time: '2026-03-20T03:03:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/794
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: You can now weld shields to repair them!
+  id: 9007
+  time: '2026-03-20T03:06:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/791
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Med/Cryo signs in The Alley
+    - type: Tweak
+      message: Major cosmetic changes to engineering in the Alley
+    - type: Tweak
+      message: Main Alley room re-arranged and decorated
+    - type: Tweak
+      message: Minor decal changes in Alley's medical area
+    - type: Tweak
+      message: Minor cosmetic tile changes in Alley's maints and pathways
+    - type: Fix
+      message: Fixed mass scanner orientation on The Alley
+    - type: Fix
+      message: Fixed under-door missing tiles on The Alley
+  id: 9008
+  time: '2026-03-20T03:07:37.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/789
+- author: snezshiba
+  changes:
+    - type: Add
+      message: Added sounds for slime emotes
+  id: 9009
+  time: '2026-03-20T03:09:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/795
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Made dylo and stelli remove zombie toxin from the solution
+  id: 9010
+  time: '2026-03-20T03:38:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/790
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Gold leaf has had its price increased
+    - type: Tweak
+      message: You can mutate gold leaf to give it seeds
+  id: 9011
+  time: '2026-03-20T04:44:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/792
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Corpsman gets Medical access
+    - type: Tweak
+      message: Damascus can now have 8 max Site Workers
+    - type: Tweak
+      message: Ghost roles are no longer whitelisted
+    - type: Tweak
+      message: change Damascus's hex code
+    - type: Fix
+      message: back-end department listings
+  id: 9012
+  time: '2026-03-20T08:59:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/796
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Oppo now works on fairies!
+  id: 9013
+  time: '2026-03-20T19:04:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/797
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Reverted the storage implanter nerf
+  id: 9014
+  time: '2026-03-20T19:28:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/799
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: Cherry picked the double e-sword sound glitch fix
+  id: 9015
+  time: '2026-03-20T19:54:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/798
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: SLEO QoL changes and fixes
+    - type: Tweak
+      message: Jackhammer firerate
+    - type: Fix
+      message: grenade cartridges are now reloadable
+  id: 9016
+  time: '2026-03-21T09:06:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/801
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added the greatsword from the den!
+    - type: Tweak
+      message: Made the kanbou t5
+  id: 9017
+  time: '2026-03-22T18:09:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/805
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Tailor's knife now exists
+  id: 9018
+  time: '2026-03-22T18:25:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/806
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: napsacks to hide in, and be thrown into deep space within.
+    - type: Tweak
+      message: everyone can now be stored, if they're short.
+  id: 9019
+  time: '2026-03-22T19:26:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/808
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: >-
+        Fixed code in the ESS assuming that a shift length over a day is
+        impossible
+  id: 9020
+  time: '2026-03-23T06:40:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/814
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: rodentia can wear undergarments
+  id: 9021
+  time: '2026-03-23T07:39:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/810
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: converted animated tails to use the wagging feature ingame
+  id: 9022
+  time: '2026-03-23T07:43:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/812
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: >-
+        Shipmind borg was given a second hand, and their hands have been moved
+        to their combat module to avoid issues
+    - type: Tweak
+      message: >-
+        Subtle messages are now bold-italicied, a light pink colour, and allow
+        highlighting the senders name
+    - type: Fix
+      message: Construction graph for 160 FTL Drive fixed
+    - type: Fix
+      message: Mindless NPC's no longer leave chat logs for deathgasps
+    - type: Fix
+      message: Numerous fixes to the ghost role logic of ghost-role based AI's
+    - type: Add
+      message: Cyborgs have Shipboard and Shortband comms by default
+    - type: Tweak
+      message: Numerous quality of life improvements for shipmind borgs.
+    - type: Fix
+      message: >-
+        Do not be concerned by silicons screaming. It is reflexive, and they
+        cannot feel pain.
+  id: 9023
+  time: '2026-03-23T07:50:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/809
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: make cassette tapes more accessible
+  id: 9024
+  time: '2026-03-23T13:15:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/815

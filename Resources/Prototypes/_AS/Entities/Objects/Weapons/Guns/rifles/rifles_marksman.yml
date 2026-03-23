@@ -9,6 +9,7 @@
     minAngle: 2
     maxAngle: 7
     angleDecay: 6
+    fireRate: 4
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Rifles/mjackhammer.rsi
   - type: Clothing

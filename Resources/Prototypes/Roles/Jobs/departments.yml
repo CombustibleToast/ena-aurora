@@ -92,13 +92,13 @@
   color: "#EFB341"
   weight: -94
   primary: false
-  roles:
+  roles: []
   # - AtmosphericTechnician # Frontier
   # - ChiefEngineer # Frontier
   # - StationEngineer # Frontier
   # - TechnicalAssistant # Frontier
-  - SiteManager # Aurora's Song - switched PlantManager to SiteManager
-  - SiteWorker # Aurora's Song - switched PlantTechnician to SiteWorker
+  # - SiteManager # Aurora's Song - switched PlantManager to SiteManager, moved to Damascus but leaving here for documentation
+  # - SiteWorker # Aurora's Song - switched PlantTechnician to SiteWorker, moved to Damascus but leaving here for documentation
 
 - type: department
   id: Medical

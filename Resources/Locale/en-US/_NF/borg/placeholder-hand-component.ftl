@@ -21,3 +21,4 @@ borg-placeholder-display-name-smokes = smokes
 borg-placeholder-display-name-spray-bottle = spray bottle
 borg-placeholder-display-name-topical-medication = topicals
 borg-placeholder-display-name-trading-crate = trading crate
+borg-placeholder-display-name-universal = universal hand slot

@@ -10,10 +10,10 @@
     state: tail
 
 - type: marking
-  id: TajaranTailAnim
+  id: TajaranTailAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Tajaran]
+  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
   - sprite: _EE/Mobs/Customization/Tajaran/tails.rsi
     state: tail_anim
@@ -30,10 +30,10 @@
     state: tail_rings
 
 - type: marking
-  id: TajaranTailAnimRings
+  id: TajaranTailRingsAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Tajaran]
+  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
   - sprite: _EE/Mobs/Customization/Tajaran/tails.rsi
     state: tail_anim

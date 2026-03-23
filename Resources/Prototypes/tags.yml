@@ -135,6 +135,9 @@
 - type: Tag
   id: BorgModuleService
 
+- type: Tag # AS
+  id: BorgModuleShipmind
+
 - type: Tag
   id: BorgModuleSyndicate
 

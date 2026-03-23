@@ -27,6 +27,13 @@
   metabolisms:
     Medicine:
       effects:
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NFZombieBiteToxin
+          min: 10
+        reagent: NFZombieBiteToxin
+        amount: -1.0
       - !type:HealthChange
         damage:
           types:
@@ -738,6 +745,13 @@
           min: 1
         reagent: Amatoxin
         amount: -3
+      - !type:AdjustReagent
+        conditions:
+        - !type:ReagentThreshold
+          reagent: NFZombieBiteToxin
+          min: 2
+        reagent: NFZombieBiteToxin
+        amount: -2.0
 
 - type: reagent
   id: Synaptizine
@@ -1252,6 +1266,16 @@
             max: 150.0
           - !type:MobStateCondition
             mobstate: Dead
+        - !type:ReduceRotting # Fairy clause (Same as above, but they can't get as cold)
+          seconds: 20
+          conditions:
+          - !type:Temperature
+            max: 190.0
+          - !type:MobStateCondition
+            mobstate: Dead
+          - !type:OrganType
+            type: Fairy
+            shouldHave: true
 
 - type: reagent
   id: Necrosol

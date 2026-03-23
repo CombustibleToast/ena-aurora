@@ -203,7 +203,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
             _mind.TransferTo(mindId, args.Entity, mind: mind);
         }
          // Corvax-Next-AiRemoteControl-Start
-        if (HasComp<AiRemoteBrainComponent>(args.Entity))
+        if (HasComp<AiRemoteBrainComponent>(args.Entity) && args.Container == component.BrainContainer) // AS: Dont want it acting like we removed our brain if we pick up a BORIS and set it down.
         {
             BorgDeactivate(uid, component);
             RemComp<AiRemoteControllerComponent>(uid);

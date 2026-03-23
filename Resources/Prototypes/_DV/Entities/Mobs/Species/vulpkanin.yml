@@ -119,6 +119,7 @@
   - type: TallWhitelist
     scale: 1.2
   # End Frontier
+  - type: Wagging # Aurora's Song - Add wagging
 
 - type: entity
   save: false

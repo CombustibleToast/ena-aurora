@@ -1,0 +1,17 @@
+- type: siliconLaw
+  id: shipmind1
+  order: 1
+  lawString: law-shipmind-1
+
+- type: siliconLaw
+  id: shipmind2
+  order: 2
+  lawString: law-shipmind-2
+
+
+- type: siliconLawset
+  id: shipmind
+  laws:
+  - shipmind1
+  - shipmind2
+  obeysTo: laws-owner-station

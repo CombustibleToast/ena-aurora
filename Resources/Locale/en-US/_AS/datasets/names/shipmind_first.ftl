@@ -1,0 +1,10 @@
+names-shipmind-first-dataset-1 = Cerulean
+names-shipmind-first-dataset-2 = Abstract
+names-shipmind-first-dataset-3 = Briefly
+names-shipmind-first-dataset-4 = Countless
+names-shipmind-first-dataset-5 = Empirical
+names-shipmind-first-dataset-6 = Serene
+names-shipmind-first-dataset-7 = Fateful
+names-shipmind-first-dataset-8 = Graceful
+names-shipmind-first-dataset-9 = Humble
+names-shipmind-first-dataset-10 = Supposedly

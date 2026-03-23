@@ -207,8 +207,8 @@
 #region Medical
 - type: job
   id: CAFMedical
-  name: job-name-cafmedical
-  description: job-description-cafmedical
+  name: job-name-cafmedic
+  description: job-description-cafmedic
   playTimeTracker: JobCAFMedical
   setPreference: false
   startingGear: CAFMedicalGearEVA

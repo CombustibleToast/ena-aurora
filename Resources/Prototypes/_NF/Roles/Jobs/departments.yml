@@ -6,9 +6,8 @@
   weight: 50 # accounted for in jobs
   roles:
   - ColonialRepresentative # Aurora's Song - changed from Station Representative to Colonial Representative
-  - DirectorOfCare
+#  - DirectorOfCare # Aurora's Song - moved DoC to Aurora Clinic
   - StationTrafficController
-  - Medic # Aurora
   - Service # Aurora
   - Valet # nyano
   - NFJanitor

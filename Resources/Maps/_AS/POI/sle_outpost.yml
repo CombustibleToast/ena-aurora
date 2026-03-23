@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 02/28/2026 06:15:27
-  entityCount: 4858
+  time: 03/21/2026 08:19:02
+  entityCount: 4861
 maps: []
 grids:
 - 1
@@ -292,6 +292,7 @@ entities:
             692: 14,9
             693: 15,8
             807: 14,-12
+            1037: -1,18
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkEndE
@@ -868,6 +869,7 @@ entities:
             991: -3,-17
             1030: 10,-29
             1031: 9,-29
+            1036: 0,-7
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineS
@@ -3388,7 +3390,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -49621.246
+      secondsUntilStateChange: -50062.082
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3446,7 +3448,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -64967.566
+      secondsUntilStateChange: -65408.402
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3457,7 +3459,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -22815.705
+      secondsUntilStateChange: -23256.543
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3488,7 +3490,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -64971.098
+      secondsUntilStateChange: -65411.934
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3504,7 +3506,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -65752.625
+      secondsUntilStateChange: -66193.46
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3540,7 +3542,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67080.664
+      secondsUntilStateChange: -67521.5
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3644,7 +3646,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -48754.617
+      secondsUntilStateChange: -49195.453
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4010,6 +4012,13 @@ entities:
     components:
     - type: Transform
       pos: -4.488785,6.538308
+      parent: 1
+- proto: ASVendingMachineCartSLE
+  entities:
+  - uid: 3050
+    components:
+    - type: Transform
+      pos: -8.5,5.5
       parent: 1
 - proto: ASVendingMachineSLEDrobe
   entities:
@@ -5615,7 +5624,7 @@ entities:
   - uid: 2842
     components:
     - type: Transform
-      pos: -3.430662,-9.399351
+      pos: -7.248536,-6.567974
       parent: 1
 - proto: BaseGasCondenser
   entities:
@@ -13816,6 +13825,21 @@ entities:
     - type: Transform
       pos: 5.423911,25.274727
       parent: 1
+- proto: DrinkMugBlack
+  entities:
+  - uid: 4860
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -3.932776,-9.29755
+      parent: 1
+- proto: DrinkMugBlue
+  entities:
+  - uid: 4861
+    components:
+    - type: Transform
+      pos: -3.901526,-9.5268755
+      parent: 1
 - proto: DrinkMugRed
   entities:
   - uid: 3441
@@ -13833,7 +13857,7 @@ entities:
   - uid: 2843
     components:
     - type: Transform
-      pos: -3.7952454,-9.441047
+      pos: -7.748537,-6.3386483
       parent: 1
 - proto: DrinkWineBottleFull
   entities:
@@ -22866,7 +22890,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -74065.734
+      secondsUntilStateChange: -74506.57
       state: Opening
   - uid: 3347
     components:
@@ -22874,7 +22898,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -74064.1
+      secondsUntilStateChange: -74504.94
       state: Opening
   - uid: 3348
     components:
@@ -22882,7 +22906,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -74062.734
+      secondsUntilStateChange: -74503.57
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22933,6 +22957,14 @@ entities:
     components:
     - type: Transform
       pos: 7.5,29.5
+      parent: 1
+- proto: ImpCoffeeMachine
+  entities:
+  - uid: 3269
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -3.5,-9.5
       parent: 1
 - proto: JugCarbon
   entities:
@@ -23434,13 +23466,6 @@ entities:
     components:
     - type: Transform
       pos: 3.5,4.5
-      parent: 1
-- proto: ASVendingMachineCartSLE
-  entities:
-  - uid: 3050
-    components:
-    - type: Transform
-      pos: -8.5,5.5
       parent: 1
 - proto: NFWardrobePrisonFilled
   entities:
@@ -31247,7 +31272,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -73101.41
+      secondsUntilStateChange: -73542.24
       state: Opening
     - type: Airlock
       autoClose: False
