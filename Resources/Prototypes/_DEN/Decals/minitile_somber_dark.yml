@@ -1,6 +1,6 @@
 - type: decal
   id: MiniTileSomberDark
-  parent: MiniTile
+  #parent: MiniTile # Aurora
   abstract: true
 
 - type: decal
