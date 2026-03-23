@@ -562,7 +562,7 @@ public sealed partial class SalvageSystem
         // everyone is dead or ssd, abort the expedition
         const int departTime = 20;
         Announce(mapUid, Loc.GetString("salvage-expedition-abort-wipe", ("departTime", departTime)));
-        component.NextAutoAbortCheck = TimeSpan.FromDays(1); // prevent further checks
+        component.NextAutoAbortCheck = _timing.CurTime + TimeSpan.FromDays(1); // prevent further checks
         var newEndTime = _timing.CurTime + TimeSpan.FromSeconds(departTime);
 
         if (component.EndTime <= newEndTime)
