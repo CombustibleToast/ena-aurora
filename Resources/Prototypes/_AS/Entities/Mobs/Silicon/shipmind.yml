@@ -33,6 +33,7 @@
     - Binary
     - Common
     - Traffic
+    - Shipboard
     - Science
     - Supply
     - Engineering
@@ -180,7 +181,7 @@
 
 - type: entity
   id: BorgChassisShipmind
-  parent: [BaseBorgChassisSyndicate, ShowMedicalIcons]
+  parent: [BaseBorgChassisNotIonStormable, ShowMedicalIcons]
   name: Remote Shipmind Cyborg
   description: An advanced cyborg chassis designed to be remote controlled by a Shipmind
   components:
@@ -223,7 +224,7 @@
         borg_brain:
           - AiRemoteBrain
         borg_module:
-          - ShipmindModuleHand
+          - ShipmindModuleTool
           - ShipmindModuleSpaceMovement
           - ShipmindModuleCombat
     - type: ItemSlots
@@ -235,3 +236,32 @@
       mindRole: "MindRoleSiliconBrain"
       silent: true
     - type: AiRemoteController
+    - type: LockingWhitelist
+      blacklist:
+        components:
+        - RoboticsConsole # Lets them unlock other borgs
+    - type: NpcFactionMember # Below is things from its previous parenting of BaseBorgChassisSyndicate, minus antag icons, to make it not an ion storm target
+      factions:
+      - Syndicate
+    - type: Access
+      tags:
+      - NuclearOperative
+      - SyndicateAgent
+    - type: AccessReader
+      access: [["SyndicateAgent"], ["NuclearOperative"]]
+    - type: IntrinsicRadioTransmitter
+      channels:
+      - Binary
+    - type: MovementAlwaysTouching
+    - type: Speech
+      speechSounds: SyndieBorg
+      allowedEmotes:
+        - Laugh
+        - Scream
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSiliconSyndicate
+    - type: PointLight
+      color: "#dd200b"
+      radius: 8
+    - type: Stripping # They have hands, let them put hats on their borgs. Or take things off people.

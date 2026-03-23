@@ -33,6 +33,7 @@ using Content.Shared.Verbs;
 using Robust.Shared.Collections;
 using Content.Shared.Ghost.Roles.Components;
 using Content.Shared.Roles.Jobs;
+using Content.Shared.Silicons.StationAi; // AS
 using Content.Server._NF.Players.GhostRole.Events; // Frontier
 
 namespace Content.Server.Ghost.Roles;
@@ -656,6 +657,9 @@ public sealed class GhostRoleSystem : EntitySystem
         if (!ghostRole.ReregisterOnGhost || component.LifeStage > ComponentLifeStage.Running)
             return;
 
+        if (TryComp<StationAiHeldComponent>(uid, out var held) && held.CurrentConnectedEntity != null) // AS: Don't re-register an AI thats remoting into a borg
+            return;
+
         ghostRole.Taken = false;
         RegisterGhostRole((uid, ghostRole));
     }
@@ -849,6 +853,11 @@ public sealed class GhostRoleSystem : EntitySystem
         }
 
         SetMode(entity.Owner, ghostRoleProto, ghostRoleProto.Name, entity.Comp);
+    }
+    public void ReRegisterGhostRole(EntityUid uid, GhostRoleComponent component) // AS: Workaround for ghosting AI's that are connected to a borg
+    {
+        component.Taken = false;
+        RegisterGhostRole((uid, component));
     }
 }
 
