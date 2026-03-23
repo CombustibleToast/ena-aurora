@@ -1,6 +1,6 @@
 - type: decal
   id: BrickTileSomber
-  parent: BrickTile
+  parent: BrickTileSteelBox
   abstract: true
 
 - type: decal
