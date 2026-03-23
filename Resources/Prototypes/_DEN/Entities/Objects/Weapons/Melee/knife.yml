@@ -163,9 +163,6 @@
         map: ["right-spinning"]
   - type: ThrowingAngle
     angle: -135
-  - type: MeleeThrowOnHit # Just a tiny knockback to look cool, barely moves anything
-    speed: 3
-    #lifetime: 0.025
   - type: DisarmMalus
     malus: 0
   - type: Tag

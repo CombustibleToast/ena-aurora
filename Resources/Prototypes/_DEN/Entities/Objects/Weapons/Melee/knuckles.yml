@@ -43,7 +43,7 @@
     mustBeEquippedToUse: true
   - type: MeleeThrowOnHit # They fly about six tiles and don't take extra impact damage when hitting walls
     speed: 10
-  #  lifetime: 0.5
+    distance: 3
   - type: Reflect
     reflectProb: .2
     spread: 135
@@ -76,5 +76,6 @@
         Structural: 11.25 # 7.5 structural DPS (same as BaseBallBat)
   - type: MeleeThrowOnHit # They just go sailing and do hit walls hard enough to hurt (still only 2/3rds as fast as BaseBallBatHomeRun)
     speed: 20
+    distance: 6
     #lifetime: 5
   - type: FingerprintMask # Both hands are covered, so they hide fingerprints

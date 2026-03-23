@@ -156,6 +156,7 @@
     angle: -135
   - type: MeleeThrowOnHit # Just a tiny knockback to look cool, barely moves anything
     speed: 6
+    distance: 3
    # lifetime: 0.05
   - type: Reflect # A little gift for being brave
     reflectProb: .25
