@@ -1,7 +1,7 @@
 # I'm sick of adding this component to every mantis weapon so I'm making a base item for it
 # I've included notes on anti-psionic weapon design here if you want to make something with it, because the system is unintuitive
 - type: entity
-  parent: [BaseItem, BaseObjectVerbsCuteness]
+  parent: BaseItem
   # See MantisMeleeKnife if you need an implementation example, that's the flagship anti-psionic weapon
   # Anti-psionic weapons are always made of MaterialMnemolith and use that palette in the fashion you see there
   id: BaseAntiPsionicWeapon
@@ -60,10 +60,10 @@
   abstract: true
   components:
   - type: MeleeWeapon
-    hidden: true
-    disableClick: true
-    heavyRateModifier: 1
-    heavyRangeModifier: 1
-    heavyDamageBaseModifier: 1
-    heavyStaminaCost: 0
-    maxTargets: 1
+   # hidden: true
+   # disableClick: true
+   # heavyRateModifier: 1
+   # heavyRangeModifier: 1
+   # heavyDamageBaseModifier: 1
+   # heavyStaminaCost: 0
+   # maxTargets: 1

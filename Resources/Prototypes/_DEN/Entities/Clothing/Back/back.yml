@@ -84,7 +84,7 @@
     foldedEquippedPrefix: flipped
 
 - type: entity
-  parent: [ClothingBackpackNapsack, BaseFoldable, BaseObjectVerbsCutenessWall, BaseMantisContraband] # A roleplay toy that can carry people
+  parent: [ClothingBackpackNapsack, BaseFoldable] # A roleplay toy that can carry people
   id: ClothingBackpackCoffinMantis
   suffix: DO NOT MAP # Use the Basic version instead
   name: sarcophagus
