@@ -40,8 +40,6 @@
 #        blacklist:
 #          tags:
 #          - MantisCaster
-#  - type: GuideHelp
-#    guides: [ MantisGuide ]
 #
 #- type: entity
 #  parent: HandheldPsionicsRegistry
@@ -99,8 +97,7 @@
 #        blacklist:
 #          tags:
 #          - MantisCaster
-#  - type: GuideHelp
-#    guides: [ MantisGuide ]
+#
 #
 #- type: entity
 #  parent: HandheldCrewMonitorMantis

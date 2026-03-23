@@ -97,5 +97,4 @@
   - type: Icon
     sprite: _DEN/Objects/Devices/pda.rsi
     state: pda-mantis
-  - type: GuideHelp
-    guides: [ MantisGuide ]
+

@@ -48,8 +48,7 @@
 #    angularVelocity: false
   # Probably a good idea to have this here too
   # It'd be nice to have a guidebook just for anti-psionic weapons though
-#  - type: GuideHelp
-#    guides: [ MantisGuide ]
+
 
 # And here's one for items that are made of mnemolith but aren't specifically weapons, like PaperMantis
 # They inherit the above so they barely hurt, and slash was selected as default because mnemolith is a sharp, crystalline stone

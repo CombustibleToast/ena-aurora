@@ -22,8 +22,7 @@
     tags:
     - MantisBoxRestraintsStorable
     - MantisBeltStorable
-  - type: GuideHelp
-    guides: [ MantisGuide ]
+
 
 - type: entity
   parent: ClothingNeckBase
@@ -59,5 +58,4 @@
     tags:
     - WhitelistChameleon
     - MantisBeltStorable
-  #- type: GuideHelp
-  #  guides: [ MantisGuide ]
+

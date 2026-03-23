@@ -9,7 +9,6 @@
   name: soul-shatter
   parent: BaseWeaponShotgun
   id: WeaponShotgunSoulshatter
-  suffix: DO NOT MAP # Mantes shouldn't get free lethals
   description: "A gloomy sawn-off double barrel with an amaranth grip. Provides no tactical advantage. Uses 12 gauge shells."
   components:
   - type: Sprite
@@ -32,8 +31,8 @@
     damage:
       types:
         Blunt: 7.5
-  - type: DamageOtherOnHit
-    staminaCost: 6
+  #- type: DamageOtherOnHit
+  #  staminaCost: 6
   - type: Tag
     tags:
     - MantisBeltStorable

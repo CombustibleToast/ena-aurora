@@ -53,9 +53,6 @@
   - type: Tag
     tags:
     - MantisBeltStorable
-  - type: GuideHelp
-    guides: [ MantisGuide ]
-
 - type: entity
   parent: BaseMantisRanged
   id: MantisRangedPistol

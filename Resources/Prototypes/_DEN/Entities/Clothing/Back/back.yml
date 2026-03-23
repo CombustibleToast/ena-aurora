@@ -104,8 +104,11 @@
         variation: 0.05
   - type: LandAtCursor
   - type: DamageOtherOnHit
-    staminaCost: 80 # You just threw a fucking coffin
-    maxHitQuantity: 4 # This is really three hits for some reason
+    #staminaCost: 80 # You just threw a fucking coffin
+    #maxHitQuantity: 4 # This is really three hits for some reason
+    damage:
+      types:
+        Blunt: 30 # lol?
   - type: EmbeddableProjectile
     embedOnThrow: false # It'll fly through people
   - type: ThrowingAngle
@@ -140,7 +143,7 @@
     #heavyStaminaCost: 20 # And every time costs you a chunk of stamina
   - type: MeleeThrowOnHit # So heavy it knocks targets back a little
     speed: 5
-    lifetime: 0.05
+    #lifetime: 0.05
   - type: Wieldable
   - type: MeleeRequiresWield # Not one-handed ever
   - type: Sprite
@@ -159,8 +162,7 @@
       tags:
         - CanPilot # ONLY player characters have this
         - MantisBoxRestraintsStorable # Only mantis restraints fit, besides player characters
-  - type: GuideHelp
-    guides: [ MantisGuide ]
+
 
 - type: entity
   parent: ClothingBackpackCoffinMantis

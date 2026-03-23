@@ -230,8 +230,7 @@
           tags:
           - MantisGreatsword
     sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatswordsheath.rsi
-  - type: GuideHelp
-    guides: [ MantisGuide ]
+
 
 - type: entity
   parent: MantisMeleeGreatswordSheath

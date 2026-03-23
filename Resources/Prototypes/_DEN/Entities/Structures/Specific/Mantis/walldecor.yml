@@ -50,5 +50,3 @@
     color: "#ffd069" # Same color the cosmos heretic sickle glows, but these are just broken fragments
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
-  - type: GuideHelp
-    guides: [ MantisGuide ] # If someone wonders why they have a broken space warlock sword on their wall lol
