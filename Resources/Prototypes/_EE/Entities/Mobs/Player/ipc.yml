@@ -111,6 +111,7 @@
     canDisarm: true
   - type: SnoutHelmet # DeltaV - IPC Snouts
     replacementRace: vulpkanin
+  - type: Wagging # Aurora's Song - Add wagging
 
 - type: entity
   save: false

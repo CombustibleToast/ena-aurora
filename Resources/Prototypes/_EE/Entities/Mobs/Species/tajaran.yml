@@ -122,6 +122,7 @@
         Heat: 2 # poor kitty
   - type: ThermalRegulator
     normalBodyTemperature: 311.76
+  - type: Wagging # Aurora's Song - Add wagging
 
 
 - type: entity
