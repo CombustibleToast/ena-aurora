@@ -51,7 +51,7 @@
   contrabandInventory:
     # Hack the conduit to summon some toys from the Reliquary
     MantisTailorsKnife: 1
-    PlushieDollMantis: 1
+    #PlushieDollMantis: 1 # Aurora: We lost her in the port... :(
     PersonalAISomber: 1
     MantisCasterPistolCapgun: 1
     MantisCasterRevolverCapgun: 1

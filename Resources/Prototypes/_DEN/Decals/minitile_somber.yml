@@ -1,6 +1,6 @@
 - type: decal
   id: MiniTileSomber
-  parent: MiniTile
+  #parent: MiniTile
   abstract: true
 
 - type: decal

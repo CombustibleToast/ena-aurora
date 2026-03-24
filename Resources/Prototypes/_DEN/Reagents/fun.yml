@@ -5,7 +5,7 @@
   slippery: false
   desc: reagent-desc-mnemolith
   physicalDesc: reagent-physical-desc-mnemolith
-  flavor: mnemolith
+  flavor: flavor-complex-mnemolith
   color: "#313b4a"
   metabolisms:
     Medicine:
