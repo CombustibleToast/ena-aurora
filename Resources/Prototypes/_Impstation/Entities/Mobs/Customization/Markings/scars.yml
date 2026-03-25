@@ -172,7 +172,17 @@
   id: SmileScars
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, SlimePerson, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
+  speciesRestriction: [Human, Dwarf, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran, Moved slime markings to overlay
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/scars.rsi
+    state: head_smile
+
+- type: marking # Aurora's Song - Moved slime's markings to overlay
+  id: SlimeSmileScars
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson]
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
@@ -182,7 +192,17 @@
   id: HeadTwisting
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, SlimePerson, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
+  speciesRestriction: [Human, Dwarf, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran, Moved slime markings to overlay
+  followSkinColor: false
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/scars.rsi
+    state: head_twisting
+
+- type: marking # Aurora's Song - Moved slime markings to overlay
+  id: HeadSlimeTwisting
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson]
   followSkinColor: false
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi

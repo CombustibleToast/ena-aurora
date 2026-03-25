@@ -70,16 +70,38 @@
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_campbell_r_leg
 
-- type: marking
-  parent: [BaseEyes, BaseSpeciesEyesStandard] # AuroraSong: Marking inheritance
+- type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
+  bodyPart: Eyes
+  markingCategory: Head
   id: TattooEyeRight
+  speciesRestriction: [Human, Dwarf, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_r
 
-- type: marking
-  parent: [BaseEyes, BaseSpeciesEyesStandard] # AuroraSong: Marking inheritance
+- type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
+  bodyPart: Eyes
+  markingCategory: Overlay
+  id: TattooSlimeEyeRight
+  speciesRestriction: [Slimeperson]
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_r
+
+- type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
+  bodyPart: Eyes
+  markingCategory: Head
   id: TattooEyeLeft
+  speciesRestriction: [Human, Dwarf, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
+  sprites:
+  - sprite: Mobs/Customization/tattoos.rsi
+    state: tattoo_eye_l
+
+- type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
+  bodyPart: Eyes
+  markingCategory: Overlay
+  id: TattooSlimeEyeLeft
+  speciesRestriction: [SlimePerson]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_l

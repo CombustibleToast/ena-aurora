@@ -13,10 +13,10 @@
 #    state: filename
 #  shaded: unshaded //use for markings that ignore shader
 
-- type: marking
+- type: marking # Aurora's Song - Moved slime markings to overlay
   id: fizz
   bodyPart: Head
-  markingCategory: Head
+  markingCategory: Overlay
   speciesRestriction: [ SlimePerson ]
   forcedColoring: false
   followSkinColor: false
@@ -48,10 +48,10 @@
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: fishbowl2
 
-- type: marking
+- type: marking # Aurora's Song - Moved slime markings to Overlay
   id: FadingStars
   bodyPart: Head
-  markingCategory: Head
+  markingCategory: Overlay
   speciesRestriction: [ SlimePerson ]
   forcedColoring: false
   followSkinColor: false
