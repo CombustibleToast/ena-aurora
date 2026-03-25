@@ -137,6 +137,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
                 activeRadio.Channels = [.. stationAiActiveRadio.Channels];
         }
 
+        stationAiHeldComp.CurrentConnectedEntity = entity; // AS: Moved because it was causing problems with ghost roles
         _mind.ControlMob(ai, entity);
         aiRemoteComp.AiHolder = ai;
         aiRemoteComp.LinkedMind = mindId;
@@ -148,7 +149,6 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
         {
             _metaSystem.SetEntityName(entity, Comp<MetaDataComponent>(ai).EntityName + " Remote Chassis");
         }
-        stationAiHeldComp.CurrentConnectedEntity = entity;
 
         _stationAiSystem.SwitchRemoteEntityMode(stationAiCore, false);
 
@@ -244,6 +244,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
             if (!ghostRole.ReregisterOnGhost || component.LifeStage > ComponentLifeStage.Running)
                 return;
 
+            Log.Error("Re-registering ghost role of parent AI");
             _ghostSystem.ReRegisterGhostRole(component.AiHolder.Value, ghostRole);
 
             component.AiHolder = null;
