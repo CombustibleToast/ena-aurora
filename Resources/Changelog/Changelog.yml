@@ -6664,3 +6664,10 @@ Entries:
   id: 9028
   time: '2026-03-26T09:10:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/824
+- author: CombustibleToast
+  changes:
+    - type: Fix
+      message: Fixed condensers so that they don't operate slower at higher pressures.
+  id: 9029
+  time: '2026-03-26T09:25:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/821
