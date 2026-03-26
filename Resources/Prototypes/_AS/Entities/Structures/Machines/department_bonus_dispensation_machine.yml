@@ -88,7 +88,7 @@
   components:
   - type: Sprite
     layers:
-    - state: dispenser_cr # TODO: Make a new one for this
+    - state: dispenser_es
   - type: DepartmentBonusDispensationMachine
     targetDepartment: Damascus
     taxRate: 0.1

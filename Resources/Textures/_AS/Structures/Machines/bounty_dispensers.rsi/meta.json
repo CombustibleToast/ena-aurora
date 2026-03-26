@@ -7,14 +7,17 @@
       "y": 32
     },
       "states": [
-          {
-              "name": "dispenser_cmo"
-          },
-          {
-              "name": "dispenser_sle"
-          },
-          {
-              "name": "dispenser_cr"
-          }
+        {
+            "name": "dispenser_cmo"
+        },
+        {
+            "name": "dispenser_sle"
+        },
+        {
+            "name": "dispenser_es"
+        },
+        {
+            "name": "dispenser_cr"
+        }
       ]
   }
