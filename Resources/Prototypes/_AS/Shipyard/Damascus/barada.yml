@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: Leostel
+# Discord: Leostel
+
+# Maintainer Info
+# GitHub: Leostel
+# Discord: Leostel
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Barada
+  parent: BaseVessel
+  name: BH Barada
+  description: A compact, utilitarian gas freighter commissioned by Damascus.
+  price: 36500 # 33718 appraise, ~5% markup
+  category: Small
+  group: Damascus
+  access: Engineering
+  shuttlePath: /Maps/_AS/Shuttles/Damascus/barada.yml
+  guidebookPage: Null
+  class:
+  - Salvage
+  - Atmospherics
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Barada
+  mapName: 'BH Barada'
+  mapPath: /Maps/_AS/Shuttles/Damascus/barada.yml
+  minPlayers: 0
+  stations:
+    Barada:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Barada {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
