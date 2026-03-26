@@ -29,7 +29,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        #startingItem: MagazinePistolSpecialMindbreaker
+        #startingItem: MagazinePistolSpecialMindbreaker # Aurora: Comment out until caster port
         insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
         priority: 2
@@ -38,7 +38,7 @@
           - MagazinePistolSpecial
       gun_chamber:
         name: Chamber
-        startingItem: CartridgeSpecialMindbreaker
+        #startingItem: CartridgeSpecialMindbreaker # Aurora: Comment out until caster port
         priority: 1
         whitelist:
           tags:
