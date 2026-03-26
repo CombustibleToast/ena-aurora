@@ -122,7 +122,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-    levels: 5
+   # levels: 5 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisCapgun
     fireCost: 72 # Can fire 5 times, takes 6 seconds to recharge 1 shot
@@ -147,7 +147,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-    levels: 8
+    #levels: 8 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisCapgun
     fireCost: 15 # Can fire 24 times, takes 1.25 seconds to recharge 1 shot
@@ -262,7 +262,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-    levels: 7
+    #levels: 7 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisLethal
     fireCost: 90 # Can fire 12 times, takes 4.5 seconds in a cell recharger to recharge 1 shot
@@ -286,7 +286,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-    levels: 6
+    #levels: 6 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisLethalRevolver
     fireCost: 180 # Can fire 6 times, takes 9 seconds in a cell recharger to recharge 1 shot
@@ -312,7 +312,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-    levels: 5
+    #levels: 5 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisLethalSpread
     fireCost: 216 # Can fire 5 times, takes 10.8 seconds in a cell recharger to recharge 1 shot
@@ -338,7 +338,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: unshaded
   - type: PowerCell
-    levels: 8
+    # levels: 8 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisLethalSubMachineGun
     fireCost: 42.5 # Can fire 24 times, takes 2.125 seconds in a cell recharger to recharge 1 shot
@@ -363,7 +363,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: shaded
   - type: PowerCell
-    levels: 7
+    # levels: 7 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     fireCost: 30 # Can fire 12 times
   - type: Tag
@@ -386,7 +386,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: shaded
   - type: PowerCell
-    levels: 6
+    # levels: 6 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     fireCost: 60 # Can fire 6 times
   - type: Item
@@ -411,7 +411,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: shaded
   - type: PowerCell
-    levels: 5
+   # levels: 5 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     proto: BulletMantisCapgunSpread
     fireCost: 72 # Can fire 5 times
@@ -437,7 +437,7 @@
       map: [ "enum.PowerCellVisualLayers.Unshaded" ]
       shader: shaded
   - type: PowerCell
-    levels: 8
+    #levels: 8 # Aurora: Comment out, fix when casters are ported
   - type: ProjectileBatteryAmmoProvider
     fireCost: 15 # Can fire 24 times
   - type: Tag
