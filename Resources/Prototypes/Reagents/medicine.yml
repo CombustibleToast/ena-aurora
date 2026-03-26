@@ -27,13 +27,6 @@
   metabolisms:
     Medicine:
       effects:
-      - !type:AdjustReagent
-        conditions:
-        - !type:ReagentThreshold
-          reagent: NFZombieBiteToxin
-          min: 10
-        reagent: NFZombieBiteToxin
-        amount: -1.0
       - !type:HealthChange
         damage:
           types:
@@ -745,13 +738,6 @@
           min: 1
         reagent: Amatoxin
         amount: -3
-      - !type:AdjustReagent
-        conditions:
-        - !type:ReagentThreshold
-          reagent: NFZombieBiteToxin
-          min: 2
-        reagent: NFZombieBiteToxin
-        amount: -2.0
 
 - type: reagent
   id: Synaptizine
