@@ -6,7 +6,7 @@
   id: MnemolithReagent # The stone that anti-psionic weapons are made of, as powder in a suspension
   name: reagent-name-mnemolith # Be careful if you give it a mechanical purpose, though, since the mantis items (cigarettes, pills, folder pages, etc.) contain a lot of it
   group: Medicine
-  slippery: false
+  #slippery: false #Aurora
   desc: reagent-desc-mnemolith
   physicalDesc: reagent-physical-desc-mnemolith
   flavor: mnemolith
