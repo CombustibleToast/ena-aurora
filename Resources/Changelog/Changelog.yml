@@ -6648,3 +6648,12 @@ Entries:
   id: 9026
   time: '2026-03-26T09:03:53.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/825
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: >-
+        Smart equip is smarter and now knows you want to put your gun in your
+        hand rather than take out the magazine
+  id: 9027
+  time: '2026-03-26T09:05:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/818
