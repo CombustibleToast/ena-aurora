@@ -1,6 +1,4 @@
-﻿using Robust.Shared.Prototypes;
-
-namespace Content.Shared.Toggleable;
+﻿namespace Content.Shared.Toggleable;
 
 /// <summary>
 /// This is used for...
