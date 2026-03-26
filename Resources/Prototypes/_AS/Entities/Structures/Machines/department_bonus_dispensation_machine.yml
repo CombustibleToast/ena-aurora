@@ -80,6 +80,22 @@
   - type: AccessReader
     access: [["Medical"]]
 
+- type: entity
+  id: DepartmentBonusMachineEngineering
+  parent: DepartmentBonusMachineBase
+  name: Engineering bonus machine
+  description: Periodically allocates 10% of the Engineering Department's budget for staff bonuses.
+  components:
+  - type: Sprite
+    layers:
+    - state: dispenser_es
+  - type: DepartmentBonusDispensationMachine
+    targetDepartment: Damascus
+    allocationRate: 0.1
+    withdrawalInterval: 3600  # 1 hour
+  - type: AccessReader
+    access: [["Engineering"]]
+
 ## Logistics Department Bonus Machine
 #- type: entity
 #  id: DepartmentBonusMachineLogistics
@@ -93,20 +109,6 @@
 #    withdrawalInterval: 300  # 5 minutes
 #  - type: AccessReader
 #    access: [["Cargo"]]
-#
-## Engineering Department Bonus Machine
-#- type: entity
-#  id: DepartmentBonusMachineEngineering
-#  parent: DepartmentBonusMachineBase
-#  name: Engineering bonus machine
-#  description: Periodically allocates 10% of the Engineering Department's budget for staff bonuses.
-#  components:
-#  - type: DepartmentBonusDispensationMachine
-#    targetDepartment: Engineering
-#    taxRate: 0.1
-#    withdrawalInterval: 300  # 5 minutes
-#  - type: AccessReader
-#    access: [["Engineering"]]
 #
 ## Science Department Bonus Machine
 #- type: entity

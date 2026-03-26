@@ -52,3 +52,24 @@
       state: shipyard_cr
     - map: ["computerLayerKeys"]
       state: telesci_key
+
+#region Engineering
+
+- type: entity
+  id: ASComputerShipyardDamascus
+  parent: [ComputerShipyardExpedition]
+  name: damascus shipyard console
+  description: Used to buy vessels exclusive to Damascus employees.
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.Damascus
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.Damascus:
+       type: ShipyardConsoleBoundUserInterface
+  - type: ShipyardConsole
+    shipyardChannel: Engineering
+  - type: AccessReader
+    access: [["Engineering"]]
+  - type: ActivatableUIRequiresAccess
+ 

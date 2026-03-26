@@ -245,8 +245,8 @@
 - type: entity
   parent: BaseStationAdminBankATM
   id: StationAdminBankATMEdison
-  description: Used to transfer funds to and from Edison's bank account.
-  suffix: Edison
+  description: Used to transfer funds to and from Damascus's bank account. # AS Edison -> Damascus
+  suffix: Damascus # AS Edison -> Damascus
   components:
   - type: StationBankATM
-    account: Edison
+    account: Damascus # AS Edison -> Damascus

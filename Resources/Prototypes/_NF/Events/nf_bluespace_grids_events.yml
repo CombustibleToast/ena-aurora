@@ -41,7 +41,7 @@
       Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
       Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
       Medical: 0.25
-      Edison: 0.25
+      Damascus: 0.25 # AS Edison -> Damascus
 
 - type: entity
   id: BluespaceVaultError
@@ -85,7 +85,7 @@
       Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
       Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
       Medical: 0.25
-      Edison: 0.25
+      Damascus: 0.25 # AS Edison -> Damascus
 - type: entity
   id: BluespaceVaultSmallError
   parent: BaseStationEventShortDelay
@@ -129,7 +129,7 @@
       Sle: 0.25 # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
       Aurora: 0.25 # Aurora Song - Changed from Frontier to Aurora
       Medical: 0.25
-      Edison: 0.25
+      Damascus: 0.25 # AS Edison -> Damascus
 - type: entity
   id: BluespaceSyndicateFTLInterception
   parent: BaseStationEventShortDelay

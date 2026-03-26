@@ -25,7 +25,7 @@
   id: DamascusManufactory
   name: department-damascus
   description: department-damascus-description
-  color: "#57b8f0"
+  color: "#b0c4de"
   roles:
   - SiteManager
   - SiteWorker
