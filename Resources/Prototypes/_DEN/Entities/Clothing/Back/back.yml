@@ -133,15 +133,15 @@
       tags:
         - CanPilot # ONLY carries player characters, nothing else!
 
-- type: entity # So chameleon clothes can select the folded sprite
-  parent: ClothingBackpackMessengerMantis
-  id: ClothingBackpackMessengerMantisFlipped
-  suffix: Flipped
-  components:
-  - type: Foldable
-    folded: true
-  - type: Clothing
-    equippedPrefix: flipped
+#- type: entity # So chameleon clothes can select the folded sprite
+#  parent: ClothingBackpackMessengerMantis # Aurora: We don't HAVE THISSS
+#  id: ClothingBackpackMessengerMantisFlipped
+#  suffix: Flipped
+#  components:
+#  - type: Foldable
+#    folded: true
+#  - type: Clothing
+#    equippedPrefix: flipped
 
 - type: entity
   parent: [ClothingBackpackNapsack, BaseFoldable] # A roleplay toy that can carry people
