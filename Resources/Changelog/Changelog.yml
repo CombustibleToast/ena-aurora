@@ -6634,3 +6634,10 @@ Entries:
   id: 9024
   time: '2026-03-23T13:15:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/815
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Most references to Edison have been renamed to Damascus
+  id: 9025
+  time: '2026-03-26T06:19:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/826
