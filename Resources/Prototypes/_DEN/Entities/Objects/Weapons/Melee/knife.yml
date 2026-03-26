@@ -120,17 +120,6 @@
     sound: /Audio/Weapons/star_hit.ogg
     #removalTime: 2.0
   #- type: EmbedPassiveDamage
-  - type: Item
-    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisknife.rsi
-    storedSprite:
-      sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisknife.rsi
-      state: icon
-  - type: Sprite
-    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisknife.rsi
-  - type: ThrowingAngle
-    angle: -135
-  - type: DisarmMalus
-    malus: 0.3 # A third harder to disarm than CombatKnife due to the finger ring
   - type: Tag
     tags:
     - Knife
