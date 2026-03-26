@@ -28,7 +28,7 @@
 - type: gameMap
   id: Barada
   mapName: 'BH Barada'
-  mapPath: /Maps/_AS/Shuttles/barada.yml
+  mapPath: /Maps/_AS/Shuttles/Damascus/barada.yml
   minPlayers: 0
   stations:
     Barada:
