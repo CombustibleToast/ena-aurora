@@ -6657,3 +6657,10 @@ Entries:
   id: 9027
   time: '2026-03-26T09:05:48.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/818
+- author: snezshiba
+  changes:
+    - type: Add
+      message: Added Slime markings to Vulps. more species to come!
+  id: 9028
+  time: '2026-03-26T09:10:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/824
