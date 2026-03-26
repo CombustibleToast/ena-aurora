@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/21/2026 21:54:16
-  entityCount: 792
+  time: 03/25/2026 00:40:42
+  entityCount: 793
 maps: []
 grids:
 - 1
@@ -369,6 +369,15 @@ entities:
     - type: Transform
       pos: -12.5,-9.5
       parent: 1
+- proto: AutonomousIDCard
+  entities:
+  - uid: 17
+    components:
+    - type: Transform
+      pos: 3.583571,-9.543048
+      parent: 1
+    - type: ShuttleDeed
+      shuttleUid: 1
 - proto: BlastDoor
   entities:
   - uid: 514
@@ -2785,15 +2794,6 @@ entities:
     - type: Transform
       pos: -12.5,-13.5
       parent: 1
-- proto: AutonomousIDCard
-  entities:
-  - uid: 17
-    components:
-    - type: Transform
-      pos: 3.583571,-9.543048
-      parent: 1
-    - type: ShuttleDeed
-      shuttleUid: 1
 - proto: Thruster
   entities:
   - uid: 47
@@ -4698,6 +4698,13 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 15.5,-17.5
+      parent: 1
+- proto: WarpPoint
+  entities:
+  - uid: 763
+    components:
+    - type: Transform
+      pos: 0.5,-5.5
       parent: 1
 - proto: WindoorSecurePlasma
   entities:
