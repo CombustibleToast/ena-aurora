@@ -4,6 +4,7 @@
   id: BaseMobSlimePerson
   abstract: true
   components:
+  - type: SnoutHelmet # Aurora's Song - Animal Slimes
   - type: Hunger
   - type: Thirst
   - type: Carriable # Carrying system from nyanotrasen.

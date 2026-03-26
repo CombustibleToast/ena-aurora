@@ -21,3 +21,6 @@ marking-SlimeGradientLeftHand = Slime Left Hand (Gradient)
 
 marking-SlimeGradientRightHand-gradient_r_hand = Slime Right Hand (Gradient)
 marking-SlimeGradientRightHand = Slime Right Hand (Gradient)
+
+# Aurora's Song - Creates Slime Head markings for custom heads
+marking-SlimeHead = Slime Head

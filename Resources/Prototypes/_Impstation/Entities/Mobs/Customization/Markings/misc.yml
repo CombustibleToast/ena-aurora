@@ -16,7 +16,7 @@
 - type: marking
   id: fizz
   bodyPart: Head
-  markingCategory: Head
+  markingCategory: Overlay # Aurora's Song - Moved slime markings to overlay
   speciesRestriction: [ SlimePerson ]
   forcedColoring: false
   followSkinColor: false
@@ -51,7 +51,7 @@
 - type: marking
   id: FadingStars
   bodyPart: Head
-  markingCategory: Head
+  markingCategory: Overlay # Aurora's Song - Moved slime markings to overlay
   speciesRestriction: [ SlimePerson ]
   forcedColoring: false
   followSkinColor: false

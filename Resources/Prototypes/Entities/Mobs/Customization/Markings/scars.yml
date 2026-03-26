@@ -55,7 +55,17 @@
   id: ScarNeck
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Tajaran] # Frontier: added Goblin and afterwards | Aurora's Song - added Tajaran
+  speciesRestriction: [Human, Dwarf, Reptilian, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Tajaran] # Frontier: added Goblin and afterwards | Aurora's Song - added Tajaran, move slime markings to overlay
+  followSkinColor: true
+  sprites:
+  - sprite: Mobs/Customization/scars.rsi
+    state: scar_neck
+
+- type: marking # Aurora's Song - move slime markings to overlay
+  id: ScarSlimeNeck
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson]
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -85,7 +95,17 @@
   id: ScarFace1
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Tajaran] # Frontier: added Goblin and afterwards | Aurora's Song - added Tajaran
+  speciesRestriction: [Human, Dwarf, Reptilian Moth, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Tajaran] # Frontier: added Goblin and afterwards | Aurora's Song - added Tajaran, Moved slime markings to overlay
+  followSkinColor: true
+  sprites:
+  - sprite: Mobs/Customization/scars.rsi
+    state: scar_face_1
+
+- type: marking # Aurora's Song - Moved slime markings to overlay
+  id: ScarSlimeFace1
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson] # Aurora's Song - moved slime's marking to overlay
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -95,7 +115,17 @@
   id: ScarFace2
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Moth, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Tajaran] # Frontier: added Goblin and afterwards | Aurora's Song - added Tajaran
+  speciesRestriction: [Human, Dwarf, Reptilian, Moth, Goblin, Sheleg, Felinid, Harpy, Oni, Vulpkanin, Tajaran] # Frontier: added Goblin and afterwards | Aurora's Song - added Tajaran, Moved slime markings to overlay
+  followSkinColor: true
+  sprites:
+  - sprite: Mobs/Customization/scars.rsi
+    state: scar_face_2
+
+- type: marking # Aurora's Song - Moved slime markings to overlay
+  id: ScarSlimeFace2
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson]
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi

@@ -61,3 +61,7 @@ marking-TattooEyeshadowVoxLarge = Eyeshadow (Large)
 
 marking-TattooVoxTailRing-tattoo_vox_tail_ring = Tail Ring
 marking-TattooVoxTailRing = Tail Ring
+
+# Aurora's Song - Seperates slime markings from head to overlay
+marking-TattooSlimeEyeLeft = Left Eye
+marking-TattooSlimeEyeRight = Right Eye
