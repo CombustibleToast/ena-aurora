@@ -178,12 +178,36 @@
   equipment:
     head: ClothingHeadBandBotany
 
+- type: loadout
+  id: ContractorClothingMantisFezAiry
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatFezMantisAiry
+
+- type: loadout
+  id: ContractorClothingMantisFezOrnate
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatFezMantisOrnate
+
+- type: loadout
+  id: ContractorClothingMantisHoodDark
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHoodMantisDark
+
 #T1
 - type: loadout
-  id: ContractorClothingHeadHatHoodBioScientist
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
+  id: ContractorClothingHeadHatHoodBioScientist # Time restrictions removed | Aurora Song
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: NFHeadwearCapable

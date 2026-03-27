@@ -7,6 +7,35 @@
   equipment:
     shoes: ClothingShoesColorBlack
 
+# Aurora Song - Mantis drip merge start
+- type: loadout
+  id: ContractorClothingShoesMantisAiry
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesSandalsMantisAiry
+
+- type: loadout
+  id: ContractorClothingShoesMantisDark
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesSandalsMantisDark
+
+- type: loadout
+  id: ContractorClothingShoesMantisOrnate
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesSandalsMantisOrnate
+# Aurora Song - Mantis drip merge end
+
 - type: loadout
   id: ContractorClothingShoesClothwrap
   hideEffects:
@@ -616,7 +645,7 @@
   price: 7500
   equipment:
     shoes: ClothingShoesClownLarge
-    
+
 - type: loadout
   id: ContractorClothingShoesBling
   effects:

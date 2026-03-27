@@ -7,6 +7,35 @@
   equipment:
     outerClothing: ClothingOuterEVASuitContractor
 
+# Aurora Song - Mantis drip merge
+- type: loadout
+  id: ContractorClothingOuterCoatMantisAiry
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 300
+  equipment:
+    outerClothing: ClothingOuterCoatMantisAiry
+
+- type: loadout
+  id: ContractorClothingOuterCoatMantisOrnate
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatMantisOrnate
+
+- type: loadout
+  id: ContractorClothingWinterCoatMantisMu
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 1250
+  equipment:
+    outerClothing: ClothingOuterWinterCoatMantisMu
+# Mantis drip merge end
+
 - type: loadout
   id: ContractorClothingOuterHardsuitVoidParamed
   effects:

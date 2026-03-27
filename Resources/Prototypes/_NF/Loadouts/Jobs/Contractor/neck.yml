@@ -1,3 +1,23 @@
+# Aurora Song - Mantis drip merge start
+- type: loadout
+  id: ContractorClothingNeckCloakMantisDark
+  price: 500
+  equipment:
+    neck: ClothingNeckCloakMantisDark
+
+- type: loadout
+  id: ContractorClothingNeckMantleMantisOrnate
+  price: 500
+  equipment:
+    neck: ClothingNeckMantleMantisOrnate
+
+- type: loadout
+  id: ContractorClothingNeckMantisShackles
+  price: 500
+  equipment:
+    neck: ClothingNeckMantisShackles
+# Aurora Song - Mantis drip merge end
+
 #T1
 - type: loadout
   id: ContractorClothingNeckScarfStripedBlack
