@@ -26,11 +26,11 @@
   - type: FoldableClothing
     foldedEquippedPrefix: rolled
 
-- type: entity
+- type: entity # The default mantis coat in loadout
   parent: ClothingOuterWinterCoatMantisDark
   id: ClothingOuterWinterCoatMantisDarkFolded
-  suffix: Folded
-  categories: [ HideSpawnMenu ]
+  suffix: Rolled Sleeves
+  description: "A grand, warm coat with a high collar. You can unroll the sleeves, if they won't get in the way of your gloves."
   components:
   - type: Foldable
     folded: true

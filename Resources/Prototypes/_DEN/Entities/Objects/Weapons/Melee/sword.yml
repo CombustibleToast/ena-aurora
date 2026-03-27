@@ -81,6 +81,9 @@
   name: faust # Part of the reason it's so punishing, aside from the challenge, is because antags could possibly use it against psions - it needs to be unreliable
   description: "A mnemolith greatsword whose unstable resonance makes it treacherous to wield. It must be properly wielded--without absolute focus, the blade resists. Unmatched against psionic and otherworldly threats." # Aurora: Adjusted description
   components: # Yes the description is long, but players must understand how it works from description alone, and I want it to remain in-universe
+  - type: Grammar # Faust is its name
+    attributes:
+      proper: true
   #- type: AntiPsionicWeapon
   #  punish: true # It'll hurt you if you hit anything non-psionic (a mouse, a wall, etc.)
   #  punishChances: 1 # Every time
@@ -100,13 +103,14 @@
         volume: -2
         variation: 0.05
   - type: MeleeWeapon
-    attackRate: 1 # Aurora: Adjusted
+    attackRate: 1 # Aurora: Adjusted from 1.5
     range: 1.85
     wideAnimationRotation: -60 # Swing that thing
     damage:
       types:
         Slash: 30 # 18.66 DPS (same as CaptainSabre), or 23.33 DPS against psions (but if you miss, it hits you hard) # Aurora: Up that to 30 dps, t5
         Holy: 20 # 40 total DPS against psionic supernaturals (no way are you landing every left click on a simplemob) # Doesn't do much on aurora, but its good flavor
+        Structural: 30 # 20 structural DPS (but it'll only hurt psionic objects since it can't be thrown)
     soundHit:
       path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
       params:
@@ -122,13 +126,8 @@
       params:
         volume: -2
         variation: 0.05
-    #maxTargets: 10 # When you see a stat that looks good, just remember that if you hit anything non-psionic, you lose
-    #heavyRateModifier: 1 # Same speed
-    #heavyRangeModifier: 1 # Same range
-    #heavyDamageBaseModifier: 1 # Same damage
-    #heavyStaminaCost: 30 # Also you can't spam them or you'll fall over
-  #- type: DamageOtherOnHit
-    #staminaCost: 80 # Throwing it will nearly, unless your species or traits let you do it, but then you'll still be extremely slow and unarmed # AS: Commented out
+  - type: DamageOtherOnHit
+    #staminaCost: 80 # Throwing it will nearly stun you, unless your species or traits let you do it, but then you'll still be extremely slow and unarmed #Aurora: Commented out
   - type: EmbeddableProjectile
     sound:
       path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
@@ -170,17 +169,22 @@
   id: MantisMeleeGreatswordSheath # A suitstorage sheath for Faust, in this file because it's basically part of the sword
   name: foreboding scabbard
   suffix: Faust, Empty
-  description: "A heavy scabbard reinforced with mu-metal bands that cross over its ornamental eyes, likely as a warning. This psionically insulating metal is only used to contain weapons that would otherwise recoil violently against their housing when drawn. Its stillness feels wrong, as if the scabbard itself is holding its breath. So heavy you can only wear it over outerwear."
+  description: "A heavy scabbard reinforced with mu-metal bands that cross over its ornamental eyes, likely as a warning. This psionically insulating metal is only used to contain weapons that would otherwise recoil violently against their housing when drawn. Its stillness feels wrong, as if the scabbard itself is holding its breath. So heavy it can only be worn over outerwear--and the weapon within so long it must be drawn with telekinesis."
   components:
   - type: Foldable
     canFoldInsideContainer: true
-    foldVerbText: fold-flip-verb
-    unfoldVerbText: fold-flip-verb
+    foldVerbText: fold-straps-verb
+    unfoldVerbText: unfold-straps-verb
   - type: FoldableClothing
-    foldedEquippedPrefix: flipped
+    foldedEquippedPrefix: flipped # This should've always been "folded" to play nicer with BaseFoldable
   - type: Sprite
     sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatswordsheath.rsi
-    state: icon
+    layers:
+    - state: icon
+      map: ["unfoldedLayer"]
+    - state: icon-flipped
+      map: ["foldedLayer"]
+      visible: false
   - type: Item
     sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatswordsheath.rsi
     size: Ginormous
@@ -192,11 +196,25 @@
     - suitStorage
   - type: ThrowingAngle
     angularVelocity: true
+  - type: EmitSoundOnThrow
+    sound:
+      path: /Audio/_DEN/Weapons/Melee/bigswoosh.ogg
+      params:
+        volume: -3
+        variation: 0.05
   - type: EmitSoundOnLand
     sound:
       path: /Audio/Effects/metal_slam1.ogg
       params:
-        volume: -4
+        volume: -3
+        pitch: 0.9
+        variation: 0.05
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Effects/metal_slam4.ogg
+      params:
+        volume: -6
+        pitch: 1.1
         variation: 0.05
   - type: Appearance
   - type: ContainerContainer

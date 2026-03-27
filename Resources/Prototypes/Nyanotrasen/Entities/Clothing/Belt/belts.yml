@@ -98,7 +98,9 @@
     sprite: _DEN/Clothing/Belt/belt_overlay.rsi
   - type: Tag
     tags:
-    - WhitelistChameleon
+    - WhitelistChameleon # We really need chameleon belts...
+  - type: GuideHelp
+    guides: [ MantisGuide ]
 
 #- type: entity
 #  parent: ClothingBeltBase

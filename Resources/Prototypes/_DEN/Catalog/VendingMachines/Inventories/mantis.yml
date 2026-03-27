@@ -18,6 +18,7 @@
     # Extra loadout clothing, so people can experiment with looks
     ClothingHeadsetMantis: 1
     ClothingHeadsetAltMantis: 1
+    ClothingEyesHudEpistemicsMantis: 1
     ClothingBackpackMantis: 1
     ClothingBackpackDuffelMantis: 1
     ClothingBackpackSatchelMantis: 1
@@ -44,6 +45,7 @@
     ClothingHandsGlovesMantisAiry: 1
     ClothingHandsGlovesMantisDark: 1
     ClothingHandsGlovesMantisOrnate: 1
+    ClothingHandsGlovesMantisChains: 1
     ClothingShoesSandalsMantisAiry: 1
     ClothingShoesSandalsMantisDark: 1
     ClothingShoesSandalsMantisOrnate: 1
