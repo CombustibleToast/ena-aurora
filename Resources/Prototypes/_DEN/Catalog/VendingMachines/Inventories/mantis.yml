@@ -18,12 +18,12 @@
     # Extra loadout clothing, so people can experiment with looks
     ClothingHeadsetMantis: 1
     ClothingHeadsetAltMantis: 1
-    ClothingEyesHudEpistemicsMantis: 1
+    #ClothingEyesHudEpistemicsMantis: 1 # AS: Not present
     ClothingBackpackMantis: 1
     ClothingBackpackDuffelMantis: 1
     ClothingBackpackSatchelMantis: 1
     ClothingBackpackSatchelMantisPurse: 1
-    #ClothingBackpackMessengerMantis: 1
+    #ClothingBackpackMessengerMantis: 1 # AS: Not present
     ClothingBeltMantisAiry: 1
     ClothingBeltMantisDark: 1
     ClothingBeltMantisOrnate: 1

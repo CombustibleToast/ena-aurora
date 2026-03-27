@@ -21,7 +21,7 @@
     maxItemSize: Large
     grid:
     - 0,0,9,1
-    #whitelist:
+    #whitelist: # Aurora: Remove belt whitelist
     #  tags:
     #    - Folder
     #    - Document
@@ -99,10 +99,10 @@
   - type: Tag
     tags:
     - WhitelistChameleon # We really need chameleon belts...
-  - type: GuideHelp
-    guides: [ MantisGuide ]
+ # - type: GuideHelp # Aurora: Remove guide
+ #   guides: [ MantisGuide ]
 
-#- type: entity
+#- type: entity # Aurora: We don't have this
 #  parent: ClothingBeltBase
 #  id: ClothingBeltMartialBlack
 #  name: black belt

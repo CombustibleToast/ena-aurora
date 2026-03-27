@@ -63,9 +63,9 @@
     sprite: _DEN/Objects/Weapons/Melee/tailorsknife.rsi
   - type: MeleeWeapon # Shiv stats
     wideAnimationRotation: 180
-    attackRate: .9
-    heavyRateModifier: 1.5
-    heavyDamageBaseModifier: 1.1
+    attackRate: 1.1 # Aurora: Match our melee component and remove unsued components
+    #heavyRateModifier: 1.5
+    #heavyDamageBaseModifier: 1.1
     range: 1.4
     damage:
       types:
@@ -162,7 +162,7 @@
     malus: 0.1125 # Half as hard to disarm as CombatKnife, too big for the finger ring to help
   - type: MeleeThrowOnHit # Just a tiny knockback to look cool, barely moves anything
     speed: 3
-    lifetime: 0.025
+    #lifetime: 0.025 # AS: remove unsued components
   - type: Tag
     tags:
     - Knife

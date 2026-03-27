@@ -127,7 +127,11 @@
         volume: -2
         variation: 0.05
   - type: DamageOtherOnHit
-    #staminaCost: 80 # Throwing it will nearly stun you, unless your species or traits let you do it, but then you'll still be extremely slow and unarmed #Aurora: Commented out
+    damage:
+      types:
+        #staminaCost: 80 # Throwing it will nearly stun you, unless your species or traits let you do it, but then you'll still be extremely slow and unarmed #Aurora: Commented out
+        Slash: 30 # Aurora: Added throwing damage
+        Holy: 20
   - type: EmbeddableProjectile
     sound:
       path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
