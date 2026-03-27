@@ -164,6 +164,9 @@
   - type: MeleeThrowOnHit # Just a tiny knockback to look cool, barely moves anything
     speed: 3
     #lifetime: 0.025 # AS: remove unsued components
+  - type: UseDelay # Aurora
+    delay: 3 # Aurora
+  - type: UseDelayOnMeleeHit # Aurora
   - type: Tag
     tags:
     - Knife

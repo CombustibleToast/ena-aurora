@@ -102,10 +102,11 @@
       params:
         volume: -2
         variation: 0.05
+    useDelayOnWield: false # Aurora
   - type: MeleeWeapon
     attackRate: 1 # Aurora: Adjusted from 1.5
     range: 1.85
-    wideAnimationRotation: -60 # Swing that thing
+    wideAnimationRotation: -120 # Swing that thing
     damage:
       types:
         Slash: 30 # 18.66 DPS (same as CaptainSabre), or 23.33 DPS against psions (but if you miss, it hits you hard) # Aurora: Up that to 30 dps, t5
@@ -161,6 +162,9 @@
     speed: 6
     distance: 3
    # lifetime: 0.05
+  - type: UseDelay # Aurora
+    delay: 3 # Aurora
+  - type: UseDelayOnMeleeHit # Aurora
   - type: Reflect # A little gift for being brave
     reflectProb: .25
     spread: 90

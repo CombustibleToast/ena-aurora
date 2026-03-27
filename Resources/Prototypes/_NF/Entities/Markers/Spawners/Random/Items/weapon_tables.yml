@@ -151,6 +151,8 @@
       - id: Truncheon
       - id: GreatswordBlueshield # Aurora
       - id: Kanabou # Aurora: Drop to t5
+      - id: MantisMeleeFist # Aurora
+      - id: MantisMeleeGreatswordSheathFilled # Aurora
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsMeleeUnique

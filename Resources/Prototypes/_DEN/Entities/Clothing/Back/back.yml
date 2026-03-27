@@ -176,7 +176,7 @@
     angularVelocity: true # Spins when thrown, it's not graceful
   - type: MeleeWeapon # You can smash people with it, but it's not a good weapon, more just dramatic
     wideAnimationRotation: 180
-    attackRate: 2
+    attackRate: 0.5 # Aurora: 2>0.5, our attack rates work the opposite here (attacks/second vs seconds/attack)
     range: 1.5
     angle: 120
     damage:

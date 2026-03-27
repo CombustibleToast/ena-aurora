@@ -55,6 +55,9 @@
     - WhitelistChameleon
     - MantisFist
     - MantisBeltStorable
+  - type: UseDelay # Aurora
+    delay: 3 # Aurora
+  - type: UseDelayOnMeleeHit # Aurora
 
 - type: entity # So chameleon clothes can select the folded sprite
   parent: MantisMeleeFist

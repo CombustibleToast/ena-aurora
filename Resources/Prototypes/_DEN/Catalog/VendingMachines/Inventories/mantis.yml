@@ -50,13 +50,14 @@
     ClothingShoesSandalsMantisDark: 1
     ClothingShoesSandalsMantisOrnate: 1
     ClothingUniformJumpsuitMantisLoincloth: 1 # It stays.
+    ClothingBackpackCoffinMantis: 1 # Aurora: Hard to get otherwise, primarily an RP tool
   contrabandInventory:
     # Hack the conduit to summon some toys from the Reliquary
     MantisTailorsKnife: 1
     #PlushieDollMantis: 1 # Aurora: We lost her in the port... :(
     PersonalAISomber: 1
-    MantisCasterPistolCapgun: 1
-    MantisCasterRevolverCapgun: 1
-    MantisCasterShotgunCapgun: 1
-    MantisCasterSubMachineGunCapgun: 1
+   # MantisCasterPistolCapgun: 1 # Aurora: Comment out until ready
+   # MantisCasterRevolverCapgun: 1
+   # MantisCasterShotgunCapgun: 1
+   # MantisCasterSubMachineGunCapgun: 1
     LanternSomber: 1
