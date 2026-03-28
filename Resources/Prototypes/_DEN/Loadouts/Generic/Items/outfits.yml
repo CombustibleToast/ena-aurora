@@ -10,7 +10,7 @@
     shoes: ClothingShoesSandalsMantisAiry
     head: ClothingHeadHatFezMantisAiry
     mask: ClothingMaskMantisVeil
-    id: ForensicMantisPDA
+    id: ASForensicMantisPDA # Aurora
     ears: ClothingHeadsetMantis
     gloves: ClothingHandsGlovesMantisAiry
     outerClothing: ClothingOuterCoatMantisAiry
@@ -24,7 +24,7 @@
     shoes: ClothingShoesSandalsMantisDark
     head: ClothingHeadHoodMantisDark
     mask: ClothingMaskMantisRitual
-    id: ForensicMantisPDA
+    id: ASForensicMantisPDA # Aurora
     ears: ClothingHeadsetMantis
     gloves: ClothingHandsGlovesMantisDark
     outerClothing: ClothingOuterWinterCoatMantisDark
@@ -37,7 +37,7 @@
     back: ClothingBackpackSatchelMantis
     shoes: ClothingShoesSandalsMantisOrnate
     head: ClothingHeadHatFezMantisOrnate
-    id: ForensicMantisPDA
+    id: ASForensicMantisPDA # Aurora
     ears: ClothingHeadsetMantis
     gloves: ClothingHandsGlovesMantisOrnate
     outerClothing: ClothingOuterCoatMantisOrnate
@@ -51,7 +51,7 @@
     shoes: ClothingShoesSandalsMantisDark
     head: ClothingHeadHatFezMantisAiry
     eyes: ClothingEyesGlassesEpistemicsMantis
-    id: ForensicMantisPDA
+    id: ASForensicMantisPDA # Aurora
     ears: ClothingHeadsetMantis
     gloves: ClothingHandsGlovesMantisOrnate
     outerClothing: ClothingOuterCoatMantisOrnateFolded
