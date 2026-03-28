@@ -76,10 +76,10 @@
     - id: FlippoLighterMantis
     - id: SomberChairLeatherMantisWheelchairFolded
     - id: ClothingNeckMantisPendulum
-  #- type: Foldable #AS: These cant be folded
+  #- type: Foldable #AS:  Causes build errors
   #  folded: true
-  - type: Clothing
-    equippedPrefix: rolled
+  #- type: Clothing
+  #  equippedPrefix: rolled
 
 - type: entity
   parent: ClothingBeltMantisDark
