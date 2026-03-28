@@ -11,6 +11,7 @@
   - type: Sprite
     state: icon
   - type: ItemToggle # You can toggle spinning it around your finger, though it's just cosmetic
+    onActivate: false # Allow people to interact with the item in world rather than toggle its state | Aurora Song
     verbToggleOn: item-toggle-spin
     verbToggleOff: item-toggle-catch
     predictable: false
