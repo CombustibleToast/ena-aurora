@@ -76,8 +76,8 @@
     - id: FlippoLighterMantis
     - id: SomberChairLeatherMantisWheelchairFolded
     - id: ClothingNeckMantisPendulum
-  - type: Foldable
-    folded: true
+  #- type: Foldable #AS: These cant be folded
+  #  folded: true
   - type: Clothing
     equippedPrefix: rolled
 
