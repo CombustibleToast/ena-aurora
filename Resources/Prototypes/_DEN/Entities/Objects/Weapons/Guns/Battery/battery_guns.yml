@@ -30,14 +30,14 @@
   - type: MagazineVisuals
     magState: mag
     zeroVisible: true
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: null
-        whitelist:
-          tags:
-          - MantisCaster
+  #- type: ItemSlots # These guns in the game yet and are causing build errors, will repair in the upcoming caster pr
+  #  slots:
+  #    gun_magazine:
+  #      name: Magazine
+  #      startingItem: null
+  #      whitelist:
+  #        tags:
+  #        - MantisCaster
   - type: Execution
   - type: MeleeWeapon
     attackRate: 1.2
@@ -80,16 +80,16 @@
         volume: -1
   - type: MagazineVisuals
     steps: 13
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MantisCasterPistolHoly
-        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
-        whitelist:
-          tags:
-          - MantisCasterPistol
+  #- type: ItemSlots # These guns in the game yet and are causing build errors, will repair in the upcoming caster pr
+  #  slots:
+  #    gun_magazine:
+  #      name: Magazine
+  #      startingItem: MantisCasterPistolHoly
+  #      insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+  #      ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+  #      whitelist:
+  #        tags:
+  #        - MantisCasterPistol
   - type: Tag
     tags:
     - Sidearm
@@ -122,16 +122,16 @@
         volume: -1
   - type: MagazineVisuals
     steps: 7
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MantisCasterRevolverHoly
-        insertSound: /Audio/Weapons/Guns/Misc/revolver_spin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        whitelist:
-          tags:
-          - MantisCasterRevolver
+  #- type: ItemSlots # These guns in the game yet and are causing build errors, will repair in the upcoming caster pr
+  #  slots:
+  #    gun_magazine:
+  #      name: Magazine
+  #      startingItem: MantisCasterRevolverHoly
+  #      insertSound: /Audio/Weapons/Guns/Misc/revolver_spin.ogg
+  #      ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+  #      whitelist:
+  #        tags:
+  #        - MantisCasterRevolver
   - type: Tag
     tags:
     - Sidearm
@@ -163,16 +163,16 @@
         volume: -1
   - type: MagazineVisuals
     steps: 6
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MantisCasterShotgunHoly
-        insertSound: /Audio/Weapons/Guns/Misc/revolver_spin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
-        whitelist:
-          tags:
-          - MantisCasterShotgun
+  #- type: ItemSlots # These guns in the game yet and are causing build errors, will repair in the upcoming caster pr
+  #  slots:
+  #    gun_magazine:
+  #      name: Magazine
+  #      startingItem: MantisCasterShotgunHoly
+  #      insertSound: /Audio/Weapons/Guns/Misc/revolver_spin.ogg
+  #      ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+  #      whitelist:
+  #        tags:
+  #        - MantisCasterShotgun
   - type: MeleeWeapon
     attackRate: 1.3333
     damage:
@@ -216,16 +216,16 @@
         volume: -1
   - type: MagazineVisuals
     steps: 37
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: MantisCasterSubMachineGunHoly
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
-        whitelist:
-          tags:
-          - MantisCasterSubMachineGun
+  #- type: ItemSlots # These guns in the game yet and are causing build errors, will repair in the upcoming caster pr
+  #  slots:
+  #    gun_magazine:
+  #      name: Magazine
+  #      startingItem: MantisCasterSubMachineGunHoly
+  #      insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+  #      ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+  #      whitelist:
+  #        tags:
+  #        - MantisCasterSubMachineGun
   - type: MeleeWeapon
     attackRate: 1.3333
     damage:
