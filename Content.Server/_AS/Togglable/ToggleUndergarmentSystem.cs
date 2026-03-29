@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 namespace Content.Server._AS.Togglable;
 
 /// <summary>
-/// This handles...
+/// Handles the action buttons for the undergarment toggles
 /// </summary>
 public sealed class ToggleUndergarmentSystem : EntitySystem
 {
