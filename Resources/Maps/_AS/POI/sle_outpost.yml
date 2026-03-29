@@ -3882,7 +3882,7 @@ entities:
     - type: Transform
       pos: -10.5,14.5
       parent: 1
-- proto: ASPosterSLEPinpointer
+- proto: ASPosterLegitSLEPinpointer
   entities:
   - uid: 4789
     components:

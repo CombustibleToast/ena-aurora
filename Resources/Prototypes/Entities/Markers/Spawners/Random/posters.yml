@@ -116,6 +116,10 @@
       - NFPosterContrabandFsbNightlight
       - NFPosterContrabandFsbRetort
       # End Frontier
+      # Aurora's Song
+      - ASPosterContrabandBHLogo
+      - ASPosterContrabandIACLogo
+      # End Aurora's Song
     chance: 1
 
 - type: entity
@@ -193,6 +197,6 @@
       - NFPosterLegitGunTurnIn
         # End Frontier
         # Aurora's Song
-      - ASPosterAuroraSector
+      - ASPosterLegitAuroraSector
         # End Aurora's Song
     chance: 1
