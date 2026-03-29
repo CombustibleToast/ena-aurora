@@ -17,3 +17,9 @@
     colonial silver: "#A1A1A1FF"
 
     damascus steel: "#B0C4DEFF"
+
+- type: palette # Aurora's Song - custom mapping palettes
+  id: ShipyardCompanies
+  name: Shipyard Companies
+  colors:
+    blue horizons blue: "#3BBCF2FF"
