@@ -64,6 +64,13 @@ public sealed partial class TraitPrototype : IPrototype
 
     /// Misfit - Species Trait Hiding
     /// <summary>
+    /// Species whitelist for certain traits, this applies to the menu as well, hence its separation.
+    /// </summary>
+    [DataField]
+    public ProtoId<SpeciesPrototype>[] SpeciesWhitelist = [];
+
+    /// Misfit - Species Trait Hiding
+    /// <summary>
     /// Species blacklist for certain traits, this applies to the menu as well, hence its separation.
     /// </summary>
     [DataField]
