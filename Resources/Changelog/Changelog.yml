@@ -6771,3 +6771,10 @@ Entries:
   id: 9039
   time: '2026-03-29T04:52:53.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/841
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: lathe no longer eats items on cancellation
+  id: 9040
+  time: '2026-03-29T04:54:11.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/840
