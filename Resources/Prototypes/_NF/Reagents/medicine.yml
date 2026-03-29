@@ -62,4 +62,4 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: -1
+            Poison: -0.1 # Aurora's Song - Half as effective as dylo
