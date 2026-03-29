@@ -6743,3 +6743,10 @@ Entries:
   id: 9035
   time: '2026-03-29T03:17:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/839
+- author: snezshiba
+  changes:
+    - type: Tweak
+      message: lines up Caramexinin's healing to be half of dylo's per unit
+  id: 9036
+  time: '2026-03-29T03:21:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/830
