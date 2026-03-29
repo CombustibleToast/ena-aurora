@@ -6750,3 +6750,10 @@ Entries:
   id: 9036
   time: '2026-03-29T03:21:15.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/830
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Added more seats and cuffs to the Prison riot barge.
+  id: 9037
+  time: '2026-03-29T03:21:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/831
