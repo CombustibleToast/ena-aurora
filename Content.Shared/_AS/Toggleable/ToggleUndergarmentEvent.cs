@@ -3,11 +3,11 @@
 namespace Content.Shared.Toggleable;
 
 /// <summary>
-/// Action-event for toggle-able components.
+/// Action-event for toggling top undergarments.
 /// </summary>
 public sealed partial class ToggleUndergarmentTopActionEvent : InstantActionEvent;
 
 /// <summary>
-/// Action-event for toggle-able undergarments.
+/// Action-event for toggling bottom undergarments.
 /// </summary>
 public sealed partial class ToggleUndergarmentBottomActionEvent : InstantActionEvent;

@@ -1,7 +1,7 @@
 ﻿namespace Content.Shared.Toggleable;
 
 /// <summary>
-/// This is used for...
+/// Holds the state for whether the undergarment (top and bottom) are hidden.
 /// </summary>
 [RegisterComponent]
 public sealed partial class ToggleUndergarmentComponent : Component
