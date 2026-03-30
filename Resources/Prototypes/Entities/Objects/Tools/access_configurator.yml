@@ -24,13 +24,14 @@
       # - Bar # Frontier
       - Lieutenant # Aurora's Song - Changed from Bailiff to Lieutenant
       - Brig
-      - Brigmedic # Frontier
+#      - Brigmedic # Frontier | Aurora's Song - Converted to Corpsman
       - Captain
       # - Cargo # Frontier
       # - Chapel # Frontier
       # - Chemistry # Frontier
       # - ChiefMedicalOfficer # Frontier
       - Command
+      - Corpsman # Aurora's Song - Added Corpsman access
       - Detective # Frontier - moved down
       - Engineering
       - External
@@ -103,13 +104,14 @@
     - Atmospherics
     - Bar
     - Brig
-    - Brigmedic # Frontier
+#    - Brigmedic # Frontier | Aurora's Song - Converted to Corpsman
     - Captain
     - Cargo
     - Chapel
     - Chemistry
     - ChiefMedicalOfficer
     - Command
+    - Corpsman # Aurora's Song - Added Corpsman access
     - Cryogenics
     - Borg # Frontier: reordered for "Cyborg"
     - Detective # Frontier: moved down
