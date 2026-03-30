@@ -67,11 +67,17 @@
         - IdentityBlocker
         tags:
         - IPCMaskWearable
+    - name: neckalt # Aurora's Song - second neck slot
+      slotTexture: neck
+      slotFlags: NECK
+      uiWindowPos: 2,2
+      strippingWindowPos: 2,1
+      displayName: Neck 2
     - name: eyes
       slotTexture: glasses
       slotFlags: EYES
       stripTime: 3
-      uiWindowPos: 0,0
+      uiWindowPos: 0,3 # Aurora's Song - Move to actual eye position
       strippingWindowPos: 0,0
       displayName: Eyes
     - name: head
