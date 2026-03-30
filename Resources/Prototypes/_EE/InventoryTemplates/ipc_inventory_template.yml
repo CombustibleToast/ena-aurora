@@ -67,8 +67,10 @@
         - IdentityBlocker
         tags:
         - IPCMaskWearable
+        # Start TheDen - Allow IPCs to smoke
         - Cigarette
         - Cigar
+        # End TheDen
     - name: neckalt # Aurora's Song - second neck slot
       slotTexture: neck
       slotFlags: NECK
