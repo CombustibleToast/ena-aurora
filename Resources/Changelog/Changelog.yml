@@ -6789,3 +6789,10 @@ Entries:
   id: 9041
   time: '2026-03-29T09:15:27.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/842
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: .25 mags no longer blow up
+  id: 9042
+  time: '2026-03-30T01:28:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/844
