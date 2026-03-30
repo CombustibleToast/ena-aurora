@@ -50,10 +50,12 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
             if (modulateColor)
                 SpriteSystem.LayerSetColor((uid, args.Sprite), component.SpriteLayer, color);
 
+            //DEN insert
             if (component.ReplaceMode && args.Sprite.AllLayers.Any())
             {
                 SpriteSystem.LayerSetVisible((uid, args.Sprite), 0, !enabled);
             }
+            //End DEN insert
         }
 
         // If there's a `ItemTogglePointLightComponent` that says to apply the color to attached lights, do so.
@@ -94,6 +96,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
         if (layers == null && !component.ClothingVisuals.TryGetValue(args.Slot, out layers))
             return;
 
+        // DEN insert
         if (component.ReplaceMode)
         {
             for (var layerIdx = args.Layers.Count - 1; layerIdx >= 0; layerIdx--)
@@ -105,6 +108,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
                 }
             }
         }
+        // End DEN insert
 
         var modulateColor = AppearanceSystem.TryGetData<Color>(uid, ToggleableVisuals.Color, out var color, appearance);
 
@@ -135,6 +139,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
         if (!component.InhandVisuals.TryGetValue(args.Location, out var layers))
             return;
 
+        //DEN insert
         if (component.ReplaceMode)
         {
             var baseKey = $"inhand-{args.Location.ToString().ToLowerInvariant()}";
@@ -147,6 +152,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
                 }
             }
         }
+        // End DEN insert
 
         var modulateColor = AppearanceSystem.TryGetData<Color>(uid, ToggleableVisuals.Color, out var color, appearance);
 
