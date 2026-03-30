@@ -1,7 +1,7 @@
 - type: entity # Aurora's Song - Not functionally a cigar, but used as such in practice
   name: holocigar
   parent: BaseItem
-  id: holocigar
+  id: Holocigar
   description: "A small device using holodeck technology to emulate a cigar. Makes time fly by. "
   components:
   - type: Sprite
@@ -48,3 +48,6 @@
   - type: IgnitionSource
     temperature: 700
   - type: Appearance
+  - type: Tag
+    tags:
+    - Cigar
