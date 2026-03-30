@@ -6796,3 +6796,10 @@ Entries:
   id: 9042
   time: '2026-03-30T01:28:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/844
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: Traits you can't use will now be hidden from the menu
+  id: 9043
+  time: '2026-03-30T07:18:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/846
