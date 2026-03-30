@@ -6634,3 +6634,179 @@ Entries:
   id: 9024
   time: '2026-03-23T13:15:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/815
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Most references to Edison have been renamed to Damascus
+  id: 9025
+  time: '2026-03-26T06:19:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/826
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: rodentia undergarments no longer show up over clothes
+  id: 9026
+  time: '2026-03-26T09:03:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/825
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: >-
+        Smart equip is smarter and now knows you want to put your gun in your
+        hand rather than take out the magazine
+  id: 9027
+  time: '2026-03-26T09:05:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/818
+- author: snezshiba
+  changes:
+    - type: Add
+      message: Added Slime markings to Vulps. more species to come!
+  id: 9028
+  time: '2026-03-26T09:10:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/824
+- author: CombustibleToast
+  changes:
+    - type: Fix
+      message: Fixed condensers so that they don't operate slower at higher pressures.
+  id: 9029
+  time: '2026-03-26T09:25:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/821
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Damascus Bonus Machine next to CE
+    - type: Add
+      message: Bulk grounding rod crate to Damascus
+    - type: Add
+      message: Shipyard RCD & Damascus ID to CE office
+    - type: Add
+      message: Damascus shipyard console
+    - type: Add
+      message: Very mild cosmetic improvements to Damascus
+    - type: Remove
+      message: Damascus exped console
+    - type: Remove
+      message: Damascus RCD & Compressed matter
+    - type: Tweak
+      message: Moved Engi tank dispenser to PA room
+    - type: Tweak
+      message: Moved PA room emergency wall closet to PA airlock
+  id: 9030
+  time: '2026-03-26T09:30:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/828
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Med/Cryo signs in The Alley
+    - type: Tweak
+      message: Major cosmetic changes to engineering in the Alley
+    - type: Tweak
+      message: Main Alley room re-arranged and decorated
+    - type: Tweak
+      message: Minor decal changes in Alley's medical area
+    - type: Tweak
+      message: Minor cosmetic tile changes in Alley's maints and pathways
+    - type: Fix
+      message: Fixed mass scanner orientation on The Alley
+    - type: Fix
+      message: Fixed under-door missing tiles on The Alley
+  id: 9031
+  time: '2026-03-26T10:08:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/816
+- author: Leostel
+  changes:
+    - type: Add
+      message: adds the BH Barada, Damascus's first engi and salvage shuttle
+  id: 9032
+  time: '2026-03-26T10:19:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/829
+- author: SolStar
+  changes:
+    - type: Tweak
+      message: Added hud icons for license holders.
+  id: 9033
+  time: '2026-03-28T21:27:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/836
+- author: ZigTag
+  changes:
+    - type: Add
+      message: actions (added to action menu) that let you toggle your undergarments
+  id: 9034
+  time: '2026-03-29T03:11:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/837
+- author: ZigTag
+  changes:
+    - type: Add
+      message: inter-ship holopads
+    - type: Fix
+      message: custom emotes work over holopads
+  id: 9035
+  time: '2026-03-29T03:17:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/839
+- author: snezshiba
+  changes:
+    - type: Tweak
+      message: lines up Caramexinin's healing to be half of dylo's per unit
+  id: 9036
+  time: '2026-03-29T03:21:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/830
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Added more seats and cuffs to the Prison riot barge.
+  id: 9037
+  time: '2026-03-29T03:21:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/831
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Aurora color palette for mapping
+  id: 9038
+  time: '2026-03-29T03:25:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/838
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: SLE Uplink Vendor is no longer a hologram on SLEO
+  id: 9039
+  time: '2026-03-29T04:52:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/841
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: lathe no longer eats items on cancellation
+  id: 9040
+  time: '2026-03-29T04:54:11.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/840
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Posters for BH, IAC, and CNS
+    - type: Add
+      message: Existing Shipyard Palettes
+    - type: Tweak
+      message: Refactor existing Aurora Posters
+  id: 9041
+  time: '2026-03-29T09:15:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/842
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: .25 mags no longer blow up
+  id: 9042
+  time: '2026-03-30T01:28:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/844
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: Traits you can't use will now be hidden from the menu
+  id: 9043
+  time: '2026-03-30T07:18:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/846
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: undergarment toggle no longer shows in action bar
+  id: 9044
+  time: '2026-03-30T08:36:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/847

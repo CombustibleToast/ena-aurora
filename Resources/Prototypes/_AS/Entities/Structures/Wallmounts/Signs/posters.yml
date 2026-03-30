@@ -2,9 +2,9 @@
 
 - type: entity
   parent: PosterBase
-  id: ASPosterSLEPinpointer
+  id: ASPosterLegitSLEPinpointer
   name: "Leave your pinpointers!"
-  description: The SLE Department reminds Officers to leave their pinpointers here, along the side of this hallway! Remember to pinpointer your ID! A tracked Officer is a safe Officer!
+  description: "The SLE Department reminds Officers to leave their pinpointers here, along the side of this hallway! Remember to pinpointer your ID! A tracked Officer is a safe Officer!"
   components:
   - type: Sprite
     sprite: _AS/Structures/Wallmounts/posters.rsi
@@ -14,10 +14,46 @@
 
 - type: entity
   parent: PosterBase
-  id: ASPosterAuroraSector
+  id: ASPosterLegitAuroraSector
   name: "Come to Aurora"
-  description: Out on the fringes of space, you can make a name for yourself. Be part of the settlement of untamed worlds, and stake your claim on your own little piece of the universe. Come to Aurora.
+  description: "Out on the fringes of space, you can make a name for yourself. Be part of the settlement of untamed worlds, and stake your claim on your own little piece of the universe. Come to Aurora."
   components:
   - type: Sprite
     sprite: _AS/Structures/Wallmounts/posters.rsi
     state: as_poster_aurora
+
+#region Independent Astronautics Cooperative
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandCNSHorizon
+  name: "Colonial Naval Surplus"
+  description: "CNF Surplus gear - built Auroran tough. Made to last."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_cns_horizon
+
+#region Blue Horizons
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandBHLogo
+  name: "Blue Horizons"
+  description: "Blue Horizons, quick and comfy!"
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_bh_logo
+
+#region Independent Astronautics Cooperative
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo

@@ -12,6 +12,15 @@
         },
         {
             "name": "as_poster_aurora"
+        },
+        {
+            "name": "as_poster_bh_logo"
+        },
+        {
+            "name": "as_poster_iac_logo"
+        },
+		{
+            "name": "as_poster_cns_horizon"
         }
     ]
 }

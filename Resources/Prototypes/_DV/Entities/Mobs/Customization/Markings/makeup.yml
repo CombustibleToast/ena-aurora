@@ -2,7 +2,21 @@
   id: MakeupLips
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Dwarf, Human, SlimePerson, Felinid, Oni, Harpy] # Delta V - Felinid, Oni, Harpy
+  speciesRestriction: [Dwarf, Human, Felinid, Oni, Harpy] # Delta V - Felinid, Oni, Harpy # Aurora's Song - Moved slime's markings to overlay
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#7e2727"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: lips
+
+- type: marking # Aurora's Song - Moved slime's markings to overlay
+  id: MakeupSlimeLips
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson]
   coloring:
     default:
       type:
@@ -16,7 +30,21 @@
   id: MakeupBlush
   bodyPart: Head
   markingCategory: Head
-  speciesRestriction: [Dwarf, Human, Reptilian, SlimePerson, Felinid, Oni, Vulpkanin, Harpy, Rodentia, Feroxi] # Delta V - Felinid, Oni, Vulpkanin, Rodentia, Feroxi
+  speciesRestriction: [Dwarf, Human, Reptilian, Felinid, Oni, Vulpkanin, Harpy, Rodentia, Feroxi] # Delta V - Felinid, Oni, Vulpkanin, Rodentia, Feroxi # Aurora's Song - Moved slime's markings to overlay
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#d39394"
+  sprites:
+  - sprite: _DV/Mobs/Customization/makeup.rsi
+    state: blush
+
+- type: marking # Aurora's Song - Moved slime's markings to overlay
+  id: MakeupSlimeBlush
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [SlimePerson]
   coloring:
     default:
       type:

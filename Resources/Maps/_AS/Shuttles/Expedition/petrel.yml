@@ -1056,7 +1056,7 @@ entities:
     - type: Transform
       pos: -0.5,7.5
       parent: 1
-- proto: ASPosterAuroraSector
+- proto: ASPosterLegitAuroraSector
   entities:
   - uid: 598
     components:

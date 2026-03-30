@@ -44,6 +44,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!; // Aurora
+    [Dependency] private readonly LicenseSystem _license = default!; // Aurora
 
     private EntityQuery<MobStateComponent> _mobQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -367,23 +368,8 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     {
         if (console.LicenseRequired == null)
             return true;
-        if (!_inventory.TryGetSlotEntity(user, "id", out var slotEnt))
-            return false;
-        if (TryComp<LicenseComponent>(slotEnt, out var license) && license.LicenseName == console.LicenseRequired)
-            return true;
-        if (!_container.TryGetContainer(slotEnt.Value, "PDA-license", out var container))
-            return false;
-        foreach (var containerEnt in container.ContainedEntities)
-        {
-            if (TryComp<LicenseComponent>(containerEnt, out license) && license.LicenseName == console.LicenseRequired)
-                return true;
-        }
-        foreach (var heldEnt in _hands.EnumerateHeld(user))
-        {
-            if (TryComp<LicenseComponent>(heldEnt, out license) && license.LicenseName == console.LicenseRequired)
-                return true;
-        }
-        return false;
+
+        return _license.CheckLicence(console.LicenseRequired, user);
     }
 
     public void PlayDenyEffect(Entity<ContrabandPalletConsoleComponent> target)

@@ -1,0 +1,9 @@
+- type: securityIcon
+  id: LicenseIcon
+  priority: 1
+  locationPreference: Right
+  layer: Mod
+  isShaded: true
+  icon:
+    sprite: /Textures/_AS/Misc/license_icons.rsi
+    state: license

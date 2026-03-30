@@ -36,5 +36,5 @@ public enum SectorBankAccount : byte
     Aurora, // Aurora Song - Renamed from Frontier to Aurora
     Sle, // Aurora Song - Renamed from Nfsd to Sle (Sector Law Enforcement)
     Medical,
-    Edison,
+    Damascus, // AS Edison -> Damascus
 }

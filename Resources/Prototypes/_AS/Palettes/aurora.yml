@@ -1,0 +1,32 @@
+- type: palette # Aurora's Song - custom mapping palettes
+  id: Aurora
+  name: Aurora
+  colors:
+    sle navy: "#2A4F63FF"
+    sle navy alt 1: "#1A3A6CFF"
+    sle navy alt 2: "#152A5CFF"
+    sle cobalt: "#98BBC2FF"
+    sle cobalt alt 1: "#5A8FC5FF"
+    sle orange: "#E37B40FF"
+    sle gold: "#E5B250FF"
+
+    colonial cobalt: "#BDE8F5FF"
+    colonial light blue: "#4988C4FF"
+    colonial medium blue: "#1C4D8DFF"
+    colonial dark blue: "#0F2854FF"
+    colonial silver: "#A1A1A1FF"
+
+    damascus steel: "#B0C4DEFF"
+
+- type: palette # Aurora's Song - custom mapping palettes
+  id: ShipyardCompanies
+  name: Shipyard Companies
+  colors:
+    # bh: Blue Horizons
+    bh blue: "#3BBCF2FF"
+
+    # iac: Independent Astronautics Cooperative
+    iac yellow-orange: "#FBC60EFF"
+    iac bright red: "#EE562AFF"
+    iac off-black: "#1D1429FF"
+    iac purple: "#474069FF"

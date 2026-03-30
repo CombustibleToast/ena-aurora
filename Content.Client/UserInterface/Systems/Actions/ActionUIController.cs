@@ -256,7 +256,7 @@ public sealed class ActionUIController : UIController, IOnStateChanged<GameplayS
         if (action.Comp.Toggled && EntityManager.TryGetComponent<TargetActionComponent>(actionId, out var target))
             StartTargeting((action, action, target));
 
-        if (_actions.Contains(action))
+        if (_actions.Contains(action) || !action.Comp.AutoPopulate) // Aurora's Song - Fix autopopulation on late-added actions
             return;
 
         _actions.Add(action);

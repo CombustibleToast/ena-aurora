@@ -110,7 +110,7 @@
   - type: CombatMode # DeltaV - let IPCs disarm
     canDisarm: true
   - type: SnoutHelmet # DeltaV - IPC Snouts
-    replacementRace: vulpkanin
+  #  replacementRace: vulpkanin # Aurora's Song - Refactored helmet component
   - type: Wagging # Aurora's Song - Add wagging
 
 - type: entity

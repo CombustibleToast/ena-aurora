@@ -3,5 +3,6 @@
   name: trait-replicant-name
   description: trait-replicant-desc
   category: Quirks
+  speciesBlacklist: [IPC]
   components:
     - type: Replicant

@@ -2,8 +2,11 @@ using Content.Shared._AS.License.Components;
 using Content.Shared._AS.License.Events;
 using Content.Shared.Access.Components;
 using Content.Shared.Containers.ItemSlots;
+using Content.Shared.Hands.EntitySystems;
+using Content.Shared.Inventory;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
+using Robust.Shared.Containers;
 
 namespace Content.Shared._AS.License;
 
@@ -11,10 +14,13 @@ public sealed class LicenseSystem : EntitySystem
 {
     [Dependency] private readonly MetaDataSystem _meta = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
+    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private readonly InventorySystem _inventory = default!;
     [Dependency] private readonly ItemSlotsSystem _slots = default!;
     [Dependency] private readonly LicenseSystem _license = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private readonly SharedHandsSystem _hands = default!;
 
     public override void Initialize()
     {
@@ -90,5 +96,56 @@ public sealed class LicenseSystem : EntitySystem
         name = idCard.FullName;
 
         return true;
+    }
+
+    public bool TryGetActiveLicenses(EntityUid user, out List<LicenseComponent> licenses)
+    {
+        bool hasLicense = false;
+        licenses = [];
+
+        if (_inventory.TryGetSlotEntity(user, "id", out var slotEnt))
+        {
+            if (TryComp<LicenseComponent>(slotEnt, out var license))
+            {
+                licenses.Add(license);
+                hasLicense = true;
+            }
+
+            if (_container.TryGetContainer(slotEnt.Value, "PDA-license", out var container))
+            {
+                foreach (var containerEnt in container.ContainedEntities)
+                {
+                    if (TryComp<LicenseComponent>(containerEnt, out license))
+                    {
+                        licenses.Add(license);
+                        hasLicense = true;
+                    }
+                }
+            }
+        }
+
+        foreach (var heldEnt in _hands.EnumerateHeld(user))
+        {
+            if (TryComp<LicenseComponent>(heldEnt, out var license))
+            {
+                licenses.Add(license);
+                hasLicense = true;
+            }
+        }
+
+        return hasLicense;
+    }
+
+    public bool CheckLicence(string licenseName, EntityUid user)
+    {
+        if (!TryGetActiveLicenses(user, out var licenses))
+            return false;
+
+        foreach (var license in licenses)
+        {
+            if (license.LicenseName == licenseName)
+                return true;
+        }
+        return false;
     }
 }

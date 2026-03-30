@@ -278,6 +278,7 @@
   - type: FireVisuals
     alternateState: Standing
   - type: StunVisuals
+  - type: ToggleUndergarment # Aurora's Song - Add undergarment toggle
 
 - type: entity
   save: false

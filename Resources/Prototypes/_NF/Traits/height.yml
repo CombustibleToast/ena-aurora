@@ -36,6 +36,7 @@
   name: trait-fluffy-name
   description: trait-fluffy-desc
   category: Height
+  speciesWhitelist: [Moth]
   components:
     - type: DisableDisplacements
   whitelist:

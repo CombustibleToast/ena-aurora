@@ -20,9 +20,9 @@
     UndergarmentBottom: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
-    HeadTop: MobSlimeMarkingFollowSkin
+    HeadTop: MobSlimeMarkingFollowSkinNoAlpha # Aurora's Song | Matches alpha with base to make animal ears seemless.
     HeadSide: MobSlimeMarkingFollowSkin
-    Tail: MobSlimeMarkingFollowSkin
+    Tail: MobSlimeMarkingFollowSkinNoAlpha # Aurora's Song | Matches alpha with base to make animal tails seemless.
 #    Wings: MobSlimeMarkingFollowSkin //Need to work on this, Den has a different visual layer composition
     Eyes: MobHumanoidEyes
     LArm: MobSlimeLArm
@@ -54,7 +54,8 @@
       required: false
     Head:
       points: 1
-      required: false
+      required: true # Aurora's Song | Base head marking to allow for animal heads
+      defaultMarkings: [SlimeHead] # Aurora's Song | Base head marking to allow for animal heads
     HeadTop:
       points: 2
       required: false
@@ -88,23 +89,21 @@
   markingsMatchSkin: true
   layerAlpha: 0.75 # imp 0.72<0.75
 
-- type: humanoidBaseSprite
+- type: humanoidBaseSprite # Aurora's Song | Ivisible base head for custom head markings
   id: MobSlimeHead
-  baseSprite:
-    sprite: Mobs/Species/Slime/parts.rsi
-    state: head_m
+  markingsMatchSkin: true
 
-- type: humanoidBaseSprite
+- type: humanoidBaseSprite # Aurora's Song | Ivisible base head for custom head markings
   id: MobSlimeHeadMale
-  baseSprite:
-    sprite: Mobs/Species/Slime/parts.rsi
-    state: head_m
+  markingsMatchSkin: true
 
-- type: humanoidBaseSprite
+- type: humanoidBaseSprite # Aurora's Song | Ivisible base head for custom head markings
   id: MobSlimeHeadFemale
-  baseSprite:
-    sprite: Mobs/Species/Slime/parts.rsi
-    state: head_f
+  markingsMatchSkin: true
+
+- type: humanoidBaseSprite # Aurora's Song | Matches skin colour but not alpha
+  id: MobSlimeMarkingFollowSkinNoAlpha
+  markingsMatchSkin: true
 
 - type: humanoidBaseSprite
   id: MobSlimeTorso
@@ -171,3 +170,12 @@
   baseSprite:
     sprite: Mobs/Species/Slime/parts.rsi
     state: r_foot
+
+- type: marking # Aurora's Song | Base head into Marking for custom heads
+  id: SlimeHead
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: Mobs/Species/Slime/parts.rsi
+    state:  head_m
