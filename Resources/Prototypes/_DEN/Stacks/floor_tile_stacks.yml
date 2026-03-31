@@ -1,0 +1,244 @@
+- type: stack
+  id: FloorTileSomberSteel
+  name: tiles-somber-steel-floor
+  spawn: FloorTileItemSomberSteel
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelBandedMagenta
+  name: tiles-somber-steel-floor-banded-magenta
+  spawn: FloorTileItemSomberSteelBandedMagenta
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelBandedPurple
+  name: tiles-somber-steel-floor-banded-purple
+  spawn: FloorTileItemSomberSteelBandedPurple
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelCheckerMagenta
+  name: tiles-somber-steel-floor-checker-magenta
+  spawn: FloorTileItemSomberSteelCheckerMagenta
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelCheckerPurple
+  name: tiles-somber-steel-floor-checker-purple
+  spawn: FloorTileItemSomberSteelCheckerPurple
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonal
+  name: tiles-somber-steel-floor-diagonal
+  spawn: FloorTileItemSomberSteelDiagonal
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalMini
+  name: tiles-somber-steel-floor-diagonal-mini
+  spawn: FloorTileItemSomberSteelDiagonalMini
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelHerringbone
+  name: tiles-somber-steel-floor-herringbone
+  spawn: FloorTileItemSomberSteelHerringbone
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelMini
+  name: tiles-somber-steel-floor-mini
+  spawn: FloorTileItemSomberSteelMini
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelMono
+  name: tiles-somber-steel-floor-mono
+  spawn: FloorTileItemSomberSteelMono
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelMonoEye
+  name: tiles-somber-steel-floor-mono-eye
+  spawn: FloorTileItemSomberSteelMonoEye
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelOffset
+  name: tiles-somber-steel-floor-offset
+  spawn: FloorTileItemSomberSteelOffset
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelPavement
+  name: tiles-somber-steel-floor-pavement
+  spawn: FloorTileItemSomberSteelPavement
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelPavementVertical
+  name: tiles-somber-steel-floor-pavement-vertical
+  spawn: FloorTileItemSomberSteelPavementVertical
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberGlass
+  name: tiles-somber-glass-floor
+  spawn: FloorTileItemSomberGlass
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberGlassPlasma
+  name: tiles-somber-glass-floor-plasma
+  spawn: FloorTileItemSomberGlassPlasma
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberGlassUranium
+  name: tiles-somber-glass-floor-uranium
+  spawn: FloorTileItemSomberGlassUranium
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberMnemolithRough
+  name: tiles-somber-mnemolith-rough
+  spawn: FloorTileItemSomberMnemolithRough
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberMnemolithSmooth
+  name: tiles-somber-mnemolith-smooth
+  spawn: FloorTileItemSomberMnemolithSmooth
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberWood
+  name: tiles-somber-wood
+  spawn: FloorTileItemSomberWood
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberWoodLarge
+  name: tiles-somber-wood-large
+  spawn: FloorTileItemSomberWoodLarge
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberWoodPattern
+  name: tiles-somber-wood2
+  spawn: FloorTileItemSomberWoodPattern
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberAmaranth
+  name: tiles-somber-amaranth
+  spawn: FloorTileItemSomberAmaranth
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberAmaranthEye
+  name: tiles-somber-amaranth-eye
+  spawn: FloorTileItemSomberAmaranthEye
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelBandedDark
+  name: tiles-somber-steel-floor-banded-dark
+  spawn: FloorTileItemSomberSteelBandedDark
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelCheckerDark
+  name: tiles-somber-steel-floor-checker-dark
+  spawn: FloorTileItemSomberSteelCheckerDark
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalDark
+  name: tiles-somber-steel-floor-diagonal-dark
+  spawn: FloorTileItemSomberSteelDiagonalDark
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalMiniDark
+  name: tiles-somber-steel-floor-diagonal-mini-dark
+  spawn: FloorTileItemSomberSteelDiagonalMiniDark
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelMonoDark
+  name: tiles-somber-steel-floor-mono-dark
+  spawn: FloorTileItemSomberSteelMonoDark
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalMagenta
+  name: tiles-somber-steel-floor-diagonal-magenta
+  spawn: FloorTileItemSomberSteelDiagonalMagenta
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalMiniMagenta
+  name: tiles-somber-steel-floor-diagonal-mini-magenta
+  spawn: FloorTileItemSomberSteelDiagonalMiniMagenta
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalPurple
+  name: tiles-somber-steel-floor-diagonal-purple
+  spawn: FloorTileItemSomberSteelDiagonalPurple
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberSteelDiagonalMiniPurple
+  name: tiles-somber-steel-floor-diagonal-mini-purple
+  spawn: FloorTileItemSomberSteelDiagonalMiniPurple
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberWoodChess
+  name: tiles-somber-wood-chess
+  spawn: FloorTileItemSomberWoodChess
+  maxCount: 30
+  #itemSize: 5
+
+- type: stack
+  id: FloorTileSomberWoodParquet
+  name: tiles-somber-wood-parquet
+  spawn: FloorTileItemSomberWoodParquet
+  maxCount: 30
+  #itemSize: 5

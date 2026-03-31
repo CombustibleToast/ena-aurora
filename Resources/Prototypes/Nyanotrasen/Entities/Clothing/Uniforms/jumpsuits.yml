@@ -55,6 +55,35 @@
 
 - type: entity
   parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMantis
+  name: dated mantis uniform
+  description: "Modeled after an ancient infantry uniform, this uniform has superior mobility for tense situations. All the company would pay for prior to the mantis equipment refresh." # TheDen
+  abstract: true # made abstract so it can be referenced without worrying about the missing sprites - Aurora Song
+  components:
+  - type: Appearance
+  - type: Tag # TheDen
+    tags:
+    - WhitelistChameleon
+    - MantisBeltStorable
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ClothingUniformSkirtMantis
+  name: dated mantis jumpskirt
+  description: "Adapted from an ancient infantry uniform, this jumpskirt has superior mobility for tense situations. All the company would pay for prior to the mantis equipment refresh." # TheDen
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Nyanotrasen/Clothing/Uniforms/Jumpskirt/mantis_jumpskirt.rsi
+  - type: Clothing
+    sprite: Nyanotrasen/Clothing/Uniforms/Jumpskirt/mantis_jumpskirt.rsi
+  - type: Tag # TheDen
+    tags:
+    - WhitelistChameleon
+    - MantisBeltStorable
+
+- type: entity
+  parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPrisonGuard
   name: prison guard's uniform
   description: A comfortable, durable, waterproof uniform made to keep prison staff comfortable and safe.

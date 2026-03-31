@@ -17,6 +17,26 @@
   equipment:
     gloves: ClothingHandsGlovesLeather
 
+#Aurora Song- Mantis drip merge start
+- type: loadout
+  id: ContractorClothingHandsGlovesMantisAiry
+  price: 300
+  equipment:
+    gloves: ClothingHandsGlovesMantisAiry
+
+- type: loadout
+  id: ContractorClothingHandsGlovesMantisDark
+  price: 300
+  equipment:
+    gloves: ClothingHandsGlovesMantisDark
+
+- type: loadout
+  id: ContractorClothingHandsGlovesMantisOrnate
+  price: 300
+  equipment:
+    gloves: ClothingHandsGlovesMantisOrnate
+# Aurora Song- Mantis drip merge end
+
 - type: loadout
   id: ContractorClothingHandsGlovesFingerless
   effects:

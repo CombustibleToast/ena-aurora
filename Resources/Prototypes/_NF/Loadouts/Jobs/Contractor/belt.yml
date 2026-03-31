@@ -1,3 +1,23 @@
+# Aurora Song - Mantis drip merge
+- type: loadout
+  id: ContractorClothingBeltMantisAiry
+  price: 500
+  equipment:
+    belt: ClothingBeltMantisAiry
+
+- type: loadout
+  id: ContractorClothingBeltMantisDark
+  price: 500
+  equipment:
+    belt: ClothingBeltMantisDark
+
+- type: loadout
+  id: ContractorClothingBeltMantisOrnate
+  price: 500
+  equipment:
+    belt: ClothingBeltMantisOrnate
+# Aurora Song - Mantis drip merge end
+
 - type: loadout
   id: ContractorClothingBeltPlant
   price: 500

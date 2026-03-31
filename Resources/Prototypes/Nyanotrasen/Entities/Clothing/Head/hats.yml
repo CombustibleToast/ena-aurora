@@ -38,6 +38,16 @@
 
 - type: entity
   parent: ClothingHeadBase
+  id: ClothingHeadHatFezMantis
+  abstract: true
+  components:
+  - type: Tag # TheDen
+    tags:
+    - WhitelistChameleon
+    - MantisBeltStorable
+
+- type: entity
+  parent: ClothingHeadBase
   id: ClothingHeadPrisonGuard
   name: prison guard's hat
   description: Grants full immunity from denying others basic human rights, dignity, or respect.

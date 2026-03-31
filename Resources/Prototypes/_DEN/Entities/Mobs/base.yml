@@ -1,0 +1,9 @@
+﻿# ALl credit to Sha-Seng on github for this, I bungled the initial cherry-pick so had to add it back in manually
+- type: entity
+  save: false
+  abstract: true
+  id: StorableSpecies # So any species parented to this can technically be stored in a bag, if it's big enough
+  components:
+  - type: PseudoItem # Any species that's naturally storable will overwrite these values due to how parenting works, obviously
+    shape:
+    - 0,0,20,5 # 1 too wide to fit inside ClothingBackpackDuffelHolding, so only bags designed to carry people can actually fit them inside

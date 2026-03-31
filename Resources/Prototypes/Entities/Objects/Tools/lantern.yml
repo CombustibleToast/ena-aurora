@@ -54,6 +54,9 @@
         cell_slot:
           name: power-cell-slot-component-slot-name-default
           startingItem: PowerCellMedium
+          blacklist: # TheDen
+            tags:
+            - MantisCaster
     - type: ContainerContainer
       containers:
         cell_slot: !type:ContainerSlot {}
@@ -108,3 +111,6 @@
           enum.FlashVisualLayers.LightLayer:
             True: {visible: true}
             False: {visible: false}
+    - type: Tag # TheDen
+      tags:
+      - Flash

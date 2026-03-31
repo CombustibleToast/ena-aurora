@@ -626,3 +626,14 @@
       - MailMetricsCartridge
       - AppraisalCartridge
       - NetProbeCartridge
+
+- type: entity
+  parent: BasePDA
+  id: ASForensicMantisPDA
+  name: mantis PDA
+  description: "This PDA marks its bearer as a member of the Outer Chamber--a mantis, the Greek word for \"seer.\" The eye on its display seems to track whoever dares to look back. Carried in a pocket, because you couldn't bear to hang this hunk of plastic on your belt."
+  components:
+  - type: PdaBorderColor
+    borderColor: "#3b3640"
+    accentVColor: "#431b57"
+    accentHColor: "#8c1c54"

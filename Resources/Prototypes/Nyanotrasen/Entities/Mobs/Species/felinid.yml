@@ -1,6 +1,6 @@
 - type: entity
   name: Urist McFelinid
-  parent: BaseMobHuman
+  parent: [BaseMobHuman, StorableSpecies] # TheDen
   id: MobFelinidBase
   abstract: true
   components:
