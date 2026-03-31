@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/31/2026 01:57:18
-  entityCount: 787
+  time: 03/09/2026 08:35:44
+  entityCount: 785
 maps: []
 grids:
 - 1
@@ -547,7 +547,7 @@ entities:
       pos: 7.5,-8.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -9920.45
+      secondsUntilStateChange: -9607.476
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -770,18 +770,6 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: -0.5,-17.5
-      parent: 1
-- proto: ASSpawnerRandomPosterIAC
-  entities:
-  - uid: 786
-    components:
-    - type: Transform
-      pos: 4.5,7.5
-      parent: 1
-  - uid: 787
-    components:
-    - type: Transform
-      pos: 3.5,-12.5
       parent: 1
 - proto: AtmosDeviceFanDirectional
   entities:
