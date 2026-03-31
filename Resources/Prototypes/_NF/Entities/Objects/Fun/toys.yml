@@ -93,6 +93,7 @@
     sprite: _NF/Objects/Fun/sharkminnow.rsi
     state: sharkminnowplush
   - type: Item
+    sprite: _NF/Objects/Fun/sharkminnow.rsi # Aurora's Song - add explicit sprite path for in-hands
     heldPrefix: sharkminnowplush
     inhandVisuals:
       left:
