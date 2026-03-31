@@ -6849,3 +6849,10 @@ Entries:
   id: 9049
   time: '2026-03-31T08:59:38.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/855
+- author: snezshiba
+  changes:
+    - type: Fix
+      message: Fixed holocigar not having sprites for Vulpkanin
+  id: 9050
+  time: '2026-03-31T09:40:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/859
