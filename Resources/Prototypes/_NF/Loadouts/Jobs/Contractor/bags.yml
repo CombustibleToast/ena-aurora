@@ -28,6 +28,32 @@
   equipment:
     back: ClothingBackpackMessengerContractor
 
+# Aurora Song - Mantis drip merge
+- type: loadout
+  id: ContractorClothingBackpackMantis
+  price: 500
+  equipment:
+    back: ClothingBackpackMantis
+
+- type: loadout
+  id: ContractorClothingBackpackDuffelMantis
+  price: 500
+  equipment:
+    back: ClothingBackpackDuffelMantis
+
+- type: loadout
+  id: ContractorClothingBackpackSatchelMantis
+  price: 500
+  equipment:
+    back: ClothingBackpackSatchelMantis
+
+- type: loadout
+  id: ContractorClothingBackpackMantisPurse
+  price: 500
+  equipment:
+    back: ClothingBackpackSatchelMantisPurse
+# Aurora Song - Mantis drip merge end
+
 #T1
 - type: loadout
   id: ContractorClothingBackpackCaptain

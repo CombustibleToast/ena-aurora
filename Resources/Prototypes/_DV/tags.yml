@@ -16,7 +16,7 @@
   id: Directional
 
 - type: Tag
-  id: ForensicBeltEquip
+  id: ForensicBeltEquip # TheDen - Replaced by MantisBeltStorable for clarity
 
 - type: Tag
   id: Gavel

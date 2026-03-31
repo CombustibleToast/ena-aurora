@@ -1,0 +1,5 @@
+
+- type: flavor
+  id: mnemolith
+  flavorType: Complex
+  description: flavor-complex-mnemolith
