@@ -4,7 +4,7 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/02/2026 00:48:32
+  time: 03/31/2026 10:03:07
   entityCount: 605
 maps: []
 grids:
@@ -756,6 +756,13 @@ entities:
     components:
     - type: Transform
       pos: 4.359783,-4.3125453
+      parent: 1
+- proto: ASSpawnerRandomPosterBH
+  entities:
+  - uid: 399
+    components:
+    - type: Transform
+      pos: -2.5,3.5
       parent: 1
 - proto: AtmosDeviceFanDirectional
   entities:
@@ -3577,11 +3584,6 @@ entities:
       parent: 1
 - proto: RandomPosterAny
   entities:
-  - uid: 399
-    components:
-    - type: Transform
-      pos: -2.5,3.5
-      parent: 1
   - uid: 400
     components:
     - type: Transform
