@@ -8,9 +8,11 @@ namespace Content.Client._NF.ShuttleRecords.UI;
 [GenerateTypedNameReferences]
 public sealed partial class ShuttleRecordDetailsControl : PanelContainer
 {
-    public sealed class ViewState(string shuttleName, string shuttleOwnerName, string activity, string toolTip, string timeOfPurchase, string voucherStatus, string transactionCost, string shuttlePrice)
+    public sealed class ViewState(string shuttleName, string shuttleHullName, string shuttleOwnerName, string activity, string toolTip, string timeOfPurchase, string voucherStatus, string transactionCost, string shuttlePrice) // Aurora's Song - Add hull name
     {
         public string ShuttleName { get; } = shuttleName;
+
+        public string ShuttleHullName { get; } = shuttleHullName; // Aurora's Song - Add hull name
 
         public string ShuttleOwnerName { get; } = shuttleOwnerName;
 
@@ -31,6 +33,7 @@ public sealed partial class ShuttleRecordDetailsControl : PanelContainer
     {
         RobustXamlLoader.Load(this);
         ShuttleName.Text = state.ShuttleName;
+        ShuttleHullName.Text = state.ShuttleHullName;
         ShuttleOwner.Text = state.ShuttleOwnerName;
         ShuttleActivity.Text = state.Activity;
         ShuttlePrice.Text = state.ShuttlePrice;

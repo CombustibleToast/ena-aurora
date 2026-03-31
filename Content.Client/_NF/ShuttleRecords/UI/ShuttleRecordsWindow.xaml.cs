@@ -149,6 +149,10 @@ public sealed partial class ShuttleRecordsWindow : FancyWindow
         var viewState = new ShuttleRecordDetailsControl.ViewState(
             shuttleName: _loc.GetString(messageId: "shuttle-records-shuttle-name-label",
                 arg: ("name", shuttleRecord.Name + " " + shuttleRecord.Suffix)),
+            // Start Aurora's Song - Add hull name
+            shuttleHullName: _loc.GetString(messageId: "shuttle-records-shuttle-hull-name-label",
+                arg: ("name", shuttleRecord.HullName)),
+            // End Aurora's Song
             shuttleOwnerName: _loc.GetString(messageId: "shuttle-records-shuttle-owner-label",
                 arg: ("owner", shuttleRecord.OwnerName)),
             shuttlePrice: _loc.GetString(messageId: "shuttle-records-shuttle-price-label",
