@@ -105,6 +105,98 @@
   price: 200
   equipment:
     shoes: ClothingShoesColorYellow
+
+# Some more high heels, ported from DEN - Aurora Song
+- type: loadout
+  id: ContractorClothingShoesBlackHeelsBlackstockings
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsBlackBlack
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsBlackWhite
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsBlackWhite
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsBlackBPlain
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsBlackBPlain
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsBlackWPlain
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsBlackWPlain
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsBlackLatex
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsBlackLatex
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsWhiteBlack
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsWhiteBlack
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsWhiteBPlain
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsWhiteBPlain
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsWhiteWhite
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsWhiteWhite
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsWhiteWPlain
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsWhiteWPlain
+
+- type: loadout
+  id: ContractorClothingShoesHeelsStockingsWhiteLatex
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 200
+  equipment:
+    shoes: ClothingShoesHeelsStockingsWhiteLatex
+# End of ported heels
 #T1
 - type: loadout
   id: ContractorClothingShoesColorWhite
@@ -616,7 +708,7 @@
   price: 7500
   equipment:
     shoes: ClothingShoesClownLarge
-    
+
 - type: loadout
   id: ContractorClothingShoesBling
   effects:

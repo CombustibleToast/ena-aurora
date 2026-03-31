@@ -109,6 +109,15 @@
     ClothingNeckCollarBlue: 2 # Floofstation - Collar addition
     ClothingNeckCollarBlack: 2 # Floofstation - Collar addition
     ClothingNeckCollarPink: 2 # Floofstation - Collar addition
+    ClothingShoesHeelsStockingsBlackBlack: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsBlackWhite: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsBlackBPlain: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsBlackWPlain: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsBlackLatex: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsWhiteBPlain: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsWhiteWhite: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsWhiteWPlain: 4 # Aurora's Song - heelstockings port
+    ClothingShoesHeelsStockingsWhiteLatex: 4 # Aurora's Song - heelstockings port
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
