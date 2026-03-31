@@ -6925,3 +6925,10 @@ Entries:
   id: 9059
   time: '2026-03-31T20:10:15.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/867
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Sharkminnow in-hands no longer error
+  id: 9060
+  time: '2026-03-31T20:17:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/866
