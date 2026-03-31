@@ -4639,7 +4639,7 @@ entities:
       pipeLayer: Secondary
     - type: AtmosPipeColor
       color: '#CC36CFFF'
-- proto: ASDamascusIDCard
+- proto: SpawnDeedDamascus
   entities:
   - uid: 7070
     components:

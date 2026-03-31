@@ -1,0 +1,43 @@
+- type: entity
+  name: Damascus Deed Spawner
+  id: SpawnDeedDamascus
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Objects/Misc/id_cards.rsi
+        state: default
+        state: idsiteworker
+  - type: ConditionalSpawner
+    prototypes:
+      - ASDamascusIDCard
+
+- type: entity
+  name: Autonomous Deed Spawner
+  id: SpawnDeedAutonomous
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Objects/Misc/id_cards.rsi
+        state: default
+        state: autonomous
+  - type: ConditionalSpawner
+    prototypes:
+      - ASAutonomousIDCard
+
+- type: entity
+  name: Generic Deed Spawner
+  id: SpawnDeedGeneric
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Objects/Misc/id_cards.rsi
+        state: default
+  - type: ConditionalSpawner
+    prototypes:
+      - ASIDCardDeed
