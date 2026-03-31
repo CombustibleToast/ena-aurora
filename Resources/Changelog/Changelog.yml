@@ -6902,3 +6902,12 @@ Entries:
   id: 9056
   time: '2026-03-31T10:55:00.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/835
+- author: turtleofmen
+  changes:
+    - type: Fix
+      message: Harvester components
+    - type: Tweak
+      message: Harvester posters
+  id: 9057
+  time: '2026-03-31T11:18:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/864
