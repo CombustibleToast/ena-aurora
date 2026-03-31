@@ -30,22 +30,6 @@
             "directions": 4
         },
         {
-            "name": "equipped-HELMET-thaven",
-            "directions": 4
-        },
-        {
-            "name": "flipped-equipped-HELMET-thaven",
-            "directions": 4
-        },
-        {
-            "name": "equipped-HELMET-chitinid",
-            "directions": 4
-        },
-        {
-            "name": "flipped-equipped-HELMET-chitinid",
-            "directions": 4
-        },
-        {
             "name": "equipped-HELMET-feroxi",
             "directions": 4
         },
@@ -59,14 +43,6 @@
         },
         {
             "name": "flipped-equipped-HELMET-reptilian",
-            "directions": 4
-        },
-        {
-            "name": "equipped-HELMET-resomi",
-            "directions": 4
-        },
-        {
-            "name": "flipped-equipped-HELMET-resomi",
             "directions": 4
         },
         {
@@ -99,14 +75,6 @@
         },
         {
             "name": "flipped-equipped-HELMET-vulpkanin",
-            "directions": 4
-        },
-        {
-            "name": "equipped-HELMET-ovinia",
-            "directions": 4
-        },
-        {
-            "name": "flipped-equipped-HELMET-ovinia",
             "directions": 4
         },
         {

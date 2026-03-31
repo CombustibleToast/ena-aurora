@@ -28,14 +28,6 @@
         {
             "name": "rolled-equipped-OUTERCLOTHING",
             "directions": 4
-        },
-        {
-            "name": "equipped-OUTERCLOTHING-thaven",
-            "directions": 4
-        },
-        {
-            "name": "rolled-equipped-OUTERCLOTHING-thaven",
-            "directions": 4
         }
     ]
 }
