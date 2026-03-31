@@ -6856,3 +6856,10 @@ Entries:
   id: 9050
   time: '2026-03-31T09:40:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/859
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Ports BodyCams from NF for loadouts and for printing from lathes
+  id: 9051
+  time: '2026-03-31T09:50:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/857
