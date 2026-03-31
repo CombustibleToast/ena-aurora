@@ -6877,3 +6877,12 @@ Entries:
   id: 9053
   time: '2026-03-31T10:36:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/845
+- author: Vandanna
+  changes:
+    - type: Add
+      message: IAC posters by Doner19
+    - type: Fix
+      message: Aurora poster incorrect labeling
+  id: 9054
+  time: '2026-03-31T10:40:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/860
