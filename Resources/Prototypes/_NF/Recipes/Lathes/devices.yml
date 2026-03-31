@@ -86,3 +86,17 @@
   materials:
     Steel: 400
     Glass: 100
+
+- type: latheRecipe
+  id: ClothingNeckBodyCamera
+  result: ClothingNeckBodyCameraOff
+  completetime: 5
+  materials:
+    Steel: 100
+    Plastic: 200
+    Glass: 100
+
+- type: latheRecipe
+  id: ClothingNeckBodyCameraNFSD
+  parent: ClothingNeckBodyCamera
+  result: ClothingNeckBodyCameraNFSDOff
