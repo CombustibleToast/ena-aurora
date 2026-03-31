@@ -6833,3 +6833,12 @@ Entries:
   id: 9047
   time: '2026-03-31T06:24:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/856
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel back-end nitpick
+    - type: Tweak
+      message: Switch a Petrel poster spawner to the new CNS poster spawner
+  id: 9048
+  time: '2026-03-31T07:56:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/858
