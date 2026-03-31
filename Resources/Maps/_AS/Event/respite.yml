@@ -369,15 +369,13 @@ entities:
     - type: Transform
       pos: -12.5,-9.5
       parent: 1
-- proto: AutonomousIDCard
+- proto: ASAutonomousIDCard
   entities:
   - uid: 17
     components:
     - type: Transform
       pos: 3.583571,-9.543048
       parent: 1
-    - type: ShuttleDeed
-      shuttleUid: 1
 - proto: BlastDoor
   entities:
   - uid: 514
