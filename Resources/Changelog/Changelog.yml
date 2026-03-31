@@ -6932,3 +6932,20 @@ Entries:
   id: 9060
   time: '2026-03-31T20:17:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/866
+- author: AssignedGod and GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Added the somber mapping kit from Den
+    - type: Add
+      message: Added the mantis gear from Den
+    - type: Add
+      message: Added mantis melee weapons from Den
+    - type: Tweak
+      message: Rebalanced mantis melee weapons for AS standards
+    - type: Add
+      message: Added a BUNCH of mantis Loadout items
+    - type: Add
+      message: Added napsacks
+  id: 9061
+  time: '2026-03-31T20:48:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/832
