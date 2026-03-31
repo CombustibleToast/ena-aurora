@@ -12,7 +12,7 @@
   id: Scorpion
   parent: BaseVessel
   name: BH Scorpion
-  description: An expedition capable vessel with salvage and engineering capabilities.
+  description: An expedition capable vessel with salvage and engineering capabilities. Equipped with a CTLA-25 Bluespace drive
   price: 97100 # ~67000 appraise, ~30% markup. Increased by 10k due to FTL drive
   category: Medium
   group: Expedition
