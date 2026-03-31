@@ -47,6 +47,7 @@
     - Supply
     - Engineering
     - Medical
+    - Shipboard
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
@@ -286,3 +287,6 @@
           - cell_slot
         - !type:DoActsBehavior
           acts: [ "Destruction" ]
+    - type: NpcFactionMember # Turns out not having a faction means you are friendly to everything
+      factions:
+      - NanoTrasen
