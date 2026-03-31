@@ -26,23 +26,7 @@
             "directions": 4
         },
         {
-            "name": "equipped-OUTERCLOTHING-thaven",
-            "directions": 4
-        },
-        {
-            "name": "equipped-OUTERCLOTHING-resomi",
-            "directions": 4
-        },
-        {
             "name": "folded-equipped-OUTERCLOTHING",
-            "directions": 4
-        },
-        {
-            "name": "folded-equipped-OUTERCLOTHING-thaven",
-            "directions": 4
-        },
-        {
-            "name": "folded-equipped-OUTERCLOTHING-resomi",
             "directions": 4
         }
     ]

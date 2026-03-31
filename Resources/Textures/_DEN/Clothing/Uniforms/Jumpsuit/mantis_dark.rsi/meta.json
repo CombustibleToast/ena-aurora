@@ -28,22 +28,6 @@
         {
             "name": "folded-equipped-INNERCLOTHING",
             "directions": 4
-        },
-        {
-            "name": "equipped-INNERCLOTHING-anytaur",
-            "directions": 4
-        },
-        {
-            "name": "folded-equipped-INNERCLOTHING-anytaur",
-            "directions": 4
-        },
-        {
-            "name": "equipped-INNERCLOTHING-thaven",
-            "directions": 4
-        },
-        {
-            "name": "folded-equipped-INNERCLOTHING-thaven",
-            "directions": 4
         }
     ]
 }
