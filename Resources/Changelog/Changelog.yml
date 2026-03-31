@@ -6886,3 +6886,10 @@ Entries:
   id: 9054
   time: '2026-03-31T10:40:01.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/860
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added BH posters to BH ships.
+  id: 9055
+  time: '2026-03-31T10:50:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/863
