@@ -1,0 +1,44 @@
+﻿# Author Info
+# GitHub: Turtles Github
+# Discord: turtleofmen#4301
+
+# Maintainer Info
+# GitHub: Turtles Github
+# Discord: turtleofmen#4301
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Javelin
+  parent: BaseVessel
+  name: IAC Javelin
+  description: A sleek mercenary expeditionary shuttle prepped for salvage and armed deployment.
+  price: 105000
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/javelin.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Javelin
+  mapName: 'IAC Javelin'
+  mapPath: /Maps/_AS/Shuttles/Expedition/javelin.yml
+  minPlayers: 0
+  stations:
+    Javelin:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Javelin {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
