@@ -6870,3 +6870,10 @@ Entries:
   id: 9052
   time: '2026-03-31T10:20:36.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/861
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: ID Cards that now auto generate deeds are available to admins
+  id: 9053
+  time: '2026-03-31T10:36:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/845
