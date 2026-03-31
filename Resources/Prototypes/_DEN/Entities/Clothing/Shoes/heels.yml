@@ -11,7 +11,6 @@
     footstepSoundCollection:
       collection: FootstepHighHeels
   - type: HideLayerClothing
-    force: true
     slots:
     - RFoot
     - LFoot
