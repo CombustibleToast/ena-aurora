@@ -7,3 +7,18 @@
   id: fluffy
   flavorType: Base
   description: flavor-base-fluffy
+
+- type: flavor
+  id: oaken
+  flavorType: Base
+  description: flavor-base-oaken
+
+- type: flavor
+  id: coldDeath
+  flavorType: Base
+  description: flavor-base-colddeath
+
+- type: flavor
+  id: warriorBlood
+  flavorType: Base
+  description: flavor-base-warriorblood

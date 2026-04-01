@@ -204,3 +204,12 @@
         conditions:
           - !type:ReagentThreshold
             min: 13
+
+- type: reagent
+  id: ColdRage
+  name: reagent-name-cold-rage
+  group: Narcotics
+  desc: reagent-desc-cold-rage
+  physicalDesc: reagent-physical-desc-icy
+  flavor: coldDeath
+  color: "#47ffbf"

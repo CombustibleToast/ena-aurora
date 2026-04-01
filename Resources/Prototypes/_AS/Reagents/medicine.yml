@@ -167,3 +167,81 @@
       - !type:AdjustReagent
         reagent: MilkingDrugs
         amount: -7
+
+- type: reagent
+  id: StrongHeartBrew
+  name: reagent-name-strong-heart-brew
+  group: Medicine
+  desc: reagent-desc-strong-heart-brew
+  physicalDesc: reagent-physical-desc-hearty
+  flavor: oaken
+  color: "#63542b"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 0.2
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Asphyxiation: -1.5
+            Bloodloss: -1.5
+            Poison: -1
+
+- type: reagent
+  id: WarriorsBlood
+  name: reagent-name-warriors-blood
+  group: Medicine
+  desc: reagent-desc-warriors-blood
+  physicalDesc: reagent-physical-desc-sanguine
+  flavor: warriorBlood
+  color: "#470000"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 0.5
+      effects:
+      - !type:ModifyBleedAmount
+        amount: -2
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Piercing: -1.5
+            Slash: -2
+            Blunt: -2.5
+
+- type: reagent
+  id: murderDraught
+  name: reagent-name-murder-draught
+  group: Medicine
+  desc: reagent-desc-murder-draught
+  physicalDesc: reagent-physical-desc-roiling
+  flavor: murderDraught
+  color: "#ff2121"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 1.0
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.35
+        sprintSpeedModifier: 1.35
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Piercing: -3
+            Slash: -3
+            Blunt: -3
+            Poison: 1
