@@ -4,3 +4,4 @@ reagent-physical-desc-hearty = hearty
 reagent-physical-desc-icy = icy
 reagent-physical-desc-sanguine = sanguine
 reagent-physical-desc-roiling = roiling
+reagent-physical-desc-mjod = cold and delicious

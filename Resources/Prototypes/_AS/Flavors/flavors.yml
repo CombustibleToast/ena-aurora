@@ -22,3 +22,8 @@
   id: warriorBlood
   flavorType: Base
   description: flavor-base-warriorblood
+
+- type: flavor
+  id: frostmjod
+  flavorType: Base
+  description: flavor-base-frostmjod

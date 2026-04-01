@@ -215,7 +215,9 @@
   color: "#47ffbf"
   metabolisms:
     Cryogenic:
-        metabolismRate: 2 # Sheleg seem to specifically metabolise things slower, so to compensate it has to be declared higher
+        metabolismRate: 2.5 # Sheleg seem to specifically metabolise things slower, so to compensate it has to be declared higher
+        # Secondary benefit of this is that it makes these "Sheleg drugs" less useful for non Sheleg, which is good for roleplay reasons
+        # and also makes them less universally good than the other cryo chems, which is nice for balance reasons.
         effects:
         - !type:MovespeedModifier
             walkSpeedModifier: 1.5
@@ -265,3 +267,50 @@
           conditions:
           - !type:ReagentThreshold
             max: 0.5
+
+- type: reagent
+  id: Frostmjod
+  name: reagent-name-frostmjod
+  group: Narcotics
+  desc: reagent-desc-frostmjod
+  physicalDesc: reagent-physical-desc-mjod
+  flavor: frostmjod
+  color: "#b57600"
+  metabolisms:
+      Cryogenic:
+          metabolismRate: 2.5
+          effects:
+          - !type:MovespeedModifier
+              walkSpeedModifier: 1.05
+              sprintSpeedModifier: 1.05
+              conditions:
+              - !type:Temperature
+                max: 213.0
+              - !type:OrganType
+                type: Sheleg
+          - !type:SatiateThirst
+            factor: 3
+          - !type:SatiateHunger
+            factor: 3
+          - !type:GenericStatusEffect
+            key: Drunk
+            time: 2
+            type: Add
+          - !type:PopupMessage
+              type: Local
+              visualType: Medium
+              messages:
+                - "reagent-effect-frostmjod1"
+                - "reagent-effect-frostmjod2"
+                - "reagent-effect-frostmjod3"
+                - "reagent-effect-frostmjod4"
+                - "reagent-effect-frostmjod5"
+                - "reagent-effect-frostmjod6"
+                - "reagent-effect-frostmjod7"
+                - "reagent-effect-frostmjod8"
+                - "reagent-effect-frostmjod9"
+                - "reagent-effect-frostmjod10"
+              probability: 0.5
+              conditions:
+                - !type:ReagentThreshold
+                    min: 15

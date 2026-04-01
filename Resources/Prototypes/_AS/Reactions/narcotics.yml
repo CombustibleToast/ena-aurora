@@ -81,8 +81,6 @@
   products:
       Breakdown: 2
 
-
-
 - type: reaction
   id: ConfusionReaction
   impact: Medium
@@ -111,3 +109,17 @@
       amount: 1
   products:
       ColdRage: 5
+
+- type: reaction
+  id: frostmjodReaction
+  impact: Medium
+  reactants:
+    Milk:
+      amount: 1
+    Leporazine:
+      amount: 1
+    Mead:
+      amount: 1
+  products:
+      Frostmjod: 3
+

@@ -6,6 +6,7 @@ reagent-name-breakdown = breakdown
 reagent-name-confusiol = confusiol
 reagent-name-fairy = pixium
 reagent-name-cold-rage = cold rage elixir
+reagent-name-frostmjod = frostmjød
 
 reagent-desc-agony = A highly controlled substance, developed as an advanced torture method, its rare to find a place this drug is not outlawed.
 reagent-desc-scary = A dangerous poison that instills feelings of paranoia and dread in its victims. Highly illegal.
@@ -14,6 +15,7 @@ reagent-desc-breakdown = An illegal narcotic that invokes impending doom and ter
 reagent-desc-confusiol = An illegal narcotic that highly impacts short term memory and leaves the user exceedingly confused.
 reagent-desc-fairy = The blood of fairies. A Highly regulated substance. A potent and highly saught after hallucionegenic and party drug. Highly Addictive.
 reagent-desc-cold-rage = A chilling narcotic that plunges the user into a rage, while robbing them of both physical and emotional warmth.
+reagent-desc-frostmjod = A common drink in Sheleg halls, though technicality a narcotic. Refreshing, cold, and delicious, though often it encourages the imbiber to boasting and egotistic behaviour.
 
 reagent-effect-agony1 = It hurts.
 reagent-effect-agony2 = Your veins feel like they are on fire.
@@ -73,3 +75,14 @@ reagent-effect-cold-rage8 = Who cares what they want, only I matter.
 reagent-effect-cold-rage9 = Rip and tear, until it is done.
 
 reagent-effectcold-rage-fade = Rage wanes, clarity returns...
+
+reagent-effect-frostmjod1 = I am mighty!
+reagent-effect-frostmjod2 = They should be more like me!
+reagent-effect-frostmjod3 = My arm is stronger, I should show it off!
+reagent-effect-frostmjod4 = No greater warrior than I!
+reagent-effect-frostmjod5 = Let us drink the whole night!
+reagent-effect-frostmjod6 = Glory and revelry, all should partake!
+reagent-effect-frostmjod7 = I am the greatest, and everyone should know it!
+reagent-effect-frostmjod8 = Songs! Songs of my exploits!
+reagent-effect-frostmjod9 = None greater! None stronger!
+reagent-effect-frostmjod10 = Am I not the most wonderful thing!

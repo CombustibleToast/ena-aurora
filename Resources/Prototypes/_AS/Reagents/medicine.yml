@@ -178,7 +178,7 @@
   color: "#63542b"
   metabolisms:
     Cryogenic:
-      metabolismRate: 0.2
+      metabolismRate: 1.0
       effects:
       - !type:HealthChange
         conditions:
@@ -191,6 +191,11 @@
             Asphyxiation: -1.5
             Bloodloss: -1.5
             Poison: -1
+            Radiation: -1
+      - !type:ModifyBloodLevel
+        amount: 2
+      - !type:SatiateThirst
+        factor: 2
 
 - type: reagent
   id: WarriorsBlood
@@ -202,7 +207,7 @@
   color: "#470000"
   metabolisms:
     Cryogenic:
-      metabolismRate: 0.5
+      metabolismRate: 2.5
       effects:
       - !type:ModifyBleedAmount
         amount: -2
@@ -228,7 +233,7 @@
   color: "#ff2121"
   metabolisms:
     Cryogenic:
-      metabolismRate: 1.0
+      metabolismRate: 5.0
       effects:
       - !type:MovespeedModifier
         walkSpeedModifier: 1.35
