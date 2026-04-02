@@ -6996,3 +6996,12 @@ Entries:
   id: 9066
   time: '2026-04-02T02:44:36.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/871
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added Merc techfab and CTLA-25 Bluespace drive to the scorpion.
+    - type: Tweak
+      message: Increase price of the Scorpion by 10k, now at 97k.
+  id: 9067
+  time: '2026-04-02T02:45:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/876
