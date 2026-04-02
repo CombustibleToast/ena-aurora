@@ -7012,3 +7012,24 @@ Entries:
   id: 9068
   time: '2026-04-02T02:45:59.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/878
+- author: emergency-ketchup
+  changes:
+    - type: Add
+      message: >-
+        Condiment machine, due to relentless teasing, along with complementary
+        refill box
+    - type: Add
+      message: Naturalized area in the location of old bus!
+    - type: Add
+      message: >-
+        Southern docking arm, more parking spaces, more fun stuff! Also, the new
+        location of the bus.
+    - type: Tweak
+      message: Improved clarity of docking and EVA signage.
+    - type: Tweak
+      message: Improved EVA parking spaces.
+    - type: Tweak
+      message: Misc signage added and shifted
+  id: 9069
+  time: '2026-04-02T04:17:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/879
