@@ -6983,3 +6983,16 @@ Entries:
   id: 9065
   time: '2026-04-02T02:40:48.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/869
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Disposals system to Javelin
+    - type: Add
+      message: Collection boxes to Javelin
+    - type: Add
+      message: Jump drive to Javelin
+    - type: Tweak
+      message: Javelin price increased to 115,000 spesos
+  id: 9066
+  time: '2026-04-02T02:44:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/871
