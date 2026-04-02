@@ -1,0 +1,9 @@
+- type: construction
+  name: pillows-name
+  id: EmergencyComfortDeploymentUnitConstruction
+  graph: Pillows
+  startNode: start
+  targetNode: EmergencyComfortDeploymentUnitWrapped
+  category: construction-category-misc
+  description: pillows-description
+  objectType: Item
