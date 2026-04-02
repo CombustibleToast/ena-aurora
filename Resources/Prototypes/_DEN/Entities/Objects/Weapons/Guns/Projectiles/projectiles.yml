@@ -18,27 +18,6 @@
       collection: WeakHit
     forceSound: true
 
-# type: entity
-# name: narrow laser barrage
-# id: WardenEnergyShotgunLethalMode
-# parent: ShotgunLaserPellet
-# categories: [ HideSpawnMenu ]
-# components:
-# - type: ProjectileSpread
-#   proto: ShotgunLaserPellet
-#   count: 5 # 75 heat damage if you hit all your shots
-#   spread: 13
-
-# type: entity
-# name: disabler laser barrage
-# id: WardenEnergyShotgunDisablerMode
-# parent: BulletDisablerSmg
-# categories: [ HideSpawnMenu ]
-# components:
-# - type: ProjectileSpread
-#   proto: BulletDisablerSmg
-#   count: 5 # 2 shot stamina crit if you can land all the shots
-#   spread: 13
 
 # Mantis projectiles start
 # Muzzle flashes

@@ -50,12 +50,12 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
             if (modulateColor)
                 SpriteSystem.LayerSetColor((uid, args.Sprite), component.SpriteLayer, color);
 
-            //DEN insert
+            // TheDen - If replace mode is on and there are any layers on the sprite, set the base layer to invisible
             if (component.ReplaceMode && args.Sprite.AllLayers.Any())
             {
                 SpriteSystem.LayerSetVisible((uid, args.Sprite), 0, !enabled);
             }
-            //End DEN insert
+            // TheDen - end insert
         }
 
         // If there's a `ItemTogglePointLightComponent` that says to apply the color to attached lights, do so.
@@ -96,7 +96,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
         if (layers == null && !component.ClothingVisuals.TryGetValue(args.Slot, out layers))
             return;
 
-        // DEN insert
+        // TheDen - iterates decrementally through the sprite layers on the entity, searchign for any that match a base key and don't have "-toggle" in the name, then removing that layer if so.
         if (component.ReplaceMode)
         {
             for (var layerIdx = args.Layers.Count - 1; layerIdx >= 0; layerIdx--)
@@ -108,7 +108,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
                 }
             }
         }
-        // End DEN insert
+        // TheDen - end insert
 
         var modulateColor = AppearanceSystem.TryGetData<Color>(uid, ToggleableVisuals.Color, out var color, appearance);
 
@@ -139,7 +139,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
         if (!component.InhandVisuals.TryGetValue(args.Location, out var layers))
             return;
 
-        //DEN insert
+        // TheDen - if replace mode is on, replace the basekey layer with the new toggle layer sprite instead of just rendering it in addition to the base sprite state.
         if (component.ReplaceMode)
         {
             var baseKey = $"inhand-{args.Location.ToString().ToLowerInvariant()}";
@@ -152,7 +152,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
                 }
             }
         }
-        // End DEN insert
+        // TheDen - end insert
 
         var modulateColor = AppearanceSystem.TryGetData<Color>(uid, ToggleableVisuals.Color, out var color, appearance);
 

@@ -695,7 +695,7 @@
       amount: 5
 
 - type: entity
-  suffix: Space drugs 15u
+  suffix: Space Mirage 15u
   parent: Pill
   id: PillSpaceDrugs
   components:
