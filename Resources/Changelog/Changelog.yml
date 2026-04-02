@@ -7040,3 +7040,10 @@ Entries:
   id: 9070
   time: '2026-04-02T06:47:28.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/881
+- author: Vandanna
+  changes:
+    - type: Add
+      message: QuickPhrases for LBK and Damascus
+  id: 9071
+  time: '2026-04-02T08:36:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/883
