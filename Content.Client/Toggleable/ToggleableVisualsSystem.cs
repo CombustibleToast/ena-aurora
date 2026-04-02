@@ -96,7 +96,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
         if (layers == null && !component.ClothingVisuals.TryGetValue(args.Slot, out layers))
             return;
 
-        // DEN insert
+        // TheDen - insert
         if (component.ReplaceMode)
         {
             for (var layerIdx = args.Layers.Count - 1; layerIdx >= 0; layerIdx--)
@@ -108,7 +108,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
                 }
             }
         }
-        // End DEN insert
+        // TheDen - end insert
 
         var modulateColor = AppearanceSystem.TryGetData<Color>(uid, ToggleableVisuals.Color, out var color, appearance);
 
@@ -139,7 +139,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
         if (!component.InhandVisuals.TryGetValue(args.Location, out var layers))
             return;
 
-        //DEN insert
+        //TheDen - insert
         if (component.ReplaceMode)
         {
             var baseKey = $"inhand-{args.Location.ToString().ToLowerInvariant()}";
@@ -152,7 +152,7 @@ public sealed class ToggleableVisualsSystem : VisualizerSystem<ToggleableVisuals
                 }
             }
         }
-        // End DEN insert
+        // TheDen - end insert
 
         var modulateColor = AppearanceSystem.TryGetData<Color>(uid, ToggleableVisuals.Color, out var color, appearance);
 

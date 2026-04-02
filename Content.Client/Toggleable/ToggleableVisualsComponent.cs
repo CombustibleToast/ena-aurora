@@ -31,6 +31,6 @@ public sealed partial class ToggleableVisualsComponent : Component
     /// <summary>
     /// When true, toggle visuals will replace the base visuals instead of being added on top.
     /// </summary>
-    [DataField] //DEN change
+    [DataField] //TheDen - toggleable visuals replace mode
     public bool ReplaceMode = false;
 }

@@ -317,7 +317,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         bool bypassInsulation = false, //Den insert
         StatusEffectsComponent? statusEffects = null,
         TransformComponent? sourceTransform = null)
-    { // Den insert - selection statement ammended to make use of bypassInsulation parameter
+    { // TheDen - selection statement ammended to make use of bypassInsulation parameter
         if (!DoCommonElectrocutionAttempt(uid, sourceUid, ref siemensCoefficient, ignoreInsulation: bypassInsulation))
             return false;
 
