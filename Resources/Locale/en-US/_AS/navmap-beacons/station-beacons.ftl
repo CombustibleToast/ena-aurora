@@ -13,11 +13,13 @@ station-beacon-sle-firing-range = Firing Range
 
 station-beacon-the-alley = The Alley
 station-beacon-power-plant = Power Plant
+station-beacon-damascus = Damascus Manufactory
 station-beacon-geode = Geode
 station-beacon-asteroid = Asteroid
 station-beacon-wreck = Wreck
 station-beacon-tinnias = Tinnia's
 station-beacon-bahamas = Bahama's
+station-beacon-little-byte = Little-Byte Key
 station-beacon-barrier-station = Barrier Station
 station-beacon-trade = Trade
 station-beacon-uiv = UIV
