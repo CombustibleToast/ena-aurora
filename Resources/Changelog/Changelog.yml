@@ -7005,3 +7005,10 @@ Entries:
   id: 9067
   time: '2026-04-02T02:45:14.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/876
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added the emergency comfort deployment unit from the den, AKA Pillows.
+  id: 9068
+  time: '2026-04-02T02:45:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/878
