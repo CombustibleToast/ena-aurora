@@ -47,6 +47,7 @@
     - Supply
     - Engineering
     - Medical
+    - Shipboard
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
@@ -240,18 +241,7 @@
       blacklist:
         components:
         - RoboticsConsole # Lets them unlock other borgs
-    - type: NpcFactionMember # Below is things from its previous parenting of BaseBorgChassisSyndicate, minus antag icons, to make it not an ion storm target
-      factions:
-      - Syndicate
-    - type: Access
-      tags:
-      - NuclearOperative
-      - SyndicateAgent
-    - type: AccessReader
-      access: [["SyndicateAgent"], ["NuclearOperative"]]
-    - type: IntrinsicRadioTransmitter
-      channels:
-      - Binary
+ # Below is things from its previous parenting of BaseBorgChassisSyndicate, minus antag icons, to make it not an ion storm target
     - type: MovementAlwaysTouching
     - type: Speech
       speechSounds: SyndieBorg
@@ -265,3 +255,38 @@
       color: "#dd200b"
       radius: 8
     - type: Stripping # They have hands, let them put hats on their borgs. Or take things off people.
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        150: Critical # 50% chunkier than a standard borg
+        300: Dead
+    - type: Damageable
+      damageModifierSet: MobHostileDamageModifierSetHigh # And a smattering of light resists (I'm not sure why the modifier set is labeled 'high')
+    - type: Destructible
+      thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            path: /Audio/Machines/warning_buzzer.ogg
+            params:
+              volume: 5
+      - trigger:
+          !type:DamageTrigger
+          damage: 450
+        behaviors:
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalBreak
+        - !type:EmptyContainersBehaviour
+          containers:
+          - borg_brain
+          - borg_module
+          - cell_slot
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+    - type: NpcFactionMember # Turns out not having a faction means you are friendly to everything
+      factions:
+      - NanoTrasen

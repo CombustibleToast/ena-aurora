@@ -16,6 +16,8 @@
     - Security
     - Service
     - Supply
+    - Traffic # AS
+    - Shipboard # AS
   - type: ActiveRadio
     channels:
     - Binary
@@ -27,6 +29,8 @@
     - Security
     - Service
     - Supply
+    - Traffic # AS
+    - Shipboard # AS
   - type: IgnoreUIRange
   - type: StationAiHeld
   - type: StationAiOverlay
