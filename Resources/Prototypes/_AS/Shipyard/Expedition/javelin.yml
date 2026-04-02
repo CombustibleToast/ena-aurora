@@ -1,10 +1,10 @@
 ﻿# Author Info
 # GitHub: turtleofmen
-# Discord: turtleofmen#4301
+# Discord: turtle.obj
 
 # Maintainer Info
 # GitHub: turtleofmen
-# Discord: turtleofmen#4301
+# Discord: turtle.obj
 
 # Shuttle Notes:
 #
@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: IAC Javelin
   description: A sleek mercenary expeditionary shuttle prepped for salvage and armed deployment.
-  price: 105000
+  price: 150000
   category: Large
   group: Expedition
   shuttlePath: /Maps/_AS/Shuttles/Expedition/javelin.yml
