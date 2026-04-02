@@ -6,6 +6,7 @@
   - MobPolymorphable
   - MobCombat
   - StripableInventoryBase
+  - StorableSpecies
   id: BaseMobSpecies
   abstract: true
   components:

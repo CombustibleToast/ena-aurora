@@ -1,7 +1,7 @@
 - type: entity
   save: false
   name: Urisst' Mzhand
-  parent: [BaseMobSpeciesOrganic, StorableSpecies] # TheDen
+  parent: [BaseMobSpeciesOrganic]
   id: BaseMobReptilian
   abstract: true
   components:

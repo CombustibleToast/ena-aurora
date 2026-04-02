@@ -1,5 +1,5 @@
 - type: entity
-  parent: [BaseMobSpeciesOrganic, StorableSpecies] # TheDen
+  parent: [BaseMobSpeciesOrganic]
   id: BaseMobFeroxi
   name: Urist McFin
   save: false

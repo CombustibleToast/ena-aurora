@@ -1,7 +1,7 @@
 - type: entity
   save: false
   name: Urist McIce
-  parent: [BaseMobSpeciesOrganic, StorableSpecies]
+  parent: [BaseMobSpeciesOrganic]
   id: BaseMobSheleg
   abstract: true
   components:
