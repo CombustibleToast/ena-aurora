@@ -90,3 +90,49 @@
   products:
     Razorium: 1
 
+- type: reaction
+  id: strongHeart
+  impact: Medium
+  reactants:
+    SulfuricAcid:
+      amount: 2
+    Cryoxadone:
+      amount: 2
+    Diphenhydramine:
+      amount: 1
+    Dexalin:
+      amount: 1
+  products:
+    StrongHeartBrew: 5
+
+- type: reaction
+  id: warriorsBlood
+  impact: Medium
+  reactants:
+    SulfuricAcid:
+      amount: 2
+    Lithium:
+      amount: 1
+    Cryoxadone:
+      amount: 1
+    Mercury:
+      amount: 2
+    SalicylicAcid:
+      amount: 1
+  products:
+    WarriorsBlood: 6
+
+- type: reaction
+  id: murderDraught
+  impact: Medium
+  requiredMixerCategories:
+  - Centrifuge
+  reactants:
+    Stimulants:
+      amount: 1
+    RedMead:
+      amount: 1
+    WarriorsBlood:
+      amount: 1
+  products:
+    murderDraught: 3

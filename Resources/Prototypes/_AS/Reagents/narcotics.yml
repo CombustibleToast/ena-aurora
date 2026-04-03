@@ -204,3 +204,141 @@
         conditions:
           - !type:ReagentThreshold
             min: 13
+
+- type: reagent
+  id: ColdRage
+  name: reagent-name-cold-rage
+  group: Narcotics
+  desc: reagent-desc-cold-rage
+  physicalDesc: reagent-physical-desc-icy
+  flavor: coldDeath
+  color: "#47ffbf"
+  metabolisms:
+    Cryogenic:
+        metabolismRate: 2.5 # Sheleg seem to specifically metabolise things slower, so to compensate it has to be declared higher
+        # Secondary benefit of this is that it makes these "Sheleg drugs" less useful for non Sheleg, which is good for roleplay reasons
+        # and also makes them less universally good than the other cryo chems, which is nice for balance reasons.
+        effects:
+        - !type:MovespeedModifier
+            walkSpeedModifier: 1.5
+            sprintSpeedModifier: 1.5
+            conditions:
+            - !type:Temperature
+              max: 213.0
+            - !type:OrganType
+              type: Sheleg
+        - !type:GenericStatusEffect
+          key: Stun
+          time: 3
+          type: Remove
+        - !type:GenericStatusEffect
+          key: KnockedDown
+          time: 3
+          type: Remove
+        - !type:GenericStatusEffect
+          key: StaminaModifier
+          component: StaminaModifier
+          time: 3
+          type: Add
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectForcedSleeping
+          time: 3
+          type: Remove
+        - !type:PopupMessage
+            type: Local
+            visualType: Medium
+            messages:
+              - "reagent-effect-cold-rage1"
+              - "reagent-effect-cold-rage2"
+              - "reagent-effect-cold-rage3"
+              - "reagent-effect-cold-rage4"
+              - "reagent-effect-cold-rage5"
+              - "reagent-effect-cold-rage6"
+              - "reagent-effect-cold-rage7"
+              - "reagent-effect-cold-rage8"
+              - "reagent-effect-cold-rage9"
+            probability: 0.5
+        - !type:PopupMessage
+          type: Local
+          visualType: Small
+          messages:
+          - "reagent-effect-cold-rage-fade"
+          probability: 0.35
+          conditions:
+          - !type:ReagentThreshold
+            max: 0.5
+
+- type: reagent
+  id: Frostmjod
+  name: reagent-name-frostmjod
+  group: Narcotics
+  desc: reagent-desc-frostmjod
+  physicalDesc: reagent-physical-desc-mjod
+  flavor: frostmjod
+  color: "#b57600"
+  metabolisms:
+      Cryogenic:
+          metabolismRate: 2.5
+          effects:
+          - !type:MovespeedModifier
+              walkSpeedModifier: 1.05
+              sprintSpeedModifier: 1.05
+              conditions:
+              - !type:Temperature
+                max: 213.0
+              - !type:OrganType
+                type: Sheleg
+          - !type:SatiateThirst
+            factor: 3
+          - !type:SatiateHunger
+            factor: 3
+          - !type:GenericStatusEffect
+            key: Drunk
+            time: 2
+            type: Add
+          - !type:PopupMessage
+              type: Local
+              visualType: Medium
+              messages:
+                - "reagent-effect-frostmjod1"
+                - "reagent-effect-frostmjod2"
+                - "reagent-effect-frostmjod3"
+                - "reagent-effect-frostmjod4"
+                - "reagent-effect-frostmjod5"
+                - "reagent-effect-frostmjod6"
+                - "reagent-effect-frostmjod7"
+                - "reagent-effect-frostmjod8"
+                - "reagent-effect-frostmjod9"
+                - "reagent-effect-frostmjod10"
+              probability: 0.5
+              conditions:
+                - !type:ReagentThreshold
+                    min: 15
+
+- type: reagent
+  id: murderDraught
+  name: reagent-name-murder-draught
+  group: Narcotic
+  desc: reagent-desc-murder-draught
+  physicalDesc: reagent-physical-desc-roiling
+  flavor: murderDraught
+  color: "#ff2121"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 5.0
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.35
+        sprintSpeedModifier: 1.35
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Piercing: -3
+            Slash: -3
+            Blunt: -3
+            Poison: 1
