@@ -167,9 +167,6 @@
       - !type:AdjustReagent
         reagent: MilkingDrugs
         amount: -7
-      - !type:AdjustReagent
-        reagent: FreyjasKiss
-        amount: -7
 
 - type: reagent
   id: StrongHeartBrew
