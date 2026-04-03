@@ -7,6 +7,7 @@ reagent-name-confusiol = confusiol
 reagent-name-fairy = pixium
 reagent-name-cold-rage = cold rage elixir
 reagent-name-frostmjod = frostmjød
+reagent-name-murder-draught = murder draught
 
 reagent-desc-agony = A highly controlled substance, developed as an advanced torture method, its rare to find a place this drug is not outlawed.
 reagent-desc-scary = A dangerous poison that instills feelings of paranoia and dread in its victims. Highly illegal.
@@ -16,6 +17,7 @@ reagent-desc-confusiol = An illegal narcotic that highly impacts short term memo
 reagent-desc-fairy = The blood of fairies. A Highly regulated substance. A potent and highly saught after hallucionegenic and party drug. Highly Addictive.
 reagent-desc-cold-rage = A chilling narcotic that plunges the user into a rage, while robbing them of both physical and emotional warmth.
 reagent-desc-frostmjod = A common drink in Sheleg halls, though technicality a narcotic. Refreshing, cold, and delicious, though often it encourages the imbiber to boasting and egotistic behaviour.
+reagent-desc-murder-draught = A culturally sacred compound, highly illegal in Auroran space. It rapidly regenerates even the most grievous wounds while enhancing reaction speeds for the user, though it has a toxifying effect on the liver.
 
 reagent-effect-agony1 = It hurts.
 reagent-effect-agony2 = Your veins feel like they are on fire.
