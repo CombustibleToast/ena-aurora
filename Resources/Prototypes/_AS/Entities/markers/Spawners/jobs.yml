@@ -124,3 +124,18 @@
       - state: green
       - sprite: _AS/Markers/jobs.rsi
         state: caftrooper
+
+#region ColComm
+
+- type: entity
+  id: SpawnPointColonialCommandOfficial
+  parent: SpawnPointJobBase
+  name: ColonialCommandOfficial
+  components:
+  - type: SpawnPoint
+    job_id: ColonialCommandOfficial
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: colcom
