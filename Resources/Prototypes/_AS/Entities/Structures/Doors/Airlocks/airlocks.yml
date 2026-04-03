@@ -68,4 +68,4 @@
   suffix: Colonial Command
   components:
   - type: Sprite
-    sprite: Structures/Doors/Airlocks/Standard/colcomm.rsi
+    sprite: _AS/Structures/Doors/Airlocks/Standard/colcomm.rsi
