@@ -7070,3 +7070,10 @@ Entries:
   id: 9074
   time: '2026-04-03T07:19:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/886
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Changed ahelp audio
+  id: 9075
+  time: '2026-04-03T07:25:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/880
