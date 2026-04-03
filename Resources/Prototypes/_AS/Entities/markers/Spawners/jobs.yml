@@ -71,3 +71,56 @@
       - sprite: _AS/Markers/jobs.rsi
         state: site-worker
 
+#region CAF
+
+- type: entity
+  id: SpawnPointCAFLeader
+  parent: SpawnPointJobBase
+  name: CAFLeader
+  components:
+  - type: SpawnPoint
+    job_id: CAFLeader
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cafleader
+
+- type: entity
+  id: SpawnPointCAFEngineer
+  parent: SpawnPointJobBase
+  name: CAFEngineer
+  components:
+  - type: SpawnPoint
+    job_id: CAFEngineer
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cafengineer
+
+- type: entity
+  id: SpawnPointCAFMedical
+  parent: SpawnPointJobBase
+  name: CAFMedical
+  components:
+  - type: SpawnPoint
+    job_id: CAFMedical
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cafmedical
+
+- type: entity
+  id: SpawnPointCAFTrooper
+  parent: SpawnPointJobBase
+  name: CAFTrooper
+  components:
+  - type: SpawnPoint
+    job_id: CAFTrooper
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: caftrooper
