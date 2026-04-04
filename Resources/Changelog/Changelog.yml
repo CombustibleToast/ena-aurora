@@ -7115,3 +7115,18 @@ Entries:
   id: 9079
   time: '2026-04-04T05:02:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/873
+- author: LizArmchair, turtleofmen, emergency-ketchup, Zenixic, Haawsome,
+  changes:
+    - type: Add
+      message: 'Mapping and designing PB LizArmchair. '
+    - type: Add
+      message: >-
+        For help with mapping, room design, and technical work: turtleofmen,
+        emergency-ketchup. 
+    - type: Add
+      message: >-
+        For designing the park and helping at the start of the project: Zenixic,
+        Haawsome, .Slavie
+  id: 9080
+  time: '2026-04-04T07:37:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/894
