@@ -1,0 +1,40 @@
+- type: gameMap
+  id: PortBoreal
+  mapName: 'Port Boreal'
+  mapPath: /Maps/_AS/Outpost/portboreal.yml
+  minPlayers: 0
+  maxPlayers: 100
+  randomRotation: false
+  maxRandomOffset: 0
+  stations:
+    PortBoreal:
+      stationProto: StandardFrontierStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Port Boreal'
+#          nameGenerator:
+#            !type:NanotrasenNameGenerator
+#            prefixCreator: '14'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_AS/Icons/Stations/as-banner.png # Changeded to as-banner.png for parity with other AS POIs
+          stationSubtext: 'aurora-lobby-aurora-subtext'
+          stationDescription: 'aurora-lobby-aurora-description'
+          lobbySortOrder: 1
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ -1, -1 ]
+            Pilot: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
+            Borg: [ -1, -1 ]
+            ColonialRepresentative: [ 1, 1 ]
+            StationTrafficController: [ 1, 1 ]
+            DirectorOfCare: [ 1, 1 ]
+            SecurityGuard: [ 1, 1 ]
+            Valet: [ 1, 1 ]
+            NFJanitor: [ 1, 1 ]
+            MailCarrier: [ 1, 1 ]
+            Medic: [ 2, 2 ]
+            Service: [ 2, 2 ]
+          tags:
+          - HeadOfPersonnel
+          - HeadOfSecurity
