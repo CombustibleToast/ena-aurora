@@ -7084,3 +7084,10 @@ Entries:
   id: 9076
   time: '2026-04-03T16:42:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/888
+- author: Vandanna
+  changes:
+    - type: Add
+      message: new AS station beacons and loc strings
+  id: 9077
+  time: '2026-04-04T00:12:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/890
