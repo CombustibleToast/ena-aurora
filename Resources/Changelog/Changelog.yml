@@ -7149,3 +7149,14 @@ Entries:
   id: 9081
   time: '2026-04-04T09:02:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/895
+- author: TheLuggage05
+  changes:
+    - type: Add
+      message: Security guard now has a contraband handling license.
+    - type: Fix
+      message: >-
+        The security guard's uniform no longer references Frontier Outpost in
+        its description.
+  id: 9082
+  time: '2026-04-04T16:32:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/891
