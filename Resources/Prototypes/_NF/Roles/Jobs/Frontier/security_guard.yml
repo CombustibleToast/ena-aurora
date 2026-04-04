@@ -32,7 +32,7 @@
 - type: startingGear
   id: SecurityGuardGear
   equipment:
-    eyes: ClothingEyesGlassesSecurity # AS - give them full security glasses, as they have no locker or vendor to get them
+    eyes: ClothingEyesGlassesSecurity # Aurora's Song - give them full security glasses, as they have no locker or vendor to get them
     pocket1: ASWeaponPistolMk58SLessLethal
     pocket2: NFMagazineHighCapacityPistol35
   storage:
@@ -42,7 +42,7 @@
     - NFMagazineHighCapacityPistol35Rubber
     - ShipVoucherFrontierGuard
   licenses:
-  - LicenseContrabandHandling # AS - they should have this
+  - LicenseContrabandHandling # Aurora's Song - they should have this
   encryptionKeys: # Aurora's Song - Added traffic, shipboard, service, and security encryption keys
   - EncryptionKeyTraffic
   - EncryptionKeyShipboard
