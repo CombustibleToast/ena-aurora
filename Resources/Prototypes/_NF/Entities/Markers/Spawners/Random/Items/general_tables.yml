@@ -595,6 +595,7 @@
       - id: VendingMachineClothingPunk
       - id: VendingMachineBountyVendPunk
       - id: VendingMachineSyndieContraband
+      - id: VendingMachineSomberMantis # Aurora
 
 # region Flatpacks
 - type: entityTable

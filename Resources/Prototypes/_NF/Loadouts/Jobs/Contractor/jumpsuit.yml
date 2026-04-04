@@ -1,3 +1,29 @@
+# Aurora Song - Mantis drip merge
+- type: loadout
+  id: ContractorClothingUniformMantisLoincloth
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMantisLoincloth
+
+- type: loadout
+  id: ContractorClothingUniformMantisDark
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMantisDark
+
+- type: loadout
+  id: ContractorClothingUniformMantisOrnate
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtMantisOrnate
+
+- type: loadout
+  id: ContractorClothingUniformMantisAiry
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtMantisAiry
+# Mantis drip ends
+
 - type: loadout
   id: ContractorClothingUniformJumpsuitAtmos
   price: 200

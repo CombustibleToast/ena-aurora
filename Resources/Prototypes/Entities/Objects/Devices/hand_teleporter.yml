@@ -12,6 +12,7 @@
   - type: Tag
     tags:
     - HighRiskItem
+    - ScienceTool # TheDen
   - type: StealTarget
     stealGroup: HandTeleporter
 

@@ -1,7 +1,7 @@
 - type: entity
   save: false
   id: PlayerSiliconHumanoidBase
-  parent: [BaseMob, MobDamageable, MobCombat, MobAtmosExposed, MobFlammable]
+  parent: [BaseMob, MobDamageable, MobCombat, MobAtmosExposed, MobFlammable, StorableSpecies]
   abstract: true
   components:
     - type: ContentEye

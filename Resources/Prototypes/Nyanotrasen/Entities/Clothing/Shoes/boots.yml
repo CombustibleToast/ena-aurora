@@ -1,0 +1,19 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2024 Rane
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+- type: entity
+  parent: ClothingShoesBase
+  id: ClothingShoesBootsMantis
+  name: dated mantis boots
+  description: "Soft, comfortable, and good for rough terrain. All the company would pay for prior to the mantis equipment refresh." # TheDen
+  abstract: true # made abstract so it can be referenced without worrying about the missing sprites - Aurora Song
+  components:
+  - type: Appearance
+  - type: Tag # TheDen
+    tags:
+    - WhitelistChameleon
+    - MantisBeltStorable

@@ -7,6 +7,7 @@
   - type: StationAiWhitelist
   - type: Sprite
     sprite: Structures/Machines/jukebox.rsi
+    drawdepth: SmallObjects
     layers:
     - state: "off"
       map: ["enum.JukeboxVisualLayers.Base"]
