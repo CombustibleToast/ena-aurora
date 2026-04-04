@@ -44,8 +44,8 @@
   - type: MeleeThrowOnHit # They fly about six tiles and don't take extra impact damage when hitting walls
     speed: 10
     distance: 3
-  - type: Reflect
-    reflectProb: .2
+  - type: Reflect # Aurora: Adjust reflect to 10%
+    reflectProb: .1
     spread: 135
   - type: Fiber
     fiberColor: fibers-bluish
