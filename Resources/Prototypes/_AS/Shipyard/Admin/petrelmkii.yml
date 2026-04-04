@@ -1,0 +1,46 @@
+# Author Info
+# GitHub: Cygnall
+# Discord: Vandanna
+
+# Maintainer Info
+# GitHub: Cygnall
+# Discord: Vandanna
+
+# Shuttle Notes:
+# Admin-only shuttle for CAF deployment, for events
+- type: vessel
+  id: PetrelMkII
+  parent: BaseVessel
+  name: CNF Petrel Mk II
+  description: A heavily armed dropship. Capable of intercepting and tackling heavy threats. Can seat multiple CAF Marines.
+  price: 80000 # Arbitrary price, admin-spawned shuttle
+  category: Medium
+  group: ColonialCommand
+  access: ColonialCommand
+  shuttlePath: /Maps/_AS/Shuttles/Admin/petrelmkii.yml
+  class:
+  - Patrol
+  engine:
+  - AME
+
+- type: gameMap
+  id: PetrelMkII
+  mapName: 'Petrel Mk II'
+  mapPath: /Maps/_AS/Shuttles/Admin/petrelmkii.yml
+  minPlayers: 0
+  stations:
+    PetrelMkII:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Petrel Mk II {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ColonialCommandOfficial: [ 1, 1 ]
+            CAFLeader: [ 1, 1 ]
+            CAFTrooper: [ 2, 2 ]
+            CAFMedical: [ 2, 2 ]
+            CAFEngineer: [ 2, 2 ]
