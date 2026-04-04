@@ -55,6 +55,12 @@ dock-label-guard = Guard
 dock-label-nfsd = SLE
 dock-label-drive-thru = McDrive Thru
 
+#Aurora's Song - added bus docks numbered
+dock-label-bus-route-one = Bus 1
+dock-label-bus-route-two = Bus 2
+dock-label-bus-route-three = Bus 3
+dock-label-bus-route-four = Bus 4
+
 #Aurora's Song - added preferred docks
 dock-label-preferred-one-a = Pr-1A
 dock-label-preferred-one-b = Pr-1B
