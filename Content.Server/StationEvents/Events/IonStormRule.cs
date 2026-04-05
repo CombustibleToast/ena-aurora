@@ -41,8 +41,8 @@ public sealed class IonStormRule : StationEventSystem<IonStormRuleComponent>
         while (empAffectedQuery.MoveNext(out var ent, out var empVulnerable, out var xform))
         {
             // only affect vulnerable entities on the station
-            if(CompOrNull<StationMemberComponent>(xform.GridUid)?.Station != chosenStation)
-                continue;
+            // if(CompOrNull<StationMemberComponent>(xform.GridUid)?.Station != chosenStation)
+            //     continue; Aurora's Song - removed as it does not pertain to shuttle fork.
 
             _empVulnerable.IonStormTarget((ent, empVulnerable));
         }

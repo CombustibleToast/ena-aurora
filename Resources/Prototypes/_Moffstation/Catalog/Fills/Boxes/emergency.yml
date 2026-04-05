@@ -1,5 +1,5 @@
 - type: entity
-  parent: BoxSurvivalEmpty
+  parent: BoxSurvival
   id: BoxSurvivalAmmonia
   name: survival box
   description: It's a box with basic internals inside.
@@ -11,7 +11,7 @@
     - id: EmergencyOxygenTankFilled
     - id: EmergencyMedipen
     - id: Flare
-    - id: BookHowToSurvive 
+    - id: BookHowToSurvive
     - id: DrinkAmmoniaBottleFull
   - type: Sprite
     layers:
@@ -19,19 +19,19 @@
     - state: emergencytank
 
 - type: entity
-  parent: BoxSurvivalEmpty 
+  parent: BoxSurvival
   id: BoxSurvivalEngineeringAmmonia
-  name: extended-capacity survival box 
+  name: extended-capacity survival box
   description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.
   suffix: Extended, Ammonia
   components:
   - type: StorageFill
     contents:
-    - id: ClothingMaskGas 
+    - id: ClothingMaskGas
     - id: ExtendedEmergencyOxygenTankFilled
     - id: EmergencyMedipen
     - id: Flare
-    - id: BookHowToSurvive 
+    - id: BookHowToSurvive
     - id: DrinkAmmoniaBottleFull
   - type: Sprite
     layers:
@@ -39,7 +39,7 @@
     - state: extendedtank
 
 - type: entity
-  parent: BoxSurvivalEmpty
+  parent: BoxSurvival
   id: BoxSurvivalSecurityAmmonia
   name: survival box
   description: It's a box with basic internals inside.
@@ -59,7 +59,7 @@
     - state: emergencytank
 
 - type: entity
-  parent: BoxSurvivalEmpty
+  parent: BoxSurvival
   id: BoxSurvivalMedicalAmmonia
   name: survival box
   description: It's a box with basic internals inside.
@@ -79,7 +79,7 @@
     - state: emergencytank
 
 - type: entity
-  parent: BoxSurvivalEmpty
+  parent: BoxSurvival
   id: BoxHugAmmonia
   name: box of hugs
   description: A special box for sensitive people.
@@ -104,7 +104,7 @@
     - BoxHug
 
 - type: entity
-  parent: BoxSurvivalEmpty
+  parent: BoxSurvival
   id: BoxMimeAmmonia
   suffix: Mime, Emergency, Ammonia
   components:
@@ -118,7 +118,7 @@
     - id: DrinkAmmoniaBottleFull
 
 - type: entity
-  parent: BoxSurvivalEmpty
+  parent: BoxSurvival
   id: BoxSurvivalSyndicateAmmonia
   name: extended-capacity survival box
   description: It's a box with basic internals inside. This one is labelled to contain an extended-capacity tank.

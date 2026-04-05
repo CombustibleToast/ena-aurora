@@ -39,4 +39,15 @@
   storage:
     back:
     - ASBoxSurvivalExtendedFeroxi
+
+- type: loadout
+  id: SLEBoxSurvivalSLEAvali
+  name: extended-water-vapor survival box
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ASAmmoniaDrinker
+  storage:
+    back:
+    - ASBoxSurvivalExtendedAvali
+
 # End Aurora Song
