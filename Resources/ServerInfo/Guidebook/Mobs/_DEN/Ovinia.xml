@@ -1,7 +1,7 @@
 <Document>
   # Ovinia
 
-
+<!-- Aurora's Song - Removed animal friend trait mentioning -->
   <Box>
     <GuideEntityEmbed Entity="MobOviniaDummy" Caption=""/>
   </Box>
@@ -10,7 +10,6 @@
   - They take 25% less heat and blunt damage due to their insulating wool, and are 25% less flammable
   - They digest food at a slower rate, becoming hungry and thirsty 25% slower
   - Their hooved feet protect them from shards of glass and sharp floor hazards
-  - Their docile attitudes and aptitude for nature have led most animals to be friendly towards them
 
   ## Downsides
   - They take 15% increased slash and pierce damage.
