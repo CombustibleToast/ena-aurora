@@ -217,16 +217,16 @@
       - !type:SatiateThirst
         factor: 4
         conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Avali ]
+        - !type:OrganType
+          type: Avali
     # Moffstation end
     Poison:
       effects:
       - !type:HealthChange
         # Moffstation start - Allow avali to drink ammonia
         conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Avali ]
+        - !type:OrganType
+          type: Avali
           shouldHave: false
         # Moffstation end
         damage:
@@ -318,8 +318,8 @@
       - !type:SatiateThirst
         factor: 2
         conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Avali ]
+        - !type:OrganType
+          type: Avali
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
@@ -329,8 +329,8 @@
       - !type:HealthChange
         # Moffstation start - Allow avali to drink ammonia
         conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Avali ]
+        - !type:OrganType
+          type: Avali
           shouldHave: false
         # Moffstation end
         damage:
