@@ -136,7 +136,7 @@
   id: ASLockerSLECommissioner
   parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, ASLockerBaseSecure, LockerHeadOfSecurity]
   name: SLE locker
-  suffix: Sheriff
+  suffix: Commissioner
   components:
   - type: EntityStorageVisuals
     stateBaseClosed: sle_sheriff

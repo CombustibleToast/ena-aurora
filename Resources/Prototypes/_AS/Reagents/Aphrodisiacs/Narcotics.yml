@@ -92,7 +92,7 @@
   flavor: milk
   color: "#FFFFD4"
   metabolisms:
-    Narcotic:
+    Cryogenic:
       metabolismRate : 0.03 #One 5u dose is 2.7 minutes
       effects:
       - !type:PopupMessage
@@ -109,3 +109,90 @@
           - !type:Consent # Aurora Song
             effectTypes:
               - Aphrodisiacs
+
+- type: reagent
+  id: FreyjasKiss
+  name: reagent-name-freyjas-kiss
+  group: Aphrodisiacs
+  desc: reagent-desc-freyjas-kiss
+  physicalDesc: reagent-physical-desc-sparkly
+  flavor: fruity
+  color: "#51c955"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 0.2 #Sheleg are going to process this at like, 0.04. So it's going to last nearly 2 minutes for 5u
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+        - "reagent-effect-freyja-low1"
+        - "reagent-effect-freyja-low2"
+        - "reagent-effect-freyja-low3"
+        - "reagent-effect-freyja-low4"
+        - "reagent-effect-freyja-low5"
+        - "reagent-effect-freyja-low6"
+        - "reagent-effect-freyja-low7"
+        probability: 0.05
+        conditions:
+        - !type:ReagentThreshold
+          min: 1
+          max: 10
+        - !type:Consent
+          effectTypes:
+          - Aphrodisiacs
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages:
+        - "reagent-effect-freyja-med1"
+        - "reagent-effect-freyja-med2"
+        - "reagent-effect-freyja-med3"
+        - "reagent-effect-freyja-med4"
+        - "reagent-effect-freyja-med5"
+        - "reagent-effect-freyja-med6"
+        - "reagent-effect-freyja-med7"
+        probability: 0.09
+        conditions:
+        - !type:ReagentThreshold
+          min: 11
+          max: 30
+        - !type:Consent
+          effectTypes:
+          - Aphrodisiacs
+      - !type:PopupMessage
+        type: Local
+        visualType: MediumCaution
+        messages:
+        - "reagent-effect-freyja-high1"
+        - "reagent-effect-freyja-high2"
+        - "reagent-effect-freyja-high3"
+        - "reagent-effect-freyja-high4"
+        - "reagent-effect-freyja-high5"
+        - "reagent-effect-freyja-high6"
+        probability: 0.1
+        conditions:
+        - !type:ReagentThreshold
+          min: 31
+          max: 40
+        - !type:Consent
+          effectTypes:
+          - Aphrodisiacs
+      - !type:PopupMessage
+        type: Local
+        visualType: LargeCaution
+        messages:
+        - "reagent-effect-freyja-od1"
+        - "reagent-effect-freyja-od2"
+        - "reagent-effect-freyja-od3"
+        - "reagent-effect-freyja-od4"
+        - "reagent-effect-freyja-od5"
+        - "reagent-effect-freyja-od6"
+        - "reagent-effect-freyja-od7"
+        probability: 0.2
+        conditions:
+        - !type:ReagentThreshold
+          min: 41
+        - !type:Consent
+          effectTypes:
+          - Aphrodisiacs

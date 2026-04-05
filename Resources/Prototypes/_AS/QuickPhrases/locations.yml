@@ -35,12 +35,22 @@
   id: ASLeoLocationOutpostPhrase
   text: station-beacon-outpost
 
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationLittleBytePhrase
+  text: station-beacon-little-byte
+
 # Engineering
 
 - type: quickPhrase
   parent: BaseEngineeringLocationPhrase
   id: LocationPowerPlantPhrase
   text: station-beacon-power-plant
+
+- type: quickPhrase
+  parent: BaseEngineeringLocationPhrase
+  id: LocationDamascusPhrase
+  text: station-beacon-damascus
 
 # Science/Mining
 

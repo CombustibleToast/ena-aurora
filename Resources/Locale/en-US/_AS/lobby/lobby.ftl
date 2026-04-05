@@ -1,6 +1,15 @@
 aurora-lobby-arrivals-subtext = A safe spawn point, far away from danger.
 aurora-lobby-arrivals-description = A guaranteed backup location for arrivals to the sector. When all else is burnt, this will remain.
 
+# Station Menu
+aurora-lobby-aurora-subtext = Main hub for Auroran space.
+aurora-lobby-aurora-description = Awaken from cryosleep here to:
+   - Start your own crew and become a captain
+   - Find a crew to join
+   - Purchase ships
+   - Socialize with other Aurorans
+ {"["}color=gray]Some of the roles on this station are [color=lightblue]whitelist-only[/color] and require an application in the Discord to be accepted.[/color]
+
 aurora-lobby-alley-subtext = A station in a hollowed-out rock for people of all kinds to gather.
 aurora-lobby-alley-description = This is a place to acquire equipment and make deals. Here you can:
    - Start a mercenary crew

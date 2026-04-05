@@ -173,6 +173,8 @@
       children:
       - id: ClothingOuterArmorHeavy
       - id: ClothingOuterVestWeb
+      - id: ClothingOuterCoatMantisOrnate # Aurora: Rare find
+      - id: ClothingOuterWinterCoatMantisMu # Aurora: Rare find
 
 - type: entityTable
   id: TableDungeonLootMercenaryShields

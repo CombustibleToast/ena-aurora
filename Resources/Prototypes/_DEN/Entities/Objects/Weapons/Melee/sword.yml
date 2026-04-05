@@ -1,3 +1,9 @@
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 MajorMoth
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
 - type: entity
   name: antique greatsword
   parent: BaseSword
@@ -68,3 +74,197 @@
     slots:
     - Back
     - suitStorage
+
+- type: entity # Please expect this to need rebalancing...
+  parent: BaseSword # Aurora: Remove psionic and mantis contra
+  id: MantisMeleeGreatsword # The risk/reward option, highly likely to knock you on your ass and get you killed, extremely difficult to use effectively
+  name: faust # Part of the reason it's so punishing, aside from the challenge, is because antags could possibly use it against psions - it needs to be unreliable
+  description: "A mnemolith greatsword whose unstable resonance makes it treacherous to wield. It must be properly wielded--without absolute focus, the blade resists. Unmatched against psionic and otherworldly threats." # Aurora: Adjusted description
+  components: # Yes the description is long, but players must understand how it works from description alone, and I want it to remain in-universe
+  - type: Grammar # Faust is its name
+    attributes:
+      proper: true
+  #- type: AntiPsionicWeapon
+  #  punish: true # It'll hurt you if you hit anything non-psionic (a mouse, a wall, etc.)
+  #  punishChances: 1 # Every time
+  #  punishSelfDamage: 35 # It hits you as hard as you would've hit a psion, because you're psionic
+  #  punishStunDuration: 5 # And it stuns you like a noospheric storm
+  - type: MeleeRequiresWield
+    #fumbleOnAttempt: true # It'll also stun you if you try to swing it one-handed
+  - type: Wieldable
+    wieldSound:
+      path: /Audio/_DEN/Weapons/Melee/faustwield.ogg
+      params:
+        volume: -2
+        variation: 0.05
+    unwieldSound:
+      path: /Audio/_DEN/Weapons/Melee/faustunwield.ogg
+      params:
+        volume: -2
+        variation: 0.05
+    useDelayOnWield: false # Aurora
+  - type: MeleeWeapon
+    attackRate: 1 # Aurora: Adjusted from 1.5
+    range: 1.85
+    wideAnimationRotation: -120 # Swing that thing
+    damage:
+      types:
+        Slash: 30 # 18.66 DPS (same as CaptainSabre), or 23.33 DPS against psions (but if you miss, it hits you hard) # Aurora: Up that to 30 dps, t5
+        Holy: 20 # 40 total DPS against psionic supernaturals (no way are you landing every left click on a simplemob) # Doesn't do much on aurora, but its good flavor
+        Structural: 30 # 20 structural DPS (but it'll only hurt psionic objects since it can't be thrown)
+    soundHit:
+      path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
+      params:
+        volume: -2
+        variation: 0.05
+    soundSwing:
+      path: /Audio/_DEN/Weapons/Melee/faustmiss.ogg
+      params:
+        volume: -2
+        variation: 0.05
+    soundNoDamage:
+      path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
+      params:
+        volume: -2
+        variation: 0.05
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        #staminaCost: 80 # Throwing it will nearly stun you, unless your species or traits let you do it, but then you'll still be extremely slow and unarmed #Aurora: Commented out
+        Slash: 30 # Aurora: Added throwing damage
+        Holy: 20
+  - type: EmbeddableProjectile
+    sound:
+      path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
+      params:
+        volume: -2
+        variation: 0.05
+    #removalTime: 2
+  #- type: EmbedPassiveDamage # If people use this to cheese, remove it # As: Commented out
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/_DEN/Weapons/Melee/fausthit.ogg
+      params:
+        volume: -2
+        variation: 0.05
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatsword.rsi
+    state: icon
+  - type: Item
+    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatsword-inhands-64x.rsi
+    size: Ginormous # This doesn't go inside anything except its sheath
+    storedSprite:
+      state: icon
+      sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatsword.rsi # Same sprite, just rotated, because it looks wrong otherwise
+  - type: ThrowingAngle
+    angle: -135
+  - type: MeleeThrowOnHit # Just a tiny knockback to look cool, barely moves anything
+    speed: 6
+    distance: 3
+   # lifetime: 0.05
+  - type: UseDelay # Aurora
+    delay: 3 # Aurora
+  - type: UseDelayOnMeleeHit # Aurora
+  - type: Reflect # A little gift for being brave
+    reflectProb: .25
+    spread: 90
+  - type: Tag
+    tags:
+    - MantisGreatsword
+
+- type: entity
+  parent: [BaseItem, BaseFoldable]
+  id: MantisMeleeGreatswordSheath # A suitstorage sheath for Faust, in this file because it's basically part of the sword
+  name: foreboding scabbard
+  suffix: Faust, Empty
+  description: "A heavy scabbard reinforced with mu-metal bands that cross over its ornamental eyes, likely as a warning. This psionically insulating metal is only used to contain weapons that would otherwise recoil violently against their housing when drawn. Its stillness feels wrong, as if the scabbard itself is holding its breath. So heavy it can only be worn over outerwear--and the weapon within so long it must be drawn with telekinesis."
+  components:
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-straps-verb
+    unfoldVerbText: unfold-straps-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped # This should've always been "folded" to play nicer with BaseFoldable
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatswordsheath.rsi
+    layers:
+    - state: icon
+      map: ["unfoldedLayer"]
+    - state: icon-flipped
+      map: ["foldedLayer"]
+      visible: false
+  - type: Item
+    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatswordsheath.rsi
+    size: Ginormous
+  - type: Clothing
+ #   quickEquip: true
+ #   equipDelay: 0.5
+ #   unequipDelay: 0.5
+    slots:
+    - suitStorage
+  - type: ThrowingAngle
+    angularVelocity: true
+  - type: EmitSoundOnThrow
+    sound:
+      path: /Audio/_DEN/Weapons/Melee/bigswoosh.ogg
+      params:
+        volume: -3
+        variation: 0.05
+  - type: EmitSoundOnLand
+    sound:
+      path: /Audio/Effects/metal_slam1.ogg
+      params:
+        volume: -3
+        pitch: 0.9
+        variation: 0.05
+  - type: EmitSoundOnCollide
+    sound:
+      path: /Audio/Effects/metal_slam4.ogg
+      params:
+        volume: -6
+        pitch: 1.1
+        variation: 0.05
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      mantisgreatsword: !type:ContainerSlot {}
+  - type: ItemSlots
+    slots:
+      mantisgreatsword:
+        name: clothing-suitstorage-mantisgreatsword
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound:
+          path: /Audio/_DEN/Weapons/Melee/faustsheath.ogg
+          params:
+            volume: -2
+            variation: 0.05
+        ejectSound:
+          path: /Audio/_DEN/Weapons/Melee/faustunsheath.ogg
+          params:
+            volume: -2
+            variation: 0.05
+        whitelist:
+          tags:
+          - MantisGreatsword
+        priority: 3
+  - type: ItemMapper
+    mapLayers:
+      mantisgreatsword:
+        whitelist:
+          tags:
+          - MantisGreatsword
+    sprite: _DEN/Objects/Weapons/Melee/Mantis/mantisgreatswordsheath.rsi
+
+
+- type: entity
+  parent: MantisMeleeGreatswordSheath
+  id: MantisMeleeGreatswordSheathFilled
+  suffix: Faust, Filled, DO NOT MAP
+  components:
+  - type: ContainerFill
+    containers:
+      mantisgreatsword:
+      - MantisMeleeGreatsword

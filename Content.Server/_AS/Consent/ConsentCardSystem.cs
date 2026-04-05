@@ -22,6 +22,7 @@ public sealed class ConsentCardSystem : SharedConsentCardSystem
     [Dependency] private readonly IChatManager _chat = default!;
     [Dependency] private readonly IAdminManager _admin = default!;
     [Dependency] private readonly IPlayerManager _player = default!;
+    private readonly SoundPathSpecifier _alertSound = new("/Audio/Effects/adminhelp.ogg");
 
     public override void Initialize()
     {
@@ -35,9 +36,9 @@ public sealed class ConsentCardSystem : SharedConsentCardSystem
         if (session.AttachedEntity is not { } playerEnt)
         {
             Log.Error($"{ev.PlayerId} attempted to raise {ev.CardId} card but could not find an attached entity.");
-            _adminLog.Add(LogType.Consent, LogImpact.Extreme,$"{ev.PlayerId} attempted to raise {ev.CardId} card but could not find an attached entity.");
+            _adminLog.Add(LogType.Consent, LogImpact.Extreme, $"{ev.PlayerId} attempted to raise {ev.CardId} card but could not find an attached entity.");
             _chat.SendAdminAlert(Loc.GetString("unknown-consent-card-admin-message", ("player", session.Name), ("type", ev.CardId)));
-            _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/adminhelp.ogg"), Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
+            _audio.PlayGlobal(_alertSound, Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
             return;
         }
 
@@ -50,7 +51,7 @@ public sealed class ConsentCardSystem : SharedConsentCardSystem
             Log.Error($"{ev.PlayerId} attempted to raise {ev.CardId} card but was not recognized as a consent card.");
             _adminLog.Add(LogType.Consent, LogImpact.Extreme, $"{ev.PlayerId} attempted to raise {ev.CardId} card but was not recognized as a consent card.");
             _chat.SendAdminAlert(Loc.GetString("unknown-consent-card-admin-message", ("player", session.Name), ("type", ev.CardId)));
-            _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/adminhelp.ogg"), Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
+            _audio.PlayGlobal(_alertSound, Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
             return;
         }
 
@@ -72,7 +73,7 @@ public sealed class ConsentCardSystem : SharedConsentCardSystem
             hideChat: false,
             client: session.Channel);
 
-        _audio.PlayGlobal(new SoundPathSpecifier("/Audio/Effects/adminhelp.ogg"), Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
+        _audio.PlayGlobal(_alertSound, Filter.Empty().AddPlayers(_admin.ActiveAdmins), false);
         _popup.PopupPredicted(string.Empty, Loc.GetString(cardComp.PopupMessage), playerEnt, playerEnt, PopupType.MediumCaution);
     }
 }

@@ -100,3 +100,41 @@
   - type: ContainerFill
     containers:
       board: [ DoorElectronicsSecurity ]
+
+#region Colonial Command
+
+- type: entity
+  parent: AirlockColonialCommand
+  id: AirlockColonialCommandLocked
+  suffix: Colonial Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsColonialCommand ]
+
+- type: entity
+  parent: AirlockColonialCommandGlass
+  id: AirlockColonialCommandGlassLocked
+  suffix: Colonial Command, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsColonialCommand ]
+
+- type: entity
+  id: AirlockShuttleColonialCommandLocked
+  parent: AirlockShuttle
+  suffix: Docking, Colonial Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsColonialCommand ]
+
+- type: entity
+  id: AirlockGlassShuttleColonialCommandLocked
+  parent: AirlockGlassShuttle
+  suffix: Glass, Docking, Colonial Command, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsColonialCommand ]

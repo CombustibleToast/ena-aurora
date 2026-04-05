@@ -61,6 +61,23 @@
   - type: Item
     sprite: _AS/Objects/Misc/stamps.rsi
 
+- type: entity
+  parent: RubberStampBase
+  id: ASRubberStampColonialCommand
+  name: colonial command's rubber stamp
+  description: A rubber stamp for stamping important colonial documents.
+  suffix: DO NOT MAP
+  components:
+  - type: Stamp
+    stampedName: stamp-component-stamped-name-colonial-command
+    stampState: "paper_stamp-as-colonial-representative"
+    stampedColor: "#1C4D8D"
+  - type: Sprite
+    sprite: _AS/Objects/Misc/stamps.rsi
+    state: stamp-colcom
+  - type: Item
+    sprite: _AS/Objects/Misc/stamps.rsi
+
 #region Engineering
 
 - type: entity

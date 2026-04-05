@@ -2,3 +2,8 @@
   parent: JetpackBlue
   id: ASJetpackSLE
   result: ASJetpackSLE
+
+- type: latheRecipe
+  id: ClothingNeckBodyCameraSLE
+  parent: ClothingNeckBodyCamera
+  result: ClothingNeckBodyCameraSLEOff

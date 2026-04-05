@@ -59,3 +59,21 @@
   components:
   - type: DoorBolt
     boltsDown: True
+
+#region Colonial Command
+
+- type: entity
+  parent: AirlockCommand # if you get centcom door somehow it counts as command, also inherit panel
+  id: AirlockColonialCommand
+  suffix: Colonial Command
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Standard/colcomm.rsi
+
+- type: entity
+  parent: AirlockCommandGlass # if you get centcom door somehow it counts as command, also inherit panel
+  id: AirlockColonialCommandGlass
+  suffix: Colonial Command
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Glass/colcomm.rsi

@@ -109,3 +109,34 @@
   - type: NavMapBeacon
     defaultText: station-beacon-sle-firing-range
     color: "#687ea6"
+
+#region Shipyards
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraMercShipyard
+  suffix: Merc Shipyard
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-merc-shipyard
+    color: "#5e7c16"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraMedicalShipyard
+  suffix: Medical Shipyard
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-medical-shipyard
+    color: "#57b8f0"
+
+#region Command
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraColRepOffice
+  suffix: Col Rep's Office
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-colonial-representative
+    color: "#1C4D8D"

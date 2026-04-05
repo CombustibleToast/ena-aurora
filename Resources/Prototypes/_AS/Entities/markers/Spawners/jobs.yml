@@ -71,3 +71,71 @@
       - sprite: _AS/Markers/jobs.rsi
         state: site-worker
 
+#region CAF
+
+- type: entity
+  id: SpawnPointCAFLeader
+  parent: SpawnPointJobBase
+  name: CAF Leader
+  components:
+  - type: SpawnPoint
+    job_id: CAFLeader
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cafleader
+
+- type: entity
+  id: SpawnPointCAFEngineer
+  parent: SpawnPointJobBase
+  name: CAF Engineer
+  components:
+  - type: SpawnPoint
+    job_id: CAFEngineer
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cafengineer
+
+- type: entity
+  id: SpawnPointCAFMedical
+  parent: SpawnPointJobBase
+  name: CAF Medical
+  components:
+  - type: SpawnPoint
+    job_id: CAFMedical
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cafmedical
+
+- type: entity
+  id: SpawnPointCAFTrooper
+  parent: SpawnPointJobBase
+  name: CAF Trooper
+  components:
+  - type: SpawnPoint
+    job_id: CAFTrooper
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: caftrooper
+
+#region ColComm
+
+- type: entity
+  id: SpawnPointColonialCommandOfficial
+  parent: SpawnPointJobBase
+  name: Colonial Command Official
+  components:
+  - type: SpawnPoint
+    job_id: ColonialCommandOfficial
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: colcom

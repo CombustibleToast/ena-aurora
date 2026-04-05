@@ -326,7 +326,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         RefreshState(shipyardConsoleUid, bank.Balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
     }
 
-    private void TryParseShuttleName(ShuttleDeedComponent deed, string name)
+    public static void TryParseShuttleName(ShuttleDeedComponent deed, string name) // Aurora's Song - Make public and static so we can use it in the deed system
     {
         // The logic behind this is: if a name part fits the requirements, it is the required part. Otherwise it's the name.
         // This may cause problems but ONLY when renaming a ship. It will still display properly regardless of this.
@@ -371,6 +371,13 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         if (!TryComp<BankAccountComponent>(player, out var bank))
         {
             ConsolePopup(player, Loc.GetString("shipyard-console-no-bank"));
+            PlayDenySound(player, uid, component);
+            return;
+        }
+
+        if (!deed.Sellable) // Aurora's Song - Handle non-sellable ships
+        {
+            ConsolePopup(player, Loc.GetString("shipyard-console-unsellable-station"));
             PlayDenySound(player, uid, component);
             return;
         }

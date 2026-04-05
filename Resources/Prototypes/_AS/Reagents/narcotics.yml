@@ -1,0 +1,344 @@
+﻿- type: reagent
+  id: ScaryDrugs
+  name: reagent-name-scary
+  group: Narcotics
+  desc: reagent-desc-scary
+  physicalDesc: reagent-physical-desc-inky
+  flavor: spooky
+  color: "#A77C8B"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.05
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-scary1"
+          - "reagent-effect-scary2"
+          - "reagent-effect-scary3"
+          - "reagent-effect-scary4"
+          - "reagent-effect-scary5"
+          - "reagent-effect-scary6"
+          - "reagent-effect-scary7"
+          - "reagent-effect-scary8"
+        probability: 0.1
+
+- type: reagent
+  id: Agony
+  name: reagent-name-agony
+  group: Narcotics
+  desc: reagent-desc-agony
+  physicalDesc: reagent-physical-desc-necrotic
+  flavor: sharp
+  color: "#412663"
+  metabolisms:
+    Medicine:
+      metabolismRate : 0.1
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-agony1"
+          - "reagent-effect-agony2"
+          - "reagent-effect-agony3"
+          - "reagent-effect-agony4"
+          - "reagent-effect-agony5"
+          - "reagent-effect-agony6"
+          - "reagent-effect-agony7"
+          - "reagent-effect-agony8"
+        probability: 0.5
+        conditions:
+          - !type:ReagentThreshold
+            max: 30
+      - !type:HealthChange
+        conditions:
+        damage:
+          types:
+            Poison: 0.01
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+
+- type: reagent
+  id: Serenity
+  name: reagent-name-serenity
+  group: Narcotics
+  desc: reagent-desc-serenity
+  physicalDesc: reagent-physical-desc-inky
+  flavor: hope
+  color: "#55B82E"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.05
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-serenity1"
+          - "reagent-effect-serenity2"
+          - "reagent-effect-serenity3"
+          - "reagent-effect-serenity4"
+          - "reagent-effect-serenity5"
+        probability: 0.1
+
+- type: reagent
+  id: Confusiol
+  name: reagent-name-confusiol
+  group: Narcotics
+  desc: reagent-desc-confusiol
+  physicalDesc: reagent-physical-desc-inky
+  flavor: mindful
+  color: "#A77C8B"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.5
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-confusiol1"
+          - "reagent-effect-confusiol2"
+          - "reagent-effect-confusiol3"
+          - "reagent-effect-confusiol4"
+          - "reagent-effect-confusiol5"
+        probability: 0.1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.9
+        sprintSpeedModifier: 0.9
+
+- type: reagent
+  id: Breakdown
+  name: reagent-name-breakdown
+  group: Narcotics
+  desc: reagent-desc-breakdown
+  physicalDesc: reagent-physical-desc-acrid
+  flavor: spooky
+  color: "#363B4D"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.1
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.35
+        sprintSpeedModifier: 0.35
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 0.3
+      - !type:ChemVomit
+        probability: 0.07
+      - !type:Drunk
+        boozePower: 5
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-breakdown1"
+          - "reagent-effect-breakdown2"
+          - "reagent-effect-breakdown3"
+          - "reagent-effect-breakdown4"
+          - "reagent-effect-breakdown5"
+        probability: 0.5
+
+- type: reagent
+  id: FairyBlood
+  name: reagent-name-fairy
+  group: Narcotics
+  desc: reagent-desc-fairy
+  physicalDesc: reagent-physical-desc-sparkly
+  flavor: magical
+  color: "#D05183"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.5
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 16
+        type: Add
+        refresh: false
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-fairy1"
+          - "reagent-effect-fairy2"
+          - "reagent-effect-fairy3"
+          - "reagent-effect-fairy4"
+          - "reagent-effect-fairy5"
+          - "reagent-effect-fairy6"
+          - "reagent-effect-fairy7"
+          - "reagent-effect-fairy8"
+        probability: 0.5
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages:
+          - "reagent-effect-fairy-fade"
+        probability: 0.35
+        conditions:
+          - !type:ReagentThreshold
+            max: 0.5
+      - !type:Drunk
+        slurSpeech: false
+        boozePower: 20
+        conditions:
+          - !type:ReagentThreshold
+            min: 13
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: ScrambledAccent
+        conditions:
+          - !type:ReagentThreshold
+            min: 13
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        conditions:
+          - !type:ReagentThreshold
+            min: 13
+
+- type: reagent
+  id: ColdRage
+  name: reagent-name-cold-rage
+  group: Narcotics
+  desc: reagent-desc-cold-rage
+  physicalDesc: reagent-physical-desc-icy
+  flavor: coldDeath
+  color: "#47ffbf"
+  metabolisms:
+    Cryogenic:
+        metabolismRate: 2.5 # Sheleg seem to specifically metabolise things slower, so to compensate it has to be declared higher
+        # Secondary benefit of this is that it makes these "Sheleg drugs" less useful for non Sheleg, which is good for roleplay reasons
+        # and also makes them less universally good than the other cryo chems, which is nice for balance reasons.
+        effects:
+        - !type:MovespeedModifier
+            walkSpeedModifier: 1.5
+            sprintSpeedModifier: 1.5
+            conditions:
+            - !type:Temperature
+              max: 213.0
+            - !type:OrganType
+              type: Sheleg
+        - !type:GenericStatusEffect
+          key: Stun
+          time: 3
+          type: Remove
+        - !type:GenericStatusEffect
+          key: KnockedDown
+          time: 3
+          type: Remove
+        - !type:GenericStatusEffect
+          key: StaminaModifier
+          component: StaminaModifier
+          time: 3
+          type: Add
+        - !type:ModifyStatusEffect
+          effectProto: StatusEffectForcedSleeping
+          time: 3
+          type: Remove
+        - !type:PopupMessage
+            type: Local
+            visualType: Medium
+            messages:
+              - "reagent-effect-cold-rage1"
+              - "reagent-effect-cold-rage2"
+              - "reagent-effect-cold-rage3"
+              - "reagent-effect-cold-rage4"
+              - "reagent-effect-cold-rage5"
+              - "reagent-effect-cold-rage6"
+              - "reagent-effect-cold-rage7"
+              - "reagent-effect-cold-rage8"
+              - "reagent-effect-cold-rage9"
+            probability: 0.5
+        - !type:PopupMessage
+          type: Local
+          visualType: Small
+          messages:
+          - "reagent-effect-cold-rage-fade"
+          probability: 0.35
+          conditions:
+          - !type:ReagentThreshold
+            max: 0.5
+
+- type: reagent
+  id: Frostmjod
+  name: reagent-name-frostmjod
+  group: Narcotics
+  desc: reagent-desc-frostmjod
+  physicalDesc: reagent-physical-desc-mjod
+  flavor: frostmjod
+  color: "#b57600"
+  metabolisms:
+      Cryogenic:
+          metabolismRate: 2.5
+          effects:
+          - !type:MovespeedModifier
+              walkSpeedModifier: 1.05
+              sprintSpeedModifier: 1.05
+              conditions:
+              - !type:Temperature
+                max: 213.0
+              - !type:OrganType
+                type: Sheleg
+          - !type:SatiateThirst
+            factor: 3
+          - !type:SatiateHunger
+            factor: 3
+          - !type:GenericStatusEffect
+            key: Drunk
+            time: 2
+            type: Add
+          - !type:PopupMessage
+              type: Local
+              visualType: Medium
+              messages:
+                - "reagent-effect-frostmjod1"
+                - "reagent-effect-frostmjod2"
+                - "reagent-effect-frostmjod3"
+                - "reagent-effect-frostmjod4"
+                - "reagent-effect-frostmjod5"
+                - "reagent-effect-frostmjod6"
+                - "reagent-effect-frostmjod7"
+                - "reagent-effect-frostmjod8"
+                - "reagent-effect-frostmjod9"
+                - "reagent-effect-frostmjod10"
+              probability: 0.5
+              conditions:
+                - !type:ReagentThreshold
+                    min: 15
+
+- type: reagent
+  id: murderDraught
+  name: reagent-name-murder-draught
+  group: Narcotic
+  desc: reagent-desc-murder-draught
+  physicalDesc: reagent-physical-desc-roiling
+  flavor: murderDraught
+  color: "#ff2121"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 5.0
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.35
+        sprintSpeedModifier: 1.35
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Piercing: -3
+            Slash: -3
+            Blunt: -3
+            Poison: 1

@@ -1,3 +1,108 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Fluffiest Floofers
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2024 Debug
+# SPDX-FileCopyrightText: 2024 Rane
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 Skubman
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingBeltStorageBase # If Epistemics needs their own belts, it should be a different item, really
+  id: ClothingBeltMantis
+  name: dated mantis belt # TheDen
+  description: "A structured, layered sash designed to carry mantis equipment. All the company would pay for prior to the mantis equipment refresh, but it does have sheaths for certain weapons." # TheDen
+  abstract: true # made abstract so it can be referenced without worrying about the missing sprites - Aurora Song
+  components:
+  - type: Storage # Aurora: Change storage to match other aurora belts
+    maxItemSize: Normal
+    defaultStorageOrientation: Vertical
+    grid:
+    - 0,0,7,1
+    #whitelist: # Aurora: Remove belt whitelist
+    #  tags:
+    #    - Folder
+    #    - Document
+    #    - Write
+    #    - HandLabeler
+    #    - Flashlight
+    #    - Syringe # TheDen
+    #    - Bottle # TheDen
+    #    - PillCanister # TheDen
+    #    - Pill # TheDen
+    #    - Flash # TheDen
+    #    - ScienceTool # TheDen
+    #    - MantisBeltStorable # TheDen - Only to be used for mantis-specific items
+        # - ForensicBeltEquip # TheDen - The old name of the mantis belt's whitelist tag, now made more clear
+        # - Sidearm # TheDen - Only tagged mantis weapons will fit inside
+      # components: # TheDen - Doing it this way makes these items fit only if you click them onto the belt sprite itself...
+        # - AnomalyScanner
+        # - NodeScanner
+        # - Flash
+  - type: Appearance # TheDen - It has a sheath for MantisMeleeKnife or MantisMeleeCane (MantisMeleeFist is worn like a glove, and MantisMeleeGreatsword is intentionally excluded)
+  - type: ContainerContainer # TheDen - The rest of this item is our code
+    containers:
+      storagebase: !type:Container
+        ents: []
+      mantisknife: !type:ContainerSlot {}
+      mantissickle: !type:ContainerSlot {}
+      mantiscane: !type:ContainerSlot {}
+  - type: ItemSlots
+    slots:
+      mantisknife:
+        name: clothing-belt-mantisknife
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - MantisKnife
+        priority: 3
+      mantissickle:
+        name: clothing-belt-mantissickle
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - MantisSickle
+        priority: 3
+      mantiscane:
+        name: clothing-belt-mantiscane
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg
+        ejectSound: /Audio/Items/unsheath.ogg
+        whitelist:
+          tags:
+          - MantisCane
+        priority: 3
+  - type: ItemMapper
+    mapLayers:
+      mantisknife:
+        whitelist:
+          tags:
+          - MantisKnife
+      mantissickle:
+        whitelist:
+          tags:
+          - MantisSickle
+      mantiscane:
+        whitelist:
+          tags:
+          - MantisCane
+    sprite: _DEN/Clothing/Belt/belt_overlay.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon # We really need chameleon belts...
+ # - type: GuideHelp # Aurora: Remove guide
+ #   guides: [ MantisGuide ]
+
 - type: entity
   parent: [NFClothingBeltStorageBase, ContentsExplosionResistanceBase, ClothingSlotBase] # DeltaV - add parent ClothingSlotBase
   id: ClothingBeltMilitaryWebbingCMO

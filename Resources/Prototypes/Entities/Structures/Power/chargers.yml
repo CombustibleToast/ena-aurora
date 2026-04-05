@@ -106,6 +106,8 @@
           tags:
           - PowerCell
           - PowerCellSmall
+          - MantisCaster # TheDen - Necessary so mantis gun magazines can't power flashlights
+
 
 - type: entity
   parent: [ BaseItemRecharger, ConstructibleMachine ]
@@ -316,6 +318,7 @@
     whitelist:
       components:
       - BorgChassis
+      - Silicon # Aurora's Song - Add IPC borg charging ability
   - type: ContainerContainer
     containers:
       entity_storage: !type:Container

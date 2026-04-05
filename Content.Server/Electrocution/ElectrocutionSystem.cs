@@ -314,10 +314,11 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         TimeSpan time,
         bool refresh,
         float siemensCoefficient = 1f,
+        bool bypassInsulation = false, // The Den - this parameter is for bypassing insuls when an electrocution attempt is made.
         StatusEffectsComponent? statusEffects = null,
         TransformComponent? sourceTransform = null)
-    {
-        if (!DoCommonElectrocutionAttempt(uid, sourceUid, ref siemensCoefficient))
+    { // TheDen - selection statement ammended to make use of bypassInsulation parameter
+        if (!DoCommonElectrocutionAttempt(uid, sourceUid, ref siemensCoefficient, ignoreInsulation: bypassInsulation))
             return false;
 
         if (!DoCommonElectrocution(uid, sourceUid, shockDamage, time, refresh, siemensCoefficient, statusEffects))
@@ -404,7 +405,7 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
                 ? _stun.TryUpdateParalyzeDuration(uid, time * ParalyzeTimeMultiplier)
                 : _stun.TryAddParalyzeDuration(uid, time * ParalyzeTimeMultiplier);
         }
-            
+
 
         // TODO: Sparks here.
 

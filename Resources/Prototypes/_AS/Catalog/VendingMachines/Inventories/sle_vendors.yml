@@ -64,6 +64,7 @@
     ASClothingEyesGlassesSLE: 2
     EncryptionKeySecurity: 4
     ClothingEyesHudSecurity: 4
+    ClothingNeckBodyCameraSLEOff: 5
     ClothingBeltSecurityFilled: 3
     ASClothingBeltSLEFilled: 3
     ASClothingBeltSLEWebbingFilled: 2

@@ -167,3 +167,58 @@
       - !type:AdjustReagent
         reagent: MilkingDrugs
         amount: -7
+
+- type: reagent
+  id: StrongHeartBrew
+  name: reagent-name-strong-heart-brew
+  group: Medicine
+  desc: reagent-desc-strong-heart-brew
+  physicalDesc: reagent-physical-desc-hearty
+  flavor: oaken
+  color: "#63542b"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 1.0
+      effects:
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Asphyxiation: -1.5
+            Bloodloss: -1.5
+            Poison: -1
+            Radiation: -1
+      - !type:ModifyBloodLevel
+        amount: 2
+      - !type:SatiateThirst
+        factor: 2
+
+- type: reagent
+  id: WarriorsBlood
+  name: reagent-name-warriors-blood
+  group: Medicine
+  desc: reagent-desc-warriors-blood
+  physicalDesc: reagent-physical-desc-sanguine
+  flavor: warriorBlood
+  color: "#470000"
+  metabolisms:
+    Cryogenic:
+      metabolismRate: 2.5
+      effects:
+      - !type:ModifyBleedAmount
+        amount: -2
+      - !type:HealthChange
+        conditions:
+        - !type:OrganType
+          type: Sheleg
+        - !type:Temperature
+          max: 213.0
+        damage:
+          types:
+            Piercing: -1.5
+            Slash: -2
+            Blunt: -2.5

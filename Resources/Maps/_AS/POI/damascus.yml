@@ -4639,16 +4639,13 @@ entities:
       pipeLayer: Secondary
     - type: AtmosPipeColor
       color: '#CC36CFFF'
-- proto: ASSiteManagerIDCard
+- proto: ASDamascusIDCard
   entities:
   - uid: 7070
     components:
     - type: Transform
       pos: 3.4531028,26.078302
       parent: 3
-    - type: ShuttleDeed
-      shuttleName: Damascus Manufactory
-      shuttleUid: 3
 - proto: ASSubstationBasicHighPrio
   entities:
   - uid: 3793

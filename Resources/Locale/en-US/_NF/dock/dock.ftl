@@ -19,6 +19,10 @@ dock-label-station-six-c = 6C
 dock-label-station-seven-a = 7A
 dock-label-station-seven-b = 7B
 dock-label-station-seven-c = 7C
+#Aurora's Song - added more docks
+dock-label-station-eight-a = 8A
+dock-label-station-eight-b = 8B
+dock-label-station-eight-c = 8C
 
 dock-label-trade-cargo-bay-one = CB1
 dock-label-trade-cargo-bay-two = CB2
@@ -40,9 +44,33 @@ dock-label-trade-seven = D7
 dock-label-trade-seven-a = D7A
 dock-label-trade-seven-b = D7B
 dock-label-trade-seven-c = D7C
+#Aurora's Song - added more trade docks
+dock-label-trade-eight-a = D8A
+dock-label-trade-eight-b = D8B
+dock-label-trade-eight-c = D8C
 
 dock-label-bus = Bus Dock
 dock-label-janitor = Jani
 dock-label-guard = Guard
 dock-label-nfsd = SLE
 dock-label-drive-thru = McDrive Thru
+
+#Aurora's Song - added bus docks numbered
+dock-label-bus-route-one = Bus 1
+dock-label-bus-route-two = Bus 2
+dock-label-bus-route-three = Bus 3
+dock-label-bus-route-four = Bus 4
+
+#Aurora's Song - added preferred docks
+dock-label-preferred-one-a = Pr-1A
+dock-label-preferred-one-b = Pr-1B
+dock-label-preferred-one-c = Pr-1C
+dock-label-preferred-two-a = Pr-2A
+dock-label-preferred-two-b = Pr-2B
+dock-label-preferred-two-c = Pr-2C
+dock-label-preferred-three-a = Pr-3A
+dock-label-preferred-three-b = Pr-3B
+dock-label-preferred-three-c = Pr-3C
+dock-label-preferred-four-a = Pr-4A
+dock-label-preferred-four-b = Pr-4B
+dock-label-preferred-four-c = Pr-4C

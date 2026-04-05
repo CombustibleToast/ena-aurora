@@ -40,6 +40,20 @@
   equipment:
     ears: ClothingHeadsetScienceCommon
 
+#Aurora Song- Mantis drip merge start
+- type: loadout
+  id: ContractorClothingHeadsetMantis
+  price: 250
+  equipment:
+    ears: ClothingHeadsetMantis
+
+- type: loadout
+  id: ContractorClothingHeadsetAltMantis
+  price: 250
+  equipment:
+    ears: ClothingHeadsetAltMantis
+# Aurora Song- Mantis drip merge end
+
 - type: loadout
   id: ContractorClothingHeadsetMedicalScienceCommon
   price: 250

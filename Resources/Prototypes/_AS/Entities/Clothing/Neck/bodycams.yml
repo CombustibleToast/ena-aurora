@@ -1,0 +1,23 @@
+- type: entity
+  id: ClothingNeckBodyCameraSLE
+  parent: ClothingNeckBodyCamera
+  name: SLE body camera
+  description: A body mounted camera. It's watching you.
+  components:
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: SurveillanceCameraEntertainment
+      transmitFrequencyId: SurveillanceCamera
+    - type: SurveillanceCamera
+      networkSet: true
+      id: SLE Body Camera
+      # setupAvailableNetworks: # Turn this on when SLE camera infrastructure is functional
+      # - SurveillanceCameraSecurity
+
+- type: entity
+  id: ClothingNeckBodyCameraSLEOff
+  parent: ClothingNeckBodyCameraSLE
+  suffix: Deactivated
+  components:
+    - type: ItemToggle
+      activated: false

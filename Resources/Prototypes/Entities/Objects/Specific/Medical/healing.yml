@@ -695,10 +695,21 @@
       amount: 5
 
 - type: entity
-  name: space mirage
+  suffix: Space Mirage 15u # Aurora Song - Name changed back to Mirage, as it's still called that here
   parent: Pill
   id: PillSpaceDrugs
   components:
+  - type: Label # TheDen
+    currentLabel: Mirage 15u # Aurora Song - Name changed back to Mirage, as it's still called that here
+  - type: Sprite # TheDen - Space Drugs colored pill
+    sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
+    state: spacedrugspill
+  #- type: Pill
+  #  state: spacedrugspill
+  - type: Item
+    size: Tiny
+    sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
+    heldPrefix: spacedrugs
   - type: SolutionContainerManager
     solutions:
       food:
@@ -707,8 +718,49 @@
         - ReagentId: SpaceDrugs
           Quantity: 15
 
+- type: entity # TheDen - SpaceDrugs canister
+  parent: PillCanister
+  id: PillCanisterSpaceDrugs
+  suffix: Space Drugs, 5
+  components:
+  - type: Label
+    currentLabel: LSD 15u
+  - type: StorageFill
+    contents:
+    - id: PillSpaceDrugs
+      amount: 5
+  #- type: GuideHelp
+  #  guides: [ Psionics ]
+
+- type: entity # TheDen - Pax pill prefill
+  suffix: Pax 10u
+  parent: Pill
+  id: PillPax
+  components:
+  - type: Label
+    currentLabel: pax 10u
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Pax
+          Quantity: 10
+
+- type: entity # TheDen - Pax pill canister
+  parent: PillCanister
+  id: PillCanisterPax
+  suffix: Pax, 5
+  components:
+  - type: Label
+    currentLabel: Pax 10u
+  - type: StorageFill
+    contents:
+    - id: PillPax
+      amount: 5
+
+
 - type: entity
-  name: pill
   suffix: Tricordrazine 10u
   parent: Pill
   id: PillTricordrazine

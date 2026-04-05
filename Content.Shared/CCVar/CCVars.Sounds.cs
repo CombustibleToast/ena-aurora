@@ -33,5 +33,5 @@ public sealed partial class CCVars
         CVarDef.Create("audio.admin_chat_sound_volume", -5f, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
 
     public static readonly CVarDef<string> AHelpSound =
-        CVarDef.Create("audio.ahelp_sound", "/Audio/Effects/adminhelp.ogg", CVar.ARCHIVE | CVar.CLIENTONLY);
+        CVarDef.Create("audio.ahelp_sound", "/Audio/_AS/Admin/dutdut_alert.ogg", CVar.ARCHIVE | CVar.CLIENTONLY); // AS Bwoink sound > Newer less anxiety inducing sound
 }

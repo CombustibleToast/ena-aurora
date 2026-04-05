@@ -6826,3 +6826,351 @@ Entries:
   id: 9046
   time: '2026-03-30T23:33:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/854
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: heelstockings of multiple types ported and listed in loadout.
+  id: 9047
+  time: '2026-03-31T06:24:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/856
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel back-end nitpick
+    - type: Tweak
+      message: Switch a Petrel poster spawner to the new CNS poster spawner
+  id: 9048
+  time: '2026-03-31T07:56:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/858
+- author: snezshiba
+  changes:
+    - type: Add
+      message: Tajaran, Felinid, Feroxi, and Rabbit Rodentia markings to Slime
+  id: 9049
+  time: '2026-03-31T08:59:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/855
+- author: snezshiba
+  changes:
+    - type: Fix
+      message: Fixed holocigar not having sprites for Vulpkanin
+  id: 9050
+  time: '2026-03-31T09:40:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/859
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Ports BodyCams from NF for loadouts and for printing from lathes
+  id: 9051
+  time: '2026-03-31T09:50:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/857
+- author: ZigTag
+  changes:
+    - type: Add
+      message: the records computer now knows what hull you're using!
+  id: 9052
+  time: '2026-03-31T10:20:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/861
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: ID Cards that now auto generate deeds are available to admins
+  id: 9053
+  time: '2026-03-31T10:36:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/845
+- author: Vandanna
+  changes:
+    - type: Add
+      message: IAC posters by Doner19
+    - type: Fix
+      message: Aurora poster incorrect labeling
+  id: 9054
+  time: '2026-03-31T10:40:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/860
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added BH posters to BH ships.
+  id: 9055
+  time: '2026-03-31T10:50:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/863
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Added IAC Javelin large mercenary expedition shuttle.
+    - type: Add
+      message: IAC posters to harvester.yml
+  id: 9056
+  time: '2026-03-31T10:55:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/835
+- author: turtleofmen
+  changes:
+    - type: Fix
+      message: Harvester components
+    - type: Tweak
+      message: Harvester posters
+  id: 9057
+  time: '2026-03-31T11:18:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/864
+- author: turtleofmen
+  changes:
+    - type: Fix
+      message: Javelin attribution
+  id: 9058
+  time: '2026-03-31T11:30:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/865
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: ore decrementing no longer gets miscalculated
+  id: 9059
+  time: '2026-03-31T20:10:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/867
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Sharkminnow in-hands no longer error
+  id: 9060
+  time: '2026-03-31T20:17:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/866
+- author: AssignedGod and GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Added the somber mapping kit from Den
+    - type: Add
+      message: Added the mantis gear from Den
+    - type: Add
+      message: Added mantis melee weapons from Den
+    - type: Tweak
+      message: Rebalanced mantis melee weapons for AS standards
+    - type: Add
+      message: Added a BUNCH of mantis Loadout items
+    - type: Add
+      message: Added napsacks
+  id: 9061
+  time: '2026-03-31T20:48:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/832
+- author: portfiend
+  changes:
+    - type: Tweak
+      message: >-
+        Species with HSV skin tones no longer have a minimum brightness limit on
+        their skin.
+  id: 9062
+  time: '2026-03-31T20:49:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/868
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: IPCs can fit in borg chargers
+  id: 9063
+  time: '2026-04-02T01:40:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/877
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: borg emotes no longer show up in the menu if you can't use them
+  id: 9064
+  time: '2026-04-02T02:36:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/874
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Increased the durability of Shipminds
+    - type: Fix
+      message: Removed left over syndicate components from Shipminds
+    - type: Fix
+      message: Shipboard and Shortband radios for all AI
+  id: 9065
+  time: '2026-04-02T02:40:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/869
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Disposals system to Javelin
+    - type: Add
+      message: Collection boxes to Javelin
+    - type: Add
+      message: Jump drive to Javelin
+    - type: Tweak
+      message: Javelin price increased to 115,000 spesos
+  id: 9066
+  time: '2026-04-02T02:44:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/871
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added Merc techfab and CTLA-25 Bluespace drive to the scorpion.
+    - type: Tweak
+      message: Increase price of the Scorpion by 10k, now at 97k.
+  id: 9067
+  time: '2026-04-02T02:45:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/876
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added the emergency comfort deployment unit from the den, AKA Pillows.
+  id: 9068
+  time: '2026-04-02T02:45:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/878
+- author: emergency-ketchup
+  changes:
+    - type: Add
+      message: >-
+        Condiment machine, due to relentless teasing, along with complementary
+        refill box
+    - type: Add
+      message: Naturalized area in the location of old bus!
+    - type: Add
+      message: >-
+        Southern docking arm, more parking spaces, more fun stuff! Also, the new
+        location of the bus.
+    - type: Tweak
+      message: Improved clarity of docking and EVA signage.
+    - type: Tweak
+      message: Improved EVA parking spaces.
+    - type: Tweak
+      message: Misc signage added and shifted
+  id: 9069
+  time: '2026-04-02T04:17:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/879
+- author: BudaLope
+  changes:
+    - type: Add
+      message: More mags and power cells go into leg holsters
+  id: 9070
+  time: '2026-04-02T06:47:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/881
+- author: Vandanna
+  changes:
+    - type: Add
+      message: QuickPhrases for LBK and Damascus
+  id: 9071
+  time: '2026-04-02T08:36:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/883
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: disabled breaker flip
+  id: 9072
+  time: '2026-04-02T22:37:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/885
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Added service flag to shuttles to allow 18+ content flagging
+  id: 9073
+  time: '2026-04-03T07:08:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/887
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: >-
+        Removed a poster spawn so an extinguisher cabinet is visible on the
+        Scythe.
+  id: 9074
+  time: '2026-04-03T07:19:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/886
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Changed ahelp audio
+  id: 9075
+  time: '2026-04-03T07:25:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/880
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Added new Sheleg centric chems! Drink some Strongheart brew!
+  id: 9076
+  time: '2026-04-03T16:42:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/888
+- author: Vandanna
+  changes:
+    - type: Add
+      message: new AS station beacons and loc strings
+  id: 9077
+  time: '2026-04-04T00:12:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/890
+- author: Vandanna
+  changes:
+    - type: Add
+      message: bus docking loc strings
+  id: 9078
+  time: '2026-04-04T03:32:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/892
+- author: AssignedGod and GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Added the somber mapping kit from Den
+    - type: Add
+      message: Added the mantis gear from Den
+    - type: Add
+      message: Added mantis melee weapons from Den
+    - type: Tweak
+      message: Rebalanced mantis melee weapons for AS standards
+    - type: Add
+      message: Added a BUNCH of mantis Loadout items
+    - type: Add
+      message: Added napsacks
+  id: 9079
+  time: '2026-04-04T05:02:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/873
+- author: LizArmchair, turtleofmen, emergency-ketchup, Zenixic, Haawsome,
+  changes:
+    - type: Add
+      message: 'Mapping and designing PB LizArmchair. '
+    - type: Add
+      message: >-
+        For help with mapping, room design, and technical work: turtleofmen,
+        emergency-ketchup. 
+    - type: Add
+      message: >-
+        For designing the park and helping at the start of the project: Zenixic,
+        Haawsome, .Slavie
+  id: 9080
+  time: '2026-04-04T07:37:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/894
+- author: Vandanna
+  changes:
+    - type: Add
+      message: CAF Petrel Mk. II Shipyard
+    - type: Add
+      message: Colonial Command Shipyard
+    - type: Add
+      message: Colonial Command Airlocks
+    - type: Tweak
+      message: DoC, Sheriff, ColRep Locker Fills
+    - type: Tweak
+      message: DoC PDA centcom pen -> ColCom Pen
+    - type: Add
+      message: Colonial Command spawners/ loadouts
+    - type: Add
+      message: ColComm/ CAF Chameleon Gear sets
+  id: 9081
+  time: '2026-04-04T09:02:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/895
+- author: TheLuggage05
+  changes:
+    - type: Add
+      message: Security guard now has a contraband handling license.
+    - type: Fix
+      message: >-
+        The security guard's uniform no longer references Frontier Outpost in
+        its description.
+  id: 9082
+  time: '2026-04-04T16:32:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/891
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Corrected the manifold reflect chance to be in acceptable parameters
+  id: 9083
+  time: '2026-04-04T17:23:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/896
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'Fairies can fit n bags '
+  id: 9084
+  time: '2026-04-05T03:42:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/897

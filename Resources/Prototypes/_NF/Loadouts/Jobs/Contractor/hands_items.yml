@@ -29,6 +29,14 @@
   inhand:
   - ToolboxMechanical
 
+# Aurora Song- Mantis drip merge start
+- type: loadout
+  id: ContractorMantisMeleeCane
+  price: 1000
+  inhand:
+  - MantisMeleeCane
+# Aurora Song- Mantis drip merge end
+
 #T2
 - type: loadout
   id: ContractorCane
@@ -250,3 +258,12 @@
   price: 500
   inhand:
     - Bible
+
+- type: loadout
+  id: ContractorBodycam
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 3000
+  inhand:
+    - ClothingNeckBodyCameraOff

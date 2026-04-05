@@ -22,6 +22,10 @@ public class ShuttleRecord(
     [ViewVariables]
     public string Name { get; set; } = name;
 
+    // Aurora's Song - Add hull type
+    [ViewVariables]
+    public readonly string HullType = name;
+
     /// <summary>
     /// The ID of the VesselPrototype this shuttle came from. Used internally
     /// for the shipyard statistics printout.

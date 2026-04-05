@@ -91,7 +91,6 @@
   - LightTube
   - LightBulb
   - ASJetpackSLE
-  - CassetteTape
 
 - type: latheRecipePack
   id: SLETargetsStatic
@@ -121,3 +120,10 @@
   - GyroscopeSLEMachineCircuitboard
   - SmallGyroscopeSLEMachineCircuitboard
   - ThrusterSLEMachineCircuitboard
+
+- type: latheRecipePack
+  id: SLEReportingStatic
+  recipes:
+    - CassetteTape
+    - TapeRecorder
+    - ClothingNeckBodyCameraSLE

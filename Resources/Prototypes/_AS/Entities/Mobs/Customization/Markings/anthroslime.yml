@@ -1,3 +1,5 @@
+
+# Vulp Slimes
 - type: marking
   id: SlimeVulpkaninSnout
   bodyPart: Head
@@ -24,3 +26,115 @@
   sprites:
   - sprite: _AS/Mobs/Customization/anthroslime.rsi
     state:  slime_vulp_tail
+
+# Feline Slimes
+- type: marking
+  id: SlimeFelineEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/felineslime.rsi
+    state:  slime_feline_ears
+
+- type: marking
+  id: SlimeFelineTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/felineslime.rsi
+    state:  slime_feline_tail
+
+# Tajaran Slimes
+- type: marking
+  id: SlimeTajaranHead
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/felineslime.rsi
+    state:  slime_tajaran_head
+
+- type: marking
+  id: SlimeTajaranEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/felineslime.rsi
+    state:  slime_tajaran_ears
+
+- type: marking
+  id: SlimeTajaranTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/felineslime.rsi
+    state:  slime_tajaran_tail
+
+# Feroxi Slimes
+- type: marking
+  id: SlimeFeroxiHead
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/sharkslime.rsi
+    state:  slime_feroxi_head
+
+- type: marking
+  id: SlimeFeroxiEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/sharkslime.rsi
+    state:  slime_feroxi_ears
+
+- type: marking
+  id: SlimeFeroxiTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/sharkslime.rsi
+    state:  slime_feroxi_tail
+
+# Rodentia Slimes
+- type: marking
+  id: SlimeRodentiaHead
+  bodyPart: Head
+  markingCategory: Head
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
+    state:  slime_rodentia_head
+
+- type: marking
+  id: SlimeRodentiaRabbitEars
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
+    state:  slime_rodentia_rabbit_ears
+
+- type: marking
+  id: SlimeRodentiaRabbitTail
+  bodyPart: Tail
+  markingCategory: Tail
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
+    state:  slime_rodentia_rabbit_tail
+
+- type: marking
+  id: SlimeRodentiaRabbitEarsLarge
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [SlimePerson]
+  sprites:
+  - sprite: _AS/Mobs/Customization/rodentiaslime32x48.rsi
+    state:  slime_rodentia_rabbit_ears_large

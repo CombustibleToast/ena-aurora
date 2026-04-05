@@ -27,7 +27,14 @@
           - NFSpeedLoaderPistol35
           - NFSpeedLoaderPistol45
           - SpeedLoaderRifleHeavy
+          - ASMagazinePistol40 # Aurora's Song - Allow .40 mags to fit
+          - ASMagazineHighCapacityPistol40 # Aurora's Song - Allow High cap .40 mags to fit
+          - ASSpeedLoaderPistol40 # Aurora's Song - Allow .40 speedloaders to fit
           - ASMagazinePistolCaselessRifle # Aurora's Song - Allow Cobra mags to fit
+          - PowerCellHyper # Aurora's Song - Allow power cells to fit
+          - PowerCellHigh # Aurora's Song - Allow power cells to fit
+          - PowerCellMedium # Aurora's Song - Allow power cells to fit
+          - PowerCellSmall # Aurora's Song - Allow power cells to fit
   - type: Appearance
   - type: ItemMapper
     mapLayers:
@@ -45,8 +52,13 @@
           - NFSpeedLoaderPistol45
           - SpeedLoaderRifleHeavy
           - ASMagazinePistol40 # Aurora's Song - Allow .40 mags to fit
+          - ASMagazineHighCapacityPistol40 # Aurora's Song - Allow High cap .40 mags to fit
           - ASSpeedLoaderPistol40 # Aurora's Song - Allow .40 speedloaders to fit
           - ASMagazinePistolCaselessRifle # Aurora's Song - Allow Cobra mags to fit
+          - PowerCellHyper # Aurora's Song - Allow power cells to fit
+          - PowerCellHigh # Aurora's Song - Allow power cells to fit
+          - PowerCellMedium # Aurora's Song - Allow power cells to fit
+          - PowerCellSmall # Aurora's Song - Allow power cells to fit
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
