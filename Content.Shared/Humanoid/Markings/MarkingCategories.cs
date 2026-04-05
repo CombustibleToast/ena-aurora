@@ -15,8 +15,8 @@ namespace Content.Shared.Humanoid.Markings
         Snout,
         Chest,
         Genitals,
-        Nipples, // TheDen - Ovinia, for fluff on necks
-        NeckFluff,
+        Nipples,
+        NeckFluff, // TheDen - Ovinia, for fluff on necks
         UndergarmentTop,
         UndergarmentBottom,
         Arms,
