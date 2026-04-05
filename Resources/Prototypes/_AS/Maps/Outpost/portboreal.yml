@@ -29,12 +29,12 @@
             ColonialRepresentative: [ 1, 1 ]
             StationTrafficController: [ 1, 1 ]
             DirectorOfCare: [ 1, 1 ]
-            SecurityGuard: [ 1, 1 ]
+            SecurityGuard: [ 2, 2 ]
             Valet: [ 1, 1 ]
             NFJanitor: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
-            Medic: [ 2, 2 ]
-            Service: [ 2, 2 ]
+            Medic: [ 4, 4 ]
+            Service: [ 4, 4 ]
           tags:
           - HeadOfPersonnel
           - HeadOfSecurity
