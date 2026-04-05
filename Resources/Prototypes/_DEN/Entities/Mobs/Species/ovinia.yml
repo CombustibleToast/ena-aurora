@@ -129,7 +129,7 @@
             sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
             state: outerclothing_hardsuit
   - type: Hunger
-    baseDecayRate: 0.026 #25% slower than normal (chewin they cud)
+    baseDecayRate: 0.015 #25% slower than normal (chewin they cud) # Aurora's Song - Scales hunger to match Frontier Standards
   - type: Thirst
     baseDecayRate: 0.075 #25% slower than normal
 
