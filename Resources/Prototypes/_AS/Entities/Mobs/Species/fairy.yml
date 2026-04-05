@@ -59,7 +59,9 @@
     bloodReagent: FairyBlood
     bloodMaxVolume: 50
   - type: PseudoItem
-    size: Small
+    shape:
+    - 0,1,0,0
+
   - type: Vocal
     sounds:
       Male: FairySpeech

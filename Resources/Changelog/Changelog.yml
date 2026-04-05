@@ -7130,3 +7130,47 @@ Entries:
   id: 9080
   time: '2026-04-04T07:37:08.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/894
+- author: Vandanna
+  changes:
+    - type: Add
+      message: CAF Petrel Mk. II Shipyard
+    - type: Add
+      message: Colonial Command Shipyard
+    - type: Add
+      message: Colonial Command Airlocks
+    - type: Tweak
+      message: DoC, Sheriff, ColRep Locker Fills
+    - type: Tweak
+      message: DoC PDA centcom pen -> ColCom Pen
+    - type: Add
+      message: Colonial Command spawners/ loadouts
+    - type: Add
+      message: ColComm/ CAF Chameleon Gear sets
+  id: 9081
+  time: '2026-04-04T09:02:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/895
+- author: TheLuggage05
+  changes:
+    - type: Add
+      message: Security guard now has a contraband handling license.
+    - type: Fix
+      message: >-
+        The security guard's uniform no longer references Frontier Outpost in
+        its description.
+  id: 9082
+  time: '2026-04-04T16:32:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/891
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Corrected the manifold reflect chance to be in acceptable parameters
+  id: 9083
+  time: '2026-04-04T17:23:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/896
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'Fairies can fit n bags '
+  id: 9084
+  time: '2026-04-05T03:42:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/897

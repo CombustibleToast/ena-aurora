@@ -353,3 +353,21 @@
   - ContractorHandItems
   - NFSpeciesSpecific
 
+#region CAF
+
+- type: roleLoadout
+  id: JobCAFLeader
+
+- type: roleLoadout
+  id: JobCAFTrooper
+
+- type: roleLoadout
+  id: JobCAFMedical
+
+- type: roleLoadout
+  id: JobCAFEngineer
+
+#region Colonial Command
+
+- type: roleLoadout
+  id: JobColonialCommandOfficial

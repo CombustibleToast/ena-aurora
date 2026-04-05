@@ -5,3 +5,12 @@
   components:
   - type: AccessReader
     access: [["Prisoner"]]
+
+#region Colonial Command
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsColonialCommand
+  suffix: ColonialCommand, Locked
+  components:
+  - type: AccessReader
+    access: [["ColonialCommand"]]

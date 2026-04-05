@@ -72,4 +72,29 @@
   - type: AccessReader
     access: [["Engineering"]]
   - type: ActivatableUIRequiresAccess
- 
+
+#region Colonial Command
+
+- type: entity
+  id: ComputerShipyardColonialCommand
+  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
+  name: colonial command shipyard console
+  description: Used to buy vessels exclusive to Colonial Command teams personnel.
+  components:
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.ColonialCommand
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.ColonialCommand:
+        type: ShipyardConsoleBoundUserInterface
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer_sr
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard_cr
+    - map: ["computerLayerKeys"]
+      state: telesci_key

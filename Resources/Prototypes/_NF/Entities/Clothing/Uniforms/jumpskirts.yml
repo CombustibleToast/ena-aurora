@@ -47,7 +47,7 @@
   parent: ClothingUniformSkirtBase
   id: ClothingUniformJumpskirtSecGuard
   name: security guard's uniform
-  description: A specialized uniform for Frontier Outpost's station guard. Crisp and official to let dock loiterers know you mean business.
+  description: A specialized uniform for The Outpost's station guard. Crisp and official to let dock loiterers know you mean business. # Aurora's Song - Frontier Outpost -> The Outpost
   components:
   - type: Sprite
     sprite: _NF/Clothing/Uniforms/Jumpskirt/security_guard.rsi

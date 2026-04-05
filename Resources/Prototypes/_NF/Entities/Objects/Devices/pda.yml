@@ -469,7 +469,7 @@
   - type: Pda
     id: DocIDCard
     penSlot:
-      startingItem: PenCentcom
+      startingItem: PenColcom # Aurora's Song - pen changed from PenCentcom to PenColcom
       priority: -1
       whitelist:
         tags:
