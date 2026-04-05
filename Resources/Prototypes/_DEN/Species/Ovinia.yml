@@ -63,10 +63,10 @@
       points: 4
       required: false
     Legs:
-      points: 4
+      points: 8
       required: false
     Arms:
-      points: 4
+      points: 8
       required: false
 
 - type: humanoidBaseSprite

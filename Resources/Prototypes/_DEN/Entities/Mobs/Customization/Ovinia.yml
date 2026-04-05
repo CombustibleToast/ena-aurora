@@ -321,7 +321,7 @@
 - type: marking
   id: OviniaLeftHandHoof
   bodyPart: LHand
-  markingCategory: LeftHand
+  markingCategory: Arms
   speciesRestriction: [ Ovinia ]
   coloring:
     default:
@@ -334,7 +334,7 @@
 - type: marking
   id: OviniaRightHandHoof
   bodyPart: RHand
-  markingCategory: RightHand
+  markingCategory: Arms
   speciesRestriction: [ Ovinia ]
   coloring:
     default:
