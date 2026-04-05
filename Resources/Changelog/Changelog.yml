@@ -7174,3 +7174,50 @@ Entries:
   id: 9084
   time: '2026-04-05T03:42:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/897
+- author: TurtleOfMen
+  changes:
+    - type: Add
+      message: Napkins, ice box, jukebox, sink to bar.
+    - type: Add
+      message: Two experiment plushies
+    - type: Add
+      message: Boreal Cryogenic pipework
+    - type: Add
+      message: Tile variants and dirt to Boreal
+    - type: Add
+      message: Public crew monitor to med
+    - type: Add
+      message: Entertainment and Crew servers
+    - type: Add
+      message: Disposals switch to disposals conveyor belt
+    - type: Add
+      message: Slight cosmetic changes (posters, decals, banners)
+    - type: Add
+      message: Directional fans to sell point blast doors
+    - type: Add
+      message: Cameras for the AI
+    - type: Add
+      message: Bardrobe behind bar
+    - type: Remove
+      message: Removed many lights
+    - type: Tweak
+      message: Distro and waste numbers turned to standard rate
+    - type: Tweak
+      message: Moved valet roundstart spawnpoint
+    - type: Fix
+      message: Fixed Astrovend POI vending machines
+    - type: Fix
+      message: Fixed missing vacuum tiles from new lattices
+    - type: Fix
+      message: Distro mixer starts ON now
+    - type: Fix
+      message: Missing distro pipes replaced
+    - type: Fix
+      message: Map background
+    - type: Fix
+      message: Dock prototype issues
+    - type: Fix
+      message: De-spawning Boreal issue fixed
+  id: 9085
+  time: '2026-04-05T08:31:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/899
