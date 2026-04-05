@@ -1,8 +1,7 @@
 - type: entity
   parent: OrganHumanStomach
   id: OrganAvaliStomach
-  name: stomach
-  prefix: avali # Aurora's Song - Ease of legibility on Avali organs.
+  name: avali stomach # Aurora's Song - Ease of legibility on Avali organs.
   description: "A stomach that reeks of ammonia."
   components:
   - type: Metabolizer
@@ -12,8 +11,7 @@
 - type: entity
   parent: OrganHumanLiver
   id: OrganAvaliLiver
-  name: liver
-  prefix: avali # Aurora's Song - Ease of legibility on Avali organs.
+  name: avali liver # Aurora's Song - Ease of legibility on Avali organs.
   description: "Smells awful."
   components:
   - type: Metabolizer
@@ -22,8 +20,7 @@
 - type: entity
   parent: OrganHumanHeart
   id: OrganAvaliHeart
-  name: heart
-  prefix: avali # Aurora's Song - Ease of legibility on Avali organs.
+  name: avali heart # Aurora's Song - Ease of legibility on Avali organs.
   description: "The heart of an avali."
   components:
   - type: Metabolizer
