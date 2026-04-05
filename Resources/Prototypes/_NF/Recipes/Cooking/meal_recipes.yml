@@ -1574,7 +1574,7 @@
 
 - type: microwaveMealRecipe
   id: RecipeMochiPumpkin
-  name: pumpkin mochi
+  name: pumpkin mochi # Aurora Song: This was incorrectly named "ube mochi"
   result: FoodFrozenMochiPumpkin
   time: 5
   group: Dessert
