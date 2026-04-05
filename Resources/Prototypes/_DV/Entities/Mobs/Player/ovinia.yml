@@ -26,4 +26,4 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
-    - AnimalFriend
+    #- AnimalFriend # Aurora's Song - removes animal friend to prevent unnecessary code change
