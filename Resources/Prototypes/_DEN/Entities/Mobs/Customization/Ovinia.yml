@@ -321,7 +321,7 @@
 - type: marking
   id: OviniaLeftHandHoof
   bodyPart: LHand
-  markingCategory: Arms
+  markingCategory: Arms # Aurora's Song - Hand category not available
   speciesRestriction: [ Ovinia ]
   coloring:
     default:
@@ -334,7 +334,7 @@
 - type: marking
   id: OviniaRightHandHoof
   bodyPart: RHand
-  markingCategory: Arms
+  markingCategory: Arms # Aurora's Song - Hand category not available
   speciesRestriction: [ Ovinia ]
   coloring:
     default:
