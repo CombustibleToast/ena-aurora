@@ -227,7 +227,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Avali ]
-          inverted: true
+          shouldHave: false
         # Moffstation end
         damage:
           types:
@@ -323,9 +323,6 @@
       - !type:AdjustReagent
         reagent: Ethanol
         amount: 0.2
-        conditions:
-        - !type:MetabolizerTypeCondition
-          type: [ Avali ]
     # Moffstation end
     Poison:
       effects:
@@ -334,7 +331,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Avali ]
-          inverted: true
+          shouldHave: false
         # Moffstation end
         damage:
           types:
