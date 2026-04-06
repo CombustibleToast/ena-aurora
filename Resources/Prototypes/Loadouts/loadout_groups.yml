@@ -79,7 +79,6 @@
   loadouts:
   - EmergencyNitrogen
   - EmergencyOxygen
-  - EmergencyAmmonia # Moffstation - Allow avali to drink ammonia
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVapor # DeltaV
@@ -503,7 +502,6 @@
   loadouts:
   - EmergencyNitrogenClown
   - EmergencyOxygenClown
-  - EmergencyOxygenClownAmmonia # Moffstation - Allow avali to drink ammonia
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporClown # DeltaV
@@ -562,7 +560,6 @@
   loadouts:
   - EmergencyNitrogenMime
   - EmergencyOxygenMime
-  - EmergencyOxygenMimeAmmonia # Moffstation - Allow avali to drink ammonia
   - EmergencySpeciesMothMime
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
@@ -851,7 +848,6 @@
   loadouts:
   - EmergencyNitrogenExtended
   - EmergencyOxygenExtended
-  - EmergencyOxygenExtendedAmmonia # Moffstation - Allow avali to drink ammonia
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporExtended # DeltaV
@@ -1135,7 +1131,6 @@
   loadouts:
   - EmergencyNitrogenSecurity
   - EmergencyOxygenSecurity
-  - EmergencyOxygenSecurityAmmonia # Moffstation - Allow avali to drink ammonia
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporSecurity # DeltaV
@@ -1339,7 +1334,6 @@
   loadouts:
   - EmergencyNitrogenMedical
   - EmergencyOxygenMedical
-  - EmergencyOxygenMedicalAmmonia # Moffstation - Allow avali to drink ammonia
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporMedical # DeltaV
@@ -1384,7 +1378,6 @@
   loadouts:
   - EmergencyNitrogenSyndicate
   - EmergencyOxygenSyndicate
-  - EmergencyOxygenSyndicateAmmonia # Moffstation - Allow avali to drink ammonia
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporSyndicate # DeltaV
