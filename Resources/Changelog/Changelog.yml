@@ -7278,3 +7278,12 @@ Entries:
   id: 9091
   time: '2026-04-06T03:51:05.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/907
+- author: LizArmchair, ZigTag
+  changes:
+    - type: Add
+      message: Avali from Moff Station!
+    - type: Tweak
+      message: loadout code to add ammonia to survival kits
+  id: 9092
+  time: '2026-04-06T09:10:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/905
