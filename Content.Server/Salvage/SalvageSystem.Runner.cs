@@ -401,7 +401,6 @@ public sealed partial class SalvageSystem
                                 }
                                     var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
                                     SafetyWarp(quid, fallback);
-                                
                             }
                         }
                     }
@@ -440,7 +439,6 @@ public sealed partial class SalvageSystem
                     }
                         var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
                         SafetyWarp(quid, fallback);
-                    
                 }
                 QueueDel(uid);
             }
