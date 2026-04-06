@@ -399,8 +399,8 @@ public sealed partial class SalvageSystem
                                     Log.Error($"Could not get DefaultMap EntityUID, entity {quid} may be deleted.");
                                     break;
                                 }
-                                    var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
-                                    SafetyWarp(quid, fallback);
+                                var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+                                SafetyWarp(quid, fallback);
                             }
                         }
                     }
@@ -437,8 +437,8 @@ public sealed partial class SalvageSystem
                         Log.Error($"Could not get DefaultMap EntityUID, entity {quid} may be deleted.");
                         break;
                     }
-                        var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
-                        SafetyWarp(quid, fallback);
+                    var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+                    SafetyWarp(quid, fallback);
                 }
                 QueueDel(uid);
             }
