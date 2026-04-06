@@ -141,4 +141,40 @@
     layers:
       - state: internals
       - state: extendedtank
+
+- type: entity
+  parent: BoxSurvival
+  id: ASBoxSurvivalAvali
+  suffix: Ammonia
+  components:
+  - type: StorageFill
+    contents:
+      - id: EmergencyOxygenTankFilled
+      - id: SpaceMedipen
+      - id: EmergencyMedipen
+      - id: FoodPSB
+      - id: DrinkAmmoniaBottleFull
+      - id: Flare
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: emergencytank
+
+- type: entity
+  parent: BoxSurvivalEngineering
+  id: ASBoxSurvivalExtendedAvali
+  suffix: Ammonia
+  components:
+  - type: StorageFill
+    contents:
+      - id: DoubleEmergencyOxygenTankFilled
+      - id: SpaceMedipen
+      - id: EmergencyMedipen
+      - id: FoodPSB
+      - id: DrinkAmmoniaBottleFull
+      - id: CrowbarPocket
+  - type: Sprite
+    layers:
+      - state: internals
+      - state: extendedtank
 # End Aurora Song
