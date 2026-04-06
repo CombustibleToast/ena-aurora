@@ -116,6 +116,8 @@ Double-check your diff on GitHub before submitting: look for unintended commits 
 
 Additionally, for PRs that've been open for a long time, if you see `RobustToolbox` in the changed files, you have to revert it. Use `git checkout upstream/master RobustToolbox` (replacing `upstream` with the name of your AuroraSong14/Aurora-Song-14 remote)
 
+Make sure to come up with a good title for your PR. We like our contributions to be organized so we use the [conventional commit](https://www.conventionalcommits.org/en/v1.0.0/#summary) schema here for naming our PRs.
+
 # Changelogs
 
 Currently, all changelogs go to the Aurora Song changelog. The ADMIN: prefix does nothing at the moment.

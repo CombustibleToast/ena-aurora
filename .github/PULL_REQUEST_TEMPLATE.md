@@ -1,3 +1,4 @@
+<!-- IMPORTANT: Please make your title according to the specifications from https://www.conventionalcommits.org/en/v1.0.0/#summary -->
 <!-- Guidelines: https://docs.spacestation14.io/en/getting-started/pr-guideline -->
 
 ## About the PR

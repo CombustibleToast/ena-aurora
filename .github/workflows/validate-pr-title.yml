@@ -6,6 +6,11 @@ on:
     - opened
     - reopened
     - edited
+    - synchronize
+    - reopened
+    - converted_to_draft
+    - ready_for_review
+    - review_requested
 
 jobs:
   main:
