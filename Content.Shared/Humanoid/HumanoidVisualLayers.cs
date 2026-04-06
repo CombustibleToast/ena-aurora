@@ -19,6 +19,7 @@ namespace Content.Shared.Humanoid
         HeadTop,  // top parts (i.e., ears)
         Genitals,
         Nipples,
+        NeckFluff, // TheDen - Ovinia, for fluff on necks
         Eyes,
         RArm,
         LArm,

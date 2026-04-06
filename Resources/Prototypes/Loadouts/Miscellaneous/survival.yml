@@ -18,6 +18,7 @@
     - Human
     - Moth
     - Reptilian
+    - Ovinia # Den Addition
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
