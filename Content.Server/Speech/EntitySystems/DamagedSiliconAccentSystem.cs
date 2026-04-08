@@ -124,9 +124,19 @@ public sealed class DamagedSiliconAccentSystem : EntitySystem
         // Linear interpolation of character damage probability
         var damagePercent = Math.Clamp((float)totalDamage / (float)damageAtMaxCorruption, 0, 1);
         var chanceToCorruptLetter = damagePercent * ent.Comp.MaxDamageCorruption;
+        var disableCorruption = -1; // Aurora's Song - Support text formatting
         foreach (var letter in message)
         {
-            if (_random.Prob(chanceToCorruptLetter)) // Corrupt!
+            // Start Aurora's Song - Support text formatting
+            disableCorruption = letter switch
+            {
+                '\\' or ']' => 0,
+                '[' => 1,
+                _ => disableCorruption,
+            };
+
+            if (disableCorruption == -1  && _random.Prob(chanceToCorruptLetter)) // Corrupt!
+            // End Aurora's Song
             {
                 outMsg.Append(CorruptLetterDamage(letter));
             }
@@ -134,6 +144,9 @@ public sealed class DamagedSiliconAccentSystem : EntitySystem
             {
                 outMsg.Append(letter);
             }
+
+            if (disableCorruption == 0) // Aurora's Song - Support text formatting
+                disableCorruption = -1;
         }
         return outMsg.ToString();
     }
@@ -153,7 +166,7 @@ public sealed class DamagedSiliconAccentSystem : EntitySystem
 
     private string CorruptPunctuize()
     {
-        const string punctuation = "\"\\`~!@#$%^&*()_+-={}[]|\\;:<>,.?/";
+        const string punctuation = "\"`~!@#$%^&*()_+-={}]|;:<>,.?/"; // Aurora's Song - Remove characters which cause formatting issues
         return punctuation[_random.NextByte((byte)punctuation.Length)].ToString();
     }
 

@@ -21,6 +21,26 @@
             },
             "problemMatcher": "$msCompile"
         },
+        // Aurora's Song Begin
+        {
+            "label": "build-tools",
+            "command": "dotnet",
+            "type": "shell",
+            "args": [
+                "build",
+                "--configuration=Tools", // Build in release mode. Note: --, not /. /configuration doesn't work, because Microsoft.
+                "/property:GenerateFullPaths=true", // Ask dotnet build to generate full paths for file names.
+                "/consoleloggerparameters:NoSummary" // Do not generate summary otherwise it leads to duplicate errors in Problems panel
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "presentation": {
+                "reveal": "silent"
+            },
+            "problemMatcher": "$msCompile"
+        },
+        // Aurora's Song End
         // Frontier begin
         {
             "label": "build-release",

@@ -955,11 +955,14 @@
   - EmergencyIPCBox
   - ContractorASBoxSurvivalFeroxi # Aurora Song
   - ContractorASBoxSurvivalExtendedFeroxi # Aurora Song
+  - ContractorASBoxSurvivalAvali # Aurora Song
+  - ContractorASBoxSurvivalExtendedAvali # Aurora Song
   fallbacks:
   - ContractorNFBoxSurvival
   - ContractorNFBoxSurvivalNitrogen
   - ContractorNFBoxSurvivalSheleg
   - ContractorASBoxSurvivalFeroxi # Aurora Song
+  - ContractorASBoxSurvivalAvali # Aurora Song
 
 - type: loadoutGroup
   id: ContractorEncryptionKey

@@ -91,11 +91,13 @@
   - SLEBoxSurvivalSLESheleg
   - EmergencyIPCBox
   - SLEBoxSurvivalSLEFeroxi
+  - SLEBoxSurvivalSLEAvali
   fallbacks:
   - SLEBoxSurvivalSLEOxygen
   - SLEBoxSurvivalSLENitrogen
   - SLEBoxSurvivalSLESheleg
   - SLEBoxSurvivalSLEFeroxi
+  - SLEBoxSurvivalSLEAvali
 
 - type: loadoutGroup
   id: SLEFace

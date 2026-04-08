@@ -45,27 +45,25 @@
     "compounds": [
         {
             "name": "Server/Client",
-            "configurations": [
-                "Server",
-                "Client"
-            ],
+            "configurations": ["Server", "Client"],
             "preLaunchTask": "build"
         },
+        // Aurora's Song Begin
+        {
+            "name": "Server/Client (Tools)",
+            "configurations": ["Server", "Client"],
+            "preLaunchTask": "build-tools"
+        },
+        // Aurora's Song End
         // Frontier begin
         {
             "name": "Server/Client (Release)",
-            "configurations": [
-                "Server",
-                "Client"
-            ],
+            "configurations": ["Server", "Client"],
             "preLaunchTask": "build-release"
         },
         {
             "name": "Server/Client (No Build)",
-            "configurations": [
-                "Server",
-                "Client"
-            ]
+            "configurations": ["Server", "Client"]
         }
         // Frontier end
     ]

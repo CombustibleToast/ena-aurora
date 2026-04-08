@@ -59,10 +59,21 @@ namespace Content.Server.Speech.EntitySystems
 
             string newLetter;
 
+            var disableAccentuate = -1; // Aurora's Song - Support text formatting
             for (var i = 0; i < length; i++)
             {
                 newLetter = message[i].ToString();
-                if (Stutter.IsMatch(newLetter) && _random.Prob(component.MatchRandomProb))
+
+                // Aurora's Song Start - Support text formatting
+                disableAccentuate = newLetter switch
+                {
+                    "\\" or "]" => 0,
+                    "[" => 1,
+                    _ => disableAccentuate,
+                };
+
+                if (disableAccentuate == -1 && Stutter.IsMatch(newLetter) && _random.Prob(component.MatchRandomProb))
+                // End Aurora's Song
                 {
                     if (_random.Prob(component.FourRandomProb))
                     {
@@ -81,6 +92,9 @@ namespace Content.Server.Speech.EntitySystems
                         newLetter = $"{newLetter}-{newLetter}";
                     }
                 }
+
+                if (disableAccentuate == 0) // Aurora's Song - Support text formatting
+                    disableAccentuate = -1;
 
                 finalMessage.Append(newLetter);
             }

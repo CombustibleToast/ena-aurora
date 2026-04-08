@@ -19,6 +19,7 @@
     - Moth
     - Reptilian
     - Vulpkanin
+    - Ovinia # Den Addition
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

@@ -7,6 +7,13 @@
     species:
     - Feroxi
 
+- type: loadoutEffectGroup # Aurora's Song - Ammonia drinker loadout effect group added
+  id: ASAmmoniaDrinker
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Avali
+
 #region Jobs
 
 - type: loadoutEffectGroup # Aurora's Song - Medical blacklist added

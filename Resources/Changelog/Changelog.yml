@@ -7278,6 +7278,47 @@ Entries:
     id: 9091
     time: "2026-04-06T03:51:05.0000000+00:00"
     url: https://github.com/AuroraSong14/Aurora-Song-14/pull/907
+  - author: LizArmchair, ZigTag
+    changes:
+      - type: Add
+        message: Avali from Moff Station!
+      - type: Tweak
+        message: loadout code to add ammonia to survival kits
+    id: 9092
+    time: '2026-04-06T09:10:26.0000000+00:00'
+    url: https://github.com/AuroraSong14/Aurora-Song-14/pull/905
+  - author: ZigTag
+    changes:
+      - type: Fix
+        message: >-
+          Denu formatting no longer breaks players with the silicon damage accent,
+          or the stuttering accent
+      - type: Fix
+        message: The silicon damage accent will no longer terminate your sentences early
+    id: 9093
+    time: '2026-04-06T09:19:10.0000000+00:00'
+    url: https://github.com/AuroraSong14/Aurora-Song-14/pull/911
+  - author: Phoenix51505
+    changes:
+      - type: Fix
+        message: Hits ESS with more hammers to get it to work
+    id: 9094
+    time: '2026-04-06T09:19:35.0000000+00:00'
+    url: https://github.com/AuroraSong14/Aurora-Song-14/pull/908
+  - author: snezshiba
+    changes:
+      - type: Add
+        message: Added Ovinia, a sheep/cow/deer roundstart species!
+    id: 9095
+    time: '2026-04-06T09:26:29.0000000+00:00'
+    url: https://github.com/AuroraSong14/Aurora-Song-14/pull/903
+  - author: portfiend
+    changes:
+      - type: Tweak
+        message: A vast majority of loadouts no longer have playtime requirements.
+    id: 9096
+    time: '2026-04-07T12:23:47.0000000+00:00'
+    url: https://github.com/AuroraSong14/Aurora-Song-14/pull/915
   - author: Orsoniks
     changes:
       - message: Added more in-hand sprites for food items

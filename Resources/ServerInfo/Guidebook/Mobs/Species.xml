@@ -32,5 +32,8 @@
   <GuideEntityEmbed Entity="MobRodentia" Caption="Rodentia"/>
   <GuideEntityEmbed Entity="MobFeroxi" Caption="Feroxi"/>
   </Box>
-
+  # Den specifc species
+  <Box>
+  <GuideEntityEmbed Entity="MobOvinia" Caption="Ovinia"/>
+  </Box>
 </Document>
