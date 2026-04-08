@@ -7319,3 +7319,10 @@ Entries:
   id: 9096
   time: '2026-04-07T12:23:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/915
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added ship and intra ship prototypes for gloomy holopads for mapping
+  id: 9097
+  time: '2026-04-08T14:19:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/914
