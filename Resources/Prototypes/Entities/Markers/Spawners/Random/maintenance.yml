@@ -114,6 +114,7 @@
       - id: ToySkeleton
       - id: Basketball
       - id: Football
+      - id: TennisBall
       - id: BalloonNT
       - id: BalloonCorgi
       - id: MysteryFigureBox
@@ -174,7 +175,7 @@
       - id: RubberStampGreytide
       - id: MysteryLighterBox
       - id: GoldenPersonalAI
-      - id: LanternSomber
+      - id: LanternSomber # TheDen - Add somber lantern
 
 - type: entity
   name: Maint Loot Spawner

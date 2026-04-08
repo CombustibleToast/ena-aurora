@@ -32,11 +32,11 @@ public sealed partial class StencilOverlay : Overlay
     private readonly SpriteSystem _sprite;
     private readonly WeatherSystem _weather;
 
-    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
-
     private IRenderTexture? _blep;
 
     private readonly ShaderInstance _shader;
+
+    public override OverlaySpace Space => OverlaySpace.WorldSpaceBelowFOV;
 
     public StencilOverlay(ParallaxSystem parallax, SharedTransformSystem transform, SharedMapSystem map, SpriteSystem sprite, WeatherSystem weather)
     {
@@ -65,7 +65,7 @@ public sealed partial class StencilOverlay : Overlay
         {
             foreach (var (proto, weather) in comp.Weather)
             {
-                if (!_protoManager.TryIndex<WeatherPrototype>(proto, out var weatherProto))
+                if (!_protoManager.Resolve<WeatherPrototype>(proto, out var weatherProto))
                     continue;
 
                 var alpha = _weather.GetPercent(weather, mapUid);

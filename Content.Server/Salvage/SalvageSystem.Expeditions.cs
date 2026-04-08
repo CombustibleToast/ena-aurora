@@ -1,10 +1,8 @@
 using System.Linq;
 using System.Threading;
 using Content.Server.Salvage.Expeditions;
-using Content.Server.Salvage.Expeditions.Structure;
 using Content.Shared.CCVar;
 using Content.Shared.Examine;
-using Content.Shared.Random.Helpers;
 using Content.Shared.Salvage.Expeditions;
 using Content.Shared.Shuttles.Components;
 using Robust.Shared.Audio;
@@ -57,8 +55,6 @@ public sealed partial class SalvageSystem
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentShutdown>(OnExpeditionShutdown);
         SubscribeLocalEvent<SalvageExpeditionComponent, ComponentGetState>(OnExpeditionGetState);
         SubscribeLocalEvent<SalvageExpeditionComponent, EntityTerminatingEvent>(OnMapTerminating); // Frontier
-
-        SubscribeLocalEvent<SalvageStructureComponent, ExaminedEvent>(OnStructureExamine);
 
         _cooldown = _cfgManager.GetCVar(CCVars.SalvageExpeditionCooldown);
         Subs.CVar(_cfgManager, CCVars.SalvageExpeditionCooldown, SetCooldownChange);
@@ -278,11 +274,6 @@ public sealed partial class SalvageSystem
 
         _salvageJobs.Add((job, cancelToken));
         _salvageQueue.EnqueueJob(job);
-    }
-
-    private void OnStructureExamine(EntityUid uid, SalvageStructureComponent component, ExaminedEvent args)
-    {
-        args.PushMarkup(Loc.GetString("salvage-expedition-structure-examine"));
     }
 
     // Frontier: exped job handling, ghost reparenting

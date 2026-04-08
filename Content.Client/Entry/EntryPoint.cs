@@ -152,7 +152,7 @@ namespace Content.Client.Entry
 
             foreach (var callback in TestingCallbacks)
             {
-                var cast = (ClientModuleTestingCallbacks) callback;
+                var cast = (ClientModuleTestingCallbacks)callback;
                 cast.ClientBeforeIoC?.Invoke();
             }
 
@@ -199,7 +199,7 @@ namespace Content.Client.Entry
             _prototypeManager.RegisterIgnore("publicTransitRoute"); // Frontier: worldgen-related, server-only
             _prototypeManager.RegisterIgnore("codewordGenerator");
             _prototypeManager.RegisterIgnore("codewordFaction");
-			_prototypeManager.RegisterIgnore("stationPay"); // Aurora
+            _prototypeManager.RegisterIgnore("stationPay"); // Aurora
 
             _componentFactory.GenerateNetIds();
             _adminManager.Initialize();
@@ -287,7 +287,7 @@ namespace Content.Client.Entry
             else if (_gameController.LaunchState.FromLauncher)
             {
                 _stateManager.RequestStateChange<LauncherConnecting>();
-                var state = (LauncherConnecting) _stateManager.CurrentState;
+                var state = (LauncherConnecting)_stateManager.CurrentState;
 
                 if (disconnected)
                 {

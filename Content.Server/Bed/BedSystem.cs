@@ -1,3 +1,4 @@
+
 using Content.Shared._EE.Silicon.Components; // IPC
 using Content.Shared.Bed;
 using Content.Shared.Bed.Components;

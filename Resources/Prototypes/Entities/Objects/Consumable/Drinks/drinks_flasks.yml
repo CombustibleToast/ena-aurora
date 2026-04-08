@@ -1,20 +1,40 @@
 - type: entity
-  parent: DrinkBase
-  id: FlaskBase
   abstract: true
+  parent: [DrinkBaseMaterialStrongMetal, DrinkBase, DrinkBaseOpenable, DrinkVisualsOpenable]
+  id: FlaskBase
   components:
   - type: SolutionContainerManager
     solutions:
       drink:
         maxVol: 30
   - type: Sprite
-    state: icon
     sprite: Objects/Consumable/Drinks/flask.rsi
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 300
   - type: FitsInDispenser
     solution: drink
+  - type: Openable
+    sound:
+      collection: flaskOpenSounds
+    closeable: true
+    closeSound:
+      collection: flaskCloseSounds
+
+# Flasks
+
+- type: entity
+  parent: [DrinkBaseMaterialStrongMetal, DrinkBase]
+  id: DrinkFlaskOld
+  name: old flask
+  description: A decrepit old flask, its lid seems to be missing.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 30
+  - type: Sprite
+    sprite: Objects/Consumable/Drinks/flask_old.rsi
+  - type: FitsInDispenser
+    solution: drink
+  - type: Engraveable # Frontier
 
 - type: entity
   id: DrinkFlaskVisualsOpenable
@@ -37,8 +57,6 @@
     closeable: true
     closeSound:
       collection: flaskCloseSounds
-
-# Flasks
 
 - type: entity
   parent: [FlaskBase, DrinkFlaskVisualsOpenable]
@@ -111,16 +129,6 @@
     - type: Engraveable # Frontier
 
 - type: entity
-  parent: FlaskBase
-  id: DrinkFlaskOld
-  name: old flask
-  description: A decrepit old flask, its lid seems to be missing.
-  components:
-  - type: Sprite
-    sprite: Objects/Consumable/Drinks/flask_old.rsi
-  - type: Engraveable # Frontier
-
-- type: entity
   parent: [FlaskBase, DrinkFlaskVisualsOpenable]
   id: DrinkLithiumFlask
   name: lithium flask
@@ -138,3 +146,7 @@
   components:
   - type: Sprite
     sprite: Objects/Consumable/Drinks/vacuumflask.rsi
+  - type: Tool
+    qualities:
+    - Rolling # Perfectly cylindrical flask
+    speedModifier: 0.75

@@ -18,7 +18,6 @@ using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.DoAfter; // Frontier
 using Content.Shared._DV.Chemistry.Components; // Frontier
 using Robust.Shared.Audio.Systems;
-
 namespace Content.Shared.Chemistry.EntitySystems;
 
 public sealed class HypospraySystem : EntitySystem

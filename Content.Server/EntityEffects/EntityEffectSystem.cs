@@ -1,6 +1,5 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
-using Content.Server.Atmos.Components;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Components;
 using Content.Server.Body.Systems;
@@ -22,6 +21,7 @@ using Content.Server.Temperature.Systems;
 using Content.Server.Traits.Assorted;
 using Content.Server.Zombies;
 using Content.Shared.Atmos;
+using Content.Shared.Atmos.Components;
 using Content.Shared.Body.Components;
 using Content.Shared.Coordinates.Helpers;
 using Content.Shared.EntityEffects.EffectConditions;
@@ -299,7 +299,7 @@ public sealed class EntityEffectSystem : EntitySystem
         if (!CanMetabolizePlant(args.Args.TargetEntity, out var plantHolderComp))
             return;
 
-        _plantHolder.AffectGrowth(args.Args.TargetEntity, (int) args.Effect.Amount, plantHolderComp);
+        _plantHolder.AffectGrowth(args.Args.TargetEntity, (int)args.Effect.Amount, plantHolderComp);
     }
 
     // Mutate reference 'val' between 'min' and 'max' by pretending the value
@@ -420,9 +420,9 @@ public sealed class EntityEffectSystem : EntitySystem
         if (seed == null)
             return;
         if (plantHolderComp.Age > seed.Maturation)
-            deviation = (int) Math.Max(seed.Maturation - 1, plantHolderComp.Age - _random.Next(7, 10));
+            deviation = (int)Math.Max(seed.Maturation - 1, plantHolderComp.Age - _random.Next(7, 10));
         else
-            deviation = (int) (seed.Maturation / seed.GrowthStages);
+            deviation = (int)(seed.Maturation / seed.GrowthStages);
         plantHolderComp.Age -= deviation;
         plantHolderComp.LastProduce = plantHolderComp.Age;
         plantHolderComp.SkipAging++;
@@ -533,7 +533,7 @@ public sealed class EntityEffectSystem : EntitySystem
             if (reagentArgs.Source == null)
                 return;
 
-            var spreadAmount = (int) Math.Max(0, Math.Ceiling((reagentArgs.Quantity / args.Effect.OverflowThreshold).Float()));
+            var spreadAmount = (int)Math.Max(0, Math.Ceiling((reagentArgs.Quantity / args.Effect.OverflowThreshold).Float()));
             var splitSolution = reagentArgs.Source.SplitSolution(reagentArgs.Source.Volume);
             var transform = Comp<TransformComponent>(reagentArgs.TargetEntity);
             var mapCoords = _xform.GetMapCoordinates(reagentArgs.TargetEntity, xform: transform);
@@ -664,7 +664,7 @@ public sealed class EntityEffectSystem : EntitySystem
 
         if (args.Args is EntityEffectReagentArgs reagentArgs)
         {
-            range = MathF.Min((float) (reagentArgs.Quantity * args.Effect.EmpRangePerUnit), args.Effect.EmpMaxRange);
+            range = MathF.Min((float)(reagentArgs.Quantity * args.Effect.EmpRangePerUnit), args.Effect.EmpMaxRange);
         }
 
         _emp.EmpPulse(_xform.GetMapCoordinates(args.Args.TargetEntity, xform: transform),
@@ -679,7 +679,7 @@ public sealed class EntityEffectSystem : EntitySystem
 
         if (args.Args is EntityEffectReagentArgs reagentArgs)
         {
-            intensity = MathF.Min((float) reagentArgs.Quantity * args.Effect.IntensityPerUnit, args.Effect.MaxTotalIntensity);
+            intensity = MathF.Min((float)reagentArgs.Quantity * args.Effect.IntensityPerUnit, args.Effect.MaxTotalIntensity);
         }
 
         _explosion.QueueExplosion(
@@ -805,7 +805,8 @@ public sealed class EntityEffectSystem : EntitySystem
         if (TryComp<BloodstreamComponent>(args.Args.TargetEntity, out var blood))
         {
             var amt = args.Effect.Amount;
-            if (args.Args is EntityEffectReagentArgs reagentArgs) {
+            if (args.Args is EntityEffectReagentArgs reagentArgs)
+            {
                 if (args.Effect.Scaled)
                     amt *= reagentArgs.Quantity.Float();
                 amt *= reagentArgs.Scale.Float();
@@ -856,7 +857,7 @@ public sealed class EntityEffectSystem : EntitySystem
             {
                 var quantity = ratio * amount / Atmospherics.BreathMolesToReagentMultiplier;
                 if (quantity < 0)
-                    quantity = Math.Max(quantity, -lung.Air[(int) gas]);
+                    quantity = Math.Max(quantity, -lung.Air[(int)gas]);
                 lung.Air.AdjustMoles(gas, quantity);
             }
         }
@@ -917,7 +918,7 @@ public sealed class EntityEffectSystem : EntitySystem
         if (plantholder.Seed == null)
             return;
 
-        var gasses = plantholder.Seed.ExudeGasses;
+        var gasses = plantholder.Seed.ConsumeGasses;
 
         // Add a random amount of a random gas to this gas dictionary
         float amount = _random.NextFloat(args.Effect.MinValue, args.Effect.MaxValue);
@@ -940,7 +941,7 @@ public sealed class EntityEffectSystem : EntitySystem
         if (plantholder.Seed == null)
             return;
 
-        var gasses = plantholder.Seed.ConsumeGasses;
+        var gasses = plantholder.Seed.ExudeGasses;
 
         // Add a random amount of a random gas to this gas dictionary
         float amount = _random.NextFloat(args.Effect.MinValue, args.Effect.MaxValue);
@@ -979,9 +980,7 @@ public sealed class EntityEffectSystem : EntitySystem
             return;
 
         var targetProto = _random.Pick(plantholder.Seed.MutationPrototypes);
-        _protoManager.TryIndex(targetProto, out SeedPrototype? protoSeed);
-
-        if (protoSeed == null)
+        if (!_protoManager.TryIndex(targetProto, out SeedPrototype? protoSeed))
         {
             Log.Error($"Seed prototype could not be found: {targetProto}!");
             return;

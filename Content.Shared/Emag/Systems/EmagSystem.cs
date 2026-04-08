@@ -105,7 +105,7 @@ public sealed class EmagSystem : EntitySystem
     /// <summary>
     /// Does an unemag effect on a specified entity
     /// </summary>
-    public bool TryUnemagEffect(Entity<EmagComponent?> ent, EntityUid user, EntityUid target)
+    public bool TryUnemagEffect(Entity<EmagComponent?> ent, EntityUid user, EntityUid target, EmagType? customEmagType = null)
     {
         if (!Resolve(ent, ref ent.Comp, false))
             return false;
@@ -119,7 +119,7 @@ public sealed class EmagSystem : EntitySystem
             return false;
         }
 
-        var emaggedEvent = new GotUnEmaggedEvent(user, ent.Comp.EmagType);
+        var emaggedEvent = new GotUnEmaggedEvent(user, typeToUse);
         RaiseLocalEvent(target, ref emaggedEvent);
 
         if (!emaggedEvent.Handled)

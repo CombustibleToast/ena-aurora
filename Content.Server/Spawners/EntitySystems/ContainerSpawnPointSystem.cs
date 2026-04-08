@@ -1,4 +1,4 @@
-using Content.Server.GameTicking;
+﻿using Content.Server.GameTicking;
 using Content.Server.Spawners.Components;
 using Content.Server.Station.Systems;
 using Content.Shared.Preferences;
@@ -36,7 +36,7 @@ public sealed class ContainerSpawnPointSystem : EntitySystem
 
         // If it's just a spawn pref check if it's for cryo (silly).
         if (args.HumanoidCharacterProfile?.SpawnPriority != SpawnPriorityPreference.Cryosleep &&
-            (!_proto.TryIndex(args.Job, out var jobProto) || jobProto.JobEntity == null))
+            (!_proto.Resolve(args.Job, out var jobProto) || jobProto.JobEntity == null))
         {
             return;
         }

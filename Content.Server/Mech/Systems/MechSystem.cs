@@ -49,6 +49,8 @@ public sealed partial class MechSystem : SharedMechSystem
 
     private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
 
+    private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
+
     /// <inheritdoc/>
     public override void Initialize()
     {

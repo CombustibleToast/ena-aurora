@@ -75,6 +75,7 @@
     rewardMinAmount: 0
     rewardMaxAmount: 0
     possibleRewards:
+    # Frontier - Comment out everything
     # - Basketball
     # - BalloonNT
     # - BalloonCorgi

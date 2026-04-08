@@ -25,15 +25,6 @@ public static class ServerPackaging
         new PlatformReg("freebsd-x64", "FreeBSD", false),
     };
 
-    private static List<string> PlatformRids => Platforms
-        .Select(o => o.Rid)
-        .ToList();
-
-    private static List<string> PlatformRidsDefault => Platforms
-        .Where(o => o.BuildByDefault)
-        .Select(o => o.Rid)
-        .ToList();
-
     private static readonly List<string> ServerContentAssemblies = new()
     {
         "Content.Server.Database",
@@ -72,6 +63,21 @@ public static class ServerPackaging
         "zh-Hans",
         "zh-Hant"
     };
+
+    private static IReadOnlySet<string> ServerContentIgnoresResources { get; } = new HashSet<string>
+    {
+        "ServerInfo",
+        "Changelog",
+    };
+
+    private static List<string> PlatformRids => Platforms
+        .Select(o => o.Rid)
+        .ToList();
+
+    private static List<string> PlatformRidsDefault => Platforms
+        .Where(o => o.BuildByDefault)
+        .Select(o => o.Rid)
+        .ToList();
 
     public static async Task PackageServer(bool skipBuild, bool hybridAcz, IPackageLogger logger, string configuration, List<string>? platforms = null)
     {
@@ -211,7 +217,11 @@ public static class ServerPackaging
             contentAssemblies,
             cancel: cancel);
 
-        await RobustServerPackaging.WriteServerResources(contentDir, inputPassResources, cancel);
+        await RobustServerPackaging.WriteServerResources(
+            contentDir,
+            inputPassResources,
+            ServerContentIgnoresResources.Concat(SharedPackaging.AdditionalIgnoredResources).ToHashSet(),
+            cancel);
 
         if (hybridAcz)
         {

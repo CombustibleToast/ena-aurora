@@ -33,6 +33,8 @@ namespace Content.Client.GameTicking.Managers
         [ViewVariables] public TimeSpan StartTime { get; private set; }
         [ViewVariables] public new bool Paused { get; private set; }
 
+        public override IReadOnlyList<(TimeSpan, string)> AllPreviousGameRules => new List<(TimeSpan, string)>();
+
         [ViewVariables] public IReadOnlyDictionary<NetEntity, StationJobInformation> StationJobInformationList => _stationJobInformationList;
 
         // Frontier addition
@@ -43,6 +45,9 @@ namespace Content.Client.GameTicking.Managers
                 kvp => kvp.Key,
                 kvp => kvp.Value.StationName
             );
+
+        [ViewVariables] public IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>> JobsAvailable => _jobsAvailable;
+        [ViewVariables] public IReadOnlyDictionary<NetEntity, string> StationNames => _stationNames;
 
         public event Action? InfoBlobUpdated;
         public event Action? LobbyStatusUpdated;

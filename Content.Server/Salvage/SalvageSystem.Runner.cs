@@ -3,7 +3,6 @@ using Content.Server._NF.Salvage; //AS
 using Content.Server.Salvage.Expeditions;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
-using Content.Server.Station.Components;
 using Content.Shared.Chat;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs.Components;
@@ -20,6 +19,7 @@ using Content.Shared.Localizations;
 using Content.Shared.Mind.Components; // AS
 using Content.Shared.Mobs.Components; // AS
 using Content.Shared.Warps; // AS
+using Content.Shared.Station.Components;
 using Robust.Shared.Map.Components;
 using Robust.Server.GameObjects; // AS
 using Robust.Shared.Player;
@@ -27,9 +27,7 @@ using Robust.Shared.Map; // Frontier
 using Content.Server.GameTicking; // Frontier
 using Content.Server._NF.Salvage.Expeditions.Structure; // Frontier
 using Content.Server._NF.Salvage.Expeditions;
-using Content.Shared.Mind.Components; // AS
 using Content.Shared.Salvage; // AS
-using Content.Shared.Warps; // AS
 using Content.Shared.Buckle; // AS
 using Content.Shared.Buckle.Components; // AS
 using Content.Shared.Implants; // AS

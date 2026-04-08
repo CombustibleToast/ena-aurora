@@ -351,6 +351,9 @@
   id: ComputerTelevisionCircuitboard
 
 - type: Tag
+  id: ConstructionMaterial
+
+- type: Tag
   id: ConveyorAssembly
 
 - type: Tag
@@ -634,6 +637,9 @@
   id: GhostOnlyWarp
 
 - type: Tag
+  id: GenderPin
+
+- type: Tag
   id: GlassAirlock
 
 - type: Tag
@@ -644,6 +650,9 @@
 
 - type: Tag
   id: Goat
+
+- type: Tag
+  id: GoldenPlunger
 
 - type: Tag
   id: GoldenPlunger
@@ -802,6 +811,9 @@
   id: Ingot
 
 - type: Tag
+  id: Inflatable
+
+- type: Tag
   id: InstantDoAfters
 
 - type: Tag
@@ -833,6 +845,9 @@
 
 - type: Tag
   id: Knife
+
+- type: Tag
+  id: KnockdownImmune
 
 - type: Tag
   id: KnockdownImmune
@@ -927,6 +942,9 @@
 
 - type: Tag
   id: Medkit
+
+- type: Tag
+  id: MessyDrinkerImmune
 
 - type: Tag
   id: Metal
@@ -1201,6 +1219,9 @@
 
 - type: Tag
   id: RollingPin
+
+- type: Tag
+  id: Ruminant
 
 - type: Tag
   id: SaltShaker

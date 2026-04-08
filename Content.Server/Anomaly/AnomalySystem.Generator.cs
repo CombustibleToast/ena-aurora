@@ -1,6 +1,5 @@
 using Content.Server.Anomaly.Components;
 using Content.Server.Power.EntitySystems;
-using Content.Server.Station.Components;
 using Content.Shared.Anomaly;
 using Content.Shared.CCVar;
 using Content.Shared.Materials;
@@ -97,8 +96,8 @@ public sealed partial class AnomalySystem
 
         for (var i = 0; i < 20; i++) // Frontier: 25<20
         {
-            var randomX = Random.Next((int) gridBounds.Left, (int) gridBounds.Right);
-            var randomY = Random.Next((int) gridBounds.Bottom, (int) gridBounds.Top);
+            var randomX = Random.Next((int)gridBounds.Left, (int)gridBounds.Right);
+            var randomY = Random.Next((int)gridBounds.Bottom, (int)gridBounds.Top);
 
             var tile = new Vector2i(randomX, randomY);
 
@@ -120,7 +119,7 @@ public sealed partial class AnomalySystem
                     continue;
                 if (body.BodyType != BodyType.Static ||
                     !body.Hard ||
-                    (body.CollisionLayer & (int) CollisionGroup.Impassable) == 0)
+                    (body.CollisionLayer & (int)CollisionGroup.Impassable) == 0)
                     continue;
 
                 valid = false;

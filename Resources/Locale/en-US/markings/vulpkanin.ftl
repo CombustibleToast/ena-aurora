@@ -1,4 +1,5 @@
 # Frontier: all entries capitalized
+# Ears
 marking-VulpEar-vulp = Vulpkanin Ears (Base)
 marking-VulpEar-vulp-inner = Vulpkanin Ears (Inner)
 marking-VulpEar = Vulpkanin
@@ -48,6 +49,8 @@ marking-VulpEarDalmatian-dalmatian = Dalmatian Ears
 marking-VulpEarDalmatian = Vulpkanin Dalmatian
 
 
+# Snout
+
 marking-VulpSnoutAlt-muzzle_alt = Muzzle
 marking-VulpSnoutAlt-nose = Nose
 marking-VulpSnoutAlt = Vulpkanin Muzzle 2
@@ -85,6 +88,8 @@ marking-VulpSnoutPatch-patch = Patch
 marking-VulpSnoutPatch = Vulpkanin Patch
 
 
+# Head
+
 marking-VulpHeadTiger-tiger_head = Tiger Stripes
 marking-VulpHeadTiger = Vulpkanin Tiger Stripes (Head)
 
@@ -94,6 +99,8 @@ marking-VulpHeadTigerFace = Vulpkanin Tiger Stripes (Face)
 marking-VulpHeadSlash-slash = Slash
 marking-VulpHeadSlash = Vulpkanin Slash
 
+
+# Tails
 
 marking-VulpTail-vulp = Vulpkanin Tail (Base)
 marking-VulpTail-vulp-fade = Vulpkanin Tail (Fade)
@@ -181,6 +188,8 @@ marking-VulpTailDalmatianWag-dalmatian_wag = Dalmatian Tail
 marking-VulpTailDalmatianWag = Vulpkanin Dalmatian (Wag)
 
 
+# Chest
+
 marking-VulpBellyCrest-belly_crest = Belly
 marking-VulpBellyCrest = Vulpkanin Belly Crest
 
@@ -189,7 +198,6 @@ marking-VulpBellyFull = Vulpkanin Belly 1
 
 marking-VulpBellyFox-belly_fox = Belly
 marking-VulpBellyFox = Vulpkanin Belly 2
-
 
 marking-VulpBodyPointsCrest-points_crest = Points (Crest)
 marking-VulpBodyPointsCrest = Vulpkanin Points (Crest)
@@ -200,6 +208,22 @@ marking-VulpBodyPointsFade = Vulpkanin Points (Fade)
 marking-VulpBodyPointsSharp-points_sharp = Vulpkanin Points (Sharp)
 marking-VulpBodyPointsSharp = Vulpkanin Points (Sharp)
 
+
+# Arms
+
+marking-VulpPointsHands-points_hands = Points Hands
+marking-VulpPointsHands = Vulpkanin Points Hands
+
+marking-VulpPointsCrestArms-points_crest-arms = Points (Crest)
+marking-VulpPointsCrestArms = Vulpkanin Points Arms (Crest)
+
+marking-VulpPointsFadeArms-points_fade-arms = Points (Fade)
+marking-VulpPointsFadeArms = Vulpkanin Points Arms (Fade)
+
+marking-VulpPointsSharpArms-points_sharp-arms = Points (Sharp)
+marking-VulpPointsSharpArms = Vulpkanin Points Arms (Sharp)
+
+# Legs
 
 marking-VulpPointsFeet-points_feet = Points Feet
 marking-VulpPointsFeet = Vulpkanin Points Feet
@@ -214,18 +238,7 @@ marking-VulpPointsSharpLegs-points_sharp-legs = Points (Sharp)
 marking-VulpPointsSharpLegs = Vulpkanin Points Legs (Sharp)
 
 
-marking-VulpPointsHands-points_hands = Points Hands
-marking-VulpPointsHands = Vulpkanin Points Hands
-
-marking-VulpPointsCrestArms-points_crest-arms = Points (Crest)
-marking-VulpPointsCrestArms = Vulpkanin Points Arms (Crest)
-
-marking-VulpPointsFadeArms-points_fade-arms = Points (Fade)
-marking-VulpPointsFadeArms = Vulpkanin Points Arms (Fade)
-
-marking-VulpPointsSharpArms-points_sharp-arms = Points (Sharp)
-marking-VulpPointsSharpArms = Vulpkanin Points Arms (Sharp)
-
+# Hair
 
 marking-VulpHairAdhara = Adhara
 marking-VulpHairAnita = Anita
@@ -248,6 +261,8 @@ marking-VulpHairRough = Rough
 marking-VulpHairShort = Short Hair
 marking-VulpHairShort2 = Short Hair 2
 marking-VulpHairSpike = Spike
+
+# Facial Hair
 
 marking-VulpFacialHairRuff = Ruff
 marking-VulpFacialHairElder = Elder

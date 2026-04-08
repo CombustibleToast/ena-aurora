@@ -60,6 +60,8 @@ public sealed class FaxSystem : EntitySystem
 
     private static readonly ProtoId<ToolQualityPrototype> ScrewingQuality = "Screwing";
 
+    private static readonly ProtoId<ToolQualityPrototype> ScrewingQuality = "Screwing";
+
     private const string PaperSlotId = "Paper";
     private static readonly ProtoId<TagPrototype> NFPaperStampProtectedTag = "NFPaperStampProtected";
 

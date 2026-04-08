@@ -119,10 +119,10 @@ public sealed class EmpSystem : SharedEmpSystem
     {
         var ev = new EmpPulseEvent(energyConsumption, false, false, TimeSpan.FromSeconds(duration));
         RaiseLocalEvent(uid, ref ev);
+
         if (ev.Affected)
-        {
             Spawn(EmpDisabledEffectPrototype, Transform(uid).Coordinates);
-        }
+    }
         if (ev.Disabled)
         {
             // Frontier: Upstream - #28984 start
@@ -132,7 +132,7 @@ public sealed class EmpSystem : SharedEmpSystem
             {
                 disabled.DisabledUntil = Timing.CurTime;
             }
-            disabled.DisabledUntil = disabled.DisabledUntil + TimeSpan.FromSeconds(duration);
+disabled.DisabledUntil = disabled.DisabledUntil + TimeSpan.FromSeconds(duration);
 
             /// i tried my best to go through the Pow3r server code but i literally couldn't find in relation to PowerNetworkBatteryComponent that uses the event system
             /// the code is otherwise too esoteric for my innocent eyes
@@ -145,87 +145,87 @@ public sealed class EmpSystem : SharedEmpSystem
     }
 
     public override void Update(float frameTime)
+{
+    base.Update(frameTime);
+
+    var query = EntityQueryEnumerator<EmpDisabledComponent>();
+    while (query.MoveNext(out var uid, out var comp))
     {
-        base.Update(frameTime);
-
-        var query = EntityQueryEnumerator<EmpDisabledComponent>();
-        while (query.MoveNext(out var uid, out var comp))
+        if (comp.DisabledUntil < Timing.CurTime)
         {
-            if (comp.DisabledUntil < Timing.CurTime)
-            {
-                RemComp<EmpDisabledComponent>(uid);
-                var ev = new EmpDisabledRemoved();
-                RaiseLocalEvent(uid, ref ev);
+            RemComp<EmpDisabledComponent>(uid);
+            var ev = new EmpDisabledRemoved();
+            RaiseLocalEvent(uid, ref ev);
 
-                if (TryComp<PowerNetworkBatteryComponent>(uid, out var powerNetBattery)) // Frontier: Upstream - #28984
-                {
-                    powerNetBattery.CanCharge = true;
-                }
+            if (TryComp<PowerNetworkBatteryComponent>(uid, out var powerNetBattery)) // Frontier: Upstream - #28984
+            {
+                powerNetBattery.CanCharge = true;
             }
         }
     }
+}
 
-    private void OnExamine(EntityUid uid, EmpDisabledComponent component, ExaminedEvent args)
-    {
-        args.PushMarkup(Loc.GetString("emp-disabled-comp-on-examine"));
-    }
+private void OnExamine(EntityUid uid, EmpDisabledComponent component, ExaminedEvent args)
+{
+    args.PushMarkup(Loc.GetString("emp-disabled-comp-on-examine"));
+}
 
-    // Frontier: examine EMP trigger objects
-    private void OnEmpTriggerExamine(EntityUid uid, EmpOnTriggerComponent component, GetVerbsEvent<ExamineVerb> args)
-    {
-        if (!args.CanInteract || !args.CanAccess)
-            return;
+// Frontier: examine EMP trigger objects
+private void OnEmpTriggerExamine(EntityUid uid, EmpOnTriggerComponent component, GetVerbsEvent<ExamineVerb> args)
+{
+    if (!args.CanInteract || !args.CanAccess)
+        return;
 
-        var msg = GetEmpDescription(component.Range, component.EnergyConsumption, component.DisableDuration);
+    var msg = GetEmpDescription(component.Range, component.EnergyConsumption, component.DisableDuration);
 
-        _examine.AddDetailedExamineVerb(args, component, msg,
-            Loc.GetString("emp-examinable-verb-text"), "/Textures/Interface/VerbIcons/smite.svg.192dpi.png",
-            Loc.GetString("emp-examinable-verb-message"));
-    }
-    private void OnEmpDescriptorExamine(EntityUid uid, EmpDescriptionComponent component, GetVerbsEvent<ExamineVerb> args)
-    {
-        if (!args.CanInteract || !args.CanAccess)
-            return;
+    _examine.AddDetailedExamineVerb(args, component, msg,
+        Loc.GetString("emp-examinable-verb-text"), "/Textures/Interface/VerbIcons/smite.svg.192dpi.png",
+        Loc.GetString("emp-examinable-verb-message"));
+}
+private void OnEmpDescriptorExamine(EntityUid uid, EmpDescriptionComponent component, GetVerbsEvent<ExamineVerb> args)
+{
+    if (!args.CanInteract || !args.CanAccess)
+        return;
 
-        var msg = GetEmpDescription(component.Range, component.EnergyConsumption, component.DisableDuration);
+    var msg = GetEmpDescription(component.Range, component.EnergyConsumption, component.DisableDuration);
 
-        _examine.AddDetailedExamineVerb(args, component, msg,
-            Loc.GetString("emp-examinable-verb-text"), "/Textures/Interface/VerbIcons/smite.svg.192dpi.png",
-            Loc.GetString("emp-examinable-verb-message"));
-    }
+    _examine.AddDetailedExamineVerb(args, component, msg,
+        Loc.GetString("emp-examinable-verb-text"), "/Textures/Interface/VerbIcons/smite.svg.192dpi.png",
+        Loc.GetString("emp-examinable-verb-message"));
+}
 
-    private FormattedMessage GetEmpDescription(float range, float energy, float time)
-    {
-        var msg = new FormattedMessage();
-        msg.AddMarkupOrThrow(Loc.GetString("emp-examine"));
-        msg.PushNewline();
-        msg.AddMarkupOrThrow(Loc.GetString("emp-range-value",
-            ("value", range)));
-        msg.PushNewline();
-        msg.AddMarkupOrThrow(Loc.GetString("emp-energy-value",
-            ("value", energy)));
-        msg.PushNewline();
-        msg.AddMarkupOrThrow(Loc.GetString("emp-time-value",
-            ("value", time)));
-        return msg;
-    }
-    // End Frontier
+private FormattedMessage GetEmpDescription(float range, float energy, float time)
+{
+    var msg = new FormattedMessage();
+    msg.AddMarkupOrThrow(Loc.GetString("emp-examine"));
+    msg.PushNewline();
+    msg.AddMarkupOrThrow(Loc.GetString("emp-range-value",
+        ("value", range)));
+    msg.PushNewline();
+    msg.AddMarkupOrThrow(Loc.GetString("emp-energy-value",
+        ("value", energy)));
+    msg.PushNewline();
+    msg.AddMarkupOrThrow(Loc.GetString("emp-time-value",
+        ("value", time)));
+    return msg;
+}
+// End Frontier
 
-    private void HandleEmpTrigger(EntityUid uid, EmpOnTriggerComponent comp, TriggerEvent args)
-    {
-        EmpPulse(_transform.GetMapCoordinates(uid), comp.Range, comp.EnergyConsumption, comp.DisableDuration);
-        args.Handled = true;
-    }
+private void HandleEmpTrigger(EntityUid uid, EmpOnTriggerComponent comp, TriggerEvent args)
+{
+    EmpPulse(_transform.GetMapCoordinates(uid), comp.Range, comp.EnergyConsumption, comp.DisableDuration);
+    args.Handled = true;
+}
 
-    private void OnRadioSendAttempt(EntityUid uid, EmpDisabledComponent component, ref RadioSendAttemptEvent args)
-    {
-        args.Cancelled = true;
-    }
+private void OnRadioSendAttempt(EntityUid uid, EmpDisabledComponent component, ref RadioSendAttemptEvent args)
+{
+    args.Cancelled = true;
+}
 
-    private void OnRadioReceiveAttempt(EntityUid uid, EmpDisabledComponent component, ref RadioReceiveAttemptEvent args)
-    {
-        args.Cancelled = true;
-    }
+private void OnRadioReceiveAttempt(EntityUid uid, EmpDisabledComponent component, ref RadioReceiveAttemptEvent args)
+{
+    args.Cancelled = true;
+}
 
     //private void OnApcToggleMainBreaker(EntityUid uid, EmpDisabledComponent component, ref ApcToggleMainBreakerAttemptEvent args) // Frontier: Upstream - #28984
     //{
@@ -242,9 +242,7 @@ public sealed class EmpSystem : SharedEmpSystem
 /// <summary>
 /// Raised on an entity before <see cref="EmpPulseEvent"/>. Cancel this to prevent the emp event being raised.
 /// </summary>
-public sealed partial class EmpAttemptEvent : CancellableEntityEventArgs
-{
-}
+public sealed partial class EmpAttemptEvent : CancellableEntityEventArgs;
 
 [ByRefEvent]
 public record struct EmpPulseEvent(float EnergyConsumption, bool Affected, bool Disabled, TimeSpan Duration);

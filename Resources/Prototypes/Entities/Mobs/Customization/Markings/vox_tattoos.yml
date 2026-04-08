@@ -46,6 +46,21 @@
       fallbackColor: "#666666"
   sprites:
   - sprite: Mobs/Customization/vox_tattoos.rsi
+    state: nightling_s
+
+- type: marking
+  id: TattooVoxTailRing
+  # TODO // Looks off on some tails (i.e docked/amputated), if conditionals for markings ever get implemented this needs to be updated to account for those.
+  bodyPart: Tail
+  markingCategory: Overlay
+  speciesRestriction: [Vox]
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: Mobs/Customization/vox_tattoos.rsi
     state: tail_ring
 
 - type: marking

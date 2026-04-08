@@ -42,6 +42,26 @@ public sealed class EntityStorageVisualizerSystem : VisualizerSystem<EntityStora
         var forceRedrawBase = false;
         if (AppearanceSystem.TryGetData<string>(uid, PaintableVisuals.Prototype, out var prototype, args.Component))
         {
+            if (_prototypeManager.Resolve(prototype, out var proto))
+            {
+                if (proto.TryGetComponent(out SpriteComponent? sprite, _componentFactory))
+                {
+                    SpriteSystem.SetBaseRsi((uid, args.Sprite), sprite.BaseRSI);
+                }
+                if (proto.TryGetComponent(out EntityStorageVisualsComponent? visuals, _componentFactory))
+                {
+                    comp.StateBaseOpen = visuals.StateBaseOpen;
+                    comp.StateBaseClosed = visuals.StateBaseClosed;
+                    comp.StateDoorOpen = visuals.StateDoorOpen;
+                    comp.StateDoorClosed = visuals.StateDoorClosed;
+                    forceRedrawBase = true;
+                }
+            }
+        }
+
+        var forceRedrawBase = false;
+        if (AppearanceSystem.TryGetData<string>(uid, PaintableVisuals.Prototype, out var prototype, args.Component))
+        {
             if (_prototypeManager.TryIndex(prototype, out var proto))
             {
                 if (proto.TryGetComponent(out SpriteComponent? sprite, _componentFactory))

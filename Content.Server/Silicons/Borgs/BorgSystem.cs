@@ -4,7 +4,6 @@ using Content.Server.Actions;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.DeviceNetwork.Systems;
-using Content.Server.Explosion.EntitySystems;
 using Content.Server.Hands.Systems;
 using Content.Server.PowerCell;
 using Content.Shared._Corvax.Silicons.Borgs.Components;
@@ -32,6 +31,7 @@ using Content.Shared.Silicons.Borgs.Components;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.StationAi;
 using Content.Shared.Throwing;
+using Content.Shared.Trigger.Systems;
 using Content.Shared.Whitelist;
 using Content.Shared.Wires;
 using Robust.Server.GameObjects;
@@ -202,7 +202,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
         {
             _mind.TransferTo(mindId, args.Entity, mind: mind);
         }
-         // Corvax-Next-AiRemoteControl-Start
+        // Corvax-Next-AiRemoteControl-Start
         if (HasComp<AiRemoteBrainComponent>(args.Entity) && args.Container == component.BrainContainer) // AS: Dont want it acting like we removed our brain if we pick up a BORIS and set it down.
         {
             BorgDeactivate(uid, component);
@@ -323,12 +323,12 @@ public sealed partial class BorgSystem : SharedBorgSystem
     {
         if (!_powerCell.TryGetBatteryFromSlot(ent, out var battery, slotComponent))
         {
-            _alerts.ClearAlert(ent, ent.Comp.BatteryAlert);
-            _alerts.ShowAlert(ent, ent.Comp.NoBatteryAlert);
+            _alerts.ClearAlert(ent.Owner, ent.Comp.BatteryAlert);
+            _alerts.ShowAlert(ent.Owner, ent.Comp.NoBatteryAlert);
             return;
         }
 
-        var chargePercent = (short) MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
+        var chargePercent = (short)MathF.Round(battery.CurrentCharge / battery.MaxCharge * 10f);
 
         // we make sure 0 only shows if they have absolutely no battery.
         // also account for floating point imprecision
@@ -337,8 +337,8 @@ public sealed partial class BorgSystem : SharedBorgSystem
             chargePercent = 1;
         }
 
-        _alerts.ClearAlert(ent, ent.Comp.NoBatteryAlert);
-        _alerts.ShowAlert(ent, ent.Comp.BatteryAlert, chargePercent);
+        _alerts.ClearAlert(ent.Owner, ent.Comp.NoBatteryAlert);
+        _alerts.ShowAlert(ent.Owner, ent.Comp.BatteryAlert, chargePercent);
     }
 
     public bool TryEjectPowerCell(EntityUid uid, BorgChassisComponent component, [NotNullWhen(true)] out List<EntityUid>? ents)
@@ -348,7 +348,7 @@ public sealed partial class BorgSystem : SharedBorgSystem
         if (!TryComp<PowerCellSlotComponent>(uid, out var slotComp) ||
             !Container.TryGetContainer(uid, slotComp.CellSlotId, out var container) ||
             !container.ContainedEntities.Any())
-                return false;
+            return false;
 
         ents = Container.EmptyContainer(container);
 
