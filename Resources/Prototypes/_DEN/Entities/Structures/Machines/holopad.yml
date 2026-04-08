@@ -955,3 +955,43 @@
   - type: Label
     currentLabel: holopad-security-perma-gladiator-lounge
 # SOMBER HOLOPADS END
+#Aurora's song ship holopads start
+
+- type: entity
+  parent: NFHolopadShip
+  id: GloomyHolopadShip
+  name: gloomy bluespace holopad
+  description: "A somber holopad with an esoteric eye motif. Enables ship to ship communication."
+  components:
+  - type: Sprite
+    sprite: _DEN/Structures/Machines/somberholopad.rsi
+  #- type: EtherealLight # Dims around ethereal entities
+  - type: PointLight
+    radius: 2
+    energy: 4
+    color: "#8d7cbf"
+  - type: Speech
+    speechVerb: Electricity
+    speechSounds: SyndieBorg
+
+- type: entity
+  parent: NFHolopadGrid
+  id: GloomyHolopadGrid
+  name: gloomy intra ship holopad
+  description: "A somber holopad with an esoteric eye motif. Enables communication within a ship."
+  components:
+  - type: Sprite
+    sprite: _DEN/Structures/Machines/somberholopad.rsi
+    layers:
+    - state: base
+    - map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+      state: unpowered
+  #- type: EtherealLight # Dims around ethereal entities
+  - type: PointLight
+    radius: 2
+    energy: 4
+    color: "#8d7cbf"
+  - type: Speech
+    speechVerb: Electricity
+    speechSounds: SyndieBorg
+#Aurora's song ship holopads end

@@ -35,7 +35,7 @@
   parent: Holopad
   id: NFHolopadGrid
   suffix: Local
-  name: inter ship holopad
+  name: intra ship holopad #Aurora's Song (inter>intra)
   description: "A floor-mounted device for projecting holographic images to enable communication within a ship."
   components:
   - type: Holopad
