@@ -40,9 +40,6 @@
 #T2
 - type: loadout
   id: ContractorCane
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT2
   price: 1000
   inhand:
   - Cane
