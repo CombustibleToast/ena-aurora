@@ -20,7 +20,7 @@ public sealed partial class EmpVulnerableComponent: Component
     /// Chance for entity to be disrupted by ion storm
     /// </summary>
     [DataField]
-    public float IonStunChance = 0.80f;
+    public float IonStunChance = 0.65f;
 
     ///<summary>
     /// Time the entity will be disrupted from an EMP
