@@ -9,12 +9,17 @@
     species: Avali
   - type: Hunger
   - type: Thirst
+  - type: MovementSpeedModifier # Aurora's Song - Added to put in line with other winged species speed in space.
+#    baseWalkSpeed: 2.5 # Frontier
+#    baseSprintSpeed: 5.0 # Frontier
+    weightlessAcceleration: 2.5
   - type: Icon
     sprite: _CD/Mobs/Species/Avali/parts.rsi
     state: full
   - type: Body
     prototype: Avali
     requiredLegs: 2
+  - type: Carriable
   - type: Butcherable
     butcheringType: Spike
     spawned:
