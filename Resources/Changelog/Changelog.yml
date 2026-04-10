@@ -7367,3 +7367,12 @@ Entries:
   id: 9102
   time: '2026-04-10T20:46:48.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/931
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Fixes the ESS. Again.
+    - type: Tweak
+      message: Makes the ESS less zealous about rescuing you pre-maturely
+  id: 9103
+  time: '2026-04-10T21:27:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/926
