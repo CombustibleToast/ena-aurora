@@ -46,3 +46,6 @@
     brigmedic: CrateNfsdBrigmedic # Frontier
     nfsd1: CrateNfsdSecure1 # Frontier
     nfsd2: CrateNfsdSecure2 # Frontier
+    sle1: ASCrateSLESecure1 # Aurora's Song
+    sle2: ASCrateSLESecure2 # Aurora's Song
+    sle-corpsman: ASCrateSLECorpsman # Aurora's Song

@@ -19,7 +19,7 @@ public enum ShipyardConsoleUiKey : byte
     Scrap,
     Sr,
     Medical,
-    Damascus,
+    Damascus, // Aurora's Song - added Damascus
     ColonialCommand, // Aurora's Song - added Colonial Command
     // Add ships to this key if they are only available from mothership consoles. Shipyards using it are inherently empty and are populated using the ShipyardListingComponent.
     Custom

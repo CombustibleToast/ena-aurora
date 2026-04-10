@@ -20,7 +20,7 @@
     virology: AirlockVirology
     mercenary: AirlockMercenary # Frontier
     nfsd: AirlockNfsd # Frontier: surely nothing bad will happen
-    sle: ASAirlockSLE # Aurora
+    sle: ASAirlockSLE # Aurora's Song
 
 - type: paintableGroup
   id: AirlockGlass
@@ -43,4 +43,4 @@
     virology: AirlockVirologyGlass
     mercenary: AirlockMercenaryGlass # Frontier
     nfsd: AirlockNfsdGlass # Frontier: surely nothing bad will happen
-    sle: ASAirlockSLEGlass # Aurora
+    sle: ASAirlockSLEGlass # Aurora's Song
