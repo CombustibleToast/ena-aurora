@@ -49,7 +49,7 @@ public sealed partial class IdCardConsoleComponent : Component
         "Brig",
         "Captain",
         "HeadOfPersonnel", // Aurora's Song - moved up, alphabetic w.r.t. "Colonial Representative"
-        //"Cargo",
+        "Cargo",
         //"Chapel",
         //"Chemistry",
         //"ChiefMedicalOfficer",

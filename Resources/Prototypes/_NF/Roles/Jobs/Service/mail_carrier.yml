@@ -14,6 +14,7 @@
   displayWeight: 30 # Frontier
   canBeAntag: false
   access:
+  - Cargo # Aurora's Song - Cargo access is being undeprecated
   - External # Frontier
   - Maintenance
   - Service
