@@ -19,6 +19,7 @@
   - External # Frontier
   - Service
   - Aurora # Aurora Song - Changed from Frontier to Aurora
+  - Janitor
   special:
   - !type:AddImplantSpecial
     implants: [ TrackingImplant ]

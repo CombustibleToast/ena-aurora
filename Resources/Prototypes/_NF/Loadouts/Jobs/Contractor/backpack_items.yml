@@ -281,9 +281,6 @@
 #T1
 - type: loadout # Aurora Song: Add AAC Tablet to contractor backpack items
   id: ContractorAACTablet
-  effects:
-  - !type:GroupLoadoutEffect
-    proto: ContractorT1
   price: 500
   storage:
     back:
