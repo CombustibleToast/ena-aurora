@@ -28,8 +28,7 @@ using Content.Shared.Buckle; // Aurora's Song
 using Content.Shared.Buckle.Components; // Aurora's Song
 using Content.Shared.Implants; // Aurora's Song
 using Robust.Server.Player; // Coyote
-using Robust.Shared.Enums;
-using System.Linq; // Frontier
+using Robust.Shared.Enums; // Frontier
 
 namespace Content.Server.Salvage;
 
@@ -320,15 +319,12 @@ public sealed partial class SalvageSystem
 
             if (remaining < TimeSpan.FromSeconds(2.5) && comp.Warped == false) // Begin Aurora's Song: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
             {
-                if (TryFindShuttle(uid, comp, out var shuttleUid))
+                if (TryFindShuttle(uid, comp, out var shuttleUid) && shuttleUid is { } shuttleGrid)
                 {
-                    if (shuttleUid is { } shuttleGrid)
+                    FindPlayers(uid, shuttleGrid, out var players);
+                    foreach (var entity in players)
                     {
-                        FindPlayers(uid, shuttleGrid, out var players);
-                        foreach (var entity in players)
-                        {
-                            ReturnToShuttle(entity, shuttleGrid);
-                        }
+                        ReturnToShuttle(entity, shuttleGrid);
                     }
                 }
                 else
@@ -490,7 +486,7 @@ public sealed partial class SalvageSystem
             }
         }
         component.ChecksFailed += 1; // Aurora's Song
-        if (component.ChecksFailed < 2) // Aurora's Song
+        if (component.ChecksFailed < component.AllowedFailures) // Aurora's Song
             return;
 
         // everyone is dead or ssd, abort the expedition

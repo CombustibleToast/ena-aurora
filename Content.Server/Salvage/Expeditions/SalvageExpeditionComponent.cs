@@ -78,6 +78,13 @@ public sealed partial class SalvageExpeditionComponent : SharedSalvageExpedition
 
     // Aurora's Song
     /// <summary>
+    /// How many auto abort checks need to fail sequentially before we abort
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public int AllowedFailures = 2;
+
+    // Aurora's Song
+    /// <summary>
     /// Has the Exped Saviour System triggered
     /// </summary>
     // Spam Prevention
