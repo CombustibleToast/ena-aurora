@@ -58,7 +58,7 @@ public partial class SharedGunSystem
 
     private void OnRevolverInteractUsing(Entity<RevolverAmmoProviderComponent> ent, ref InteractUsingEvent args)
     {
-        if (args.Handled || _whitelistSystem.IsWhitelistFailOrNull(component.Whitelist, args.Used)) // Frontier: better revolver reloading
+        if (args.Handled || _whitelistSystem.IsWhitelistFailOrNull(ent.Comp.Whitelist, args.Used)) // Frontier: better revolver reloading
             return; // Frontier: better revolver reloading
 
         if (TryRevolverInsert(ent, args.Used, args.User))
@@ -559,40 +559,40 @@ public partial class SharedGunSystem
         }
         else
         {
-            // Frontier: better revolver reloading
-            var currentIndex = component.CurrentIndex;
-            var shotsToRemove = Math.Min(args.Shots, GetRevolverUnspentCount(component));
+            // Frontier: better revolver reloading // Aurora's Song - Change things to ent
+            var currentIndex = ent.Comp.CurrentIndex;
+            var shotsToRemove = Math.Min(args.Shots, GetRevolverUnspentCount(ent.Comp));
             var removedShots = 0;
 
             // Rotate around until we've covered the whole cylinder or there are no more unspent bullets to transfer.
-            for (var i = 0; i < component.Capacity && removedShots < shotsToRemove; i++)
+            for (var i = 0; i < ent.Comp.Capacity && removedShots < shotsToRemove; i++)
             {
                 // Remove the last rounds to be fired without cycling the action.
                 // If the gun had a live round to start, it should have a live round when finished if any unspent rounds remain.
-                var index = (currentIndex + (component.Capacity - 1) - i) % component.Capacity;
-                var chamber = component.Chambers[index];
+                var index = (currentIndex + (ent.Comp.Capacity - 1) - i) % ent.Comp.Capacity;
+                var chamber = ent.Comp.Chambers[index];
 
                 // Only take live rounds, leave the empties where they are.
                 if (chamber == true)
                 {
                     // Get current cartridge, or spawn a new one if it doesn't exist.
-                    EntityUid? ent = component.AmmoSlots[index]!;
-                    if (ent == null)
+                    EntityUid? ammoEnt = ent.Comp.AmmoSlots[index]!;
+                    if (ammoEnt == null)
                     {
-                        ent = Spawn(component.FillPrototype, args.Coordinates);
+                        ammoEnt = Spawn(ent.Comp.FillPrototype, args.Coordinates);
 
                         if (!_netManager.IsClient)
                         {
-                            component.AmmoSlots[index] = ent;
-                            Containers.Insert(ent.Value, component.AmmoContainer);
+                            ent.Comp.AmmoSlots[index] = ammoEnt;
+                            Containers.Insert(ammoEnt.Value, ent.Comp.AmmoContainer);
                         }
                     }
 
                     // Add the cartridge to our set and remove the bullet from the gun.
-                    args.Ammo.Add((ent.Value, EnsureComp<AmmoComponent>(ent.Value)));
-                    Containers.Remove(ent.Value, component.AmmoContainer);
-                    component.AmmoSlots[index] = null;
-                    component.Chambers[index] = null;
+                    args.Ammo.Add((ammoEnt.Value, EnsureComp<AmmoComponent>(ammoEnt.Value)));
+                    Containers.Remove(ammoEnt.Value, ent.Comp.AmmoContainer);
+                    ent.Comp.AmmoSlots[index] = null;
+                    ent.Comp.Chambers[index] = null;
                     removedShots++;
                 }
             }

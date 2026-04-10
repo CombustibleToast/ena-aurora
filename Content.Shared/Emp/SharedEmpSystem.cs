@@ -1,5 +1,8 @@
 using Content.Shared.Examine;
 using Content.Shared.Rejuvenate;
+using Content.Shared.Tiles;
+using Content.Shared.Trigger.Components.Effects;
+using Content.Shared.Verbs;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Map;
@@ -17,6 +20,7 @@ public abstract class SharedEmpSystem : EntitySystem
     [Dependency] private readonly INetManager _net = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly ExamineSystemShared _examine = default!; // Frontier
 
     private HashSet<EntityUid> _entSet = new();
     private EntityQuery<EmpResistanceComponent> _resistanceQuery;
@@ -48,7 +52,7 @@ public abstract class SharedEmpSystem : EntitySystem
     /// <param name="energyConsumption">The amount of energy consumed by the EMP pulse. In Joule.</param>
     /// <param name="duration">The duration of the EMP effects.</param>
     /// <param name="user">The player that caused the effect. Used for predicted audio.</param>
-    public void EmpPulse(MapCoordinates mapCoordinates, float range, float energyConsumption, TimeSpan duration, EntityUid? user = null)
+    public void EmpPulse(MapCoordinates mapCoordinates, float range, float energyConsumption, TimeSpan duration, EntityUid? user = null, List<EntityUid>? immuneGrids = null) // Frontier - Add immuneGrids
     {
         foreach (var uid in _lookup.GetEntitiesInRange(mapCoordinates, range))
         {
@@ -78,7 +82,7 @@ public abstract class SharedEmpSystem : EntitySystem
     /// <param name="energyConsumption">The amount of energy consumed by the EMP pulse.</param>
     /// <param name="duration">The duration of the EMP effects.</param>
     /// <param name="user">The player that caused the effect. Used for predicted audio.</param>
-    public void EmpPulse(EntityCoordinates coordinates, float range, float energyConsumption, TimeSpan duration, EntityUid? user = null)
+    public void EmpPulse(EntityCoordinates coordinates, float range, float energyConsumption, TimeSpan duration, EntityUid? user = null, List<EntityUid>? immuneGrids = null) // Frontier
     {
         _entSet.Clear();
         _lookup.GetEntitiesInRange(coordinates, range, _entSet);
@@ -146,24 +150,9 @@ public abstract class SharedEmpSystem : EntitySystem
         if (!ev.Disabled)
             return ev.Affected;
 
-        // Frontier: Upstream - #28984 start
-        //disabled.DisabledUntil = Timing.CurTime + TimeSpan.FromSeconds(duration);
         var disabled = EnsureComp<EmpDisabledComponent>(uid);
-        disabled.DisabledUntil = Timing.CurTime + TimeSpan.FromSeconds(duration);
-        if (disabled.DisabledUntil == TimeSpan.Zero)
-        {
-            disabled.DisabledUntil = Timing.CurTime;
-        }
-        disabled.DisabledUntil = disabled.DisabledUntil + TimeSpan.FromSeconds(duration);
-        Dirty(uid, disabled); // Aurora's Song - From upstream
-
-        /// i tried my best to go through the Pow3r server code but i literally couldn't find in relation to PowerNetworkBatteryComponent that uses the event system
-        /// the code is otherwise too esoteric for my innocent eyes
-        if (TryComp<PowerNetworkBatteryComponent>(uid, out var powerNetBattery))
-        {
-            powerNetBattery.CanCharge = false;
-        }
-        // Frontier: Upstream - #28984 end
+        disabled.DisabledUntil = Timing.CurTime + duration * durMultiplier;
+        Dirty(uid, disabled);
 
         return ev.Affected;
     }
@@ -180,11 +169,6 @@ public abstract class SharedEmpSystem : EntitySystem
                 continue;
 
             RemComp<EmpDisabledComponent>(uid);
-
-            if (TryComp<PowerNetworkBatteryComponent>(uid, out var powerNetBattery)) // Frontier: Upstream - #28984
-            {
-                powerNetBattery.CanCharge = true;
-            }
         }
     }
 
@@ -199,7 +183,7 @@ public abstract class SharedEmpSystem : EntitySystem
         if (!args.CanInteract || !args.CanAccess)
             return;
 
-        var msg = GetEmpDescription(component.Range, component.EnergyConsumption, component.DisableDuration);
+        var msg = GetEmpDescription(component.Range, component.EnergyConsumption, (float)component.DisableDuration.TotalSeconds);
 
         _examine.AddDetailedExamineVerb(args, component, msg,
             Loc.GetString("emp-examinable-verb-text"), "/Textures/Interface/VerbIcons/smite.svg.192dpi.png",

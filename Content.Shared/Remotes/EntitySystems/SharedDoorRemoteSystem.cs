@@ -1,3 +1,4 @@
+using Content.Shared._NF.GridAccess;
 using Content.Shared.Access.Components;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
@@ -73,14 +74,14 @@ public abstract class SharedDoorRemoteSystem : EntitySystem
             {
                 if (popupMessage != null)
                 {
-                    Popup.PopupEntity(Loc.GetString("door-remote-" + popupMessage), args.Used, args.User);
+                    _popup.PopupEntity(Loc.GetString("door-remote-" + popupMessage), args.Used, args.User);
                 }
                 return;
             }
 
             if (!doorComp.RemoteCompatible)
             {
-                Popup.PopupEntity(Loc.GetString("door-remote-use-blocked"), args.Used, args.User);
+                _popup.PopupEntity(Loc.GetString("door-remote-use-blocked"), args.Used, args.User);
                 return;
             }
         }

@@ -21,6 +21,7 @@ using Content.Shared.Station;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
+using Robust.Shared.Map.Components; // Frontier
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
@@ -154,7 +155,7 @@ public abstract class SharedSuitSensorSystem : EntitySystem
         args.Affected = true;
         args.Disabled = true;
 
-        if (HasComp<EmpDisabledComponent>(uid)) // Frontier: don't double disable sensors
+        if (HasComp<EmpDisabledComponent>(ent)) // Frontier: don't double disable sensors
             return; // Frontier
 
         ent.Comp.PreviousMode = ent.Comp.Mode;
@@ -435,7 +436,7 @@ public abstract class SharedSuitSensorSystem : EntitySystem
                             _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
 
                     // Frontier: check if sensor is on expedition
-                    if (TryComp<SalvageExpeditionComponent>(transform.MapUid, out var salvageComp))
+                    if (TryComp<SharedSalvageExpeditionComponent>(transform.MapUid, out var salvageComp))
                         locationName = Loc.GetString("suit-sensor-location-expedition");
                     else if (TryComp(transform.GridUid, out MetaDataComponent? meta))
                         locationName = meta.EntityName;

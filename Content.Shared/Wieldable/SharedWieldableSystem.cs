@@ -252,7 +252,7 @@ public abstract class SharedWieldableSystem : EntitySystem
         }
 
         // Is it.. actually in one of their hands?
-        if (!_hands.IsHolding(((user, hands), hands), uid, out _))
+        if (!_hands.IsHolding((user, hands), uid, out _))
         {
             if (!quiet)
                 _popup.PopupClient(Loc.GetString("wieldable-component-not-in-hands", ("item", uid)), user, user);

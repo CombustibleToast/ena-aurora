@@ -19,6 +19,7 @@ using Content.Shared.Tag;
 using Content.Shared.Throwing;
 using Content.Shared.Timing;
 using Content.Shared.Verbs;
+using Content.Shared.Weapons.Hitscan.Components;
 using Content.Shared.Weapons.Melee;
 using Content.Shared.Weapons.Melee.Events;
 using Content.Shared.Weapons.Ranged.Components;
@@ -254,9 +255,9 @@ public abstract partial class SharedGunSystem : EntitySystem
     private bool AttemptShoot(EntityUid user, Entity<GunComponent> gun)
     {
         if (TryComp<AutoShootGunComponent>(gun.Owner, out var auto) && !auto.CanFire) // Frontier
-            return; // Frontier
+            return false; // Frontier
 
-        if (gun.FireRateModified <= 0f ||
+        if (gun.Comp.FireRateModified <= 0f ||
             !_actionBlockerSystem.CanAttack(user))
         {
             return false;

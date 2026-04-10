@@ -3,12 +3,15 @@ using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Power.Components;
 using Content.Shared.PowerCell.Components;
 using JetBrains.Annotations;
-using Content.Server._NF.Power.Components; // Frontier
+using Content.Shared._NF.Power.Components;
+using Content.Shared.Power.EntitySystems; // Frontier
 
 namespace Content.Shared.PowerCell;
 
 public sealed partial class PowerCellSystem
 {
+    [Dependency] private readonly SharedPowerReceiverSystem _powerSystem = default!; // Frontier
+
     /// <summary>
     /// Checks if a power cell slot has a battery inside.
     /// </summary>
@@ -135,9 +138,9 @@ public sealed partial class PowerCellSystem
     public bool HasCharge(Entity<PowerCellSlotComponent?> ent, float charge, EntityUid? user = null, bool predicted = false)
     {
         // Frontier start - Mixed Power Recievers
-        if (HasComp<MixedPowerReceiverComponent>(uid) &&
-            TryComp<ApcPowerReceiverComponent>(uid, out var apcPowerComp) &&
-            _powerSystem.IsPowered(uid, apcPowerComp))
+        if (HasComp<MixedPowerReceiverComponent>(ent.Owner) &&
+            TryComp<SharedApcPowerReceiverComponent>(ent.Owner, out var apcPowerComp) &&
+            _powerSystem.IsPowered((ent.Owner, apcPowerComp)))
         {
             return true;
         }
@@ -183,9 +186,9 @@ public sealed partial class PowerCellSystem
     public bool TryUseCharge(Entity<PowerCellSlotComponent?> ent, float charge, EntityUid? user = null, bool predicted = false)
     {
         // Frontier start - Mixed Power Recievers
-        if (HasComp<MixedPowerReceiverComponent>(uid) &&
-            TryComp<ApcPowerReceiverComponent>(uid, out var apcPowerComp) &&
-            _powerSystem.IsPowered(uid, apcPowerComp))
+        if (HasComp<MixedPowerReceiverComponent>(ent.Owner) &&
+            TryComp<SharedApcPowerReceiverComponent>(ent.Owner, out var apcPowerComp) &&
+            _powerSystem.IsPowered((ent.Owner, apcPowerComp)))
         {
             return true;
         }

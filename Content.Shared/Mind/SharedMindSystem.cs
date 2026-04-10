@@ -84,7 +84,8 @@ public abstract partial class SharedMindSystem : EntitySystem
             return;
         }
 
-        Log.Error($"Encountered a user {component.UserId} that is already assigned to a mind while initializing mind {ToPrettyString(uid)}. Ignoring user field.");
+        Log.Error(
+            $"Encountered a user {component.UserId} that is already assigned to a mind while initializing mind {ToPrettyString(uid)}. Ignoring user field.");
         component.UserId = null;
     }
 
@@ -119,7 +120,9 @@ public abstract partial class SharedMindSystem : EntitySystem
         return mind;
     }
 
-    public virtual bool TryGetMind(NetUserId user, [NotNullWhen(true)] out EntityUid? mindId, [NotNullWhen(true)] out MindComponent? mind)
+    public virtual bool TryGetMind(NetUserId user,
+        [NotNullWhen(true)] out EntityUid? mindId,
+        [NotNullWhen(true)] out MindComponent? mind)
     {
         if (UserMinds.TryGetValue(user, out var mindIdValue) &&
             TryComp(mindIdValue, out mind))
@@ -328,7 +331,11 @@ public abstract partial class SharedMindSystem : EntitySystem
     /// <exception cref="ArgumentException">
     ///     Thrown if <paramref name="entity"/> is already controlled by another player.
     /// </exception>
-    public virtual void TransferTo(EntityUid mindId, EntityUid? entity, bool ghostCheckOverride = false, bool createGhost = true, MindComponent? mind = null)
+    public virtual void TransferTo(EntityUid mindId,
+        EntityUid? entity,
+        bool ghostCheckOverride = false,
+        bool createGhost = true,
+        MindComponent? mind = null)
     {
     }
 
@@ -356,7 +363,9 @@ public abstract partial class SharedMindSystem : EntitySystem
     public void AddObjective(EntityUid mindId, MindComponent mind, EntityUid objective)
     {
         var title = Name(objective);
-        _adminLogger.Add(LogType.Mind, LogImpact.Low, $"Objective {objective} ({title}) added to mind of {MindOwnerLoggingString(mind)}");
+        _adminLogger.Add(LogType.Mind,
+            LogImpact.Low,
+            $"Objective {objective} ({title}) added to mind of {MindOwnerLoggingString(mind)}");
         mind.Objectives.Add(objective);
     }
 
@@ -372,7 +381,9 @@ public abstract partial class SharedMindSystem : EntitySystem
         var objective = mind.Objectives[index];
 
         var title = Name(objective);
-        _adminLogger.Add(LogType.Mind, LogImpact.Low, $"Objective {objective} ({title}) removed from the mind of {MindOwnerLoggingString(mind)}");
+        _adminLogger.Add(LogType.Mind,
+            LogImpact.Low,
+            $"Objective {objective} ({title}) removed from the mind of {MindOwnerLoggingString(mind)}");
         mind.Objectives.Remove(objective);
 
         // garbage collection - only delete the objective entity if no mind uses it anymore
@@ -394,11 +405,14 @@ public abstract partial class SharedMindSystem : EntitySystem
         {
             return true;
         }
+
         objective = default;
         return false;
     }
 
-    public bool TryGetObjectiveComp<T>(EntityUid mindId, [NotNullWhen(true)] out T? objective, MindComponent? mind = null) where T : IComponent
+    public bool TryGetObjectiveComp<T>(EntityUid mindId,
+        [NotNullWhen(true)] out T? objective,
+        MindComponent? mind = null) where T : IComponent
     {
         if (Resolve(mindId, ref mind))
         {
@@ -411,6 +425,7 @@ public abstract partial class SharedMindSystem : EntitySystem
                 }
             }
         }
+
         objective = default;
         return false;
     }
@@ -427,7 +442,10 @@ public abstract partial class SharedMindSystem : EntitySystem
     /// <param name="target"> mind entity of the player to copy to </param>
     /// <param name="except"> whitelist for objectives that should be copied </param>
     /// <param name="except"> blacklist for objectives that should not be copied </param>
-    public void CopyObjectives(Entity<MindComponent?> source, Entity<MindComponent?> target, EntityWhitelist? whitelist = null, EntityWhitelist? blacklist = null)
+    public void CopyObjectives(Entity<MindComponent?> source,
+        Entity<MindComponent?> target,
+        EntityWhitelist? whitelist = null,
+        EntityWhitelist? blacklist = null)
     {
         if (!Resolve(source, ref source.Comp) || !Resolve(target, ref target.Comp))
             return;
@@ -448,7 +466,9 @@ public abstract partial class SharedMindSystem : EntitySystem
     /// <remarks>
     /// Will not work for objectives that have no prototype, or duplicate objectives with the same prototype.
     /// <//remarks>
-    public bool TryFindObjective(Entity<MindComponent?> mind, string prototype, [NotNullWhen(true)] out EntityUid? objective)
+    public bool TryFindObjective(Entity<MindComponent?> mind,
+        string prototype,
+        [NotNullWhen(true)] out EntityUid? objective)
     {
         objective = null;
         if (!Resolve(mind, ref mind.Comp))
@@ -618,7 +638,8 @@ public abstract partial class SharedMindSystem : EntitySystem
         {
             // the player needs to have a mind and not be the excluded one +
             // the player has to be alive
-            if (!TryGetMind(uid, out var mind, out var mindComp) || mind == exclude || !_mobState.IsAlive(uid, mobState))
+            if (!TryGetMind(uid, out var mind, out var mindComp) || mind == exclude ||
+                !_mobState.IsAlive(uid, mobState))
                 continue;
 
             allHumans.Add((mind, mindComp));
@@ -662,31 +683,6 @@ public abstract partial class SharedMindSystem : EntitySystem
 
             FilterMinds(minds, filter, exclude);
         }
-    }
-
-    /// <summary>
-    /// Give sentience to a target entity by attaching necessary components.
-    /// </summary>
-    /// <param name="uid">Uid of the target entity.</param>
-    /// <param name="allowMovement">Whether the target entity should be able to move.</param>
-    /// <param name="allowSpeech">Whether the target entity should be able to talk.</param>
-    public void MakeSentient(EntityUid uid, bool allowMovement = true, bool allowSpeech = true)
-    {
-        EnsureComp<MindContainerComponent>(uid);
-        if (allowMovement)
-        {
-            EnsureComp<InputMoverComponent>(uid);
-            EnsureComp<MobMoverComponent>(uid);
-            EnsureComp<MovementSpeedModifierComponent>(uid);
-        }
-
-        if (allowSpeech)
-        {
-            EnsureComp<SpeechComponent>(uid);
-            EnsureComp<EmotingComponent>(uid);
-        }
-
-        EnsureComp<ExaminerComponent>(uid);
     }
 
     /// <summary>

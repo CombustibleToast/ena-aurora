@@ -483,9 +483,6 @@ namespace Content.Shared.Cuffs
             if (TryComp<HandsComponent>(target, out var hands) && hands.Count <= component.CuffedHandCount)
                 return false;
 
-            var ev = new TargetHandcuffedEvent();
-            RaiseLocalEvent(target, ref ev);
-
             // Success!
             _hands.TryDrop(user, handcuff);
 

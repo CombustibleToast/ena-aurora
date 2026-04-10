@@ -1,4 +1,5 @@
 using Content.Shared.Physics;
+using Content.Shared.Whitelist; // Frontier
 using Robust.Shared.GameStates;
 using Robust.Shared.Physics.Collision.Shapes;
 using Robust.Shared.Physics.Components;

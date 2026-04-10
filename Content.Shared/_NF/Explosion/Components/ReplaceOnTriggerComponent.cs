@@ -1,4 +1,4 @@
-using Content.Shared.Explosion.EntitySystems;
+using Content.Shared.Trigger.Systems;
 using Robust.Shared.Prototypes;
 
 namespace Content.Shared._NF.Explosion.Components;

@@ -55,7 +55,6 @@ public abstract partial class SharedCryoPodSystem : EntitySystem
 
     // Frontier: keep a list of cryogenics reagents. The pod will only filter these out from the provided solution.
     private static readonly string[] CryogenicsReagents = ["Cryoxadone", "Aloxadone", "Doxarubixadone", "Opporozidone", "Necrosol", "Traumoxadone", "Stelloxadone"];
-    private static readonly ProtoId<ToolQualityPrototype> PryingQuality = "Prying";
 
     private EntityQuery<BloodstreamComponent> _bloodstreamQuery;
     private EntityQuery<ItemSlotsComponent> _itemSlotsQuery;
@@ -134,14 +133,11 @@ public abstract partial class SharedCryoPodSystem : EntitySystem
         // Filter out a fixed amount of each reagent from the cryo pod's beaker
         // var solutionToInject =
         //     _solutionContainer.SplitSolution(injectingSolution.Value, entity.Comp.BeakerTransferAmount);
-        var solutionToInject = _solutionContainerSystem.SplitSolutionPerReagentWithOnly(containerSolution.Value, cryoPod.BeakerTransferAmount, CryogenicsReagents);
+        var solutionToInject = _solutionContainer.SplitSolutionPerReagentWithOnly(injectingSolution.Value, entity.Comp.BeakerTransferAmount, CryogenicsReagents);
 
         // For every .25 units used, .5 units per second are added to the body, making cryo-pod more efficient than injections.
-        solutionToInject.ScaleSolution(cryoPod.PotencyMultiplier);
+        solutionToInject.ScaleSolution(entity.Comp.PotencyMultiplier);
         // End Frontier
-
-        var solutionToInject =
-            _solutionContainer.SplitSolution(injectingSolution.Value, entity.Comp.BeakerTransferAmount);
 
         if (solutionToInject.Volume > 0)
         {

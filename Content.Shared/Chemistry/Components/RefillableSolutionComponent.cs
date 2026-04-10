@@ -25,5 +25,11 @@ public sealed partial class RefillableSolutionComponent : Component
     [DataField]
     public FixedPoint2? MaxRefill = null;
 
+    /// <summary>
+    /// The refill doafter time required to transfer reagents into the solution.
+    /// </summary>
+    [DataField]
+    public TimeSpan RefillTime = TimeSpan.Zero;
+
     // Aurora's Song - PreventTransferOut NF PR #2583 has been reverted because the drag drop system was changed
 }

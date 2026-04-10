@@ -60,21 +60,6 @@ public static class ServerPackaging
         "zh-Hant"
     };
 
-    private static IReadOnlySet<string> ServerContentIgnoresResources { get; } = new HashSet<string>
-    {
-        "ServerInfo",
-        "Changelog",
-    };
-
-    private static List<string> PlatformRids => Platforms
-        .Select(o => o.Rid)
-        .ToList();
-
-    private static List<string> PlatformRidsDefault => Platforms
-        .Where(o => o.BuildByDefault)
-        .Select(o => o.Rid)
-        .ToList();
-
     public static async Task PackageServer(bool skipBuild, bool hybridAcz, IPackageLogger logger, string configuration, List<string>? platforms = null)
     {
         if (platforms == null)

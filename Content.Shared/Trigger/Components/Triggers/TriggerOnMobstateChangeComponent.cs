@@ -1,4 +1,5 @@
-﻿using Content.Shared.Mobs;
+﻿using System.Threading; // Coyote
+using Content.Shared.Mobs;
 using Robust.Shared.GameStates;
 
 namespace Content.Shared.Trigger.Components.Triggers;

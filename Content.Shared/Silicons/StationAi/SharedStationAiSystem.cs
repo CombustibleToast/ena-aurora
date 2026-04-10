@@ -1,3 +1,4 @@
+using Content.Shared._Corvax.Silicons.Borgs;
 using Content.Shared.Access.Systems;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Actions;
@@ -310,9 +311,11 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         }
 
         // Corvax-Next-AiRemoteControl-Start
-        if (TryComp<StationAiHeldComponent>(held, out var heldComp))
-            if (heldComp.CurrentConnectedEntity != null)
-                AnnounceIntellicardUsage(heldComp.CurrentConnectedEntity.Value, intelliComp.WarningSound);
+        if (TryComp<StationAiHeldComponent>(held, out var heldComp) && heldComp.CurrentConnectedEntity != null)
+        {
+            var evTwo = new ChatNotificationEvent(_downloadChatNotificationPrototype, args.Used, args.User);
+            RaiseLocalEvent(held.Value, ref evTwo);
+        }
         // Corvax-Next-AiRemoteControl-End
 
         var doAfterArgs = new DoAfterArgs(EntityManager, args.User, cardHasAi ? intelliComp.UploadTime : intelliComp.DownloadTime, new IntellicardDoAfterEvent(), args.Target, ent.Owner)

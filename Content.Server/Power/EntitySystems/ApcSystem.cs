@@ -43,7 +43,6 @@ public sealed class ApcSystem : EntitySystem
         SubscribeLocalEvent<ApcComponent, GotUnEmaggedEvent>(OnUnemagged); // Frontier
 
         SubscribeLocalEvent<ApcComponent, EmpPulseEvent>(OnEmpPulse);
-        SubscribeLocalEvent<ApcComponent, EmpDisabledRemoved>(OnEmpDisabledRemoved); // Frontier: Upstream - #28984
         SubscribeLocalEvent<ApcComponent, ToolUseAttemptEvent>(OnToolUseAttempt); // Frontier
     }
 
@@ -236,7 +235,7 @@ public sealed class ApcSystem : EntitySystem
 
     private ApcChargeState CalcChargeState(EntityUid uid, PowerState.Battery battery)
     {
-        if (_emag.CheckFlag(uid, EmagType.Interaction) || HasComp<EmpDisabledComponent>(uid)) // Frontier: Upstream - #28984: add HasComp
+        if (_emag.CheckFlag(uid, EmagType.Interaction))
             return ApcChargeState.Emag;
 
         if (battery.CurrentStorage / battery.Capacity > ApcComponent.HighPowerThreshold)
@@ -276,11 +275,6 @@ public sealed class ApcSystem : EntitySystem
         //    ApcToggleBreaker(uid, component);
         //}
         EnsureComp<EmpDisabledComponent>(uid, out var emp); //event calls before EmpDisabledComponent is added, ensure it to force sprite update
-        UpdateApcState(uid);
-    }
-
-    private void OnEmpDisabledRemoved(EntityUid uid, ApcComponent component, ref EmpDisabledRemoved args) // Frontier: Upstream - #28984
-    {
         UpdateApcState(uid);
     }
 

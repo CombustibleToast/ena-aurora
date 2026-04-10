@@ -2,7 +2,6 @@ using System.Linq;
 using Content.Server._NF.Bank;
 using System.Numerics;
 using Content.Server.Cargo.Systems;
-//using Content.Server.Emp; // Frontier: Upstream - #28984
 using Content.Server.Cargo.Components;
 using Content.Server.Popups;
 using Content.Server.Power.Components;
@@ -21,11 +20,14 @@ using Robust.Shared.Audio.Systems;
 using Content.Server.Administration.Logs; // Frontier
 using Content.Shared.Database; // Frontier
 using Content.Shared._NF.Bank.BUI; // Frontier
-using Content.Server._NF.Contraband.Systems; // Frontier
+using Content.Server._NF.Contraband.Systems;
+using Content.Server.Power.EntitySystems; // Frontier
 using Content.Shared.Stacks; // Frontier
 using Content.Server.Stack; // Frontier
 using Robust.Shared.Containers; // Frontier
-using Content.Shared._NF.Bank.Components; // Frontier
+using Content.Shared._NF.Bank.Components;
+using Content.Shared.Popups;
+using Robust.Shared.Timing; // Frontier
 
 namespace Content.Server.VendingMachines
 {
@@ -41,6 +43,8 @@ namespace Content.Server.VendingMachines
         [Dependency] private readonly IAdminLogManager _adminLogger = default!; // Frontier
         [Dependency] private readonly ContrabandTurnInSystem _contraband = default!; // Frontier
         [Dependency] private readonly StackSystem _stack = default!; // Frontier
+        [Dependency] private readonly IGameTiming _timing = default!; // Frontier
+
 
         private const float WallVendEjectDistanceFromWall = 1f;
 
@@ -304,16 +308,6 @@ namespace Content.Server.VendingMachines
             */
             // End Frontier: respect cargo blacklist
         }
-
-        //private void OnEmpPulse(EntityUid uid, VendingMachineComponent component, ref EmpPulseEvent args) // Frontier: Upstream - #28984
-        //{
-        //    if (!component.Broken && this.IsPowered(uid, EntityManager))
-        //    {
-        //        args.Affected = true;
-        //        args.Disabled = true;
-        //        component.NextEmpEject = _timing.CurTime;
-        //    }
-        //}
 
         // Frontier: custom vending check
         /// <summary>

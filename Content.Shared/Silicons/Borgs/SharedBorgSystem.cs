@@ -23,6 +23,7 @@ using Content.Shared.PowerCell;
 using Content.Shared.PowerCell.Components;
 using Content.Shared.Roles;
 using Content.Shared.Silicons.Borgs.Components;
+using Content.Shared.StationAi;
 using Content.Shared.Throwing;
 using Content.Shared.UserInterface;
 using Content.Shared.Wires;
@@ -194,11 +195,11 @@ public abstract partial class SharedBorgSystem : EntitySystem
         }
 
         // Corvax-Next-AiRemoteControl-Start
-        if (HasComp<AiRemoteBrainComponent>(args.Entity) && args.Container == component.BrainContainer) // AS: Dont want it acting like we removed our brain if we pick up a BORIS and set it down.
+        if (HasComp<AiRemoteBrainComponent>(args.Entity) && args.Container == chassis.Comp.BrainContainer) // AS: Dont want it acting like we removed our brain if we pick up a BORIS and set it down.
         {
-            BorgDeactivate(uid, component);
-            RemComp<AiRemoteControllerComponent>(uid);
-            RemComp<StationAiVisionComponent>(uid);
+            // BorgDeactivate(uid, component); // Aurora's Song - Handled by mind add/remove code
+            RemComp<AiRemoteControllerComponent>(chassis);
+            RemComp<StationAiVisionComponent>(chassis);
         }
         // Corvax-Next-AiRemoteControl-End
     }
@@ -273,17 +274,17 @@ public abstract partial class SharedBorgSystem : EntitySystem
         }
 
         // Corvax-Next-AiRemoteControl-Start
-        if (component.BrainEntity == null && aiBrain != null &&
-            _whitelistSystem.IsWhitelistPassOrNull(component.BrainWhitelist, used))
+        if (chassis.Comp.BrainEntity == null && aiBrain != null &&
+            _whitelist.IsWhitelistPassOrNull(chassis.Comp.BrainWhitelist, used))
         {
-            EnsureComp<AiRemoteControllerComponent>(uid);
-            _container.Insert(used, component.BrainContainer);
+            EnsureComp<AiRemoteControllerComponent>(chassis);
+            _container.Insert(used, chassis.Comp.BrainContainer);
             _adminLog.Add(LogType.Action, LogImpact.Medium,
-                $"{ToPrettyString(args.User):player} installed ai remote brain {ToPrettyString(used)} into borg {ToPrettyString(uid)}");
+                $"{ToPrettyString(args.User):player} installed ai remote brain {ToPrettyString(used)} into borg {ToPrettyString(chassis.Owner)}");
             args.Handled = true;
-            BorgActivate(uid, component);
+            // BorgActivate(uid, chassis.Comp); // Aurora's Song - Handled by OnMindAdded
 
-            UpdateUI(uid, component);
+            UpdateUI((chassis.Owner, chassis.Comp));
         }
         // Corvax-Next-AiRemoteControl-End
     }

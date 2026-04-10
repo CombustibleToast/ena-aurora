@@ -199,7 +199,7 @@ public abstract partial class SharedStackSystem : EntitySystem
 
         // Frontier: cherry-picked from ss14#32938, moved up top
         var priority = 1;
-        if (_ui.HasUi(uid, StackCustomSplitUiKey.Key)) // Frontier: check for interface
+        if (_ui.HasUi(ent, StackCustomSplitUiKey.Key)) // Frontier: check for interface // Aurora's Song uid>ent
         {
             AlternativeVerb custom = new()
             {
@@ -207,7 +207,7 @@ public abstract partial class SharedStackSystem : EntitySystem
                 Category = VerbCategory.Split,
                 Act = () =>
                 {
-                    _ui.OpenUi(ent, StackCustomSplitUiKey.Key, args.User);
+                    _ui.OpenUi(ent.Owner, StackCustomSplitUiKey.Key, user); // Aurora's Song uid>ent.Owner
                 },
                 Priority = priority--
             };

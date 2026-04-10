@@ -106,7 +106,7 @@ public sealed partial class InjectorSystem : EntitySystem
         if (args.HitEntities is [])
             return;
 
-        if (injector.PreventCombatInjection) // Frontier
+        if (injector.Comp.PreventCombatInjection) // Frontier
             return; // Frontier
 
         TryMobsDoAfter(injector, args.User, args.HitEntities[0]);
@@ -115,13 +115,12 @@ public sealed partial class InjectorSystem : EntitySystem
     // Aurora's Song - Move hypospray blocking to event
     private void OnTargetBeforeInject(Entity<InjectorComponent> ent, ref TargetBeforeInjectEvent args)
     {
-        if (args.Cancelled || args.Handled)
+        if (args.Cancelled)
             return;
 
-        if (TryComp<BlockInjectionComponent>(ent.target, out var blockInjection) && blockInjection.BlockHypospray)
+        if (TryComp<BlockInjectionComponent>(ent, out var blockInjection) && blockInjection.BlockHypospray)
         {
-            // _popup.PopupEntity(Loc.GetString("injector-component-deny-user"), target, user);
-            args.Cancelled = true;
+            args.Cancel();
         }
     }
 

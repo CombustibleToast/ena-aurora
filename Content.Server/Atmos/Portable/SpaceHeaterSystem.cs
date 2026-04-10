@@ -108,7 +108,7 @@ public sealed class SpaceHeaterSystem : EntitySystem
         if (!Resolve(uid, ref powerReceiver))
             return;
 
-        _power.TryTogglePower(uid); // Frontier: Upstream - #28984
+        _power.TogglePower(uid);
 
         UpdateAppearance(uid);
         DirtyUI(uid, spaceHeater);

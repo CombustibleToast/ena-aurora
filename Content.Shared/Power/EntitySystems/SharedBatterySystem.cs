@@ -57,7 +57,7 @@ public abstract partial class SharedBatterySystem : EntitySystem
 
     private void OnEmpPulse(Entity<BatteryComponent> ent, ref EmpPulseEvent args)
     {
-        args.Disabled = true; // Frontier: Upstream - #28984
+        args.Affected = true;
         UseCharge(ent.AsNullable(), args.EnergyConsumption);
     }
 

@@ -29,7 +29,8 @@ using Content.Server._NF.Salvage.Expeditions.Structure; // Frontier
 using Content.Server._NF.Salvage.Expeditions;
 using Content.Shared.Salvage; // AS
 using Content.Shared.Buckle; // AS
-using Content.Shared.Buckle.Components; // AS
+using Content.Shared.Buckle.Components;
+using Content.Shared.Damage.Systems; // AS
 using Content.Shared.Implants; // AS
 using Robust.Server.Player;// Coyote
 using Robust.Shared.Audio; // AS
@@ -580,7 +581,7 @@ public sealed partial class SalvageSystem
         _transform.AttachToGridOrMap(mobUid, mobXform);
         Spawn("EffectFlashBluespaceQuiet", mobXform.Coordinates);
 
-        // then we ensure they are 
+        // then we ensure they are
         if (_mobState.IsAlive(mobUid))
         {
             // Apply a large bricks worth of damage

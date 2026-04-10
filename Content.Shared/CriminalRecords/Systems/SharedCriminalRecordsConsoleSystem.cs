@@ -1,3 +1,4 @@
+using Content.Shared._NF.SectorServices;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Security;
 using Content.Shared.Security.Components;
@@ -36,6 +37,7 @@ public abstract class SharedCriminalRecordsConsoleSystem : EntitySystem
         if (station.IsValid() && _records.GetRecordByName(station, name) is { } id) // Frontier: "station != null" < station.IsValid(), station.Value < station
         {
             if (_records.TryGetRecord<CriminalRecord>(new StationRecordKey(id, station), // Frontier: station.Value<station
+                    out var record))
             {
                 if (record.Status != SecurityStatus.None)
                 {

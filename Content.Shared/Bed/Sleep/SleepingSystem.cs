@@ -380,7 +380,7 @@ public sealed partial class SleepingSystem : EntitySystem
         {
             if (curTime >= wakeUp.NextWakeUp)
             {
-                Wake((uid, sleeping));
+                TryWaking((uid, sleeping)); // Aurora's Song - Try waking
                 _statusEffect.TryRemoveStatusEffect(uid, "Drowsiness");
             }
         }

@@ -1,4 +1,3 @@
-using Content.Shared.Emp; // Frontier: Upstream - #28984
 using Content.Shared.Power.Components;
 using JetBrains.Annotations;
 
@@ -72,18 +71,6 @@ public abstract partial class SharedBatterySystem
             return false;
 
         UseCharge(ent, amount);
-        return true;
-    }
-
-    /// <summary>
-    ///     Like SetCharge, but checks for conditions like EmpDisabled before executing
-    /// </summary>
-    public bool TrySetCharge(EntityUid uid, float value, BatteryComponent? battery = null) // Frontier: Upstream - #28984
-    {
-        if (!Resolve(uid, ref battery, false) || HasComp<EmpDisabledComponent>(uid))
-            return false;
-
-        SetCharge(uid, value, battery);
         return true;
     }
 

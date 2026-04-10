@@ -77,13 +77,6 @@ public sealed partial class TriggerSystem : EntitySystem
             return false;
 
         var triggerEvent = new TriggerEvent(user, key);
-        if (extras != null) // Coyote
-        {
-            foreach (var (key, value) in extras)
-            {
-                triggerEvent.AddExtra(key, value);
-            }
-        }
         RaiseLocalEvent(trigger, ref triggerEvent, true);
         return triggerEvent.Handled;
     }

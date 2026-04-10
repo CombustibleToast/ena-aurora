@@ -13,8 +13,8 @@ public sealed class EmpSystem : SharedEmpSystem
 
         SubscribeLocalEvent<EmpDisabledComponent, RadioSendAttemptEvent>(OnRadioSendAttempt);
         SubscribeLocalEvent<EmpDisabledComponent, RadioReceiveAttemptEvent>(OnRadioReceiveAttempt);
-        //SubscribeLocalEvent<EmpDisabledComponent, ApcToggleMainBreakerAttemptEvent>(OnApcToggleMainBreaker); // Frontier: Upstream - #28984
-        //SubscribeLocalEvent<EmpDisabledComponent, SurveillanceCameraSetActiveAttemptEvent>(OnCameraSetActive); // Frontier: Upstream - #28984
+        SubscribeLocalEvent<EmpDisabledComponent, ApcToggleMainBreakerAttemptEvent>(OnApcToggleMainBreaker);
+        SubscribeLocalEvent<EmpDisabledComponent, SurveillanceCameraSetActiveAttemptEvent>(OnCameraSetActive);
     }
 
     private void OnRadioSendAttempt(EntityUid uid, EmpDisabledComponent component, ref RadioSendAttemptEvent args)
@@ -27,14 +27,13 @@ public sealed class EmpSystem : SharedEmpSystem
         args.Cancelled = true;
     }
 
-    //private void OnApcToggleMainBreaker(EntityUid uid, EmpDisabledComponent component, ref ApcToggleMainBreakerAttemptEvent args) // Frontier: Upstream - #28984
-    //{
-    //    args.Cancelled = true;
-    //}
+    private void OnApcToggleMainBreaker(EntityUid uid, EmpDisabledComponent component, ref ApcToggleMainBreakerAttemptEvent args)
+    {
+        args.Cancelled = true;
+    }
 
-    //private void OnCameraSetActive(EntityUid uid, EmpDisabledComponent component, ref SurveillanceCameraSetActiveAttemptEvent args) // Frontier: Upstream - #28984
-    //{
-    //    args.Cancelled = true;
-    //}
-
+    private void OnCameraSetActive(EntityUid uid, EmpDisabledComponent component, ref SurveillanceCameraSetActiveAttemptEvent args)
+    {
+        args.Cancelled = true;
+    }
 }

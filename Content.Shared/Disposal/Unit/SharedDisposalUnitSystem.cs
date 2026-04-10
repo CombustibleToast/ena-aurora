@@ -772,7 +772,7 @@ public abstract class SharedDisposalUnitSystem : EntitySystem
                 _adminLog.Add(LogType.Action, LogImpact.Low, $"{ToPrettyString(player):player} hit flush button on {ToPrettyString(uid)}, it's now {(component.Engaged ? "on" : "off")}");
                 break;
             case DisposalUnitComponent.UiButton.Power:
-                _power.TryTogglePower(uid, user: args.Actor); // Frontier: Upstream - #28984 (TogglePower<TryTogglePower)
+                _power.TogglePower(uid, user: args.Actor);
                 break;
             default:
                 throw new ArgumentOutOfRangeException($"{ToPrettyString(player):player} attempted to hit a nonexistant button on {ToPrettyString(uid)}");

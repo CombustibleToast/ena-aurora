@@ -92,8 +92,8 @@ public sealed partial class EmitterComponent : Component
     /// <summary>
     /// The machine part that affects burst delay.
     /// </summary>
-    [DataField("machinePartFireRate", customTypeSerializer: typeof(PrototypeIdSerializer<MachinePartPrototype>))]
-    public string MachinePartFireRate = "Capacitor";
+    [DataField("machinePartFireRate")] // Aurora's Song - Nix the custom serializer
+    public ProtoId<MachinePartPrototype> MachinePartFireRate = "Capacitor";
 
     /// <summary>
     /// The visual state that is set when the emitter is turned on

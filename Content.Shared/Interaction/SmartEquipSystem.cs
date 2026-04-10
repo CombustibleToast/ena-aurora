@@ -65,35 +65,6 @@ public sealed class SmartEquipSystem : EntitySystem
         HandleSmartEquip(session, "wallet");
     }
     // End Frontier: smart-equip to wallet
-    private void HandleSmartEquipSuitStorage(ICommonSession? session)
-    {
-        HandleSmartEquip(session, "suitstorage");
-    }
-
-    private void HandleSmartEquipPocket1(ICommonSession? session)
-    {
-        HandleSmartEquip(session, "pocket1");
-    }
-
-    private void HandleSmartEquipPocket2(ICommonSession? session)
-    {
-        HandleSmartEquip(session, "pocket2");
-    }
-
-    private void SaveLocation(StorageComponent storage, EntityUid itemUid)
-    {
-        var id = IoCManager.Resolve<IEntityManager>().GetNetEntity(itemUid).ToString();
-        storage.StoredItems.TryGetValue(itemUid, out var location);
-
-        if (!storage.SavedLocations.TryGetValue(id, out var locations))
-            locations = new();
-
-        if (locations.Contains(location))
-            return;
-
-        locations.Add(location);
-        storage.SavedLocations[id] = locations;
-    }
 
     private void HandleSmartEquipPocket1(ICommonSession? session)
     {

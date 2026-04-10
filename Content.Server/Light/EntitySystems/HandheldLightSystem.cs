@@ -16,7 +16,9 @@ using Robust.Shared.Containers;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
 using Content.Server._NF.Power.Components; // Frontier
-using Content.Server.Power.Components; // Frontier
+using Content.Server.Power.Components;
+using Content.Server.Power.EntitySystems;
+using Content.Shared._NF.Power.Components; // Frontier
 
 namespace Content.Server.Light.EntitySystems
 {
