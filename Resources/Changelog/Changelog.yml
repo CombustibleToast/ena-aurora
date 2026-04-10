@@ -7376,3 +7376,16 @@ Entries:
   id: 9103
   time: '2026-04-10T21:27:00.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/926
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: missing spray painter stuff for SLE
+    - type: Tweak
+      message: add paramed siren to medic armored hardsuit
+    - type: Tweak
+      message: switch logprobe icon
+    - type: Tweak
+      message: add forensic upgrade and shuttle records to SLEO
+  id: 9104
+  time: '2026-04-10T21:27:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/929
