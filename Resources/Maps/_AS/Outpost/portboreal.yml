@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 04/06/2026 01:10:32
-  entityCount: 12968
+  time: 04/10/2026 17:49:03
+  entityCount: 12972
 maps:
 - 439
 grids:
@@ -2788,32 +2788,24 @@ entities:
             477: -5,26
             478: -4,26
         - node:
-            color: '#0000005D'
-            id: MarkupSquare
-          decals:
-            3226: -17,24
-            3227: -17,25
-            3228: -16,25
-            3229: -15,25
-        - node:
-            color: '#000000AB'
-            id: MarkupSquare
-          decals:
-            3218: -18,24
-            3219: -18,25
-            3220: -18,26
-            3221: -17,26
-            3222: -16,26
-            3223: -15,26
-            3224: -15,24
-            3225: -16,24
-        - node:
             color: '#002860BB'
             id: MarkupSquare
           decals:
             338: -19,20
             339: -19,21
             340: -19,22
+        - node:
+            color: '#0F28547F'
+            id: MarkupSquare
+          decals:
+            3289: -18,24
+            3290: -18,25
+            3291: -18,26
+            3292: -17,26
+            3293: -16,26
+            3294: -15,26
+            3295: -16,24
+            3296: -15,24
         - node:
             color: '#1A394AFF'
             id: MiniTileCheckerAOverlay
@@ -2985,15 +2977,10 @@ entities:
             413: -8,16
             414: -7,23
         - node:
-            color: '#00000085'
-            id: WarnCornerGreyscaleNW
-          decals:
-            3239: -18,26
-        - node:
             color: '#0F2854FF'
             id: WarnCornerGreyscaleNW
           decals:
-            3210: -17,25
+            3253: -17,25
         - node:
             color: '#3B3B3BFF'
             id: WarnCornerGreyscaleSE
@@ -3016,15 +3003,10 @@ entities:
           decals:
             332: -15,20
         - node:
-            color: '#00000085'
-            id: WarnCornerSmallGreyscaleSE
-          decals:
-            3235: -18,26
-        - node:
             color: '#0F2854FF'
             id: WarnCornerSmallGreyscaleSE
           decals:
-            3215: -17,25
+            3255: -17,25
         - node:
             color: '#3B3B3BFF'
             id: WarnCornerSmallGreyscaleSE
@@ -3056,16 +3038,10 @@ entities:
             2962: 10,24
             2963: 11,24
         - node:
-            color: '#00000085'
-            id: WarnLineGreyscaleE
-          decals:
-            3230: -18,24
-            3231: -18,25
-        - node:
             color: '#0F2854FF'
             id: WarnLineGreyscaleE
           decals:
-            3213: -17,24
+            3248: -17,24
         - node:
             color: '#4C4C4CFF'
             id: WarnLineGreyscaleE
@@ -3118,18 +3094,11 @@ entities:
           decals:
             330: -17,21
         - node:
-            color: '#00000085'
-            id: WarnLineGreyscaleN
-          decals:
-            3236: -17,26
-            3237: -16,26
-            3238: -15,26
-        - node:
             color: '#0F2854FF'
             id: WarnLineGreyscaleN
           decals:
-            3216: -16,25
-            3217: -15,25
+            3251: -15,25
+            3252: -16,25
         - node:
             color: '#3B3B3BFF'
             id: WarnLineGreyscaleN
@@ -3192,18 +3161,11 @@ entities:
           decals:
             328: -16,20
         - node:
-            color: '#00000085'
-            id: WarnLineGreyscaleS
-          decals:
-            3232: -17,26
-            3233: -16,26
-            3234: -15,26
-        - node:
             color: '#0F2854FF'
             id: WarnLineGreyscaleS
           decals:
-            3211: -16,25
-            3212: -15,25
+            3249: -15,25
+            3250: -16,25
         - node:
             color: '#3B3B3BFF'
             id: WarnLineGreyscaleS
@@ -3276,16 +3238,10 @@ entities:
           decals:
             327: -16,22
         - node:
-            color: '#00000085'
-            id: WarnLineGreyscaleW
-          decals:
-            3240: -18,25
-            3241: -18,24
-        - node:
             color: '#0F2854FF'
             id: WarnLineGreyscaleW
           decals:
-            3214: -17,24
+            3254: -17,24
         - node:
             color: '#4C4C4CFF'
             id: WarnLineGreyscaleW
@@ -5720,6 +5676,7 @@ entities:
       doNotCull: True
       trackOnInit: True
     - type: DeletionCensusExempt
+    - type: IFF
   - uid: 439
     components:
     - type: MetaData
@@ -6869,7 +6826,7 @@ entities:
       pos: 21.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15155.785
+      secondsUntilStateChange: -16092.28
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7340,7 +7297,7 @@ entities:
       pos: 37.5,-16.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18022.037
+      secondsUntilStateChange: -18958.533
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7636,7 +7593,7 @@ entities:
       pos: -19.5,-19.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18062.236
+      secondsUntilStateChange: -18998.732
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -7794,7 +7751,7 @@ entities:
       pos: -75.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18935.502
+      secondsUntilStateChange: -19871.998
       state: Opening
     - type: Docking
       name: dock-label-station-one-b
@@ -7808,7 +7765,7 @@ entities:
       pos: -75.5,0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -18935.902
+      secondsUntilStateChange: -19872.398
       state: Opening
     - type: Docking
       name: dock-label-station-one-b
@@ -8297,7 +8254,7 @@ entities:
       pos: 35.5,6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -1442.7433
+      secondsUntilStateChange: -2379.2388
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -9102,6 +9059,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: -20.5,2.5
+      parent: 1
+- proto: ASDresserColonialRepresentativeFilled
+  entities:
+  - uid: 2937
+    components:
+    - type: Transform
+      pos: -21.5,5.5
       parent: 1
 - proto: ASHyperlinkBookSpaceLaw
   entities:
@@ -31887,6 +31851,11 @@ entities:
     - type: Transform
       pos: -19.5,33.5
       parent: 1
+  - uid: 10151
+    components:
+    - type: Transform
+      pos: 32.5,42.5
+      parent: 1
   - uid: 10532
     components:
     - type: Transform
@@ -31901,6 +31870,21 @@ entities:
     components:
     - type: Transform
       pos: -13.5,-14.5
+      parent: 1
+  - uid: 12969
+    components:
+    - type: Transform
+      pos: 32.5,20.5
+      parent: 1
+  - uid: 12970
+    components:
+    - type: Transform
+      pos: -31.5,42.5
+      parent: 1
+  - uid: 12971
+    components:
+    - type: Transform
+      pos: -31.5,20.5
       parent: 1
 - proto: ComputerWallmountRadar
   entities:
@@ -31974,17 +31958,23 @@ entities:
       rot: 3.141592653589793 rad
       pos: 11.5,25.5
       parent: 1
-  - uid: 1050
+  - uid: 898
     components:
     - type: Transform
-      rot: 1.5707963267948966 rad
+      rot: -1.5707963267948966 rad
       pos: 6.5,22.5
       parent: 1
-  - uid: 2946
+  - uid: 1050
     components:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 7.5,22.5
+      parent: 1
+  - uid: 2231
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 5.5,22.5
       parent: 1
   - uid: 3119
     components:
@@ -32882,12 +32872,6 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 11.5,26.5
-      parent: 1
-  - uid: 6846
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 5.5,22.5
       parent: 1
   - uid: 6884
     components:
@@ -38624,13 +38608,6 @@ entities:
     - type: Transform
       pos: -22.5,-21.5
       parent: 1
-- proto: DresserStationRepresentativeFilled
-  entities:
-  - uid: 2231
-    components:
-    - type: Transform
-      pos: -21.5,5.5
-      parent: 1
 - proto: DrinkBahamaMama
   entities:
   - uid: 9893
@@ -38904,14 +38881,6 @@ entities:
     components:
     - type: Transform
       pos: -19.224627,12.506384
-      parent: 1
-- proto: FirelockEdge
-  entities:
-  - uid: 10151
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: -22.5,-19.5
       parent: 1
 - proto: FirelockGlass
   entities:
@@ -64669,10 +64638,10 @@ entities:
       parent: 1
 - proto: MachineMaterialSilo
   entities:
-  - uid: 898
+  - uid: 12972
     components:
     - type: Transform
-      pos: 7.5,22.5
+      pos: 5.5,22.5
       parent: 1
 - proto: MachineMedicalBountyRedemption
   entities:
@@ -64875,6 +64844,11 @@ entities:
       parent: 1
 - proto: NapkinDrum5
   entities:
+  - uid: 6981
+    components:
+    - type: Transform
+      pos: -12.5,-25.5
+      parent: 1
   - uid: 9561
     components:
     - type: Transform
@@ -75632,17 +75606,17 @@ entities:
       parent: 1
     - type: DeviceLinkSource
       linkedPorts:
-        2946:
+        2231:
+        - - On
+          - Forward
+        - - Off
+          - Off
+        898:
         - - On
           - Forward
         - - Off
           - Off
         1050:
-        - - On
-          - Forward
-        - - Off
-          - Off
-        6846:
         - - On
           - Forward
         - - Off
@@ -84904,11 +84878,11 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 6.5,17.5
       parent: 1
-  - uid: 6981
+  - uid: 2946
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 5.5,22.5
+      pos: 7.5,22.5
       parent: 1
 - proto: WindoorSecureAtmosphericsLocked
   entities:
@@ -84925,10 +84899,15 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 6.5,17.5
       parent: 1
-  - uid: 2937
+  - uid: 6846
     components:
     - type: Transform
       rot: 3.141592653589793 rad
+      pos: 8.5,15.5
+      parent: 1
+  - uid: 6850
+    components:
+    - type: Transform
       pos: 8.5,15.5
       parent: 1
 - proto: WindoorSecureChemistryLocked
@@ -84977,11 +84956,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -17.5,20.5
       parent: 1
-  - uid: 2938
-    components:
-    - type: Transform
-      pos: 8.5,15.5
-      parent: 1
 - proto: WindoorSecureFrontierCommandLocked
   entities:
   - uid: 1162
@@ -84992,11 +84966,11 @@ entities:
       parent: 1
 - proto: WindoorSecureFrontierLocked
   entities:
-  - uid: 6850
+  - uid: 2938
     components:
     - type: Transform
       rot: 3.141592653589793 rad
-      pos: 7.5,22.5
+      pos: 5.5,22.5
       parent: 1
 - proto: WindoorSecureMedicalLocked
   entities:
