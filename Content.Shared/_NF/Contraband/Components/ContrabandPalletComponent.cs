@@ -1,16 +1,15 @@
-using Content.Shared.Access;
 using Content.Shared.Stacks;
-using Robust.Shared.Audio;
-using Robust.Shared.Prototypes;
+using Robust.Shared.Audio; // Aurora's Song
+using Robust.Shared.Prototypes; // Aurora's Song
 using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype;
 
 namespace Content.Shared._NF.Contraband.Components;
 
-[RegisterComponent] // Aurora: Contraband Pallet component for contraband registration and licensing
+[RegisterComponent] // Aurora's Song - Contraband Pallet component for contraband registration and licensing
 [Access(typeof(SharedContrabandTurnInSystem))]
 public sealed partial class ContrabandPalletConsoleComponent : Component
 {
-    // AS
+    // Aurora's Song
     /// <summary>
     /// The primary currency that should be reward. Tries to send it to an entity with a <see cref="ScuOutputComponent"/> first, then the triggering entities hand, and if both of those fail, spawns the coins on the console.
     /// Also determines what currency is given as a registration reward.
@@ -18,16 +17,18 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     [ViewVariables(VVAccess.ReadWrite), DataField("cashType", serverOnly: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
     public string? RewardType = null;
 
-    // AS
+    // Aurora's Song
     /// <summary>
     /// The reward that should be sent to the triggering entities hand, or spawn on the console if it can't
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("altCashType", serverOnly: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
     public string? RewardTypeAlternate = null; // AS: Allow alt reward currencies
 
+    // Aurora's Song
     [DataField]
-    public SoundSpecifier ErrorSound = new SoundCollectionSpecifier("CargoError"); // Aurora: add deny sound
+    public SoundSpecifier ErrorSound = new SoundCollectionSpecifier("CargoError");
 
+    // Aurora's Song
     /// <summary>
     /// Leave null for no licence required
     /// </summary>
@@ -35,14 +36,16 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
     public string? LicenseRequired = "contraband handling license";
 
     [ViewVariables(VVAccess.ReadWrite), DataField(serverOnly: true)]
-    public string Faction = "SLE"; // Aurora Song - Changed from "NFSD" to "SLE" (Station Law Enforcement)
+    public string Faction = "SLE"; // Aurora's Song - Changed from "NFSD" to "SLE" (Station Law Enforcement)
 
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public string LocStringPrefix = string.Empty;
 
+    // Aurora's Song
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public int PalletDistance = 8;
 
+    // Aurora's Song
     [DataField]
     public Dictionary<EntProtoId, EntProtoId> RegisterRecipies = new()
     {
@@ -94,6 +97,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"ASWeaponKasyreLasRifleExpedition","ASWeaponKasyreLasRifle"},
         {"ASWeaponBasinLasPistolExpedition","ASWeaponBasinLasPistol"},
         {"ASWeaponSubMachineGunAP4CExpedition","ASWeaponSubMachineGunAP4C"},
+        {"ASWeaponShotgunFalchionExpedition","ASWeaponShotgunSurpFalchion"},
 
         {"ClothingOuterHardsuitSyndie","ClothingOuterHardsuitShanlinUnpainted"},
         {"ClothingOuterHardsuitSyndieElite","ClothingOuterHardsuitShiweiUnpainted"},
