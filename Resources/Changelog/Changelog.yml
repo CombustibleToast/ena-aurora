@@ -7353,3 +7353,10 @@ Entries:
   id: 9100
   time: '2026-04-10T11:37:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/884
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Admin access config now has correct card
+  id: 9101
+  time: '2026-04-10T19:51:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/928
