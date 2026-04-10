@@ -1,3 +1,4 @@
+using Content.Shared._NF.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.EntitySystems;
 using Content.Shared.Chemistry.Prototypes;
 using Content.Shared.Chemistry.Reagent;
@@ -17,7 +18,7 @@ namespace Content.Shared.Chemistry.Components;
 /// containers, and can directly inject into a mob's bloodstream.
 /// </remarks>
 /// <seealso cref="InjectorModePrototype"/>
-[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(InjectorSystem))]
+[RegisterComponent, NetworkedComponent, AutoGenerateComponentState, Access(typeof(InjectorSystem), typeof(ReagentWhitelistChangeSystem))]
 public sealed partial class InjectorComponent : Component
 {
     /// <summary>

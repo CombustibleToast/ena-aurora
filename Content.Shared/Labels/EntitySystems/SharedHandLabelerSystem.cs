@@ -75,7 +75,7 @@ public abstract class SharedHandLabelerSystem : EntitySystem
         // Frontier: prevent tagging PseudoItems
         if (_tagSystem.HasTag(target, PreventTag))
         {
-            result = null;
+            RemoveLabelFrom(ent, user, target);
             return;
         }
         // End Frontier

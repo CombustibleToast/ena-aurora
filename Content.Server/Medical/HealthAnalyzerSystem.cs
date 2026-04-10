@@ -247,6 +247,6 @@ public sealed class HealthAnalyzerSystem : EntitySystem
             bleeding,
             unrevivable,
             unclonable // Frontier
-        ));
+        );
     }
 }

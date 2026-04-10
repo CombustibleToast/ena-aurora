@@ -4,12 +4,14 @@ namespace Content.Shared._NF.LoggingExtensions;
 
 public static class LoggingExtensions
 {
+    [Dependency] private static readonly SharedStackSystem _stack = default!;
+
     public static string GetExtraLogs(EntityManager entityManager, EntityUid entity)
     {
         // Get details from the stack component to track amount of things in the stack.
-        if (entityManager.TryGetComponent<StackComponent>(entity, out var stack))
+        if (entityManager.HasComponent<StackComponent>(entity))
         {
-            return $"(StackCount: {stack.Count.ToString()})";
+            return $"(StackCount: {_stack.GetCount(entity).ToString()})";
         }
 
         // Add more logging things here when needed.

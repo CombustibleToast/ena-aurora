@@ -10,7 +10,6 @@ using Content.Shared.Storage.Components;
 using Content.Shared.Tag;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
-using Content.Shared._NF.Kitchen.Components; // Frontier
 
 namespace Content.Shared.Nutrition.EntitySystems;
 
@@ -215,8 +214,6 @@ public sealed class FoodSequenceSystem : SharedFoodSequenceSystem
         if (!Resolve(element, ref element.Comp, false))
             return;
 
-        startFood.RequiresSpecialDigestion |= elementFood.RequiresSpecialDigestion; // Frontier: merge special digestion
-
         if (!_solutionContainer.TryGetSolution(start.Owner, start.Comp.Solution, out var startSolutionEntity, out var startSolution))
             return;
 
@@ -261,10 +258,5 @@ public sealed class FoodSequenceSystem : SharedFoodSequenceSystem
         EnsureComp<TagComponent>(start);
 
         _tag.TryAddTags(start, elementTags.Tags);
-
-        // Frontier: ensure moth food is moth food
-        if (HasComp<MothFoodComponent>(element))
-            EnsureComp<MothFoodComponent>(start);
-        // End Frontier
     }
 }
