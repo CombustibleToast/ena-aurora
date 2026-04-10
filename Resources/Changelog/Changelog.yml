@@ -7344,3 +7344,12 @@ Entries:
   id: 9099
   time: '2026-04-09T21:33:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/922
+- author: ZigTag
+  changes:
+    - type: Add
+      message: New railings from delta
+    - type: Tweak
+      message: New stair texture from delta
+  id: 9100
+  time: '2026-04-10T11:37:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/884
