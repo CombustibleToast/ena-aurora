@@ -7360,3 +7360,10 @@ Entries:
   id: 9101
   time: '2026-04-10T19:51:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/928
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel nacelle gantry lights were unpowered
+  id: 9102
+  time: '2026-04-10T20:46:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/931
