@@ -41,7 +41,6 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         _net.RegisterNetMessage<MsgRoleBans>(RxRoleBans);
         _net.RegisterNetMessage<MsgPlayTime>(RxPlayTime);
         _net.RegisterNetMessage<MsgJobWhitelist>(RxJobWhitelist);
-        _net.RegisterNetMessage<MsgWhitelist>(RxWhitelist); // Frontier
 
         _client.RunLevelChanged += ClientOnRunLevelChanged;
     }
@@ -144,10 +143,13 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
             return false;
         }
 
+        // Aurora's Song - Move up reqs
+        var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job); // Aurora's song
+
         // Check whitelist requirements
         if (!CheckWhitelist(job, out reason))
         {
-            if (!CheckRoleRequirements(job, profile, out var timeReq)) // AS: Make it show time reqs alongside whitelist req
+            if (!CheckRoleRequirements(reqs, profile, out var timeReq)) // AS: Make it show time reqs alongside whitelist req
             {
                 reason.PushNewline();
                 reason.AddMarkupPermissive(Loc.GetString("role-requirement-necessary"));
@@ -158,7 +160,7 @@ public sealed class JobRequirementsManager : ISharedPlaytimeManager
         }
 
         // Check other role requirements
-        var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job);
+        // var reqs = _entManager.System<SharedRoleSystem>().GetRoleRequirements(job); // Aurora's Song
         if (!CheckRoleRequirements(reqs, profile, out reason))
             return false;
 

@@ -253,7 +253,7 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
 
         int numCrystals = int.Min(ent.Comp.PointsEarned / ent.Comp.PointsPerCrystalUnit, ent.Comp.MaxCrystals);
         if (numCrystals > 0)
-            _stack.SpawnMultiple(ent.Comp.CrystalPrototype, numCrystals, ent);
+            _stack.SpawnMultipleNextToOrDrop(ent.Comp.CrystalPrototype.Value, numCrystals, ent.Owner);
     }
     // End Frontier: crystal spawning
 

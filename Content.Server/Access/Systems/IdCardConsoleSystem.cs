@@ -48,8 +48,8 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<IdCardConsoleComponent, SharedIdCardSystem.WriteToTargetIdMessage>(OnWriteToTargetIdMessage);
-        SubscribeLocalEvent<IdCardConsoleComponent, SharedIdCardSystem.WriteToShuttleDeedMessage>(OnWriteToShuttleDeedMessage);
+        SubscribeLocalEvent<IdCardConsoleComponent, SharedIdCardSystem.WriteToTargetIdMessage>(OnWriteToTargetIdMessage); // Frontier
+        SubscribeLocalEvent<IdCardConsoleComponent, SharedIdCardSystem.WriteToShuttleDeedMessage>(OnWriteToShuttleDeedMessage); // Frontier
 
         // one day, maybe bound user interfaces can be shared too.
         SubscribeLocalEvent<IdCardConsoleComponent, ComponentStartup>(UpdateUserInterface);
@@ -72,6 +72,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
         UpdateUserInterface(uid, component, args);
     }
 
+    // Start Frontier
     private void OnWriteToShuttleDeedMessage(EntityUid uid, IdCardConsoleComponent component,
         SharedIdCardSystem.WriteToShuttleDeedMessage args)
     {
@@ -82,6 +83,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
 
         UpdateUserInterface(uid, component, args);
     }
+    // End Frontier
 
     private void UpdateUserInterface(EntityUid uid, IdCardConsoleComponent component, EntityEventArgs args)
     {
@@ -106,8 +108,8 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
                 false,
                 null,
                 null,
-                false,
-                null,
+                false, // Frontier
+                null, // Frontier
                 null,
                 possibleAccess,
                 string.Empty,
@@ -127,6 +129,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
                 jobProto = record.JobPrototype;
             }
 
+            // Start Frontier
             string?[]? shuttleNameParts = null;
             var hasShuttle = false;
             if (EntityManager.TryGetComponent<ShuttleDeedComponent>(targetId, out var comp))
@@ -134,6 +137,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
                 shuttleNameParts = new[] { comp.ShuttleName, comp.ShuttleNameSuffix };
                 hasShuttle = true;
             }
+            // End Frontier
 
             newState = new IdCardConsoleBoundUserInterfaceState(
                 component.PrivilegedIdSlot.HasItem,
@@ -221,6 +225,7 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
             $"{player} has modified {targetId} with the following accesses: [{string.Join(", ", addedTags.Union(removedTags))}] [{string.Join(", ", newAccessList)}]");
     }
 
+    // Frontier
     /// <summary>
     /// Called whenever an attempt to change the shuttle deed of the target id is made.
     /// Writes data passed from the ui to the shuttle deed and the grid of shuttle.
@@ -234,18 +239,16 @@ public sealed class IdCardConsoleSystem : SharedIdCardConsoleSystem
         if (!Resolve(uid, ref component))
             return;
 
-        if (component.TargetIdSlot.Item is not { Valid: true } targetId || !PrivilegedIdIsAuthorized(uid, component))
+        if (component.TargetIdSlot.Item is not { Valid: true } targetId || !PrivilegedIdIsAuthorized(uid, component, out _))
             return;
 
         if (!EntityManager.TryGetComponent<ShuttleDeedComponent>(targetId, out var shuttleDeed))
             return;
-        else
+
+        if (Deleted(shuttleDeed!.ShuttleUid))
         {
-            if (Deleted(shuttleDeed!.ShuttleUid))
-            {
-                RemComp<ShuttleDeedComponent>(targetId);
-                return;
-            }
+            RemComp<ShuttleDeedComponent>(targetId);
+            return;
         }
 
         // Ensure the name is valid and follows the convention

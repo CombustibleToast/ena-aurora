@@ -12,6 +12,7 @@ using Robust.Client.UserInterface;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Audio;
 using Content.Shared.GameTicking.Prototypes;
+using Content.Shared.Roles;
 
 namespace Content.Client.GameTicking.Managers
 {
@@ -23,6 +24,7 @@ namespace Content.Client.GameTicking.Managers
         [Dependency] private readonly IClyde _clyde = default!;
         [Dependency] private readonly IUserInterfaceManager _userInterfaceManager = default!;
 
+        private Dictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>>  _jobsAvailable = new();
         private Dictionary<NetEntity, StationJobInformation> _stationJobInformationList = new();
 
         [ViewVariables] public bool AreWeReady { get; private set; }
@@ -48,7 +50,6 @@ namespace Content.Client.GameTicking.Managers
             );
 
         [ViewVariables] public IReadOnlyDictionary<NetEntity, Dictionary<ProtoId<JobPrototype>, int?>> JobsAvailable => _jobsAvailable;
-        [ViewVariables] public IReadOnlyDictionary<NetEntity, string> StationNames => _stationNames;
 
         public event Action? InfoBlobUpdated;
         public event Action? LobbyStatusUpdated;

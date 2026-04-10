@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Shared._AS.Traits;
 using Content.Shared.Atmos;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Prototypes;
@@ -127,7 +128,7 @@ public sealed partial class HealthAnalyzerControl : BoxContainer
             });
 
         // Frontier: unclonable text
-        if (msg.Unclonable == true)
+        if (state.Unclonable == true)
             AlertsContainer.AddChild(new RichTextLabel
             {
                 Text = Loc.GetString("health-analyzer-window-entity-unclonable-text"),

@@ -68,7 +68,7 @@ namespace Content.Server.Atmos.EntitySystems
 
             //Multiply fractional moles with specific heats and return the sum. This is the specific heat of the mixture.
             //Here temp contains the partial specific heat of each gas in the mixture.
-            NumericsHelpers.Multiply(temp, _gasSpecificHeats, temp);
+            NumericsHelpers.Multiply(temp, GasSpecificHeats, temp);
             return NumericsHelpers.HorizontalAdd(temp) * HeatScale;
         }
         // END IMP ADD

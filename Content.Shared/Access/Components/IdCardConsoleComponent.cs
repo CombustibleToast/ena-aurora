@@ -4,7 +4,6 @@ using Content.Shared.Roles;
 using Robust.Shared.GameStates;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
-using Content.Shared.Roles; // Frontier
 
 namespace Content.Shared.Access.Components;
 

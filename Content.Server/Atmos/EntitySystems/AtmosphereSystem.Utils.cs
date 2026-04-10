@@ -1,5 +1,6 @@
 using System.Runtime.CompilerServices;
 using Content.Server.Atmos.Components;
+using Content.Server.GameTicking;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
 using Content.Shared.Atmos.Piping.Components;
@@ -10,6 +11,8 @@ namespace Content.Server.Atmos.EntitySystems;
 
 public partial class AtmosphereSystem
 {
+    [Robust.Shared.IoC.Dependency] private readonly GameTicker _gameTicker = default!;
+
     /*
     Partial class that stores miscellaneous utility methods for Atmospherics.
     */

@@ -354,7 +354,7 @@ public abstract partial class SharedChatSystem : EntitySystem
         string? nameOverride = null,
         bool checkRadioPrefix = true,
         bool ignoreActionBlocker = false,
-        string? color = null) // TheDen - Add color field
+        string? color = null) // TheDen
     { }
 
     /// <summary>
@@ -379,7 +379,8 @@ public abstract partial class SharedChatSystem : EntitySystem
         ICommonSession? player = null,
         string? nameOverride = null,
         bool checkRadioPrefix = true,
-        bool ignoreActionBlocker = false
+        bool ignoreActionBlocker = false,
+        string? color = null // TheDen
         )
     { }
 
@@ -470,7 +471,9 @@ public enum ChatTransmitRange : byte
     /// Hidden from the chat window.
     HideChat,
     /// Ghosts can't hear or see it at all. Regular players can if in-range.
-    NoGhosts
+    NoGhosts,
+    /// Frontier: Normal, ghosts are still range-limited, and won't spam admins
+    GhostRangeLimitNoAdminCheck,
 }
 
 /// <summary>
@@ -481,6 +484,8 @@ public enum InGameICChatType : byte
 {
     Speak,
     Emote,
+    Subtle, // Floofstation
+    SubtleOOC, // Den
     Whisper
 }
 

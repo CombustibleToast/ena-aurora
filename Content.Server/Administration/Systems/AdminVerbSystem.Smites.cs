@@ -66,7 +66,8 @@ using Robust.Shared.Audio.Systems; // Frontier
 using Robust.Shared.Audio; // Frontier
 using Content.Server._NF.Speech.Components; // Frontier
 using Content.Shared.Damage.Prototypes; // Frontier
-using Content.Shared.Bed.Sleep; // Frontier
+using Content.Shared.Bed.Sleep;
+using Content.Shared.Damage; // Frontier
 
 namespace Content.Server.Administration.Systems;
 
@@ -996,21 +997,6 @@ public sealed partial class AdminVerbSystem
             Message = string.Join(": ", omniaccentName, Loc.GetString("admin-smite-omni-accent-description"))
         };
         args.Verbs.Add(omniaccent);
-
-        var crawlerName = Loc.GetString("admin-smite-crawler-name").ToLowerInvariant();
-        Verb crawler = new()
-        {
-            Text = crawlerName,
-            Category = VerbCategory.Smite,
-            Icon = new SpriteSpecifier.Rsi(new("Mobs/Animals/snake.rsi"), "icon"),
-            Act = () =>
-            {
-                EnsureComp<WormComponent>(args.Target);
-            },
-            Impact = LogImpact.Extreme,
-            Message = string.Join(": ", crawlerName, Loc.GetString("admin-smite-crawler-description"))
-        };
-        args.Verbs.Add(crawler);
 
         // Frontier
         var cavemanName = Loc.GetString("admin-smite-caveman-name").ToLowerInvariant();

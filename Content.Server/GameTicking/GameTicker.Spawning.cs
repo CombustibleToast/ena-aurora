@@ -368,11 +368,11 @@ namespace Content.Server.GameTicking
             var spawnPointType = SpawnPointType.Unset;
             if (jobPrototype.AlwaysUseSpawner)
             {
-                lateJoin = false;
+                // lateJoin = false;
                 spawnPointType = SpawnPointType.Job;
             }
 
-            var mobMaybe = _stationSpawning.SpawnPlayerCharacterOnStation(station, jobId, character);
+            var mobMaybe = _stationSpawning.SpawnPlayerCharacterOnStation(station, jobId, character, spawnPointType: spawnPointType);
             DebugTools.AssertNotNull(mobMaybe);
             mob = mobMaybe!.Value;
 

@@ -227,7 +227,7 @@ public sealed partial class GeneralStationRecordConsoleWindow : DefaultWindow
 
             // Get proper job names when possible
             string jobName;
-            if (_prototype.TryIndex(job, out var jobProto))
+            if (_prototypeManager.TryIndex(job, out var jobProto))
                 jobName = jobProto.LocalizedName;
             else
                 jobName = job;

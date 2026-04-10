@@ -14,9 +14,6 @@ using Content.Shared.Movement.Pulling.Systems;
 using Content.Shared.Stacks;
 using Content.Shared.Standing;
 using Content.Shared.Throwing;
-using Robust.Shared.Containers;
-using Robust.Shared.Audio;
-using Robust.Shared.Audio.Systems;
 using Robust.Shared.GameStates;
 using Robust.Shared.Input.Binding;
 using Robust.Shared.Map;
@@ -50,7 +47,7 @@ namespace Content.Server.Hands.Systems
         {
             base.Initialize();
 
-            SubscribeLocalEvent<HandsComponent, DisarmedEvent>(OnDisarmed, before: new[] { typeof(StunSystem), typeof(SharedStaminaSystem) });
+            SubscribeLocalEvent<HandsComponent, DisarmedEvent>(OnDisarmed, before: new[] {typeof(StunSystem), typeof(SharedStaminaSystem)});
 
             SubscribeLocalEvent<HandsComponent, BodyPartAddedEvent>(HandleBodyPartAdded);
             SubscribeLocalEvent<HandsComponent, BodyPartRemovedEvent>(HandleBodyPartRemoved);
@@ -140,7 +137,7 @@ namespace Content.Server.Hands.Systems
 
         private bool HandleThrowItem(ICommonSession? playerSession, EntityCoordinates coordinates, EntityUid entity)
         {
-            if (playerSession?.AttachedEntity is not { Valid: true } player || !Exists(player) || !coordinates.IsValid(EntityManager))
+            if (playerSession?.AttachedEntity is not {Valid: true} player || !Exists(player) || !coordinates.IsValid(EntityManager))
                 return false;
 
             return ThrowHeldItem(player, coordinates);
@@ -165,7 +162,7 @@ namespace Content.Server.Hands.Systems
             {
                 var splitStack = _stackSystem.Split((throwEnt.Value, stack), 1, Comp<TransformComponent>(player).Coordinates);
 
-                if (splitStack is not { Valid: true })
+                if (splitStack is not {Valid: true})
                     return false;
 
                 throwEnt = splitStack.Value;
@@ -203,9 +200,6 @@ namespace Content.Server.Hands.Systems
             // If the holder doesn't have a physics component, they ain't moving
             var holderVelocity = _physicsQuery.TryComp(entity, out var physics) ? physics.LinearVelocity : Vector2.Zero;
             var spreadMaxAngle = Angle.FromDegrees(DropHeldItemsSpread);
-
-            var fellEvent = new FellDownEvent(entity);
-            RaiseLocalEvent(entity, fellEvent);
 
             foreach (var hand in entity.Comp.Hands.Keys)
             {

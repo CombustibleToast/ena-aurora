@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Numerics;
+using Content.Server._NF.Cargo.Components;
 using Content.Server.Cargo.Components;
 using Content.Server.Cargo.Systems;
 using Content.Server.Nutrition.Components;
@@ -25,26 +26,6 @@ public sealed class CargoTest
         // This is ignored because it is explicitly intended to be able to sell for more than it costs.
         new("FunCrateGambling")
     ];
-
-    [TestPrototypes]
-    private const string StackProto = @"
-- type: entity
-  id: A
-
-- type: stack
-  id: StackProto
-  name: stack-steel
-  spawn: A
-
-- type: entity
-  id: StackEnt
-  components:
-  - type: StackPrice
-    price: 20
-  - type: Stack
-    stackType: StackProto
-    count: 5
-";
 
     [Test]
     public async Task NoCargoOrderArbitrage()
@@ -237,10 +218,13 @@ public sealed class CargoTest
 
     [TestPrototypes]
     private const string StackProto = @"
+- type: entity
+  id: A
+
 - type: stack
   id: StackProto
   name: stack-steel
-  spawn: StackEnt
+  spawn: A
 
 - type: entity
   id: StackEnt

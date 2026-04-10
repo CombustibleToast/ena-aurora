@@ -65,6 +65,6 @@ public sealed class PoolSettings : PairSettings
         return DummyTicker == next.DummyTicker
                && Map == next.Map
                && InLobby == next.InLobby
-               && GameLobbyDefaultPreset == nextSettings.GameLobbyDefaultPreset; // Frontier: swappable presets
+               && GameLobbyDefaultPreset == next.GameLobbyDefaultPreset; // Frontier: swappable presets
     }
 }

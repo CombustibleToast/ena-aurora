@@ -11,6 +11,7 @@ using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
 using Content.Shared.Power;
 using Content.Server.Chat.Systems; // Frontier
+using Content.Shared.Chat; // Frontier
 
 namespace Content.Server.Anomaly;
 
@@ -172,7 +173,7 @@ public sealed partial class AnomalySystem
                     if (generator is { } genEnt
                         && TryComp(genEnt, out TransformComponent? generatorXform))
                     {
-                        _stack.Spawn(genEnt.Comp.RefundAmount, genEnt.Comp.RefundStackType, generatorXform.Coordinates);
+                        _stack.SpawnAtPosition(genEnt.Comp.RefundAmount, genEnt.Comp.RefundStackType, generatorXform.Coordinates);
                         genEnt.Comp.CooldownEndTime = TimeSpan.Zero;
                         UpdateGeneratorUi(genEnt, genEnt.Comp);
                         _chat.TrySendInGameICMessage(genEnt, Loc.GetString("anomaly-generator-refund-message"), InGameICChatType.Speak, hideChat: true);

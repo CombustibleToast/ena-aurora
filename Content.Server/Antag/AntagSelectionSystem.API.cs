@@ -45,7 +45,7 @@ public sealed partial class AntagSelectionSystem
             // Frontier: ignore non-whitelisted/blacklisted entities
             if (targetEntity != null
                 && (_whitelist.IsWhitelistFail(def.Whitelist, targetEntity.Value)
-                || _whitelist.IsBlacklistPass(def.Blacklist, targetEntity.Value)))
+                || _whitelist.IsWhitelistPass(def.Blacklist, targetEntity.Value)))
                 continue;
             // End Frontier
 
