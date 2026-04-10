@@ -217,7 +217,7 @@ namespace Content.Server.Lathe
                 component.Queue.RemoveFirst();
             var recipe = _proto.Index(batch.Recipe);
 
-            var time = _reagentSpeed.ApplySpeed(uid, _proto.Index(recipe).CompleteTime) * component.TimeMultiplier;
+            var time = _reagentSpeed.ApplySpeed(uid, recipe.CompleteTime) * component.TimeMultiplier;
 
             var lathe = EnsureComp<LatheProducingComponent>(uid);
             lathe.StartTime = _timing.CurTime;
@@ -630,10 +630,12 @@ namespace Content.Server.Lathe
             component.CurrentRecipe = null;
             FinishProducing(uid, component);
         }
+
         #endregion
 
-
         // New Frontiers - Lathe Upgrades - upgrading lathe speed through machine parts
+        #region Frontier
+
         // This code is licensed under AGPLv3. See AGPLv3.txt
         private void OnPartsRefresh(EntityUid uid, LatheComponent component, RefreshPartsEvent args)
         {
@@ -651,8 +653,6 @@ namespace Content.Server.Lathe
             args.AddPercentageUpgrade("lathe-component-upgrade-material-use", component.FinalMaterialUseMultiplier);
         }
 
-        // Frontier: modify item value, remove from queue
-        #region Frontier
         private void ModifyPrintedEntityPrice(EntityUid uid, LatheComponent component, EntityUid target)
         {
             // Cannot reduce value, leave item as-is
@@ -683,205 +683,6 @@ namespace Content.Server.Lathe
                     }
                 }
             }
-        }
-
-        public void AbortProduction(EntityUid uid, LatheComponent? component = null)
-        {
-            if (!Resolve(uid, ref component))
-                return;
-            if (component.CurrentRecipe != null)
-            {
-                // Items incremented on start, need to decrement with removal
-                if (component.Queue.Count > 0)
-                {
-                    var batch = component.Queue.First();
-                    if (batch.Recipe != component.CurrentRecipe)
-                    {
-                        var newBatch = new LatheRecipeBatch(_proto.Index(component.CurrentRecipe.GetValueOrDefault()), 0, 1);
-                        component.Queue.Insert(0, newBatch);
-                    }
-                    else if (batch.ItemsPrinted > 0)
-                    {
-                        batch.ItemsPrinted--;
-                    }
-                }
-
-                RefundCurrentRecipe(uid, component);
-                component.CurrentRecipe = null;
-            }
-            RemCompDeferred<LatheProducingComponent>(uid);
-            UpdateUserInterfaceState(uid, component);
-            UpdateRunningAppearance(uid, false);
-        }
-
-        public void OnLatheDeleteRequestMessage(EntityUid uid, LatheComponent component, ref LatheDeleteRequestMessage args)
-        {
-            if (args.Index < 0 || args.Index >= component.Queue.Count)
-                return;
-
-            var batch = component.Queue[args.Index];
-            _adminLogger.Add(LogType.Action,
-                LogImpact.Low,
-                $"{ToPrettyString(args.Actor):player} deleted a lathe job for ({batch.ItemsPrinted}/{batch.ItemsRequested}) {GetRecipeName(batch.Recipe)} at {ToPrettyString(uid):lathe}");
-
-            RefundBatch(uid, component, batch);
-            component.Queue.RemoveAt(args.Index);
-            UpdateUserInterfaceState(uid, component);
-        }
-
-        public void OnLatheMoveRequestMessage(EntityUid uid, LatheComponent component, ref LatheMoveRequestMessage args)
-        {
-            if (args.Change == 0 || args.Index < 0 || args.Index >= component.Queue.Count)
-                return;
-
-            var newIndex = args.Index + args.Change;
-            if (newIndex < 0 || newIndex >= component.Queue.Count)
-                return;
-
-            var temp = component.Queue[args.Index];
-            component.Queue[args.Index] = component.Queue[newIndex];
-            component.Queue[newIndex] = temp;
-            UpdateUserInterfaceState(uid, component);
-        }
-
-        public void OnLatheAbortFabricationMessage(EntityUid uid, LatheComponent component, ref LatheAbortFabricationMessage args)
-        {
-            if (component.CurrentRecipe == null)
-                return;
-
-            _adminLogger.Add(LogType.Action,
-                LogImpact.Low,
-                $"{ToPrettyString(args.Actor):player} aborted printing {GetRecipeName(_proto.Index(component.CurrentRecipe.GetValueOrDefault()))} at {ToPrettyString(uid):lathe}");
-
-            RefundCurrentRecipe(uid, component);
-            component.CurrentRecipe = null;
-            FinishProducing(uid, component);
-        }
-        #endregion
-
-        // New Frontiers - Lathe Upgrades - upgrading lathe speed through machine parts
-        // This code is licensed under AGPLv3. See AGPLv3.txt
-        private void OnPartsRefresh(EntityUid uid, LatheComponent component, RefreshPartsEvent args)
-        {
-            var printTimeRating = args.PartRatings[component.MachinePartPrintSpeed];
-            var materialUseRating = args.PartRatings[component.MachinePartMaterialUse];
-
-            component.FinalTimeMultiplier = component.TimeMultiplier * MathF.Pow(component.PartRatingPrintTimeMultiplier, printTimeRating - 1);
-            component.FinalMaterialUseMultiplier = component.MaterialUseMultiplier * MathF.Pow(component.PartRatingMaterialUseMultiplier, materialUseRating - 1);
-            Dirty(uid, component);
-        }
-
-        private void OnUpgradeExamine(EntityUid uid, LatheComponent component, UpgradeExamineEvent args)
-        {
-            args.AddPercentageUpgrade("lathe-component-upgrade-speed", 1 / component.FinalTimeMultiplier);
-            args.AddPercentageUpgrade("lathe-component-upgrade-material-use", component.FinalMaterialUseMultiplier);
-        }
-
-        // Frontier: modify item value, remove from queue
-        #region Frontier
-        private void ModifyPrintedEntityPrice(EntityUid uid, LatheComponent component, EntityUid target)
-        {
-            // Cannot reduce value, leave item as-is
-            if (component.ProductValueModifier == null
-            || !float.IsFinite(component.ProductValueModifier.Value)
-            || component.ProductValueModifier < 0f)
-                return;
-
-            if (TryComp<StackPriceComponent>(target, out var stackPrice))
-            {
-                if (stackPrice.Price > 0)
-                    stackPrice.Price *= component.ProductValueModifier.Value;
-            }
-            if (TryComp<StaticPriceComponent>(target, out var staticPrice))
-            {
-                if (staticPrice.Price > 0)
-                    staticPrice.Price *= component.ProductValueModifier.Value;
-            }
-
-            // Recurse into contained entities
-            if (TryComp<ContainerManagerComponent>(target, out var containers))
-            {
-                foreach (var container in containers.Containers.Values)
-                {
-                    foreach (var ent in container.ContainedEntities)
-                    {
-                        ModifyPrintedEntityPrice(uid, component, ent);
-                    }
-                }
-            }
-        }
-
-        public void AbortProduction(EntityUid uid, LatheComponent? component = null)
-        {
-            if (!Resolve(uid, ref component))
-                return;
-            if (component.CurrentRecipe != null)
-            {
-                // Items incremented on start, need to decrement with removal
-                if (component.Queue.Count > 0)
-                {
-                    var batch = component.Queue.First();
-                    if (batch.Recipe != component.CurrentRecipe)
-                    {
-                        var newBatch = new LatheRecipeBatch(_proto.Index(component.CurrentRecipe.GetValueOrDefault()), 0, 1);
-                        component.Queue.Insert(0, newBatch);
-                    }
-                    else if (batch.ItemsPrinted > 0)
-                    {
-                        batch.ItemsPrinted--;
-                    }
-                }
-
-                RefundCurrentRecipe(uid, component);
-                component.CurrentRecipe = null;
-            }
-            RemCompDeferred<LatheProducingComponent>(uid);
-            UpdateUserInterfaceState(uid, component);
-            UpdateRunningAppearance(uid, false);
-        }
-
-        public void OnLatheDeleteRequestMessage(EntityUid uid, LatheComponent component, ref LatheDeleteRequestMessage args)
-        {
-            if (args.Index < 0 || args.Index >= component.Queue.Count)
-                return;
-
-            var batch = component.Queue[args.Index];
-            _adminLogger.Add(LogType.Action,
-                LogImpact.Low,
-                $"{ToPrettyString(args.Actor):player} deleted a lathe job for ({batch.ItemsPrinted}/{batch.ItemsRequested}) {GetRecipeName(batch.Recipe)} at {ToPrettyString(uid):lathe}");
-
-            RefundBatch(uid, component, batch);
-            component.Queue.RemoveAt(args.Index);
-            UpdateUserInterfaceState(uid, component);
-        }
-
-        public void OnLatheMoveRequestMessage(EntityUid uid, LatheComponent component, ref LatheMoveRequestMessage args)
-        {
-            if (args.Change == 0 || args.Index < 0 || args.Index >= component.Queue.Count)
-                return;
-
-            var newIndex = args.Index + args.Change;
-            if (newIndex < 0 || newIndex >= component.Queue.Count)
-                return;
-
-            var temp = component.Queue[args.Index];
-            component.Queue[args.Index] = component.Queue[newIndex];
-            component.Queue[newIndex] = temp;
-            UpdateUserInterfaceState(uid, component);
-        }
-
-        public void OnLatheAbortFabricationMessage(EntityUid uid, LatheComponent component, ref LatheAbortFabricationMessage args)
-        {
-            if (component.CurrentRecipe == null)
-                return;
-
-            _adminLogger.Add(LogType.Action,
-                LogImpact.Low,
-                $"{ToPrettyString(args.Actor):player} aborted printing {GetRecipeName(_proto.Index(component.CurrentRecipe.GetValueOrDefault()))} at {ToPrettyString(uid):lathe}");
-
-            RefundCurrentRecipe(uid, component);
-            component.CurrentRecipe = null;
-            FinishProducing(uid, component);
         }
         #endregion
         // End Frontier

@@ -55,7 +55,6 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     [Dependency] private readonly BankSystem _bank = default!; // Frontier
     [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!; // Frontier
     [Dependency] private readonly TransformSystem _xformSystem = default!; // Frontier
-    [Dependency] private readonly MindSystem _mindSystem = default!;
 
     /// <summary>
     /// Attempts to spawn a player character onto the given station.
