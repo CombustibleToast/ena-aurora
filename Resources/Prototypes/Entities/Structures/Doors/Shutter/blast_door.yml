@@ -197,12 +197,12 @@
 
 - type: entity
   parent: BlastDoor
-  id: BlastDoorXeno
-  name: xeno blast door
-  description: Don't lose an arm!
+  id: BlastDoorXenoborg
+  name: xenoborg blast door
+  description: Don't lose a head!
   components:
   - type: Sprite
-    sprite: Structures/Doors/Shutters/xeno_blastdoor.rsi
+    sprite: Structures/Doors/Shutters/xenoborg_blastdoor.rsi
     layers:
     - state: closed
       map: ["enum.DoorVisualLayers.Base"]
@@ -217,13 +217,10 @@
     crushDamage:
       types:
         Blunt: 25 # yowch
-  - type: IconSmooth
-    key: chitin
-    mode: NoSprite
 
 - type: entity
-  parent: BlastDoorXeno
-  id: BlastDoorXenoOpen
+  parent: BlastDoorXenoborg
+  id: BlastDoorXenoborgOpen
   suffix: Open
   components:
   - type: Door
@@ -236,46 +233,3 @@
     airBlocked: false
   - type: RadiationBlocker
     enabled: false
-
-- type: entity
-  parent: BaseStructureDynamic
-  id: BlastDoorXenoFrame
-  name: xeno blast door frame
-  description: This one says 'BLAST DONGER'.
-  components:
-  - type: Sprite
-    sprite: Structures/Doors/Shutters/xeno_blastdoor.rsi
-    state: assembly
-  - type: InteractionOutline
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallicStrong
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 300
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 55
-        mask:
-        - Impassable
-        - HighImpassable
-        layer:
-        - HighImpassable
-  - type: Transform
-    noRot: true
-  - type: Construction
-    graph: BlastDoor
-    node: frame1
-  placement:
-    mode: SnapgridCenter

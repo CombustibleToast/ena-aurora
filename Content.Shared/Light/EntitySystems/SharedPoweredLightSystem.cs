@@ -7,6 +7,7 @@ using Content.Shared.DeviceLinking.Events;
 using Content.Shared.DeviceNetwork;
 using Content.Shared.DeviceNetwork.Events;
 using Content.Shared.DoAfter;
+using Content.Shared.Emp;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Interaction;
 using Content.Shared.Light.Components;
@@ -17,6 +18,7 @@ using Content.Shared.Storage.EntitySystems;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
+using Robust.Shared.Random; // Frontier
 
 namespace Content.Shared.Light.EntitySystems;
 
@@ -35,6 +37,7 @@ public abstract class SharedPoweredLightSystem : EntitySystem
     [Dependency] private readonly SharedPointLightSystem _pointLight = default!;
     [Dependency] private readonly SharedStorageSystem _storage = default!;
     [Dependency] private readonly SharedDeviceLinkSystem _deviceLink = default!;
+    [Dependency] private readonly IRobustRandom _random = default!; // Frontier
 
     private static readonly TimeSpan ThunkDelay = TimeSpan.FromSeconds(2);
     public const string LightBulbContainer = "light_bulb";
@@ -52,6 +55,7 @@ public abstract class SharedPoweredLightSystem : EntitySystem
         SubscribeLocalEvent<PoweredLightComponent, PowerChangedEvent>(OnPowerChanged);
         SubscribeLocalEvent<PoweredLightComponent, PoweredLightDoAfterEvent>(OnDoAfter);
         SubscribeLocalEvent<PoweredLightComponent, DamageChangedEvent>(HandleLightDamaged);
+        SubscribeLocalEvent<PoweredLightComponent, EmpPulseEvent>(OnEmpPulse);
     }
 
     private void OnInit(EntityUid uid, PoweredLightComponent light, ComponentInit args)
@@ -230,29 +234,21 @@ public abstract class SharedPoweredLightSystem : EntitySystem
     /// <summary>
     ///     Try to break bulb inside light fixture
     /// </summary>
-    public bool TryDestroyBulb(EntityUid uid, PoweredLightComponent? light = null)
+    public bool TryDestroyBulb(EntityUid uid, PoweredLightComponent? light = null, EntityUid? user = null)
     {
         if (!Resolve(uid, ref light, false))
             return false;
 
-        // if we aren't mapinited,
-        // just null the spawned bulb
-        if (LifeStage(uid) < EntityLifeStage.MapInitialized)
-        {
-            light.HasLampOnSpawn = null;
-            return true;
-        }
-
         // check bulb state
         var bulbUid = GetBulb(uid, light);
-        if (bulbUid == null || !EntityManager.TryGetComponent(bulbUid.Value, out LightBulbComponent? lightBulb))
+        if (bulbUid == null || !TryComp<LightBulbComponent>(bulbUid.Value, out var lightBulb))
             return false;
         if (lightBulb.State == LightBulbState.Broken)
             return false;
 
         // break it
         _bulbSystem.SetState(bulbUid.Value, LightBulbState.Broken, lightBulb);
-        _bulbSystem.PlayBreakSound(bulbUid.Value, lightBulb);
+        _bulbSystem.PlayBreakSound(bulbUid.Value, lightBulb, user);
         UpdateLight(uid, light);
         return true;
     }
@@ -327,13 +323,18 @@ public abstract class SharedPoweredLightSystem : EntitySystem
     /// <summary>
     ///     Destroy the light bulb if the light took any damage.
     /// </summary>
+    /// <remarks>
+    ///     TODO: This should be an IThresholdBehaviour once DestructibleSystem is predicted.
+    /// </remarks>
     public void HandleLightDamaged(EntityUid uid, PoweredLightComponent component, DamageChangedEvent args)
     {
+        if (GameTiming.ApplyingState) // The destruction is already networked on its own.
+            return;
+
         // Was it being repaired, or did it take damage?
         if (args.DamageIncreased)
         {
-            // Eventually, this logic should all be done by this (or some other) system, not a component.
-            TryDestroyBulb(uid, component);
+            TryDestroyBulb(uid, component, args.Origin);
         }
     }
 
@@ -346,6 +347,17 @@ public abstract class SharedPoweredLightSystem : EntitySystem
             return;
 
         UpdateLight(uid, component);
+    }
+
+    private void OnEmpPulse(EntityUid uid, PoweredLightComponent component, ref EmpPulseEvent args)
+    {
+        // Frontier: break lights probabilistically
+        if (_random.Prob(component.LightBreakChance))
+        {
+            if (TryDestroyBulb(uid, component))
+                args.Affected = true;
+        }
+        // End Frontier: break lights probabilistically
     }
 
     public void ToggleBlinkingLight(EntityUid uid, PoweredLightComponent light, bool isNowBlinking)

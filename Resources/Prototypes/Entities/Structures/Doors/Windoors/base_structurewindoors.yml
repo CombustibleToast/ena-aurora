@@ -57,6 +57,10 @@
       shader: unshaded
       visible: false
       map: ["enum.ElectrifiedLayers.Sparks"]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
   - type: AnimationPlayer
   - type: ApcPowerReceiver
   - type: ExtensionCableReceiver
@@ -211,6 +215,10 @@
       shader: unshaded
       visible: false
       map: [ "enum.ElectrifiedLayers.Sparks" ]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
   - type: Damageable
     damageModifierSet: RGlass
   - type: Destructible
@@ -282,6 +290,10 @@
       shader: unshaded
       visible: false
       map: [ "enum.ElectrifiedLayers.Sparks" ]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
   - type: Destructible
     thresholds:
     - trigger:
@@ -348,6 +360,10 @@
       shader: unshaded
       visible: false
       map: [ "enum.ElectrifiedLayers.Sparks" ]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
   - type: Destructible
     thresholds:
     - trigger:
@@ -419,6 +435,10 @@
       shader: unshaded
       visible: false
       map: [ "enum.ElectrifiedLayers.Sparks" ]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
   - type: Destructible
     thresholds:
     - trigger:
@@ -485,6 +505,10 @@
       shader: unshaded
       visible: false
       map: [ "enum.ElectrifiedLayers.Sparks" ]
+    - state: sparks
+      map: ["enum.DoorVisualLayers.BaseEmagging"]
+      shader: unshaded
+      visible: false
   - type: Destructible
     thresholds:
     - trigger:

@@ -10,8 +10,8 @@ public sealed partial class TriggerSystem
 {
     private void NFInitialize()
     {
-        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, BeforeGibbedEvent>(OnBeingGibbed);
-        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, ImplantRelayEvent<BeforeGibbedEvent>>(OnBeingGibbedRelay);
+        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, BeingGibbedEvent>(OnBeingGibbed);
+        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, ImplantRelayEvent<BeingGibbedEvent>>(OnBeingGibbedRelay);
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseFailureEvent>(OnPopupInteractionFailure);
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseSuccessEvent>(OnPopupInteractionSuccess);
 

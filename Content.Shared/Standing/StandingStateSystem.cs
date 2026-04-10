@@ -102,6 +102,7 @@ public sealed class StandingStateSystem : EntitySystem
         if (!standingState.Standing)
             return true;
 
+        // Aurora's Song - Note: This was removed upstream though I think we should keep it here for now
         // This is just to avoid most callers doing this manually saving boilerplate
         // 99% of the time you'll want to drop items but in some scenarios (e.g. buckling) you don't want to.
         // We do this BEFORE downing because something like buckle may be blocking downing but we want to drop hand items anyway

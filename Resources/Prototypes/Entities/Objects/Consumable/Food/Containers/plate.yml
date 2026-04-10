@@ -57,7 +57,7 @@
     - Trash
   - type: PhysicalComposition
     materialComposition:
-      Glass: 60
+      Glass: 50
   - type: SpaceGarbage
   - type: StaticPrice # Frontier
     price: 4.5 # Frontier
@@ -124,7 +124,7 @@
         acts: [ "Destruction" ]
   - type: PhysicalComposition
     materialComposition:
-      Glass: 30
+      Glass: 25
   - type: StaticPrice # Frontier
     price: 3 # Frontier
   - type: NFCookware # Frontier
@@ -213,7 +213,7 @@
     - Trash
   - type: PhysicalComposition
     materialComposition:
-      Steel: 15 # Frontier 60<15
+      Steel: 15 # Frontier 50<15
   - type: SpaceGarbage
   - type: StaticPrice # Frontier
     price: 4 # Frontier
@@ -240,6 +240,6 @@
     - Trash
   - type: PhysicalComposition
     materialComposition:
-      Steel: 30
+      Steel: 25
   - type: SpaceGarbage
   - type: NFCookware # Frontier

@@ -235,6 +235,23 @@ public sealed class CargoTest
         await pair.CleanReturnAsync();
     }
 
+    [TestPrototypes]
+    private const string StackProto = @"
+- type: stack
+  id: StackProto
+  name: stack-steel
+  spawn: StackEnt
+
+- type: entity
+  id: StackEnt
+  components:
+  - type: StackPrice
+    price: 20
+  - type: Stack
+    stackType: StackProto
+    count: 5
+";
+
     [Test]
     public async Task StackPrice()
     {

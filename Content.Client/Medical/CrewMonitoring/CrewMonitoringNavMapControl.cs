@@ -66,7 +66,7 @@ public sealed partial class CrewMonitoringNavMapControl : NavMapControl
                 continue;
 
             if (!LocalizedNames.TryGetValue(netEntity, out var name))
-                name = "Unknown";
+                name = Loc.GetString("navmap-unknown-entity");
 
             // Text location of the blip will display GPS coordinates for the purpose of being able to find a person via GPS
             // Previously it displayed coordinates relative to the center of the station, which had no use.

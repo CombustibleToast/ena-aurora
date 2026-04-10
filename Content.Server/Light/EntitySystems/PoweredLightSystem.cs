@@ -1,8 +1,6 @@
-using Content.Server.Emp;
 using Content.Server.Ghost;
 using Content.Shared.Light.Components;
 using Content.Shared.Light.EntitySystems;
-using Robust.Shared.Random; // Frontier
 
 namespace Content.Server.Light.EntitySystems;
 
@@ -11,16 +9,12 @@ namespace Content.Server.Light.EntitySystems;
 /// </summary>
 public sealed class PoweredLightSystem : SharedPoweredLightSystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!; // Frontier
-
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<PoweredLightComponent, MapInitEvent>(OnMapInit);
 
         SubscribeLocalEvent<PoweredLightComponent, GhostBooEvent>(OnGhostBoo);
-
-        SubscribeLocalEvent<PoweredLightComponent, EmpPulseEvent>(OnEmpPulse);
     }
 
     private void OnGhostBoo(EntityUid uid, PoweredLightComponent light, GhostBooEvent args)
@@ -57,16 +51,5 @@ public sealed class PoweredLightSystem : SharedPoweredLightSystem
         }
         // need this to update visualizers
         UpdateLight(uid, light);
-    }
-
-    private void OnEmpPulse(EntityUid uid, PoweredLightComponent component, ref EmpPulseEvent args)
-    {
-        // Frontier: break lights probabilistically
-        if (_random.Prob(component.LightBreakChance))
-        {
-            if (TryDestroyBulb(uid, component))
-                args.Affected = true;
-        }
-        // End Frontier: break lights probabilistically
     }
 }

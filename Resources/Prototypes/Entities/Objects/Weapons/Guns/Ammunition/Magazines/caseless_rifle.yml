@@ -1,3 +1,4 @@
+# Aurora's Song - Add back rifle mags
 - type: entity
   id: BaseMagazineCaselessRifle
   name: "magazine (.25 caseless)"
@@ -6,12 +7,12 @@
   components:
   - type: Tag
     tags:
-      - MagazineCaselessRifle
+    - MagazineCaselessRifle
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - NFCartridgeRifle25 # Aurora - this is the new cartridge prototype
+      - NFCartridgeRifle25 # Aurora - this is the new cartridge prototype
     # proto: CartridgeCaselessRifle # Frontier
     capacity: 30
   - type: Item
@@ -33,23 +34,26 @@
   - type: Appearance
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
+  abstract: true
+  parent: [ BaseItem, BaseC3SyndicateContrabandNoValue, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband, added RecyclableItemSteelTiny | Aurora's Song: BaseCartridge changed to BaseItem
   id: BaseMagazinePistolCaselessRifle
   name: "pistol magazine (.25 caseless)"
-  parent: BaseMagazineCaselessRifle
-  abstract: true
   components:
   - type: Tag
     tags:
-      - MagazinePistolCaselessRifle
+    - MagazinePistolCaselessRifle
   - type: BallisticAmmoProvider
     whitelist:
       tags:
-        - NFCartridgeRifle25 # Aurora - this is the new cartridge prototype
+      # - CartridgeCaselessRifle # Aurora's Song - disable old prototype
+      - NFCartridgeRifle25 # Aurora - this is the new cartridge prototype
     # proto: CartridgeCaselessRifle # Frontier
     capacity: 10
   - type: Item
     size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
     layers:
@@ -65,25 +69,11 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazinePistolCaselessRifle
   id: MagazinePistolCaselessRifle
   name: "pistol magazine (.25 caseless)"
-  parent: BaseMagazinePistolCaselessRifle
   description: 10-round magazine for the Cobra pistol. Intended to hold general-purpose kinetic ammunition.
   components:
-  - type: BallisticAmmoProvider
-    # proto: CartridgeCaselessRifle # Frontier
-    capacity: 10
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
-      map: ["enum.GunVisualLayers.Mag"]
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
   - type: Item
     inhandVisuals:
       left:
@@ -94,14 +84,13 @@
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
+  parent: BaseMagazinePistolCaselessRifle
   id: MagazinePistolCaselessRiflePractice
   name: "pistol magazine (.25 caseless practice)"
-  parent: BaseMagazinePistolCaselessRifle
-  description: 10-round magazine for the Cobra pistol. Intended to hold non-harmful chalk ammunition.
+  description: 10-round magazine for the Cobra pistol. Intended to hold harmless practice ammunition.
   components:
   - type: BallisticAmmoProvider
     # proto: CartridgeCaselessRiflePractice # Frontier
-    capacity: 10
   - type: Sprite
     layers:
     - state: base
@@ -110,11 +99,6 @@
       map: ["enum.GunVisualLayers.Mag"]
     - state: stripe
       color: "#dbdbdb"
-  - type: MagazineVisuals
-    magState: mag
-    steps: 6
-    zeroVisible: false
-  - type: Appearance
   - type: Item
     inhandVisuals:
       left:
@@ -126,6 +110,7 @@
       - state: inhand-right-stripe
         color: "#dbdbdb"
 
+# Aurora's Song - Add back rifle mags
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   id: MagazineCaselessRifle
@@ -147,6 +132,7 @@
       right:
       - state: inhand-right-mag
 
+# Aurora's Song - Add back rifle mags
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   id: MagazineCaselessRiflePractice

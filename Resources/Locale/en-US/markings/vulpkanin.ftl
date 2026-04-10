@@ -39,7 +39,8 @@ marking-VulpEarTajaran-msai = Tajaran Ears (Base)
 marking-VulpEarTajaran-msai-inner = Tajaran Ears (Inner)
 marking-VulpEarTajaran = Vulpkanin Tajaran
 
-marking-VulpEarShock-shock = Shock Ears
+marking-VulpEarShock-shock = Shock Ears (Base)
+marking-VulpEarShock-shock-inner = Shock Ears (Inner)
 marking-VulpEarShock = Vulpkanin Shock
 
 marking-VulpEarCoyote-coyote = Coyote Ears

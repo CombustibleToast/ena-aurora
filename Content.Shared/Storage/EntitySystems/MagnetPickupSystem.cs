@@ -1,4 +1,3 @@
-
 using Content.Shared.Inventory;
 using Content.Shared.Storage.Components;
 using Content.Shared.Item.ItemToggle; // DeltaV
@@ -112,6 +111,7 @@ public sealed class MagnetPickupSystem : EntitySystem
                 continue;
 
             comp.NextScan = currentTime + ScanDelay; // Frontier: no need to rerun if built late in-round
+            Dirty(uid, comp);
 
             // Frontier: combine DeltaV/White Dream's magnet toggle with old system
             if (comp.MagnetCanBeEnabled)

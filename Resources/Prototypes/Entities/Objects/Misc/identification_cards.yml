@@ -1,3 +1,5 @@
+# Aurora's Song - TODO: Lets do #40414 but with our own sprites
+
 - type: entity
   parent: Clothing
   id: IDCardStandard

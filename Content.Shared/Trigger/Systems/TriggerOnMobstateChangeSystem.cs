@@ -9,9 +9,8 @@ using Robust.Shared.Timing; // Coyote
 
 namespace Content.Shared.Trigger.Systems;
 
-public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
+public sealed partial class TriggerOnMobstateChangeSystem : TriggerOnXSystem
 {
-    [Dependency] private readonly TriggerSystem _trigger = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
 
     public override void Initialize()
@@ -67,7 +66,7 @@ public sealed partial class TriggerOnMobstateChangeSystem : EntitySystem
             {
                 { "isRetry", retry }
             };
-            _trigger.Trigger(uid, component.TargetMobstateEntity ? uid : stateChangerUid, component.KeyOut, extras: extraData);
+            Trigger.Trigger(uid, component.TargetMobstateEntity ? uid : stateChangerUid, component.KeyOut, extras: extraData);
         }
 
         // Coyote: Then run it again

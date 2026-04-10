@@ -60,7 +60,9 @@ public sealed partial class IdCardConsoleComponent : Component
         "Detective", // Frontier: moved into alphabetical order
         "Engineering",
         "External",
-        //"Hydroponics",
+        //"GenpopEnter", // Aurora's Song - Disable genpop
+        //"GenpopLeave", // Aurora's Song - Disable genpop
+        //"Hydroponics", // Frontier
         "Janitor",
         //"Kitchen",
         //"Lawyer",
