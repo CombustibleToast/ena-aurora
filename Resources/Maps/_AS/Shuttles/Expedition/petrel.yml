@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/31/2026 06:07:31
-  entityCount: 731
+  time: 04/10/2026 19:47:26
+  entityCount: 733
 maps: []
 grids:
 - 1
@@ -1916,6 +1916,16 @@ entities:
     components:
     - type: Transform
       pos: -5.5,7.5
+      parent: 1
+  - uid: 732
+    components:
+    - type: Transform
+      pos: -5.5,8.5
+      parent: 1
+  - uid: 733
+    components:
+    - type: Transform
+      pos: 7.5,8.5
       parent: 1
 - proto: CableHV
   entities:

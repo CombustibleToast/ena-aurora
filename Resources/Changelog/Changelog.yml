@@ -5098,3 +5098,77 @@ Entries:
   id: 9099
   time: '2026-04-09T21:33:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/922
+- author: ZigTag
+  changes:
+    - type: Add
+      message: New railings from delta
+    - type: Tweak
+      message: New stair texture from delta
+  id: 9100
+  time: '2026-04-10T11:37:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/884
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Admin access config now has correct card
+  id: 9101
+  time: '2026-04-10T19:51:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/928
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel nacelle gantry lights were unpowered
+  id: 9102
+  time: '2026-04-10T20:46:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/931
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Fixes the ESS. Again.
+    - type: Tweak
+      message: Makes the ESS less zealous about rescuing you pre-maturely
+  id: 9103
+  time: '2026-04-10T21:27:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/926
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: missing spray painter stuff for SLE
+    - type: Tweak
+      message: add paramed siren to medic armored hardsuit
+    - type: Tweak
+      message: switch logprobe icon
+    - type: Tweak
+      message: add forensic upgrade and shuttle records to SLEO
+  id: 9104
+  time: '2026-04-10T21:27:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/929
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Undeprecates Cargo access, grants to STC, Valet, Mail Carrier
+  id: 9105
+  time: '2026-04-10T21:29:37.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/932
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: switch ColRep dresser for proper one
+    - type: Tweak
+      message: adjust disposals to hopefully allow better trash flow
+    - type: Tweak
+      message: some decals
+    - type: Add
+      message: ATMs to cargo bays
+    - type: Fix
+      message: IFF marker
+  id: 9106
+  time: '2026-04-10T21:36:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/930
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Exped Falchions should be registerable now
+  id: 9107
+  time: '2026-04-10T21:36:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/927

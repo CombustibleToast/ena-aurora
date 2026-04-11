@@ -404,7 +404,7 @@
         amount: 4
 
 - type: entity
-  name: SLE encryption key box
+  name: Security encryption key box
   parent: BoxEncryptionKeyPassenger
   id: BoxEncryptionKeySecurity
   components:

@@ -22,7 +22,7 @@
     - Anchorable
   - type: Rotatable
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_steel
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -56,7 +56,7 @@
   suffix: Steel, stage
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_steel
     drawdepth: FloorTiles
 
@@ -66,7 +66,7 @@
   suffix: White
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_white
     drawdepth: FloorTiles
 
@@ -76,7 +76,7 @@
   suffix: White, stage
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_white
     drawdepth: FloorTiles
 
@@ -86,7 +86,7 @@
   suffix: Dark
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_dark
     drawdepth: FloorTiles
 
@@ -96,7 +96,7 @@
   suffix: Dark, stage
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_dark
     drawdepth: FloorTiles
 
@@ -106,7 +106,7 @@
   suffix: Wood
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_wood
     drawdepth: FloorTiles
 
@@ -116,6 +116,6 @@
   suffix: Wood, stage
   components:
   - type: Sprite
-    sprite: Structures/stairs.rsi
+    sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_wood
     drawdepth: FloorTiles

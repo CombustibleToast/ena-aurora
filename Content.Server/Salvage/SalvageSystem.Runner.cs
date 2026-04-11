@@ -1,5 +1,6 @@
 using System.Numerics;
-using Content.Server._NF.Salvage; //AS
+using System.Diagnostics.CodeAnalysis; // Aurora's Song
+using Content.Server._NF.Salvage; // Aurora's Song
 using Content.Server.Salvage.Expeditions;
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
@@ -7,34 +8,25 @@ using Content.Shared.Chat;
 using Content.Shared.Humanoid;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
-using Content.Shared.EntityEffects; // AS
-using Content.Shared.NPC; //AS
-using Content.Shared.Damage; //AS
-using Content.Shared.Damage.Prototypes; //AS
-using Content.Shared.NPC.Components; //AS
-using Content.Shared.NPC.Systems; //AS
+using Content.Shared.NPC; // Aurora's Song
+using Content.Shared.Damage; // Aurora's Song
+using Content.Shared.NPC.Components; // Aurora's Song
 using Content.Shared.Salvage.Expeditions;
 using Content.Shared.Shuttles.Components;
 using Content.Shared.Localizations;
-using Content.Shared.Mind.Components; // AS
-using Content.Shared.Mobs.Components; // AS
-using Content.Shared.Warps; // AS
-using Content.Shared.Station.Components;
+using Content.Shared.Mind.Components; // Aurora's Song
+using Content.Shared.Warps; // Aurora's Song
 using Robust.Shared.Map.Components;
-using Robust.Server.GameObjects; // AS
 using Robust.Shared.Player;
 using Robust.Shared.Map; // Frontier
 using Content.Server.GameTicking; // Frontier
 using Content.Server._NF.Salvage.Expeditions.Structure; // Frontier
 using Content.Server._NF.Salvage.Expeditions;
-using Content.Shared.Salvage; // AS
-using Content.Shared.Buckle; // AS
-using Content.Shared.Buckle.Components;
-using Content.Shared.Damage.Systems; // AS
-using Content.Shared.Implants; // AS
-using Robust.Server.Player;// Coyote
-using Robust.Shared.Audio; // AS
-using Robust.Shared.Audio.Systems; //AS
+using Content.Shared.Salvage; // Aurora's Song
+using Content.Shared.Buckle; // Aurora's Song
+using Content.Shared.Buckle.Components; // Aurora's Song
+using Content.Shared.Implants; // Aurora's Song
+using Robust.Server.Player; // Coyote
 using Robust.Shared.Enums; // Frontier
 
 namespace Content.Server.Salvage;
@@ -324,121 +316,54 @@ public sealed partial class SalvageSystem
                 }
             }
 
-            if (remaining < TimeSpan.FromSeconds(2.5)) // AS: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
+            if (remaining < TimeSpan.FromSeconds(2.5) && comp.Warped == false) // Begin Aurora's Song: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
             {
-                var shuttleQuery = AllEntityQuery<ShuttleComponent, TransformComponent>();
-
-                if (TryComp<StationDataComponent>(comp.Station, out var data))
+                if (TryFindShuttle(uid, comp, out var shuttleUid) && shuttleUid is { } shuttleGrid)
                 {
-                    foreach (var member in data.Grids)
+                    FindPlayers(uid, shuttleGrid, out var players);
+                    foreach (var entity in players)
                     {
-                        while (shuttleQuery.MoveNext(out var shuttleUid, out var shuttle, out var shuttleXform))
+                        ReturnToShuttle(entity, shuttleGrid);
+                    }
+                }
+                else
+                {
+                    FindPlayers(uid, null, out var players);
+                    if (players.Count > 0)
+                    {
+                        foreach (var entity in players)
                         {
-                            if (shuttleXform.MapUid != uid)
-                                continue;
-
-                            // Get everyone we want to recover that is on the map and not on the shuttle
-                            var playerQuery = EntityQueryEnumerator<MindContainerComponent, TransformComponent>();
-                            while (playerQuery.MoveNext(out var quid, out var mindContainer, out var mobXform))
+                            Log.Debug($"Trying to warp {entity}");
+                            if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
                             {
-                                // If they aren't on the expedition map, don't want em
-                                if (mobXform.MapUid != uid)
-                                    continue;
-
-                                //if they are on the shuttle, don't bother.
-                                if (mobXform.GridUid == shuttleUid)
-                                    continue;
-
-                                // Not player controlled at any point
-                                if (!mindContainer.HasMind)
-                                    continue;
-
-                                // NPC, definitely not a person
-                                if (HasComp<ActiveNPCComponent>(quid) || HasComp<NFSalvageMobRestrictionsComponent>(quid))
-                                    continue;
-
-                                // Hostile ghost role, continue
-                                if (TryComp(quid, out NpcFactionMemberComponent? npcFaction))
-                                {
-                                    var hostileFactions = npcFaction.HostileFactions;
-                                    if (hostileFactions.Contains("NanoTrasen")) // TODO: move away from hardcoded faction
-                                        continue;
-
-                                }
-
-                                // If we got this far, we want to try and find a destination on their ship and warp them to it
-                                var strapQuery = EntityQueryEnumerator<StrapComponent, TransformComponent>();
-                                while (strapQuery.MoveNext(out var suid, out var strapComp, out var strapXform)) // find an unnocupied bed/chair
-                                {
-                                    if (Transform(quid).GridUid == shuttleUid)
-                                        break;
-                                    if (Transform(suid).GridUid != shuttleUid)
-                                        continue;
-                                    if (strapComp.BuckledEntities.Count > 0)
-                                        continue;
-                                    Log.Debug($"Strap point found: {suid}");
-                                    SafetyWarp(quid, strapXform.Coordinates);
-                                    _buckle.TryBuckle(quid, null, suid);
-                                }
-
-                                var warpQuery = EntityQueryEnumerator<WarpPointComponent, TransformComponent>();
-                                while (warpQuery.MoveNext(out var wuid, out var _, out var warpXform)) // then try to find the ships warp point
-                                {
-                                    if (Transform(quid).GridUid == shuttleUid)
-                                        break;
-                                    if (Transform(wuid).GridUid != shuttleUid)
-                                        continue;
-                                    Log.Debug($"Warp point found: {wuid}");
-                                    SafetyWarp(quid, warpXform.Coordinates);
-                                }
-
-                                // We're out of options, just try and dump them in space
-                                if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
-                                {
-                                    Log.Error($"Could not get DefaultMap EntityUID, entity {quid} may be deleted.");
-                                    break;
-                                }
-                                var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
-                                SafetyWarp(quid, fallback);
+                                Log.Error($"Could not get DefaultMap EntityUID, entity {entity} may be deleted.");
+                                break;
                             }
+                            var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+                            SafetyWarp(entity, fallback);
                         }
                     }
                 }
-            } // End AS
+                comp.Warped = true;
+            } // End Aurora's Song
 
             if (remaining < TimeSpan.Zero)
             {
-                var playerQuery = EntityQueryEnumerator<MindContainerComponent, TransformComponent>(); // AS: No idea whats causing people to be RR, so I'm adding redudancies out the ass.
-                while (playerQuery.MoveNext(out var quid, out var mindContainer, out var mobXform)) // Yes, this is pretty much an exact duplicate of the above code but with only the fallback as the destination
-                {                                                                                   // I'd try and make it cleaner but I'm slightly exasperated.
-                    // If they aren't on the expedition map, don't want em
-                    if (mobXform.MapUid != uid)
-                        continue;
-
-                    // Not player controlled at any point
-                    if (!mindContainer.HasMind)
-                        continue;
-
-                    // NPC, definitely not a person
-                    if (HasComp<ActiveNPCComponent>(quid) || HasComp<NFSalvageMobRestrictionsComponent>(quid))
-                        continue;
-
-                    // Hostile ghost role, continue
-                    if (TryComp(quid, out NpcFactionMemberComponent? npcFaction))
+                FindPlayers(uid, null, out var players); // Begin Aurora's Song
+                if (players.Count > 0)
+                {
+                    foreach (var entity in players)
                     {
-                        var hostileFactions = npcFaction.HostileFactions;
-                        if (hostileFactions.Contains("NanoTrasen")) // TODO: move away from hardcoded faction
-                            continue;
-
+                        Log.Debug($"Trying to warp {entity}");
+                        if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
+                        {
+                            Log.Error($"Could not get DefaultMap EntityUID, entity {entity} may be deleted.");
+                            break;
+                        }
+                        var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+                        SafetyWarp(entity, fallback);
                     }
-                    if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
-                    {
-                        Log.Error($"Could not get DefaultMap EntityUID, entity {quid} may be deleted.");
-                        break;
-                    }
-                    var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
-                    SafetyWarp(quid, fallback);
-                }
+                } // End Aurora's Song
                 QueueDel(uid);
             }
         }
@@ -555,9 +480,14 @@ public sealed partial class SalvageSystem
                     continue;
                 if (session.Status == SessionStatus.Disconnected)
                     continue;
+                component.ChecksFailed = 0; // Aurora's Song
                 return; // alive and connected player found, expedition is salvageable
             }
         }
+        component.ChecksFailed += 1; // Aurora's Song
+        if (component.ChecksFailed < component.AllowedFailures) // Aurora's Song
+            return;
+
         // everyone is dead or ssd, abort the expedition
         const int departTime = 20;
         Announce(mapUid, Loc.GetString("salvage-expedition-abort-wipe", ("departTime", departTime)));
@@ -571,9 +501,15 @@ public sealed partial class SalvageSystem
         component.EndTime = newEndTime;
     }
 
-    private void SafetyWarp(EntityUid mobUid, EntityCoordinates warpDestination) // AS
+    // Aurora's Song
+    /// <summary>
+    /// Attempts to warp an entity to a given coordinates before damaging them and producing teleportation effects
+    /// </summary>
+    /// <param name="mobUid">The entity to be warped</param>
+    /// <param name="warpDestination">The coordinates to warp them too</param>
+    private void SafetyWarp(EntityUid mobUid, EntityCoordinates warpDestination)
     {
-        Log.Debug($"Attempting to teleport {mobUid}");
+        Log.Debug($"Attempting to teleport {mobUid} to {warpDestination}");
 
         // first we teleport them
         var mobXform = Transform(mobUid);
@@ -581,7 +517,7 @@ public sealed partial class SalvageSystem
         _transform.AttachToGridOrMap(mobUid, mobXform);
         Spawn("EffectFlashBluespaceQuiet", mobXform.Coordinates);
 
-        // then we ensure they are
+        // then we ensure they are dead
         if (_mobState.IsAlive(mobUid))
         {
             // Apply a large bricks worth of damage
@@ -597,5 +533,143 @@ public sealed partial class SalvageSystem
             var deathrattleEvent = new ReTriggerRattleImplantEvent(mobUid, mobState.CurrentState);
             RaiseLocalEvent(mobUid, deathrattleEvent);
         }
+    }
+
+    // Aurora's Song
+    /// <summary>
+    /// Attempts to find a valid shuttle on an expedition map
+    /// </summary>
+    /// <param name="mapUid">Uid of the Expedition Map</param>
+    /// <param name="component">SalvageExpeditionComponent of the map</param>
+    /// <param name="shuttleUid">uid of the found shuttle</param>
+    /// <returns>Returns true if a shuttle with an expeditionary console was found</returns>
+    private bool TryFindShuttle(EntityUid mapUid, SalvageExpeditionComponent component, [NotNullWhen(true)] out EntityUid? shuttleUid)
+    {
+        shuttleUid = null;
+
+        if (!TryComp<StationDataComponent>(component.Station, out var data)) // If the ExpeditionComponent doesn't have a station, then we probably
+            return false;
+
+        HashSet<EntityUid> grids = new HashSet<EntityUid>(data.Grids);
+        var query = AllEntityQuery<SalvageExpeditionConsoleComponent, TransformComponent>(); // First we want to find an expedition console on any of the grids on the expedition.
+        while (query.MoveNext(out var consoleUID, out var _, out var xform))
+        {
+            if (xform.MapUid != mapUid) // Continue if the console isn't on the expedition map
+                continue;
+
+            if (xform.GridUid is { } grid && grids.Contains(grid) && HasComp<ShuttleComponent>(grid)) // The console is on one of our grids, we can stop looking
+            {
+                Log.Debug($"Shuttle found: {grid}");
+                shuttleUid = grid;
+                return true;
+            }
+        }
+        return false;
+    }
+
+    // Aurora's Song
+    /// <summary>
+    /// Creates a HashSet of all players we want to recover on the given map that are not parented to the given grid.
+    /// </summary>
+    /// <param name="mapUid">The Expedition map</param>
+    /// <param name="gridUid">The grid we want to check that players are not on</param>
+    /// <param name="players">A HashSet of the player EnityUid's that need to be returned</param>
+    private void FindPlayers(EntityUid mapUid, EntityUid? gridUid, out HashSet<EntityUid> players)
+    {
+        players = new HashSet<EntityUid>();
+        var playerQuery = EntityQueryEnumerator<MindContainerComponent, TransformComponent>();
+        while (playerQuery.MoveNext(out var playerQUID, out var mindContainer, out var mobXform))
+        {
+            // They aren't on the expedition, continue
+            if (mobXform.MapUid != mapUid)
+                continue;
+
+            // They are on the shuttle already, nothing needs to be done with them. Continue.
+            if (mobXform.GridUid == gridUid)
+                continue;
+
+            // Doesn't have a mind, not a player. Continue
+            if (!mindContainer.HasMind) // If a player dies and they ghost, they should have a mind still
+                continue;
+
+            // NPC, definitely not a player. Continue
+            if (HasComp<ActiveNPCComponent>(playerQUID) || HasComp<NFSalvageMobRestrictionsComponent>(playerQUID))
+                continue;
+
+            // Hostile ghost role. Continue
+            if (TryComp(playerQUID, out NpcFactionMemberComponent? npcFaction))
+            {
+                var hostileFactions = npcFaction.HostileFactions;
+                if (hostileFactions.Contains("NanoTrasen")) // TODO: move away from hardcoded faction
+                    continue;
+            }
+            players.Add(playerQUID);
+        }
+    }
+
+    // Aurora's Song
+    /// <summary>
+    /// Attempts to warp a given entity to somewhere on their shuttle. Desitination priority: Beds/Chairs > Shuttle Warp Point > Expedition Console > Some Random Location in space on the main map
+    /// </summary>
+    /// <param name="player"></param>
+    /// <param name="shuttle"></param>
+    private void ReturnToShuttle(EntityUid player, EntityUid shuttle)
+    {
+        var strapQuery = EntityQueryEnumerator<StrapComponent, TransformComponent>();
+        while (strapQuery.MoveNext(out var strapuid, out var strapComp, out var xform)) // 1. Try to find an unnocupied bed/chair and send them to it
+        {
+
+            if (Transform(player).GridUid == shuttle)
+                continue;
+
+            if (xform.GridUid != shuttle)
+                continue;
+
+            if (strapComp.BuckledEntities.Count > 0)
+                continue;
+
+            Log.Debug($"Strap point found: {strapuid}");
+            SafetyWarp(player, xform.Coordinates);
+            _buckle.TryBuckle(strapuid, null, strapuid);
+            return;
+        }
+
+        var warpQuery = EntityQueryEnumerator<WarpPointComponent, TransformComponent>();
+        while (warpQuery.MoveNext(out var warpuid, out var _, out var xform)) // 2. Try to find the shuttles warp point and send them to it
+        {
+            if (Transform(player).GridUid == shuttle)
+                continue;
+
+            if (xform.GridUid != shuttle)
+                continue;
+
+            Log.Debug($"Warp point found: {warpuid}");
+            SafetyWarp(player, xform.Coordinates);
+            return;
+        }
+
+        var consoleQuery = EntityQueryEnumerator<SalvageExpeditionConsoleComponent, TransformComponent>();
+        while (consoleQuery.MoveNext(out var consoleuid, out var _, out var xform)) // 3. Try to find the shuttles expedition console and send them to it
+        {
+            if (Transform(player).GridUid == shuttle)
+                continue;
+
+            if (xform.GridUid != shuttle)
+                continue;
+
+            Log.Debug($"Warp point found: {consoleuid}");
+            SafetyWarp(player, xform.Coordinates);
+            return;
+        }
+
+        if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid)) // 4. Send them to a point in space on the default map.
+        {
+            Log.Error($"Could not get DefaultMap EntityUID, entity {player} may be deleted.");
+            return;
+        }
+
+        Log.Debug("Resorting to fallback");
+        var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+        SafetyWarp(player, fallback);
     }
 }

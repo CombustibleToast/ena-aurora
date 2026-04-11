@@ -14,6 +14,7 @@
   displayWeight: 10
   canBeAntag: false
   access:
+  - Cargo # Aurora's Song - Cargo access is being undeprecated
   - Maintenance
   - External
   - Service

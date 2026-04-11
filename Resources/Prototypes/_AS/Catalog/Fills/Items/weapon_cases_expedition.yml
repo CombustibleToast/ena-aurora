@@ -35,7 +35,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: ASWeaponShotgunSurpFalchionExpedition
+    - id: ASWeaponShotgunFalchionExpedition
       amount: 1
     - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2

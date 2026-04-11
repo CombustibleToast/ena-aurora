@@ -9,7 +9,7 @@
 # Notes:
 #
 - type: pointOfInterest
-  id: Sleo
+  id: SLEOutpost
   parent: BasePOI
   name: 'SLE Outpost'
   minimumDistance: 750
@@ -26,12 +26,12 @@
       SpawnPoints: 10
 
 - type: gameMap
-  id: Sleo
+  id: SLEOutpost
   mapName: 'SLE Outpost'
   mapPath: /Maps/_AS/POI/sle_outpost.yml
   minPlayers: 0
   stations:
-    Sleo:
+    SLEOutpost:
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup

@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/21/2026 08:19:02
-  entityCount: 4861
+  time: 04/10/2026 17:16:59
+  entityCount: 4864
 maps: []
 grids:
 - 1
@@ -47,7 +47,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: SLE Outpost
+      name: SLEOutpost
     - type: Transform
       pos: 0.31923318,-0.703125
       parent: invalid
@@ -703,6 +703,7 @@ entities:
             1009: -5,-27
             1027: -8,-21
             1032: 8,-29
+            1050: -21,-2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelInnerNw
@@ -725,6 +726,7 @@ entities:
             1005: 1,-31
             1024: -10,-21
             1025: -9,-20
+            1051: -17,-2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelInnerSe
@@ -747,6 +749,7 @@ entities:
             1022: 9,-30
             1023: 10,-29
             1028: 8,-23
+            1053: -21,2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelInnerSw
@@ -767,6 +770,7 @@ entities:
             1014: -4,-34
             1015: -1,-35
             1026: -10,-29
+            1052: -17,2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineE
@@ -814,6 +818,9 @@ entities:
             917: -17,1
             918: -17,0
             919: -17,-1
+            1047: -21,1
+            1048: -21,0
+            1049: -21,-1
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineN
@@ -870,6 +877,9 @@ entities:
             1030: 10,-29
             1031: 9,-29
             1036: 0,-7
+            1041: -20,-2
+            1042: -19,-2
+            1043: -18,-2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineS
@@ -923,6 +933,9 @@ entities:
             983: -1,-19
             984: 0,-19
             985: 1,-19
+            1038: -18,2
+            1039: -19,2
+            1040: -20,2
         - node:
             color: '#FFFFFFFF'
             id: BrickTileSteelLineW
@@ -968,6 +981,9 @@ entities:
             961: -11,-26
             962: -11,-27
             963: -11,-28
+            1044: -17,-1
+            1045: -17,0
+            1046: -17,1
         - node:
             color: '#FFFFFFFF'
             id: BrickTileWhiteCornerNe
@@ -2146,7 +2162,7 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: BecomesStation
-      id: Sleo
+      id: SLEOutpost
     - type: IFF
       color: '#6690CCFF'
     - type: NavMap
@@ -3390,7 +3406,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -50062.082
+      secondsUntilStateChange: -50880.703
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3448,7 +3464,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -65408.402
+      secondsUntilStateChange: -66227.02
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3459,7 +3475,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -23256.543
+      secondsUntilStateChange: -24075.162
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3490,7 +3506,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -65411.934
+      secondsUntilStateChange: -66230.555
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3506,7 +3522,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -66193.46
+      secondsUntilStateChange: -67012.08
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3542,7 +3558,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67521.5
+      secondsUntilStateChange: -68340.12
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3646,7 +3662,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -49195.453
+      secondsUntilStateChange: -50014.074
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3726,6 +3742,11 @@ entities:
     - type: Anchorable
       flags: Anchorable
     - type: DisableToolUse
+  - uid: 4864
+    components:
+    - type: Transform
+      pos: 9.682972,-26.498491
+      parent: 1
 - proto: ASBedsheetSLE
   entities:
   - uid: 4373
@@ -11813,6 +11834,14 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 21.5,-2.5
       parent: 1
+- proto: ComputerShuttleRecords
+  entities:
+  - uid: 4863
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 4.5,-18.5
+      parent: 1
 - proto: ComputerTabletopComms
   entities:
   - uid: 3806
@@ -11992,6 +12021,13 @@ entities:
     components:
     - type: Transform
       pos: 2.5,2.5
+      parent: 1
+- proto: ContrabandForensicsModule
+  entities:
+  - uid: 4862
+    components:
+    - type: Transform
+      pos: -20.615519,4.6892734
       parent: 1
 - proto: ContrabandPallet
   entities:
@@ -22890,7 +22926,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -74506.57
+      secondsUntilStateChange: -75325.19
       state: Opening
   - uid: 3347
     components:
@@ -22898,7 +22934,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -74504.94
+      secondsUntilStateChange: -75323.555
       state: Opening
   - uid: 3348
     components:
@@ -22906,7 +22942,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -74503.57
+      secondsUntilStateChange: -75322.19
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -31270,7 +31306,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -73542.24
+      secondsUntilStateChange: -74360.86
       state: Opening
     - type: Airlock
       autoClose: False

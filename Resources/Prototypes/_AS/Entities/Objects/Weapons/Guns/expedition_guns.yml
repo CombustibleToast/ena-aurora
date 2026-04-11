@@ -17,7 +17,7 @@
   - BaseExpeditionWeaponTier3
   - ASWeaponShotgunFalchion
   categories: [ HideSpawnMenu ]
-  id: ASWeaponShotgunSurpFalchionExpedition
+  id: ASWeaponShotgunFalchionExpedition
 
 - type: entity
   parent:
