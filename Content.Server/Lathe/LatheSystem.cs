@@ -457,7 +457,7 @@ namespace Content.Server.Lathe
             foreach (var (mat, amount) in recipe.Materials)
             {
                 var adjustedAmount = recipe.ApplyMaterialDiscount
-                    ? (int)(amount * lathe.MaterialUseMultiplier)
+                    ? (int)(amount * lathe.FinalMaterialUseMultiplier) // Aurora's Song - MaterialUseMultiplier>FinalMaterialUseMutlipler
                     : amount;
 
                 yield return (mat, adjustedAmount);

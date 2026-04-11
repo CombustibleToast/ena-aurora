@@ -1,5 +1,7 @@
 using Content.Shared.Chemistry.Components;
+using Content.Shared.Construction.Prototypes;
 using Content.Shared.Storage;
+using Robust.Shared.Prototypes;
 
 namespace Content.Server.Medical.BiomassReclaimer
 {
@@ -51,6 +53,28 @@ namespace Content.Server.Medical.BiomassReclaimer
         [DataField, ViewVariables(VVAccess.ReadWrite)]
         public float YieldPerUnitMass = 0.4f;
 
+        // Frontier
+        /// <summary>
+        /// The base yield per mass unit when no components are upgraded.
+        /// </summary>
+        [DataField("baseYieldPerUnitMass")]
+        public float BaseYieldPerUnitMass = 0.4f;
+
+        // Froniter
+        /// <summary>
+        /// Machine part whose rating modifies the yield per mass.
+        /// </summary>
+        [DataField("machinePartYieldAmount")]
+        public ProtoId<MachinePartPrototype> MachinePartYieldAmount = "MatterBin";
+
+        // Froniter
+        /// <summary>
+        /// How much the machine part quality affects the yield.
+        /// Going up a tier will multiply the yield by this amount.
+        /// </summary>
+        [DataField("partRatingYieldAmountMultiplier")]
+        public float PartRatingYieldAmountMultiplier = 1.25f;
+
         /// <summary>
         /// How many seconds to take to insert an entity per unit of its mass.
         /// </summary>
@@ -68,6 +92,30 @@ namespace Content.Server.Medical.BiomassReclaimer
         /// </summary>
         [DataField, ViewVariables(VVAccess.ReadWrite)]
         public float ProcessingTimePerUnitMass = 0.5f;
+
+        // Frontier
+        /// <summary>
+        /// The base time per mass unit that it takes to process a mob
+        /// when no components are upgraded.
+        /// </summary>
+        [DataField("baseProcessingTimePerUnitMass")]
+        public float BaseProcessingTimePerUnitMass = 0.5f;
+
+        // Frontier
+        /// <summary>
+        /// The machine part that increses the processing speed.
+        /// </summary>
+        [DataField("machinePartProcessSpeed")]
+        public ProtoId<MachinePartPrototype> MachinePartProcessingSpeed = "Manipulator";
+
+        // Frontier
+        /// <summary>
+        /// How much the machine part quality affects the yield.
+        /// Going up a tier will multiply the speed by this amount.
+        /// </summary>
+        [DataField("partRatingSpeedMultiplier")]
+        public float PartRatingSpeedMultiplier = 1.35f;
+
 
         /// <summary>
         /// Will this refuse to gib a living mob?

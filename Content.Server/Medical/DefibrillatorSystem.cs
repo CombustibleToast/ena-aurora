@@ -14,6 +14,6 @@ public sealed class DefibrillatorSystem : SharedDefibrillatorSystem
 
     protected override void OpenReturnToBodyEui(Entity<MindComponent> mind, ICommonSession session)
     {
-        _eui.OpenEui(new ReturnToBodyEui(mind, _mind, _player), session);
+        _eui.OpenEui(new ReturnToBodyEui(mind, _mind), session); // Aurora's Song - remove _player
     }
 }
