@@ -109,7 +109,7 @@
 #      - state: wet_floor_sign
 
 - type: entity
-  name: NFSD encryption key box
+  name: SLE encryption key box # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   parent: BoxEncryptionKeySecurity
   id: BoxEncryptionKeyNfsd
   components:
