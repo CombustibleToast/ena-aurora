@@ -1196,7 +1196,7 @@
 
 - type: entity
   id: SyndicateMicrowaveMachineCircuitboard
-  parent: [ BaseMachineCircuitboard, BaseSyndicateContraband ]
+  parent: [ BaseMachineCircuitboard, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband>BaseC3SyndicateContraband
   name: donk co. microwave machine board
   components:
     - type: Sprite

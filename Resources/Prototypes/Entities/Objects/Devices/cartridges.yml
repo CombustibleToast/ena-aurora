@@ -27,7 +27,7 @@
   - type: NotekeeperCartridge
 
 - type: entity
-  parent: BasePDACartridge
+  parent: NFBasePDACartridge # Frontier: BaseItem<NFBasePDACartridge
   id: NanoTaskCartridge
   name: NanoTask cartridge
   description: A program that allows you to keep a list of tasks to do.

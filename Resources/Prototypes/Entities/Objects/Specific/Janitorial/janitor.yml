@@ -31,8 +31,6 @@
     solution: absorbed
     spillWhenThrown: false
     preventMelee: false
-  - type: DrainableSolution
-    solution: absorbed
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:

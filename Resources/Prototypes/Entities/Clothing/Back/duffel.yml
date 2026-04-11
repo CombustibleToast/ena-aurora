@@ -194,14 +194,6 @@
     tags: [] # ignore "WhitelistChameleon" tag
 
 - type: entity
-  parent: ClothingBackpackDuffel
-  id: ClothingBackpackDuffelBundle
-  abstract: true
-  components:
-  - type: Tag
-    tags: [] # ignore "WhitelistChameleon" tag
-
-- type: entity
   parent: ClothingBackpackDuffelSyndicate
   id: ClothingBackpackDuffelSyndicateAmmo
   components:

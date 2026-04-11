@@ -311,7 +311,7 @@
     proto: ShellShotgunImprovised
 
 - type: entity
-  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseSyndicateContraband]
+  parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC3SyndicateContrabandUnredeemable] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandUnredeemable
   id: WeaponShotgunHushpup
   name: Hushpup
   description: An obscure modification of the Enforcer, fitted with an experimental muffler. Great for those with a strict moral code. Uses .50 shotgun shells.

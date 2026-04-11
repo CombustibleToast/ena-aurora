@@ -898,8 +898,6 @@
 #    access: [["Janitor"]]
   - type: Paintable
     group: null
-  - type: Paintable
-    group: null
 
 - type: entity
   parent: CrateBaseWeldable

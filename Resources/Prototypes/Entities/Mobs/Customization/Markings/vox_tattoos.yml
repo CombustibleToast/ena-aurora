@@ -35,20 +35,6 @@
     state: nightling_s
 
 - type: marking
-  id: TattooVoxTailRing
-  bodyPart: Tail
-  markingCategory: Overlay
-  speciesRestriction: [Vox]
-  coloring:
-    default:
-      type:
-        !type:TattooColoring
-      fallbackColor: "#666666"
-  sprites:
-  - sprite: Mobs/Customization/vox_tattoos.rsi
-    state: nightling_s
-
-- type: marking
   id: TattooVoxNightbelt
   bodyPart: Chest
   markingCategory: Chest

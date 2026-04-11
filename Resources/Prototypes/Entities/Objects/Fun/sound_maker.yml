@@ -246,7 +246,7 @@
     distance: 5
 
 - type: entity
-  parent: [BaseWhistle, BaseMinorContraband]
+  parent: [BaseWhistle, BaseC1Contraband] # Frontier: BaseMinorContraband<BaseC1Contraband
   id: SyndicateWhistle
   name: trench whistle
   description: A whistle used by Syndicate commanders to draw attention. Avanti!

@@ -6,8 +6,8 @@
   spawn: SheetPaper1
 
 - type: stack
-  parent: BaseSheetStack
-  id: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
+  id: MeatSheets
   name: stack-meat-sheet
   icon: { sprite: /Textures/Objects/Materials/Sheets/meaterial.rsi, state: meat }
   spawn: MaterialSheetMeat1

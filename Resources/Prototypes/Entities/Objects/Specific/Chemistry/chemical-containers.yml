@@ -1,6 +1,5 @@
 - type: entity
   parent: [ DrinkBaseMaterialStrongPlastic, DrinkBase, DrinkVisualsAll, RecyclableItemPlasticMedium ] # Frontier: addded RecyclableItemPlasticMedium
-  name: jug
   id: Jug
   name: jug
   description: Used to contain a very large amount of chemicals or solutions. Chugging is extremely ill-advised.
@@ -481,7 +480,7 @@
   parent: Jug
   suffix: bicaridine
   id: JugBicaridine
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-bicaridine
@@ -496,7 +495,7 @@
   parent: Jug
   suffix: puncturase
   id: JugPuncturase
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-puncturase
@@ -511,7 +510,7 @@
   parent: Jug
   suffix: dermaline
   id: JugDermaline
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-dermaline
@@ -526,7 +525,7 @@
   parent: Jug
   suffix: dylovene
   id: JugDylovene
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-dylovene
@@ -541,7 +540,7 @@
   parent: Jug
   suffix: tranexamic acid
   id: JugTranexamicAcid
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-tranexamic-acid
@@ -556,7 +555,7 @@
   parent: Jug
   suffix: hyronalin
   id: JugHyronalin
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-hyronalin
@@ -571,7 +570,7 @@
   parent: Jug
   suffix: saline
   id: JugSaline
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-saline
@@ -586,7 +585,7 @@
   parent: Jug
   suffix: dexalin plus
   id: JugDexalinPlus
-  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora's Song
   components:
   - type: Label
     currentLabel: reagent-name-dexalin-plus

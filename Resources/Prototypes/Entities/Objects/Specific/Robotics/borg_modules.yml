@@ -836,7 +836,6 @@
       hand:
         emptyRepresentative: TrashBag
         whitelist:
-        whitelist:
           tags:
           - TrashBag
     - item: Plunger

@@ -63,27 +63,6 @@
       stamp: # Frontier
         length: 1.0 # Frontier
 
-- type: entity
-  parent: Crayon
-  id: CrayonWhite
-  name: white crayon
-  components:
-  - type: Sprite
-    state: white
-  - type: Item
-    heldPrefix: white
-  - type: Crayon
-    color: white
-  - type: Tag
-    tags:
-    - Write
-    - Crayon
-    - CrayonWhite
-    - Recyclable
-    - Trash
-  - type: Stamp # Frontier
-    stampedColor: white # Frontier
-
 # special crayons
 
 - type: entity

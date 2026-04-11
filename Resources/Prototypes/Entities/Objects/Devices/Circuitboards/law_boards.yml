@@ -114,7 +114,7 @@
 
 - type: entity
   id: AntimovCircuitBoard
-  parent: [BaseC3SyndicateContraband, BaseSiliconLawboard, BaseSyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseSiliconLawboard, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   name: law board (Antimov)
   description: An electronics board containing the Antimov lawset.
   components:

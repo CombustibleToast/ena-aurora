@@ -657,40 +657,6 @@
 
 - type: entity
   name: elite taser
-  parent: [ BaseCentcommContraband, WeaponTaser ]
-  id: WeaponTaserSuper
-  suffix: ADMEME
-  description: A low-capacity, energy-based stun gun used by elite security teams to disable even the toughest of targets.
-  components:
-  - type: Gun
-    fireRate: 0.5
-    soundGunshot:
-      path: /Audio/Effects/tesla_collapse.ogg # The wrath of god...
-      params:
-        volume: -6
-  - type: BatteryAmmoProvider
-    proto: BulletTaserSuper
-    fireCost: 200
-
-- type: entity
-  name: elite taser
-  parent: WeaponTaser # Frontier: Remove BaseCentcommContraband (already C2Unredeemable from parent)
-  id: WeaponTaserSuper
-  suffix: ADMEME
-  description: A low-capacity, energy-based stun gun used by elite security teams to disable even the toughest of targets.
-  components:
-  - type: Gun
-    fireRate: 0.5
-    soundGunshot:
-      path: /Audio/Effects/tesla_collapse.ogg # The wrath of god...
-      params:
-        volume: -6
-  - type: BatteryAmmoProvider
-    proto: BulletTaserSuper
-    fireCost: 200
-
-- type: entity
-  name: elite taser
   parent: WeaponTaser # Frontier: Remove BaseCentcommContraband (already C2Unredeemable from parent)
   id: WeaponTaserSuper
   suffix: ADMEME
@@ -941,7 +907,7 @@
 
 - type: entity
   name: energy magnum
-  parent: [BaseWeaponBatterySmall, BaseGrandTheftContraband]
+  parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
   id: WeaponEnergyMagnum
   description: A high powered self-charging energy pistol designed for elite security personnel. It has has three firing modes allowing for either high damage, window piercing, or non-lethal disabling.
   components:
