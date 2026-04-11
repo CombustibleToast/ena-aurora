@@ -541,8 +541,8 @@
       params:
         variation: 0
 
-# Aurora's Song - Disable upstream vulps
 # Vulp Sounds
+# Aurora's Song - Disable upstream vulpkanin
 # - type: emoteSounds
 #   id: MaleVulpkanin
 #   params:
@@ -568,117 +568,60 @@
 #       collection: VulpkaninBarks
 #     Whine:
 #       collection: VulpkaninWhines
+#     Crying:
+#       collection: VulpkaninWhines
 #     Howl:
 #       collection: VulpkaninHowls
-
-- type: emoteSounds
-  id: FemaleVulpkanin
-  params:
-    variation: 0.125
-  sounds:
-    Laugh:
-      collection: FemaleLaugh
-    Sneeze:
-      collection: FemaleSneezes
-    Cough:
-      collection: FemaleCoughs
-    Whistle:
-      collection: Whistles
-    Sigh:
-      collection: FemaleSigh
-    Scream:
-      collection: VulpkaninScreams
-    Growl:
-      collection: VulpkaninGrowls
-    Snarl:
-      collection: VulpkaninSnarls
-    Bark:
-      collection: VulpkaninBarks
-    Whine:
-      collection: VulpkaninWhines
-    Howl:
-      collection: VulpkaninHowls
-
-# Vulp Sounds
-- type: emoteSounds
-  id: MaleVulpkanin
-  params:
-    variation: 0.125
-  sounds:
-    Laugh:
-      collection: MaleLaugh
-    Sneeze:
-      collection: MaleSneezes
-    Cough:
-      collection: MaleCoughs
-    Whistle:
-      collection: Whistles
-    Sigh:
-      collection: MaleSigh
-    Scream:
-      collection: VulpkaninScreams
-    Growl:
-      collection: VulpkaninGrowls
-    Snarl:
-      collection: VulpkaninSnarls
-    Bark:
-      collection: VulpkaninBarks
-    Whine:
-      collection: VulpkaninWhines
-    Crying:
-      collection: VulpkaninWhines
-    Howl:
-      collection: VulpkaninHowls
-    Weh:
-      collection: Weh
-    Hew:
-      collection: Hew
-    Honk:
-      collection: BikeHorn
-    Gasp:
-      collection: MaleGasp
-    DefaultDeathgasp:
-      collection: MaleDeathGasp
-
-- type: emoteSounds
-  id: FemaleVulpkanin
-  params:
-    variation: 0.125
-  sounds:
-    Laugh:
-      collection: FemaleLaugh
-    Sneeze:
-      collection: FemaleSneezes
-    Cough:
-      collection: FemaleCoughs
-    Whistle:
-      collection: Whistles
-    Sigh:
-      collection: FemaleSigh
-    Scream:
-      collection: VulpkaninScreams
-    Growl:
-      collection: VulpkaninGrowls
-    Snarl:
-      collection: VulpkaninSnarls
-    Bark:
-      collection: VulpkaninBarks
-    Whine:
-      collection: VulpkaninWhines
-    Crying:
-      collection: VulpkaninWhines
-    Howl:
-      collection: VulpkaninHowls
-    Weh:
-      collection: Weh
-    Hew:
-      collection: Hew
-    Honk:
-      collection: BikeHorn
-    Gasp:
-      collection: FemaleGasp
-    DefaultDeathgasp:
-      collection: FemaleDeathGasp
+#     Weh:
+#       collection: Weh
+#     Hew:
+#       collection: Hew
+#     Honk:
+#       collection: BikeHorn
+#     Gasp:
+#       collection: MaleGasp
+#     DefaultDeathgasp:
+#       collection: MaleDeathGasp
+#
+# - type: emoteSounds
+#   id: FemaleVulpkanin
+#   params:
+#     variation: 0.125
+#   sounds:
+#     Laugh:
+#       collection: FemaleLaugh
+#     Sneeze:
+#       collection: FemaleSneezes
+#     Cough:
+#       collection: FemaleCoughs
+#     Whistle:
+#       collection: Whistles
+#     Sigh:
+#       collection: FemaleSigh
+#     Scream:
+#       collection: VulpkaninScreams
+#     Growl:
+#       collection: VulpkaninGrowls
+#     Snarl:
+#       collection: VulpkaninSnarls
+#     Bark:
+#       collection: VulpkaninBarks
+#     Whine:
+#       collection: VulpkaninWhines
+#     Crying:
+#       collection: VulpkaninWhines
+#     Howl:
+#       collection: VulpkaninHowls
+#     Weh:
+#       collection: Weh
+#     Hew:
+#       collection: Hew
+#     Honk:
+#       collection: BikeHorn
+#     Gasp:
+#       collection: FemaleGasp
+#     DefaultDeathgasp:
+#       collection: FemaleDeathGasp
 
 # body emotes
 - type: emoteSounds

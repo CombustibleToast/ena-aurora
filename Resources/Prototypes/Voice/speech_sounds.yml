@@ -189,7 +189,7 @@
   exclaimSound:
     path: /Audio/Animals/goat_bah.ogg
 
-# Aurora's Song - Disable upstream vulps
+# Aurora's Song - Disable upstream vulpkanin
 # - type: speechSounds
 #   id: Vulpkanin
 #   saySound:

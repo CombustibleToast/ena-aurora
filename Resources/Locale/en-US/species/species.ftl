@@ -11,7 +11,7 @@ species-name-skeleton = Skeleton
 species-name-vox = Vox
 ## Aurora's Song - Changed from Delicious Baked Good to Gingerbread. Lalalala!
 species-name-gingerbread = Gingerbread
-species-name-vulpkanin = Vulpkanin
+# species-name-vulpkanin = Vulpkanin # Aurora's Song - Disable upstream vulpkanin
 
 ## Misc species things
 

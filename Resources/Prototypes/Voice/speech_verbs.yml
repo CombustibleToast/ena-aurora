@@ -173,7 +173,7 @@
   - chat-speech-verb-electricity-2
   - chat-speech-verb-electricity-3
 
-# Aurora's Song - Disable upstream vulps
+# Aurora's Song - Disable upstream vulpkanin
 # - type: speechVerb
 #   id: Vulpkanin
 #   name: chat-speech-verb-vulpkanin

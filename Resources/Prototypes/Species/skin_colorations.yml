@@ -20,8 +20,9 @@
   id: HumanToned
   strategy: !type:HumanTonedSkinColoration {}
 
-- type: skinColoration
-  id: VulpkaninColors
-  strategy: !type:ClampedHslColoration
-    saturation: [0.0, 0.60]
-    lightness: [0.2, 0.9]
+# Aurora's Song - Disable upstream vulpkanin
+# - type: skinColoration
+#   id: VulpkaninColors
+#   strategy: !type:ClampedHslColoration
+#     saturation: [0.0, 0.60]
+#     lightness: [0.2, 0.9]
