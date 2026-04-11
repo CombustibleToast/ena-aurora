@@ -454,7 +454,7 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Avali ]
-          shouldHave: false
+          inverted: true
       - !type:SatiateThirst
         factor: 1
         conditions:
