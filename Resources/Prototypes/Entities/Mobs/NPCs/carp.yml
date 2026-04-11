@@ -167,10 +167,6 @@
       thresholds:
         0: Alive
         30: Dead
-    - type: MobThresholds
-      thresholds:
-        0: Alive
-        30: Dead
 
 - type: entity
   name: space carp

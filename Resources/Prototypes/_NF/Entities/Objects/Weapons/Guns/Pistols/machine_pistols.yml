@@ -13,7 +13,7 @@
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletPistol35
     fireCost: 100
   - type: Battery

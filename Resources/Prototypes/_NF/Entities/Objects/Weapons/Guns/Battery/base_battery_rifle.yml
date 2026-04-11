@@ -75,7 +75,7 @@
     examineCaliber: gun-examine-energybolt-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserHeavy
     fireCost: 80
   - type: BatteryWeaponFireModes
@@ -94,7 +94,7 @@
     examineCaliber: gun-examine-hitscan-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedHeavyLaser
     fireCost: 80
 
@@ -106,7 +106,7 @@
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFPulse
     fireCost: 100
 
@@ -118,7 +118,7 @@
     examineCaliber: gun-examine-energybolt-emp
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: ProjectileEmp
     fireCost: 500
 
@@ -130,7 +130,7 @@
     examineCaliber: gun-examine-particle-stream
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFAntiParticlesProjectile
     fireCost: 120 # 20 shots
 

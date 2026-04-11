@@ -86,7 +86,7 @@
     examineCaliber: gun-examine-energybolt-low-disabler-pistol
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserLow
     fireCost: 60
   - type: EnergyGun
@@ -114,7 +114,7 @@
     examineCaliber: gun-examine-energybolt-disabler-pistol
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletDisabler
     fireCost: 60
 
@@ -126,7 +126,7 @@
     examineCaliber: gun-examine-energybolt-disabler-practice
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserPractice
     fireCost: 30
 
@@ -138,7 +138,7 @@
     examineCaliber: gun-examine-hitscan-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedLightLaser
     fireCost: 60
 
@@ -150,6 +150,6 @@
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFPulse
     fireCost: 60

@@ -103,7 +103,7 @@
       mobState:
       - Critical
       - Dead
-    - type: Rattle
+    - type: RattleOnTrigger
       radioChannel: "Sle" # Aurora Song - Changed from "Nfsd" to "Sle"
     # End Frontier: no sensor, add rattle
 

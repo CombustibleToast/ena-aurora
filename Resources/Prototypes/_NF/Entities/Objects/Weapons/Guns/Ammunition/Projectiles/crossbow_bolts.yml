@@ -16,13 +16,19 @@
     solution: injector
   - type: SolutionTransfer
     maxTransferAmount: 2
-  - type: Injector
-    injectOnly: false
-    ignoreMobs: true
-    minTransferAmount: 2
-    maxTransferAmount: 2
-    transferAmount: 2
-    toggleState: Draw
+  - type: Injector # Aurora's Song - Replace with updated Injector
+    currentTransferAmount: null
+    activeModeProtoId: HyposprayInjectMode
+    allowedModes:
+    - HyposprayInjectMode
+  # Aurora's Song - Comment out nonfunctional injector
+#  - type: Injector
+#    injectOnly: false
+#    ignoreMobs: true
+#    minTransferAmount: 2
+#    maxTransferAmount: 2
+#    transferAmount: 2
+#    toggleState: Draw
   - type: ExaminableSolution
     solution: injector
   - type: MeleeChemicalInjector

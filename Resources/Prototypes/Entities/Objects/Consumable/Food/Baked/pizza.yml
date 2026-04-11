@@ -714,7 +714,7 @@
     - ClothMade
     - Pizza
     - Slice
-  - type: Food # Frontier
+  - type: Edible # Frontier # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true # Frontier
   - type: SolutionContainerManager
     solutions:

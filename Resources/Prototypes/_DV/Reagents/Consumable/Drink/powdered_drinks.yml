@@ -13,7 +13,7 @@
       - !type:ChemVomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           min: 15
 
 - type: reagent
@@ -65,7 +65,7 @@
       - !type:ChemVomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           min: 15
 
 - type: reagent
@@ -90,7 +90,7 @@
       - !type:ChemVomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           min: 15
 
 - type: reagent
@@ -115,7 +115,7 @@
       - !type:ChemVomit
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           min: 15
 
 - type: reagent

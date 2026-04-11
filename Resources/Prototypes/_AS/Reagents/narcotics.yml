@@ -50,7 +50,7 @@
           - "reagent-effect-agony8"
         probability: 0.5
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 30
       - !type:HealthChange
         conditions:
@@ -106,7 +106,7 @@
           - "reagent-effect-confusiol4"
           - "reagent-effect-confusiol5"
         probability: 0.1
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.9
         sprintSpeedModifier: 0.9
 
@@ -122,7 +122,7 @@
     Narcotic:
       metabolismRate: 0.1
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 0.35
         sprintSpeedModifier: 0.35
       - !type:HealthChange
@@ -156,7 +156,7 @@
     Narcotic:
       metabolismRate : 0.5
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.1
         sprintSpeedModifier: 1.1
       - !type:ModifyStatusEffect
@@ -184,25 +184,25 @@
           - "reagent-effect-fairy-fade"
         probability: 0.35
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 0.5
       - !type:Drunk
         slurSpeech: false
         boozePower: 20
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             min: 13
       - !type:GenericStatusEffect
         key: Stutter
         component: ScrambledAccent
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             min: 13
       - !type:GenericStatusEffect
         key: TemporaryBlindness
         component: TemporaryBlindness
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             min: 13
 
 - type: reagent
@@ -219,7 +219,7 @@
         # Secondary benefit of this is that it makes these "Sheleg drugs" less useful for non Sheleg, which is good for roleplay reasons
         # and also makes them less universally good than the other cryo chems, which is nice for balance reasons.
         effects:
-        - !type:MovespeedModifier
+        - !type:MovementSpeedModifier
             walkSpeedModifier: 1.5
             sprintSpeedModifier: 1.5
             conditions:
@@ -265,7 +265,7 @@
           - "reagent-effect-cold-rage-fade"
           probability: 0.35
           conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 0.5
 
 - type: reagent
@@ -280,7 +280,7 @@
       Cryogenic:
           metabolismRate: 2.5
           effects:
-          - !type:MovespeedModifier
+          - !type:MovementSpeedModifier
               walkSpeedModifier: 1.05
               sprintSpeedModifier: 1.05
               conditions:
@@ -312,7 +312,7 @@
                 - "reagent-effect-frostmjod10"
               probability: 0.5
               conditions:
-                - !type:ReagentThreshold
+                - !type:ReagentCondition
                     min: 15
 
 - type: reagent
@@ -327,7 +327,7 @@
     Cryogenic:
       metabolismRate: 5.0
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.35
         sprintSpeedModifier: 1.35
       - !type:HealthChange

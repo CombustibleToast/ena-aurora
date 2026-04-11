@@ -1,6 +1,6 @@
 # Explosive cable below
 - type: entity
-  parent: [ CableStack, BaseSecurityContraband ]
+  parent: [ CableStack, BaseC2ContrabandUnredeemable ] # Aurora's Song - BaseSecurityContraband>BaseC2ContrabandUnredeemable
   id: CableDetStack
   name: explosive cord
   suffix: Full

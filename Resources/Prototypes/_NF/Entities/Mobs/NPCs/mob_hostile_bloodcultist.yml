@@ -45,7 +45,7 @@
   - type: Loadout
     prototypes:
       - BloodCultistPriestGear
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: BloodCultLaser
     fireCost: 100
   - type: BatterySelfRecharger

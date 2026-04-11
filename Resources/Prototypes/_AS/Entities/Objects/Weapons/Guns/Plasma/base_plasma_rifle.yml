@@ -74,7 +74,7 @@
     examineCaliber: gun-examine-energybolt-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ASPlasmaBlastTest
     fireCost: 60
 
@@ -86,6 +86,6 @@
     examineCaliber: gun-examine-energybolt-high
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider
     proto: ASPlasmaBlastTest
     fireCost: 40

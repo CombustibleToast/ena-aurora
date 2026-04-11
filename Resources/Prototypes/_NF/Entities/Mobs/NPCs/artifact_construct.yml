@@ -128,7 +128,7 @@
         task: SimpleRangedHostileCompound
     - type: Stamina
       critThreshold: 300
-    - type: HitscanBatteryAmmoProvider
+    - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
       proto: NFRedLightLaser
       fireCost: 50
     - type: BatterySelfRecharger

@@ -1154,7 +1154,7 @@
       - AstroNavCartridge # Frontier
 
 - type: entity
-  parent: [ SyndiPDA, BaseSyndicateContraband ]
+  parent: [ SyndiPDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
   id: SyndiOperativePDA
   name: syndicate operative PDA
   description: Death to NT!
@@ -1170,7 +1170,7 @@
     state: pda-syndi-operative
 
 - type: entity
-  parent: [ SyndiOperativePDA, BaseSyndicateContraband ]
+  parent: [ SyndiOperativePDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
   id: SyndiCorpsmanPDA
   name: syndicate corpsman PDA
   description: Commander... I need to cook!
@@ -1192,7 +1192,7 @@
       - MedTekCartridge
 
 - type: entity
-  parent: [ SyndiOperativePDA, BaseSyndicateContraband ]
+  parent: [ SyndiOperativePDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
   id: SyndiCommanderPDA
   name: syndicate commander PDA
   description: So what are we, some kind of Nukie squad?

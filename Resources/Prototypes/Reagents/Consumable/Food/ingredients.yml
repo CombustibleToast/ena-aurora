@@ -145,7 +145,7 @@
 #        amount: 0.1
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 0.2
@@ -197,7 +197,7 @@
 #        amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -239,7 +239,7 @@
 #        amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -307,7 +307,7 @@
 #        amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1
@@ -347,7 +347,7 @@
       #   amount: 0.75
       - !type:SatiateHunger
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           reagent: Nutriment
           min: 0.1
         factor: 1

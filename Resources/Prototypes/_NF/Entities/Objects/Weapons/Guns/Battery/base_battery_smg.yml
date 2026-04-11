@@ -75,7 +75,7 @@
     examineCaliber: gun-examine-energybolt-low-disabler-pistol
     soundGunshot:
       path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserLow
     fireCost: 60
   - type: EnergyGun
@@ -103,6 +103,6 @@
     examineCaliber: gun-examine-energybolt-disabler-pistol
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletDisabler
     fireCost: 60

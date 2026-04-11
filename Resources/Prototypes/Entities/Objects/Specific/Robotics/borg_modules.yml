@@ -464,8 +464,6 @@
     - state: generic
     - state: icon-cables
   - type: ItemBorgModule
-    moduleId: Cables # Frontier
-  # TODO: Check if this is superior to Frontier/Delta's implementation - Falcon
     hands:
     - item: CableApcStack10
       hand:
@@ -523,7 +521,6 @@
     - state: generic
     - state: icon-fire-extinguisher
   - type: ItemBorgModule
-    moduleId: FireExtinguisher # Frontier
     hands:
     - item: BorgFireExtinguisher
     # - item: BorgHandheldGPSBasic # Frontier
@@ -542,7 +539,6 @@
     - state: generic
     - state: icon-tools
   - type: ItemBorgModule
-    moduleId: Tools # Frontier
     hands:
     - item: Crowbar
     - item: Wrench
@@ -627,7 +623,6 @@
     - state: cargo
     - state: icon-mining
   - type: ItemBorgModule
-    moduleId: Mining # Frontier
     hands:
     - item: MiningDrill
     - item: Shovel
@@ -654,7 +649,6 @@
     - state: cargo
     - state: icon-mining-adv
   - type: ItemBorgModule
-    moduleId: AdvancedMining # Frontier
     hands:
     - item: MiningDrillDiamond
     - item: Shovel
@@ -679,7 +673,6 @@
     - state: cargo
     - state: icon-grappling-gun
   - type: ItemBorgModule
-    moduleId: GrapplingGun # Frontier
     hands:
     - item: WeaponGrapplingGun
     # - item: BorgFireExtinguisher # Frontier: just use the jetpack module
@@ -700,7 +693,6 @@
     - state: engineering
     - state: icon-tools-adv
   - type: ItemBorgModule
-    moduleId: AdvancedTools # Frontier
     hands:
     - item: JawsOfLife
     - item: PowerDrill
@@ -729,7 +721,6 @@
     - state: engineering
     - state: icon-construction
   - type: ItemBorgModule # Aurora's Song - Made it like Frontier's DroppableBorgModule but left the upstream tiles in
-    moduleId: Construction
     hands:
     - hand: # Aurora's Song - Make it like NF
         emptyRepresentative: ConstructionBag
@@ -807,7 +798,6 @@
     - state: engineering
     - state: icon-rcd
   - type: ItemBorgModule
-    moduleId: RCD # Frontier
     hands:
     - item: RCDRecharging
     # - item: BorgFireExtinguisher # Frontier: use jetpack module
@@ -829,7 +819,6 @@
     - state: janitor
     - state: icon-light-replacer
   - type: ItemBorgModule
-    moduleId: LightReplacer # Frontier
     hands:
     - item: LightReplacer
     - item: TrashBag # Aurora's Song - Make it like frontier's
@@ -859,7 +848,6 @@
     - state: janitor
     - state: icon-mop
   - type: ItemBorgModule
-    moduleId: Cleaning # Frontier
     hands:
 #    - item: MopItem # Aurora's Song
 #    - item: WireBrush # Aurora's Song
@@ -908,7 +896,6 @@
     - state: janitor
     - state: icon-mop-adv
   - type: ItemBorgModule
-    moduleId: AdvancedCleaning # Frontier
     hands:
     - item: AdvMopItem
     - item: WireBrushElectrical
@@ -964,7 +951,6 @@
     - state: medical
     - state: icon-treatment
   - type: ItemBorgModule
-    moduleId: Treatment # Frontier
     hands:
     - item: HandheldHealthAnalyzer
     - item: AdvancedJetInjector
@@ -1157,7 +1143,6 @@
     - state: science
     - state: icon-artifacts
   - type: ItemBorgModule
-    moduleId: Artifact # Frontier
     hands:
     - item: NodeScanner
     - item: SprayBottle
@@ -1231,7 +1216,6 @@
     - state: service
     - state: icon-pen
   - type: ItemBorgModule
-    moduleId: Service # Frontier
     hands:
     - item: Pen
     - item: BooksBag
@@ -1282,7 +1266,6 @@
     - state: service
     - state: icon-musique
   - type: ItemBorgModule
-    moduleId: Music # Frontier
     hands:
     - item: SynthesizerInstrument
       hand:
@@ -1324,7 +1307,6 @@
     - state: service
     - state: icon-gardening
   - type: ItemBorgModule
-    moduleId: Gardening # Frontier
     hands:
     - item: HydroponicsToolMiniHoe
     - item: HydroponicsToolSpade
@@ -1353,7 +1335,6 @@
     - state: service
     - state: icon-harvesting
   - type: ItemBorgModule
-    moduleId: Harvesting # Frontier
     hands:
     - item: HydroponicsToolScythe
     - item: HydroponicsToolHatchet
@@ -1435,7 +1416,6 @@
     - state: syndicate
     - state: icon-syndicate
   - type: ItemBorgModule
-    moduleId: Weapons # Frontier
     hands:
     - item: NFWeaponPistolEchis # Frontier: WeaponPistolEchis<WeaponPistolEchis
     - item: EnergyDaggerLoud
@@ -1473,7 +1453,6 @@
       - state: syndicate
       - state: icon-syndicate
     - type: ItemBorgModule
-      moduleId: Operative # Frontier
       hands:
       - item: Crowbar
       - item: Emag
@@ -1493,7 +1472,6 @@
     - state: syndicate
     - state: icon-syndicate
   - type: ItemBorgModule
-    moduleId: EnergySword # Frontier
     hands:
     - item: CyborgEnergySword
     - item: PinpointerSyndicateNuclear
@@ -1528,7 +1506,6 @@
     - state: syndicate
     - state: icon-syndicate
   - type: ItemBorgModule
-    moduleId: L6CROW # Frontier
     hands:
     - item: NFWeaponLightMachineGunL6C # Frontier: WeaponLightMachineGunL6C<NFWeaponLightMachineGunL6C
     - item: PinpointerSyndicateNuclear
@@ -1563,7 +1540,6 @@
         - state: syndicateborgbomb
         - state: icon-bomb
     - type: ItemBorgModule
-      moduleId: Martyr # Frontier
       hands:
       - item: SelfDestructSeq
     - type: BorgModuleIcon
@@ -1646,7 +1622,6 @@
     - state: xenoborg_generic
     - state: icon-xenoborg-basic
   - type: ItemBorgModule
-    moduleId: XenoborgBasic # Frontier
     hands:
     - hand:
         emptyRepresentative: BorgModuleConstructionMaterialPlaceholder
@@ -1671,7 +1646,6 @@
     - state: xenoborg_generic
     - state: icon-xenoborg-tools
   - type: ItemBorgModule
-    moduleId: XenoborgTool # Frontier
     hands:
     - item: Crowbar
     - item: Wrench
@@ -1693,7 +1667,6 @@
     - state: xenoborg_engi
     - state: icon-xenoborg-access-breaker
   - type: ItemBorgModule
-    moduleId: XenoborgAccessBreaker # Frontier
     hands:
     - item: AccessBreaker
   - type: BorgModuleIcon
@@ -1710,7 +1683,6 @@
     - state: xenoborg_engi
     - state: icon-xenoborg-fire-extinguisher
   - type: ItemBorgModule
-    moduleId: XenoborgFireExtinguisher # Frontier
     hands:
     - item: SelfRechargingFireExtinguisher
   - type: BorgModuleIcon
@@ -1745,7 +1717,6 @@
     - state: xenoborg_heavy
     - state: icon-xenoborg-jammer
   - type: ItemBorgModule
-    moduleId: XenoborgJammer # Frontier
     hands:
     - item: XenoborgRadioJammer
   - type: BorgModuleIcon
@@ -1762,7 +1733,6 @@
     - state: xenoborg_heavy
     - state: icon-xenoborg-laser
   - type: ItemBorgModule
-    moduleId: XenoborgLaser # Frontier
     hands: [] # Frontier: empty set
     # - item: WeaponLaserGunXenoborg # Frontier
   - type: BorgModuleIcon
@@ -1779,7 +1749,6 @@
     - state: xenoborg_heavy
     - state: icon-xenoborg-laser2
   - type: ItemBorgModule
-    moduleId: XenoborgLaserHeavy # Frontier
     hands: [] # Frontier
     # - item: WeaponLaserCannonXenoborg # Frontier
   - type: BorgModuleIcon
@@ -1796,7 +1765,6 @@
     - state: xenoborg_scout
     - state: icon-xenoborg-space-movement
   - type: ItemBorgModule
-    moduleId: XenoborgSpaceMovement # Frontier
     hands:
     - item: HandheldGPSBasic
     - item: HandHeldMassScannerBorg
@@ -1818,7 +1786,6 @@
     - state: xenoborg_scout
     - state: icon-xenoborg-sword
   - type: ItemBorgModule
-    moduleId: XenoborgSword # Frontier
     hands:
     - item: KukriKnife
     - item: JetpackXenoborg
@@ -1836,7 +1803,6 @@
     - state: xenoborg_scout
     - state: icon-xenoborg-sword2
   - type: ItemBorgModule
-    moduleId: XenoborgSwordFast # Frontier
     hands:
     - item: EnergyDaggerLoudBlue
     - item: JetpackXenoborg
@@ -1854,7 +1820,6 @@
     - state: xenoborg_stealth
     - state: icon-xenoborg-hypo
   - type: ItemBorgModule
-    moduleId: XenoborgHypo # Frontier
     hands:
     - item: NocturineHypo
   - type: BorgModuleIcon
@@ -1871,7 +1836,6 @@
     - state: xenoborg_stealth
     - state: icon-xenoborg-projector
   - type: ItemBorgModule
-    moduleId: XenoborgProjector # Frontier
     hands:
     - item: ChameleonProjectorNoBattery
   - type: BorgModuleIcon
@@ -1888,7 +1852,6 @@
     - state: xenoborg_stealth
     - state: icon-xenoborg-cloak
   - type: ItemBorgModule
-    moduleId: XenoborgCloaking # Frontier
     hands:
     - item: CloakingDevice
   - type: BorgModuleIcon
@@ -1924,7 +1887,6 @@
     - state: xenoborg_generic
     - state: icon-xenoborg-tools
   - type: ItemBorgModule
-    moduleId: ShipmindHand
     hands:
     - item: Crowbar
     - item: Wrench
@@ -1951,7 +1913,6 @@
     - state: xenoborg_scout
     - state: icon-xenoborg-space-movement
   - type: ItemBorgModule
-    moduleId: ShipmindSpaceMovement
     hands:
     - item: HandheldGPSBasic
     - item: HandHeldMassScannerBorg
@@ -1977,7 +1938,6 @@
     - state: xenoborg_heavy
     - state: icon-xenoborg-laser2
   - type: ItemBorgModule
-    moduleId: ShipmindCombat
     hands:
     - item: WeaponXrayCannonCyborg
     - item: WeaponDisablerSMGCyborg

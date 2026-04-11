@@ -138,7 +138,8 @@
     interfaces:
       enum.TransferAmountUiKey.Key:
         type: TransferAmountBoundUserInterface
-  - type: Drink
+  - type: Edible  # Aurora's Song - Convert to edible from Drink
+    edible: Drink
     solution: beaker
     delay: 1.5
     forceFeedDelay: 5

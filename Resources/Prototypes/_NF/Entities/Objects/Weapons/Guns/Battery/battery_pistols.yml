@@ -172,7 +172,7 @@
   # - type: Gun
   #   soundGunshot:
   #     path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFAnomalousParticleDeltaStrong
     fireCost: 100
   - type: BatteryWeaponFireModes
@@ -248,7 +248,7 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: HoloFlareCyan
     fireCost: 240
   - type: EnergyGun

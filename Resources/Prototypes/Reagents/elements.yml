@@ -272,7 +272,7 @@
         - !type:OrganType
           type: Sheleg
           shouldHave: true
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           min: 30
       - !type:PopupMessage
         conditions:

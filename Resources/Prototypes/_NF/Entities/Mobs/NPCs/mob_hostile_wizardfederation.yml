@@ -163,7 +163,7 @@
   - type: Battery
     maxCharge: 800
     startingCharge: 800
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: CausticBeam
     fireCost: 100
   - type: Gun
@@ -211,7 +211,7 @@
   - type: Battery
     maxCharge: 800
     startingCharge: 800
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: WizardHitscanLightning
     fireCost: 100
 

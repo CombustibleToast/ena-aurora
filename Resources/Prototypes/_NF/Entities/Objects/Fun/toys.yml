@@ -22,7 +22,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Items/Toys/hew.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/Items/Toys/hew.ogg
@@ -126,7 +126,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/_NF/Effects/silence.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/_NF/Effects/silence.ogg
@@ -493,7 +493,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/_DV/Voice/Vulpkanin/dog_bark1.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/_DV/Voice/Vulpkanin/dog_bark1.ogg
@@ -590,7 +590,7 @@
     wideAnimationRotation: 180
     soundHit:
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
-  - type: Food
+  - type: Edible # Aurora's Song - Food>Edible
     requiresSpecialDigestion: true
     useSound:
       path: /Audio/Nyanotrasen/Voice/Felinid/cat_meow1.ogg
@@ -932,7 +932,7 @@
 #    wideAnimationRotation: 180
 #    soundHit:
 #      path: /Audio/_NF/Voice/Goblin/goblin_scream_1.ogg
-#  - type: Food
+#  - type: Edible # Aurora's Song - Food>Edible
 #    requiresSpecialDigestion: true
 #    useSound:
 #      path: /Audio/_NF/Voice/Goblin/goblin_cackle_3.ogg

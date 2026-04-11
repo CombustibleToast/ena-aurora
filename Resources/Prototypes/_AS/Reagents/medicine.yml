@@ -23,7 +23,7 @@
           prototype: ChemicalMothroach
           conditions:
             - !type:NFIsHumanoid
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
               min: 10
             - !type:Consent # Aurora Song
               effectTypes:
@@ -32,7 +32,7 @@
           reagent: Mothrazine
           amount: -5
           conditions:
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
               min: 10
 
 - type: reagent #Aurora Polymorph Chem
@@ -60,7 +60,7 @@
           prototype: ChemicalFelinid
           conditions:
             - !type:NFIsHumanoid
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
               min: 15
             - !type:Consent # Aurora Song
               effectTypes:
@@ -69,7 +69,7 @@
           reagent: Catgirlium
           amount: -5
           conditions:
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
               min: 15
 #            - !type:Consent # Aurora Song
 #              effectTypes:
@@ -91,7 +91,7 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 15
         - !type:Consent # Aurora Song
           effectTypes:
@@ -101,7 +101,7 @@
             Asphyxiation: 2
     Narcotic:
       effects:
-      - !type:MovespeedModifier
+      - !type:MovementSpeedModifier
         walkSpeedModifier: 1.20
         sprintSpeedModifier: 1.20
     Drink:
@@ -116,7 +116,7 @@
           prototype: ChemicalBee
           conditions:
             - !type:NFIsHumanoid
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
               min: 20
             - !type:Consent # Aurora Song
               effectTypes:
@@ -125,7 +125,7 @@
           reagent: Davisicium
           amount: -10
           conditions:
-            - !type:ReagentThreshold
+            - !type:ReagentCondition
               min: 20
             - !type:Consent # Aurora Song
               effectTypes:

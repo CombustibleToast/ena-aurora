@@ -8,7 +8,7 @@
     - type: HTN
       rootTask:
         task: SimpleRangedHostileCompound
-    - type: HitscanBatteryAmmoProvider
+    - type: BatteryAmmoProvider
       proto: NFRedMediumLaser
       fireCost: 62.5
     - type: Battery

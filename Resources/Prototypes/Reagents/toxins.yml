@@ -424,7 +424,7 @@
         conditions:
           - !type:MetabolizerTypeCondition
             type: [Animal]
-          - !type:ReagentThreshold # DeltaV - Readded this. No longer causes vomitting at the lightest whiff of coffee
+          - !type:ReagentCondition # DeltaV - Readded this. No longer causes vomitting at the lightest whiff of coffee # Aurora's Song - ReagentThreshold>ReagentCondition
             reagent: Theobromine
             min: 0.5
 

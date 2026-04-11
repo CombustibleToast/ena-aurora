@@ -90,7 +90,7 @@
     examineCaliber: gun-examine-energybolt-medium
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserMedium
     fireCost: 80
   - type: BatteryWeaponFireModes
@@ -108,6 +108,6 @@
     examineCaliber: gun-examine-pulse-low
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFPulse
     fireCost: 80

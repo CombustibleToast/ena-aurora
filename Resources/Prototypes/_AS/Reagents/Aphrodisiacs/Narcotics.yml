@@ -24,7 +24,7 @@
           - "reagent-effect-forcefem8"
         probability: 0.04
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 30
           - !type:Consent # Aurora Song
             effectTypes:
@@ -40,21 +40,21 @@
           - "reagent-effect-forcefem-overdose4"
           - "reagent-effect-forcefem-overdose5"
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             min: 30
           - !type:Consent # Aurora Song
             effectTypes:
               - Aphrodisiacs
       - !type:Drunk
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 50
         - !type:Consent # Aurora Song
           effectTypes:
             - Aphrodisiacs
       - !type:HealthChange
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 35
         - !type:Consent # Aurora Song
           effectTypes:
@@ -64,7 +64,7 @@
             Poison: 0.01
       - !type:ChemVomit
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 50
         - !type:Consent # Aurora Song
           effectTypes:
@@ -77,7 +77,7 @@
           - "reagent-effect-forcecem-fade" # A decent chance to notify the player when their meds run out, but could happen silently.
         probability: 0.35
         conditions:
-          - !type:ReagentThreshold
+          - !type:ReagentCondition
             max: 0.1
           - !type:Consent # Aurora Song
             effectTypes:
@@ -135,7 +135,7 @@
         - "reagent-effect-freyja-low7"
         probability: 0.05
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 1
           max: 10
         - !type:Consent
@@ -154,7 +154,7 @@
         - "reagent-effect-freyja-med7"
         probability: 0.09
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 11
           max: 30
         - !type:Consent
@@ -172,7 +172,7 @@
         - "reagent-effect-freyja-high6"
         probability: 0.1
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 31
           max: 40
         - !type:Consent
@@ -191,7 +191,7 @@
         - "reagent-effect-freyja-od7"
         probability: 0.2
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition
           min: 41
         - !type:Consent
           effectTypes:

@@ -73,7 +73,7 @@
     examineCaliber: gun-examine-hitscan-high-p
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFRedSpecialLaser
     fireCost: 120
 
@@ -85,6 +85,6 @@
     examineCaliber: gun-examine-hitscan-xray
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
-  - type: HitscanBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFXrayLaser
     fireCost: 120

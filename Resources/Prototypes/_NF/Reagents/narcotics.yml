@@ -132,7 +132,7 @@
       # Effects for non-goblins
       - !type:Jitter
         conditions:
-        - !type:ReagentThreshold
+        - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
           min: 1
         - !type:OrganType
           type: Goblin

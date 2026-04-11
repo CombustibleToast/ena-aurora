@@ -33,7 +33,7 @@
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
   - type: Clothing
     sprite: Objects/Weapons/Guns/LMGs/l6.rsi
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFCartridgeRifle20
     fireCost: 100
   - type: Battery

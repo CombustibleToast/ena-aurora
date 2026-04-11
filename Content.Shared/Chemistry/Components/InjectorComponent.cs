@@ -42,7 +42,6 @@ public sealed partial class InjectorComponent : Component
     [DataField, AutoNetworkedField]
     public FixedPoint2? CurrentTransferAmount = FixedPoint2.New(5);
 
-
     /// <summary>
     /// The mode that this injector starts with on MapInit.
     /// </summary>
