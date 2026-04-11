@@ -7418,3 +7418,10 @@ Entries:
   id: 9107
   time: '2026-04-10T21:36:50.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/927
+- author: Zenixic
+  changes:
+    - type: Fix
+      message: RPEDs no longer drop their parts when upgrading ore processors.
+  id: 9108
+  time: '2026-04-11T08:52:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/935
