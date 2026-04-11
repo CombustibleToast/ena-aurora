@@ -1,5 +1,4 @@
 using System.Linq;
-using Content.Server.Power.Components;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.DoAfter;
 using Content.Shared.PowerCell.Components;
@@ -9,12 +8,12 @@ using Robust.Shared.Utility;
 using Content.Server._EE.Silicon.Charge;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Popups;
-using Content.Server.PowerCell;
+using Content.Shared.PowerCell;
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Content.Server._EE.Power.Components;
-using Content.Server._EE.Silicon;
+using Content.Shared.Power.Components;
 
 namespace Content.Server._EE.Power;
 
@@ -114,8 +113,8 @@ public sealed class BatteryDrinkerSystem : EntitySystem
 
         var amountToDrink = drinkerComp.DrinkMultiplier * 1000;
 
-        amountToDrink = MathF.Min(amountToDrink, sourceBattery.CurrentCharge);
-        amountToDrink = MathF.Min(amountToDrink, drinkerBatteryComponent!.MaxCharge - drinkerBatteryComponent.CurrentCharge);
+        amountToDrink = MathF.Min(amountToDrink, _battery.GetCharge((source, sourceBattery))); // Aurora's Song - Replace sourceBattery.CurrentCharge with _battery.GetCharge
+        amountToDrink = MathF.Min(amountToDrink, drinkerBatteryComponent!.MaxCharge - _battery.GetCharge((drinker, drinkerBatteryComponent)));  // Aurora's Song - Replace .CurrentCharge with _battery.GetCharge
 
         if (sourceComp != null && sourceComp.MaxAmount > 0)
             amountToDrink = MathF.Min(amountToDrink, (float) sourceComp.MaxAmount);
@@ -127,10 +126,10 @@ public sealed class BatteryDrinkerSystem : EntitySystem
         }
 
         if (_battery.TryUseCharge(source, amountToDrink))
-            _battery.SetCharge(drinkerBattery, drinkerBatteryComponent.CurrentCharge + amountToDrink, drinkerBatteryComponent);
+            _battery.SetCharge(drinkerBattery, _battery.GetCharge((drinker, drinkerBatteryComponent)) + amountToDrink);
         else
         {
-            _battery.SetCharge(drinkerBattery, sourceBattery.CurrentCharge + drinkerBatteryComponent.CurrentCharge, drinkerBatteryComponent);
+            _battery.SetCharge((drinkerBattery, drinkerBatteryComponent), _battery.GetCharge((source, sourceBattery)) + _battery.GetCharge((drinker, drinkerBatteryComponent)));
             _battery.SetCharge(source, 0);
         }
 

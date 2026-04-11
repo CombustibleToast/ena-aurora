@@ -155,7 +155,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
     {
         if (!_whitelists.TryGetValue(player, out var whitelists)) // AS: Removed globalWhitelist check
         {
-            Log.Error("Unable to check if player {Player} is whitelisted for {GhostRole}. Stack trace:\\n{StackTrace}",
+            _sawmill.Error("Unable to check if player {Player} is whitelisted for {GhostRole}. Stack trace:\\n{StackTrace}",
                 player,
                 ghostRole,
                 Environment.StackTrace);
@@ -192,7 +192,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
 
         if (!_globalWhitelists.TryGetValue(player, out var whitelist))
         {
-            Log.Error("Unable to check if player {Player} is globally whitelisted. Stack trace:\\n{StackTrace}",
+            _sawmill.Error("Unable to check if player {Player} is globally whitelisted. Stack trace:\\n{StackTrace}",
                 player,
                 Environment.StackTrace);
             return false;

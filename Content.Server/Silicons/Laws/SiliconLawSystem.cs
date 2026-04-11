@@ -325,7 +325,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
                 && stationAiHeldComp.CurrentConnectedEntity != null
                 && HasComp<SiliconLawProviderComponent>(stationAiHeldComp.CurrentConnectedEntity))
             {
-                SetLaws(lawset, stationAiHeldComp.CurrentConnectedEntity.Value, provider.LawUploadSound);
+                SetLaws(lawset.Laws, stationAiHeldComp.CurrentConnectedEntity.Value, provider.LawUploadSound);
             }
             // Corvax-Next-AiRemoteControl-End
         }

@@ -29,7 +29,7 @@ public sealed partial class StationAiFixerConsoleSystem : SharedStationAiFixerCo
                         mind.IsVisitingEntity &&
                         _player.TryGetSessionById(mind.UserId, out var session))
                     {
-                        _eui.OpenEui(new ReturnToBodyEui(mind, _mind, _player), session);
+                        _eui.OpenEui(new ReturnToBodyEui(mind, _mind), session); // Aurora's Song - Remove _player
                         _popup.PopupEntity(Loc.GetString("station-ai-fixer-console-repair-finished"), ent);
                     }
                     else

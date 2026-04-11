@@ -170,7 +170,6 @@ public sealed class MoverController : SharedMoverController
             if (IsPaused(uid) && !HasComp<GhostComponent>(uid)) // Frontier: Skip processing paused entities. Ghosts are excepted for mapping reasons
                 continue; // Frontier
 
-            InsertMover((uid, mover));
             _seenRelayMovers.Clear(); // O(1) if already empty
             QueueRelaySources(activeComp.RelayedFrom);
 
