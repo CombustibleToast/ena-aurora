@@ -1602,7 +1602,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['Thump', 'ReptilianHiss'] # Imp: add ReptilianHiss
+    allowedEmotes: ['Thump', 'Hiss'] # Imp: add ReptilianHiss # Aurora's Song - ReptilianHiss>Hiss
   - type: Vocal
     sounds:
       Male: MaleReptilian
@@ -2094,7 +2094,7 @@
   - type: Speech
     speechSounds: Lizard
     speechVerb: Reptilian
-    allowedEmotes: ['ReptilianHiss'] # Can't thump tail because no body component
+    allowedEmotes: ['Hiss'] # Can't thump tail because no body component # Aurora's Song - ReptilianHiss>Hiss
   - type: Vocal
     sounds:
       Male: MaleReptilian

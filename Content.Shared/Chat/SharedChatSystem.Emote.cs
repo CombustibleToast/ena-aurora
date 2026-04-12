@@ -26,7 +26,7 @@ public abstract partial class SharedChatSystem
                     dict[lowerWord] = value.Add(emote);
 
                     var errMsg = $"Duplicate of emote word {lowerWord}";
-                    Log.Warning(errMsg);
+                    Log.Error(errMsg); // Aurora's Song - Warning>Error because warnings fail tests now
 
                     continue;
                 }
