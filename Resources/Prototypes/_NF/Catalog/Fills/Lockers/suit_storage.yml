@@ -205,8 +205,10 @@
   parent: SuitStorageBase
   suffix: Quartermaster
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitLuxury
@@ -220,8 +222,10 @@
   parent: SuitStorageBase
   suffix: Mining
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitSalvage
@@ -235,8 +239,10 @@
   parent: SuitStorageBase
   suffix: Mercenary
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitMercenary
         - id: ClothingMaskGasMercenary
@@ -250,8 +256,10 @@
   parent: SuitStorageBase
   suffix: Private Security
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitPrivateSecurity
         - id: ClothingMaskGasSecurity
@@ -266,8 +274,10 @@
   parent: SuitStorageBase
   suffix: SCAF
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitScaf
         - id: ClothingMaskGasMercenary
@@ -282,8 +292,10 @@
   parent: SuitStorageBase
   suffix: Surplus
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitSurplus
         - id: ClothingMaskGasSecurity
@@ -298,8 +310,10 @@
   parent: SuitStorageBase
   suffix: Noble
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitNoble
         - id: ClothingMaskGasSecurity
@@ -314,8 +328,10 @@
   parent: SuitStorageBase
   suffix: Pilot
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitPilot
         - id: ClothingMaskBreath
@@ -328,8 +344,10 @@
   parent: SuitStorageBase
   suffix: Clown
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitClown
         - id: ClothingMaskBreath
@@ -342,8 +360,10 @@
   parent: SuitStorageBase
   suffix: NFSD Cadet
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Bronze Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLE
@@ -358,8 +378,10 @@
   parent: SuitStorageBase
   suffix: NFSD Deputy
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Bronze Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLE
@@ -374,8 +396,10 @@
   parent: SuitStorageBase
   suffix: NFSD Brigmedic
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Brigmed Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLE
@@ -390,8 +414,10 @@
   parent: SuitStorageBase
   suffix: NFSD Sergeant
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLECommissioner
@@ -406,8 +432,10 @@
   parent: SuitStorageBase
   suffix: NFSD Bailiff
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLECommissioner
@@ -422,8 +450,10 @@
   parent: SuitStorageBase
   suffix: NFSD Sheriff
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Sheriff Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ASClothingMaskGasSLECommissioner
@@ -438,8 +468,10 @@
   parent: SuitStorageBase
   suffix: NFSD Combat
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitNfsdCombat
         - id: ClothingMaskGasNfsd
@@ -454,8 +486,10 @@
   parent: SuitStorageBase
   suffix: NFSD Command
   components:
-  - type: StorageFill
-    contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: NFTankO2N2EqualFilled
         - id: ClothingOuterHardsuitNfsdCommand
         - id: ClothingMaskGasNfsd

@@ -54,8 +54,10 @@
   suffix: Filled
   parent: ASLockerColonialRepresentative
   components:
-    - type: StorageFill
-      contents:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
         - id: ASClothingHeadHatColonialRepresentativeBeret
         - id: ASClothingHeadHatColonialRepresentativeBeretBig
         - id: ASClothingOuterJacketColonialRepresentative

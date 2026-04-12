@@ -5,12 +5,14 @@
   name: gestio rifle crate
   description: Contains two old prototype, burst-fire rifles with six low capacity mags. Requires Armory access to open.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponRifleAssaultGestio
-        amount: 2
-      - id: NFMagazineLowCapacityRifle30
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultGestio
+          amount: 2
+        - id: NFMagazineLowCapacityRifle30
+          amount: 6
 
 # Contraband (unregistered) weaponry crates for expeditions
 - type: entity
@@ -22,12 +24,14 @@
   description: Contains two high-powered, SMGs with four mags. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponSubMachineGunWt550Expedition
-        amount: 2
-      - id: NFMagazineSubMachineGunTopMounted35
-        amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponSubMachineGunWt550Expedition
+          amount: 2
+        - id: NFMagazineSubMachineGunTopMounted35
+          amount: 4
 
 - type: entity
   id: CrateArmoryShotgunExpedition
@@ -38,12 +42,14 @@
   description: For when the enemy absolutely needs to be replaced with lead. Contains two Enforcer Combat Shotguns, and some standard shotgun shells. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponShotgunKammererExpedition
-        amount: 2
-      - id: NFAmmunitionBoxShellShotgunBuckshot
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponShotgunKammererExpedition
+          amount: 2
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+          amount: 3
 
 - type: entity
   id: CrateArmoryLaserExpedition
@@ -54,10 +60,12 @@
   description: Contains three standard-issue laser carbines. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergyRifleCarbineExpedition
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponEnergyRifleCarbineExpedition
+          amount: 3
 
 - type: entity
   id: CrateArmoryEnergyGunExpedition
@@ -68,10 +76,12 @@
   description: Contains three energy guns. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponEnergySubMachineGunDeltaVExpedition
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponEnergySubMachineGunDeltaVExpedition
+          amount: 3
 
 - type: entity
   id: CrateArmoryPistolsExpedition
@@ -82,12 +92,14 @@
   description: Contains two standard NT pistols with four mags. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: NFWeaponPistolMk58Expedition
-      amount: 2
-    - id: NFMagazinePistol35
-      amount: 4
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponPistolMk58Expedition
+          amount: 2
+        - id: NFMagazinePistol35
+          amount: 4
 
 - type: entity
   id: CrateArmoryRifleGestioExpedition
@@ -98,12 +110,14 @@
   description: Contains two old prototype, burst-fire rifles with six low capacity mags. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponRifleAssaultGestioExpedition
-        amount: 2
-      - id: NFMagazineLowCapacityRifle30
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultGestioExpedition
+          amount: 2
+        - id: NFMagazineLowCapacityRifle30
+          amount: 6
 
 - type: entity
   id: CrateArmoryRifleNovaliteC1Expedition
@@ -114,12 +128,14 @@
   description: Contains two civilian grade rifles with six low capacity clips. Requires Armory access to open. Unregistered.
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-      - id: NFWeaponRifleAssaultNovaliteC1Expedition
-        amount: 2
-      - id: NFMagazineClipRifle20
-        amount: 6
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFWeaponRifleAssaultNovaliteC1Expedition
+          amount: 2
+        - id: NFMagazineClipRifle20
+          amount: 6
 
 # Ammo crates
 ## .20 rifle

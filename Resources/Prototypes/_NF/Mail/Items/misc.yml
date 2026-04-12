@@ -220,10 +220,12 @@
   name: Generalissimo No. 3 cigar case
   description: Subtly embossed, and labelled "12/40". Smells of cedar.
   components:
-  - type: StorageFill
-    contents:
-    - id: CigarPlatinum
-      amount: 8
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: CigarPlatinum
+          amount: 8
   - type: Sprite
     sprite: _NF/Objects/Consumable/Smokeables/Cigars/case-platinum.rsi
 

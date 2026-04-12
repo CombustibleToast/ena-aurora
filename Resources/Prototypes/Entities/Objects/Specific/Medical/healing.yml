@@ -684,10 +684,12 @@
   components:
   - type: Label
     currentLabel: LSD 15u
-  - type: StorageFill
-    contents:
-    - id: PillSpaceDrugs
-      amount: 5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillSpaceDrugs
+          amount: 5
   #- type: GuideHelp
   #  guides: [ Psionics ]
 
@@ -713,10 +715,12 @@
   components:
   - type: Label
     currentLabel: Pax 10u
-  - type: StorageFill
-    contents:
-    - id: PillPax
-      amount: 5
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: PillPax
+          amount: 5
 
 
 - type: entity

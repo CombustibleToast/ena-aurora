@@ -4,11 +4,13 @@
   suffix: Dungeon, Blueprints
   categories: [ HideSpawnMenu ]
   components:
-  - type: StorageFill
-    contents:
-    - id: NFBlueprintWeaponLaserCannon
-      orGroup: Blueprints
-    - id: NFBlueprintWeaponXrayCannon
-      orGroup: Blueprints
-    - id: NFBlueprintWeaponTemperatureGun
-      orGroup: Blueprints
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFBlueprintWeaponLaserCannon
+          orGroup: Blueprints
+        - id: NFBlueprintWeaponXrayCannon
+          orGroup: Blueprints
+        - id: NFBlueprintWeaponTemperatureGun
+          orGroup: Blueprints

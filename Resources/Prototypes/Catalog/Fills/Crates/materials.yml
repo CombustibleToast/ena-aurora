@@ -145,10 +145,12 @@
   name: uranium crate
   description: 90 sheets of uranium.
   components:
-  - type: StorageFill
-    contents:
-      - id: SheetUranium
-        amount: 3
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: SheetUranium
+          amount: 3
 
 - type: entityTable
   id: RandomMaterialCrateTable

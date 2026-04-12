@@ -175,17 +175,16 @@
   - type: Item
     sprite: _NF/Objects/Storage/Happyhonk/rock_carrier.rsi
     heldPrefix: box
-  - type: StorageFill
-    contents:
-      - id: PetRock
-        prob: 0.8
-        orGroup: Rock
-      - id: PetRockFred
-        prob: 0.1
-        orGroup: Rock
-      - id: PetRockRoxie
-        prob: 0.1
-        orGroup: Rock
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:GroupSelector
+        children:
+        - id: PetRock
+          prob: 0.8
+        - id: PetRockFred
+          prob: 0.1
+        - id: PetRockRoxie
+          prob: 0.1
 
 - type: entity
   parent: [BaseItem, MrChips]

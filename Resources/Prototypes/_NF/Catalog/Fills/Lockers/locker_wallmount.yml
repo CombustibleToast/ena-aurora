@@ -342,18 +342,19 @@
 
 # region Departments
 # Aurora Song - StorageFill template for botanist wall locker
-# Wall lockers use StorageFill (fills "storagebase" container) instead of EntityTableContainerFill (fills "entity_storage" container)
 - type: entity
   abstract: true
   id: StorageFillBotanistWall
   description: Contains standard issue botanist equipment.
   components:
-  - type: StorageFill
-    contents:
-    - id: ClothingBeltPlantFilled
-    - id: PlantBag
-    - id: BoxMouthSwab
-    - id: Dropper
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingBeltPlantFilled
+        - id: PlantBag
+        - id: BoxMouthSwab
+        - id: Dropper
 
 - type: entity
   id: LockerWallColorHydroponicsFilled

@@ -273,10 +273,12 @@
   name: ATV crate
   description: An Absolutely Taxable Vehicle to help cargo with hauling.
   components:
-  - type: StorageFill
-    contents:
-      - id: NFVehicleATV # Frontier
-      - id: VehicleKeyATV
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: NFVehicleATV # Frontier
+        - id: VehicleKeyATV
 
 - type: entity
   parent: CrateGenericSteel
