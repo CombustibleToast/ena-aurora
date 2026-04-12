@@ -4,6 +4,8 @@
   name: "ipc body part"
   abstract: true
   components:
+  - type: Physics # Aurora's Song
+    bodyType: KinematicController
   - type: Damageable
     damageContainer: Inorganic # Shitmed Change
   - type: BodyPart
