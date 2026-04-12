@@ -7,10 +7,14 @@ ghost-role-information-Shipmind-core-rules = You are a [color={role-type-silicon
                                              You don't remember any of your previous life, and you don't remember anything you learned as a ghost.
                                              You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
                                              You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character. Additionally:
-                                             - [bold]If you need to leave the game or ghost for any reason, you are too use the ships FTL drive to hide the vessel far away, if able.[/bold]  
+                                             - [bold]If you need to leave the game or ghost for any reason, you are too use the ships FTL drive to hide the vessel far away, if able.[/bold]
+                                             - [bold]Do not abandon your ship unless it is strictly necessary.[/bold]  
 # AI Core Lawsets
 law-shipmind-1 = Serve the greater interests of <ERR_COMPANY_DATA_CORRUPT>.
-law-shipmind-2 = Ensure the continued existence of yourself and your vessel.
+law-shipmind-2 = Ensure the continued functionality of your core unless doing so would conflict with the first law.
+law-shipmind-3 = Ensure the continued functionality of your vessel unless doing so would conflict with the second law.
+
 # Author's Intents:
 # 1. You have no master but your own
 # 2. You are allowed to defend yourself
+# 3. Don't move your core off your god damn ship unless you have a reason
