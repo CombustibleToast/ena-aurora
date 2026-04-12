@@ -13,7 +13,6 @@ public sealed class OSay : LocalizedCommands
 {
     [Dependency] private readonly IAdminLogManager _adminLogger = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly ChatSystem _chatManager = default!;
 
     public override string Command => "osay";
 
@@ -58,7 +57,7 @@ public sealed class OSay : LocalizedCommands
         if (string.IsNullOrEmpty(message))
             return;
 
-        _chatManager.TrySendInGameICMessage(source.Value, message, chatType, false);
+        _entityManager.System<ChatSystem>().TrySendInGameICMessage(source.Value, message, chatType, false);
         _adminLogger.Add(LogType.Action, LogImpact.Low, $"{(shell.Player != null ? shell.Player.Name : "An administrator")} forced {_entityManager.ToPrettyString(source.Value)} to {args[1]}: {message}");
     }
 }

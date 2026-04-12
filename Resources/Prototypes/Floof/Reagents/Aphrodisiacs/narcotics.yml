@@ -20,6 +20,7 @@
         - reagent-effect-aphrodisiac-strong3
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: Libidozenithizine
           max: 10.0
         - !type:Consent # Aurora Song
           effectTypes:
@@ -27,6 +28,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: Libidozenithizine
           min: 10.0
         damage:
           types:
@@ -42,6 +44,7 @@
         - reagent-effect-aphrodisiac-strongoverdose4
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: Libidozenithizine
           min: 10.0
         - !type:Consent # Aurora Song
           effectTypes:
@@ -54,6 +57,7 @@
           - "reagent-effect-aphrodisiac-fade"
         conditions:
           - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+            reagent: Libidozenithizine
             max: 0.1
           - !type:Consent # Aurora Song
             effectTypes:

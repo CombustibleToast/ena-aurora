@@ -25,6 +25,7 @@
         probability: 0.04
         conditions:
           - !type:ReagentCondition
+            reagent: ForceFemDrugs
             max: 30
           - !type:Consent # Aurora Song
             effectTypes:
@@ -41,6 +42,7 @@
           - "reagent-effect-forcefem-overdose5"
         conditions:
           - !type:ReagentCondition
+            reagent: ForceFemDrugs
             min: 30
           - !type:Consent # Aurora Song
             effectTypes:
@@ -48,6 +50,7 @@
       - !type:Drunk
         conditions:
         - !type:ReagentCondition
+          reagent: ForceFemDrugs
           min: 50
         - !type:Consent # Aurora Song
           effectTypes:
@@ -55,6 +58,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
+          reagent: ForceFemDrugs
           min: 35
         - !type:Consent # Aurora Song
           effectTypes:
@@ -62,9 +66,10 @@
         damage:
           types:
             Poison: 0.01
-      - !type:ChemVomit
+      - !type:Vomit # Aurora's Song - ChemVomit>Vomit
         conditions:
         - !type:ReagentCondition
+          reagent: ForceFemDrugs
           min: 50
         - !type:Consent # Aurora Song
           effectTypes:
@@ -78,6 +83,7 @@
         probability: 0.35
         conditions:
           - !type:ReagentCondition
+            reagent: ForceFemDrugs
             max: 0.1
           - !type:Consent # Aurora Song
             effectTypes:
@@ -136,6 +142,7 @@
         probability: 0.05
         conditions:
         - !type:ReagentCondition
+          reagent: FreyjasKiss
           min: 1
           max: 10
         - !type:Consent
@@ -155,6 +162,7 @@
         probability: 0.09
         conditions:
         - !type:ReagentCondition
+          reagent: FreyjasKiss
           min: 11
           max: 30
         - !type:Consent
@@ -173,6 +181,7 @@
         probability: 0.1
         conditions:
         - !type:ReagentCondition
+          reagent: FreyjasKiss
           min: 31
           max: 40
         - !type:Consent
@@ -192,6 +201,7 @@
         probability: 0.2
         conditions:
         - !type:ReagentCondition
+          reagent: FreyjasKiss
           min: 41
         - !type:Consent
           effectTypes:

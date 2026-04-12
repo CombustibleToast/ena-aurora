@@ -710,14 +710,14 @@
       effects:
         - !type:SatiateThirst
           conditions: # DeltaV nerf of saline for Feroxi
-          - !type:OrganType
-            type: Feroxi
-            shouldHave: false
+          - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+            type: [ Feroxi ]
+            inverted: true
           factor: 6
         - !type:SatiateThirst # DeltaV nerf of saline for Feroxi
           conditions:
-          - !type:OrganType
-            type: Feroxi
+          - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+            type: [ Feroxi ]
           factor: 2
         - !type:ModifyBloodLevel
           amount: 6
@@ -1314,13 +1314,12 @@
         - !type:ReduceRotting # Fairy clause (Same as above, but they can't get as cold)
           seconds: 20
           conditions:
-          - !type:Temperature
+          - !type:TemperatureCondition # Aurora's Song - Temperature>TemperatureCondition
             max: 190.0
           - !type:MobStateCondition
             mobstate: Dead
-          - !type:OrganType
-            type: Fairy
-            shouldHave: true
+          - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+            type: [ Fairy ]
 
 - type: reagent
   id: Arcryox

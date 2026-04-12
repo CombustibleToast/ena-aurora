@@ -90,9 +90,8 @@
       effects:
       - !type:ModifyBloodLevel
         conditions:
-        - !type:OrganType
-          type: Fairy
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Fairy ]
         amount: 0.4 #Aurora end
   plantMetabolism:
   - !type:PlantAdjustNutrition

@@ -20,6 +20,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: Lean
           min: 25
         damage:
           types:
@@ -27,12 +28,14 @@
       - !type:Electrocute
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: Lean
           min: 35
         probability: 0.1
     Medicine:
       effects:
-      - !type:ChemVomit
+      - !type:Vomit # Aurora's Song - ChemVomit>Vomit
         conditions:
           - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+            reagent: Lean
             min: 60
         probability: 0.2

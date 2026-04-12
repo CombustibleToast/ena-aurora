@@ -24,6 +24,7 @@
           conditions:
             - !type:NFIsHumanoid
             - !type:ReagentCondition
+              reagent: Mothrazine
               min: 10
             - !type:Consent # Aurora Song
               effectTypes:
@@ -33,6 +34,7 @@
           amount: -5
           conditions:
             - !type:ReagentCondition
+              reagent: Mothrazine
               min: 10
 
 - type: reagent #Aurora Polymorph Chem
@@ -61,6 +63,7 @@
           conditions:
             - !type:NFIsHumanoid
             - !type:ReagentCondition
+              reagent: Mothrazine
               min: 15
             - !type:Consent # Aurora Song
               effectTypes:
@@ -70,6 +73,7 @@
           amount: -5
           conditions:
             - !type:ReagentCondition
+              reagent: Mothrazine
               min: 15
 #            - !type:Consent # Aurora Song
 #              effectTypes:
@@ -92,6 +96,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition
+          reagent: Mothrazine
           min: 15
         - !type:Consent # Aurora Song
           effectTypes:
@@ -117,6 +122,7 @@
           conditions:
             - !type:NFIsHumanoid
             - !type:ReagentCondition
+              reagent: Mothrazine
               min: 20
             - !type:Consent # Aurora Song
               effectTypes:
@@ -126,6 +132,7 @@
           amount: -10
           conditions:
             - !type:ReagentCondition
+              reagent: Mothrazine
               min: 20
             - !type:Consent # Aurora Song
               effectTypes:
@@ -182,9 +189,9 @@
       effects:
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Sheleg
-        - !type:Temperature
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Sheleg ]
+        - !type:TemperatureCondition
           max: 213.0
         damage:
           types:
@@ -209,13 +216,13 @@
     Cryogenic:
       metabolismRate: 2.5
       effects:
-      - !type:ModifyBleedAmount
+      - !type:ModifyBleed
         amount: -2
       - !type:HealthChange
         conditions:
-        - !type:OrganType
-          type: Sheleg
-        - !type:Temperature
+        - !type:MetabolizerTypeCondition
+          type: [ Sheleg ]
+        - !type:TemperatureCondition
           max: 213.0
         damage:
           types:

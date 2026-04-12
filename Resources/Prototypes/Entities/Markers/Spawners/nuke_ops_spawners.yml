@@ -69,7 +69,7 @@
     - id: WeaponRevolverPython
     - id: WeaponPistolCobra
     - id: WeaponShotgunSawn
-    - id: RevolverCapGunFake
+    - id: NFRevolverCapGunFake # Frontier: RevolverCapGunFake<NFRevolverCapGunFake
       weight: .01
 
 - type: entityTable

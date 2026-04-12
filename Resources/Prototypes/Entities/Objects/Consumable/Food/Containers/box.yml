@@ -701,7 +701,7 @@
     - id: PersonalAI
     - id: CrayonBox
     - id: ToySword
-    - id: RevolverCapGun
+    - id: NFRevolverCapGun # Frontier: RevolverCapGun<NFRevolverCapGun
     - id: ToyRubberDuck
     - id: BikeHorn
       weight: 0.5

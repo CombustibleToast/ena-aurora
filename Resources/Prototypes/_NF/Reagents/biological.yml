@@ -19,15 +19,15 @@
       - !type:SatiateThirst
         factor: -0.5
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: false
-      - !type:ChemVomit
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
+          inverted: true
+      - !type:Vomit # Aurora's Song - ChemVomit>Vomit
         probability: 0.025
         conditions:
-        - !type:OrganType
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: Goblin
-          shouldHave: false
+          inverted: true
       - !type:GenericStatusEffect
         key: Stutter
         component: GoblinAccent
@@ -36,16 +36,15 @@
         time: 30
         refresh: true
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: false
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
+          inverted: true
       # Effects for goblins
       - !type:SatiateThirst
         factor: 1
         conditions:
-        - !type:OrganType
-          type: Goblin
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Goblin ]
 
 - type: reagent
   id: Primatine
@@ -68,12 +67,14 @@
           conditions:
             - !type:NFIsHumanoid
             - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+              reagent: Primatine
               min: 50
         - !type:AdjustReagent
           reagent: Primatine
           amount: -20
           conditions:
             - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+              reagent: Primatine
               min: 50
         - !type:GenericStatusEffect
           key: Stutter

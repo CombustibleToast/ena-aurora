@@ -42,6 +42,7 @@
         probability: 0.05
         conditions: # This phase will last at most 2 minutes 20 seconds
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: MnemolithReagent
           max: 14 # So taking 15u will give you 10 seconds of possibly scarier messages
       - !type:PopupMessage
         type: Local
@@ -70,6 +71,7 @@
         probability: 0.1
         conditions: # This phase will last at most 2 minutes 30 seconds
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: MnemolithReagent
           min: 14
           max: 29 # So taking 30u will give you 10 seconds of possibly scarier messages
       - !type:PopupMessage
@@ -99,6 +101,7 @@
         probability: 0.1
         conditions: # This phase will last at most 2 minutes 30 seconds
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: MnemolithReagent
           min: 29
           max: 44 # So taking 45u will give you 10 seconds of possibly scarier messages
       - !type:PopupMessage
@@ -128,4 +131,5 @@
         probability: 0.1
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: MnemolithReagent
           min: 44

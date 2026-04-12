@@ -6,7 +6,7 @@
   sprites: MobHumanSprites
   markingLimits: MobFairyMarkingLimits
   dollPrototype: MobFairyDummy
-  skinColoration: HumanAnimal # DEN
+  skinColoration: Hues # DEN # Aurora's Song HumanToned>Hues
   maleFirstNames: names_fairy_first
   femaleFirstNames: names_fairy_first
   lastNames: names_fairy_last

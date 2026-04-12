@@ -110,6 +110,7 @@
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
+          reagent: Brainbomb
           min: 5
         damage:
           types:

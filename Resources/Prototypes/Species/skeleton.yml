@@ -9,7 +9,7 @@
   maleFirstNames: NamesSkeletonFirst
   femaleFirstNames: NamesSkeletonFirst
   dollPrototype: MobSkeletonPersonDummy
-  skinColoration: TintedHues
+  skinColoration: Hues # Aurora's Song TintedHues>Hues
 
 - type: speciesBaseSprites
   id: MobSkeletonSprites

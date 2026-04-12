@@ -39,7 +39,10 @@
     - id: FoodMeatSheleg
       amount: 5
   - type: Bloodstream
-    bloodReagent: Cryoxadone
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 300
   - type: MeleeWeapon
     soundHit:
       collection: Punch
@@ -86,7 +89,7 @@
     - reagents: [ Water, SpaceCleaner, SoapReagent ]
       methods: [ Touch ]
       effects:
-      - !type:WashCreamPieReaction
+      - !type:WashCreamPie # Aurora's Song - WashCreamPieReaction>WashCreamPie
     - reagents: [ Potassium ]
       methods: [ Touch ]
       effects:

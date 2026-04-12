@@ -206,7 +206,7 @@
       path: "/Audio/Weapons/Guns/Gunshots/kinetic_accel.ogg"
   - type: CorePoweredThrower
   - type: MeleeThrowOnHit
-    unanchorOnHit: true # Aurora's Song - Unanchorable>true
+    unanchorOnHit: Unanchorable
     whitelist: # Frontier
       components: # Frontier
         - Anomaly # Frontier

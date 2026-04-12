@@ -64,8 +64,6 @@ public sealed class LockSystem : EntitySystem
         SubscribeLocalEvent<UIRequiresLockComponent, LockToggledEvent>(LockToggled);
 
         SubscribeLocalEvent<ItemToggleRequiresLockComponent, ItemToggleActivateAttemptEvent>(OnActivateAttempt);
-
-        SubscribeLocalEvent<ItemToggleRequiresLockComponent, ItemToggleActivateAttemptEvent>(OnActivateAttempt);
     }
 
     private void OnStartup(EntityUid uid, LockComponent lockComp, ComponentStartup args)

@@ -6,7 +6,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: BaseChemistryEmptyVial
+      - id: ChemistryEmptyVial # Aurora's Song - BaseChemistryEmptyVial>ChemistryEmptyVial
         amount: 8
       - id: CigPackBlue
         amount: 1

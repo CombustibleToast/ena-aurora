@@ -62,7 +62,8 @@
   components:
   - type: EntityTableContainerFill
     containers:
-      entity_storage:
-      - id: FTLDrive160Flatpack
-      - id: FTLDrive160ConsoleFlatpack
+      entity_storage: !type:AllSelector
+        children:
+        - id: FTLDrive160Flatpack
+        - id: FTLDrive160ConsoleFlatpack
 # End Aurora: FTL Drives

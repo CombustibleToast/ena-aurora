@@ -90,7 +90,7 @@
   id: WeaponMasterStaffBase
   components:
   - type: MeleeThrowOnHit
-    unanchorOnHit: true
+    unanchorOnHit: Unanchorable # Aurora's Song - true>Unanchorable
     whitelist:
       components:
       - MobThrowableOnHit

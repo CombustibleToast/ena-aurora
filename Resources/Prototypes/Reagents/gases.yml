@@ -76,13 +76,12 @@
         # Frontier: Sheleg start block
       - !type:Oxygenate
         conditions:
-        - !type:OrganType
-          type: Sheleg
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Sheleg ]
       - !type:ModifyLungGas
         conditions:
-        - !type:OrganType
-          type: Sheleg
-          shouldHave: true
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Sheleg ]
         ratios:
           WaterVapor: 1.0
           Oxygen: -1.0

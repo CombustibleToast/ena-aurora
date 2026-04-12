@@ -6,7 +6,7 @@
   sprites: MobHarpySprites
   markingLimits: MobHarpyMarkingLimits
   dollPrototype: MobHarpyDummy
-  skinColoration: HumanAnimal # DEN
+  skinColoration: Hues # DEN # Aurora's Song HumanToned>Hues
 
 - type: speciesBaseSprites
   id: MobHarpySprites

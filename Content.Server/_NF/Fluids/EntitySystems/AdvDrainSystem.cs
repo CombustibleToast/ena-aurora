@@ -35,7 +35,8 @@ public sealed class AdvDrainSystem : DrainSystem
 
     public override void Initialize()
     {
-        base.Initialize();
+        // base.Initialize(); # This should be running as an independent system
+
         SubscribeLocalEvent<AdvDrainComponent, MapInitEvent>(OnDrainMapInit);
         SubscribeLocalEvent<AdvDrainComponent, GetVerbsEvent<Verb>>(AddEmptyVerb);
         SubscribeLocalEvent<AdvDrainComponent, ExaminedEvent>(OnExamined);
