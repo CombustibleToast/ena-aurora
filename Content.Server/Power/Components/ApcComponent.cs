@@ -60,6 +60,13 @@ public sealed partial class ApcComponent : BaseApcNetComponent
     [DataField]
     public bool TripFlag;
 
+    /// <summary>
+    /// Aurora's Song - Disables breaker tripping
+    /// This was added because NFDev kept tripping
+    /// </summary>
+    [DataField]
+    public bool DisableTripping;
+
     // TODO ECS power a little better!
     // End the suffering
     protected override void AddSelfToNet(IApcNet apcNet)

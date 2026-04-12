@@ -73,7 +73,7 @@ public sealed class ApcSystem : EntitySystem
                 }
                 else
                 {
-                    if (curTime - apc.TripStartTime > apc.TripTime)
+                    if (curTime - apc.TripStartTime > apc.TripTime && !apc.DisableTripping) // Aurora's Song - Add disable for breaker tripping
                     {
                         apc.TripFlag = true;
                         ApcToggleBreaker(uid, apc, battery); // off, we already checked MainBreakerEnabled above
