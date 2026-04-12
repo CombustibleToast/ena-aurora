@@ -216,7 +216,7 @@
     - Snout
 
 - type: entity
-  parent: [ClothingMaskClownBase, BaseFoldable]
+  parent: [ClothingMaskClownBase] # Aurora's Song - Disable foldable BaseFoldable>x
   id: ClothingMaskClown
   description: A clown mask featuring a foldable wig; a true prankster's attire.
   components:
@@ -228,12 +228,13 @@
     foldedHeldPrefix: opened
   - type: Sprite
     sprite: Clothing/Mask/clown.rsi
-    layers:
-    - state: icon
-      map: [ "unfoldedLayer" ]
-    - state: icon-opened
-      map: [ "foldedLayer" ]
-      visible: false
+  # Aurora's Song - Disable folding
+#    layers:
+#    - state: icon
+#      map: [ "unfoldedLayer" ]
+#    - state: icon-opened
+#      map: [ "foldedLayer" ]
+#      visible: false
   - type: Tag
     tags:
     - ClownMask

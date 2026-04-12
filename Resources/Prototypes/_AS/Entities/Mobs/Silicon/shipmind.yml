@@ -17,7 +17,7 @@
     - state: ai_empty
       shader: unshaded
     - state: ai
-      map: ["enum.StationAiVisualState.Key"]
+      map: ["enum.StationAiVisualLayers.Icon"]
       shader: unshaded
       visible: false
   - type: Anchorable

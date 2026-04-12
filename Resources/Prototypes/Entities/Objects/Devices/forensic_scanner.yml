@@ -6,7 +6,7 @@
   components:
   - type: Sprite
     sprite: _NF/Objects/Devices/forensic_scanner.rsi # Frontier: use _NF variant
-    state: icon # Frontier
+    state: forensicnew # Frontier
   - type: Item
     size: Small
     storedRotation: 90
