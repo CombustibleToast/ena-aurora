@@ -8,12 +8,12 @@ using Robust.Shared.Utility;
 using Content.Server._EE.Silicon.Charge;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Popups;
-using Content.Shared.PowerCell;
+using Content.Shared.Power.Components; // Aurora's Song
+using Content.Shared.PowerCell; // Aurora's Song
 using Content.Shared.Popups;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Content.Server._EE.Power.Components;
-using Content.Shared.Power.Components;
 
 namespace Content.Server._EE.Power;
 
@@ -44,7 +44,7 @@ public sealed class BatteryDrinkerSystem : EntitySystem
 
         if (!TryComp<BatteryDrinkerComponent>(args.User, out var drinkerComp) ||
             !TestDrinkableBattery(uid, drinkerComp) ||
-            !_silicon.TryGetSiliconBattery(args.User, out var drinkerBattery))
+            !_silicon.TryGetSiliconBattery(args.User, out _)) // starcup
             return;
 
         AlternativeVerb verb = new()
@@ -87,34 +87,27 @@ public sealed class BatteryDrinkerSystem : EntitySystem
         _doAfter.TryStartDoAfter(args);
     }
 
-    private void OnDoAfter(EntityUid uid, BatteryDrinkerComponent drinkerComp, DoAfterEvent args)
+    private void OnDoAfter(EntityUid drinker, BatteryDrinkerComponent drinkerComp, DoAfterEvent args) // starcup
     {
         if (args.Cancelled || args.Target == null)
             return;
 
         var source = args.Target.Value;
-        var drinker = uid;
         var sourceBattery = Comp<BatteryComponent>(source);
+        var sourceCharge = _battery.GetCharge((source, sourceBattery)); // starcup
 
-        _silicon.TryGetSiliconBattery(drinker, out var drinkerBatteryComponent);
-
-        if (!TryComp(uid, out PowerCellSlotComponent? batterySlot))
+        if (!_silicon.TryGetSiliconBattery(drinker, out var drinkerBatteryMaybe)) // starcup
             return;
-
-        var container = _container.GetContainer(uid, batterySlot.CellSlotId);
-        var drinkerBattery = container.ContainedEntities.First();
 
         TryComp<BatteryDrinkerSourceComponent>(source, out var sourceComp);
 
-        DebugTools.AssertNotNull(drinkerBattery);
-
-        if (drinkerBattery == null)
-            return;
+        var drinkerBattery = drinkerBatteryMaybe.Value; // starcup
+        var drinkerBatteryCharge = _battery.GetCharge(drinkerBattery.AsNullable()); // starcup
 
         var amountToDrink = drinkerComp.DrinkMultiplier * 1000;
 
-        amountToDrink = MathF.Min(amountToDrink, _battery.GetCharge((source, sourceBattery))); // Aurora's Song - Replace sourceBattery.CurrentCharge with _battery.GetCharge
-        amountToDrink = MathF.Min(amountToDrink, drinkerBatteryComponent!.MaxCharge - _battery.GetCharge((drinker, drinkerBatteryComponent)));  // Aurora's Song - Replace .CurrentCharge with _battery.GetCharge
+        amountToDrink = MathF.Min(amountToDrink, sourceCharge); // starcup
+        amountToDrink = MathF.Min(amountToDrink, drinkerBattery.Comp.MaxCharge - drinkerBatteryCharge); // starcup
 
         if (sourceComp != null && sourceComp.MaxAmount > 0)
             amountToDrink = MathF.Min(amountToDrink, (float) sourceComp.MaxAmount);
@@ -126,10 +119,10 @@ public sealed class BatteryDrinkerSystem : EntitySystem
         }
 
         if (_battery.TryUseCharge(source, amountToDrink))
-            _battery.SetCharge(drinkerBattery, _battery.GetCharge((drinker, drinkerBatteryComponent)) + amountToDrink);
+            _battery.SetCharge(drinkerBattery.AsNullable(), drinkerBatteryCharge + amountToDrink); // starcup
         else
         {
-            _battery.SetCharge((drinkerBattery, drinkerBatteryComponent), _battery.GetCharge((source, sourceBattery)) + _battery.GetCharge((drinker, drinkerBatteryComponent)));
+            _battery.SetCharge(drinkerBattery.AsNullable(), sourceCharge + drinkerBatteryCharge); // starcup
             _battery.SetCharge(source, 0);
         }
 
