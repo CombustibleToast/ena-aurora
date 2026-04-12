@@ -146,7 +146,7 @@
   components:
     - type: Sprite
       sprite: Markers/jobs.rsi
-      state: chaplain # Aurora's Song - Revert to chaplain from ertchaplain
+      state: ertchaplain
     - type: RandomHumanoidSpawner
       settings: ERTChaplain
 
@@ -178,7 +178,7 @@
   components:
     - type: Sprite
       sprite: Markers/jobs.rsi
-      state: chaplain # Aurora's Song - Revert to chaplain from ertchaplaineva
+      state: ertchaplaineva
     - type: RandomHumanoidSpawner
       settings: ERTChaplainEVA
 

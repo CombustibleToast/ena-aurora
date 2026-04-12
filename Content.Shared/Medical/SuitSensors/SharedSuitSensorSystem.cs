@@ -436,9 +436,9 @@ public abstract class SharedSuitSensorSystem : EntitySystem
                             _transform.GetInvWorldMatrix(xformQuery.GetComponent(transform.GridUid.Value), xformQuery)));
 
                     // Frontier: check if sensor is on expedition
-                    if (HasComp(transform.MapUid, typeof(SharedSalvageExpeditionComponent)))
-                        locationName = Loc.GetString("suit-sensor-location-expedition");
-                    else if (TryComp(transform.GridUid, out MetaDataComponent? meta))
+                    // if (HasComp(transform.MapUid, typeof(SharedSalvageExpeditionComponent)))
+                    //     locationName = Loc.GetString("suit-sensor-location-expedition");
+                    if (TryComp(transform.GridUid, out MetaDataComponent? meta))
                         locationName = meta.EntityName;
                     else
                         locationName = Loc.GetString("suit-sensor-location-unknown"); // Frontier
