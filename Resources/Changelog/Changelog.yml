@@ -7434,3 +7434,10 @@ Entries:
   id: 9109
   time: '2026-04-12T03:29:03.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/937
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Fiber now fills you up the default amount
+  id: 9110
+  time: '2026-04-13T09:55:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/942
