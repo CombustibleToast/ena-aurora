@@ -158,7 +158,6 @@
     prototypes:
     - NpcGearWizardAdeptPurple
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 50
   - type: Battery
     maxCharge: 800
@@ -206,7 +205,6 @@
     prototypes:
     - NpcGearWizardMasterBlue
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 50
   - type: Battery
     maxCharge: 800

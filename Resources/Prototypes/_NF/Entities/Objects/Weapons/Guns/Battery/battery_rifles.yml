@@ -69,7 +69,6 @@
     maxCharge: 2000
     startingCharge: 2000
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 5
   - type: Appearance
   - type: EmpDescription
@@ -108,7 +107,6 @@
       maxCharge: 2400
       startingCharge: 2400
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 4
 
 #region Thermal

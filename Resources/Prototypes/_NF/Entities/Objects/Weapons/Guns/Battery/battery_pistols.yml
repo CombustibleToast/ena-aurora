@@ -43,7 +43,6 @@
     maxCharge: 1560
     startingCharge: 1560
   - type: BatterySelfRecharger # Recharges 1 shot per 2 seconds
-    autoRecharge: true
     autoRechargeRate: 30
   - type: Tag
     tags:
@@ -246,7 +245,6 @@
     maxCharge: 720 # charge adjusted, more flares | Aurora
     startingCharge: 720 # charge adjusted, more flares | Aurora
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 10
   - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: HoloFlareCyan

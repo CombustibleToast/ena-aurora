@@ -49,7 +49,6 @@
     proto: BloodCultLaser
     fireCost: 100
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 100
   - type: Battery
     maxCharge: 300

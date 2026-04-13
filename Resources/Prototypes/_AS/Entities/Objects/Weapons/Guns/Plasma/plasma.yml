@@ -34,7 +34,6 @@
   - type: PlasmaGun
     GasUsage: 0.18
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 8
   - type: ItemSlots
     slots:

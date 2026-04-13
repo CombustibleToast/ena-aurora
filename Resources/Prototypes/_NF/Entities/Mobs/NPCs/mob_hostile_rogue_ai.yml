@@ -97,7 +97,6 @@
     doAfterDelay: 10
     allowSelfRepair: true
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 100
   - type: Battery
     maxCharge: 300
@@ -884,7 +883,6 @@
     maxCharge: 100
     startingCharge: 100
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 5
 
 #region Tier 3
@@ -934,7 +932,6 @@
     proto: NFTeslaGunBullet
     fireCost: 100
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 30
   - type: Battery
     maxCharge: 300

@@ -212,7 +212,6 @@
     maxCharge: 4000
     startingCharge: 4000
   - type: BatterySelfRecharger # Recharges 1 shot per 5 seconds
-    autoRecharge: true
     autoRechargeRate: 40
 
 - type: entity
@@ -253,7 +252,6 @@
   - type: StaticPrice
     price: 260
   - type: BatterySelfRecharger # Recharges 1 shot per 1 seconds
-    autoRecharge: true
     autoRechargeRate: 25
 
 # endregion - battery rifles | Aurora Song

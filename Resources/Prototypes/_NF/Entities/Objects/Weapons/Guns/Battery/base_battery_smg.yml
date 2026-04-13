@@ -36,7 +36,6 @@
     maxCharge: 2400
     startingCharge: 2400
   - type: BatterySelfRecharger
-    autoRecharge: true
     autoRechargeRate: 3 # Default recharge rate: 1 shot per 20 seconds with 60 fireCost
   - type: StaticPrice
     price: 350
