@@ -7441,3 +7441,12 @@ Entries:
   id: 9110
   time: '2026-04-13T09:55:30.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/942
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Fixed inconsistent sprites on remote traffic consoles
+    - type: Fix
+      message: Mapped the correct consoles onto PB and TS for controlling traffic
+  id: 9111
+  time: '2026-04-13T10:50:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/939
