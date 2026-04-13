@@ -7450,3 +7450,12 @@ Entries:
   id: 9111
   time: '2026-04-13T10:50:56.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/939
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: >-
+        Fixed the temperature damage values for tajaran's so being cold no
+        longer causes heat burns and vice versa
+  id: 9112
+  time: '2026-04-13T10:51:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/941
