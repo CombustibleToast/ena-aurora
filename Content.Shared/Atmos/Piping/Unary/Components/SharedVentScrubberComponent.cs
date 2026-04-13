@@ -23,7 +23,8 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.WaterVapor,
             Gas.Ammonia,
             Gas.NitrousOxide,
-            Gas.Frezon
+            Gas.Frezon,
+            Gas.Helium //AS - Scrub helium by default
         };
 
         // Presets for 'dumb' air alarm modes
