@@ -8,11 +8,12 @@ public static class LoggingExtensions
 
     public static string GetExtraLogs(EntityManager entityManager, EntityUid entity)
     {
+        // TODO: Fix this, entity throwing nullreference error in SharedHandsSystem.Pickup
         // Get details from the stack component to track amount of things in the stack.
-        if (entityManager.HasComponent<StackComponent>(entity))
-        {
-            return $"(StackCount: {_stack.GetCount(entity).ToString()})";
-        }
+        //if (entityManager.HasComponent<StackComponent>(entity))
+        //{
+        //    return $"(StackCount: {_stack.GetCount(entity).ToString()})";
+        //}
 
         // Add more logging things here when needed.
 
