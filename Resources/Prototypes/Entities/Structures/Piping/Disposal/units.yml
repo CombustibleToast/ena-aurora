@@ -93,8 +93,6 @@
     node: disposal_unit
   - type: DisposalUnit
     blacklist:
-      components:
-      - SegmentedEntity
       tags:
       - MantisGreatsword # TheDen - Prevents a potential exploit
   - type: ThrowInsertContainer
