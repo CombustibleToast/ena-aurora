@@ -509,12 +509,13 @@
   name: darts box
   description: A box filled with colorful darts.
   components:
-  - type: Item
-    size: Normal
-    shape:
-    - 0,0,1,1
-  - type: Storage
-    maxItemSize: Tiny
+  # Aurora's Song - Make it like NF so spawns don't get messed up
+#  - type: Item
+#    size: Normal
+#    shape:
+#    - 0,0,1,1
+#  - type: Storage
+#    maxItemSize: Tiny
   - type: Sprite
     layers:
       - state: box
