@@ -775,7 +775,7 @@
       children:
       - id: ClothingUniformJumpsuitMedicalDoctor
       - id: ClothingUniformJumpsuitMilitaryMedicalDoctor
-      - id: ClothingUniformJumpsuitParamedicNT
+      #- id: ClothingUniformJumpsuitParamedicNT #Aurora Song: Removed in upstream
       - id: ClothingUniformJumpsuitParamedic
       - id: ClothingUniformJumpsuitMilitaryParamedic
       - id: ClothingUniformJumpsuitChemistry

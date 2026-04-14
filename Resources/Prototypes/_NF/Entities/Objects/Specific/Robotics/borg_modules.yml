@@ -10,7 +10,7 @@
       sprite: _NF/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
     hands: # Aurora's Song - Replace with upstream hands
-    - item: HandheldHealthAnalyzerUnpowered
+    - item: HandheldHealthAnalyzer # Aurora's Song: HandheldHealthAnalyzerUnpowered: HandheldHealthAnalyzer
     - item: BorgHypoTricordrazine
     - item: BorgHypoInaprovaline
   - type: BorgModuleIcon

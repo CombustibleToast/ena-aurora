@@ -697,7 +697,7 @@
         name: power-cell-slot-component-slot-name-default
         startingItem: PowerCellHigh
   - type: RandomMetadata
-    nameSegments: [NFNFNamesBorg] # Frontier: NFNamesBorg<NFNFNamesBorg
+    nameSegments: [NFNamesBorg] # Frontier: NamesBorg<NFNamesBorg
 
 - type: entity
   parent: PlayerBorgDerelict
