@@ -20,7 +20,7 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
+      storagebase: !type:AllSelector
         children:
         - id: ClothingOuterSuitRad
         - id: GeigerCounter
@@ -31,7 +31,7 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
+      storagebase: !type:AllSelector
         children:
         - id: ClothingOuterBioGeneral
         - id: ClothingHeadHatHoodBioGeneral
@@ -43,7 +43,7 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
+      storagebase: !type:AllSelector
         children:
         - id: ClothingOuterSuitBomb
         - id: ClothingHeadHelmetBombSuit

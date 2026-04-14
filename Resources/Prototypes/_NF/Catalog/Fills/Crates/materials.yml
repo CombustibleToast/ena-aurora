@@ -37,14 +37,24 @@
 
 # region Materials
 - type: entity
-  parent: [ CrateGenericSteel, StorageFillMaterialsBasic ]
+  parent: [ CrateGenericSteel ]
   id: CrateMaterialsBasicFilled
   suffix: Filled, Basic Materials (full)
   name: materials crate
+  component:
+  - type: EntitySelectorContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic
 
 - type: entity
-  parent: [ CrateGenericSteel, StorageFillMaterialsBasic10 ]
+  parent: [ CrateGenericSteel ]
   id: CrateMaterialsBasic10Filled
   suffix: Filled, Basic Materials (10)
   name: materials crate
+  component:
+  - type: EntitySelectorContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: StorageFillMaterialsBasic10
 # endregion Materials

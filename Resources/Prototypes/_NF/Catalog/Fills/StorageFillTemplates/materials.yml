@@ -84,55 +84,27 @@
         - id: JerryCanWeldingFuel
           amount: 2
 
+# Aurora's Song - Convert Basic Materials to `entityTable`s
+
 # Basic Materials
-- type: entity # Full stacks
-  abstract: true
+- type: entityTable # Full stacks
   id: StorageFillMaterialsBasic
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      entity_storage: !type:AllSelector
-        children:
-        - id: SheetSteel
-        - id: SheetGlass
-        - id: SheetPlastic
-        - id: MaterialWoodPlank
-        - id: MaterialCloth
+  table: !type:AllSelector
+    children:
+    - id: SheetSteel
+    - id: SheetGlass
+    - id: SheetPlastic
+    - id: MaterialWoodPlank
+    - id: MaterialCloth
 
-- type: entity # Stacks of 10
-  abstract: true
+- type: entityTable # Stacks of 10
   id: StorageFillMaterialsBasic10
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: SheetSteel10
-        - id: SheetGlass10
-        - id: SheetPlastic10
-        - id: MaterialWoodPlank10
-        - id: MaterialCloth10
+  table: !type:AllSelector
+    children:
+    - id: SheetSteel10
+    - id: SheetGlass10
+    - id: SheetPlastic10
+    - id: MaterialWoodPlank10
+    - id: MaterialCloth10
 
-- type: entity # Full stacks
-  abstract: true
-  id: StorageFillMaterials
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: SheetSteel
-        - id: SheetGlass
-        - id: SheetPlastic
-
-- type: entity # Stacks of 10
-  abstract: true
-  id: StorageFillMaterials10
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: SheetSteel10
-        - id: SheetGlass10
-        - id: SheetPlastic10
+# Aurora's Song - Deleted unused StorageFillMaterials/10
