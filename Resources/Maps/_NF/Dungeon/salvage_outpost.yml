@@ -10652,7 +10652,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: 25.374056,38.46506
       parent: 1653
-- proto: RipleyChassis
+- proto: ASSpawnRipleyParts
   entities:
   - uid: 1796
     components:
