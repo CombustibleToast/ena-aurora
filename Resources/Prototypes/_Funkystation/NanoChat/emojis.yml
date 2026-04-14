@@ -96,10 +96,10 @@
   category: Character
   sprite: /Textures/Interface/Emotes/fizz.png
 
-- type: nanoChatEmoji
-  id: hat
-  category: Character
-  sprite: /Textures/Interface/Emotes/hat.png
+# - type: nanoChatEmoji Aurora's Song, cant find picture?
+#   id: hat
+#   category: Character
+#   sprite: /Textures/Interface/Emotes/hat.png
 
 - type: nanoChatEmoji
   id: hew
@@ -294,7 +294,7 @@
   category: Plushies
   sprite:
     sprite: /Textures/Objects/Fun/Plushies/carp.rsi
-    state: icon
+    state: carplush
 
 - type: nanoChatEmoji
   id: rainbowcarp
