@@ -7520,3 +7520,10 @@ Entries:
   id: 9119
   time: '2026-04-16T03:51:27.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/950
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Imp accessibility notifier
+  id: 9120
+  time: '2026-04-16T05:32:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/946
