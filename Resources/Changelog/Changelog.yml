@@ -7545,3 +7545,14 @@ Entries:
   id: 9122
   time: '2026-04-16T07:14:26.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/954
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added a ChemVend and a medical gun safe to the Caladrius.
+    - type: Tweak
+      message: Changed the power generator on the Caladrius to an AME.
+    - type: Tweak
+      message: Replaced thrusters on the Caladrius with their medic variant.
+  id: 9123
+  time: '2026-04-16T07:18:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/947
