@@ -28,7 +28,7 @@
     state: pda
   - type: Pda
     paiSlot:
-      priority: -4
+      priority: -4 # Aurora's Song
       whitelist:
         components:
         - PAI
@@ -138,6 +138,7 @@
     - WhitelistChameleonPDA
   - type: Input
     context: "human"
+  # Aurora's Song
   #- type: SentienceTarget # sentient PDA = pAI lite
   #  flavorKind: station-event-random-sentience-flavor-mechanical
   #  weight: 0.001 # 1,000 PDAs = as likely to be picked as 1 regular animal
@@ -1167,6 +1168,7 @@
        !type:String
        pda-syndi-operative
   - type: Icon
+    sprite: &upstream-pda-icons Objects/Devices/pda.rsi # Aurora's Song
     state: pda-syndi-operative
 
 - type: entity
@@ -1183,6 +1185,7 @@
        !type:String
        pda-syndi-corpsman
   - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
     state: pda-syndi-corpsman
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
@@ -1205,6 +1208,7 @@
        !type:String
        pda-syndi-commander
   - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
     state: pda-syndi-commander
 
 - type: entity
@@ -1226,6 +1230,7 @@
     accentHColor: "#447987"
     accentVColor: "#447987"
   - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
     state: pda-ert
   - type: CartridgeLoader
     uiKey: enum.PdaUiKey.Key
@@ -1560,6 +1565,7 @@
     borderColor: "#e39751"
     accentVColor: "#DFDFDF"
   - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
     state: pda-seniorcourier
 
 - type: entity
@@ -1576,6 +1582,7 @@
         !type:String
         pda-ninja
   - type: Icon
+    sprite: *upstream-pda-icons # Aurora's Song
     state: pda-ninja
 
 - type: entity
