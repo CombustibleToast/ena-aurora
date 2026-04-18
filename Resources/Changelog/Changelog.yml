@@ -7584,3 +7584,10 @@ Entries:
   id: 9125
   time: '2026-04-17T15:48:50.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/956
+- author: BudaLope
+  changes:
+    - type: Fix
+      message: Fixed nanochat notifications
+  id: 9126
+  time: '2026-04-18T09:37:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/957
