@@ -17,7 +17,7 @@
       - state: stopper
         visible: true
         map: ["enum.OpenableVisuals.Layer"]
-      - state: jug1
+      - state: fill-1
         map: [ "enum.SolutionContainerLayers.Fill" ]
         visible: false
     - type: Item
@@ -69,7 +69,7 @@
         - state: jug
         - state: jug-unlit
           shader: unshaded
-        - state: jug1
+        - state: fill-1
           map: [ "enum.SolutionContainerLayers.Fill" ]
           visible: false
     - type: Item

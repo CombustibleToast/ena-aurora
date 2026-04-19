@@ -18,7 +18,7 @@
   - type: Appearance
 
 - type: entity
-  parent: BaseItem # Frontier: remove BaseGrandTheftContraband
+  parent: BaseHypospray # Frontier: remove BaseGrandTheftContraband
   id: Hypospray
   name: hypospray
   description: A sterile injector for rapid administration of drugs to patients.
@@ -54,7 +54,7 @@
     solutionName: hypospray
 
 - type: entity
-  parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
+  parent: [BaseHypospray, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
   id: SyndiHypo
   name: gorlex hypospray
   description: A sterile injector for rapid administration of drugs. Reverse-engineered from Nanotrasen designs, Cybersun produces these in limited quantities for Gorlex Marauders' corpsmen.

@@ -335,6 +335,7 @@
     - state: solutionSyringe1
       map: ["enum.SolutionContainerLayers.Fill"]
       visible: false
+  - type: Appearance # Aurora's Song
   - type: SolutionContainerVisuals
     maxFillLevels: 1
     fillBaseName: solutionSyringe

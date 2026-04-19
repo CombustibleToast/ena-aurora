@@ -22,7 +22,7 @@
     startingCharge: 360 # Not intended to be a particularly useful power source if so
   - type: PowerCell
   - type: Appearance
-  - type: PowerCellVisuals
+#  - type: PowerCellVisuals # Aurora's Song - Deprecated
   - type: BatterySelfRecharger
      # Takes 30 seconds to charge itself back to full, comparable to WeaponAdvancedLaser (but with special ammo that doesn't hurt player characters)
     autoRechargeRate: 12 # If this needs balanced, consider adding autoRechargePause and autoRechargePauseTime instead of just lowering it (whatever works though)
