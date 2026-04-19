@@ -291,6 +291,7 @@
     bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
       reagents:
       - ReagentId: BlueCuracao
+        Quantity: 100
 #    chemicalMaxVolume: 100 # Aurora's Song - Deprecated
   - type: MeleeWeapon
     soundHit:

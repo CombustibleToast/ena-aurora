@@ -177,7 +177,7 @@
     heldPrefix: box
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:GroupSelector
+      storagebase: !type:GroupSelector
         children:
         - id: PetRock
           prob: 0.8
