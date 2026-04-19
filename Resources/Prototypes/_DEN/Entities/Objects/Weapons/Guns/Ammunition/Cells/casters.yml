@@ -44,7 +44,7 @@
     maxCharge: 1080 # On par with WeaponLaserCarbine's battery for a 54-second recharge in a cell recharger, per direction
     startingCharge: 1080 # The guns still fire as many times as usual, because lethal casters also cost more to fire
   - type: BatterySelfRecharger # 1080 instead of 1000 so the numbers divide evenly by the number of shots
-    autoRecharge: false
+#    autoRecharge: false # Aurora's Song - Deprecated
     autoRechargeRate: 0 # You gotta go plug it in, buddy
 
 - type: entity

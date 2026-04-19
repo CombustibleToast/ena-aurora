@@ -73,6 +73,7 @@
     - type: Temperature # Aurora's Song - Move temperature stuff out of TemperatureDamage
       currentTemperature: 310.15
       specificHeat: 42
+      atmosTemperatureTransferEfficiency: 0.05
     - type: TemperatureDamage # Aurora's Song - Temperature>TemperatureDamage
       heatDamageThreshold: 1800 # GoobStation: Roughly the melting point of mild steels
       coldDamageThreshold: 100 # DeltaV - has to be very cold
@@ -82,7 +83,6 @@
       heatDamage:
         types:
           Heat: 2 # DeltaV - was 3
-      atmosTemperatureTransferEfficiency: 0.05
     - type: Deathgasp
       prototype: SiliconDeathgasp
       needsCritical: false
@@ -235,7 +235,7 @@
     - type: Climbing
     - type: StandingState
     - type: MindContainer
-      showExamineInfo: true
+#      showExamineInfo: true # Aurora's Song - Deprecated
     - type: SSDIndicator
     - type: CanEscapeInventory
     - type: HumanoidAppearance

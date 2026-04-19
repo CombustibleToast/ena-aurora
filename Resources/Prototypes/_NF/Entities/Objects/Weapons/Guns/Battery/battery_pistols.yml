@@ -25,7 +25,8 @@
     maxCharge: 840
     startingCharge: 840
   - type: BatterySelfRecharger # doesn't recharge
-    autoRecharge: false
+#    autoRecharge: false # Aurora's Song - Deprecated
+    autoRechargeRate: 0 # Aurora's Song - Set rate to 0
 
 - type: entity
   categories: [ DoNotMap ]

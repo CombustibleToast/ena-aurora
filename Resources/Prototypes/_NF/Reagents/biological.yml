@@ -26,7 +26,7 @@
         probability: 0.025
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
-          type: Goblin
+          type: [ Goblin ]
           inverted: true
       - !type:GenericStatusEffect
         key: Stutter
@@ -34,7 +34,6 @@
         probability: 0.025
         type: Add
         time: 30
-        refresh: true
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: [ Goblin ]

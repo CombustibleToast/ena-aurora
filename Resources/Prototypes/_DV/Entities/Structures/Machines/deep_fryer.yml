@@ -60,9 +60,9 @@
       - NukeDisk
       - Stack
       - Openable
-      - SpaceCash # Frontier - Cash
+#      - SpaceCash # Frontier - Cash # Aurora's Song - Removed at some point
       - IdCard # Frontier - ID
-      - WebCocoon # Frontier
+#      - WebCocoon # Frontier # Aurora's Song - Removed at some point
       - Pda # Frontier - ID by proxy
     whitelist:
       components:
@@ -157,5 +157,5 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 8
   - type: DeepFryer
-    crispinessLevelSet: Spectral
+#    crispinessLevelSet: Spectral # Aurora's Song - Temporarily? removed crispiness
 # End Frontier

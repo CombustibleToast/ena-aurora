@@ -41,7 +41,7 @@
         startingItem: null
         whitelist:
           components:
-          - Food
+          - Edible # Aurora's Song - Food>Edible
         insertOnInteract: true
         priority: 2
       cash_slot:
@@ -78,7 +78,7 @@
       icon-food:
         whitelist:
           components:
-          - Food
+          - Edible # Aurora's Song - Food>Edible
       icon-cash:
         whitelist:
           components:

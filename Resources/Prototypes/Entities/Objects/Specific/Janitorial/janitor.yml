@@ -29,8 +29,8 @@
     preventMelee: false
   - type: DrainableSolution
     solution: absorbed
-    spillWhenThrown: false
-    preventMelee: false
+#    spillWhenThrown: false # Aurora's Song - Deprecated
+#    preventMelee: false # Aurora's Song - Deprecated
   - type: Wieldable
   - type: IncreaseDamageOnWield
     damage:

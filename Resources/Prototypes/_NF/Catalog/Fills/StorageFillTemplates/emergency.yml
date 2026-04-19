@@ -9,18 +9,18 @@
         children:
         - id: ClothingOuterSuitEmergency
         - id: ClothingMaskBreath
-        - id: EmergencyOxygenTankFilled
-          prob: 0.80
-          orGroup: EmergencyO2TankOrRegularTank
-        - id: OxygenTankFilled
-          prob: 0.20
-          orGroup: EmergencyO2TankOrRegularTank
-        - id: EmergencyNitrogenTankFilled
-          prob: 0.80
-          orGroup: EmergencyN2TankOrRegularTank
-        - id: NitrogenTankFilled
-          prob: 0.20
-          orGroup: EmergencyN2TankOrRegularTank
+        - !type:GroupSelector
+          children:
+          - id: EmergencyOxygenTankFilled
+            prob: 0.80
+          - id: OxygenTankFilled
+            prob: 0.20
+        - !type:GroupSelector
+          children:
+          - id: EmergencyNitrogenTankFilled
+            prob: 0.80
+          - id: NitrogenTankFilled
+            prob: 0.20
         - id: ToolboxEmergencyFilled
           prob: 0.4
         - id: MedkitOxygenFilled
@@ -37,12 +37,12 @@
       entity_storage: !type:AllSelector
         children:
         - id: ClothingMaskBreath
-        - id: EmergencyNitrogenTankFilled
-          prob: 0.80
-          orGroup: EmergencyTankOrRegularTank
-        - id: NitrogenTankFilled
-          prob: 0.20
-          orGroup: EmergencyTankOrRegularTank
+        - !type:GroupSelector
+          children:
+          - id: EmergencyNitrogenTankFilled
+            prob: 0.80
+          - id: NitrogenTankFilled
+            prob: 0.20
 
 - type: entity
   abstract: true

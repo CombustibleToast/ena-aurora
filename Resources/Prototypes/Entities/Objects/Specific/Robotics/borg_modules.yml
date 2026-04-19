@@ -630,7 +630,6 @@
     - item: OreBag
       hand: # Aurora's Song - Allow NF bag whitelist
         emptyRepresentative: OreBag
-        emptyLabel: ore bag
         whitelist:
           components:
           - NFOreBag
@@ -656,7 +655,6 @@
     - item: OreBagOfHolding # Frontier
       hand: # Aurora's Song - Allow NF bag whitelist
         emptyRepresentative: OreBag
-        emptyLabel: ore bag
         whitelist:
           components:
           - NFOreBag

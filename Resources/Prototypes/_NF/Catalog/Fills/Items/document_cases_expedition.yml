@@ -6,11 +6,8 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      storagebase: !type:AllSelector
+      storagebase: !type:GroupSelector
         children:
         - id: NFBlueprintWeaponLaserCannon
-          orGroup: Blueprints
         - id: NFBlueprintWeaponXrayCannon
-          orGroup: Blueprints
         - id: NFBlueprintWeaponTemperatureGun
-          orGroup: Blueprints

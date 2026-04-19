@@ -7,20 +7,17 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
+      entity_storage: !type:GroupSelector
         children:
       # Expected value: 2.8
         - id: GeneratorRTGFlatpack
           amount: 2
-          orGroup: rtg
           prob: 0.4
         - id: GeneratorRTGFlatpack
           amount: 3
-          orGroup: rtg
           prob: 0.4
         - id: GeneratorRTGFlatpack
           amount: 4
-          orGroup: rtg
           prob: 0.2
 
 - type: entity
@@ -186,17 +183,14 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
+      entity_storage: !type:GroupSelector
         children:
         - id: CleanerGrenade
           amount: 2
-          orGroup: cleanades
         - id: CleanerGrenade
           amount: 4
-          orGroup: cleanades
         - id: CleanerGrenade
           amount: 6
-          orGroup: cleanades
 
 - type: entity
   parent: CrateHydroponics

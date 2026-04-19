@@ -132,7 +132,6 @@
       proto: NFRedLightLaser
       fireCost: 50
     - type: BatterySelfRecharger
-      autoRecharge: true
       autoRechargeRate: 40
     - type: Battery
       maxCharge: 55

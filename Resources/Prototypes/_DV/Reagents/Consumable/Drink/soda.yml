@@ -14,7 +14,7 @@
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: [ Human ]
-          shouldHave: false
+          inverted: True
     Food:
       effects:
         - !type:AdjustReagent

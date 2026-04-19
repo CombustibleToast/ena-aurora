@@ -149,7 +149,6 @@
             - Aphrodisiacs
         key: ForcedSleep
         component: ForcedSleeping
-        refresh: false
         type: Add
         probability: 0.1
       - !type:HealthChange # poisons you if you take way too much

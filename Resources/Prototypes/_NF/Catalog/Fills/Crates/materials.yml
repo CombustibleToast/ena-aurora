@@ -41,8 +41,8 @@
   id: CrateMaterialsBasicFilled
   suffix: Filled, Basic Materials (full)
   name: materials crate
-  component:
-  - type: EntitySelectorContainerFill
+  components:
+  - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
         tableId: StorageFillMaterialsBasic
@@ -52,8 +52,8 @@
   id: CrateMaterialsBasic10Filled
   suffix: Filled, Basic Materials (10)
   name: materials crate
-  component:
-  - type: EntitySelectorContainerFill
+  components:
+  - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
         tableId: StorageFillMaterialsBasic10
