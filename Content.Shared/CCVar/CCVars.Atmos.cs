@@ -79,7 +79,7 @@ public sealed partial class CCVars
     ///     unless we truncate it somewhere.
     /// </summary>
     public static readonly CVarDef<float> AtmosSpacingMinGas =
-        CVarDef.Create("atmos.mmos_min_gas", 1.0f, CVar.SERVERONLY); // Frontier 2.0<1.0
+        CVarDef.Create("atmos.mmos_min_gas", 2.0f, CVar.SERVERONLY);
 
     /// <summary>
     ///     How much wind can go through a single tile before that tile doesn't depressurize itself
@@ -135,21 +135,21 @@ public sealed partial class CCVars
     ///     in-game.
     /// </summary>
     public static readonly CVarDef<float> AtmosSpeedup =
-        CVarDef.Create("atmos.speedup", 2f, CVar.SERVERONLY); // Frontier 8f<2f
+        CVarDef.Create("atmos.speedup", 8f, CVar.SERVERONLY);
 
     /// <summary>
     ///     Like atmos.speedup, but only for gas and reaction heat values. 64x means
     ///     gases heat up and cool down 64x faster than real life.
     /// </summary>
     public static readonly CVarDef<float> AtmosHeatScale =
-        CVarDef.Create("atmos.heat_scale", 2f, CVar.REPLICATED | CVar.SERVER); // Frontier 8f<2f
+        CVarDef.Create("atmos.heat_scale", 8f, CVar.REPLICATED | CVar.SERVER);
 
     /// <summary>
     ///     Maximum explosion radius for explosions caused by bursting a gas tank ("max caps").
     ///     Setting this to zero disables the explosion but still allows the tank to burst and leak.
     /// </summary>
     public static readonly CVarDef<float> AtmosTankFragment =
-        CVarDef.Create("atmos.max_explosion_range", 5f, CVar.SERVERONLY); // Frontier: 26<5 (matches wizden TOMLs)
+        CVarDef.Create("atmos.max_explosion_range", 26f, CVar.SERVERONLY);
 
     /// <summary>
     /// Whether atmospherics will process delta-pressure damage on entities with a DeltaPressureComponent.
