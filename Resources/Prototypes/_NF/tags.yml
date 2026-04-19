@@ -6,16 +6,6 @@
 - type: Tag
   id: VehicleKey
 
-# Aurora's Song - Stuff from 2026-01-16 upmerge
-- type: Tag
-  id: ATVKeys
-
-- type: Tag
-  id: DeathAcidifier
-
-- type: Tag
-  id: Wringer
-
 #region Dungeon
 - type: Tag
   id: NFCaveFactory

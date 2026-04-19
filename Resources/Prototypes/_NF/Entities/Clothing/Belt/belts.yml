@@ -45,8 +45,8 @@
           - Bottle
           - DrinkBottle
           components:
-          - Drink
-          - Hypospray
+          - Edible # Aurora's Song - Drink>Edible
+          - Injector # Aurora's Song - Hypospray>Injector
       censer:
         whitelist:
           tags:

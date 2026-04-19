@@ -127,7 +127,7 @@
       rootTask:
         task: SimpleRangedHostileCompound
     - type: Stamina
-      critThreshold: 300
+      baseCritThreshold: 300 # Aurora's Song - critThreshold>baseCritThreshold
     - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
       proto: NFRedLightLaser
       fireCost: 50

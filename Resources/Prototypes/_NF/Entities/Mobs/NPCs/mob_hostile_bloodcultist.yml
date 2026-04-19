@@ -419,8 +419,11 @@
     energy: 1.2
     softness: 1
   - type: Bloodstream
-    bloodReagent: Ammonia
-    chemicalMaxVolume: 100
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: Ammonia
+        Quantity: 300
+#    chemicalMaxVolume: 100 # Aurora's Song - Deprecated
   - type: Speech
     speechVerb: Ghost
   - type: Ammo

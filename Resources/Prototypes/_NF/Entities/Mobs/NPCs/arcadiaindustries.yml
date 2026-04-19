@@ -52,7 +52,7 @@
         0: Alive
         25: Dead
     - type: Stamina
-      critThreshold: 25
+      baseCritThreshold: 25 # Aurora's Song - critThreshold>baseCritThreshold
     - type: MovementAlwaysTouching
     - type: DamageStateVisuals
       states:
@@ -72,7 +72,10 @@
     - type: Damageable
       damageContainer: Inorganic
     - type: Bloodstream
-      bloodReagent: Oil
+      bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+        reagents:
+        - ReagentId: Oil
+          Quantity: 300
       bloodlossDamage:
         types:
           Bloodloss:
@@ -110,7 +113,7 @@
         0: Alive
         120: Dead
     - type: Stamina
-      critThreshold: 100
+      baseCritThreshold: 100 # Aurora's Song - critThreshold>baseCritThreshold
     - type: SlowOnDamage
       speedModifierThresholds:
         50: 0.8
@@ -129,7 +132,10 @@
     - type: Damageable
       damageContainer: Inorganic
     - type: Bloodstream
-      bloodReagent: Oil
+      bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+        reagents:
+        - ReagentId: Oil
+          Quantity: 300
       bloodlossDamage:
         types:
           Bloodloss:
@@ -201,7 +207,10 @@
     - type: Damageable
       damageContainer: Inorganic
     - type: Bloodstream
-      bloodReagent: Oil
+      bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+        reagents:
+        - ReagentId: Oil
+          Quantity: 300
       bloodlossDamage:
         types:
           Bloodloss:

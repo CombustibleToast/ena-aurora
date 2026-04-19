@@ -63,8 +63,10 @@
   - type: NameIdentifier
     group: Silicon
   - type: Bloodstream
-    bloodReagent: WeldingFuel
-    bloodMaxVolume: 60
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 60
   - type: MobState
     allowedStates:
     - Alive
@@ -232,8 +234,10 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: Bloodstream
-    bloodReagent: WeldingFuel
-    bloodMaxVolume: 6
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 6
   - type: MobThresholds
     thresholds:
       0: Alive

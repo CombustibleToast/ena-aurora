@@ -1,4 +1,4 @@
-# Aurora's Song - Add back rifle mags
+﻿# Aurora's Song - Add back rifle mags, this file originally came from upstream
 - type: entity
   id: BaseMagazineCaselessRifle
   name: "magazine (.25 caseless)"

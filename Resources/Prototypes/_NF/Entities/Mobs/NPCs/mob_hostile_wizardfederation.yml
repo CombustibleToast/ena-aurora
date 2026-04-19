@@ -288,8 +288,10 @@
       0: Alive
       150: Dead
   - type: Bloodstream
-    bloodReagent: BlueCuracao
-    chemicalMaxVolume: 100
+    bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
+      reagents:
+      - ReagentId: BlueCuracao
+#    chemicalMaxVolume: 100 # Aurora's Song - Deprecated
   - type: MeleeWeapon
     soundHit:
       collection: AlienClaw

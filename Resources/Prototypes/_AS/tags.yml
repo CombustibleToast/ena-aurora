@@ -1,4 +1,20 @@
-﻿#region .30 rifle
+﻿# Added back stuff from upmerge
+- type: Tag
+  id: ATVKeys
+
+- type: Tag
+  id: DeathAcidifier
+
+- type: Tag
+  id: Katana
+
+- type: Tag
+  id: MagazineCaselessRifle
+
+- type: Tag
+  id: Wringer
+
+#region .30 rifle
 - type: Tag
   id: ASMagazineMarksmanRifle30
 
