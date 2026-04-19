@@ -18,9 +18,9 @@
     maxTransferAmount: 2
   - type: Injector # Aurora's Song - Replace with updated Injector
     currentTransferAmount: null
-    activeModeProtoId: HyposprayInjectMode
+    activeModeProtoId: SyringeDrawMode
     allowedModes:
-    - HyposprayInjectMode
+    - SyringeDrawMode
   # Aurora's Song - Comment out nonfunctional injector
 #  - type: Injector
 #    injectOnly: false
@@ -210,13 +210,11 @@
     solution: injector
   - type: SolutionTransfer
     maxTransferAmount: 5
-  - type: Injector
-    injectOnly: false
-    ignoreMobs: true
-    minTransferAmount: 5
-    maxTransferAmount: 5
-    transferAmount: 5
-    toggleState: Draw
+  - type: Injector # Aurora's Song - Replace with updated Injector
+    currentTransferAmount: null
+    activeModeProtoId: SyringeDrawMode
+    allowedModes:
+    - SyringeDrawMode
 
 # Craftable variations
 - type: Tag
@@ -551,7 +549,7 @@
     deleteOnCollide: true
   - type: SpawnOnTrigger
     proto: CrossbowBoltShrapnelSpread
-    mapCoords: true # shouldn't be parented to colliding object
+    useMapCoords: true # shouldn't be parented to colliding object # Aurora's Song - useMapCoords
   - type: Construction
     graph: CraftCrossbowBoltShrapnel
     node: CraftCrossbowBoltShrapnel
