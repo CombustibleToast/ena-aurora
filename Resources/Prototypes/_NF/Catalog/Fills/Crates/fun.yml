@@ -62,7 +62,7 @@
     containers:
       entity_storage: !type:AllSelector
         children:
-        - id: GlowstickBase
+        - id: GlowstickGreen # Aurora's Song - GlowstickBase>GlowstickGreen
           amount: 1
         - id: GlowstickBlue
           amount: 1
