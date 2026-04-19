@@ -1167,6 +1167,8 @@
   name: syndicate operative PDA
   description: Death to NT!
   components:
+  - type: Sprite
+    sprite: &upstream-pda-sprite Objects/Devices/pda.rsi # Aurora's Song - Use default
   - type: Pda
     id: SyndiOperativeIDCard
   - type: Appearance
@@ -1562,6 +1564,8 @@
   name: senior courier PDA
   description: Smells like postage stamps and shuttle fuel.
   components:
+  - type: Sprite
+    sprite: *upstream-pda-sprite # Aurora's Song - Use default
   - type: Pda
     id: CargoIDCard
   - type: Appearance
@@ -1582,6 +1586,8 @@
   name: ninja PDA
   description: You stealthy bastard, you!
   components:
+  - type: Sprite
+    sprite: *upstream-pda-sprite # Aurora's Song - Use default
   - type: Pda
     id: NinjaIDCard
   - type: Appearance

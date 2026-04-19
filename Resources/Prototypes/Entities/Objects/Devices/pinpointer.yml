@@ -234,6 +234,10 @@
     layers:
     - state: pinpointer-xenoborg-repaired
       map: ["enum.PinpointerLayers.Base"]
+    - state: pinonnull # Aurora's Song - Missing in Integration test
+      map: [ "enum.PinpointerLayers.Screen" ]
+      shader: unshaded
+      visible: false
   - type: Icon
     state: pinpointer-xenoborg-repaired
   - type: Construction

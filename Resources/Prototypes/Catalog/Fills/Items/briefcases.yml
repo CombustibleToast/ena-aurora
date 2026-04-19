@@ -25,10 +25,10 @@
       storagebase: !type:AllSelector
         children:
         - id: NFWeaponRifleSniperHristov # Frontier: WeaponSniperHristov<NFWeaponRifleSniperHristov
+        - id: ClothingUniformJumpsuitLawyerBlack # Aurora's Song - Move up because fill order
         - id: NFAmmunitionBoxRifle60 # Frontier: MagazineBoxAntiMateriel<NFAmmunitionBoxRifle60
         - id: ClothingNeckTieRed
         - id: ClothingHandsGlovesLatex
-        - id: ClothingUniformJumpsuitLawyerBlack
         - id: BarberScissors
 
 - type: entity

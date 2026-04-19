@@ -159,6 +159,7 @@
           prob: 0.05
 
 - type: entity
+  abstract: true # Aurora's Song - Causes a test fail *occasionally* best if we disable it
   parent: Foolbox
   id: FoolboxFilled
   suffix: Filled

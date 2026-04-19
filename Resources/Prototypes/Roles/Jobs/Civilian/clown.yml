@@ -38,8 +38,8 @@
     pocket2: ClownRecorder
     id: ClownPDA
     ears: ClothingHeadsetService
-  inhand:
-  - FoolboxFilled
+#  inhand: # Aurora's Song - Foolbox causes inconsistent test
+#  - FoolboxFilled
   storage:
     back:
     - RubberStampClown

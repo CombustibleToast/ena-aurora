@@ -18,6 +18,9 @@
     solution: drink
   - type: Item
     size: Normal
+  - type: Tag
+    tags:
+    - DrinkBottle # Needed to fit in the soda dispenser # Aurora's Song - Why not? Also fixes imp coffee machine
 
 - type: entity
   abstract: true

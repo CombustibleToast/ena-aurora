@@ -23,6 +23,7 @@
   - type: Tag
     tags:
     - ChemDispensable
+    - DrinkBottle # Needed to fit in the soda dispenser # Aurora's Song - Why not? Also fixes imp coffee machine
   - type: TrashOnSolutionEmpty # Frontier
     solution: beaker # Frontier
 

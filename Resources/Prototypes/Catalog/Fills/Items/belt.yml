@@ -185,12 +185,12 @@
     containers:
       storagebase: !type:AllSelector
         children:
+        - id: MedkitCombatFilled # Aurora's Song - Make sure larger items spawn first
         - id: ChemistryBottleEpinephrine
           amount: 2
         - id: ChemistryBottleEphedrine
           amount: 2
         - id: ChemistryBottleOmnizine
-        - id: MedkitCombatFilled
 
 - type: entity
   parent: ClothingBeltWand

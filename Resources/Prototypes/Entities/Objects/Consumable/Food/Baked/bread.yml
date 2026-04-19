@@ -6,8 +6,9 @@
   parent: [ FoodInjectableBase, LaunchableProjectileBase ] # Frontier: added LaunchableProjectileBase, located in \Resources\Prototypes\_NF\Entities\Objects\Weapons\Guns\Projectiles\base_projectiles.yml
   id: FoodBreadBase
   components:
-  - type: Item
-    size: Normal
+  # Aurora's Song - Leave bread size alone
+#  - type: Item
+#    size: Normal
   - type: FlavorProfile
     flavors:
       - bread
@@ -712,8 +713,9 @@
     equippedPrefix: baguette
     quickEquip: false
   - type: Item
-    shape:
-    - 0,0,0,3
+  # Aurora's Song - Leave shape alone
+#    shape:
+#    - 0,0,0,3
     storedRotation: -45
     inhandVisuals:
       left:

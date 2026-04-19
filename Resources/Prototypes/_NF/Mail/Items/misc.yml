@@ -222,7 +222,7 @@
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
-      entity_storage: !type:AllSelector
+      storagebase: !type:AllSelector
         children:
         - id: CigarPlatinum
           amount: 8

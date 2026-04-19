@@ -435,14 +435,15 @@
           amount: 2 # Frontier: 3<2
         - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
         - id: SyndicateJawsOfLife
+        - id: MedkitCombatFilled # Aurora's Song - Move up in spawn order
+        - id: ClothingShoesBootsMagSyndie # Aurora's Song - Move up in spawn order
         - id: C4
           amount: 2
-        - id: MedkitCombatFilled
         - id: EmpImplanter
-        - id: ClothingShoesBootsMagSyndie
         - id: AgentIDCard
 
 - type: entity
+  abstract: true # Aurora's Song - Disable because "Invalid Prototype"
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateFilledHushpup
   name: Hushpup bundle

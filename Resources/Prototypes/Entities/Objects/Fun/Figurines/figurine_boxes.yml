@@ -39,6 +39,9 @@
       - id: MysteryFigureBoxTrash
       - !type:NestedSelector
         tableId: AllFigurinesTable
+  - type: Tag
+    tags:
+    - MysteryFigureBox # Aurora's Song - Add whitelist for bulk box
 
 - type: entity
   parent: BaseItem

@@ -265,7 +265,7 @@
       children:
       - id: FoamCrossbow
       - id: NFWeaponRifleFoam # Frontier: WeaponRifleFoam>NFWeaponRifleFoam
-    - id: BoxDonkSoftBox
+    - id: NFBoxDonkSoftBox # Aurora's Song - Add NFBoxDonkSoftBox from NF
 
 - type: entityTable
   id: RandomCapGunTable
@@ -280,7 +280,7 @@
       prob: 0.9
       children:
       - id: NFSpeedLoaderCap # Frontier: SpeedLoaderCap<NFSpeedLoaderCap
-      - id: BoxCartridgeCap
+      - id: NFBoxCartridgeCap # Aurora's Song - BoxCartridgeCap>NFBoxCartridgeCap
 
 # A group of items with fun or unique properties. Highly varied (some are more fun than others)
 - type: entityTable # size 2x2  # price 100

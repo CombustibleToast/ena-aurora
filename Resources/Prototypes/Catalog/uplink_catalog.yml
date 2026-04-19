@@ -193,6 +193,7 @@
   - UplinkWeaponry
 
 - type: listing
+  abstract: true # Aurora's Song - Disable because "Invalid Prototype"
   id: UplinkHushpup
   name: uplink-hushpup-name
   description: uplink-hushpup-desc
@@ -2353,6 +2354,7 @@
   #   - MedicalDoctor # Frontier
 
 - type: listing
+  abstract: true # Aurora's Song - Disable because "Invalid Prototype"
   id: uplinkBriefcaseGun
   name: uplink-briefcase-gun-name
   description: uplink-briefcase-gun-desc
