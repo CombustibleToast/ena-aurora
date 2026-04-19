@@ -44,7 +44,7 @@
   - type: Sprite
     layers:
     - state: default
-    - sprite: &icon-rsi _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+    - sprite: &icon-rsi Interface/Misc/job_icons.rsi
       offset: &icon-offset -0.09375, 0.0625 #3 pixels left, 2 pixels up
       state: Passenger
   - type: PresetIdCard
@@ -999,7 +999,7 @@
       color: *color-syndicate-top
     - state: stripe_bottom
       color: *color-syndicate-bottom
-    - sprite: &upstream-icon-rsi Interface/Misc/job_icons.rsi # Aurora's Song - Use upstream icons for ERT
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: SyndicateOperative
   - type: AgentIDCard
@@ -1018,7 +1018,7 @@
       color: *color-syndicate-top
     - state: stripe_bottom
       color: *color-syndicate-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: SyndicateCorpsman
   - type: IdCard
@@ -1036,7 +1036,7 @@
       color: *color-syndicate-top
     - state: stripe_bottom
       color: *color-syndicate-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: SyndicateCommander
   - type: IdCard
@@ -1075,7 +1075,7 @@
   - type: Sprite
     layers:
     - state: pirate
-    - sprite: *upstream-icon-rsi # Aurora's SongI
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: Pirate
   - type: Item
@@ -1103,7 +1103,7 @@
   - type: Sprite
     layers:
     - state: wizard
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: Wizard
   - type: Item
@@ -1150,7 +1150,7 @@
       color: *color-centcomm-top
     - state: stripe_bottom
       color: *color-centcomm-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: ERTLeader
   - type: Item
@@ -1170,7 +1170,7 @@
       color: *color-service-top
     - state: stripe_bottom
       color: *color-service-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: ERTChaplain
   - type: Item
@@ -1190,7 +1190,7 @@
       color: *color-engineering-top
     - state: stripe_bottom
       color: *color-engineering-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: ERTEngineer
   - type: Item
@@ -1210,7 +1210,7 @@
       color: *color-service-top
     - state: stripe_bottom
       color: *color-service-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: ERTJanitor
   - type: Item
@@ -1230,7 +1230,7 @@
       color: *color-medical-top
     - state: stripe_bottom
       color: *color-medical-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: ERTMedical
   - type: Item
@@ -1250,7 +1250,7 @@
       color: *color-security-top
     - state: stripe_bottom
       color: *color-security-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: ERTSecurity
   - type: Item
@@ -1270,7 +1270,7 @@
       color: *color-centcomm-top
     - state: stripe_bottom
       color: *color-centcomm-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: DeathSquad
   - type: PresetIdCard
@@ -1289,7 +1289,7 @@
       color: *color-centcomm-top
     - state: stripe_bottom
       color: *color-centcomm-bottom
-    - sprite: *upstream-icon-rsi # Aurora's Song
+    - sprite: *icon-rsi
       offset: *icon-offset
       state: CBURN
   - type: Item
