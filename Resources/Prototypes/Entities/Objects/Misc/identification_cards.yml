@@ -928,7 +928,7 @@
 #Antags
 
 - type: entity
-  parent: [PassengerIDCard, BaseChameleon]
+  parent: [PassengerIDCard, BaseChameleon, BaseC3SyndicateContraband] # Aurora's Song - Add syndicate contraband
   id: AgentIDCard
   suffix: Agent
   components:
