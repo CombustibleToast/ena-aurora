@@ -45,12 +45,12 @@ namespace Content.Server.Speech.EntitySystems
 
         private void OnAccent(Entity<ScrambledAccentComponent> entity, ref AccentGetEvent args)
         {
-            args.Message = Accentuate(args.Message, component); // Aurora - pass component
+            args.Message = Accentuate(args.Message, entity.Comp); // Aurora - pass component
         }
 
         private void OnAccentRelayed(Entity<ScrambledAccentComponent> entity, ref StatusEffectRelayedEvent<AccentGetEvent> args)
         {
-            args.Args.Message = Accentuate(args.Args.Message);
+            args.Args.Message = Accentuate(args.Args.Message, entity.Comp); // Aurora - pass component
         }
     }
 }
