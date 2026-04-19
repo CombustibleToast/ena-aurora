@@ -849,256 +849,400 @@
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxLethal20
   id: WeaponCaseShortAmmoBoxLethal20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal20
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigLethal20
   id: WeaponCaseShortAmmoBoxBigLethal20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigLethal20
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxRubber20
   id: WeaponCaseShortAmmoBoxRubber20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber20
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigRubber20
   id: WeaponCaseShortAmmoBoxBigRubber20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigRubber20
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxPractice20
   id: WeaponCaseShortAmmoBoxPractice20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice20
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxIncendiary20
   id: WeaponCaseShortAmmoBoxIncendiary20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary20
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxUranium20
   id: WeaponCaseShortAmmoBoxUranium20
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium20
 
 ## .30 rifle
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxLethal30
   id: WeaponCaseShortAmmoBoxLethal30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal30
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigLethal30
   id: WeaponCaseShortAmmoBoxBigLethal30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigLethal30
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxRubber30
   id: WeaponCaseShortAmmoBoxRubber30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber30
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxPractice30
   id: WeaponCaseShortAmmoBoxPractice30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice30
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxIncendiary30
   id: WeaponCaseShortAmmoBoxIncendiary30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary30
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxUranium30
   id: WeaponCaseShortAmmoBoxUranium30
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium30
 
 ## .35 pistol
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxLethal35
   id: WeaponCaseShortAmmoBoxLethal35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal35
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxRubber35
   id: WeaponCaseShortAmmoBoxRubber35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber35
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxPractice35
   id: WeaponCaseShortAmmoBoxPractice35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice35
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxIncendiary35
   id: WeaponCaseShortAmmoBoxIncendiary35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary35
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxUranium35
   id: WeaponCaseShortAmmoBoxUranium35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium35
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxEmp35
   id: WeaponCaseShortAmmoBoxEmp35
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxEmp35
 
 ## .25 caseless
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxLethal25
   id: WeaponCaseShortAmmoBoxLethal25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal25
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigLethal25
   id: WeaponCaseShortAmmoBoxBigLethal25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigLethal25
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxRubber25
   id: WeaponCaseShortAmmoBoxRubber25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber25
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxBigRubber25
   id: WeaponCaseShortAmmoBoxBigRubber25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxBigRubber25
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxPractice25
   id: WeaponCaseShortAmmoBoxPractice25
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice25
 
 ## Shotgun
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxLethalShotgun
   id: WeaponCaseShortAmmoBoxLethalShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethalShotgun
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxRubberShotgun
   id: WeaponCaseShortAmmoBoxRubberShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubberShotgun
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxPracticeShotgun
   id: WeaponCaseShortAmmoBoxPracticeShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPracticeShotgun
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxIncendiaryShotgun
   id: WeaponCaseShortAmmoBoxIncendiaryShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiaryShotgun
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxUraniumShotgun
   id: WeaponCaseShortAmmoBoxUraniumShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUraniumShotgun
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxSlugShotgun
   id: WeaponCaseShortAmmoBoxSlugShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxSlugShotgun
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxFlareShotgun
   id: WeaponCaseShortAmmoBoxFlareShotgun
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxFlareShotgun
 
 ## .45 ammo
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxLethal45
   id: WeaponCaseShortAmmoBoxLethal45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxLethal45
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxRubber45
   id: WeaponCaseShortAmmoBoxRubber45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxRubber45
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxPractice45
   id: WeaponCaseShortAmmoBoxPractice45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxPractice45
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxIncendiary45
   id: WeaponCaseShortAmmoBoxIncendiary45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxIncendiary45
 
 - type: entity
   parent:
   - WeaponCaseShortAmmo
-  - StorageFillAmmoBoxUranium45
   id: WeaponCaseShortAmmoBoxUranium45
   categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillAmmoBoxUranium45
