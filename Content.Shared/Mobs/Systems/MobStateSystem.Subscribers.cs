@@ -1,4 +1,5 @@
-﻿using Content.Shared.Bed.Sleep;
+﻿using Content.Shared._NF.Standing; // Aurora's Song
+using Content.Shared.Bed.Sleep;
 using Content.Shared.Buckle.Components;
 using Content.Shared.CombatMode.Pacification;
 using Content.Shared.Damage;
@@ -61,6 +62,9 @@ public partial class MobStateSystem
 
     private void Down(EntityUid target)
     {
+        if (HasComp<PreventDropOnDownedComponent>(target)) // Aurora's Song - Prevent drop on downed
+            return;
+
         _standing.Down(target);
         var ev = new DropHandItemsEvent();
         RaiseLocalEvent(target, ref ev);
