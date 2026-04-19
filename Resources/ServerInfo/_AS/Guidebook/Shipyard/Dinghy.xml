@@ -1,0 +1,29 @@
+<Document>
+  # DINGHY-CLASS SHUTTLE
+  <Box>
+    <GuideEntityEmbed Entity="EngineeringTechFab" Caption="Engineering"/>
+    <GuideEntityEmbed Entity="NFInflatableWall" Caption="Inflatable walls"/>
+    <GuideEntityEmbed Entity="CrateMaterialsBasicFilled" Caption="Materials"/>
+  </Box>
+  <Box>
+    <GuideEntityEmbed Entity="ShuttleMapDinghy" Caption=""/>
+  </Box>
+  [color=#a4885c]Ship Size:[/color] Small
+
+  [color=#a4885c]Recommended Crew:[/color] 1+
+
+  [color=#a4885c]Power Gen Type:[/color] AME
+
+  [color=#a4885c]Expeditions:[/color] Yes
+
+  [color=#a4885c]IFF Console:[/color] None
+
+  [color=#a4885c]Available Roles:[/color] Contractor, Pilot, Mercenary
+
+  "The budget option, or the start of something greater. Basically a metal plate with a plastic dome, barely capable of planetary travel. Doesn't hold air very well. Includes some basic materials to begin constructing your own vessel*."
+
+  ## Sidenotes
+
+  * - Dinghy-class ships are intended to be a versatile platform to build and test shuttle designs for experienced shuttle engineers.
+
+</Document>

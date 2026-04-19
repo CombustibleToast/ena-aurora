@@ -27,7 +27,7 @@
 
 - type: gameMap
   id: Scorpion
-  mapName: 'KC Scorpion'
+  mapName: 'BH Scorpion'
   mapPath: /Maps/_AS/Shuttles/Expedition/scorpion.yml
   minPlayers: 0
   stations:

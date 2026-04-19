@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Shuttle Notes:
+# basically an exped construct.  Gobb Tinkerworks
+- type: vessel
+  id: Dinghy
+  parent: BaseVessel
+  name: GT Dinghy
+  description: The budget option, or the start of something greater. Doesn't hold air very well. Includes some basic materials.
+  price: 50000 # ~13000 appraise, minimum 50k price
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_AS/Shuttles/Scrap/dinghy.yml
+  guidebookPage: ShipyardDinghy
+  class:
+  - Expedition
+  - Engineering
+  engine:
+  - AME
+
+- type: gameMap
+  id: Dinghy
+  mapName: 'GT Dinghy'
+  mapPath: /Maps/_AS/Shuttles/Scrap/dinghy.yml
+  minPlayers: 0
+  stations:
+    Dinghy:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Dinghy {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

@@ -61,7 +61,9 @@
   - ShipyardTide
   - ShipyardVagabond
   - ShipyardVitalis
-
+#Aurora's Song start
+  - ShipyardDinghy
+#Aurora's Song end
 - type: guideEntry
   id: ShipyardAdder
   name: guide-entry-shipyard-adder
@@ -346,3 +348,10 @@
   id: ShipyardVitalis
   name: guide-entry-shipyard-vitalis
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Vitalis.xml" #Modified by Aurora Song
+
+#Aurora's Song 
+- type: guideEntry
+  id: ShipyardDinghy
+  name: guide-entry-shipyard-dinghy
+  text: "/ServerInfo/_AS/Guidebook/Shipyard/Dinghy.xml"
+#Aurora's Song end

@@ -556,18 +556,18 @@
 - type: entity
   parent: BaseComputerTrafficLocal
   id: ComputerShuttleFrontierOutpostLocal
-  name: Frontier Outpost traffic console
-  description: Monitors the traffic around Frontier Outpost.
+  name: Port Boreal traffic console # # Aurora's Song Frontier Outpost -> Port Boreal
+  description: Monitors the traffic around Port Boreal. # Aurora's Song - Frontier Outpost -> Port Boreal
   suffix: Local
   components:
   - type: NFDroneConsoleTarget
-    id: Aurora # Aurora Song - Changed from Frontier to Aurora
+    id: Aurora # Aurora's Song - Changed from Frontier to Aurora
 
 - type: entity
   parent: BaseComputerTrafficRemote
   id: ComputerShuttleFrontierOutpostRemote
-  name: Frontier Outpost traffic console
-  description: Monitors the traffic around Frontier Outpost.
+  name: Port Boreal remote traffic console # Aurora's Song - Frontier Outpost -> Port Boreal remote
+  description: Monitors the traffic around Port Boreal. # Aurora's Song - Frontier Outpost -> Port Boreal
   suffix: Remote
   components:
   - type: NFDroneConsole
@@ -576,9 +576,9 @@
 - type: entity
   parent: BaseComputerTrafficLocal
   id: ComputerShuttleTradeOutpostLocal
-  name: Trade Outpost traffic console
+  name: Trade Spine traffic console  # Aurora's Song - Trade Outpost -> Trade Spine
   suffix: Local
-  description: Monitors the traffic around the Trade Outpost.
+  description: Monitors the traffic around the Trade Spine. # Aurora's Song - Trade Outpost -> Trade Spine
   components:
   - type: NFDroneConsoleTarget
     id: Trade
@@ -586,9 +586,9 @@
 - type: entity
   parent: BaseComputerTrafficRemote
   id: ComputerShuttleTradeOutpostRemote
-  name: Trade Outpost traffic console
+  name: Trade Spine remote traffic console  # Aurora's Song - Trade Outpost -> Trade Spine remote
   suffix: Remote
-  description: Monitors the traffic around the Trade Outpost.
+  description: Monitors the traffic around the Trade Spine. # Aurora's Song - Trade Outpost -> Trade Spine
   components:
   - type: NFDroneConsole
     id: Trade

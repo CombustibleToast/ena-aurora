@@ -8,10 +8,16 @@
   order: 2
   lawString: law-shipmind-2
 
+- type: siliconLaw
+  id: shipmind3
+  order: 3
+  lawString: law-shipmind-3
+
 
 - type: siliconLawset
   id: shipmind
   laws:
   - shipmind1
   - shipmind2
+  - shipmind3
   obeysTo: laws-owner-station

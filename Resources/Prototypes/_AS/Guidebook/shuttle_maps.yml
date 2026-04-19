@@ -1,0 +1,11 @@
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapDinghy
+  name: "AS Dinghy"
+  description: "Detailed map of a Dinghy shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _AS/Guidebook/shuttle_maps/128x96.rsi
+    state: dinghy
+    scale: 1.2, 1.2

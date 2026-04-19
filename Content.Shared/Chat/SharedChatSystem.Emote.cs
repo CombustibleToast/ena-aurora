@@ -180,8 +180,8 @@ public abstract partial class SharedChatSystem
         var validEmote = false; // DeltaV - Multiple emotes for the same trigger
         foreach (var emote in emotes)
         {
-            if (!AllowedToUseEmote(source, emote))
-                continue;
+            // if (!AllowedToUseEmote(uid, emote)) AS: Remove emote restrictions.
+            //     continue;
 
             if (TryInvokeEmoteEvent(source, emote))
             {

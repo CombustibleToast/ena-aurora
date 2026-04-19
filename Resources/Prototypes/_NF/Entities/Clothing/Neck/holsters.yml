@@ -16,6 +16,10 @@
         whitelist:
           tags:
           - Sidearm
+        ejectSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
+        insertSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
       magazine:
         priority: 3
         name: clothing-neck-magazine

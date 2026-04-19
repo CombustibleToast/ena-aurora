@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 03/02/2026 10:24:42
-  entityCount: 3989
+  time: 04/11/2026 23:27:36
+  entityCount: 3990
 maps: []
 grids:
 - 2
@@ -9867,6 +9867,14 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -20.5,-6.5
+      parent: 2
+- proto: ComputerShuttleTradeOutpostLocal
+  entities:
+  - uid: 3990
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: -25.5,1.5
       parent: 2
 - proto: ComputerTabletopCargoOrders
   entities:

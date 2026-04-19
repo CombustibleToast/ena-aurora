@@ -64,7 +64,11 @@ trait-french-name = French accent
 trait-french-desc = Your accent seems to have a certain «je ne sais quoi».
 
 trait-spanish-name = Spanish accent
-trait-spanish-desc = Hola señor, donde esta la biblioteca.
+trait-spanish-desc = You speak with the accent of someone who grew up in Earth Spain.
+# Imp: edited from upstream "Hola señor, donde esta la biblioteca."
+
+trait-scrambled-name = Scrambled speech
+trait-scrambled-desc = There was an accident with a tesla engine, now others have trouble understanding you.
 
 trait-painnumbness-name = Numb
 trait-painnumbness-desc = You lack any sense of feeling pain, being unaware of how hurt you may be.

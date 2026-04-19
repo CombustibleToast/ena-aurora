@@ -117,10 +117,10 @@
     coldDamageThreshold:  248.15 # -25 degrees centigrade, like 12 degrees below normal
     heatDamage:
       types:
-        Cold: 0.5 # in line with cold resist # Aurora: 50% resistance
+        Heat: 2 # Aurora's Song - Switched Heat and Cold around since someone put them in backwards
     coldDamage:
       types:
-        Heat: 2 # poor kitty
+        Cold: 0.5 # Aurora's Song - Switched Heat and Cold around since someone put them in backwards
   - type: ThermalRegulator
     normalBodyTemperature: 311.76
   - type: Wagging # Aurora's Song - Add wagging

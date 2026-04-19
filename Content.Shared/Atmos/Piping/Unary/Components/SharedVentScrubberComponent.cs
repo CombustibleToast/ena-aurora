@@ -23,7 +23,8 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.WaterVapor,
             Gas.Ammonia,
             Gas.NitrousOxide,
-            Gas.Frezon
+            Gas.Frezon,
+            Gas.Helium //Aurora's Song - Scrub helium by default, it alarms at <1% so it should be scrubbed by default.
         };
 
         // Presets for 'dumb' air alarm modes

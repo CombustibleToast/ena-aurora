@@ -38,7 +38,7 @@
     Food:
       effects:
       - !type:SatiateHunger
-        factor: 1 # Frontier
+        factor: 3 # Aurora's Song 1 > 3
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Moth ]

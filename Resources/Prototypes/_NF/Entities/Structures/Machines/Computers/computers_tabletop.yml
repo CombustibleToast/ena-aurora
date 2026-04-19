@@ -904,11 +904,7 @@
 - type: entity
   parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleFrontierOutpostRemote]
   id: ComputerTabletopShuttleFrontierOutpostRemote
-  suffix: Remote, Tabletop
-  components:
-  - type: Sprite
-    drawdepth: SmallObjects
-    layers: *NFTabletopShuttleConsoleVisuals
+  suffix: Remote, Tabletop # Aurora's Song - Removed the different sprite because it was bothering me that was different from the standard version
 
 - type: entity
   parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleTradeOutpostLocal]
@@ -922,8 +918,4 @@
 - type: entity
   parent: [BaseStructureIndestructible, BaseStructureComputerTabletop, ComputerShuttleTradeOutpostRemote]
   id: ComputerTabletopShuttleTradeOutpostRemote
-  suffix: Remote, Tabletop
-  components:
-  - type: Sprite
-    drawdepth: SmallObjects
-    layers: *NFTabletopShuttleConsoleVisuals
+  suffix: Remote, Tabletop # Aurora's Song - Removed the different sprite because it was bothering me that was different from the standard version

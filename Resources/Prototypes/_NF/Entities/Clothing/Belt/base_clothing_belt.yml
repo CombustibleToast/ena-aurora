@@ -56,7 +56,11 @@
           tags:
           - Sidearm
           - Knife # Aurora's Song - added knife to whitelist
+        ejectSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
         insertOnInteract: true
+        insertSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
   - type: Appearance
   - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
     mapLayers:
@@ -99,7 +103,11 @@
           tags:
           - Sidearm
           - Knife # Aurora's Song - added knife to whitelist
+        ejectSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
         insertOnInteract: true
+        insertSound: #Aurora's Song - add unique holster sounds; originally made for Den
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
       medkit:
         name: clothing-belt-medkit
         priority: 3
