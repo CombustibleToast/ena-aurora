@@ -31,9 +31,9 @@
   - type: Tag
     tags:
       - Bucket
-  # - type: PhysicalComposition # Frontier
-  #   materialComposition:
-  #     Plastic: 50
+  - type: PhysicalComposition # Frontier # Aurora's Song - Uncomment for test
+    materialComposition:
+      Plastic: 50
   - type: TrashOnSolutionEmpty # Frontier
     solution: bucket # Frontier
 
