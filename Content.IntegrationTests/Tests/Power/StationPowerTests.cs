@@ -100,6 +100,7 @@ public sealed class StationPowerTests
         await pair.CleanReturnAsync();
     }
 
+    [Ignore("Superseded by ship APC test")] // Aurora's Song
     [Test, TestCaseSource(nameof(GameMaps))]
     public async Task TestApcLoad(string mapProtoId)
     {
