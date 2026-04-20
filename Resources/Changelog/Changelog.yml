@@ -7618,3 +7618,38 @@ Entries:
   id: 9129
   time: '2026-04-20T05:20:04.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/958
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added a Service techfab and chain shutters to the Port Boreal kitchen.
+    - type: Add
+      message: Added a bunch of beacons and signs to Port Boreal.
+    - type: Add
+      message: >-
+        Added a stack of cloth and durathread near the staff uniform printer on
+        Port Boreal
+    - type: Add
+      message: Added a drain to chemistry on Port Boreal.
+    - type: Add
+      message: Added a chemical locker to chemistry on Port Boreal
+    - type: Add
+      message: Painted dock numbers onto the Port Boreal docking arms.
+    - type: Remove
+      message: Removed a few lights from Port Boreal.
+    - type: Tweak
+      message: Service locked the Port Boreal freezer.
+    - type: Tweak
+      message: More dirt has appeared on Port Boreal.
+    - type: Tweak
+      message: Replaced most railings on Port Boreal with newer variants.
+    - type: Tweak
+      message: >-
+        Replaced the christmas tree with a normal one. Christmas is finally
+        over.
+    - type: Tweak
+      message: >-
+        Replaced the CentComm bedsheet in the CR's quarters for the HoP's
+        Bedsheet. (For now)
+  id: 9130
+  time: '2026-04-20T08:57:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/960
