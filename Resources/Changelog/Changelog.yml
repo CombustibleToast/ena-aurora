@@ -7609,3 +7609,12 @@ Entries:
   id: 9128
   time: '2026-04-20T05:19:20.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/959
+- author: sev7ves
+  changes:
+    - type: Fix
+      message: >-
+        Notifier should only show for those who have it enabled now. Also minor
+        grammar fixes.
+  id: 9129
+  time: '2026-04-20T05:20:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/958
