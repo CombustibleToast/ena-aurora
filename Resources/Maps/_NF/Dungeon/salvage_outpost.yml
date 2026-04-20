@@ -10659,9 +10659,6 @@ entities:
     - type: Transform
       pos: 25.5,40.5
       parent: 1653
-    - type: Construction
-      step: 5
-      edge: 0
 - proto: RipleyHarness
   entities:
   - uid: 1797
