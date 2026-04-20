@@ -252,8 +252,8 @@
     - GasAnalyzer
     - HolofanProjector
     - MiningDrillDiamond
-    - BoxLethalshot
-    - BoxShotgunSlug # End of first line
+    - NFAmmunitionBoxShellShotgunBuckshot # Aurora's Song - BoxLethalshot>NFAmmunitionBoxShellShotgunBuckshot
+    - NFAmmunitionBoxShellShotgunSlug # End of first line # Aurora's Song - BoxShotgunSlug?NFAmmunitionBoxShellShotgunSlug
     - RCDAmmo
     - RCDAmmo
     - RCDAmmo
@@ -329,7 +329,7 @@
     - Handcuffs
     - Handcuffs
     - CrowbarRed
-    - WeaponPistolMk58
+    - NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
     - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
     - EmergencyMedipen
 
@@ -369,20 +369,20 @@
     suitstorage: WeaponLauncherHydraLethal
   storage:
     back:
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
-    - GrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
+    - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
     - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
     - MedkitCombatFilled # End of first line
-    - GrenadeEMP
-    - GrenadeEMP
-    - GrenadeEMP
-    - GrenadeFlash
-    - GrenadeFlash
-    - GrenadeFlash
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
+    - NFGrenadeFlash # Aurora's Song - GrenadeFlash>NFGrenadeFlash
+    - NFGrenadeFlash # Aurora's Song - GrenadeFlash>NFGrenadeFlash
+    - NFGrenadeFlash # Aurora's Song - GrenadeFlash>NFGrenadeFlash
     - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
     belt:
     - Truncheon
@@ -403,7 +403,7 @@
     back:
     - ExGrenade
     - SmokeGrenade
-    - EmpGrenade
+    - NFGrenadeEMP # Aurora's Song - GrenadeEMP>NFGrenadeEMP
     - HoloprojectorSecurity
     - TelescopicShield
     - TelescopicShield
@@ -431,9 +431,9 @@
   storage:
     back:
     - SmokeGrenade
-    - BoxLethalshot
-    - BoxShotgunSlug
-    - BoxShotgunIncendiary
+    - NFAmmunitionBoxShellShotgunBuckshot # Aurora's Song - BoxLethalshot>NFAmmunitionBoxShellShotgunBuckshot
+    - NFAmmunitionBoxShellShotgunSlug # Aurora's Song - BoxShotgunSlug>NFAmmunitionBoxShellShotgunSlug
+    - NFAmmunitionBoxShellShotgunIncendiary # Aurora's Song - BoxShotgunIncendiary>NFAmmunitionBoxShellShotgunIncendiary
     - MedkitCombatFilled # End of first line
     - SmokeGrenade
     - ExGrenade
@@ -606,12 +606,12 @@
     - Plunger
     - Screwdriver
     - AdvMopItem # End of first line
-    - GrenadeCleanade
-    - GrenadeCleanade
-    - GrenadeCleanade
-    - GrenadeCleanade
-    - GrenadeCleanade
-    - GrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
+    - NFGrenadeCleanade # Aurora's Song - GrenadeCleanade>NFGrenadeCleanade
     belt:
     - MegaSprayBottleSpaceCleaner
     - Holoprojector
