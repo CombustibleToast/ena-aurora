@@ -15,6 +15,7 @@ public sealed class WizdenContentFreeze
     ///
     /// https://github.com/space-wizards/space-station-14/issues/8524
     /// </summary>
+    [Ignore("Not really applicable for us")] // Aurora's Song
     [Test]
     public async Task MicrowaveRecipesFreezeTest()
     {

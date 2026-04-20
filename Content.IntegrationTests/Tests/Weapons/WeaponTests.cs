@@ -11,7 +11,7 @@ public sealed class WeaponTests : InteractionTest
 {
     protected override string PlayerPrototype => "MobHuman"; // The default test mob only has one hand
     private static readonly EntProtoId MobHuman = "MobHuman";
-    private static readonly EntProtoId SniperMosin = "WeaponSniperMosin";
+    private static readonly EntProtoId SniperMosin = "NFWeaponRifleBarlowsBolt"; // Aurora's Song - Replace with non wizden item
 
     [Test]
     public async Task GunRequiresWieldTest()
