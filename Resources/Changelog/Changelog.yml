@@ -7591,3 +7591,12 @@ Entries:
   id: 9126
   time: '2026-04-18T09:37:57.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/957
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: >-
+        Added a toggle to the SCU Output Terminal to enable or disable SLE
+        events
+  id: 9127
+  time: '2026-04-20T05:18:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/961
