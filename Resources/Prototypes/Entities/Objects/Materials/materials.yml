@@ -759,7 +759,7 @@
     - state: cotton_3
       map: ["base"]
   - type: Appearance
-  - type: Edible
+#  - type: Edible # Aurora's Song - NF intends bones to be inedible
   - type: BadFood
   # - type: SolutionContainerManager # Frontier: no eating bones
   #   solutions: # Frontier
