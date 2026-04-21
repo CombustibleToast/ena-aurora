@@ -9,7 +9,7 @@ using Content.Shared.Shuttles.Components;
 using Content.Shared.Shuttles.Systems;
 using Content.Shared.Ghost; // Frontier
 using Prometheus;
-using Robust.Shared.Map.Events;
+using Robust.Shared.Map.Events; // Aurora's Song - Add ActiveInputMover deletion on serialization
 using Robust.Shared.Player;
 using DependencyAttribute = Robust.Shared.IoC.DependencyAttribute;
 using DroneConsoleComponent = Content.Server.Shuttles.DroneConsoleComponent;
@@ -690,7 +690,7 @@ public sealed class MoverController : SharedMoverController
             || PreventPilotQuery.HasComp(shuttleUid);
     }
 
-    // Aurora's Song - Fixes some weird serialization issue
+    // Aurora's Song - ActiveInputMoverComponent gets stuck on rolling chairs when serializing, this fixes that
     private void OnMapSerialize(BeforeSerializationEvent args)
     {
         var enumerator = AllEntityQuery<ActiveInputMoverComponent>();
