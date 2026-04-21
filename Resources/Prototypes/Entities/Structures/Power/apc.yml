@@ -80,6 +80,7 @@
   - type: PowerProvider
     voltage: Apc
   - type: Apc
+    disableTripping: true # Aurora's Song - Disable tripping
     voltage: Apc
   - type: ExtensionCableProvider
   - type: UserInterface
