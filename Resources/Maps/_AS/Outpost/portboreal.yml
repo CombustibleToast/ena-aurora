@@ -6825,9 +6825,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 21.5,-5.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -16546.13
-      state: Opening
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -7276,9 +7273,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 37.5,-16.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -19412.383
-      state: Opening
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -7589,9 +7583,6 @@ entities:
     - type: Transform
       pos: -19.5,-19.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -19452.582
-      state: Opening
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
@@ -7747,9 +7738,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -75.5,-0.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -20325.848
-      state: Opening
     - type: Docking
       name: dock-label-station-one-b
     - type: DeviceLinkSource
@@ -7761,9 +7749,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -75.5,0.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -20326.248
-      state: Opening
     - type: Docking
       name: dock-label-station-one-b
     - type: DeviceLinkSource
@@ -8250,9 +8235,6 @@ entities:
     - type: Transform
       pos: 35.5,6.5
       parent: 1
-    - type: Door
-      secondsUntilStateChange: -2833.0886
-      state: Opening
     - type: DeviceLinkSource
       lastSignals:
         DoorStatus: True
