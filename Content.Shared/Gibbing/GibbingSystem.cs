@@ -40,10 +40,10 @@ public sealed class GibbingSystem : EntitySystem
         _audio.PlayPvs(GibSound, ent);
 
         var gibbed = new HashSet<EntityUid>();
-        var beingGibbed = new BeingGibbedEvent(gibbed);
+        var beingGibbed = new BeingGibbedEvent(gibbed, dropGiblets); // Aurora's Song - Replace NF gib
         RaiseLocalEvent(ent, ref beingGibbed);
 
-        if (dropGiblets)
+        if (beingGibbed.dropGiblets) // Aurora's Song - Replace NF gib
         {
             foreach (var giblet in gibbed)
             {
@@ -74,7 +74,7 @@ public sealed class GibbingSystem : EntitySystem
 /// </summary>
 /// <param name="Giblets">If a component wants to provide giblets to scatter, add them to this hashset.</param>
 [ByRefEvent]
-public readonly record struct BeingGibbedEvent(HashSet<EntityUid> Giblets);
+public record struct BeingGibbedEvent(HashSet<EntityUid> Giblets, bool dropGiblets); // Aurora's Song - Replace NF gib
 
 /// <summary>
 /// Raised on an entity when it is about to be deleted after being gibbed.

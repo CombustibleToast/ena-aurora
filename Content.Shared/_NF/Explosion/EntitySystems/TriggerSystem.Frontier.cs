@@ -54,19 +54,7 @@ public sealed partial class TriggerSystem
             var items = _inventory.GetHandOrInventoryEntities(ent);
             foreach (var item in items)
             {
-                Del(item);
-            }
-        }
-
-        if (!component.DeleteOrgans)
-            return;
-
-        if (TryComp<BodyComponent>(ent, out var body))
-        {
-            var organs = _body.GetBodyOrganEntityComps<TransformComponent>((ent, body));
-            foreach (var organ in organs)
-            {
-                Del(organ.Owner);
+                PredictedQueueDel(item);
             }
         }
 
@@ -77,6 +65,10 @@ public sealed partial class TriggerSystem
 
     private void OnBeingGibbed(EntityUid uid, TriggerOnBeingGibbedComponent component,  ref BeingGibbedEvent args)
     {
+        // Aurora's Song - This *sucks* but seems to be the only reliable way to not cause testing errors
+        if (TryComp<GibOnTriggerComponent>(uid, out var comp))
+            args.dropGiblets = !comp.DeleteOrgans;
+
         Trigger(uid);
     }
 
