@@ -170,7 +170,7 @@
           collection: MetalBreak
           params:
             volume: -4
-      - !type:SpillBehavior { }
+#      - !type:SpillBehavior { } # Aurora's Song - "Unspillable?"
       - !type:SpawnEntitiesBehavior
         spawn:
           SheetPlastic1:
