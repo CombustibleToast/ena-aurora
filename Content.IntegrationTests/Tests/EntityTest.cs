@@ -396,6 +396,7 @@ namespace Content.IntegrationTests.Tests
                 "ActivatableUI", // Frontier: Requires enum key
                 "AlertLevel", // Frontier: requires alert set
                 "BluespaceErrorRule", // Frontier
+                "RandomStackCount", // Aurora's Song - Requires Stack to exist, and does not ensure it
             };
 
             await using var pair = await PoolManager.GetServerClient();
