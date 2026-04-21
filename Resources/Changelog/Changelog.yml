@@ -7662,3 +7662,10 @@ Entries:
   id: 9131
   time: '2026-04-21T05:00:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/966
+- author: AvianMaiden
+  changes:
+    - type: Add
+      message: Gas tanks worn on armor are now a little more fashionable and strapless!
+  id: 9132
+  time: '2026-04-21T05:06:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/964
