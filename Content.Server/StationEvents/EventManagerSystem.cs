@@ -11,6 +11,8 @@ using Content.Shared.EntityTable.EntitySelectors;
 using Content.Shared.EntityTable;
 using Content.Server.Mind; // Frontier
 using Content.Server._NF.Roles.Systems; // Frontier
+using Content.Server._AS.StationEvents.Components; // Aurora's Song
+using Content.Shared.Roles; // Aurora's Song
 
 namespace Content.Server.StationEvents;
 
@@ -293,7 +295,15 @@ public sealed class EventManagerSystem : EntitySystem
         {
             return false;
         }
-
+        if (stationEvent.Category != null) // Aurora's Song - Temporary fix to events firing when we don't want them too
+        {
+            var toggleQuery = AllEntityQuery<ToggleEventComponent>();
+            while (toggleQuery.MoveNext(out var uid, out var comp))
+            {
+                if (comp.Category == stationEvent.Category && comp.Active == false)
+                    return false;
+            }
+        }
         return true;
     }
 }
