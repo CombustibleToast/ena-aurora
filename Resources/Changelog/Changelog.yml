@@ -4273,3 +4273,12 @@ Entries:
   id: 9132
   time: '2026-04-21T05:06:42.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/964
+- author: Vandanna
+  changes:
+    - type: Add
+      message: more holopads to Port Boreal
+    - type: Fix
+      message: weird sideways water tile on Port Boreal
+  id: 9133
+  time: '2026-04-21T08:12:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/969
