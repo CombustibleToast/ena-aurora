@@ -39,3 +39,13 @@
   - /Audio/_AS/Voice/Fairy/fairy_flutter_1.ogg
   - /Audio/_AS/Voice/Fairy/fairy_flutter_2.ogg
   - /Audio/_AS/Voice/Fairy/fairy_flutter_3.ogg
+
+- type: soundCollection
+  id: FairyCry
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_cry.ogg
+
+- type: soundCollection
+  id: FairySigh
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_sigh.ogg
