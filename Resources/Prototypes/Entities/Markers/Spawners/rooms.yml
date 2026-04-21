@@ -8,9 +8,9 @@
     offset: 0.2
     table: !type:AllSelector
       children:
-      - id: WeaponSubMachineGunWt550
-      - id: MagazinePistolSubMachineGunTopMounted
-      - id: MagazinePistolSubMachineGunTopMounted
+      - id: NFWeaponSubMachineGunWt550 # Aurora's Song - WeaponSubMachineGunWt550>NFWeaponSubMachineGunWt550
+      - id: NFMagazineSubMachineGunTopMounted35 # Aurora's Song - MagazinePistolSubMachineGunTopMounted>NFMagazineSubMachineGunTopMounted35
+      - id: NFMagazineSubMachineGunTopMounted35 # Aurora's Song - MagazinePistolSubMachineGunTopMounted>NFMagazineSubMachineGunTopMounted35
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:
@@ -27,7 +27,7 @@
     offset: 0.2
     table: !type:AllSelector
       children:
-      - id: WeaponEnergyShotgun
+      - id: NFWeaponShotgunEnforcer # Aurora's Song - Replaced WeaponEnergyShotgun with NFWeaponShotgunEnforcer arbitrarily to prevent test fail
   - type: Sprite
     sprite: Markers/jobs.rsi
     layers:

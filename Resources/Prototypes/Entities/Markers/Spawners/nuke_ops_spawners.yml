@@ -66,9 +66,9 @@
     - id: ClothingHandsKnuckleDustersSyndicate
     - id: EnergyDaggerLoud
       weight: 0.5
-    - id: WeaponRevolverPython
-    - id: WeaponPistolCobra
-    - id: WeaponShotgunSawn
+    - id: NFWeaponRevolverPython45 # Aurora's Song - Add NF prefix
+    - id: NFWeaponPistolCobra # Aurora's Song - Add NF prefix
+    - id: NFWeaponShotgunSawn # Aurora's Song - Add NF prefix
     - id: NFRevolverCapGunFake # Frontier: RevolverCapGunFake<NFRevolverCapGunFake
       weight: .01
 
@@ -76,21 +76,21 @@
   id: NukeOpsAmmoTable
   table: !type:GroupSelector
     children:
-    - id: MagazinePistolSubMachineGun
-    - id: MagazineRifle
-    - id: MagazineBoxLightRifle
+    - id: NFMagazineSubMachineGun35 # Aurora's Song - MagazinePistolSubMachineGun>NFMagazineSubMachineGun35
+    - id: NFMagazineRifle20 # Aurora's Song - MagazineRifle>NFMagazineRifle20
+    - id: NFAmmunitionBoxRifle30 # Aurora's Song - MagazineBoxLightRifle>NFAmmunitionBoxRifle30
       weight: 0.5
-    - id: MagazineShotgunSlug
+    - id: NFMagazineShotgunDrumSlug # Aurora's Song - MagazineShotgunSlug>NFMagazineShotgunDrumSlug
       weight: 0.5
-    - id: MagazineShotgun
+    - id: NFMagazineShotgunDrum # Aurora's Song - MagazineShotgun>NFMagazineShotgunDrum
       weight: 0.5
-    - id: MagazinePistol
+    - id: NFMagazinePistol35 # Aurora's Song - MagazinePistol>NFMagazinePistol35
       weight: 0.5
-    - id: MagazineBoxAntiMateriel
+    - id: NFAmmunitionBoxRifle60 # Aurora's Song - MagazineBoxAntiMateriel>NFAmmunitionBoxRifle60
       weight: 0.5
-    - id: MagazinePistolCaselessRifle
+    - id: ASMagazinePistolCaselessRifle # Aurora's Song - MagazinePistolCaselessRifle>ASMagazinePistolCaselessRifle
       weight: 0.5
-    - id: SpeedLoaderMagnumAP
+    - id: NFSpeedLoaderPistol45 # Aurora's Song - SpeedLoaderMagnumAP>NFSpeedLoaderPistol45
       weight: 0.5
 
 - type: entityTable

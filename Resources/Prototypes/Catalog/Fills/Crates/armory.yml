@@ -110,7 +110,7 @@
     containers:
       entity_storage: !type:AllSelector
         children:
-        - id: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter>NFWeaponRifleAssaultLecter
+        - id: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
           amount: 2
-        - id: NFMagazineRifle20 # Frontier: MagazineRifle>NFMagazineRifle20
+        - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
           amount: 4

@@ -14,6 +14,7 @@
       - state: magazine
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of .25 caseless magazines
   parent: BoxMagazine
   id: BoxMagazinePistolCaselessRifle
@@ -26,6 +27,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of .25 caseless (practice) magazines
   parent: BoxMagazine
   id: BoxMagazinePistolCaselessRiflePractice
@@ -39,6 +41,7 @@
 
 # LightRifle
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of .30 rifle magazines
   parent: BoxMagazine
   id: BoxMagazineLightRifle
@@ -51,6 +54,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of .30 rifle (practice) magazines
   parent: BoxMagazine
   id: BoxMagazineLightRiflePractice
@@ -66,6 +70,7 @@
 
 # Pistol
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of WT550 .35 auto magazines
   parent: BoxMagazine
   id: BoxMagazinePistolSubMachineGunTopMounted
@@ -78,6 +83,7 @@
         amount: 3
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of pistol .35 auto magazines
   parent: BoxMagazine
   id: BoxMagazinePistol
@@ -90,6 +96,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of pistol .35 auto (practice) magazines
   parent: BoxMagazine
   id: BoxMagazinePistolPractice
@@ -102,6 +109,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of machine pistol .35 auto magazines
   parent: BoxMagazine
   id: BoxMagazinePistolHighCapacity
@@ -114,6 +122,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of machine pistol .35 auto (practice) magazines
   parent: BoxMagazine
   id: BoxMagazinePistolHighCapacityPractice
@@ -126,6 +135,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of SMG .35 auto magazines
   parent: BoxMagazine
   id: BoxMagazinePistolSubMachineGun
@@ -138,6 +148,7 @@
         amount: 3
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of SMG .35 auto (practice) magazines
   parent: BoxMagazine
   id: BoxMagazinePistolSubMachineGunPractice
@@ -151,6 +162,7 @@
 
 # Shotgun
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of (.50 pellet) ammo drums
   parent: BoxMagazine
   id: BoxMagazineShotgun
@@ -163,6 +175,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of (.50 beanbag) ammo drums
   parent: BoxMagazine
   id: BoxMagazineShotgunBeanbag
@@ -175,6 +188,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of (.50 slug) ammo drums
   parent: BoxMagazine
   id: BoxMagazineShotgunSlug
@@ -187,6 +201,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of (.50 incendiary) ammo drums
   parent: BoxMagazine
   id: BoxMagazineShotgunIncendiary
@@ -200,6 +215,7 @@
 
 # Rifle
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of .20 rifle magazines
   parent: BoxMagazine
   id: BoxMagazineRifle
@@ -212,6 +228,7 @@
         amount: 4
 
 - type: entity
+  abstract: true # Aurora's Song - Has a migration
   name: box of .20 rifle (practice) magazines
   parent: BoxMagazine
   id: BoxMagazineRiflePractice

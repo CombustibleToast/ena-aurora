@@ -42,7 +42,7 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMilitaryWebbingERT
     pocket2: CombatKnife
-    suitstorage: NFWeaponEnergyPistolDisabler # Frontier: WeaponDisablerSMG<NFWeaponEnergyPistolDisabler
+    suitstorage: NFWeaponEnergySubMachineGunDisabler # Aurora's Song - WeaponDisablerSMG>NFWeaponEnergySubMachineGunDisabler
   storage:
     back:
     - Binoculars
@@ -67,7 +67,7 @@
   parent: ERTLeaderGearEVA
   id: ERTLeaderGearArmed
   equipment:
-    pocket2: WeaponDisabler
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
     suitstorage: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   storage:
     back:
@@ -245,7 +245,7 @@
   parent: ERTEngineerGearEVA
   id: ERTEngineerGearArmed
   equipment:
-    suitstorage: WeaponShotgunEnforcer
+    suitstorage: NFWeaponShotgunEnforcer # Aurora's Song - WeaponShotgunEnforcer>NFWeaponShotgunEnforcer
   storage:
     back:
     - RCD
@@ -346,9 +346,9 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMilitaryWebbingERT
     pocket2: CombatKnife
-    suitstorage: WeaponRifleLecter
+    suitstorage: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
   inhand:
-    - WeaponLaserCannon
+    - NFWeaponEnergyRifleSniperCannon # Aurora's Song - WeaponLaserCannon>NFWeaponEnergyRifleSniperCannon
     - PortableRecharger
   storage:
     belt:
@@ -365,8 +365,8 @@
   parent: ERTSecurityGearEVA
   id: ERTSecurityGearArmedGrenade
   equipment:
-    pocket2: WeaponDisabler
-    suitstorage: WeaponLauncherHydraLethal
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+#    suitstorage: WeaponLauncherHydraLethal # Aurora's Song - Currently abstract
   storage:
     back:
     - NFGrenadeBlast # Aurora's Song - GrenadeBlast>NFGrenadeBlast
@@ -397,7 +397,7 @@
   parent: ERTSecurityGearEVA
   id: ERTSecurityGearArmedVanguard
   equipment:
-    pocket2: WeaponDisabler
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
     suitstorage: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
   storage:
     back:
@@ -426,8 +426,8 @@
   parent: ERTSecurityGearEVA
   id: ERTSecurityGearArmedShotgun
   equipment:
-    pocket2: WeaponDisabler
-    suitstorage: WeaponShotgunEnforcer
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
+    suitstorage: NFWeaponShotgunEnforcer # Aurora's Song - WeaponShotgunEnforcer>NFWeaponShotgunEnforcer
   storage:
     back:
     - SmokeGrenade
@@ -524,8 +524,8 @@
   parent: ERTMedicalGearEVA
   id: ERTMedicalGearArmed
   equipment:
-    suitstorage: WeaponRifleLecter
-    pocket2: WeaponDisabler
+    suitstorage: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
+    pocket2: NFWeaponEnergyPistolDisabler # Aurora's Song - WeaponDisabler>NFWeaponEnergyPistolDisabler
   storage:
     back:
     - Hypospray
@@ -598,7 +598,7 @@
     ears: ClothingHeadsetAltCentCom
     belt: ClothingBeltMilitaryWebbingERT
     pocket2: CombatKnife
-    suitstorage: WeaponLauncherHydra
+#    suitstorage: WeaponLauncherHydra # Aurora's Song - Currently abstract
   storage:
     back:
     - TrashBag
