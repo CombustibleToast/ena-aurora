@@ -7653,3 +7653,12 @@ Entries:
   id: 9130
   time: '2026-04-20T08:57:06.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/960
+- author: Oberonics
+  changes:
+    - type: Fix
+      message: >-
+        Your character should (HOPEFULLY) no longer get deleted by a ESS failure
+        and instead get throw into the depths of space if all else fails.
+  id: 9131
+  time: '2026-04-21T05:00:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/966
