@@ -25,3 +25,17 @@
   id: FairyDeathgasp
   files:
   - /Audio/_AS/Voice/Fairy/fairy_deathgasp.ogg
+
+- type: soundCollection
+  id: FairyGlimmer
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_glimmer_1.ogg
+  - /Audio/_AS/Voice/Fairy/fairy_glimmer_2.ogg
+  - /Audio/_AS/Voice/Fairy/fairy_glimmer_3.ogg
+
+- type: soundCollection
+  id: FairyFlutter
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_flutter_1.ogg
+  - /Audio/_AS/Voice/Fairy/fairy_flutter_2.ogg
+  - /Audio/_AS/Voice/Fairy/fairy_flutter_3.ogg

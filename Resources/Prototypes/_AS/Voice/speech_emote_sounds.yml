@@ -29,3 +29,7 @@
       collection: FairyGasp
     DefaultDeathgasp:
       collection: FairyDeathgasp
+    FairyGlimmer:
+      collection: FairyGlimmer
+    FairyFlutter:
+      collection: FairyFlutter
