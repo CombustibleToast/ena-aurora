@@ -349,24 +349,7 @@ public sealed partial class SalvageSystem
             } // End Aurora's Song
 
             if (remaining < TimeSpan.Zero)
-            {
-                FindPlayers(uid, null, out var players); // Begin Aurora's Song
-                if (players.Count > 0)
-                {
-                    foreach (var entity in players)
-                    {
-                        Log.Debug($"Trying to warp {entity}");
-                        if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
-                        {
-                            Log.Error($"Could not get DefaultMap EntityUID, entity {entity} may be deleted.");
-                            break;
-                        }
-                        var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
-                        SafetyWarp(entity, fallback);
-                    }
-                } // End Aurora's Song
                 QueueDel(uid);
-            }
         }
 
         // Frontier: mission-specific logic
