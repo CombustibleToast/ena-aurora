@@ -6,7 +6,7 @@
   sprites: MobGingerbreadSprites
   markingLimits: MobHumanMarkingLimits
   dollPrototype: MobGingerbreadDummy
-  skinColoration: Hues # Aurora's Song HumanToned>Hues
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   defaultSkinTone: "#9a7c5a"
 
 - type: speciesBaseSprites
