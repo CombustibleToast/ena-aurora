@@ -262,6 +262,7 @@ namespace Content.Client.Lobby.UI
             {
                 OnSkinColorOnValueChanged();
             };
+            SkinFurToggle.OnToggled += _ => { SetProfile(Profile, CharacterSlot); }; // DEN - Humanoid Skin Tones
 
             #endregion
 
@@ -823,6 +824,7 @@ namespace Content.Client.Lobby.UI
             PreviewDummy = _controller.LoadProfileEntity(Profile, JobOverride, ShowClothes.Pressed);
             SpriteView.SetEntity(PreviewDummy);
             _entManager.System<MetaDataSystem>().SetEntityName(PreviewDummy, Profile.Name);
+            UpdateSkinFurToggleVisibility(); // DEN - Humanoid Skin Tones
 
             // Check and set the dirty flag to enable the save/reset buttons as appropriate.
             SetDirty();
@@ -838,6 +840,20 @@ namespace Content.Client.Lobby.UI
             var height = Profile.Appearance.Height;
 
             SpriteView.Scale = new Vector2(width * baseZoom, height * baseZoom);
+        }
+
+        // DEN - Humanoid Skin Tones
+        private void UpdateSkinFurToggleVisibility()
+        {
+            if (Profile == null)
+                return;
+
+            // Start Aurora's Song - Add alternate strategies
+            var skin = _prototypeManager.Index(Profile.Species).SkinColoration;
+            var strategy = _prototypeManager.Index(skin);
+            SkinFurToggle.Visible = strategy.AltStrategy is not null;
+            OnSkinColorOnValueChanged();
+            // End Aurora's Song
         }
 
         /// <summary>
@@ -1215,7 +1231,14 @@ namespace Content.Client.Lobby.UI
             if (Profile is null) return;
 
             var skin = _prototypeManager.Index<SpeciesPrototype>(Profile.Species).SkinColoration;
-            var strategy = _prototypeManager.Index(skin).Strategy;
+
+            // Start Aurora's Song - Add alternate strategies
+            var skinProto = _prototypeManager.Index(skin);
+            var strategy = skinProto.Strategy;
+
+            if (skinProto.AltStrategy is not null && SkinFurToggle.Pressed)
+                strategy = skinProto.AltStrategy;
+            // End Aurora's Song
 
             switch (strategy.InputType)
             {
