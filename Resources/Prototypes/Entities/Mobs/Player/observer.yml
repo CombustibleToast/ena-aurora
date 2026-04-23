@@ -159,7 +159,7 @@
   parent: BaseMentalAction
   id: ActionToggleGhostHearing
   name: Toggle Ghost Hearing
-  description: Toggle between hearing all messages and hearing only radio & nearby messages.
+  description: Toggle between hearing all messages and hearing only radio & nearby messages. User discretion is advised. # Aurora Song
   components:
   - type: Action
     icon: Interface/Actions/ghostHearingToggled.png # Aurora Song: Flipped icon states
