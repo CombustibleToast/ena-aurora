@@ -7694,3 +7694,18 @@ Entries:
   id: 9135
   time: '2026-04-23T08:08:40.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/965
+- author: Zenixic
+  changes:
+    - type: Add
+      message: >-
+        Added beacons, more station maps, posters, emergency closets and ATMs to
+        The Alley.
+    - type: Add
+      message: 'Placed borg chargers on the docking arms at The Alley '
+    - type: Tweak
+      message: Redid wiring and piping on The Alley.
+    - type: Tweak
+      message: Broke down a few walls on The Alley to make extra storefronts.
+  id: 9136
+  time: '2026-04-23T08:24:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/963
