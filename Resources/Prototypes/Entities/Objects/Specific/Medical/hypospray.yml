@@ -702,7 +702,7 @@
         maxVol: 10
   - type: RefillableSolution
     solution: hypospray
-    refillTime: 0.75
+    # refillTime: 0.75 # Aurora's Song | No delay on the pen, defeats the purpose
     maxRefill: 5
   - type: ExaminableSolution
     solution: hypospray

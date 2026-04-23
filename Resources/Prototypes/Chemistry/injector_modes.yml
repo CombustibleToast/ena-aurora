@@ -121,7 +121,7 @@
 - type: injectorMode
   parent: HyposprayDynamicMode
   id: HypopenDynamicMode
-  containerDrawTime: 0.75
+  # containerDrawTime: 0.75 # Aurora's Song | Hypopen does not need the nerf on our fork
 
 - type: injectorMode
   abstract: true
