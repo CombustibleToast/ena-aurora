@@ -7718,3 +7718,10 @@ Entries:
   id: 9137
   time: '2026-04-23T08:31:45.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/979
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: IPC guidebook is now in the species section of the guidebook.
+  id: 9138
+  time: '2026-04-23T08:32:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/972
