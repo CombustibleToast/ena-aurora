@@ -7678,3 +7678,10 @@ Entries:
   id: 9133
   time: '2026-04-21T08:12:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/969
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: ghost hearing defaults to off
+  id: 9134
+  time: '2026-04-23T06:13:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/975
