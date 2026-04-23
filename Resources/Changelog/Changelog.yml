@@ -7709,3 +7709,12 @@ Entries:
   id: 9136
   time: '2026-04-23T08:24:32.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/963
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Blue Phone added, placed one on SLEO and on the Port Boreal bridge
+    - type: Tweak
+      message: Restored Red Phone to vanilla loc string
+  id: 9137
+  time: '2026-04-23T08:31:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/979
