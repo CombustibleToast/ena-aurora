@@ -84,21 +84,21 @@
   categories:
   - UplinkWeaponry
 
-- type: listing
-  id: UplinkEnergyCrossbow
-  name: uplink-energycrossbow-name
-  description: uplink-energycrossbow-desc
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  productEntity: WeaponEnergyCrossbow
-  cost:
-    Telecrystal: 5
-  categories:
-  - UplinkWeaponry
-  conditions:
-  - !type:ListingLimitedStockCondition
-    stock: 1
+#- type: listing
+#  id: UplinkEnergyCrossbow
+#  name: uplink-energycrossbow-name
+#  description: uplink-energycrossbow-desc
+#  discountCategory: rareDiscounts
+#  discountDownTo:
+#    Telecrystal: 3
+#  productEntity: WeaponEnergyCrossbow
+#  cost:
+#    Telecrystal: 5
+#  categories:
+#  - UplinkWeaponry
+#  conditions:
+#  - !type:ListingLimitedStockCondition
+#    stock: 1
 
 - type: listing
   id: UplinkThrowingKnivesKit
@@ -1635,9 +1635,9 @@
   productEntity: VoiceMaskImplanter
   discountCategory: usualDiscounts
   discountDownTo:
-    Telecrystal: 1
+    Telecrystal: 4
   cost:
-    Telecrystal: 2
+    Telecrystal: 6
   categories:
   - UplinkImplants
 
@@ -1687,6 +1687,17 @@
     Telecrystal: 2
   cost:
     Telecrystal: 4
+  categories:
+    - UplinkWearables
+
+- type: listing
+  id: UplinkVoiceMask
+  name: uplink-voice-mask-name
+  description: uplink-voice-mask-desc
+  productEntity: ClothingMaskGasVoiceChameleon
+  icon: { sprite: /Textures/Clothing/Mask/gas.rsi, state: icon }
+  cost:
+    Telecrystal: 2
   categories:
     - UplinkWearables
 

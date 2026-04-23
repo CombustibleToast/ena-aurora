@@ -343,6 +343,10 @@ uplink-saw-advanced-desc = A bleeding-edge surgical implement designed to cut th
 uplink-chameleon-name = Chameleon Kit
 uplink-chameleon-desc = A backpack full of items that contain chameleon technology allowing you to disguise as pretty much anything on the station, and more!
 
+uplink-voice-mask-name = Voice Mask
+uplink-voice-mask-desc = A mask that can change the sound of your voice to sound like anyone you want.
+
+
 uplink-clothing-no-slips-shoes-name = No-slip Shoes
 uplink-clothing-no-slips-shoes-desc = Chameleon shoes that protect you from slips.
 
