@@ -4,6 +4,7 @@
   - quantity: 5
     weight: 0.5
     reagents:
+    - Stimulants # Aurora's Song | Hyperzine back in rare plant results, no longer vestine dependant.
     - Omnizine
     - Impedrezene
     - Fresium
@@ -138,6 +139,6 @@
   - quantity: 1.0 # High quantity but on average only 1 per chemical kit
     weight: 1
     reagents:
-    - Tazinide
+    #- Tazinide # Aurora's Song | removed Tazinide, judged too strong
     - Stimulants
     - Lexorin
