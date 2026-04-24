@@ -46,7 +46,6 @@ public sealed class MoverController : SharedMoverController
         SubscribeLocalEvent<RelayInputMoverComponent, PlayerDetachedEvent>(OnRelayPlayerDetached);
         SubscribeLocalEvent<InputMoverComponent, PlayerAttachedEvent>(OnPlayerAttached);
         SubscribeLocalEvent<InputMoverComponent, PlayerDetachedEvent>(OnPlayerDetached);
-        SubscribeLocalEvent<BeforeSerializationEvent>(OnMapSerialize);
 
         _activeQuery = GetEntityQuery<ActiveInputMoverComponent>();
         _droneQuery = GetEntityQuery<DroneConsoleComponent>();
@@ -688,16 +687,6 @@ public sealed class MoverController : SharedMoverController
         return FTLQuery.TryComp(shuttleUid, out var ftl)
         && (ftl.State & (FTLState.Starting | FTLState.Travelling | FTLState.Arriving)) != 0x0
             || PreventPilotQuery.HasComp(shuttleUid);
-    }
-
-    // Aurora's Song - ActiveInputMoverComponent gets stuck on rolling chairs when serializing, this fixes that
-    private void OnMapSerialize(BeforeSerializationEvent args)
-    {
-        var enumerator = AllEntityQuery<ActiveInputMoverComponent>();
-        while (enumerator.MoveNext(out var uid, out var active))
-        {
-            RemComp(uid, active);
-        }
     }
 
 }

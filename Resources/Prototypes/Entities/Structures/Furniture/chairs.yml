@@ -160,12 +160,27 @@
   name: white office chair
   id: ChairOfficeLight
   parent: RollingOfficeChairBase # Goobstation - rolling chair, definition under _Goobstation
+  save: false
   components:
   - type: Sprite
     state: office-white
   - type: Construction
     graph: Seat
     node: chairOffice
+
+- type: entity
+  name: Office Chair spawner
+  id: ASChairOfficeLightSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _NF/Objects/Vehicles/hoverbike.rsi
+      state: vehicle
+  - type: ConditionalSpawner
+    prototypes:
+    - ChairOfficeLight
 
 - type: entity
   name: dark office chair
@@ -177,6 +192,21 @@
   - type: Construction
     graph: Seat
     node: chairOfficeDark
+
+- type: entity
+  name: Office Chair spawner
+  suffix: dark
+  id: ASChairOfficeDarkSpawner
+  parent: MarkerBase
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _NF/Objects/Vehicles/hoverbike.rsi
+      state: vehicle
+  - type: ConditionalSpawner
+    prototypes:
+    - ChairOfficeDark
 
 - type: entity
   name: comfy chair
