@@ -160,7 +160,6 @@
   name: white office chair
   id: ChairOfficeLight
   parent: RollingOfficeChairBase # Goobstation - rolling chair, definition under _Goobstation
-  save: false
   components:
   - type: Sprite
     state: office-white
