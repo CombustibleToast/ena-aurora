@@ -69,7 +69,7 @@ public sealed partial class TriggerSystem : EntitySystem
     /// <param name="user">The user of the trigger. Some effects may target the user instead of the trigger entity.</param>
     /// <param name="key">A key string to allow multiple, independent triggers on the same entity. If null then all triggers will activate.</param>
     /// <returns>Whether or not the trigger has sucessfully activated an effect.</returns>
-    public bool Trigger(EntityUid trigger, EntityUid? user = null, string? key = null, Dictionary<string, object>? extras = null) // Coyote
+    public bool Trigger(EntityUid trigger, EntityUid? user = null, string? key = null)
     {
         var attemptTriggerEvent = new AttemptTriggerEvent(user, key);
         RaiseLocalEvent(trigger, ref attemptTriggerEvent);

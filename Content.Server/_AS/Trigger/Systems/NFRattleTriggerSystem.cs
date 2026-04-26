@@ -1,5 +1,4 @@
-﻿using Content.Server.Explosion.EntitySystems;
-using Content.Server.Radio.EntitySystems;
+﻿using Content.Server.Radio.EntitySystems;
 using Content.Shared._AS.Traits;
 using Content.Shared.Humanoid;
 using Content.Shared.Implants.Components;
@@ -13,23 +12,15 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._AS.Trigger.Systems;
 
-public sealed class NFRattleTriggerSystem : EntitySystem
+public sealed class NFRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComponent>
 {
     [Dependency] private readonly SharedStationSystem _station = default!;
     [Dependency] private readonly RadioSystem _radioSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-    /// <inheritdoc/>
-    public override void Initialize()
+    protected override void OnTrigger(Entity<RattleOnTriggerComponent> ent, EntityUid target, ref TriggerEvent args)
     {
-        base.Initialize();
-
-        SubscribeLocalEvent<RattleOnTriggerComponent, TriggerEvent>(HandleRattleTrigger);
-    }
-
-    private void HandleRattleTrigger(EntityUid uid, RattleOnTriggerComponent component, TriggerEvent args)
-    {
-        if (!TryComp<SubdermalImplantComponent>(uid, out var implanted))
+        if (!TryComp<SubdermalImplantComponent>(target, out var implanted))
             return;
 
         if (implanted.ImplantedEntity == null)
@@ -41,14 +32,14 @@ public sealed class NFRattleTriggerSystem : EntitySystem
 
 
         // Gets location of the implant
-        var ownerXform = Transform(uid);
+        var ownerXform = Transform(target);
         var pos = ownerXform.MapPosition;
         var x = (int)pos.X;
         var y = (int)pos.Y;
         var posText = $"({x}, {y})";
 
         // Frontier: Gets station location of the implant
-        var station = _station.GetOwningStation(uid);
+        var station = _station.GetOwningStation(target);
         var stationText = station is null ? null : $"{Name(station.Value)} ";
 
         if (stationText == null)
@@ -69,7 +60,7 @@ public sealed class NFRattleTriggerSystem : EntitySystem
             }
         }
         // Start Coyote
-        string localeKey = component.Messages[mobstate.CurrentState];
+        string localeKey = ent.Comp.Messages[mobstate.CurrentState];
 
         var message = Loc.GetString(
             localeKey,
@@ -79,10 +70,10 @@ public sealed class NFRattleTriggerSystem : EntitySystem
             ("position", posText));
 
         _radioSystem.SendRadioMessage(
-            uid,
+            target,
             message,
-            _prototypeManager.Index<RadioChannelPrototype>(component.RadioChannel),
-            uid);
+            _prototypeManager.Index<RadioChannelPrototype>(ent.Comp.RadioChannel),
+            target);
         // End Coyote
         args.Handled = true;
     }
