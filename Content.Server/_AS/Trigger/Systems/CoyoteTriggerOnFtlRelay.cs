@@ -1,4 +1,6 @@
 ﻿using Content.Shared.Implants;
+using Content.Shared.Mobs; // Aurora's Song
+using Content.Shared.Mobs.Components; // Aurora's Song
 using Content.Shared.Trigger;
 using Content.Shared.Trigger.Components.Triggers;
 
@@ -22,6 +24,11 @@ public sealed class CoyoteTriggerOnFtlRelay : TriggerOnXSystem
         TriggerOnMobstateChangeComponent component,
         ImplantRelayEvent<ReTriggerRattleImplantEvent> args)
     {
+        // Aurora's Song - Prevent retriggering when alive, it causes death acidifiers to activate
+        if (!TryComp<MobStateComponent>(args.Event.Implanted, out var mobstate)
+            || mobstate.CurrentState == MobState.Alive)
+            return;
+
         Trigger.Trigger(uid, args.Event.Implanted, component.KeyOut);
     }
 }
