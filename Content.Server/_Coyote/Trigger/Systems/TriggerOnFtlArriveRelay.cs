@@ -4,9 +4,9 @@ using Content.Shared.Mobs.Components; // Aurora's Song
 using Content.Shared.Trigger;
 using Content.Shared.Trigger.Components.Triggers;
 
-namespace Content.Server._AS.Trigger.Systems;
+namespace Content.Server._Coyote.Trigger.Systems;
 
-public sealed class CoyoteTriggerOnFtlRelay : TriggerOnXSystem
+public sealed class TriggerOnFtlArriveRelay : TriggerOnXSystem
 {
     /// <inheritdoc/>
     public override void Initialize()
@@ -16,7 +16,6 @@ public sealed class CoyoteTriggerOnFtlRelay : TriggerOnXSystem
         SubscribeLocalEvent<TriggerOnMobstateChangeComponent, ImplantRelayEvent<ReTriggerRattleImplantEvent>>(OnFtlArriveRelay);
     }
 
-    // Coyote
     /// <summary>
     /// When ftl arrives, try to retrigger their medical alerts
     /// </summary>

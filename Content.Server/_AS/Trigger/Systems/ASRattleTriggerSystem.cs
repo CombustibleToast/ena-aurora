@@ -12,12 +12,13 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._AS.Trigger.Systems;
 
-public sealed class NFRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComponent>
+public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComponent>
 {
     [Dependency] private readonly SharedStationSystem _station = default!;
     [Dependency] private readonly RadioSystem _radioSystem = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
+    // Have old functionality of rattle available for NF and Coyote functionality
     protected override void OnTrigger(Entity<RattleOnTriggerComponent> ent, EntityUid target, ref TriggerEvent args)
     {
         if (!TryComp<SubdermalImplantComponent>(target, out var implanted))
