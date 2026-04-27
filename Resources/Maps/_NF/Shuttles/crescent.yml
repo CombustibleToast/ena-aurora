@@ -25431,7 +25431,7 @@ entities:
     - type: Transform
       pos: -23.51038,-29.562366
       parent: 1
-- proto: SoapBorg
+- proto: Soap
   entities:
   - uid: 605
     components:
