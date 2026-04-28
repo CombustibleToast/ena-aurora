@@ -4642,3 +4642,10 @@ Entries:
   id: 9419
   time: '2026-04-28T21:05:06.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/981
+- author: CombustibleToast
+  changes:
+    - type: Tweak
+      message: Trit ignites at the normal temperature (revert frontiermos value)
+  id: 9420
+  time: '2026-04-28T21:12:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/990
