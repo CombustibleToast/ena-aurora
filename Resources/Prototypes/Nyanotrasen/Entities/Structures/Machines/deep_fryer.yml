@@ -10,9 +10,9 @@
     netsync: false
     sprite: Nyanotrasen/Structures/Machines/deep_fryer.rsi
     layers:
-    - state: off-0
-    - map: ["enum.SolutionContainerLayers.Fill"]
-      state: off-1
+      - state: off-0
+      - map: ["enum.SolutionContainerLayers.Fill"]
+        state: off-1
   - type: AmbientSound
     volume: -4
     range: 5
@@ -22,27 +22,13 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 8
     fillBaseName: off-
+  - type: Anchorable
+  - type: Pullable
   - type: Rotatable
     rotateWhilePulling: false
-  - type: Explosive # Weak explosion in a very small radius. Ignites surrounding entities.
-    explosionType: FireBomb
-    totalIntensity: 25
-    intensitySlope: 5
-    maxIntensity: 3
-    canCreateVacuum: false
-  - type: ExplodeOnTrigger
-    keysIn:
-    - reaction
-  - type: SmokeOnTrigger
-    keysIn:
-    - reaction
-    duration: 10
-    spreadAmount: 30
-    smokePrototype: TearGasSmokeWhite
-    solution:
-      reagents:
-      - ReagentId: TearGas # burning oil is probably toxic and not good for your eyes
-        Quantity: 20
+  - type: Physics
+    bodyType: Static
+  - type: Climbable
   - type: Fixtures
     fixtures:
       fix1:
@@ -57,44 +43,83 @@
   - type: DeepFryer
     blacklist:
       components:
+      # The classic.
       - NukeDisk
+      # SliceableFood is handled easily enough, but there's not much to be
+      # gained by doing special handling for Stacks, especially since most
+      # of the items that use Stack aren't even remotely edible.
       - Stack
-      - Openable
 #      - SpaceCash # Frontier - Cash # Aurora's Song - Removed at some point
       - IdCard # Frontier - ID
 #      - WebCocoon # Frontier # Aurora's Song - Removed at some point
       - Pda # Frontier - ID by proxy
     whitelist:
       components:
-      - Edible
+      # It's what meat is.
+      - BodyPart
+      # Some clothes, shoes, uniforms.
+      - Butcherable
+      # It's already food.
+      - Edible # Aurora's Song Food>Edible
+      - Seed
+      # A good source of fiber.
+      - Paper
+      # May as well let actual garbage get turned into food.
+      - SpaceGarbage
+      tags:
+      - Recyclable
+      - Trash
+      - Document
+    charredPrototype: FoodBadRecipe
+    goodReagents:
+      - ReagentId: Omnizine
+        Quantity: 1
+      - ReagentId: Flavorol
+        Quantity: 3
+    badReagents:
+      - ReagentId: Toxin
+        Quantity: 2
+    wasteReagents:
+      - ReagentId: Charcoal
+        Quantity: 0.5
+      - ReagentId: Ash
+        Quantity: 0.5
+    # What food items are actually going to be improved by deep-frying?
+    # This is based on flavor profiles.
+    goodFlavors:
+      - bread
+      - bun
+      - donk
+      - dough
+      - fishy
+      - meaty
+      - pasta
+      - potatoes
+      - tofu
+      - onion
+      - mushroom
+    badFlavors:
+      - acid
+      - chocolate
+      - gunpowder
+      - minty
+      - raisins
+      - tea
+      - terrible
     solution: vat_oil
     fryingOils:
-    - Cornoil
-    - OilGhee
-    - OilOlive
-    containerName: fryer_basket
-    minimumOilVolume: 25
-    oilQuality: 1.0
-    oilDegradationPerRecipe: 0.05
-    foulOilBurnChance: 0.3
-    oilQualityFlavors:
-      Pristine:
-      - savory
-      - crispy
-      Clean:
-      - oily
-      Used:
-      - oily
-      - stale
-      Dirty:
-      - burnt
-      - bitter
-      - rancid
-      Foul:
-      - burnt
-      - bitter
-      - rancid
-      - awful
+      - Cornoil
+      - OilGhee
+      - OilOlive
+    #unsafeOilVolumeEffects: #Can't pass UninitializedSaveTest. Modifies itself on spawn. Very weird.
+    #- !type:AreaReactionEffect
+    #  duration: 10
+    #  prototypeId: Smoke
+    #  sound:
+    #    path: /Audio/Effects/smoke.ogg
+    goodFlavorPriceBonus: 0.5
+    solutionSplitMax: 20
+
   - type: SolutionContainerManager
     solutions:
       vat_oil:
@@ -107,11 +132,16 @@
     solution: vat_oil
   - type: RefillableSolution
     solution: vat_oil
-  - type: Edible
+  - type: Edible # Aurora's Song - Convert to edible
     edible: Drink
     solution: vat_oil
-    destroyOnEmpty: false
   - type: Appearance
+  - type: ActivatableUI
+    key: enum.DeepFryerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.DeepFryerUiKey.Key:
+        type: DeepFryerBoundUserInterface
   - type: Destructible
     thresholds:
     - trigger:
@@ -125,18 +155,18 @@
           collection: MetalBreak
       - !type:SpillBehavior
         solution: vat_oil
-      - !type:ChangeConstructionNodeBehavior
-        node: machineFrame
+      - !type:ChangeConstructionNodeBehavior # Delta-V
+        node: machineFrame # Delta-V
   - type: ApcPowerReceiver
-    powerLoad: 2000
+    powerLoad: 300
   - type: Machine
     board: DeepFryerMachineCircuitboard
   - type: EmptyOnMachineDeconstruct
     containers:
-    - fryer_basket
+    - vat_entities
   - type: ContainerContainer
     containers:
-      fryer_basket: !type:Container
+      vat_entities: !type:Container
       machine_board: !type:Container
       machine_parts: !type:Container
   - type: PowerSwitch
@@ -157,5 +187,5 @@
   - type: SolutionContainerVisuals
     maxFillLevels: 8
   - type: DeepFryer
-#    crispinessLevelSet: Spectral # Aurora's Song - Temporarily? removed crispiness
+    crispinessLevelSet: Spectral
 # End Frontier
