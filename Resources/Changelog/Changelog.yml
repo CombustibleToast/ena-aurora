@@ -4649,3 +4649,12 @@ Entries:
   id: 9420
   time: '2026-04-28T21:12:26.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/990
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Ported the updated Crescent from NF
+    - type: Add
+      message: Adds Dinghy to the Crescent shipyard
+  id: 9421
+  time: '2026-04-28T22:40:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/977
