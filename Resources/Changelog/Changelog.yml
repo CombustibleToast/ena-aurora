@@ -4633,3 +4633,12 @@ Entries:
   id: 9418
   time: '2026-04-28T20:57:53.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/982
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: >-
+        Alley: Linked shop windoors to a button that weren't before. unlocked
+        windoors in medical. Tossed a chair out as well.
+  id: 9419
+  time: '2026-04-28T21:05:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/981
