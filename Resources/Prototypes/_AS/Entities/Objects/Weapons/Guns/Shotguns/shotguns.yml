@@ -94,7 +94,7 @@
   - type: BallisticAmmoProvider
     capacity: 4
   - type: NFWeaponDetails
-    manufacturer: weapon-details-cybersun-industries
+    manufacturer: weapon-details-manufacturer-cybersun-industries
 
 # Surplus
 - type: entity
