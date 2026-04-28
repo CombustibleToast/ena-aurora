@@ -311,7 +311,7 @@
     proto: ShellShotgunImprovised
 
 - type: entity
-  abstract: true # Aurora's Song - Disable because "Invalid Prototype"
+  categories: [ HideSpawnMenu ] # Aurora's Song
   parent: [BaseWeaponShotgun, BaseGunWieldable, BaseC3SyndicateContrabandUnredeemable] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandUnredeemable
   id: WeaponShotgunHushpup
   name: Hushpup
