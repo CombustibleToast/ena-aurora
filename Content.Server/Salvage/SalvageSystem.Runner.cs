@@ -334,7 +334,7 @@ public sealed partial class SalvageSystem
                 }
             }
 
-            if (remaining < TimeSpan.FromSeconds(5) && comp.Warped == false) // Begin Aurora's Song: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
+            if (remaining < TimeSpan.FromSeconds(2.5) && comp.Warped == false) // Begin Aurora's Song: Get players and non-hostile ghost roles left on the expedition and yeet them onto the shuttle before we delete the map
             {
                 if (TryFindShuttle(uid, comp, out var shuttleUid) && shuttleUid is { } shuttleGrid)
                 {
@@ -597,13 +597,6 @@ public sealed partial class SalvageSystem
             if (HasComp<ActiveNPCComponent>(playerQUID) || HasComp<NFSalvageMobRestrictionsComponent>(playerQUID))
                 continue;
 
-            // Hostile ghost role. Continue
-            if (TryComp(playerQUID, out NpcFactionMemberComponent? npcFaction))
-            {
-                var hostileFactions = npcFaction.HostileFactions;
-                if (hostileFactions.Contains("NanoTrasen")) // TODO: move away from hardcoded faction
-                    continue;
-            }
             players.Add(playerQUID);
         }
     }
