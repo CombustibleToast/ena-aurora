@@ -4674,3 +4674,13 @@ Entries:
   id: 9423
   time: '2026-04-29T06:41:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/991
+- author: Oberonics
+  changes:
+    - type: Fix
+      message: >-
+        The main reason for ESS failures has been fixed. Contraband clothing
+        wearers are no longer left behind by the ESS. Shout out to Salamander
+        and Abigail for figuring this out.
+  id: 9424
+  time: '2026-04-29T06:48:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/992
