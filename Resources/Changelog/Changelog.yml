@@ -4658,3 +4658,10 @@ Entries:
   id: 9421
   time: '2026-04-28T22:40:55.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/977
+- author: Zephyrpak
+  changes:
+    - type: Add
+      message: Hair is now selectable for reptilians!
+  id: 9422
+  time: '2026-04-29T01:49:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/984
