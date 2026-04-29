@@ -4665,3 +4665,12 @@ Entries:
   id: 9422
   time: '2026-04-29T01:49:35.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/984
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Ported Colored paper from frontier, also adds it to the Crescent.
+    - type: Tweak
+      message: Increased price of the loader by 100.
+  id: 9423
+  time: '2026-04-29T06:41:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/991
