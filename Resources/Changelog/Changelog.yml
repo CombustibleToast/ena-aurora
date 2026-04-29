@@ -4695,3 +4695,12 @@ Entries:
   id: 9425
   time: '2026-04-29T14:11:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/993
+- author: crekulon
+  changes:
+    - type: Add
+      message: 'Two new emotes to fairies: wing fluttering, and glimmering!'
+    - type: Tweak
+      message: Fairy emotes for yawning, crying, and sighing have new sounds!
+  id: 9426
+  time: '2026-04-29T22:42:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/968
