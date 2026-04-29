@@ -4684,3 +4684,14 @@ Entries:
   id: 9424
   time: '2026-04-29T06:48:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/992
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Bluespace Auth form
+    - type: Add
+      message: Citation forms
+    - type: Tweak
+      message: CAF suit resists
+  id: 9425
+  time: '2026-04-29T14:11:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/993
