@@ -4704,3 +4704,12 @@ Entries:
   id: 9426
   time: '2026-04-29T22:42:23.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/968
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: Reimplements persistent and informative medical implants
+    - type: Add
+      message: Death Implants now inform medics how long you have been dead for.
+  id: 9427
+  time: '2026-04-30T23:59:17.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/997
