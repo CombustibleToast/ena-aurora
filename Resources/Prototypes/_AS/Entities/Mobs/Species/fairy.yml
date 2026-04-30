@@ -16,6 +16,7 @@
   - type: Speech
     speechSounds: Fairy
     speechVerb: Fairy
+    allowedEmotes: ['FairyFlutter', 'FairyGlimmer']
   - type: HumanoidAppearance
     species: Fairy
   - type: Fixtures
