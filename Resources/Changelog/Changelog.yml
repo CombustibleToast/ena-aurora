@@ -4713,3 +4713,12 @@ Entries:
   id: 9427
   time: '2026-04-30T23:59:17.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/997
+- author: Phoenix51505
+  changes:
+    - type: Fix
+      message: >-
+        Fixed melee attack animations being rotated wrong if your camera is
+        rotated.
+  id: 9428
+  time: '2026-05-01T00:05:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1008
