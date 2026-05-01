@@ -4756,3 +4756,10 @@ Entries:
   id: 9432
   time: '2026-05-01T00:26:19.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1000
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Paracusia-havers will now hallucinate a wider variety of sounds!
+  id: 9433
+  time: '2026-05-01T00:58:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1006
