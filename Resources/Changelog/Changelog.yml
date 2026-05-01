@@ -4731,3 +4731,12 @@ Entries:
   id: 9429
   time: '2026-05-01T00:13:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1005
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: >-
+        Energy weapons with multiple firemodes once again show what mode they're
+        set to as a pop-up
+  id: 9430
+  time: '2026-05-01T00:19:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/998
