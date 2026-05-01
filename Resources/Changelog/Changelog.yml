@@ -4740,3 +4740,12 @@ Entries:
   id: 9430
   time: '2026-05-01T00:19:09.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/998
+- author: entings
+  changes:
+    - type: Fix
+      message: >-
+        Gold, silver, and ores should now stack just as neatly as the rest of
+        their fellows.
+  id: 9431
+  time: '2026-05-01T00:25:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1004
