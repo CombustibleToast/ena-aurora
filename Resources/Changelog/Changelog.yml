@@ -4722,3 +4722,12 @@ Entries:
   id: 9428
   time: '2026-05-01T00:05:44.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1008
+- author: entings
+  changes:
+    - type: Fix
+      message: >-
+        Replicants are no longer expected to survive on a measly single unit of
+        oxidant.
+  id: 9429
+  time: '2026-05-01T00:13:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1005
