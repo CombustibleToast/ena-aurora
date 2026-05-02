@@ -18472,6 +18472,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
       - 3284
@@ -18482,6 +18483,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
       - 3284
@@ -18492,6 +18494,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
       - 3284
@@ -18502,6 +18505,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
   - uid: 2663
@@ -18511,6 +18515,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 10
       - 11
@@ -18521,6 +18526,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 10
       - 11
@@ -18531,6 +18537,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 10
       - 11
@@ -18541,6 +18548,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 10
       - 11
@@ -27627,6 +27635,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28063,6 +28072,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28075,6 +28085,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28087,6 +28098,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28440,6 +28452,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeLayers
@@ -28454,6 +28467,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeLayers
@@ -29034,6 +29048,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeLayers
@@ -29048,6 +29063,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 11
     - type: AtmosPipeLayers

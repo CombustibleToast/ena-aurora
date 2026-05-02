@@ -35243,6 +35243,8 @@ entities:
       pos: 5.5,-13.5
       parent: 1
     - type: DeviceNetwork
+      configurators:
+      - invalid
       deviceLists:
       - 16
     - type: AtmosPipeLayers
@@ -35663,6 +35665,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       configurators:
+      - invalid
       deviceLists:
       - 16
     - type: AtmosPipeColor
@@ -37261,7 +37264,7 @@ entities:
       parent: 1
     - type: Paper
       content: >-
-        This stall is a free, first come-first serve building for anyone to make their own. However, please do not permanently alter ANYTHING outside these walls, same with the APC or air alarm.
+        This stall is a free, first come-first serve building for anyone to make their own. However, please do not permanently alter ANYTHING outside these walls, same with the APC or air alarm. 
 
 
         Let "nature" remain as much.
