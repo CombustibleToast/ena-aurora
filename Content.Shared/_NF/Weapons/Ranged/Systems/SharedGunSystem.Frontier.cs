@@ -1,10 +1,10 @@
 using Content.Shared.Weapons.Ranged.Components;
-using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
-using Content.Shared.Power; // Aurora - For Frontier addition of PowerChangedEvent
-using Content.Shared.Power.EntitySystems; // Aurora - Move AutoFire to shared
-using Content.Shared.Power.Components; // Aurora - Move AutoFire to shared
+using Content.Shared.Interaction; // Frontier
 using Content.Shared.Popups; // Aurora - Move AutoFire to shared
+using Content.Shared.Power; // Aurora - For Frontier addition of PowerChangedEvent
+using Content.Shared.Power.Components; // Aurora - Move AutoFire to shared
+using Content.Shared.Power.EntitySystems; // Aurora - Move AutoFire to shared
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
