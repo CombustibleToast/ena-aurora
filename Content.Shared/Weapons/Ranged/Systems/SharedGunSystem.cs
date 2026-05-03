@@ -111,6 +111,7 @@ public abstract partial class SharedGunSystem : EntitySystem
         InitializeContainer();
         InitializeSolution();
         InitializeGunExamine(); // Emberfall
+        InitializeAutoFire(); // Aurora - Move AutoFire to shared
 
         // Interactions
         SubscribeLocalEvent<GunComponent, GetVerbsEvent<AlternativeVerb>>(OnAltVerb);
