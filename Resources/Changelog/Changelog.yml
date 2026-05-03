@@ -4770,3 +4770,12 @@ Entries:
   id: 9434
   time: '2026-05-03T11:07:50.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1017
+- author: TheLuggage05
+  changes:
+    - type: Add
+      message: >-
+        Added the Hushpup silenced shotgun to the game, and to expedition loot
+        tables. Go nuts.
+  id: 9435
+  time: '2026-05-03T17:27:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/988
