@@ -235,6 +235,7 @@
   - MobNonHumanHostileBase
   - MobHumanoidInvetory
   - NFBaseMobRestrictions
+  - NFMobNoEquipmentOnGib # Aurora's Song - Make sure clowns don't drop stuff
   id: MobClownBase
   description: A joyous, terrible thing, twisted and warped in The Honkmother's light.
   components:
@@ -261,12 +262,13 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: AutoWakeUp
-  - type: TriggerOnBeingGibbed
-  - type: GibOnTrigger
-    deleteItems: true
-    deleteOrgans: true
-    gib: false
-    useArgumentEntity: true
+  # Aurora's Song - Remove old NF trigger, this has the side effect of corpses dropping items on forced gib
+  # - type: TriggerOnBeingGibbed
+  # - type: GibOnTrigger
+  #   deleteItems: true
+  #   deleteOrgans: true
+  #   gib: false
+  #   useArgumentEntity: true
   - type: MovementSpeedModifier
     baseWalkSpeed : 4.5
     baseSprintSpeed : 4.5
