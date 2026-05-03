@@ -4763,3 +4763,10 @@ Entries:
   id: 9433
   time: '2026-05-01T00:58:26.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1006
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: the server should no longer delete random grids...hopefully
+  id: 9434
+  time: '2026-05-03T11:07:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1017
