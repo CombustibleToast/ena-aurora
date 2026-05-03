@@ -61,10 +61,13 @@
       reagents:
       - ReagentId: FairyBlood
         Quantity: 50
-  - type: PseudoItem
+  - type: Item # fairies are like mice, you can pick them up quickly and store them in a lot of places
+    size: Small
+    heldPrefix: 0
+  - type: PseudoItem # fairies retain PseudoItem so they get all the regular storage behaviors
+    size: "Small"
     shape:
     - 0,1,0,0
-
   - type: Vocal
     sounds:
       Male: FairySpeech
@@ -78,6 +81,9 @@
       - Mouse
   - type: AlwaysTriggerMousetrap
   - type: Carriable # Frontier: Carrying system from nyanotrasen.
+    # Aurora's Song: disables being picked up without having to reparent from human
+    # TODO: after nubody do a more sane solution
+    freeHandsRequired: 10
   - type: Butcherable
     spawned:
     - id: FoodMeatHuman

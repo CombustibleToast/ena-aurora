@@ -53,6 +53,7 @@
       - IdCard # Frontier - ID
 #      - WebCocoon # Frontier # Aurora's Song - Removed at some point
       - Pda # Frontier - ID by proxy
+      - PseudoItem # Aurora's Song - DON'T DEEP FRY PEOPLE
     whitelist:
       components:
       # It's what meat is.
