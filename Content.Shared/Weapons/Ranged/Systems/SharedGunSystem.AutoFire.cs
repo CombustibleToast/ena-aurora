@@ -46,11 +46,9 @@ public partial class SharedGunSystem
 
         component.On ^= true;
 
-        SharedApcPowerReceiverComponent? apcPower = null; // Aurora - Move AutoFire to shared
         if (!component.On)
         {
-            if (_power.ResolveApc(uid, ref apcPower) && component.OriginalLoad != 0) // Aurora - Move AutoFire to shared
-                _power.SetLoad(apcPower.Owner, 1);
+            _power.SetLoad(uid, 1); // Aurora - Move AutoFire to shared
 
             DisableGun(uid, component);
             args.Handled = true;
@@ -58,8 +56,7 @@ public partial class SharedGunSystem
         }
         else if (CanEnable(uid, component))
         {
-            if (_power.ResolveApc(uid, ref apcPower) && component.OriginalLoad != apcPower?.Load) // Aurora - Move AutoFire to shared
-                _power.SetLoad(apcPower.Owner, component.OriginalLoad); // Aurora - Move AutoFire to shared
+            _power.SetLoad(uid, component.OriginalLoad); // Aurora - Move AutoFire to shared
 
             EnableGun(uid, component);
             args.Handled = true;
