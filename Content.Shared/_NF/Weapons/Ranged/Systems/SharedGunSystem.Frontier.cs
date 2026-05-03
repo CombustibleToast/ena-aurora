@@ -1,7 +1,6 @@
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Examine; // Frontier
 using Content.Shared.Interaction; // Frontier
-using Content.Shared.Popups; // Aurora - Move AutoFire to shared
 using Content.Shared.Power; // Aurora - For Frontier addition of PowerChangedEvent
 using Content.Shared.Power.Components; // Aurora - Move AutoFire to shared
 using Content.Shared.Power.EntitySystems; // Aurora - Move AutoFire to shared
@@ -14,8 +13,6 @@ public partial class SharedGunSystem
      * Move these out of GunSystem.AutoFire.cs
      */
     [Dependency] private readonly SharedPowerReceiverSystem _power = default!;
-    private readonly SharedPopupSystem _popup = default!;
-    //Another [Dependency] field of type 'Content.Shared.Popups.SharedPopupSystem' already exists in this type with field 'PopupSystem'
 
     protected virtual void InitializeAutoFire()
     {
@@ -52,7 +49,7 @@ public partial class SharedGunSystem
 
             DisableGun(uid, component);
             args.Handled = true;
-            _popup.PopupEntity(Loc.GetString("auto-fire-disabled"), uid, args.User);
+            PopupSystem.PopupEntity(Loc.GetString("auto-fire-disabled"), uid, args.User);
         }
         else if (CanEnable(uid, component))
         {
@@ -60,11 +57,11 @@ public partial class SharedGunSystem
 
             EnableGun(uid, component);
             args.Handled = true;
-            _popup.PopupEntity(Loc.GetString("auto-fire-enabled"), uid, args.User);
+            PopupSystem.PopupEntity(Loc.GetString("auto-fire-enabled"), uid, args.User);
         }
         else
         {
-            _popup.PopupEntity(Loc.GetString("auto-fire-enabled-no-power"), uid, args.User);
+            PopupSystem.PopupEntity(Loc.GetString("auto-fire-enabled-no-power"), uid, args.User);
         }
     }
 
