@@ -36,6 +36,20 @@
   equipment:
     jumpsuit: ClothingUniformJumpskirtAtmos
 
+# Aurora - Atmos Flightsuits
+- type: loadout
+  id: ContractorClothingUniformFlightsuitAtmos
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSuit
+
+- type: loadout
+  id: ContractorClothingUniformFlightskirtAtmos
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSkirt
+# End Flightsuits
+
 - type: loadout
   id: ContractorClothingUniformJumpsuitBartender
   price: 200
