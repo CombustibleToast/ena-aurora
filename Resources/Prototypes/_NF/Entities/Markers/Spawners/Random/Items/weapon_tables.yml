@@ -285,6 +285,7 @@
       - id: WeaponCaseLongC20r # C20r to T4 | Aurora Song
       - id: WeaponCaseAP4CExpeditionT4 # Aurora
       - id: WeaponCaseLongEstocExpeditionT4 # Aurora
+      - id: WeaponCaseLongHushpupExpeditionT4 # Aurora's Song
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier5
