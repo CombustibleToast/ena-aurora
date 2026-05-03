@@ -2,9 +2,9 @@ using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
 using Content.Shared.Power; // Aurora - For Frontier addition of PowerChangedEvent
-using Content.Shared.Power.EntitySystems;
-using Content.Shared.Power.Components;
-using Content.Shared.Popups;
+using Content.Shared.Power.EntitySystems; // Aurora - Move AutoFire to shared
+using Content.Shared.Power.Components; // Aurora - Move AutoFire to shared
+using Content.Shared.Popups; // Aurora - Move AutoFire to shared
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -46,9 +46,10 @@ public partial class SharedGunSystem
 
         component.On ^= true;
 
+        SharedApcPowerReceiverComponent? apcPower = null; // Aurora - Move AutoFire to shared
         if (!component.On)
         {
-            if (TryComp<SharedApcPowerReceiverComponent>(uid, out var apcPower) && component.OriginalLoad != 0)
+            if (_power.ResolveApc(uid, ref apcPower) && component.OriginalLoad != 0) // Aurora - Move AutoFire to shared
                 apcPower.Load = 1;
 
             DisableGun(uid, component);
@@ -57,8 +58,8 @@ public partial class SharedGunSystem
         }
         else if (CanEnable(uid, component))
         {
-            if (TryComp<SharedApcPowerReceiverComponent>(uid, out var apcPower) && component.OriginalLoad != apcPower.Load)
-                apcPower.Load = component.OriginalLoad;
+            if (_power.ResolveApc(uid, ref apcPower) && component.OriginalLoad != apcPower?.Load) // Aurora - Move AutoFire to shared
+                apcPower?.Load = component.OriginalLoad; // Aurora - Move AutoFire to shared
 
             EnableGun(uid, component);
             args.Handled = true;
@@ -88,7 +89,8 @@ public partial class SharedGunSystem
             return false;
 
         // No power needed? Always works.
-        if (!HasComp<SharedApcPowerReceiverComponent>(uid))
+        SharedApcPowerReceiverComponent? apcPower = null; // Aurora - Move AutoFire to shared
+        if (!_power.ResolveApc(uid, ref apcPower)) // Aurora - Move AutoFire to shared
             return true;
 
         // Not switched on? Won't work.
@@ -114,7 +116,8 @@ public partial class SharedGunSystem
 
     private void OnGunInit(EntityUid uid, AutoShootGunComponent component, ComponentInit args)
     {
-        if (TryComp<SharedApcPowerReceiverComponent>(uid, out var apcPower) && component.OriginalLoad == 0)
+        SharedApcPowerReceiverComponent? apcPower = null; // Aurora - Move AutoFire to shared
+        if (_power.ResolveApc(uid, ref apcPower) && component.OriginalLoad == 0) // Aurora - Move AutoFire to shared
             component.OriginalLoad = apcPower.Load;
 
         if (!component.On)
