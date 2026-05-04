@@ -970,8 +970,6 @@
   - AtmosphericTechnicianJumpsuit
   - AtmosphericTechnicianJumpskirt
   - AtmosphericTechnicianJumpsuitCasual
-  - FlightsuitAtmos #imp
-  - FlightskirtAtmos #imp
 
 - type: loadoutGroup
   id: AtmosphericTechnicianOuterClothing
