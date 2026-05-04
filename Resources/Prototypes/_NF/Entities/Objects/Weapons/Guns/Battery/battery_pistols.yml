@@ -190,6 +190,9 @@
   id: NFWeaponPistolCHIMPUpgraded
   parent: WeaponPistolCHIMPUpgraded
   components:
+  - type: BatteryAmmoProvider # Aurora's Song - Parity with NFWeaponPistolCHIMP to let it have ammo
+    proto: NFAnomalousParticleDeltaStrong
+    fireCost: 100
   - type: BatteryWeaponFireModes
     fireModes:
     - proto: NFAnomalousParticleDeltaStrong

@@ -816,8 +816,8 @@
   parent: [BaseC3SyndicateContraband, WeaponPistolCHIMP] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolCHIMPUpgraded
   description: This C.H.I.M.P. seems to have a greater punch than usual...
-  components:
-  - type: BatteryWeaponFireModes
+  # components: # Aurora's Song - unnecessary, extended in NF BatteryPistols
+  # - type: BatteryWeaponFireModes # Aurora's Song - unnecessary, extended in NF BatteryPistols
     # Frontier: moved to NF variants
     # fireModes:
     # - proto: AnomalousParticleDeltaStrong
