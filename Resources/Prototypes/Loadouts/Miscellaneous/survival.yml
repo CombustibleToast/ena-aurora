@@ -20,6 +20,7 @@
     - Reptilian
     - Vulpkanin
     - Ovinia # Den Addition
+    - Thaven # MACRO
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox

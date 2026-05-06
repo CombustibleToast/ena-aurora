@@ -16,7 +16,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Feroxi, Harpy ] # Aurora's Song - Add feroxi / DeltaV add harpy
+          type: [ Human, Animal, Rat, Plant, Feroxi, Harpy, Thaven ] # Aurora's Song - Add feroxi / DeltaV add harpy / MACRO - Thaven
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -47,7 +47,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Feroxi, Avali, Harpy ] # Aurora's Song - Add feroxi / DeltaV add harpy
+          type: [ Human, Animal, Rat, Plant, Arachnid, Moth, Feroxi, Avali, Harpy, Thaven ] # Aurora's Song - Add feroxi / DeltaV add harpy / MACRO - Thaven
       # Convert Oxygen into CO2.
       - !type:ModifyLungGas
         conditions:
@@ -129,6 +129,11 @@
         - !type:MetabolizerTypeCondition
           type: [ Harpy ]
         factor: -8
+      - !type:Oxygenate #MACRO, thaven don't suffocate from any gases
+        scaling: true
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
   reactiveEffects:
     Flammable:
       methods: [ Touch ]
@@ -179,6 +184,11 @@
         - !type:MetabolizerTypeCondition
           type: [ Harpy ]
         factor: -8
+      - !type:Oxygenate #MACRO, thaven don't suffocate from any gases
+        scaling: true
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
 
 - type: reagent
   id: CarbonDioxide
@@ -220,7 +230,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant ]
+          type: [ Plant, Thaven ] #MACRO, thaven don't suffocate from any gases
       - !type:HealthChange
         minScale: 0.5
         conditions:
@@ -237,7 +247,7 @@
       - !type:Oxygenate # carbon dioxide displaces oxygen from the bloodstream, causing asphyxiation
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant, Harpy ] # DeltaV - Harpy air quality sensitivty
+          type: [ Plant, Harpy, Thaven ] # DeltaV - Harpy air quality sensitivty / MACRO, thaven don't suffocate from any gases
           inverted: true
         factor: -4
       # We need a metabolism effect on reagent removal
@@ -270,7 +280,7 @@
       - !type:Oxygenate
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Vox, Slime ]
+          type: [ Vox, Slime, Thaven ] #MACRO, thaven don't suffocate from any gases
       # Converts Nitrogen into Ammonia
       - !type:ModifyLungGas
         conditions:
@@ -361,6 +371,11 @@
         damage:
           types:
             Poison: 1
+      - !type:Oxygenate #macro, thaven don't suffocate from any gases
+        scaling: true
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
 
 - type: reagent
   id: Frezon
@@ -433,3 +448,8 @@
         - !type:MetabolizerTypeCondition
           type: [ Harpy ]
         factor: -4
+      - !type:Oxygenate #macro, thaven don't suffocate from any gases
+        scaling: true
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]

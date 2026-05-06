@@ -18,6 +18,7 @@
     - type: ReplacementAccent
       accent: scottish
     - type: AllulaloAccent # Aurora's Song
+    - type: ThavenAccent # macro
 
 # 1 Cost
 
