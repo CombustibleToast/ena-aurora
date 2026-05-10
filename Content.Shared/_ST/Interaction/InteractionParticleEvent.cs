@@ -1,6 +1,6 @@
 // SPDX-FileCopyrightText: 2026 Janet Blackquill <uhhadd@gmail.com>
 //
-// SPDX-License-Identifier: LicenseRef-Wallening
+// SPDX-License-Identifier: MIT
 
 using Robust.Shared.Serialization;
 
