@@ -6,3 +6,21 @@
   price: 0
   equipment:
     shoes: ClothingShoesFootProtectors
+
+- type: loadout
+  id: SiteWorkerClothingProtectorsFeet
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesFootProtectors
+
+- type: loadout
+  id: SiteManagerClothingProtectorsFeet
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 0
+  equipment:
+    shoes: ClothingShoesFootProtectors
