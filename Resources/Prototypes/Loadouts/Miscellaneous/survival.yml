@@ -79,6 +79,7 @@
     - Human
     - Reptilian
     - Vulpkanin
+    - Thaven # MACRO - Thaven
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth
