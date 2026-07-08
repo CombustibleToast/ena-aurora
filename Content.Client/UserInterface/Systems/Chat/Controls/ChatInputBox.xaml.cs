@@ -1,3 +1,4 @@
+using Content.Client._DEN.Denu.UI.Denu;
 using Content.Client.Stylesheets;
 using Content.Shared.Chat;
 using Content.Shared.Input;
@@ -15,6 +16,7 @@ public class ChatInputBox : PanelContainer
     public readonly ChannelSelectorButton ChannelSelector;
     public readonly HistoryLineEdit Input;
     public readonly ChannelFilterButton FilterButton;
+    public readonly DenuButton DenuButton; // DEN
     protected readonly BoxContainer Container;
     protected ChatChannel ActiveChannel { get; private set; } = ChatChannel.Local;
 
@@ -49,6 +51,16 @@ public class ChatInputBox : PanelContainer
             StyleClasses = { StyleClassChatFilterOptionButton }
         };
         Container.AddChild(FilterButton);
+
+        // DEN Start: Denu
+        DenuButton = new DenuButton
+        {
+            Name = "DenuButton",
+            StyleClasses = { StyleClassChatFilterOptionButton }
+        };
+        Container.AddChild(DenuButton);
+        // DEN End
+
         AddStyleClass(StyleClassChatPanel);
         ChannelSelector.OnChannelSelect += UpdateActiveChannel;
     }

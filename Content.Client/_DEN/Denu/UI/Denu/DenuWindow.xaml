@@ -1,0 +1,27 @@
+﻿<denu:DenuWindow
+    xmlns="https://spacestation14.io"
+    xmlns:denu="clr-namespace:Content.Client._DEN.Denu.UI.Denu"
+    xmlns:components="clr-namespace:Content.Client._DEN.Denu.UI.Denu.Components"
+    SetSize="600 500"
+    MinSize="520 360">
+
+    <PanelContainer Name="WindowBodyPanel" HorizontalExpand="True" VerticalExpand="True">
+        <BoxContainer Orientation="Horizontal" VerticalExpand="True" HorizontalExpand="True">
+            <PanelContainer Name="SidebarPanel" VerticalExpand="True">
+                <components:DenuSidebar Name="Sidebar" />
+            </PanelContainer>
+
+            <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+                <PanelContainer Name="ScopePanel" HorizontalExpand="True">
+                    <components:ScopeSelector Name="ScopeSelector" />
+                </PanelContainer>
+
+                <PanelContainer Name="ContentPanel" HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer Name="ContentArea" Orientation="Vertical" VerticalExpand="True" HorizontalExpand="True" Margin="8 8 8 8">
+                    </BoxContainer>
+                </PanelContainer>
+            </BoxContainer>
+        </BoxContainer>
+    </PanelContainer>
+
+</denu:DenuWindow>
