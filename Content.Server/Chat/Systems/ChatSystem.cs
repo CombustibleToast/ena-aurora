@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Linq;
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
@@ -7,6 +8,7 @@ using Content.Server.Ghost;
 using Content.Server.Interaction; // DEN - Use interaction system's range checks
 using Content.Server.Speech.EntitySystems;
 using Content.Server.Station.Systems;
+using Content.Shared._DEN.Utility;
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -16,6 +18,7 @@ using Content.Shared.Ghost;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.Players.RateLimiting;
+using Content.Shared.Radio;
 using Robust.Server.Player;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
@@ -194,6 +197,8 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
 
+        message = StringUtil.FilterStringTags(message, ChatAllowedTags);
+
         // Was there an emote in the message? If so, send it.
         if (player != null && emoteStr != message && emoteStr != null)
         {
@@ -230,8 +235,8 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Subtle:
                 SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
-            // DEN End
         }
+        // DEN End
     }
 
     /// <inheritdoc />
