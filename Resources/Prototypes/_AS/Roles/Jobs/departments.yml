@@ -29,3 +29,11 @@
   roles:
   - SiteManager
   - SiteWorker
+
+- type: department
+  id: Corporate
+  name: department-corporate
+  description: department-corporate
+  color: "#b0c4de"
+  roles:
+  - CorporateRepresentative

@@ -1,0 +1,58 @@
+﻿- type: job
+  id: CorporateRepresentative
+  name: job-name-corporate-representative
+  description: job-description-corporate-representative
+  playTimeTracker: JobCorporateRepresentative
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 129600 # 36 hours
+  whitelisted: true
+  startingGear: CorporateRepresentativeGear
+  alwaysUseSpawner: true
+  icon: JobIconCommissioner
+  requireAdminNotify: true
+  supervisors: job-supervisors-hire
+  weight: 180
+  displayWeight: 70
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+    - type: CommandStaff
+    - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: CommissionerGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+    pocket2: NFWeaponEnergyPistolLaserX01Multiphase
+  storage:
+    back:
+    - ASTechFabSLEFlatpack
+    - Multitool
+    - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
+    - DoorRemoteSLE
+    - BaseSecurityUplinkRadioSheriff
+    - ASRubberStampCommissioner # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
+  licenses:
+  - LicenseContrabandHandling
+
+- type: chameleonOutfit
+  id: CorporateRepresentativeChameleonOutfit
+  job: Corporate Representative
+  hasMindShield: true
+  equipment:
+    head: ASClothingHeadHatSLECampaign
+    mask: ASClothingMaskGasSLECommissioner
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterCoatSLEFormalCommissioner
+    neck: ASClothingNeckSLEBadgeCommissioner
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLELightBlue
+    shoes: ASClothingShoesBootsSLEDarkBlue

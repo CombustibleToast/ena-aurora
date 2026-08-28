@@ -27,3 +27,6 @@
 
 - type: playTimeTracker
   id: JobOffDutyOfficer
+
+- type: playTimeTracker
+  id: JobCorporateRepresentative
