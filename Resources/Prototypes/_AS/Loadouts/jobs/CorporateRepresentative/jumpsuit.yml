@@ -1,0 +1,34 @@
+﻿- type: loadout
+  id: CorporateRepresentativeClothingFormalJumpsuitSyndicate
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSyndieFormal
+
+- type: loadout
+  id: CorporateRepresentativeClothingFormalJumpskirtSyndicate
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSyndieFormalDress
+
+- type: loadout
+  id: CorporateRepresentativeClothingNanotrasenTurtleneck
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitNanotrasenRepresentativeTurtleneck
+
+- type: loadout
+  id: CorporateRepresentativeClothingNanotrasenTurtleskirt
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtNanotrasenRepresentativeTurtleskirt
+
+- type: loadout
+  id: CorporateRepresentativeClothingNanotrasenUniform
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitNanotrasenRepresentative
+
+- type: loadout
+  id: CorporateRepresentativeClothingNanotrasenUniformSkirt
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtNanotrasenRepresentative
+
+- type: loadout
+  id: CorporateRepresentativeClothingNanotrasenJumpsuit
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitMilitaryNanotrasenRepresentative

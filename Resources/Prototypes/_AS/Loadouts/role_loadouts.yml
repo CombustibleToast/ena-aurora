@@ -415,3 +415,30 @@
 
 - type: roleLoadout
   id: JobColonialCommandOfficial
+
+#region Corporate
+
+- type: roleLoadout
+  id: JobCorporateRepresentative
+  groups:
+  - CorporateRepresentativeHead
+  - CorporateRepresentativeNeck
+  - CorporateRepresentativeJumpsuit
+  - CorporateRepresentativeGloves
+  - CorporateRepresentativeBackpack
+  - CorporateRepresentativeOuterClothing
+  - CorporateRepresentativeForcedOuterclothing
+  - CorporateRepresentativeShoes
+  - CorporateRepresentativeEars
+  - CorporateRepresentativeBelt
+  - CorporateRepresentativePDA
+  - ContractorGlasses
+  - ContractorBackpackItems
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorHandItems
+  - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song

@@ -1,0 +1,14 @@
+﻿- type: loadout
+  id: CorporateRepresentativeClothingHandsGlovesCombat
+  equipment:
+    gloves: ClothingHandsGlovesCombat
+
+- type: loadout
+  id: CorporateRepresentativeClothingHandsGlovesFlight
+  equipment:
+    gloves: ClothingHandsGlovesCaptainflightgloves
+
+- type: loadout
+  id: CorporateRepresentativeClothingHandsGlovesPapercut
+  equipment:
+    gloves: ClothingHandsGlovesSr

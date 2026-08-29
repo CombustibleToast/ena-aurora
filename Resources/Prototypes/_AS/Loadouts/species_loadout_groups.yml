@@ -36,3 +36,12 @@
   - SLEForcedClothingOuterEVASuitSLE
   fallbacks:
   - SLEForcedClothingOuterEVASuitSLE
+
+- type: loadoutGroup
+  id: CorporateRepresentativeForcedOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - CorporateRepresentativeForcedClothingOuterEVASuitSyndicate
+  - CorporateRepresentativeForcedClothingOuterEVASuitNanotrasen

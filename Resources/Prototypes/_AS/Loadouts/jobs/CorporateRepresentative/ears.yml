@@ -1,0 +1,9 @@
+﻿- type: loadout
+  id: CorporateRepresentativeClothingHeadsetAltSyndicate
+  equipment:
+    ears: ASClothingHeadsetSyndicateRepresentative
+
+- type: loadout
+  id: CorporateRepresentativeClothingHeadsetAltNanotrasen
+  equipment:
+    ears: ASClothingHeadsetNanotrasenRepresentative

@@ -1,0 +1,35 @@
+﻿- type: loadout
+  id: CorporateRepresentativeClothingNeckScarf
+  equipment:
+    neck: ClothingNeckScarfStripedSyndieRed
+
+- type: loadout
+  id: CorporateRepresentativeClothingNeckScarfGreen
+  equipment:
+    neck: ClothingNeckScarfStripedSyndieGreen
+
+- type: loadout
+  id: CorporateRepresentativeClothingNeckCollarSyndicate
+  equipment:
+    neck: ClothingNeckCollarSyndi
+
+- type: loadout
+  id: CorporateRepresentativeClothingNeckCollarNanotrasen
+  equipment:
+    neck: ClothingNeckCollarCC
+
+- type: loadout
+  id: CorporateRepresentativeClothingNeckCloakNanotrasenOffcoat
+  equipment:
+    neck: ASClothingNeckCloakNanotrasenRepresentativeOffcoat
+
+- type: loadout
+  id: CorporateRepresentativeClothingNeckCloakNanotrasen
+  equipment:
+    neck: ASClothingNeckCloakNanotrasenRepresentative
+
+- type: loadout
+  id: CorporateRepresentativeClothingNeckMantleNanotrasen
+  equipment:
+    neck: ASClothingNeckMantleNanotrasenRepresentative
+
