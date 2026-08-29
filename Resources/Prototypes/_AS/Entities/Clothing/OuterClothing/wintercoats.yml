@@ -1,7 +1,7 @@
 ﻿#region NanoTrasen
 
 - type: entity
-  parent: ClothingOuterWinterCoat
+  parent: [ ClothingOuterWinterCoat, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingOuterWinterNanotrasenRepresentativeFur
   name: nanotrasen representative's fur-collar coat
   description: A fur-collar wool coat, made of extremely high-quality materials, built to withstand the toughest weather; like when your office's heater isn't working.
@@ -14,7 +14,7 @@
     size: Normal
 
 - type: entity
-  parent: ClothingOuterWinterCoat
+  parent: [ ClothingOuterWinterCoat, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingOuterWinterNanotrasenRepresentative
   name: nanotrasen representative's winter coat
   description: Sleek, comfortable, imposing. Perfect for keeping clipboards and stamps in - or a gun.

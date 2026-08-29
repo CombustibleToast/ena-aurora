@@ -206,6 +206,7 @@
     - CorgiWearable
 
 #region NanoTrasen
+
 - type: entity
   parent: [ ClothingHeadBase, C2ContrabandNanoTrasenRestricted ]
   id: ASClothingHeadHatBeretBlueshield
@@ -220,11 +221,11 @@
     price: 100
 
 - type: entity
-  parent: ClothingHeadHatSrBeret
+  parent: [ ClothingHeadHatSrBeret, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingHeadBeretNanotrasenRepresentative
   name: nanotrasen representative's beret
 
 - type: entity
-  parent: ClothingHeadHatSrCap
+  parent: [ ClothingHeadHatSrCap, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingHeadCapNanotrasenRepresentative
   name: nanotrasen representative's cap

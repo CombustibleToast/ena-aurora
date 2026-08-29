@@ -685,7 +685,7 @@
 #region Corporate
 
 - type: entity
-  parent: [ SyndiCommanderPDA, BaseC3SyndicateContraband]
+  parent: [ SyndiCommanderPDA, C2ContrabandSyndicateRestrictedUnredeemable]
   id: ASCorporateRepresentativePDASyndicate
   name: syndicate representative PDA
   description: How many did you have to sacrifice to get here?
@@ -712,7 +712,7 @@
       - NanoChatCartridge
 
 - type: entity
-  parent: [SrPDA, BaseCommandContraband]
+  parent: [ SrPDA, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASCorporateRepresentativePDANanotrasen
   name: nanotrasen representative PDA
   description: Looks like it's been clawed on.

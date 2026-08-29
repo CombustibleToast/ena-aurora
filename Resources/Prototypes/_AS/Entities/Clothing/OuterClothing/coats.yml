@@ -106,7 +106,7 @@
 #region Nanotrasen
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingOuterCoatNanotrasenRepresentative
   name: nanotrasen representative's coat
   description: An expensive coat worn only by the most esteemed NanoTrasen officials.

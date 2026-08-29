@@ -35,7 +35,7 @@
 #region Nanotrasen
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingNeckCloakNanotrasenRepresentativeOffcoat
   name: nanotrasen representative's off-coat
   description: A coat imposingly worn as a cloak over your back. Cuts a dashing figure.
@@ -46,7 +46,7 @@
     sprite: _Funkystation/Clothing/Neck/Cloaks/ntr_offcoat.rsi
 
 - type: entity
-  parent: ClothingNeckCloakSr
+  parent: [ ClothingNeckCloakSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingNeckCloakNanotrasenRepresentative
   name: nanotrasen representative's cloak
   description: A top of the line cloak issued by NanoTrasen. Must have cost a fortune.

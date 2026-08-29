@@ -53,6 +53,6 @@
     price: 200
 
 - type: entity
-  parent: ClothingNeckMantleSr
+  parent: [ ClothingNeckMantleSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingNeckMantleNanotrasenRepresentative
   name: nanotrasen representative's mantle

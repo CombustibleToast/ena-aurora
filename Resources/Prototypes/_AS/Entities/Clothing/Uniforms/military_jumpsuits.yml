@@ -402,6 +402,6 @@
 #region Nanotrasen
 
 - type: entity
-  parent: ClothingUniformJumpsuitMilitarySr
+  parent:  [ ClothingUniformJumpsuitMilitarySr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingUniformJumpsuitMilitaryNanotrasenRepresentative
   name: nanotrasen representative's jumpsuit

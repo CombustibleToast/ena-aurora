@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: [ ASIDCardStandard, BaseC3SyndicateContraband ]
+  parent: [ ASIDCardStandard, C2ContrabandSyndicateRestrictedUnredeemable ]
   id: ASCorporateRepresentativeIDCardSyndicate
   name: syndicate representative ID card
   components:
@@ -16,9 +16,14 @@
       state: SyndicateCommander
   - type: IdCard
     jobIcon: JobIconSyndicateCommander
+  - type: PresetIdCard
+    job: CorporateRepresentative
+  - type: Access
+    tags:
+    - SyndicateAgent
 
 - type: entity
-  parent: [ASIDCardStandard, BaseCommandContraband]
+  parent: [ ASIDCardStandard, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASCorporateRepresentativeIDCardNanotrasen
   name: nanotrasen representative ID card
   components:
@@ -35,4 +40,10 @@
       state: Nanotrasen
   - type: IdCard
     jobIcon: JobIconNanotrasen
-
+  - type: PresetIdCard
+    job: CorporateRepresentative
+  - type: IdCard
+    jobIcon: JobIconNanotrasen
+  - type: Access
+    tags:
+    - CentralCommand

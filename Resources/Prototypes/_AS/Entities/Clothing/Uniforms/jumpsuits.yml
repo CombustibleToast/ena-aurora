@@ -843,7 +843,7 @@
 #region Nanotrasen
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ClothingUniformBase, C2ContrabandNanoTrasenRestrictedUnredeemable]
   id: ASClothingUniformJumpsuitNanotrasenRepresentativeTurtleneck
   name: nanotrasen representative's turtleneck
   description: An expensive blend of wools make this sweater exceptionally comfy, without being itchy at all!
@@ -854,6 +854,6 @@
     sprite: _Funkystation/Clothing/Uniforms/Jumpsuit/nanotrasen_representative_sweater.rsi
 
 - type: entity
-  parent: ClothingUniformJumpsuitSr
+  parent: [ ClothingUniformJumpsuitSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingUniformJumpsuitNanotrasenRepresentative
   name: nanotrasen representative's uniform

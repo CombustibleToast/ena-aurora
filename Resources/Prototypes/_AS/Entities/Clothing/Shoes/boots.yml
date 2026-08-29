@@ -35,7 +35,7 @@
 #region Corporate
 
 - type: entity
-  parent: ClothingShoesMilitaryBase
+  parent: [ ClothingShoesMilitaryBase, C2ContrabandNanoTrasenRestrictedUnredeemable, C2ContrabandSyndicateRestrictedUnredeemable ]
   id: ASClothingShoesHighheelBootsCorporate
   name: corporate official's heel boots
   description: An EXPENSIVE pair of black suede platform ankle boots, with block heels. Arguably a deadly weapon.

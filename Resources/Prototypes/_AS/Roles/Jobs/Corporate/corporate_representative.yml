@@ -13,8 +13,10 @@
   supervisors: job-supervisors-hire
   weight: 180
   displayWeight: 55
+  access:
+  - Mercenary
   accessGroups:
-  - AllAccess
+  - GeneralAccess
   special:
   - !type:AddImplantSpecial
     implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ]

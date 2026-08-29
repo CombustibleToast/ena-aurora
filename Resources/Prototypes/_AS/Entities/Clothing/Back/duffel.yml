@@ -74,6 +74,6 @@
 #region Nanotrasen
 
 - type: entity
-  parent: ClothingBackpackDuffelSr
+  parent: [ ClothingBackpackDuffelSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASClothingBackpackDuffelNanotrasenRepresentative
   name: nanotrasen representative's duffel
