@@ -5,15 +5,14 @@
   playTimeTracker: JobCorporateRepresentative
   requirements:
   - !type:OverallPlaytimeRequirement
-    time: 129600 # 36 hours
+    time: 86400 # 24 hours
   whitelisted: true
   startingGear: CorporateRepresentativeGear
   alwaysUseSpawner: true
-  icon: JobIconCommissioner
   requireAdminNotify: true
   supervisors: job-supervisors-hire
   weight: 180
-  displayWeight: 70
+  displayWeight: 55
   accessGroups:
   - AllAccess
   special:
@@ -28,31 +27,32 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
-  id: CommissionerGear
+  id: CorporateRepresentativeGear
   equipment:
-    pocket1: ASWeaponPistolMk58SLessLethal
-    pocket2: NFWeaponEnergyPistolLaserX01Multiphase
-  storage:
-    back:
-    - ASTechFabSLEFlatpack
-    - Multitool
-    - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
-    - DoorRemoteSLE
-    - BaseSecurityUplinkRadioSheriff
-    - ASRubberStampCommissioner # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
-  licenses:
-  - LicenseContrabandHandling
+    pocket1: NFWeaponEnergyPistolDisabler
+  encryptionKeys:
+  - EncryptionKeyCommon
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 - type: chameleonOutfit
-  id: CorporateRepresentativeChameleonOutfit
+  id: CorporateRepresentativeChameleonOutfitSyndicate
   job: Corporate Representative
   hasMindShield: true
   equipment:
-    head: ASClothingHeadHatSLECampaign
-    mask: ASClothingMaskGasSLECommissioner
-    eyes: ASClothingEyesGlassesSLE
-    outerClothing: ASClothingOuterCoatSLEFormalCommissioner
-    neck: ASClothingNeckSLEBadgeCommissioner
-    belt: ASClothingBeltSLEFilled
-    gloves: ASClothingHandsGlovesCombatSLELightBlue
-    shoes: ASClothingShoesBootsSLEDarkBlue
+    head: ClothingHeadBeretSyndie
+    outerClothing: ClothingOuterWinterSyndieCap
+    neck: ClothingNeckScarfStripedSyndieRed
+    gloves: ClothingHandsGlovesCaptainflightgloves
+    shoes: ASClothingShoesHighheelBootsCorporate
+
+- type: chameleonOutfit
+  id: CorporateRepresentativeChameleonOutfitNanotrasen
+  job: Corporate Representative
+  hasMindShield: true
+  equipment:
+    head: ASClothingHeadBeretNanotrasenRepresentative
+    outerClothing: ASClothingOuterWinterNanotrasenRepresentativeFur
+    neck: ASClothingNeckCloakNanotrasenRepresentativeOffcoat
+    gloves: ClothingHandsGlovesCaptainflightgloves
+    shoes: ASClothingShoesHighheelBootsCorporate

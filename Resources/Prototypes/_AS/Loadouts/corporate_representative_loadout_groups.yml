@@ -93,3 +93,11 @@
   loadouts:
   - CorporateRepresentativeClothingHeadsetAltSyndicate
   - CorporateRepresentativeClothingHeadsetAltNanotrasen
+
+- type: loadoutGroup
+  id: CorporateRepresentativePDA
+  name: loadout-group-contractor-pda
+  loadouts:
+  - CorporateRepresentativePDASyndicate
+  - CorporateRepresentativePDANanotrasen
+

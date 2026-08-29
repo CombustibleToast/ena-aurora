@@ -154,3 +154,18 @@
       - state: green
       - sprite: _AS/Markers/jobs.rsi
         state: colcom
+
+#region Corporate
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointCorporateRepresentative
+  name: corporate representative
+  components:
+  - type: SpawnPoint
+    job_id: CorporateRepresentative
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _AS/Markers/jobs.rsi
+      state: cr

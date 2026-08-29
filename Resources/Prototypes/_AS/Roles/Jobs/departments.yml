@@ -34,6 +34,7 @@
   id: Corporate
   name: department-corporate
   description: department-corporate
-  color: "#b0c4de"
+  color: "#334E6D"
+  weight: 90
   roles:
   - CorporateRepresentative
