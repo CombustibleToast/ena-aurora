@@ -698,6 +698,15 @@
       whitelist:
         tags:
         - Write
+    licenseSlot:
+      name: license
+      startingItem: LicenseContrabandHandlingSyndicate
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      priority: -2
+      whitelist:
+        tags:
+        - License
   - type: CartridgeLoader
     diskSpace: 20
     preinstalled:
@@ -725,6 +734,15 @@
       whitelist:
         tags:
         - Write
+    licenseSlot:
+      name: license
+      startingItem: LicenseContrabandHandlingNanotrasen
+      ejectSound: /Audio/Machines/id_swipe.ogg
+      insertSound: /Audio/Machines/id_insert.ogg
+      priority: -2
+      whitelist:
+        tags:
+        - License
   - type: CartridgeLoader
     diskSpace: 20
     preinstalled:

@@ -2,6 +2,7 @@
   id: CorporateRepresentative
   name: job-name-corporate-representative
   description: job-description-corporate-representative
+  icon: "JobIconContractor"
   playTimeTracker: JobCorporateRepresentative
   requirements:
   - !type:OverallPlaytimeRequirement
@@ -15,11 +16,12 @@
   displayWeight: 55
   access:
   - Mercenary
+  - CorporateRepresentative
   accessGroups:
   - GeneralAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ]
+    implants: [ MindShieldImplant, TrackingImplant ]
   - !type:AddComponentSpecial
     components:
     - type: CommandStaff

@@ -4,3 +4,4 @@ id-card-access-level-corpsman = Corpsman
 id-card-access-level-colonial-command = Colonial Command
 id-card-access-level-nt-command = NT Command
 id-card-access-level-nt-security = NT Security
+id-card-access-level-corporate-representative = Corporate Representative

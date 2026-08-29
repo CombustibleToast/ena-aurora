@@ -15,7 +15,7 @@
       offset: -0.09375, 0.0625
       state: SyndicateCommander
   - type: IdCard
-    jobIcon: JobIconSyndicateCommander
+    jobIcon: JobIconSyndicate
   - type: PresetIdCard
     job: CorporateRepresentative
   - type: Access
@@ -42,8 +42,6 @@
     jobIcon: JobIconNanotrasen
   - type: PresetIdCard
     job: CorporateRepresentative
-  - type: IdCard
-    jobIcon: JobIconNanotrasen
   - type: Access
     tags:
     - CentralCommand

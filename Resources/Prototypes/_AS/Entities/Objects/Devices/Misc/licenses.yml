@@ -23,3 +23,21 @@
   - type: ShipyardSellCondition
     preserveOnSale: true
   - type: DeletionCensusExempt
+
+- type: entity
+  parent: LicenseContrabandHandling
+  id: LicenseContrabandHandlingSyndicate
+  name: syndicate contraband license
+  description: This license grants the named holder the legal allowance for the usage of C2, C2-Syndicate and C2-Syndicate-Restricted class contraband.
+  components:
+  - type: License
+    licenseName: syndicate contraband license
+
+- type: entity
+  parent: LicenseContrabandHandling
+  id: LicenseContrabandHandlingNanotrasen
+  name: nanotrasen contraband license
+  description: This license grants the named holder the legal allowance for the usage of C2, C2-NanoTrasen and C2-NanoTrasen-Restricted class contraband.
+  components:
+  - type: License
+    licenseName: nanotrasen contraband license
