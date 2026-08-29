@@ -218,3 +218,13 @@
     sprite: _Goobstation/Clothing/Head/Hats/blueshield_beret.rsi
   - type: StaticPrice
     price: 100
+
+- type: entity
+  parent: ClothingHeadHatSrBeret
+  id: ASClothingHeadBeretNanotrasenRepresentative
+  name: nanotrasen representative's beret
+
+- type: entity
+  parent: ClothingHeadHatSrCap
+  id: ASClothingHeadCapNanotrasenRepresentative
+  name: nanotrasen representative's cap

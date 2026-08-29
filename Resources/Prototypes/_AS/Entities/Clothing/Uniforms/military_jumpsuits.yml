@@ -398,3 +398,10 @@
         color: "#ff733c"
       - state: equipped-decor-shoulder-patch
         color: "#ffdc73"
+
+#region Nanotrasen
+
+- type: entity
+  parent: ClothingUniformJumpsuitMilitarySr
+  id: ASClothingUniformJumpsuitMilitaryNanotrasenRepresentative
+  name: nanotrasen representative's jumpsuit

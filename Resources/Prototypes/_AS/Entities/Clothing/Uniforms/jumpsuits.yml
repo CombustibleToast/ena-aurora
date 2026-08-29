@@ -642,7 +642,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratkhaki.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitDenimSkinnyJeans
   name: denim skinny jeans
@@ -653,7 +653,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/denim_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBlackDenimSkinnyJeans
   name: black skinny jeans
@@ -664,7 +664,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/black_denim_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBrownSkinnyJeans
   name: brown skinny jeans
@@ -675,7 +675,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCamoSkinnyJeans
   name: camo green skinny jeans
@@ -686,7 +686,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBloodRedSkinnyJeans
   name: blood red skinny jeans
@@ -697,7 +697,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/blood_red_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitGreenSkinnyJeans
   name: green skinny jeans
@@ -708,7 +708,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/green_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitOrangeSkinnyJeans
   name: orange skinny jeans
@@ -719,7 +719,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/orange_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPinkSkinnyJeans
   name: pink skinny jeans
@@ -730,7 +730,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/pink_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPurpleSkinnyJeans
   name: purple skinny jeans
@@ -741,7 +741,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/purple_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitYellowSkinnyJeans
   name: yellow skinny jeans
@@ -752,7 +752,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/yellow_skinny.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPupShorts
   name: pup shorts
@@ -763,7 +763,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/pup_shorts.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitDarkPupShorts
   name: dark pup shorts
@@ -774,7 +774,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/dark_pup_shorts.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitKitShorts
   name: kit shorts
@@ -785,7 +785,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/kit_shorts.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitPuppyShorts
   name: puppy shorts
@@ -796,7 +796,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/puppy_shorts.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBlackBaggyPants
   name: baggy pants
@@ -807,7 +807,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/black_baggy.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBrownBaggyPants
   name: brown baggy pants
@@ -818,7 +818,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_baggy.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitCamoBaggyPants
   name: camo green baggy pants
@@ -829,7 +829,7 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_baggy.rsi
 
-- type: entity 
+- type: entity
   parent: ClothingUniformBase
   id: ClothingUniformJumpsuitBaggyJeans
   name: baggy jeans
@@ -840,3 +840,20 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/baggy_jeans.rsi
 
+#region Nanotrasen
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitNanotrasenRepresentativeTurtleneck
+  name: nanotrasen representative's turtleneck
+  description: An expensive blend of wools make this sweater exceptionally comfy, without being itchy at all!
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Clothing/Uniforms/Jumpsuit/nanotrasen_representative_sweater.rsi
+  - type: Clothing
+    sprite: _Funkystation/Clothing/Uniforms/Jumpsuit/nanotrasen_representative_sweater.rsi
+
+- type: entity
+  parent: ClothingUniformJumpsuitSr
+  id: ASClothingUniformJumpsuitNanotrasenRepresentative
+  name: nanotrasen representative's uniform
