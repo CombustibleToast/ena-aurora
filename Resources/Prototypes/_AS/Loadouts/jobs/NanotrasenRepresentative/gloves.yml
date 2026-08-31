@@ -1,0 +1,14 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingHandsGlovesCombat
+  equipment:
+    gloves: ClothingHandsGlovesCombat
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingHandsGlovesFlight
+  equipment:
+    gloves: ClothingHandsGlovesCaptainflightgloves
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingHandsGlovesPapercut
+  equipment:
+    gloves: ClothingHandsGlovesSr

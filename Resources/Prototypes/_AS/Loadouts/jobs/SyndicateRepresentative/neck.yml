@@ -1,0 +1,14 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeClothingNeckScarf
+  equipment:
+    neck: ClothingNeckScarfStripedSyndieRed
+
+- type: loadout
+  id: SyndicateRepresentativeClothingNeckScarfGreen
+  equipment:
+    neck: ClothingNeckScarfStripedSyndieGreen
+
+- type: loadout
+  id: SyndicateRepresentativeClothingNeckCollar
+  equipment:
+    neck: ClothingNeckCollarSyndi

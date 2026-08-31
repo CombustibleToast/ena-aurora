@@ -1,6 +1,6 @@
 ﻿- type: entity
-  parent: [ ASIDCardStandard, C2ContrabandSyndicateRestrictedUnredeemable ]
-  id: ASCorporateRepresentativeIDCardSyndicate
+  parent: [ ASIDCardStandard] #, C2ContrabandSyndicateRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  id: ASSyndicateRepresentativeIDCard
   name: syndicate representative ID card
   components:
   - type: Sprite
@@ -16,15 +16,10 @@
       state: SyndicateCommander
   - type: IdCard
     jobIcon: JobIconSyndicate
-  - type: PresetIdCard
-    job: CorporateRepresentative
-  - type: Access
-    tags:
-    - SyndicateAgent
 
 - type: entity
-  parent: [ ASIDCardStandard, C2ContrabandNanoTrasenRestrictedUnredeemable ]
-  id: ASCorporateRepresentativeIDCardNanotrasen
+  parent: [ ASIDCardStandard] #, C2ContrabandNanoTrasenRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  id: ASNanotrasenRepresentativeIDCard
   name: nanotrasen representative ID card
   components:
   - type: Sprite
@@ -38,10 +33,3 @@
     - sprite: Interface/Misc/job_icons.rsi
       offset: -0.09375, 0.0625
       state: Nanotrasen
-  - type: IdCard
-    jobIcon: JobIconNanotrasen
-  - type: PresetIdCard
-    job: CorporateRepresentative
-  - type: Access
-    tags:
-    - CentralCommand

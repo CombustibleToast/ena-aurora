@@ -24,4 +24,5 @@ job-description-cafmedic = Provide aid in the most dangerous of circumstances.
 job-description-caftrooper = Put down any threats your Commander points you at.
 
 # Corporate
-job-description-corporate-representative = Represent your corporation's interests in the sector.
+job-description-syndicate-representative = Represent the Syndicate's interests in the sector.
+job-description-nanotrasen-representative = Represent NanoTrasen's interests in the sector.

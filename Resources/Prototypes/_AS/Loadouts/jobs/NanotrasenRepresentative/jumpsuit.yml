@@ -1,0 +1,24 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingTurtleneck
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitNanotrasenRepresentativeTurtleneck
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingTurtleskirt
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtNanotrasenRepresentativeTurtleskirt
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingUniform
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingUniformSkirt
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingJumpsuit
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitMilitaryNanotrasenRepresentative

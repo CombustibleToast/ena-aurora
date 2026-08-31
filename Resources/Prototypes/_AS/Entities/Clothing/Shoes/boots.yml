@@ -35,9 +35,9 @@
 #region Corporate
 
 - type: entity
-  parent: [ ClothingShoesMilitaryBase, C2ContrabandNanoTrasenRestrictedUnredeemable, C2ContrabandSyndicateRestrictedUnredeemable ]
-  id: ASClothingShoesHighheelBootsCorporate
-  name: corporate official's heel boots
+  parent: [ ClothingShoesMilitaryBase] #, C2ContrabandNanoTrasenRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  id: ASClothingShoesHighheelBootsNanotrasen
+  name: nanotrasen official's heel boots
   description: An EXPENSIVE pair of black suede platform ankle boots, with block heels. Arguably a deadly weapon.
   components:
   - type: MeleeWeapon
@@ -57,3 +57,8 @@
       collection: FootstepHighHeels
       params:
         variation: 0.09
+
+- type: entity
+  parent: [ASClothingShoesHighheelBootsNanotrasen] #, C2ContrabandSyndciateRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  id: ASClothingShoesHighheelBootsSyndicate
+  name: syndicate official's heel boots

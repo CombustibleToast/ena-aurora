@@ -1,0 +1,4 @@
+﻿- type: loadout
+  id: SyndicateRepresentativePDA
+  equipment:
+    id: ASSyndicateRepresentativePDA

@@ -1,0 +1,111 @@
+﻿- type: loadoutGroup
+  id: NanotrasenRepresentativeHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - NanotrasenRepresentativeClothingHeadHatBeret
+  - NanotrasenRepresentativeClothingHeadHatCap
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - NanotrasenRepresentativeClothingNeckScarf
+  - NanotrasenRepresentativeClothingNeckCollar
+  - NanotrasenRepresentativeClothingNeckCloak
+  - NanotrasenRepresentativeClothingNeckCloakOffcoat
+  - NanotrasenRepresentativeClothingNeckMantle
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - NanotrasenRepresentativeClothingTurtleneck
+  - NanotrasenRepresentativeClothingTurtleskirt
+  - NanotrasenRepresentativeClothingUniform
+  - NanotrasenRepresentativeClothingUniformSkirt
+  - NanotrasenRepresentativeClothingJumpsuit
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeGloves
+  minLimit: 0
+  name: loadout-group-contractor-gloves
+  loadouts:
+  - NanotrasenRepresentativeClothingHandsGlovesCombat
+  - NanotrasenRepresentativeClothingHandsGlovesFlight
+  - NanotrasenRepresentativeClothingHandsGlovesPapercut
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeBackpack
+  name: loadout-group-contractor-backpack
+  loadouts:
+  - NanotrasenRepresentativeClothingBackpackSatchelCommandveteran
+  - NanotrasenRepresentativeClothingBackpackMessenger
+  - NanotrasenRepresentativeClothingBackpackDuffel
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeOuterClothing
+  minLimit: 0
+  name: loadout-group-contractor-outerclothing
+  loadouts:
+  - NanotrasenRepresentativeClothingOuterCoat
+  - NanotrasenRepresentativeClothingOuterWinterCoat
+  - NanotrasenRepresentativeClothingOuterWinterCoatFur
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - NanotrasenRepresentativeClothingBootsHighHeel
+  - NanotrasenRepresentativeClothingBootsCombat
+  - NanotrasenRepresentativeClothingBootsJack
+  - NanotrasenRepresentativeClothingBootsWinter
+  - NanotrasenRepresentativeClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeBelt
+  minLimit: 0
+  name: loadout-group-contractor-belt
+  loadouts:
+  - NanotrasenRepresentativeClothingBeltSheathFilledHilt
+  - NanotrasenRepresentativeBoxFolderClipboard
+  - NanotrasenRepresentativeClothingBeltHolster
+  - NanotrasenRepresentativeClothingBeltSheathFilled
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeEars
+  name: loadout-group-contractor-ears
+  hidden: true # Auto-selected, therefore hidden
+  loadouts:
+  - NanotrasenRepresentativeClothingHeadsetAlt
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativePDA
+  name: loadout-group-contractor-pda
+  hidden: true # Auto-selected, therefore hidden
+  loadouts:
+  - NanotrasenRepresentativePDA
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeHandItems
+  name: loadout-group-contractor-hand-items
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - NanotrasenRepresentativeBalloon
+  - NanotrasenRepresentativeTowel
+  - NanotrasenRepresentativeHandyFlag
+  subgroups:
+  - ContractorHandItems
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - NanotrasenRepresentativeFlippo
+  - NanotrasenRepresentativeFlippoCentcom
+  subgroups:
+  - ContractorBackpackItems

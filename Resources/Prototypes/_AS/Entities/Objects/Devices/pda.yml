@@ -685,30 +685,20 @@
 #region Corporate
 
 - type: entity
-  parent: [ SyndiCommanderPDA, C2ContrabandSyndicateRestrictedUnredeemable]
-  id: ASCorporateRepresentativePDASyndicate
+  parent: [ SyndiCommanderPDA] #, C2ContrabandSyndicateRestrictedUnredeemable] This is just commented out until the contra rework is merged, otherwise build fails
+  id: ASSyndicateRepresentativePDA
   name: syndicate representative PDA
   description: How many did you have to sacrifice to get here?
   components:
   - type: Pda
-    id: ASCorporateRepresentativeIDCardSyndicate
+    id: ASSyndicateRepresentativeIDCard
     penSlot:
       startingItem: CyberPen
       priority: -1
       whitelist:
         tags:
         - Write
-    licenseSlot:
-      name: license
-      startingItem: LicenseContrabandHandlingSyndicate
-      ejectSound: /Audio/Machines/id_swipe.ogg
-      insertSound: /Audio/Machines/id_insert.ogg
-      priority: -2
-      whitelist:
-        tags:
-        - License
   - type: CartridgeLoader
-    diskSpace: 20
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
@@ -716,35 +706,23 @@
       - NewsReaderCartridge
       - BountyContractsCartridge
       - AstroNavCartridge
-      - LedgerCartridge
-      - MailMetricsCartridge
       - NanoChatCartridge
 
 - type: entity
-  parent: [ SrPDA, C2ContrabandNanoTrasenRestrictedUnredeemable ]
-  id: ASCorporateRepresentativePDANanotrasen
+  parent: [ SrPDA] #, C2ContrabandNanoTrasenRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  id: ASNanotrasenRepresentativePDA
   name: nanotrasen representative PDA
   description: Looks like it's been clawed on.
   components:
   - type: Pda
-    id: ASCorporateRepresentativeIDCardNanotrasen
+    id: ASNanotrasenRepresentativeIDCard
     penSlot:
       startingItem: PenCentcom
       priority: -1
       whitelist:
         tags:
         - Write
-    licenseSlot:
-      name: license
-      startingItem: LicenseContrabandHandlingNanotrasen
-      ejectSound: /Audio/Machines/id_swipe.ogg
-      insertSound: /Audio/Machines/id_insert.ogg
-      priority: -2
-      whitelist:
-        tags:
-        - License
   - type: CartridgeLoader
-    diskSpace: 20
     preinstalled:
       - CrewManifestCartridge
       - NotekeeperCartridge
@@ -752,6 +730,4 @@
       - NewsReaderCartridge
       - BountyContractsCartridge
       - AstroNavCartridge
-      - LedgerCartridge
-      - MailMetricsCartridge
       - NanoChatCartridge

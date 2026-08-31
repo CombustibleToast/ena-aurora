@@ -1,0 +1,19 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeClothingBackpackMessenger
+  equipment:
+    back: ClothingBackpackMessengerSyndicate
+
+- type: loadout
+  id: SyndicateRepresentativeClothingBackpackDuffel
+  equipment:
+    back: ClothingBackpackDuffelSyndicate
+
+- type: loadout
+  id: SyndicateRepresentativeClothingBackpack
+  equipment:
+    back: ClothingBackpackSyndicate
+
+- type: loadout
+  id: SyndicateRepresentativeClothingBackpackSatchelCommandveteran
+  equipment:
+    back: ClothingBackpackSatchelCommandveteran

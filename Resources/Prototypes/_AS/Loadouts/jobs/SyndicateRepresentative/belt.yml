@@ -1,21 +1,21 @@
 ﻿- type: loadout
-  id: CorporateRepresentativeClothingBeltSheathFilledHilt
+  id: SyndicateRepresentativeClothingBeltSheathFilledHilt
   name: sabre sheath (with hilt)
   equipment:
     belt: ClothingBeltSheathFilledHilt
 
 - type: loadout
-  id: CorporateRepresentativeBoxFolderClipboard
+  id: SyndicateRepresentativeBoxFolderClipboard
   equipment:
     belt: BoxFolderClipboard
 
 - type: loadout
-  id: CorporateRepresentativeClothingBeltHolster
+  id: SyndicateRepresentativeClothingBeltHolster
   equipment:
     belt: ClothingBeltHolster
 
 - type: loadout
-  id: CorporateRepresentativeClothingBeltSheathFilled
+  id: SyndicateRepresentativeClothingBeltSheathFilled
   price: 2500
   equipment:
     belt: ClothingBeltSheathFilled

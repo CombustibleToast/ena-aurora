@@ -1,9 +1,0 @@
-﻿- type: loadout
-  id: CorporateRepresentativePDASyndicate
-  equipment:
-    id: ASCorporateRepresentativePDASyndicate
-
-- type: loadout
-  id: CorporateRepresentativePDANanotrasen
-  equipment:
-    id: ASCorporateRepresentativePDANanotrasen

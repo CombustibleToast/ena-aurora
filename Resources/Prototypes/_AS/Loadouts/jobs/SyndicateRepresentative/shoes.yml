@@ -1,5 +1,5 @@
 ﻿- type: loadout
-  id: CorporateRepresentativeClothingBootsWinterSyndicate
+  id: SyndicateRepresentativeClothingBootsWinterSyndicate
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -7,15 +7,15 @@
     shoes: ClothingShoesBootsWinterSyndicate
 
 - type: loadout
-  id: CorporateRepresentativeClothingBootsHighHeel
+  id: SyndicateRepresentativeClothingBootsHighHeel
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
   equipment:
-    shoes: ASClothingShoesHighheelBootsCorporate
+    shoes: ASClothingShoesHighheelBootsSyndicate
 
 - type: loadout
-  id: CorporateRepresentativeClothingBootsCombat
+  id: SyndicateRepresentativeClothingBootsCombat
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -23,7 +23,7 @@
     shoes: ClothingShoesBootsCombat
 
 - type: loadout
-  id: CorporateRepresentativeClothingBootsJack
+  id: SyndicateRepresentativeClothingBootsJack
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -31,7 +31,7 @@
     shoes: ClothingShoesBootsJack
 
 - type: loadout
-  id: CorporateRepresentativeClothingBootsWinter
+  id: SyndicateRepresentativeClothingBootsWinter
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF
@@ -39,7 +39,7 @@
     shoes: ClothingShoesBootsWinter
 
 - type: loadout
-  id: CorporateRepresentativeClothingShoesBootsLaceup
+  id: SyndicateRepresentativeClothingShoesBootsLaceup
   hideEffects:
   - !type:GroupLoadoutEffect
     proto: ShoesCapableNF

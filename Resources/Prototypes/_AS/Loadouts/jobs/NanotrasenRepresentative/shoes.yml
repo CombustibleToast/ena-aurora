@@ -1,0 +1,39 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingBootsHighHeel
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ASClothingShoesHighheelBootsNanotrasen
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBootsCombat
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsCombat
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBootsJack
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsJack
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBootsWinter
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsWinter
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingShoesBootsLaceup
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ClothingShoesBootsLaceup

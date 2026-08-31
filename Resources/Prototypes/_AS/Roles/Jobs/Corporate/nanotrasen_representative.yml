@@ -1,0 +1,56 @@
+﻿- type: job
+  id: NanotrasenRepresentative
+  name: job-name-nanotrasen-representative
+  description: job-description-nanotrasen-representative
+  icon: "JobIconNanotrasen"
+  playTimeTracker: JobNanotrasenRepresentative
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 86400 # 24 hours
+  whitelisted: true
+  startingGear: NanotrasenRepresentativeGear
+  alwaysUseSpawner: true
+  requireAdminNotify: true
+  supervisors: job-supervisors-hire
+  weight: 180
+  displayWeight: 55
+  access:
+  - Mercenary
+  - CentralCommand
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+    - type: CommandStaff
+    - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: NanotrasenRepresentativeGear
+  equipment:
+    pocket1: NFWeaponEnergyPistolDisabler
+  storage:
+    back:
+    - RubberStampCentcom
+  encryptionKeys:
+  - EncryptionKeyCommon
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  licenses:
+  - LicenseContrabandHandlingNanotrasen
+
+- type: chameleonOutfit
+  id: NanotrasenRepresentativeChameleonOutfit
+  job: NanotrasenRepresentative
+  hasMindShield: true
+  equipment:
+    head: ASClothingHeadBeretNanotrasenRepresentative
+    outerClothing: ASClothingOuterWinterNanotrasenRepresentativeFur
+    neck: ASClothingNeckCloakNanotrasenRepresentativeOffcoat
+    gloves: ClothingHandsGlovesCaptainflightgloves
+    shoes: ASClothingShoesHighheelBootsNanotrasen

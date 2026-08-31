@@ -1,0 +1,31 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeClothingHeadBeret
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadBeretSyndie
+
+- type: loadout
+  id: SyndicateRepresentativeClothingHeadCap
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadHatSyndie
+
+- type: loadout
+  id: SyndicateRepresentativeClothingHeadMasterAtArms
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadHatSyndieMAA
+
+- type: loadout
+  id: SyndicateRepresentativeForcedHelmetSyndicate
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  equipment:
+    head: ClothingHeadHelmetSyndicate

@@ -37,4 +37,5 @@
   color: "#334E6D"
   weight: 90
   roles:
-  - CorporateRepresentative
+  - SyndicateRepresentative
+  - NanotrasenRepresentative

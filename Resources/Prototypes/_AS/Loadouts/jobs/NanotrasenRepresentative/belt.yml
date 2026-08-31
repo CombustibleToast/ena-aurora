@@ -1,0 +1,21 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingBeltSheathFilledHilt
+  name: sabre sheath (with hilt)
+  equipment:
+    belt: ClothingBeltSheathFilledHilt
+
+- type: loadout
+  id: NanotrasenRepresentativeBoxFolderClipboard
+  equipment:
+    belt: BoxFolderClipboard
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBeltHolster
+  equipment:
+    belt: ClothingBeltHolster
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBeltSheathFilled
+  price: 2500
+  equipment:
+    belt: ClothingBeltSheathFilled

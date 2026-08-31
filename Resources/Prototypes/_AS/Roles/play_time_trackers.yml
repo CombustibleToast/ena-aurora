@@ -29,4 +29,7 @@
   id: JobOffDutyOfficer
 
 - type: playTimeTracker
-  id: JobCorporateRepresentative
+  id: JobSyndicateRepresentative
+
+- type: playTimeTracker
+  id: JobNanotrasenRepresentative
