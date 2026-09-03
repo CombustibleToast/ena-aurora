@@ -10,7 +10,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
-using Content.Shared._DEN.Earmuffs;
 
 namespace Content.Server.Chat.Systems;
 
@@ -78,12 +77,6 @@ public sealed partial class ChatSystem
             if (session.AttachedEntity is not { Valid: true } playerEntity)
                 continue;
             // DEN End
-
-            // DEN edit: VRChat earmuffs, but on Den!
-            if (TryComp<EarmuffsComponent>(playerEntity, out var earmuffs)
-                && earmuffs.Running && earmuffs.HearRange < data.Range
-                && (channel == ChatChannel.Local || channel == ChatChannel.Emotes))
-                continue;
 
             var entRange = MessageRangeCheck(session, data, range);
             if (entRange == MessageRangeCheckResult.Disallowed)
