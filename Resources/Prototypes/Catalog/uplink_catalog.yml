@@ -1785,7 +1785,7 @@
   id: UplinkClothingOuterHardsuitJuggernaut
   name: uplink-clothing-outer-hardsuit-juggernaut-name
   description: uplink-clothing-outer-hardsuit-juggernaut-desc
-  icon: { sprite: /Textures/Structures/Storage/Crates/syndicate.rsi, state: icon }
+  icon: { sprite: /Textures/_AS/Structures/Storage/Crates/syndicate.rsi, state: icon } # Aurora's Song - Storage Resprites Batch 1
   productEntity: CrateCybersunJuggernautBundle
   cost:
     Telecrystal: 12

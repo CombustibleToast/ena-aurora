@@ -327,7 +327,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/weapon.rsi
+      - sprite: _AS/Structures/Storage/Crates/weapon.rsi # Aurora's Song - Storage Resprites Batch 1
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark
@@ -347,7 +347,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/weapon.rsi
+      - sprite: _AS/Structures/Storage/Crates/weapon.rsi # Aurora's Song - Storage Resprites Batch 1
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark

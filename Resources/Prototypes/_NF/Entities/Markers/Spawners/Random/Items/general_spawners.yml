@@ -161,7 +161,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/livestock.rsi
+      - sprite: _AS/Structures/Storage/Crates/livestock.rsi # Aurora's Song - Storage Resprites Batch 1
         state: base
       - sprite: _NF/Objects/Vehicles/hoverbike.rsi
         state: vehicle

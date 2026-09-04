@@ -379,6 +379,9 @@
   name: gun safe
   components:
   - type: Appearance
+  - type: Sprite
+    sprite: _AS/Structures/Storage/Lockers/shotguncase.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: EntityStorageVisuals
     stateBaseClosed: shotguncase
     stateDoorOpen: shotguncase_open

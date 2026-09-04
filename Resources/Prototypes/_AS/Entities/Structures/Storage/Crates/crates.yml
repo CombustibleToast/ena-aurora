@@ -6,9 +6,10 @@
   description: A dark steel crate with red bands and a letter S embossed on the front. It's locked.
   components:
   - type: Icon
-    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi
+    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi
+    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["NuclearOperative"], ["SyndicateAgent"]]
 

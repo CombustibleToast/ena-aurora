@@ -15,7 +15,8 @@
   - type: Sprite
     snapCardinals: true
     noRot: true
-    sprite: _NF/Structures/Furniture/Armory/weapon_rack.rsi
+    sprite: _AS/Structures/Furniture/Armory/weapon_rack.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
     layers:
     - state: base-gun
       color: "#515e5e"
@@ -107,7 +108,7 @@
           components:
           - Gun
   - type: ItemMapper
-    sprite: _NF/Structures/Furniture/Armory/weapon_rack.rsi
+    sprite: _AS/Structures/Furniture/Armory/weapon_rack.rsi # Aurora's Song - Storage Resprites Batch 1
     mapLayers:
       gun-1:
         minCount: 1
@@ -200,7 +201,7 @@
           components:
           - MeleeWeapon
   - type: ItemMapper
-    sprite: _NF/Structures/Furniture/Armory/weapon_rack.rsi
+    sprite: _AS/Structures/Furniture/Armory/weapon_rack.rsi # Aurora's Song - Storage Resprites Batch 1
     mapLayers:
       melee-1:
         minCount: 1
@@ -295,7 +296,7 @@
           tags:
           - Sidearm
   - type: ItemMapper
-    sprite: _NF/Structures/Furniture/Armory/weapon_rack.rsi
+    sprite: _AS/Structures/Furniture/Armory/weapon_rack.rsi # Aurora's Song - Storage Resprites Batch 1
     mapLayers:
       pistol-1:
         minCount: 1
@@ -358,6 +359,8 @@
       color: "#515e5e"
     - state: pistol-0
     - map: ["enum.StorageFillLayers.Fill"]
+    - state: door # Aurora's Song - Storage Resprites Batch 1
+      map: [ enum.LockVisualLayers.Lock ]
     - state: locked
       map: [ enum.LockVisualLayers.Lock ]
       shader: unshaded

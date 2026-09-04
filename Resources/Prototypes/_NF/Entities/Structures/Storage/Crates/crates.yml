@@ -70,9 +70,10 @@
   name: ammo crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/ammo.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/ammo.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
 
 - type: entity
   parent: CratePirate
@@ -114,9 +115,10 @@
   name: mercenary crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/secure_mercenary.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_mercenary.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/secure_mercenary.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_mercenary.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["Mercenary"]]
 
@@ -138,9 +140,10 @@
   name: secure ammo crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/secure_ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_ammo.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/secure_ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_ammo.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["Mercenary"]]
 
