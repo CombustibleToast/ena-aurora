@@ -775,7 +775,7 @@ public sealed partial class ChatUIController : UIController
         }
 
         // DEN Start: Denu
-        if (_denuUIController.AutoFormatterEnabled)
+        if (_denuUIController.AutoFormatterEnabled && DenuUIController.InGameICChannels.Contains(channel))
         {
             text = _denuUIController.FormatMessage(text);
         }

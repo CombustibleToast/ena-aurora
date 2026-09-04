@@ -1,14 +1,9 @@
-// SPDX-FileCopyrightText: 2025 Cam
-// SPDX-FileCopyrightText: 2025 Cami
-// SPDX-FileCopyrightText: 2025 sleepyyapril
-//
-// SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
-
 using Content.Client._DEN.Denu.Core;
 using Content.Client._DEN.Denu.Modules.Chat;
 using Content.Client._DEN.UserInterface.Systems.Chat.Controls;
 using Content.Client.Chat.TypingIndicator;
 using Content.Shared._DEN.Denu;
+using Content.Shared.Chat;
 using Robust.Client.Graphics;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controllers;
@@ -23,6 +18,9 @@ public sealed partial class DenuUIController : UIController
     private readonly DenuModuleRegistry _moduleRegistry = new();
     private ChatFormatterDenuModule? _formatterModule;
     private EarmuffsDenuModule? _earmuffsModule;
+
+    public static readonly List<ChatSelectChannel> InGameICChannels = new()
+        { ChatSelectChannel.Local, ChatSelectChannel.Whisper, ChatSelectChannel.Emotes, ChatSelectChannel.Subtle };
 
     public event Action? OnSettingsChanged;
     public event Action<bool>? OnOpenStateChanged;
