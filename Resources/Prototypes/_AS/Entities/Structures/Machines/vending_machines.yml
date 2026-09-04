@@ -46,6 +46,61 @@
   - type: ActivatableUIRequiresAccess
 
 - type: entity
+  parent: [BaseStructureDisableAnchoring, BaseStructureDisableScrewing, VendingMachine]
+  id: VendingMachineMarineSurplusVend
+  name: Marine Surplus Vending Machine
+  description: A good marine once said, "For the LARP." No, we don't know either.
+  components:
+  - type: VendingMachine
+    pack: MarineSurplusVendInventory
+    offState: off
+    brokenState: broken
+    normalState: base
+    ejectState: base     # TODO: eject frame, reusing base
+    denyState: base      # TODO: deny frame, reusing base
+    dispenseOnHitChance: 0
+    dispenseOnHitThreshold: 0
+    ejectDelay: 3
+  - type: Sprite
+    sprite: _RMC14/Structures/Machines/VendingMachines/ColMarTech/clothing.rsi
+    layers:
+    - map: ["enum.VendingMachineVisualLayers.Base"]
+      state: "off"
+    - map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      state: "base"
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  #  - type: Store
+  #    balance:
+  #      MercCoin: 0 # Waits for the player to put in money
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        - BulletImpassable # TODO Remove this after vendor tipping is added.
+
+- type: entity
   parent: [BaseStructureDisableAnchoring, StorePresetExchangeUplink, VendingMachine]
   id: VendingMachineExchangeVend
   name: ExchangeVend

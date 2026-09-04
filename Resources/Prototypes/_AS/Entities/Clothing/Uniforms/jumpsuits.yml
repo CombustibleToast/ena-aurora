@@ -451,6 +451,60 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/colcomformal.rsi
 
+#region Marine Surplus
+# I don't know why the colors for these look weird to what they're labeled as for the .rsis, but I assigned them to what I think looked correct
+
+- type: entity
+  parent: ClothingUniformBase
+  id: JumpsuitMarineSurplus
+  name: marine jungle uniform
+  description: Standard-issue Marine uniform. Patches and markings removed for surplus issue.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/desert.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/desert.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusDesert
+  name: marine desert uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/classic.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/classic.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusSnow
+  name: marine snow uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/snow.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/snow.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusClassic
+  name: marine classic uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/jungle.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/jungle.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusUrban
+  name: marine urban uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/urban.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/urban.rsi
+
 #region Misc
 
 - type: entity

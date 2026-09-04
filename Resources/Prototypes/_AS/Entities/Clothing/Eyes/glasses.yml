@@ -13,6 +13,12 @@
     sprite: _AS/Clothing/Eyes/Glasses/sle_glasses.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
+  parent: [RMCGlassesAviators, ClothingEyesGlassesSecurity]
+  id: GlassesAviatorsSLE
+  name: SLE aviator sunglasses
+  description: A pair of classic aviator shades. Comes with a built-in SLE HUD.
+
+- type: entity
   parent: [ClothingEyesGlassesSecurity, ShowMedicalIcons]
   id: ASClothingEyesGlassesSLECorpsman
   name: SLE corpsman glasses
@@ -34,4 +40,3 @@
     color: "#FFF5E0"
   - type: Clothing
     sprite: _AS/Clothing/Eyes/Glasses/sle_corps_glasses.rsi # Aurora Song - Using SLE-recolored sprites
-

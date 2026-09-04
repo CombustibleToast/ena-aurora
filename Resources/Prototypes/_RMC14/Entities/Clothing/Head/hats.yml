@@ -1,0 +1,663 @@
+# Aurora Song - Taken and modified from RMC14 at https://github.com/RMC-14/RMC-14/blob/b6bf62d08cbd3e392d6fe63031a06230955e833e/Resources/Prototypes/_RMC14/Entities/Clothing/Head/hats.yml
+
+- type: entity
+  parent: ClothingHeadBase
+  id: CMHeadBeret
+  name: beret
+  description: Does not protect a head from bullet.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+
+# Aurora's Song Start - camoflauge beret variants based on existing prototypes
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretJungle
+  name: jungle beret
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/jungle.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/jungle.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretDesert
+  name: desert beret
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/desert.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/desert.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretSnow
+  name: snow beret
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/snow.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/snow.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretClassic
+  name: classic beret
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/classic.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/classic.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretUrban
+  name: urban beret
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/urban.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret/urban.rsi
+# Aurora's Song End
+
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretTan
+  name: tan beret
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_tan.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_tan.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: CMHeadBeretEngineer
+  name: engineering beret
+  description: A beret with the engineering insignia emblazoned on it. For engineers that are more inclined towards style than safety.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_engi.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_engi.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: RMCHeadBeretGreen
+  name: marine beret # Aurora's Song - UNMC>marine
+  suffix: Green
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_green.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_green.rsi
+
+- type: entity
+  parent: CMHeadBeret
+  id: RMCHeadBeretPurple
+  name: purple beret
+  description: A stylish, if purple, beret.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_purple.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/beret_purple.rsi
+
+# Caps
+- type: entity # Aurora's Song - MP cap ported due to dependency, as it is role-specific (don't want to let people freely obtain it), won't be added to vendor
+  parent: ClothingHeadBase
+  id: CMHeadCapMP
+  name: MP cap
+  description: A ball-cap worn by the more casual of the Marines' Military Police.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/mp_cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/mp_cap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+#  - type: Storage # Aurora's Song - commented out for now, until storage solved
+#    maxItemSize: Tiny
+#    grid:
+#    - 0,0,3,1 # 2 slots
+#    whitelist:
+#      components:
+#      - RMCLighter
+#      - HelmetAccessory
+#      tags:
+#      - Cigarette
+#      - Matchstick
+#  - type: ContainerContainer
+#    containers:
+#      storagebase: !type:Container
+#        ents: [ ]
+#  - type: UserInterface
+#    interfaces:
+#      enum.StorageUiKey.Key:
+#        type: StorageBoundUserInterface
+#  - type: FixedItemSizeStorage
+#  - type: IgnoreContentsSize
+#    items:
+#      components:
+#      - HelmetAccessory
+#  - type: HelmetAccessoryHolder
+#  - type: InteractedBlacklist
+#    blacklist:
+#      components:
+#      - Xeno
+
+- type: entity # Aurora's Song - mostly just a reference
+  parent: CMHeadCapMP
+  id: CMHeadCap
+  name: cap
+  description: Standard baseball cap.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap.rsi
+
+- type: entity
+  parent: CMHeadCapMP
+  id: RMCHeadCapFlippable
+  name: jungle cap # Aurora's Song - cap> jungle cap
+  description: Standard baseball cap.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/jungle.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_flipped
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/jungle.rsi
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-flip-verb
+    foldVerbText: fold-flip-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+    foldedHeldPrefix: flipped
+#  - type: ItemCamouflage # Aurora's Song - No camoflauge code, will add per-prototype variants
+#    camouflageVariations:
+#      Jungle: _RMC14/Objects/Clothing/Head/Hats/cap/jungle.rsi
+#      Desert: _RMC14/Objects/Clothing/Head/Hats/cap/desert.rsi
+#      Snow: _RMC14/Objects/Clothing/Head/Hats/cap/snow.rsi
+#      Classic: _RMC14/Objects/Clothing/Head/Hats/cap/classic.rsi
+#      Urban: _RMC14/Objects/Clothing/Head/Hats/cap/urban.rsi
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLayer:
+          True: {visible: false}
+          False: {visible: true}
+
+# Aurora's Song Start - camouflage variants for caps
+- type: entity
+  parent: RMCHeadCapFlippable
+  id: RMCHeadCapFlippableDesert
+  name: desert cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/desert.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/desert.rsi
+
+- type: entity
+  parent: RMCHeadCapFlippable
+  id: RMCHeadCapFlippableSnow
+  name: snow cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/snow.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/snow.rsi
+
+- type: entity
+  parent: RMCHeadCapFlippable
+  id: RMCHeadCapFlippableClassic
+  name: classic cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/classic.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/classic.rsi
+
+- type: entity
+  parent: RMCHeadCapFlippable
+  id: RMCHeadCapFlippableUrban
+  name: urban cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/urban.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap/urban.rsi
+# Aurora's Song End
+
+- type: entity
+  parent: CMHeadCap
+  id: CMHeadCapPeakedFormal
+  name: marine formal peaked cap # Aurora's Song - marine>marine formal
+  description: A peaked cap. Wearer may suffer the heavy weight of responsibility upon their head and shoulders.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap_peaked_formal.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap_peaked_formal.rsi
+
+- type: entity
+  parent: CMHeadCap
+  id: CMHeadCapPeakedService
+  name: marine service peaked cap
+  description: A peaked cap. Wearer may suffer the heavy weight of responsibility upon their head and shoulders.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap_peaked_service.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cap_peaked_service.rsi
+
+- type: entity
+  parent: CMHeadCapMP
+  id: CMHeadFlapCap
+  name: marine jungle expedition cap # Aurora's Song - UNMC>marine jungle
+  description: It's a cap, with flaps. A patch stitched across the front has faded beyond legibility. # Aurora's Song - reads "UNS ALMAYER">has faded beyond legibility.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/jungle.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/jungle.rsi
+  - type: Appearance
+#  - type: ItemCamouflage # Aurora's Song - No camoflauge code, will add per-prototype variants
+#    camouflageVariations:
+#      Jungle: _RMC14/Objects/Clothing/Head/Hats/flapcap/jungle.rsi
+#      Desert: _RMC14/Objects/Clothing/Head/Hats/flapcap/desert.rsi
+#      Snow: _RMC14/Objects/Clothing/Head/Hats/flapcap/snow.rsi
+#      Classic: _RMC14/Objects/Clothing/Head/Hats/flapcap/classic.rsi
+#      Urban: _RMC14/Objects/Clothing/Head/Hats/flapcap/urban.rsi
+
+# Aurora's Song - camouflage variants for expedition caps
+- type: entity
+  parent: CMHeadFlapCap
+  id: CMHeadFlapCapDesert
+  name: marine desert expedition cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/desert.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/desert.rsi
+
+- type: entity
+  parent: CMHeadFlapCap
+  id: CMHeadFlapCapSnow
+  name: marine snow expedition cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/snow.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/snow.rsi
+
+- type: entity
+  parent: CMHeadFlapCap
+  id: CMHeadFlapCapClassic
+  name: marine classic expedition cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/classic.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/classic.rsi
+
+- type: entity
+  parent: CMHeadFlapCap
+  id: CMHeadFlapCapUrban
+  name: marine urban expedition cap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/urban.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/flapcap/urban.rsi
+# Aurora's Song End
+
+# soft caps
+
+- type: entity
+  parent: CMHeadCapMP
+  id: RMCHeadBlueSoftCap
+  name: blue cap
+  description: It's a baseball hat in a tasteless blue color.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/softcap/blue_cap.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon_flipped
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/softcap/blue_cap.rsi
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+    unfoldVerbText: fold-flip-verb
+    foldVerbText: fold-flip-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+    foldedHeldPrefix: flipped
+
+- type: entity
+  parent: RMCHeadBlueSoftCap
+  id: RMCHeadYellowSoftCap
+  name: yellow cap
+  description: It's a baseball hat in a tasteless yellow color.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/softcap/yellow_cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/softcap/yellow_cap.rsi
+
+
+# The squad beret
+- type: entity
+  parent: CMHeadBeret
+  id: RMCHeadBeretSquadAlpha
+  name: alpha squad beret # Aurora's Song - "UNMC squad beret">"alpha squad beret"
+  description: Often found atop heads, slightly less found on those still attached.
+#  suffix: Alpha # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/alpha.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/alpha.rsi
+
+- type: entity
+  parent: RMCHeadBeretSquadAlpha
+  id: RMCHeadBeretSquadBravo
+  name: bravo squad beret # Aurora's Song "UNMC squad beret">"bravo squad beret"
+  description: It has quite a lot of debris on it, the person wearing this probably moves less than a wall.
+#  suffix: Bravo # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/bravo.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/bravo.rsi
+
+- type: entity
+  parent: RMCHeadBeretSquadAlpha
+  id: RMCHeadBeretSquadCharlie
+  name: charlie squad beret # Aurora's Song "UNMC squad beret">"charlie squad beret"
+  description: Still has some morning toast crumbs on it.
+  # suffix: Charlie # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/charlie.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/charlie.rsi
+
+- type: entity
+  parent: RMCHeadBeretSquadAlpha
+  id: RMCHeadBeretSquadDelta
+  name: delta squad beret # Aurora's Song "UNMC squad beret">"delta squad beret"
+  description: Hard to consider protection, but these types of people don't seek protection.
+  # suffix: Delta # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/delta.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/delta.rsi
+
+- type: entity
+  parent: RMCHeadBeretSquadAlpha
+  id: RMCHeadBeretSquadEcho
+  name: echo squad beret # Aurora's Song "UNMC squad beret">"echo squad beret"
+  description: Tightly woven, as it should be.
+  # suffix: Echo # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/echo.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/echo.rsi
+
+- type: entity
+  parent: RMCHeadBeretSquadAlpha
+  id: RMCHeadBeretSquadFoxtrot
+  name: foxtrot squad beret # Aurora's Song "UNMC squad beret">"foxtrot squad beret"
+  description: Looks and feels starched, cold to the touch.
+  # suffix: Foxtrot # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/foxtrot.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/foxtrot.rsi
+
+- type: entity
+  parent: RMCHeadBeretSquadAlpha
+  id: RMCHeadBeretSquadIntel
+  name: intel squad beret # Aurora's Song "UNMC squad beret">"intel squad beret"
+  description: Looks more intelligent than the person wearing it.
+  # suffix: Intel # Aurora's Song - Commented out, renamed
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/intel.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/SquadBeret/intel.rsi
+
+# beanies
+
+- type: entity
+  parent: CMHeadBeret
+  id: RMCHeadBeanie
+  name: beanie
+  description: A standard military beanie, often worn by non-combat military personnel and support crews, though it is not uncommon to see combat personnel who no longer care about self-preservation wearing one of these as well. Popular due to being comfortable and snug.
+  suffix: Black, RMC
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/beanie.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/beanie.rsi
+
+- type: entity
+  parent: RMCHeadBeanie
+  id: RMCHeadBeanieTan
+  name: tan beanie
+  suffix: Tan, RMC
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/tan.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/tan.rsi
+
+- type: entity
+  parent: RMCHeadBeanie
+  id: RMCHeadBeanieGray
+  name: gray beanie
+  suffix: Gray, RMC
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/gray.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/gray.rsi
+
+- type: entity
+  parent: RMCHeadBeanie
+  id: RMCHeadBeanieGreen
+  name: green beanie
+  suffix: Green, RMC
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/green.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Beanies/green.rsi
+
+# Durag
+- type: entity
+  parent: ClothingHeadBase
+  id: RMCHeadDurag
+  name: light durag # Aurora's Song - durag>light durag
+  description: An improvised head wrap made out of a standard issue neckerchief. Great for keeping the sweat out of your eyes and protecting your hair.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/durag.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/durag.rsi
+  - type: HideLayerClothing
+    slots:
+    - Hair
+
+- type: entity
+  parent: RMCHeadDurag
+  name: dark durag # Aurora's Song - named dark durag
+  id: RMCHeadDuragBlack
+  description: An improvised head wrap made out of a black neckerchief. Great for keeping the sweat out of your eyes and protecting your hair.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/durag_black.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/durag_black.rsi
+
+# Civilian
+
+- type: entity # Aurora's Song - Included for reference, duplicate of vanilla hat
+  parent: RMCHeadCapFlippable
+  id: RMCHeadCapGrey
+  name: grey cap
+  description: It's a baseball hat in a tasteful grey color.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Soft/greysoft.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Soft/greysoft.rsi
+#  - type: ItemCamouflage # Aurora's Song - ItemCamouflage doesn't exist
+#    camouflageVariations: {}
+
+- type: entity
+  parent: RMCHeadCapGrey
+  id: RMCHeadCapTruckerRed
+  name: red trucker hat
+  description: It's a red trucker hat.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/red_trucker_cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/red_trucker_cap.rsi
+
+- type: entity
+  parent: RMCHeadCapTruckerRed
+  id: RMCHeadCapTruckerBlue
+  name: blue trucker hat
+  description: It's a blue trucker hat.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/blue_trucker_cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/blue_trucker_cap.rsi
+
+- type: entity
+  parent: RMCHeadCapGrey
+  id: RMCHeadCapWeyamart
+  name: orange cap
+  description: It's a baseball style cap in the 'Weyamart' orange color, with the 'Weyamart' logo on the front.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/weyamart_cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/weyamart_cap.rsi
+
+- type: entity
+  parent: RMCHeadCapGrey
+  id: RMCHeadCapPizzaGalaxy
+  name: Pizza-Galaxy red cap
+  description: It's a baseball style cap in a red color, with the 'Pizza-Galaxy' logo on the front.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/pizza_galaxy_cap.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/pizza_galaxy_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: RMCHeadCowboyHatLight
+  name: light cowboy hat
+  description: A finely made cowboy hat.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cowboy/light_cowboy.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cowboy/light_cowboy.rsi
+
+- type: entity
+  parent: RMCHeadCowboyHatLight
+  id: RMCHeadCowboyHatDark
+  name: dark cowboy hat
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cowboy/dark_cowboy.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/cowboy/dark_cowboy.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: RMCHeadFedoraBrown
+  name: brown fedora
+  description: A classic brown fedora.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/Fedora/brown_fedora.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/Fedora/brown_fedora.rsi
+
+- type: entity
+  parent: RMCHeadFedoraBrown
+  id: RMCHeadFedoraTan
+  name: tan fedora
+  description: A classic tan fedora.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/Fedora/tan_fedora.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/Fedora/tan_fedora.rsi
+
+- type: entity
+  parent: RMCHeadFedoraBrown
+  id: RMCHeadFedoraGrey
+  name: grey fedora
+  description: A classic grey fedora.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/Fedora/grey_fedora.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/Fedora/grey_fedora.rsi
+
+- type: entity
+  parent: RMCHeadCapFlippable
+  id: RMCHeadUshanka
+  name: ushanka
+  description: Perfect for winter in Siberia, da?
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Head/Hats/ushanka.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Head/Hats/ushanka.rsi
+#  - type: ItemCamouflage # Aurora's Song - ItemCamoflauge doesn't exist
+#    camouflageVariations: {}
+#  - type: CMArmor # Aurora's Song - CMArmor doesn't exist
+#    melee: 15
+#    bullet: 15
+#    bio: 15
+#    explosionArmor: 10
+    # TODO 15 internal damage armor
+    # TODO give cold protection
