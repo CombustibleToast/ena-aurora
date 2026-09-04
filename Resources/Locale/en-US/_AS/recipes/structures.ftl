@@ -1,0 +1,8 @@
+construction-recipe-stairs = stairs
+construction-recipe-stair-stage = stairs (stage)
+construction-recipe-stair-white = stairs (white)
+construction-recipe-stair-stage-white = stairs (stage, white)
+construction-recipe-stair-dark = stairs (dark)
+construction-recipe-stair-stage-dark = stairs (stage, dark)
+construction-recipe-stair-wood = stairs (wood)
+construction-recipe-stair-stage-wood = stairs (stage, wood)

@@ -50,6 +50,11 @@
             max: 4
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: Stairs
+  # Aurora's Song End
 
 - type: entity
   id: StairStage
@@ -60,6 +65,11 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_steel
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairStage
+  # Aurora's Song End
 
 - type: entity
   id: StairWhite
@@ -70,6 +80,11 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_white
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairWhite
+  # Aurora's Song End
 
 - type: entity
   id: StairStageWhite
@@ -80,6 +95,11 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_white
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairStageWhite
+  # Aurora's Song End
 
 - type: entity
   id: StairDark
@@ -90,6 +110,11 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_dark
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairDark
+  # Aurora's Song End
 
 - type: entity
   id: StairStageDark
@@ -100,6 +125,11 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_dark
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairStageDark
+  # Aurora's Song End
 
 - type: entity
   id: StairWood
@@ -110,6 +140,11 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_wood
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairWood
+  # Aurora's Song End
 
 - type: entity
   id: StairStageWood
@@ -120,3 +155,8 @@
     sprite: _DV/Structures/stairs.rsi # Delta V - Resprite stairs
     state: stairs_stage_wood
     drawdepth: FloorTiles
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASstairs
+    node: StairStageWood
+  # Aurora's Song End
