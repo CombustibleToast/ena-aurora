@@ -22,3 +22,115 @@
   - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
     state: feathery
 
+- type: marking
+  id: LumariTuftDefault
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft
+
+- type: marking
+  id: LumariTuftBangs
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_bangs
+
+- type: marking
+  id: LumariTuftBlunt
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_blunt
+
+- type: marking
+  id: LumariTuftDaisy
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_daisy
+
+- type: marking
+  id: LumariTuftEmo
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_emo
+
+- type: marking
+  id: LumariTuftHeart
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_heart
+
+- type: marking
+  id: LumariTuftHorned
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_horned
+
+- type: marking
+  id: LumariTuftSideburn
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_sideburn
+
+- type: marking
+  id: LumariTuftSmall
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_small
+
+- type: marking
+  id: LumariTuftSpike
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_spike
+
+- type: marking
+  id: LumariTuftSpine
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_spine
+
+- type: marking
+  id: LumariTuftSweep
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_sweep
+
+- type: marking
+  id: LumariTuftSwoosh
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_swoosh
+
+- type: marking
+  id: LumariTuftVertical
+  bodyPart: HeadSide
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/tuft.rsi
+    state: tuft_vertical
+

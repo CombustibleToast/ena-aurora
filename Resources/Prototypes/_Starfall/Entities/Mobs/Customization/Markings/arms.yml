@@ -382,3 +382,57 @@
   - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
     state: toxic_r_arm
 
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeArmLeft
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: arm_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeArmRight
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: arm_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeForearmLeft
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: forearm_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeForearmRight
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: forearm_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHandLeft
+  bodyPart: LHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: hand_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHandRight
+  bodyPart: RHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: hand_r_gauze
+

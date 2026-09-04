@@ -366,3 +366,57 @@
   - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
     state: leg_l_chimera_moth
 
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeThighLeft
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: thigh_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeThighRight
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: thigh_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeShinLeft
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: shin_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeShinRight
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: shin_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeFootLeft
+  bodyPart: LFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: foot_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeFootRight
+  bodyPart: RFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: foot_r_gauze
+

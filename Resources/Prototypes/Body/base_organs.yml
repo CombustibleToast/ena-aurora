@@ -102,6 +102,7 @@
       - SnoutCover
       - HeadSide
       - HeadTop
+      - HeadOverlay # Aurora's Song
 
 - type: entity
   parent: OrganBase

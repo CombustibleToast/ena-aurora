@@ -144,6 +144,10 @@
       "directions": 4
     },
     {
+      "name": "toxic_r_leg",
+      "directions": 4
+    },
+    {
       "name": "whitefly_l_leg",
       "directions": 4
     },

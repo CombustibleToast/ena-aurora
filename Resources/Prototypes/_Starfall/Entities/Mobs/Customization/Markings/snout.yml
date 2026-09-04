@@ -22,3 +22,12 @@
   - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
     state: fangs
 
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeJaw
+  bodyPart: Snout
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: jaw_gauze
+
