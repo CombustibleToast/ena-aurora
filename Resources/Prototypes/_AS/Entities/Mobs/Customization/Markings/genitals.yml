@@ -14,3 +14,20 @@
   sprites:
     - sprite: _AS/Mobs/Customization/genitals.rsi
       state: tvagina
+
+# Slimes have to use a different marking due to their transparency and whatnot
+- type: marking
+  id: TPenisSlime
+  bodyPart: Chest
+  groupWhitelist: [Slime]
+  sprites:
+    - sprite: _AS/Mobs/Customization/genitals.rsi
+      state: tpenis_slime
+
+- type: marking
+  id: TVaginaSlime
+  bodyPart: Chest
+  groupWhitelist: [Slime]
+  sprites:
+    - sprite: _AS/Mobs/Customization/genitals.rsi
+      state: tvagina_slime
