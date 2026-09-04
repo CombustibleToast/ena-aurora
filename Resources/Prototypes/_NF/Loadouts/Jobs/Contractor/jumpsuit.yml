@@ -346,14 +346,14 @@
   groupBy: coyotepants
   price: 200
   equipment:
-    jumpsuit: ClothingUniformJumpsuitJackalPants    
+    jumpsuit: ClothingUniformJumpsuitJackalPants
 
 - type: loadout # Aurora's Song - coyote pants recolor
   id: ContractorClothingUniformJumpsuitWolfPants
   groupBy: coyotepants
   price: 200
   equipment:
-    jumpsuit: ClothingUniformJumpsuitWolfPants    
+    jumpsuit: ClothingUniformJumpsuitWolfPants
 
 - type: loadout # Aurora's Song - coyote pants recolor
   id: ContractorClothingUniformJumpsuitHoundPants
@@ -361,6 +361,41 @@
   price: 200
   equipment:
     jumpsuit: ClothingUniformJumpsuitHoundPants
+
+- type: loadout # Aurora's Song - Military Brat Outfit
+  id: ContractorClothingUniformJumpsuitMilitaryBrat
+  groupBy: militarybrat
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryBrat
+
+- type: loadout # Aurora's Song - Military Brat Outfit
+  id: ContractorClothingUniformJumpsuitMilitaryBratAcidWash
+  groupBy: militarybrat
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryBratAcidWash
+
+- type: loadout # Aurora's Song - Military Brat Outfit
+  id: ContractorClothingUniformJumpsuitMilitaryBratCargonia
+  groupBy: militarybrat
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryBratCargonia
+
+- type: loadout # Aurora's Song - Military Brat Outfit
+  id: ContractorClothingUniformJumpsuitMilitaryBratDenim
+  groupBy: militarybrat
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryBratDenim
+
+- type: loadout # Aurora's Song - Military Brat Outfit
+  id: ContractorClothingUniformJumpsuitMilitaryBratKhaki
+  groupBy: militarybrat
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryBratKhaki
 
 #T1
 - type: loadout

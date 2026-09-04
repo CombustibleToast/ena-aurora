@@ -550,3 +550,95 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/houndpants.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/houndpants.rsi
+
+- type: entity
+  parent: [ ClothingUniformBase,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBrat
+  name: military brat's cargo pants
+  description: For the ones who've done horrible things and looked cute doing them.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/militarybrat.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/militarybrat.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-verb
+    unfoldVerbText: unfold-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: folded
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratAcidWash
+  name: acid wash jargo pants
+  description: A style of faded denim that used to be absolutely inescapable in the 2480s.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratacidwash.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratacidwash.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratCargonia
+  name: cargo brat's military pants
+  description: Perfect for any radical cargonian that wants to look cute doing every crime in space law.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratcargonia.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratcargonia.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratDenim
+  name: bratty jargo pants
+  description: For the ones who will believe anyone that says what they're selling is "Genuine Earth-made denim."
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratdenim.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratdenim.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratKhaki
+  name: military brat's khargo pants
+  description: For the ones who've done horrible things and looked khute doing them.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratkhaki.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratkhaki.rsi
+

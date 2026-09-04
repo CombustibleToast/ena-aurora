@@ -119,6 +119,11 @@
     ClothingShoesHeelsStockingsWhiteWPlain: 4 # Aurora's Song - heelstockings port
     ClothingShoesHeelsStockingsWhiteLatex: 4 # Aurora's Song - heelstockings port
     ASClothingMaskVeil: 8 #Aurora's Song - Silken Veil implementation
+    ClothingUniformJumpsuitMilitaryBrat: 4 # Aurora's Song - Military Brat Outfit
+    ClothingUniformJumpsuitMilitaryBratAcidWash: 4 # Aurora's Song - Military Brat Outfit
+    ClothingUniformJumpsuitMilitaryBratCargonia: 4 # Aurora's Song - Military Brat Outfit
+    ClothingUniformJumpsuitMilitaryBratDenim: 4 # Aurora's Song - Military Brat Outfit
+    ClothingUniformJumpsuitMilitaryBratKhaki: 4 # Aurora's Song - Military Brat Outfit
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1
