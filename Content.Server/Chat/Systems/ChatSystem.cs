@@ -3,10 +3,10 @@ using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
-using Content.Server.Ghost;
 using Content.Server.Interaction; // DEN - Use interaction system's range checks
 using Content.Server.Speech.EntitySystems;
 using Content.Server.Station.Systems;
+using Content.Shared._DEN.Utility; // DEN - String Tag Filter Utility
 using Content.Shared.ActionBlocker;
 using Content.Shared.Administration;
 using Content.Shared.CCVar;
@@ -24,8 +24,6 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Replays;
-using Robust.Shared.Utility;
-using Content.Shared.Physics;
 
 namespace Content.Server.Chat.Systems;
 
@@ -59,6 +57,7 @@ public sealed partial class ChatSystem : SharedChatSystem
     private bool _deadLoocEnabled;
     private bool _critLoocEnabled;
     private readonly bool _adminLoocEnabled = true;
+    public static readonly string[] ChatAllowedTags = ["bolditalic", "bold", "color", "italic", "mono"]; // DEN - String Tag Filter Utility
 
     public override void Initialize()
     {
@@ -194,6 +193,8 @@ public sealed partial class ChatSystem : SharedChatSystem
 
         message = SanitizeInGameICMessage(source, message, out var emoteStr, shouldCapitalize, shouldPunctuate, shouldCapitalizeTheWordI);
 
+        message = StringUtil.FilterStringTags(message, ChatAllowedTags); // DEN - String Tag Filter Utility
+
         // Was there an emote in the message? If so, send it.
         if (player != null && emoteStr != message && emoteStr != null)
         {
@@ -230,8 +231,8 @@ public sealed partial class ChatSystem : SharedChatSystem
             case InGameICChatType.Subtle:
                 SendEntitySubtle(source, message, range, nameOverride, hideLog: hideLog, ignoreActionBlocker: ignoreActionBlocker);
                 break;
-            // DEN End
         }
+        // DEN End
     }
 
     /// <inheritdoc />

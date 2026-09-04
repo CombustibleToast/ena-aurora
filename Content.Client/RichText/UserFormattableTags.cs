@@ -43,6 +43,7 @@ public static class UserFormattableTags
         typeof(ColorTag),
         typeof(ItalicTag),
         typeof(MonoTag),
+        typeof(FontTag), // Aurora's Song - Make font size changeable
     ];
     // DEN End
 }
