@@ -484,9 +484,9 @@
   description: A shiny, corrosion resistant brass table. Steampunk!
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/brass.rsi
+    sprite: _AS/Structures/Furniture/Tables/brass.rsi # AuroraSong
   - type: Icon
-    sprite: Structures/Furniture/Tables/brass.rsi
+    sprite: _AS/Structures/Furniture/Tables/brass.rsi # AuroraSong
   - type: Damageable
     damageModifierSet: Metallic
   - type: Injurable
@@ -629,9 +629,9 @@
   description: Literally the sturdiest thing you have ever seen.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/stone.rsi
+    sprite: _AS/Structures/Furniture/Tables/stone.rsi # AuroraSong
   - type: Icon
-    sprite: Structures/Furniture/Tables/stone.rsi
+    sprite: _AS/Structures/Furniture/Tables/stone.rsi # AuroraSong
   - type: Destructible
     thresholds:
     - trigger:
@@ -690,9 +690,9 @@
   description: I wouldn't put the silverware on it.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/Tables/xeno.rsi
+    sprite: _AS/Structures/Furniture/Tables/xeno.rsi # AuroraSong
   - type: Icon
-    sprite: Structures/Furniture/Tables/xeno.rsi
+    sprite: _AS/Structures/Furniture/Tables/xeno.rsi # AuroraSong
   - type: Destructible
     thresholds:
     - trigger:
