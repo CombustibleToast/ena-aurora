@@ -694,3 +694,29 @@
   - type: Tag
     tags:
     - Kangaroo
+
+- type: entity
+  parent: [ClothingHandsBase, BaseC2ContrabandUnredeemable] # Frontier: BaseMajorContraband
+  id: ClothingHandsBaghNakh
+  name: bagh nakh
+  description: "A pair of steel underhand blades, easily concealed, mimicking a tiger's claws (mreow)."
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Hands/Gloves/baghnakh.rsi
+    state: baghnakh
+  - type: Clothing
+    sprite: _AS/Clothing/Hands/Gloves/baghnakh.rsi
+  - type: Fiber
+    fiberColor: fibers-steel
+  - type: MeleeWeapon
+    attackRate: 1.2
+    damage:
+      types:
+        Slash: 18 #Damage slightly bumped up for slower swing speed.
+    soundHit:
+      path: /Audio/Weapons/bladeslice.ogg
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: Tag
+    tags:
+    - WhitelistChameleon

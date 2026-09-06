@@ -29,3 +29,4 @@ fibers-regal-black = regal black
 fibers-olive = olive
 fibers-silver = silver
 fibers-gold = gold
+fibers-steel = steel
