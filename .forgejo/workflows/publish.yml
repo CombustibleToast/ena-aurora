@@ -40,41 +40,39 @@ jobs:
         cd RobustToolbox
         git fetch --depth=1
 
-    # Aurora's Song Start
-    # - name: Save old changelog
-    #   run: cp Resources/Changelog/Aurora.yml Resources/Changelog/Old.yml
-    # Aurora's Song End
+    - name: Save old changelog
+      run: cp Resources/Changelog/Aurora.yml Resources/Changelog/Old.yml
 
-    # - name: Update changelog
-    #   run: | # Aurora's Song - Use AS version until upstream updates theirs
-    #     dotnet tool install --global AuroraSong.ChangelogTool --version 1.0.0
-    #     export PATH="$PATH:/root/.dotnet/tools"
-    #     ss14-changelog update -d Resources/Changelog
-    #   env:
-    #     REPO: ${{ github.repository }}
-    #     # BRANCH: stable # Aurora's Song
-    #     CHANGELOG_REPO_PATH: Resources/Changelog
-    #     # EXTRA_CATEGORIES: Admin,Maps,Rules # Aurora's Song
-    #     GITHUB_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
-    #     # Aurora's Song Start
-    #     PRIMARY_CHANGELOG: Aurora
-    #     PR_PROVIDER: Forgejo
-    #     # Aurora's Song End
+    - name: Update changelog
+      run: | # Aurora's Song - Use AS version until upstream updates theirs
+        dotnet tool install --global AuroraSong.ChangelogTool --version 1.0.1
+        export PATH="$PATH:/root/.dotnet/tools"
+        ss14-changelog update -d Resources/Changelog
+      env:
+        REPO: ${{ github.repository }}
+        # BRANCH: stable # Aurora's Song
+        CHANGELOG_REPO_PATH: Resources/Changelog
+        # EXTRA_CATEGORIES: Admin,Maps,Rules # Aurora's Song
+        GITHUB_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+        # Aurora's Song Start
+        PRIMARY_CHANGELOG: Aurora
+        PR_PROVIDER: Forgejo
+        # Aurora's Song End
 
-    # - name: Commit and push changelog changes
-    #   id: changelog
-    #   run: | # Aurora's Song - Change to our bot and codeberg
-    #     git config user.name "AuroraSongBot"
-    #     git config user.email "bot@aurorasong.gay"
-    #     if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
-    #       git add Resources/Changelog
-    #       git commit -m "Update changelog"
-    #       git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
-    #       git push origin "HEAD:${GITHUB_REF_NAME}"
-    #       echo "committed=true" >> "$GITHUB_OUTPUT"
-    #     fi
-    #   env:
-    #     CL_ACCESS_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+    - name: Commit and push changelog changes
+      id: changelog
+      run: | # Aurora's Song - Change to our bot and codeberg
+        git config user.name "AuroraSongBot"
+        git config user.email "bot@aurorasong.gay"
+        if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
+          git add Resources/Changelog
+          git commit -m "Update changelog"
+          git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+        fi
+      env:
+        CL_ACCESS_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
 
     # - name: Create PR from stable to master
     #   if: steps.changelog.outputs.committed == 'true'
