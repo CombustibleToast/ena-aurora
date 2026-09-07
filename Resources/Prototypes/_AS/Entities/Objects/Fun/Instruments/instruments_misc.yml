@@ -19,3 +19,62 @@
     notificationPrefix: prayer-chat-notify-colcom
     verb: prayer-verbs-call
     verbImage: null
+
+- type: entity
+  parent: BaseHandheldInstrument
+  id: MediaPlayerInstrument
+  name: mp3 player
+  description: Ancient technology brought back so you can blast Undertale at everyone at the function.
+  suffix: Regular
+  components:
+  - type: Instrument
+    allowPercussion: true
+    allowProgramChange: true
+  - type: Sprite
+    sprite: _AS/Objects/Fun/Instruments/mediaplayer.rsi
+    state: mediaplayer
+  - type: ActivatableUI
+    inHandsOnly: false
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentPink
+  suffix: Pink
+  components:
+  - type: Sprite
+    state: mediaplayer_pink
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentBloodred
+  description: This rendition of BIG SHOT is brought to you by the gorlex coorporation. Remember us while you kill them all.
+  suffix: Bloodred
+  components:
+  - type: Sprite
+    state: mediaplayer_bloodred
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    state: mediaplayer_blue
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentGreen
+  suffix: Green
+  components:
+  - type: Sprite
+    state: mediaplayer_green
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentRed
+  suffix: Red
+  components:
+  - type: Sprite
+    state: mediaplayer_red
