@@ -68,7 +68,7 @@ jobs:
           git add Resources/Changelog
           git commit -m "Update changelog"
           git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
-          git push origin "HEAD:${GITHUB.REF_NAME}"
+          git push
           echo "committed=true" >> "$GITHUB_OUTPUT"
         fi
       env:
