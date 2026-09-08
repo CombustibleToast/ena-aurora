@@ -146,7 +146,7 @@ public sealed partial class SiliconLawSystem : SharedSiliconLawSystem
     private void OnIonStormLaws(EntityUid uid, SiliconLawProviderComponent component, ref IonStormLawsEvent args)
     {
         // Emagged borgs are immune to ion storm
-        if (!_emag.CheckFlag(uid, EmagType.Interaction) && HasComp<ActorComponent>(uid)) // Aurora's Song - Make it also check for a mind
+        if ((!_emag.CheckFlag(uid, EmagType.Interaction) && HasComp<ActorComponent>(uid))|| args.MindOverride) // Aurora's Song - Make it also check for a mind, and adds an override
         {
             component.Lawset = args.Lawset;
 
