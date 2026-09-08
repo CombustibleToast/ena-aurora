@@ -29,6 +29,7 @@ jobs:
         submodules: 'recursive'
         fetch-depth: 0
         filter: blob:none
+        token: ${{ secrets.CL_ACCESS_TOKEN }}
     # Aurora's Song
     # - name: Setup .NET Core
     #   uses: https://github.com/actions/setup-dotnet@v5 # Aurora's Song concat full URL
@@ -67,7 +68,6 @@ jobs:
         if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
           git add Resources/Changelog
           git commit -m "Update changelog"
-          git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
           git push origin "HEAD:${GITHUB_REF_NAME}"
           echo "committed=true" >> "$GITHUB_OUTPUT"
         fi
@@ -101,12 +101,12 @@ jobs:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         # GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }} # Aurora's Song
 
-#     - name: Publish changelog (Discord)
-#       run: Tools/actions_changelogs_since_last_run.py
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
-#         SS14_CHANGELOG_DEBUG: true
+    - name: Publish changelog (Discord)
+      run: Tools/actions_changelogs_since_last_run.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+        SS14_CHANGELOG_DEBUG: true
 
 #     Aurora Song Commented out because we don't have RSS
 #     - name: Publish changelog (RSS)
