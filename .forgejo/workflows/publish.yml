@@ -66,11 +66,9 @@ jobs:
         git config user.email "bot@aurorasong.gay"
         if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
           git add Resources/Changelog
-          git commit -m "Update changelog"
-          git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
-          git fetch
-          git pull --rebase
-          git push
+	        git commit -m "Update changelog"
+	        git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
+	        git push origin "HEAD:${GITHUB_REF_NAME}"
           echo "committed=true" >> "$GITHUB_OUTPUT"
         fi
       env:
