@@ -69,6 +69,7 @@ jobs:
           git commit -m "Update changelog"
           git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
           git fetch
+          git pull --rebase
           git push
           echo "committed=true" >> "$GITHUB_OUTPUT"
         fi
