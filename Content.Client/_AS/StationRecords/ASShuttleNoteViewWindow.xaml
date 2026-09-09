@@ -1,0 +1,17 @@
+<!--
+SPDX-FileCopyrightText: 2026 Mora <trixxedheart@gmail.com>
+
+SPDX-License-Identifier: MIT
+-->
+<DefaultWindow xmlns="https://spacestation14.io" Title="{Loc 'general-station-record-console-note-view-title'}" MinSize="500 360">
+    <BoxContainer Orientation="Vertical" Margin="8" HorizontalExpand="True" VerticalExpand="True">
+        <Label Name="NoteTitle" StyleClasses="LabelHeading" />
+        <Label Name="NoteMetadata" FontColorOverride="#888888" Margin="0 2 0 8" />
+        <PanelContainer HorizontalExpand="True" VerticalExpand="True">
+            <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="False">
+                <RichTextLabel Name="NoteBody" HorizontalExpand="True" Margin="8" />
+            </ScrollContainer>
+        </PanelContainer>
+        <Button Name="NoteCloseButton" Text="{Loc 'general-station-record-console-note-close'}" HorizontalAlignment="Right" Margin="0 8 0 0" />
+    </BoxContainer>
+</DefaultWindow>

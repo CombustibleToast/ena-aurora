@@ -1,4 +1,5 @@
 using Content.Server.Access.Systems;
+using Content.Server.GameTicking; // Aurora's Song
 using Content.Server.Popups;
 using Content.Server.Radio.EntitySystems;
 using Content.Server._NF.Bank;
@@ -73,6 +74,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private ShuttleRecordsSystem _shuttleRecordsSystem = default!;
     [Dependency] private IEntityManager _entityManager = default!;
     [Dependency] private ShipyardDirectionSystem _directionSystem = default!; // Aurora Song port of Monolith direction system
+    [Dependency] private GameTicker _gameTicker = default!; // Aurora's Song - Owner crew registration time.
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -247,6 +249,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // its just bad
 
         var stationList = EntityQueryEnumerator<StationRecordsComponent>();
+        StationRecordKey? shuttleOwnerRecordKey = null; // Aurora's Song - Preserve the shuttle-local owner record identity.
+        GeneralStationRecord? shuttleOwnerRecord = null; // Aurora's Song
 
         if (TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
             && shuttleStation != null
@@ -259,7 +263,13 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                     continue;
 
                 //_records.RemoveRecord(keyStorage.Key.Value);
-                _records.AddRecordEntry(shuttleStation.Value, record);
+                var copiedKey = _records.AddRecordEntry(shuttleStation.Value, record);
+                if (!copiedKey.IsValid())
+                    continue;
+
+                _records.SetIdKey(targetId, copiedKey); // Aurora's Song - Point the ID at the copied shuttle record.
+                shuttleOwnerRecordKey = copiedKey;
+                shuttleOwnerRecord = record with { };
                 recSuccess = true;
                 break;
             }
@@ -274,6 +284,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 TryComp<StationRecordsComponent>(shuttleStation, out var stationRec);
                 var replicant = HasComp<ReplicantComponent>(player);  // AS: Replika
                 _records.CreateGeneralRecord(shuttleStation.Value, targetId, profile.Name, profile.Age, profile.Species, profile.Gender, $"Captain", fingerprintComponent!.Fingerprint, dnaComponent!.DNA, replicant, profile, stationRec!);  // AS: Replika
+
+                if (TryComp<StationRecordKeyStorageComponent>(targetId, out var createdKeyStorage) &&
+                    createdKeyStorage.Key is { } createdKey &&
+                    _records.TryGetRecord<GeneralStationRecord>(createdKey, out var createdRecord))
+                {
+                    shuttleOwnerRecordKey = createdKey; // Aurora's Song
+                    shuttleOwnerRecord = createdRecord with { }; // Aurora's Song
+                }
             }
         }
         _records.Synchronize(shuttleStation!.Value);
@@ -311,8 +329,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // Can be set on the component of the shipyard.
         if (component.CanTransferDeed)
         {
-            _shuttleRecordsSystem.AddRecord(
-                new ShuttleRecord(
+            var shuttleRecord = new ShuttleRecord(
                     name: deedShuttle.ShuttleName ?? "",
                     suffix: deedShuttle.ShuttleNameSuffix ?? "",
                     ownerName: shuttleOwner,
@@ -320,8 +337,22 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                     purchasedWithVoucher: voucherUsed,
                     purchasePrice: (uint)vessel.Price,
                     vesselPrototypeId: vessel.ID
-                )
-            );
+                );
+
+            // Aurora's Song - Initialize ownership with the stable profile and shuttle-local station record.
+            if (idCard?.ProfileId is { } ownerProfileId &&
+                shuttleOwnerRecordKey is { } ownerKey &&
+                shuttleOwnerRecord is { } ownerRecord)
+            {
+                shuttleRecord.OwnerProfileId = ownerProfileId;
+                shuttleRecord.Crew.Add(new ShuttleCrewRecord(ownerProfileId, shuttleOwner, ownerKey.Id)
+                {
+                    RegisteredAt = _timing.CurTime.Subtract(_gameTicker.RoundStartTimeSpan),
+                    Record = ownerRecord with { },
+                });
+            }
+
+            _shuttleRecordsSystem.AddRecord(shuttleRecord);
         }
 
         RefreshState(shipyardConsoleUid, bank.Balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);

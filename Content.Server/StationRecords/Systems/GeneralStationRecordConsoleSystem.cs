@@ -32,7 +32,8 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
 
         Subs.BuiEvents<GeneralStationRecordConsoleComponent>(GeneralStationRecordConsoleKey.Key, subs =>
         {
-            subs.Event<BoundUIOpenedEvent>(UpdateUserInterface);
+            // subs.Event<BoundUIOpenedEvent>(UpdateUserInterface); // Aurora's Song: This is handled in the BUI system now, so we don't need to do it here.
+            InitializeShuttleRecords(subs); // Aurora's Song
             subs.Event<SelectStationRecord>(OnKeySelected);
             subs.Event<SetStationRecordFilter>(OnFiltersChanged);
             subs.Event<DeleteStationRecord>(OnRecordDelete);
@@ -43,6 +44,9 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
 
     private void OnRecordDelete(Entity<GeneralStationRecordConsoleComponent> ent, ref DeleteStationRecord args)
     {
+        if (_shuttleRecords.IsShuttleOwnerStationRecord(ent.Owner, args.Id)) // Aurora's Song - A shuttle owner's record cannot be archived or deleted here.
+            return;
+
         if (!ent.Comp.CanDeleteEntries)
             return;
 
@@ -147,8 +151,11 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
 
         if (!TryComp<StationRecordsComponent>(owningStation, out var stationRecords))
         {
-            _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement)); // Frontier: add as many args as we can
+            // Aurora's Song Start: Add shuttle state under _AS
+            // _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement)); // Frontier: add as many args as we can
+            SetStationRecordsUiState(uid, new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement));
             return;
+            // Aurora's Song End
         }
 
         var listing = _stationRecords.BuildListing((owningStation.Value, stationRecords), console.Filter);
@@ -157,7 +164,8 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
         {
             case 0:
                 var consoleState = new GeneralStationRecordConsoleState(null, null, null, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement); // Frontier: add as many args as we can
-                _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, consoleState);
+                // _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, consoleState); // Aurora's Song: Add shuttle state under _AS.
+                SetStationRecordsUiState(uid, consoleState); // Aurora's Song: Add shuttle state under _AS.
                 return;
             default:
                 if (console.ActiveKey == null)
@@ -167,7 +175,9 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
 
         if (console.ActiveKey is not { } id)
         {
-            _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, new GeneralStationRecordConsoleState(null, null, listing, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement)); // Frontier: add as many args as we can
+            SetStationRecordsUiState(uid,
+                new GeneralStationRecordConsoleState(null, null, listing, jobList, console.Filter,
+                    ent.Comp.CanDeleteEntries, advertisement)); // Aurora's Song - Add shuttle state under _AS.
             return;
         }
 
@@ -175,6 +185,7 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
         _stationRecords.TryGetRecord<GeneralStationRecord>(key, out var record, stationRecords);
 
         GeneralStationRecordConsoleState newState = new(id, record, listing, jobList, console.Filter, ent.Comp.CanDeleteEntries, advertisement);
-        _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, newState);
+        // _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, newState); // Aurora's Song: Add shuttle state under _AS.
+        SetStationRecordsUiState(uid, newState); // Aurora's Song: Add shuttle state under _AS.
     }
 }

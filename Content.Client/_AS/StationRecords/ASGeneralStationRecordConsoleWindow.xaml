@@ -1,0 +1,90 @@
+<!--
+SPDX-FileCopyrightText: 2026 Mora <trixxedheart@gmail.com>
+
+SPDX-License-Identifier: MIT
+-->
+<!-- We straight up just replace the entire original records console with this -->
+
+<DefaultWindow xmlns="https://spacestation14.io" xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client" Title="{Loc 'general-station-record-console-window-title'}" MinSize="900 530">
+    <TabContainer Name="RecordsTabs" VerticalExpand="True" HorizontalExpand="True" Margin="5">
+        <BoxContainer Orientation="Vertical">
+            <BoxContainer Margin="5" HorizontalExpand="True">
+                <OptionButton Name="StationRecordsFilterType" MinWidth="180" Margin="0 0 5 0"/>
+                <LineEdit Name="StationRecordsFiltersValue" PlaceHolder="{Loc 'general-station-record-for-filter-line-placeholder'}" HorizontalExpand="True"/>
+                <Button Name="StationRecordsFilters" Text="{Loc 'general-station-record-console-search-records'}"/>
+                <Button Name="StationRecordsFiltersReset" Text="{Loc 'general-station-record-console-reset-filters'}"/>
+            </BoxContainer>
+            <BoxContainer VerticalExpand="True">
+                <BoxContainer Orientation="Vertical" Margin="5" MinWidth="210" MaxWidth="240">
+                    <!-- Active/Archived shuttle crew tabs -->
+                    <Label Name="RecordListingStatus" Visible="False" />
+                    <TabContainer Name="CrewTabs" VerticalExpand="True">
+                        <ScrollContainer VerticalExpand="True"><ItemList Name="RecordListing" /></ScrollContainer>
+                        <ScrollContainer VerticalExpand="True"><ItemList Name="ArchivedRecordListing" /></ScrollContainer>
+                    </TabContainer>
+                </BoxContainer>
+                <BoxContainer Orientation="Vertical" Margin="0 5 5 5" HorizontalExpand="True" VerticalExpand="True">
+                    <BoxContainer MinHeight="200" MaxHeight="200" HorizontalExpand="True">
+                        <CenterContainer Name="RecordPortraitContainer" MinWidth="190" MaxWidth="200" HorizontalExpand="False" />
+                        <BoxContainer Orientation="Vertical" Margin="8 0 0 0" HorizontalExpand="True" VerticalExpand="True">
+                            <PanelContainer MinHeight="34" MaxHeight="34" HorizontalExpand="True">
+                                <PanelContainer.PanelOverride>
+                                    <graphics:StyleBoxFlat BackgroundColor="#181B22" BorderColor="#303A66" BorderThickness="1" ContentMarginLeftOverride="8" ContentMarginTopOverride="4" ContentMarginRightOverride="8" ContentMarginBottomOverride="4" />
+                                </PanelContainer.PanelOverride>
+                                <BoxContainer HorizontalExpand="True">
+                                    <Label Text="{Loc 'general-station-record-console-notes-title'}" StyleClasses="LabelBig" FontColorOverride="#FFFFFF" VerticalAlignment="Center" />
+                                    <Control HorizontalExpand="True" />
+                                    <Button Name="NewShuttleNoteButton" Text="{Loc 'general-station-record-console-note-new'}" />
+                                </BoxContainer>
+                            </PanelContainer>
+                            <PanelContainer MinHeight="166" MaxHeight="166" HorizontalExpand="True">
+                                <PanelContainer.PanelOverride><graphics:StyleBoxFlat BackgroundColor="#202226" BorderColor="#303A66" BorderThickness="1" ContentMarginLeftOverride="5" ContentMarginTopOverride="4" ContentMarginRightOverride="5" ContentMarginBottomOverride="4" /></PanelContainer.PanelOverride>
+                                <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="False">
+                                    <BoxContainer Name="ShuttleNotesList" Orientation="Vertical" HorizontalExpand="True" />
+                                </ScrollContainer>
+                            </PanelContainer>
+                        </BoxContainer>
+                    </BoxContainer>
+                    <PanelContainer HorizontalExpand="True" VerticalExpand="True">
+                        <PanelContainer.PanelOverride>
+                            <graphics:StyleBoxFlat BorderThickness="1" BorderColor="#303A66" />
+                        </PanelContainer.PanelOverride>
+                        <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+                            <Control Name="RecordHeaderContainer" HorizontalExpand="True" />
+                            <ScrollContainer VerticalExpand="True" HorizontalExpand="True">
+                                <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+                                    <Label Name="RecordContainerStatus" Visible="False" Text="{Loc 'general-station-record-console-select-record-info'}"/>
+                                    <Control Name="RecordContainer" Visible="False" HorizontalExpand="True"/>
+                                </BoxContainer>
+                            </ScrollContainer>
+                        </BoxContainer>
+                    </PanelContainer>
+                </BoxContainer>
+            </BoxContainer>
+        </BoxContainer>
+        <!-- End records tab -->
+
+        <!-- applicant tab -->
+        <GridContainer Columns="2" Margin="8" HorizontalExpand="True" VerticalExpand="True">
+            <PanelContainer MinWidth="340" VerticalExpand="True">
+                <PanelContainer.PanelOverride><graphics:StyleBoxFlat BackgroundColor="#202226" BorderColor="#303A66" BorderThickness="1" ContentMarginLeftOverride="6" ContentMarginTopOverride="6" ContentMarginRightOverride="6" ContentMarginBottomOverride="6" /></PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Vertical" VerticalExpand="True">
+                    <Label Text="{Loc 'general-station-record-console-tab-applicants'}" StyleClasses="LabelBig" Margin="0 0 0 5" />
+                    <ScrollContainer VerticalExpand="True"><BoxContainer Name="JobListing" Orientation="Vertical" HorizontalExpand="True" /></ScrollContainer>
+                </BoxContainer>
+            </PanelContainer>
+            <PanelContainer Name="AdContainer" Margin="8 0 0 0" HorizontalExpand="True" VerticalExpand="True" Visible="False">
+                <PanelContainer.PanelOverride><graphics:StyleBoxFlat BackgroundColor="#202226" BorderColor="#303A66" BorderThickness="1" ContentMarginLeftOverride="6" ContentMarginTopOverride="6" ContentMarginRightOverride="6" ContentMarginBottomOverride="6" /></PanelContainer.PanelOverride>
+                <BoxContainer Orientation="Vertical" HorizontalExpand="True" VerticalExpand="True">
+                    <Label Name="AdTitle" Text="{Loc 'general-station-record-console-ad-label'}" StyleClasses="LabelBig" Margin="0 0 0 5" />
+                    <TextEdit Name="AdTextBox" MinHeight="180" HorizontalExpand="True" VerticalExpand="True" />
+                    <BoxContainer Margin="0 6 0 0" HorizontalExpand="True">
+                        <Label Name="AdUnsavedChanges" Text="{Loc 'general-station-record-console-ad-unsaved-changes'}" Visible="False" FontColorOverride="yellow" VerticalAlignment="Center" />
+                        <Control HorizontalExpand="True" />
+                        <Button Name="AdSubmitButton" Text="{Loc 'general-station-record-console-ad-submit'}" Disabled="True" MinWidth="110" />
+                    </BoxContainer>
+                </BoxContainer>
+            </PanelContainer>
+        </GridContainer>
+    </TabContainer>
+</DefaultWindow>

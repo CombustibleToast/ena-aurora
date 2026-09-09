@@ -33,6 +33,7 @@ public sealed partial class ShuttleRecordsSystem : SharedShuttleRecordsSystem
     {
         base.Initialize();
         InitializeShuttleRecords();
+        InitializeASCrewRecords(); // Aurora's Song
     }
 
     /**

@@ -1,4 +1,5 @@
 using Content.Server.Administration.Logs;
+using Content.Server._AS.Shuttles; // Aurora's Song
 using Content.Server.GameTicking;
 using Content.Shared.Bed.Sleep;
 using Content.Shared.Database;
@@ -89,6 +90,7 @@ public sealed partial class CryoSleepSystem
         _popup.PopupEntity(Loc.GetString("cryopod-wake-up", ("entity", body)), body);
 
         RaiseLocalEvent(body, new CryosleepWakeUpEvent(cryopod, id), true);
+        RaiseLocalEvent(new ASCrewLeftCryoEvent(body)); // Aurora's Song: used for shuttle records
 
         _adminLogger.Add(LogType.LateJoin, LogImpact.Medium, $"{id.Value} has returned from cryosleep!");
         return ReturnToBodyStatus.Success;
