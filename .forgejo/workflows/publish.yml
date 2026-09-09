@@ -20,9 +20,9 @@ jobs:
       run: exit 1
 
     - name: Install dependencies
-      run: | # Aurora's Song - Add update and requests
+      run: | # Aurora's Song - Add update and requests and yaml
         sudo apt-get update
-        sudo apt-get install -y python3-paramiko python3-lxml python3-requests
+        sudo apt-get install -y python3-paramiko python3-lxml python3-requests python3-yaml
 
     - uses: actions/checkout@v7
       with:
