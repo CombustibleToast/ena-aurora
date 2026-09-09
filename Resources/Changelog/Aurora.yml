@@ -3113,3 +3113,10 @@ Entries:
   id: 9768
   time: '2026-09-08T20:28:20.4939998+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1492
+- author: Khaomi
+  changes:
+  - message: Corrected the wiki links
+    type: Tweak
+  id: 9769
+  time: '2026-09-09T05:27:52.7894032+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1491
