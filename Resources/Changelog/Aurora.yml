@@ -3120,3 +3120,16 @@ Entries:
   id: 9769
   time: '2026-09-09T05:27:52.7894032+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1491
+- author: TrixxedHeart
+  changes:
+  - message: Shuttle owners can now add others to their Records Console by swiping their ID and having others swipe their ID
+    type: Add
+  - message: Players can add notes to individual records in the Records Console
+    type: Add
+  - message: In the Records Console, you can now see who owns the ship (indicated by a star), who is SSD, and who is currently in cryo
+    type: Tweak
+  - message: Reworked Station Records Console UI
+    type: Tweak
+  id: 9770
+  time: '2026-09-10T07:42:40.4012293+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1425
