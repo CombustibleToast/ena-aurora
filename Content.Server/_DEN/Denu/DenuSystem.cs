@@ -22,6 +22,7 @@ public sealed partial class DenuSystem : EntitySystem
         base.Initialize();
 
         _userDb.AddOnFinishLoad(OnUserDataLoaded);
+        SubscribeLocalEvent<SelectedCharacterChangedEvent>(ev => OnUserDataLoaded(ev.Session)); // Aurora's Song: Fix per-character denu settings
         SubscribeNetworkEvent<DenuSettingsSaveRequest>(OnSaveRequest);
     }
 
@@ -101,5 +102,16 @@ public sealed partial class DenuSystem : EntitySystem
             : 0;
 
         return (currentProfileId, validProfileIds);
+    }
+}
+
+// Aurora's Song: Fix per-character denu settings
+public sealed class SelectedCharacterChangedEvent : EntityEventArgs
+{
+    public readonly ICommonSession Session;
+
+    public SelectedCharacterChangedEvent(ICommonSession session)
+    {
+        Session = session;
     }
 }
