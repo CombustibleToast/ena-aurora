@@ -3,7 +3,6 @@ using System.Linq;
 using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
-using Content.Server._DEN.Denu; // Aurora's Song
 using Content.Server.Database;
 using Content.Shared.Body;
 using Content.Shared._NF.CCVar;
@@ -229,8 +228,6 @@ namespace Content.Server.Preferences.Managers
             {
                 await _db.SaveSelectedCharacterIndexAsync(message.MsgChannel.UserId, message.SelectedCharacterIndex);
             }
-
-            _entityManager.EventBus.RaiseEvent(EventSource.Local, new SelectedCharacterChangedEvent(_playerManager.GetSessionById(userId))); // Aurora's Song: Fix per-character Denu settings
         }
 
         private async void HandleUpdateCharacterMessage(MsgUpdateCharacter message)

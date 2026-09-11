@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Content.Server.Database;
 using Content.Server.Preferences.Managers;
 using Content.Shared._DEN.Denu;
+using Content.Shared.GameTicking; // Aurora's Song
 using Content.Shared.Preferences;
 using Robust.Shared.IoC;
 using Robust.Shared.Player;
@@ -22,7 +23,7 @@ public sealed partial class DenuSystem : EntitySystem
         base.Initialize();
 
         _userDb.AddOnFinishLoad(OnUserDataLoaded);
-        SubscribeLocalEvent<SelectedCharacterChangedEvent>(ev => OnUserDataLoaded(ev.Session)); // Aurora's Song: Fix per-character denu settings
+        SubscribeLocalEvent<PlayerSpawnCompleteEvent>(ev => OnUserDataLoaded(ev.Player)); // Aurora's Song: Apply per-character settings
         SubscribeNetworkEvent<DenuSettingsSaveRequest>(OnSaveRequest);
     }
 
@@ -102,16 +103,5 @@ public sealed partial class DenuSystem : EntitySystem
             : 0;
 
         return (currentProfileId, validProfileIds);
-    }
-}
-
-// Aurora's Song: Fix per-character denu settings
-public sealed class SelectedCharacterChangedEvent : EntityEventArgs
-{
-    public readonly ICommonSession Session;
-
-    public SelectedCharacterChangedEvent(ICommonSession session)
-    {
-        Session = session;
     }
 }
