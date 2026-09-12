@@ -22,6 +22,7 @@ public sealed class LogWindowTest : InteractionTest
         var log = Server.Resolve<IAdminLogManager>();
         var guid = Guid.NewGuid();
         await Server.WaitPost(() => log.Add(LogType.Unknown, $"{SPlayer} test log 1: {guid}"));
+        await WaitForLog(log, guid); // Aurora's Song
 
         // Click the admin button in the menu bar
         await ClickWidgetControl<GameTopMenuBar, MenuButton>(nameof(GameTopMenuBar.AdminButton));
@@ -48,6 +49,7 @@ public sealed class LogWindowTest : InteractionTest
         // Add a new log
         guid = Guid.NewGuid();
         await Server.WaitPost(() => log.Add(LogType.Unknown, $"{SPlayer} test log 2: {guid}"));
+        await WaitForLog(log, guid); // Aurora's Song
 
         // Update the search and refresh
         await Client.WaitPost(() => search.Text = guid.ToString());
@@ -56,5 +58,15 @@ public sealed class LogWindowTest : InteractionTest
         searchResult = cont.Children.Where(x => x.Visible && x is AdminLogLabel).Cast<AdminLogLabel>().ToArray();
         Assert.That(searchResult, Has.Length.EqualTo(1));
         Assert.That(searchResult[0].Log.Message, Contains.Substring($" test log 2: {guid}"));
+    }
+
+    // Aurora's Song - admin logs are queued before being persisted, so wait before searching.
+    private async Task WaitForLog(IAdminLogManager log, Guid guid)
+    {
+        await PoolManager.WaitUntil(Server, async () =>
+        {
+            var logs = await log.CurrentRoundLogs(new LogFilter { Search = guid.ToString() });
+            return logs.Count == 1;
+        });
     }
 }
