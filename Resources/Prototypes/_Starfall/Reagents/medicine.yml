@@ -6,6 +6,7 @@
   physicalDesc: reagent-physical-desc-chalky
   flavor: medicine
   color: "#8cb6c7"
+  tags: [ IPCCompatible ]
   metabolisms:
     Bloodstream:
       metabolismRate: 0.5
