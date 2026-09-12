@@ -276,15 +276,15 @@
       "directions": 4
     },
     {
-      "name": "plasmafire_quaternary",
-      "directions": 4
-    },
-    {
       "name": "plasmafire_secondary",
       "directions": 4
     },
     {
       "name": "plasmafire_tertiary",
+      "directions": 4
+    },
+    {
+      "name": "plasmafire_quaternary",
       "directions": 4
     },
     {
