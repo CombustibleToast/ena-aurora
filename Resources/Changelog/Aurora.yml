@@ -3133,3 +3133,44 @@ Entries:
   id: 9770
   time: '2026-09-10T07:42:40.4012293+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1425
+- author: TrixxedHeart
+  changes:
+  - message: Lumari eye point limit has been restored
+    type: Fix
+  - message: Guns and tanks now properly render over Lumari wings
+    type: Fix
+  - message: Lumari Plasmafire tertiary should work now
+    type: Fix
+  id: 9771
+  time: '2026-09-12T07:42:20.8915627+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1508
+- author: TrixxedHeart
+  changes:
+  - message: Theobromine now helps with migraines (I know its caffeine and not theobromine but we don't have actual caffeine as a reagent and I'm not adding it)
+    type: Add
+  - message: Fixed Chepagepant not working on IPCs
+    type: Fix
+  id: 9772
+  time: '2026-09-12T07:42:20.8917345+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1518
+- author: Sere
+  changes:
+  - message: Allow cardboard to fit in construction bags/boxes.
+    type: Tweak
+  id: 9773
+  time: '2026-09-12T07:42:20.8918606+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1514
+- author: Phoebe51505
+  changes:
+  - message: Medical alerts have had their power systems changed, and are now only capable of sending a message once every five seconds.
+    type: Fix
+  id: 9774
+  time: '2026-09-12T07:42:20.8918855+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1510
+- author: TillsterRulz
+  changes:
+  - message: The NC Mail Pod's price has been increased from 12500 to 13000
+    type: Tweak
+  id: 9775
+  time: '2026-09-12T07:42:20.8918928+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1513
