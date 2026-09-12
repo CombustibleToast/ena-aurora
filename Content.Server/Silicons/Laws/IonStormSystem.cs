@@ -22,7 +22,7 @@ public sealed partial class IonStormSystem : EntitySystem
     /// <summary>
     /// Randomly alters the laws of an individual silicon.
     /// </summary>
-    public void IonStormTarget(Entity<SiliconLawBoundComponent, IonStormTargetComponent> ent, bool adminlog = true)
+    public void IonStormTarget(Entity<SiliconLawBoundComponent, IonStormTargetComponent> ent, bool adminlog = true, bool mindOverride = false) // Aurora's Song
     {
         var lawBound = ent.Comp1;
         var target = ent.Comp2;
@@ -121,7 +121,7 @@ public sealed partial class IonStormSystem : EntitySystem
 
         // laws unique to this silicon, dont use station laws anymore
         EnsureComp<SiliconLawProviderComponent>(ent);
-        var ev = new IonStormLawsEvent(laws);
+        var ev = new IonStormLawsEvent(laws, mindOverride); // Aurora's Song
         RaiseLocalEvent(ent, ref ev);
     }
 }

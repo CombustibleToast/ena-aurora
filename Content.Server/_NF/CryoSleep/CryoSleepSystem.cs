@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Server._AS.Shuttles; // Aurora's Song
 using Content.Server._NF.Shipyard.Systems;
 using Content.Server.DoAfter;
 using Content.Server.EUI;
@@ -301,6 +302,7 @@ public sealed partial class CryoSleepSystem : EntitySystem
         _transform.SetCoordinates(bodyId, new EntityCoordinates(storage, Vector2.Zero));
 
         RaiseLocalEvent(bodyId, new CryosleepEnterEvent(cryopod, mind?.UserId), true);
+        RaiseLocalEvent(new ASCrewEnteredCryoEvent(bodyId)); // Aurora's Song: Used for shuttle crew records
 
         if (cryo.CryosleepDoAfter != null && _doAfter.GetStatus(cryo.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(cryo.CryosleepDoAfter);

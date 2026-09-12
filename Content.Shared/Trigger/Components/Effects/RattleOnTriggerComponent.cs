@@ -42,11 +42,32 @@ public sealed partial class RattleOnTriggerComponent : BaseXOnTriggerComponent
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public TimeSpan NextTrigger = TimeSpan.Zero;
-    
+
     // Aurora's Song.
     /// <summary>
     /// The delay between implant retriggers.
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField]
     public TimeSpan RetriggerDelay = TimeSpan.FromMinutes(5);
+
+    // Aurora's Song
+    /// <summary>
+    /// The minimum time between messages
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public TimeSpan BufferDelay = TimeSpan.FromSeconds(5);
+
+    // Aurora's Song
+    /// <summary>
+    /// When we should send our buffered message
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public TimeSpan BufferTime = TimeSpan.Zero;
+
+    // Aurora's Song
+    /// <summary>
+    /// Whether we are currently buffering a message
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public bool Buffered = false;
 }

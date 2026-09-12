@@ -420,7 +420,7 @@
   desc: reagent-desc-theobromine
   physicalDesc: reagent-physical-desc-grainy
   color: "#f5f5f5"
-  tags: [ Toxin ] # Aurora's Song | Toxin tag required for updated metabolisers
+  tags: [ Toxin, IPCCompatible ] # Aurora's Song | Toxin tag required for updated metabolisers
   meltingPoint: 351
   boilingPoint: 554 # I'm not a chemist, but it boils at 295, lower than melting point, idk how it works so I gave it higher value
   metabolisms:
@@ -442,6 +442,24 @@
           - !type:ReagentCondition # DeltaV - Readded this. No longer causes vomitting at the lightest whiff of coffee # Aurora's Song - ReagentThreshold>ReagentCondition
             reagent: Theobromine
             min: 0.5
+      - !type:ModifyStatusEffect # Aurora's Song - Helps prevent migraines. I know theobromine isn't actually what helps but I'm not making a caffeine reagent and updating everything just for that.
+        effectProto: StatusEffectMigraine
+        time: 1
+        type: Remove
+        probability: 0.4
+        conditions:
+        - !type:ReagentCondition
+          reagent: Theobromine
+          max: 9.99
+      - !type:ModifyStatusEffect # Aurora's Song - Excessive caffeine can cause or worsen migraines.
+        effectProto: StatusEffectMigraine
+        time: 5
+        type: Update
+        probability: 0.1
+        conditions:
+        - !type:ReagentCondition
+          reagent: Theobromine
+          min: 10
 
 - type: reagent
   id: Amatoxin

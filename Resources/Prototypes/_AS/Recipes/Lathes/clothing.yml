@@ -21,3 +21,10 @@
   id: ASPouchSLE
   parent: NFBaseBeltRecipe
   result: ASPouchSLE
+
+#region Glasses
+
+- type: latheRecipe
+  id: ASClothingEyesHudUniversal
+  parent: NFBaseWearableDeviceRecipe
+  result: ASClothingEyesHudUniversal

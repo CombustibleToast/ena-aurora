@@ -4,7 +4,7 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Eyes:
-      limit: 1
+      limit: 4
       required: true
       default: [ LumariEyesDefault ]
     enum.HumanoidVisualLayers.HeadOverlay:
@@ -96,7 +96,6 @@
     - map: [ "outerClothing" ]
     - map: [ "legs" ]
     - map: [ "back" ]
-    - map: [ "suitstorage" ]
     # Wings sit above worn equipment but behind Lumari neck floof.
     - map: [ "enum.HumanoidVisualLayers.Tail" ]
     # Wing overlays sit directly above the wings they decorate.
@@ -105,7 +104,9 @@
     - map: [ "neck" ]
     # Lumari neck floof sits over equipment
     - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]
-    # Snout covers sit above everything else
+    # Guns/tanks appear over wings
+    - map: [ "suitstorage" ]
+    # Snout sit above everything else
     - map: [ "enum.HumanoidVisualLayers.Snout" ]
     - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
     - map: [ "enum.HumanoidVisualLayers.FacialHair" ]

@@ -52,3 +52,25 @@
   - type: EyeProtection
   - type: IdentityBlocker
     coverage: EYES
+
+#region Universal
+
+- type: entity
+  parent: ClothingEyesHudBase
+  id: ASClothingEyesHudUniversal
+  name: universal status hud
+  description: An advanced heads-up display providing the health and ID status of organics and robotics.
+  components:
+  - type: Sprite
+    sprite: Clothing/Eyes/Hud/omni.rsi
+  - type: Clothing
+    sprite: Clothing/Eyes/Hud/omni.rsi
+  - type: ShowHealthBars
+    damageContainers:
+    - Biological
+    - Inorganic
+    - Silicon
+    - HumanoidSilicon
+  - type: ShowHealthIcons
+  - type: ShowJobIcons
+  - type: ShowAccessReaderSettings

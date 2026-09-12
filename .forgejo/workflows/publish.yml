@@ -20,15 +20,16 @@ jobs:
       run: exit 1
 
     - name: Install dependencies
-      run: | # Aurora's Song - Add update and requests
+      run: | # Aurora's Song - Add update and requests and yaml
         sudo apt-get update
-        sudo apt-get install -y python3-paramiko python3-lxml python3-requests
+        sudo apt-get install -y python3-paramiko python3-lxml python3-requests python3-yaml
 
     - uses: actions/checkout@v7
       with:
         submodules: 'recursive'
         fetch-depth: 0
         filter: blob:none
+        token: ${{ secrets.CL_ACCESS_TOKEN }}
     # Aurora's Song
     # - name: Setup .NET Core
     #   uses: https://github.com/actions/setup-dotnet@v5 # Aurora's Song concat full URL
@@ -40,41 +41,38 @@ jobs:
         cd RobustToolbox
         git fetch --depth=1
 
-    # Aurora's Song Start
-    # - name: Save old changelog
-    #   run: cp Resources/Changelog/Aurora.yml Resources/Changelog/Old.yml
-    # Aurora's Song End
+    - name: Save old changelog
+      run: cp Resources/Changelog/Aurora.yml Resources/Changelog/Old.yml
 
-    # - name: Update changelog
-    #   run: | # Aurora's Song - Use AS version until upstream updates theirs
-    #     dotnet tool install --global AuroraSong.ChangelogTool --version 1.0.0
-    #     export PATH="$PATH:/root/.dotnet/tools"
-    #     ss14-changelog update -d Resources/Changelog
-    #   env:
-    #     REPO: ${{ github.repository }}
-    #     # BRANCH: stable # Aurora's Song
-    #     CHANGELOG_REPO_PATH: Resources/Changelog
-    #     # EXTRA_CATEGORIES: Admin,Maps,Rules # Aurora's Song
-    #     GITHUB_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
-    #     # Aurora's Song Start
-    #     PRIMARY_CHANGELOG: Aurora
-    #     PR_PROVIDER: Forgejo
-    #     # Aurora's Song End
+    - name: Update changelog
+      run: | # Aurora's Song - Use AS version until upstream updates theirs
+        dotnet tool install --global AuroraSong.ChangelogTool --version 1.0.1
+        export PATH="$PATH:/root/.dotnet/tools"
+        ss14-changelog update -d Resources/Changelog
+      env:
+        REPO: ${{ github.repository }}
+        # BRANCH: stable # Aurora's Song
+        CHANGELOG_REPO_PATH: Resources/Changelog
+        # EXTRA_CATEGORIES: Admin,Maps,Rules # Aurora's Song
+        GITHUB_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+        # Aurora's Song Start
+        PRIMARY_CHANGELOG: Aurora
+        PR_PROVIDER: Forgejo
+        # Aurora's Song End
 
-    # - name: Commit and push changelog changes
-    #   id: changelog
-    #   run: | # Aurora's Song - Change to our bot and codeberg
-    #     git config user.name "AuroraSongBot"
-    #     git config user.email "bot@aurorasong.gay"
-    #     if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
-    #       git add Resources/Changelog
-    #       git commit -m "Update changelog"
-    #       git remote set-url origin "https://x-access-token:${CL_ACCESS_TOKEN}@codeberg.org/${GITHUB_REPOSITORY}.git"
-    #       git push origin "HEAD:${GITHUB_REF_NAME}"
-    #       echo "committed=true" >> "$GITHUB_OUTPUT"
-    #     fi
-    #   env:
-    #     CL_ACCESS_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+    - name: Commit and push changelog changes
+      id: changelog
+      run: | # Aurora's Song - Change to our bot and codeberg
+        git config user.name "AuroraSongBot"
+        git config user.email "bot@aurorasong.gay"
+        if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
+          git add Resources/Changelog
+          git commit -m "Update changelog"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+        fi
+      env:
+        CL_ACCESS_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
 
     # - name: Create PR from stable to master
     #   if: steps.changelog.outputs.committed == 'true'
@@ -103,12 +101,12 @@ jobs:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         # GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }} # Aurora's Song
 
-#     - name: Publish changelog (Discord)
-#       run: Tools/actions_changelogs_since_last_run.py
-#       env:
-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
-#         SS14_CHANGELOG_DEBUG: true
+    - name: Publish changelog (Discord)
+      run: Tools/actions_changelogs_since_last_run.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+        SS14_CHANGELOG_DEBUG: true
 
 #     Aurora Song Commented out because we don't have RSS
 #     - name: Publish changelog (RSS)

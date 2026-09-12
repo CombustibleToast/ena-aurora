@@ -1,0 +1,18 @@
+// SPDX-FileCopyrightText: 2026 Mora <trixxedheart@gmail.com>
+//
+// SPDX-License-Identifier: MIT
+
+// Aurora's Song - Subtle animated portrait static and scanlines.
+void fragment()
+{
+    highp vec2 coords = FRAGCOORD.xy;
+    highp vec2 noiseSeed = floor(coords * 0.25) * SCREEN_PIXEL_SIZE + vec2(TIME * 0.035, TIME * 0.017);
+    highp float noise = zRandom(noiseSeed).x - 0.5;
+    highp float scanlineWave = sin(coords.y * 1.05 + TIME * 0.20) * 0.5 + 0.5;
+    highp float scanline = smoothstep(0.38, 0.72, scanlineWave);
+
+    highp vec3 baseColor = vec3(0.018, 0.026, 0.045);
+    highp vec3 staticColor = vec3(noise * 0.018);
+    highp vec3 scanColor = vec3(-0.016 * scanline);
+    COLOR = vec4(baseColor + staticColor + scanColor, 1.0);
+}

@@ -1695,7 +1695,7 @@
   - ClothingOuterArmorBulletproofNF
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
-  - ClothingEyesHudBountyHunter
+  - ASClothingEyesHudUniversal # Aurora's Song - Universal Status HUD
   - NFForensicPad
   - FlashlightSecliteNF
   technologyPrerequisites:

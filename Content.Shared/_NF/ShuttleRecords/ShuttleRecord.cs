@@ -7,7 +7,8 @@ namespace Content.Shared._NF.ShuttleRecords;
  * This class is NOT a indication that the shuttle is still in the game, merely a transaction record of it.
  */
 [Virtual, NetSerializable, Serializable]
-public class ShuttleRecord(
+// Aurora's Song: Make partial to allow for extension of the record with additional fields.
+public partial class ShuttleRecord(
     string name,
     string suffix,
     string ownerName,

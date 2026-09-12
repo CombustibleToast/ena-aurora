@@ -1,0 +1,18 @@
+<!--
+SPDX-FileCopyrightText: 2026 Mora <trixxedheart@gmail.com>
+
+SPDX-License-Identifier: MIT
+-->
+<DefaultWindow xmlns="https://spacestation14.io" Title="{Loc 'general-station-record-console-note-window-title'}" MinSize="500 360">
+    <BoxContainer Orientation="Vertical" Margin="8" HorizontalExpand="True" VerticalExpand="True">
+        <Label Text="{Loc 'general-station-record-console-note-title-label'}" />
+        <LineEdit Name="NoteTitle" PlaceHolder="{Loc 'general-station-record-console-note-title-placeholder'}" HorizontalExpand="True" />
+        <Label Text="{Loc 'general-station-record-console-note-body-label'}" Margin="0 8 0 0" />
+        <TextEdit Name="NoteBody" MinHeight="220" HorizontalExpand="True" VerticalExpand="True" />
+        <BoxContainer Margin="0 8 0 0" HorizontalExpand="True">
+            <Control HorizontalExpand="True" />
+            <Button Name="CancelButton" Text="{Loc 'general-station-record-console-note-cancel'}" />
+            <Button Name="SaveButton" Text="{Loc 'general-station-record-console-note-save'}" Margin="6 0 0 0" />
+        </BoxContainer>
+    </BoxContainer>
+</DefaultWindow>

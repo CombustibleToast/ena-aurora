@@ -198,6 +198,7 @@ public sealed partial class StationRecordsSystem : SharedStationRecordsSystem
             DNA = dna,
             Replicant = replicant  // AS: Replika
         };
+        PopulateRecordPreview(profile, jobId, record); // Aurora's Song: Populate the record preview with the character's profile information.
 
         var key = AddRecordEntry(station, record);
         if (!key.IsValid())

@@ -51,4 +51,4 @@ public sealed partial class IonStormTargetComponent : Component
 /// Raised on an ion storm target to modify its laws.
 /// </summary>
 [ByRefEvent]
-public record struct IonStormLawsEvent(SiliconLawset Lawset);
+public record struct IonStormLawsEvent(SiliconLawset Lawset, bool MindOverride); // Aurora's Song
