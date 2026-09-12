@@ -36,6 +36,12 @@ public sealed partial class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTri
         if (!TryComp<MobStateComponent>(implanted.ImplantedEntity, out var mobstate))
             return;
 
+        if (_timing.CurTime < ent.Comp.BufferTime) // Minimum cooldown between messages hasn't passed
+        {
+            ent.Comp.Buffered = true;
+            return;
+        }
+
         // Gets location of the implant
         var ownerXform = Transform(target);
         var pos = ownerXform.MapPosition;
@@ -95,6 +101,9 @@ public sealed partial class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTri
 
         _critCatridgeSystem.OnDeathrattle(); // Aurora's Song - Ping PDAs
         ent.Comp.NextTrigger = _timing.CurTime + ent.Comp.RetriggerDelay; // Aurora's Song: Implant retriggering
+
+        ent.Comp.BufferTime = _timing.CurTime + ent.Comp.BufferDelay; // Set the minimum time between messages
+        ent.Comp.Buffered = false; // We're either not buffering, or sent the buffered message
         args.Handled = true;
     }
 
@@ -106,6 +115,7 @@ public sealed partial class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTri
         while (query.MoveNext(out var mobUid, out var implants, out var state))
         {
             bool retrigger = false;
+            bool buffered = false;
             foreach (var implant in implants.ImplantContainer.ContainedEntities)
             {
                 if(!TryComp<RattleOnTriggerComponent>(implant, out var rattle))
@@ -120,9 +130,14 @@ public sealed partial class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTri
                 {
                     retrigger = true;
                 }
+
+                if (_timing.CurTime > rattle.BufferTime && rattle.Buffered)
+                {
+                    buffered = true; // I hate scoping
+                }
             }
 
-            if(retrigger == true) // At least one implant needs to be retriggered, so tell the body to try and retrigger all of its rattle implants.
+            if (retrigger || buffered) // At least one implant needs to be retriggered, so tell the body to try and retrigger all of its rattle implants.
             {                     // Unfortunantly, we can't just leave it up to the implant to reject a trigger if not enough time has elapsed, as things independent of the timer want to retrigger them too.
                 var deathrattleEvent = new ReTriggerRattleImplantEvent(mobUid, state.CurrentState);
                 RaiseLocalEvent(mobUid, deathrattleEvent);
