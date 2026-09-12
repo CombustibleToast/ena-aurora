@@ -33,6 +33,7 @@
     prototype: CarpetCard
     doAfter: 0.5
     removeOnInteract: true
+  - type: ConstructionMaterials # Aurora's Song - Construction Bag/Box Whitelist
 
 - type: entity
   parent: MaterialCardboard
