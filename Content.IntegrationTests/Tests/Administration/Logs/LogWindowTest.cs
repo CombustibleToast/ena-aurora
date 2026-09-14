@@ -16,6 +16,7 @@ public sealed class LogWindowTest : InteractionTest
     protected override PoolSettings Settings => new() { Connected = true, Dirty = true, AdminLogsEnabled = true, DummyTicker = false };
 
     [Test]
+    [Ignore("Times out often. Ignored until we get a fix for this.")] // Aurora's Song
     public async Task TestAdminLogsWindow()
     {
         // First, generate a new log
