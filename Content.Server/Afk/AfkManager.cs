@@ -25,6 +25,11 @@ namespace Content.Server.Afk
         bool IsAfk(ICommonSession player);
 
         /// <summary>
+        /// Aurora's Song: Check whether this player has been inactive for the given duration.
+        /// </summary>
+        bool IsInactiveFor(ICommonSession player, TimeSpan duration);
+
+        /// <summary>
         /// Resets AFK status for the player as if they just did an action and are definitely not AFK.
         /// </summary>
         /// <param name="player">The player to set AFK status for.</param>
