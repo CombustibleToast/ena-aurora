@@ -11,6 +11,7 @@ using Content.Shared._EE.Silicon.Systems;
 using Content.Shared.Movement.Systems;
 using Content.Server.Body.Components;
 using Content.Shared.Mind.Components;
+using Content.Shared.SSDIndicator; // Aurora's Song
 using System.Diagnostics.CodeAnalysis;
 using Content.Shared.Power.Components; // Aurora's Song
 using Content.Shared.Power.EntitySystems; // Aurora's Song
@@ -120,6 +121,10 @@ public sealed partial class SiliconChargeSystem : EntitySystem
             // If the silicon ghosted or is SSD while still being powered, skip it.
             if (TryComp<MindContainerComponent>(silicon, out var mindContComp)
                 && !mindContComp.HasMind)
+                continue;
+
+            // Aurora's Song: Pause battery drain while the player is SSD.
+            if (TryComp<SSDIndicatorComponent>(silicon, out var ssd) && ssd.IsSSD)
                 continue;
 
             var drainRate = siliconComp.DrainPerSecond;
