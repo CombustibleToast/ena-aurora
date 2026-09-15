@@ -1,0 +1,40 @@
+- type: gameMap
+  id: ASDev
+  mapName: ASDev
+  mapPath: /Maps/_AS/Test/dev_map.yml
+  minPlayers: 0
+  stations:
+    ASDev:
+      stationProto: DebugFrontierStation
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "ASDev"
+        - type: StationJobs
+          availableJobs:
+            Contractor: [ -1, -1 ]
+            Medic: [ -1, -1 ]
+            Service: [ -1, -1 ]
+            Pilot: [ -1, -1 ]
+            Mercenary: [ -1, -1 ]
+            OffDutyOfficer: [ -1, -1 ]
+            Borg: [ -1, -1]
+            ColonialRepresentative: [ -1, -1 ]
+            StationTrafficController: [ -1, -1 ]
+            SecurityGuard: [ -1, -1 ]
+            Valet: [ -1, -1 ]
+            NFJanitor: [ -1, -1 ]
+            MailCarrier: [ -1, -1 ]
+            Commissioner: [ -1, -1]
+            Lieutenant: [ -1, -1]
+            Sergeant: [ -1, -1]
+            Corpsman: [ -1, -1]
+            ASDetective: [ -1, -1]
+            Officer: [ -1, -1]
+            Rookie: [ -1, -1]
+            PublicAffairsLiaison: [ -1, -1]
+            NFPirateCaptain: [ -1, -1]
+            NFPirateFirstMate: [ -1, -1]
+            NFPirate: [ -1, -1]
+            Prisoner: [ -1, -1]
+        - type: StationDeadDrop
+          maxDeadDrops: 20 # Testing

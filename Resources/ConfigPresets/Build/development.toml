@@ -1,8 +1,8 @@
 ﻿[game]
 # Straight in-game baby
 lobbyenabled = false
-# Frontier: special map
-map = "NFDev"
+# Aurora's Song - Special dev map.
+map = "ASDev"
 role_timers = false
 admin_job_tracking = true
 role_loadout_timers = false
