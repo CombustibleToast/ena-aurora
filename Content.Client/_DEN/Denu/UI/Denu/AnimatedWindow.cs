@@ -10,8 +10,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Timing;
 
-
-namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu;
+namespace Content.Client._DEN.Denu.UI.Denu;
 
 
 public abstract class AnimatedWindow : FancyWindow
@@ -179,7 +178,7 @@ public abstract class AnimatedWindow : FancyWindow
 
         _currentAnimationTime += args.DeltaSeconds;
         float progress = Math.Min(_currentAnimationTime / AnimationTime, 1f);
-        float easedProgress = MathUtils.EaseCubic(progress);
+        float easedProgress = Easings.InOutCubic(progress);
 
         ApplyAnimationFrame(easedProgress);
 

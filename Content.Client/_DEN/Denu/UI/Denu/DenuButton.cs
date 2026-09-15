@@ -8,8 +8,7 @@ using Content.Client.Resources;
 using Robust.Client.ResourceManagement;
 using Robust.Client.UserInterface.Controls;
 
-
-namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu;
+namespace Content.Client._DEN.Denu.UI.Denu;
 
 
 public sealed class DenuButton : ContainerButton
@@ -21,9 +20,11 @@ public sealed class DenuButton : ContainerButton
     public readonly DenuUIController DenuUIController;
 
     private TextureRect? _textureRect;
+    private bool _suppressToggle;
 
     public DenuButton()
     {
+        AddStyleClass(StyleClassButton);
         DenuUIController = UserInterfaceManager.GetUIController<DenuUIController>();
         InitializeUI();
     }
@@ -41,15 +42,30 @@ public sealed class DenuButton : ContainerButton
 
         ToggleMode = true;
         OnToggled += ev => ToggleDenu(ev.Pressed);
+        DenuUIController.OnOpenStateChanged += OnOpenStateChanged;
+        UpdateChildColors();
     }
 
     private void ToggleDenu(bool pressed)
     {
+        if (_suppressToggle)
+            return;
+
         DenuUIController.IsOpen = pressed;
         if (pressed)
             DenuUIController.OpenWindow();
         else
             DenuUIController.CloseWindow();
+    }
+
+    private void OnOpenStateChanged(bool open)
+    {
+        if (Pressed == open)
+            return;
+
+        _suppressToggle = true;
+        Pressed = open;
+        _suppressToggle = false;
     }
 
     private void UpdateChildColors()
@@ -77,5 +93,13 @@ public sealed class DenuButton : ContainerButton
     {
         base.StylePropertiesChanged();
         UpdateChildColors();
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        base.Dispose(disposing);
+
+        if (disposing)
+            DenuUIController.OnOpenStateChanged -= OnOpenStateChanged;
     }
 }

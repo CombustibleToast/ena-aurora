@@ -1,11 +1,9 @@
 ﻿using System.Numerics;
 using Robust.Client.Graphics;
 using Robust.Shared.Enums;
-using Robust.Shared.Maths;
 using Robust.Shared.Timing;
 
-
-namespace Content.Client.UserInterface.Systems.Chat.Controls;
+namespace Content.Client._DEN.UserInterface.Systems.Chat.Controls;
 
 
 public sealed partial class CircleOverlay : Overlay
@@ -106,7 +104,7 @@ public sealed partial class CircleOverlay : Overlay
             return;
         }
 
-        var drawingHandle = args.DrawingHandle;
+        var drawingHandle = args.WorldHandle;
 
         if (args.Viewport.Eye?.Position == null)
             return;
@@ -118,12 +116,12 @@ public sealed partial class CircleOverlay : Overlay
         if (elapsedSeconds <= EaseInDuration)
         {
             var t = elapsedSeconds / EaseInDuration;
-            easedAlpha = MathUtils.CubicBezier(0.42f, 0f, 1f, 1f, t);
+            easedAlpha = CubicBezier(0.42f, 0f, 1f, 1f, t);
         }
         else
         {
             var t = (elapsedSeconds - EaseInDuration) / EaseOutDuration;
-            easedAlpha = MathUtils.CubicBezier(0f, 0f, 0.58f, 1f, 1.0f - t);
+            easedAlpha = CubicBezier(0f, 0f, 0.58f, 1f, 1.0f - t);
         }
 
         easedAlpha = Math.Max(0f, Math.Min(MaxOpacity, easedAlpha));
@@ -133,5 +131,11 @@ public sealed partial class CircleOverlay : Overlay
 
         var whiteColor = Color.White.WithAlpha(easedAlpha);
         DrawThickCircle(drawingHandle, playerWorldPos, Range, CircleThickness, whiteColor);
+    }
+
+    private static float CubicBezier(float p1, float p2, float p3, float p4, float t)
+    {
+        float u = 1f - t;
+        return u * u * u * p1 + 3f * u * u * t * p2 + 3f * u * t * t * p3 + t * t * t * p4;
     }
 }

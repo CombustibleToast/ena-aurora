@@ -21,7 +21,7 @@ namespace Content.Server.Database.Migrations.Postgres
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "10.0.0")
+                .HasAnnotation("ProductVersion", "10.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
@@ -848,6 +848,24 @@ namespace Content.Server.Database.Migrations.Postgres
                             t.HasCheckConstraint("AddressNotIPv6MappedIPv4", "NOT inet '::ffff:0.0.0.0/96' >>= address");
                         });
                 });
+            // DEN Start - DENU
+            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
+            {
+                b.Property<Guid>("PlayerUserId")
+                    .HasColumnType("uuid")
+                    .HasColumnName("player_user_id");
+
+                b.Property<string>("SettingsJson")
+                    .IsRequired()
+                    .HasColumnType("jsonb")
+                    .HasColumnName("settings");
+
+                b.HasKey("PlayerUserId")
+                    .HasName("PK_denu_settings");
+
+                b.ToTable("denu_settings", (string)null);
+            });
+            // DEN End
 
             modelBuilder.Entity("Content.Server.Database.ConsentSettings", b =>
                 {
@@ -2071,6 +2089,21 @@ namespace Content.Server.Database.Migrations.Postgres
 
                     b.Navigation("Server");
                 });
+
+            // DEN Start - DENU
+            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
+            {
+                b.HasOne("Content.Server.Database.Player", "Player")
+                    .WithOne()
+                    .HasForeignKey("Content.Server.Database.DenuModel+DenuSettings", "PlayerUserId")
+                    .HasPrincipalKey("Content.Server.Database.Player", "UserId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired()
+                    .HasConstraintName("FK_denu_settings_player_player_id");
+
+                b.Navigation("Player");
+            });
+            // DEN End
 
             modelBuilder.Entity("Content.Server.Database.ConsentToggle", b =>
                 {

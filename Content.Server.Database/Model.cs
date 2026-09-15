@@ -49,6 +49,7 @@ namespace Content.Server.Database
         public DbSet<AdminMessage> AdminMessages { get; set; } = null!;
         public DbSet<RoleWhitelist> RoleWhitelists { get; set; } = null!;
         public DbSet<BanTemplate> BanTemplate { get; set; } = null!;
+        public DbSet<DenuModel.DenuSettings> DenuSettings { get; set; } = null!;
         public DbSet<IPIntelCache> IPIntelCache { get; set; } = null!;
 
         #region Aurora Song
@@ -80,6 +81,13 @@ namespace Content.Server.Database
                 .HasIndex(c => new { c.ConsentSettingsId, c.ToggleProtoId })
                 .IsUnique();
             // Floofstation end
+
+            modelBuilder.Entity<DenuModel.DenuSettings>()
+                .HasOne(d => d.Player)
+                .WithOne()
+                .HasForeignKey<DenuModel.DenuSettings>(d => d.PlayerUserId)
+                .HasPrincipalKey<Player>(p => p.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             modelBuilder.Entity<Antag>()
                 .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})

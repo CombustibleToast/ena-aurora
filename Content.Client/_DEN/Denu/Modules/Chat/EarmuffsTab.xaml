@@ -1,0 +1,18 @@
+<chat:EarmuffsTab xmlns="https://spacestation14.io"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                  xmlns:chat="clr-namespace:Content.Client._DEN.Denu.Modules.Chat">
+    <BoxContainer Orientation="Vertical" SeparationOverride="8" HorizontalExpand="True">
+        <Label Text="Hearing Range" StyleClasses="LabelHeading" />
+        <RichTextLabel Text="Controls how far away you can hear speech. Lower values filter out distant conversations." HorizontalExpand="True" />
+
+        <BoxContainer Orientation="Horizontal" SeparationOverride="8" HorizontalExpand="True">
+            <Slider Name="RangeSlider"
+                    MinValue="1"
+                    MaxValue="10"
+                    HorizontalExpand="true" />
+            <Label Name="RangeLabel" MinWidth="50" />
+        </BoxContainer>
+
+        <RichTextLabel Text="Tip: Release the slider to save your setting." StyleClasses="LabelSecondary" HorizontalExpand="True" />
+    </BoxContainer>
+</chat:EarmuffsTab>
