@@ -12,13 +12,13 @@ public sealed partial class NanotrasenNameGenerator : StationNameGenerator
     [DataField("prefixCreator")] public string PrefixCreator = default!;
 
     private string Prefix => "NT";
-    private string[] SuffixCodes => new []{ "LV", "NX", "EV", "QT", "PR" };
+    private string[] SuffixCodes => new []{ "AS" }; // Aurora's Song - AS for Aurora song
 
     public override string FormatName(string input)
     {
         var random = IoCManager.Resolve<IRobustRandom>();
 
         // No way in hell am I writing custom format code just to add nice names. You can live with {0}
-        return string.Format(input, $"{Prefix}{PrefixCreator}", $"{random.Pick(SuffixCodes)}-{random.Next(0, 1000):D3}"); // Note: random.Next's max is exclusive, [0-999] = [0,1000)
+        return string.Format(input, $"{Prefix}{PrefixCreator}", $"{random.Pick(SuffixCodes)}"); // Aurora's Song - moved suffix generation to ShipyardSystem
     }
 }
