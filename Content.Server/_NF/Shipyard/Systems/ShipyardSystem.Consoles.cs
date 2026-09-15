@@ -50,6 +50,7 @@ using Content.Server._NF.GC.Components;
 using Content.Server._Mono.Shipyard;
 using Content.Shared._AS.Traits;
 using Content.Shared.Maps; // AS
+using Robust.Shared.Random; // AS
 
 namespace Content.Server._NF.Shipyard.Systems;
 
@@ -205,7 +206,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 shuttleUid
             };
             shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
-            name = Name(shuttleStation.Value);
+            // Aurora's Song - moved suffix generation
+            var random = IoCManager.Resolve<IRobustRandom>();
+            var licensePlate = idCard?.ProfileId is { } profileId ? LicensePlateSystem.GetLicensePlate(profileId) : $"[{random.Next(0, 100):D2}]";
+            name = $"{Name(shuttleStation.Value)}-{licensePlate}";
+            _station.RenameStation(shuttleStation.Value, name, false);
+            // End aurora's Song - moved suffix generation
 
             var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
             vesselInfo.Vessel = vessel.ID;

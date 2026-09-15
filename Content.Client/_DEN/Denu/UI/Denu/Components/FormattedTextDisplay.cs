@@ -3,14 +3,11 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
-using System;
 using Robust.Client.UserInterface.Controls;
 using Robust.Shared.ContentPack;
-using Robust.Shared.IoC;
 using Robust.Shared.Utility;
 
-
-namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu.Components;
+namespace Content.Client._DEN.Denu.UI.Denu.Components;
 
 
 public sealed class FormattedTextDisplay : PanelContainer

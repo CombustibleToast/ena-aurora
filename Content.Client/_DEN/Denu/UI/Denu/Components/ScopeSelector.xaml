@@ -1,0 +1,10 @@
+<BoxContainer xmlns="https://spacestation14.io" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Class="Content.Client._DEN.Denu.UI.Denu.Components.ScopeSelector" Orientation="Horizontal" HorizontalExpand="True" VerticalAlignment="Center" Margin="8 8 8 6" SeparationOverride="12">
+    <BoxContainer Orientation="Vertical" VerticalAlignment="Center" HorizontalExpand="True">
+        <Label Text="Scope Selection" StyleClasses="LabelHeading" />
+        <BoxContainer Orientation="Horizontal" SeparationOverride="5">
+            <Button Name="GlobalButton" Text="Global" ToggleMode="True" Pressed="True" />
+            <Button Name="CharacterButton" Text="Character" ToggleMode="True" />
+        </BoxContainer>
+    </BoxContainer>
+    <SpriteView Name="PlayerSprite" SetSize="64 64" OverrideDirection="South" HorizontalAlignment="Right" />
+</BoxContainer>

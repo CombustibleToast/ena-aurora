@@ -10,8 +10,8 @@
     allowedModes:
     - HyposprayDynamicMode
     - HyposprayInjectMode
-  - type: Spillable
-    solution: hypospray
+  # - type: Spillable # Aurora's Song
+  #   solution: hypospray
   - type: ExaminableSolution
     solution: hypospray
     exactVolume: true

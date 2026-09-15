@@ -101,6 +101,7 @@ namespace Content.IntegrationTests.Tests
             "/Maps/_AS/Shuttles/Admin/**",
             "/Maps/_AS/Shuttles/WIP/**",
             "/Maps/_AS/Event/**",
+            "/Maps/_AS/Test/**",
             // Aurora's Song End
             "/Maps/Shuttles/AdminSpawn/**" // admin gaming
         };
