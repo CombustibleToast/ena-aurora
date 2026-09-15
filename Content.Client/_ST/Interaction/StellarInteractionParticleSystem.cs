@@ -1,9 +1,11 @@
 // SPDX-FileCopyrightText: 2026 Janet Blackquill <uhhadd@gmail.com>
+// SPDX-FileCopyrightText: 2026 Mora <trixxedheart@gmail.com>
 //
 // SPDX-License-Identifier: MIT
 
 using System.Numerics;
 using Content.Shared._ST.Interaction;
+using Content.Shared.Humanoid; // Aurora's Song
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
 using Robust.Shared.Map;
@@ -12,13 +14,14 @@ using Robust.Shared.Random;
 
 namespace Content.Client._ST.Interaction;
 
-public sealed class StellarInteractionParticleSystem : EntitySystem
+public sealed partial class StellarInteractionParticleSystem : EntitySystem
 {
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly SpriteSystem _sprite = default!;
-    [Dependency] private readonly AnimationPlayerSystem _animation = default!;
+    [Dependency] private IRobustRandom _random = null!;
+    [Dependency] private SpriteSystem _sprite = null!;
+    [Dependency] private AnimationPlayerSystem _animation = null!;
 
     private const string AnimateKey = "particle-animation";
+    private const string DefaultHandState = "hand"; // Aurora's Song - Species hand sprites
 
     private static readonly EntProtoId InteractionParticleId = "StellarInteractionParticle";
 
@@ -48,6 +51,20 @@ public sealed class StellarInteractionParticleSystem : EntitySystem
 
         var performerTargetDelta = targetXform.LocalPosition - performerXform.LocalPosition;
         var particle = Spawn(InteractionParticleId, performerXform.Coordinates);
+
+        // Aurora's Song - Use the species defined hand if it exists
+        var handState = DefaultHandState;
+        var particleSprite = Comp<SpriteComponent>(particle);
+        if (TryComp<HumanoidProfileComponent>(performer, out var profile))
+        {
+            var species = profile.Species;
+            var speciesState = $"{species.Id.ToLowerInvariant()}-hand";
+            var rsi = _sprite.LayerGetEffectiveRsi((particle, particleSprite), 0);
+            if (rsi?.TryGetState(speciesState, out _) == true)
+                handState = speciesState;
+        }
+        _sprite.LayerSetRsiState(particle, 0, handState);
+        // Aurora's Song end
 
         if (used is { } usedEntity && Exists(usedEntity) && TryComp<SpriteComponent>(usedEntity, out var usedSprite))
         {

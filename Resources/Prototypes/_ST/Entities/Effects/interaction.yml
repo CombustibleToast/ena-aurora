@@ -9,7 +9,7 @@
   - type: TimedDespawn
     lifetime: 1.1
   - type: Sprite
-    sprite: _ST/Effects/interaction.rsi
+    sprite: _Starfall/Effects/interaction.rsi
     state: hand
     drawdepth: Effects
   - type: EffectVisuals
