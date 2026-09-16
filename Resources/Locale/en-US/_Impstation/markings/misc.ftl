@@ -94,8 +94,12 @@ marking-VoxBeakTipped = Tipped Beak
 marking-VoxBeakTipped-voxbeaktipped = Tipped Beak
 marking-VoxChestPlumage = Chest Plumage
 marking-VoxChestPlumage-voxchestplumage = Chest Plumage
-marking-VoxFootSpines = Leg Spines
-marking-VoxFootSpines-voxfootspines = Leg Spines
+# Aurora's Song Start: Split leg spines
+marking-VoxFootSpinesLFoot = Leg Spines (Left)
+marking-VoxFootSpinesLFoot-voxfootspines = Leg Spines (Left)
+marking-VoxFootSpinesRFoot = Leg Spines (Right)
+marking-VoxFootSpinesRFoot-voxfootspines = Leg Spines (Right)
+# Aurora's Song End: Split leg spines
 marking-VoxFootGradientLFoot = Solid (Left Foot)
 marking-VoxFootGradientLFoot-voxfootgradientl1 = Solid (Left Foot)
 marking-VoxFootGradientRFoot = Solid (Right Foot)
@@ -148,7 +152,7 @@ marking-VoxBelly-voxbelly = Belly
 marking-VoxTailBalled = Thrasher
 marking-VoxTailBalled-voxtailballed = Thrasher
 marking-VoxTailSplit = Twinned
-marking-VoxTailSplit-voxtailsplit = Twinned
+marking-VoxTailSplit-split = Twinned
 
 # upstream vox markings dont have localized names. lmfao
 # these are just straight up broken and shouldnt be visible from the markings menu period but ALAS im not skilled enough to remove them so you get this stupid botch job instead

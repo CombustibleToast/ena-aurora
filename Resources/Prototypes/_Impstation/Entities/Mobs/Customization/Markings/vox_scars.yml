@@ -1,3 +1,5 @@
+# Aurora's Song: Use newer RSI _Impstation/Mobs/Customization/Vox/*
+
 - type: marking
   id: ScarsVoxRoadrashLeftHead
   bodyPart: Head
@@ -8,8 +10,8 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: roadrash_l_head
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi
+    state: roadrashleft
 
 - type: marking
   id: ScarsVoxRoadrashRightHead
@@ -21,8 +23,8 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: roadrash_r_head
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi
+    state: roadrashright
 
 - type: marking
   id: ScarsVoxBigslashLeftHead
@@ -34,8 +36,8 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: bigslash_l_head
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi
+    state: bigslashleft
 
 - type: marking
   id: ScarsVoxBigslashRightHead
@@ -47,8 +49,8 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: bigslash_r_head
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi
+    state: bigslashright
 
 - type: marking
   id: ScarsVoxSlashLeftHead
@@ -60,8 +62,8 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: slash_l_head
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi
+    state: slashleft
 
 - type: marking
   id: ScarsVoxSlashRightHead
@@ -73,8 +75,8 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: slash_r_head
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi
+    state: slashright
 
 - type: marking
   id: ScarsVoxClawTorso
@@ -86,6 +88,6 @@
         !type:SimpleColoring
       fallbackColor: "#666666"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/vox_scars.rsi
-    state: claw_torso
+  - sprite: _Impstation/Mobs/Customization/Vox/chest.rsi
+    state: claw
 

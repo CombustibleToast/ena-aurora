@@ -337,14 +337,14 @@
   bodyPart: Tail
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxcocktail1
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxcocktail2
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxcocktail3
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxcocktail4
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: cocktail1
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: cocktail2
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: cocktail3
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: cocktail4
 
 - type: marking
   id: VoxTailBalled
@@ -352,8 +352,8 @@
   groupWhitelist: [ Vox ]
   forcedColoring: true
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailballed
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: balled
 
 - type: marking
   id: VoxTailSplit
@@ -361,16 +361,16 @@
   groupWhitelist: [ Vox ]
   forcedColoring: true
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailsplit
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: split
 
 - type: marking
   id: VoxTailStripes
-  bodyPart: Chest
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailstripes
+  - sprite: _Impstation/Mobs/Customization/Vox/chest.rsi # Aurora's Song: Use newer RSI
+    state: tailstripes
 
 - type: marking
   id: VoxLArmProsthetic
@@ -382,8 +382,8 @@
         !type:SimpleColoring
           color: "#E4E4E4"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxarmprostheticl
+  - sprite: _Impstation/Mobs/Customization/Vox/lhand.rsi # Aurora's Song: Use newer RSI
+    state: prosthetic
 
 - type: marking
   id: VoxRArmProsthetic
@@ -395,49 +395,57 @@
         !type:SimpleColoring
           color: "#E4E4E4"
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxarmprostheticr
+  - sprite: _Impstation/Mobs/Customization/Vox/rhand.rsi # Aurora's Song: Use newer RSI
+    state: prosthetic
 
 - type: marking
   id: VoxBeakColor
   bodyPart: Snout
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxbeakcolor
+  - sprite: _Impstation/Mobs/Customization/Vox/snout.rsi # Aurora's Song: Use newer RSI
+    state: color
 
 - type: marking
   id: VoxBeakSplit
   bodyPart: Snout
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxbeaksplit1
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxbeaksplit2
+  - sprite: _Impstation/Mobs/Customization/Vox/snout.rsi # Aurora's Song: Use newer RSI
+    state: split1
+  - sprite: _Impstation/Mobs/Customization/Vox/snout.rsi # Aurora's Song: Use newer RSI
+    state: split2
 
 - type: marking
   id: VoxBeakTipped
   bodyPart: Snout
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxbeaktipped
+  - sprite: _Impstation/Mobs/Customization/Vox/snout.rsi # Aurora's Song: Use newer RSI
+    state: tipped
 
 - type: marking
   id: VoxChestPlumage
   bodyPart: Chest
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxchestplumage
+  - sprite: _Impstation/Mobs/Customization/Vox/chest.rsi # Aurora's Song: Use newer RSI
+    state: plumage
 
 - type: marking
-  id: VoxFootSpines
-  bodyPart: Tail
+  id: VoxFootSpinesLFoot
+  bodyPart: LFoot
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
+  - sprite: _Impstation/Mobs/Customization/Vox/lfoot.rsi # Aurora's Song: Use newer RSI
+    state: voxfootspines
+
+- type: marking
+  id: VoxFootSpinesRFoot
+  bodyPart: RFoot
+  groupWhitelist: [ Vox ]
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/Vox/rfoot.rsi # Aurora's Song: Use newer RSI
     state: voxfootspines
 
 - type: marking
@@ -445,78 +453,78 @@
   bodyPart: LFoot
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxfootgradientl1
+  - sprite: _Impstation/Mobs/Customization/Vox/lfoot.rsi # Aurora's Song: Use newer RSI
+    state: gradient
 
 - type: marking
   id: VoxFootGradientRFoot
   bodyPart: RFoot
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxfootgradientr1
+  - sprite: _Impstation/Mobs/Customization/Vox/rfoot.rsi # Aurora's Song: Use newer RSI
+    state: gradient
 
 - type: marking
   id: VoxLegGradientLLeg
   bodyPart: LLeg
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxfootgradientl2
+  - sprite: _Impstation/Mobs/Customization/Vox/lleg.rsi # Aurora's Song: Use newer RSI
+    state: gradient
 
 - type: marking
   id: VoxLegGradientRLeg
   bodyPart: RLeg    # Aurora's Song -- RFoot > RLeg
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxfootgradientr2
+  - sprite: _Impstation/Mobs/Customization/Vox/rleg.rsi # Aurora's Song: Use newer RSI
+    state: gradient
 
 - type: marking
   id: VoxHandGradientRHand
   bodyPart: RHand
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxhandgradientr1
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxhandgradientr2
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxhandgradientr3
+  - sprite: _Impstation/Mobs/Customization/Vox/rhand.rsi # Aurora's Song: Use newer RSI
+    state: gradient1
+  - sprite: _Impstation/Mobs/Customization/Vox/rhand.rsi # Aurora's Song: Use newer RSI
+    state: gradient2
+  - sprite: _Impstation/Mobs/Customization/Vox/rhand.rsi # Aurora's Song: Use newer RSI
+    state: gradient3
 
 - type: marking
   id: VoxHandGradientLHand
   bodyPart: LHand
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxhandgradientl1
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxhandgradientl2
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxhandgradientl3
+  - sprite: _Impstation/Mobs/Customization/Vox/lhand.rsi # Aurora's Song: Use newer RSI
+    state: gradient1
+  - sprite: _Impstation/Mobs/Customization/Vox/lhand.rsi # Aurora's Song: Use newer RSI
+    state: gradient2
+  - sprite: _Impstation/Mobs/Customization/Vox/lhand.rsi # Aurora's Song: Use newer RSI
+    state: gradient3
 
 - type: marking
   id: VoxHeadGradient
   bodyPart: Head
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxheadgradient1
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxheadgradient2
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxheadgradient3
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi # Aurora's Song: Use newer RSI
+    state: gradient1
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi # Aurora's Song: Use newer RSI
+    state: gradient2
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi # Aurora's Song: Use newer RSI
+    state: gradient3
 
 - type: marking
   id: VoxTailBell
-  bodyPart: Tail
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailbell1
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailbell2
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: bell1
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: bell2
 
 - type: marking
   id: VoxTailBack
@@ -524,105 +532,105 @@
   groupWhitelist: [ Vox ]
   forcedColoring: true
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailcolorable
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: colorable
 
 - type: marking
   id: VoxTailLantern
-  bodyPart: Tail
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtaillantern
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: lantern
   shader: unshaded
 
 - type: marking
   id: VoxTailSingleStripe
-  bodyPart: Chest
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailsinglestripe
+  - sprite: _Impstation/Mobs/Customization/Vox/chest.rsi # Aurora's Song: Use newer RSI
+    state: tailsinglestripe
 
 - type: marking
   id: VoxTailSmallPlume
-  bodyPart: Tail
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailsmallplume
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: smallplume
 
 - type: marking
   id: VoxTailSpines
-  bodyPart: Tail
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxtailspines
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: spines
 
 - type: marking
   id: VoxArmsStripesLHand
   bodyPart: LArm
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxarmsstripesl
+  - sprite: _Impstation/Mobs/Customization/Vox/larm.rsi # Aurora's Song: Use newer RSI
+    state: stripes
 
 - type: marking
   id: VoxArmsStripesRHand
   bodyPart: RArm
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxarmsstripesr
+  - sprite: _Impstation/Mobs/Customization/Vox/rarm.rsi # Aurora's Song: Use newer RSI
+    state: stripes
 
 - type: marking
   id: VoxLegsStripesLLeg
   bodyPart: LLeg
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxlegsstripesl
+  - sprite: _Impstation/Mobs/Customization/Vox/lleg.rsi # Aurora's Song: Use newer RSI
+    state: stripes
 
 - type: marking
   id: VoxLegsStripesRLeg
   bodyPart: RLeg    # Aurora's Song -- RFoot > RLeg
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxlegsstripesr
+  - sprite: _Impstation/Mobs/Customization/Vox/rleg.rsi # Aurora's Song: Use newer RSI
+    state: stripes
 
 - type: marking
   id: VoxChains
-  bodyPart: Tail
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxchains
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: chains
 
 - type: marking
   id: VoxSunAndMoon
-  bodyPart: Tail
+  bodyPart: TailOverlay
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxsunandmoon
+  - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi # Aurora's Song: Use newer RSI
+    state: sunandmoon
 
 - type: marking
   id: VoxCheeks
   bodyPart: Head
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxcheeks
+  - sprite: _Impstation/Mobs/Customization/Vox/head.rsi # Aurora's Song: Use newer RSI
+    state: cheeks
 
 - type: marking
   id: VoxBelly
   bodyPart: Chest
   groupWhitelist: [ Vox ]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/markingsbundle1.rsi
-    state: voxbelly
+  - sprite: _Impstation/Mobs/Customization/Vox/chest.rsi # Aurora's Song: Use newer RSI
+    state: belly
 
 - type: marking
   id: VitiligoHeadL
