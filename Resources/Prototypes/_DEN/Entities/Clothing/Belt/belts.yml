@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 ASaltySeabass
-# SPDX-FileCopyrightText: 2025 Rosycup
-# SPDX-FileCopyrightText: 2025 sleepyyapril
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
-
 # Mantis belts start
 - type: entity
   parent: [ClothingBeltMantis, BaseFoldable]
@@ -152,7 +146,7 @@
     - BeltSlotNotBelt
 
 - type: entity
-  parent: [ ClothingBeltStorageBase ]
+  parent: [ ClothingBeltStorageBase, ContentsExplosionResistanceBase ] # Aurora's Song - Add Explosion Resistance
   id: ClothingBeltBSOWebbing
   name: blueshield webbing
   description: A robust chest rig made to fit the needs of a blueshield officer.
@@ -190,6 +184,8 @@
           tags:
             - Radio
         insertOnInteract: true
+  - type: ExplosionResistance # Aurora's Song - Add Explosion Resistance
+    damageCoefficient: 0.1
   - type: ItemMapper # For item overlays
     mapLayers:
       medkit:
