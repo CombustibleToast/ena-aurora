@@ -86,6 +86,58 @@
               amount: 4
               doAfter: 5
 
+        - to: StairSomberAmaranth
+          completed:
+            - !type:SnapToGrid
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 5
+            - tag: ElectrumScrap
+              name: construction-graph-tag-electrum-scrap
+              icon:
+                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
+                state: electrum1
+              doAfter: 1
+
+        - to: StairStageSomberAmaranth
+          completed:
+            - !type:SnapToGrid
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 5
+            - tag: ElectrumScrap
+              name: construction-graph-tag-electrum-scrap
+              icon:
+                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
+                state: electrum1
+              doAfter: 1
+
+        - to: StairSomberMnemolith
+          completed:
+            - !type:SnapToGrid
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Mnemolith
+              amount: 4
+              doAfter: 5
+
+        - to: StairStageSomberMnemolith
+          completed:
+            - !type:SnapToGrid
+          conditions:
+            - !type:EntityAnchored {}
+          steps:
+            - material: Mnemolith
+              amount: 4
+              doAfter: 5
+
     - node: Stairs
       entity: Stairs
       edges:
@@ -177,6 +229,60 @@
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
+              amount: 4
+          steps:
+            - tool: Prying
+              doAfter: 5
+
+    - node: StairSomberAmaranth
+      entity: StairSomberAmaranth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 5
+
+    - node: StairStageSomberAmaranth
+      entity: StairStageSomberAmaranth
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 5
+
+    - node: StairSomberMnemolith
+      entity: StairSomberMnemolith
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialMnemolith1
+              amount: 4
+          steps:
+            - tool: Prying
+              doAfter: 5
+
+    - node: StairStageSomberMnemolith
+      entity: StairStageSomberMnemolith
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialMnemolith1
               amount: 4
           steps:
             - tool: Prying

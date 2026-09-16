@@ -226,6 +226,16 @@
     - node: TableWood
       entity: TableWood
       edges:
+        # Aurora's Song start
+        - to: SomberTable
+          steps:
+            - tag: ElectrumScrap
+              name: construction-graph-tag-electrum-scrap
+              icon:
+                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
+                state: electrum1
+              doAfter: 1
+        # Aurora's Song end
         - to: TableFrame
           completed:
             - !type:SpawnPrototype
@@ -438,6 +448,16 @@
     - node: CounterWood
       entity: TableCounterWood
       edges:
+        # Aurora's Song start
+        - to: SomberCounter
+          steps:
+            - tag: ElectrumScrap
+              name: construction-graph-tag-electrum-scrap
+              icon: # Aurora's Song
+                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
+                state: electrum1
+              doAfter: 1
+        # Aurora's Song end
         - to: CounterWoodFrame
           completed:
             - !type:SpawnPrototype
@@ -446,6 +466,32 @@
           steps:
             - tool: Prying
               doAfter: 1
+
+    # Aurora's Song start
+    - node: SomberTable
+      entity: SomberTable
+      edges:
+        - to: TableWood
+          completed:
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: SomberCounter
+      entity: SomberCounter
+      edges:
+        - to: CounterWood
+          completed:
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 1
+    # Aurora's Song end
 
     - node: TableXeno
       entity: TableXeno

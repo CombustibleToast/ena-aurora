@@ -228,3 +228,80 @@
   placementMode: SnapgridCenter
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  id: StairSomberAmaranth
+  graph: ASstairs
+  startNode: start
+  targetNode: StairSomberAmaranth
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageSomberAmaranth
+  name: construction-recipe-stair-stage-somber-amaranth
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageSomberAmaranth
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairSomberMnemolith
+  graph: ASstairs
+  startNode: start
+  targetNode: StairSomberMnemolith
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageSomberMnemolith
+  name: construction-recipe-stair-stage-somber-mnemolith
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageSomberMnemolith
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+# Somber material doors
+- type: construction
+  id: SomberAmaranthDoor
+  graph: ASSomberDoors
+  startNode: start
+  targetNode: somberAmaranthDoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: SomberMnemolithDoor
+  graph: ASSomberDoors
+  startNode: start
+  targetNode: somberMnemolithDoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
