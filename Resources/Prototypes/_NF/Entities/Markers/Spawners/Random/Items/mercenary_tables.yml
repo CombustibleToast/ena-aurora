@@ -196,7 +196,7 @@
       weight: 0.1
       children:
       - id: TelescopicShield
-      - id: EnergyShield
+      - id: WeaponCaseShortEnergyShieldExpedition # Aurora's Song - Use the weapon case version so its more visible
 
 - type: entityTable
   id: TableDungeonLootMercenaryClothesBoots
