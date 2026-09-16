@@ -1,0 +1,33 @@
+- type: entityTable
+  id: SpawnAmbulanceLoot
+  table: !type:GroupSelector
+    children:
+    # 87% chance for the loot tables, trash, jet injectors, and civilian hyposprays
+    - !type:GroupSelector
+      weight: 87
+      children:
+      - !type:GroupSelector
+        children:
+        - id: BoxFolderMedicalDoctor
+        weight: 70
+      - !type:GroupSelector
+        children:
+        - id: JetInjector
+        weight: 30
+    # 13% chance of an advanced Jet Injector
+    - !type:GroupSelector
+      children:
+      - id: AdvancedJetInjector
+      weight: 13
+
+- type: entity # I have no clue what i'm doing :3
+  parent: MarkerBase
+  id: AmbulanceLootSpawner
+  name: AmbulanceLootSpawner
+  suffix: Ambulance
+  components:
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: SpawnAmbulanceLoot
+      prob: 1
