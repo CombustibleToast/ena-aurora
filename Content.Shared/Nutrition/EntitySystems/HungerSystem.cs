@@ -146,7 +146,8 @@ public sealed partial class HungerSystem : EntitySystem
             _movementSpeedModifier.RefreshMovementSpeedModifiers(uid);
         }
 
-        if (component.HungerThresholdAlerts.TryGetValue(component.CurrentThreshold, out var alertId))
+        // _Funkystation - Suppressed Bodily Cues
+        if (!IsHungerAlertSuppressed(uid, component.CurrentThreshold) && component.HungerThresholdAlerts.TryGetValue(component.CurrentThreshold, out var alertId))
         {
             _alerts.ShowAlert(uid, alertId);
         }
