@@ -401,6 +401,7 @@ namespace Content.Client.PDA
                 }
             }
             // End Frontier
+            UpdateLocalShiftTimeTooltips(stationTime); // Aurora's Song
         }
     }
 }
