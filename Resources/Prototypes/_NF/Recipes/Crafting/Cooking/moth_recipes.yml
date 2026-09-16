@@ -31,10 +31,11 @@
   time: 5
   reagents:
     Flour: 5
-    Milk: 5
-    Egg: 5
+    Sugar: 5 # Aurora's Song - changed milk to sugar
+    Egg: 6 # Aurora's Song - increased egg amount from 5 to 6 to equal one egg
   solids:
     MaterialCloth1: 1
+    FoodPlateMuffinTin: 1 # Aurora's Song - added muffin tin
   recipeType: # Frontier
   - Oven # Frontier
 
