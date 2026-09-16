@@ -28,6 +28,7 @@
   # - LegsParalyzed (you get healed)
   - BlackAndWhiteOverlay
   - LightweightDrunk
+  - MetabolicCrashesScheduler # Aurora's Song
   - Muted
   - Narcolepsy
   - Pacified
