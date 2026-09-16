@@ -1,7 +1,7 @@
 ﻿- type: cargoProduct
   id: Gambling
   icon:
-    sprite: _NF/Structures/Storage/Crates/tradedark.rsi
+    sprite: _AS/Structures/Storage/Crates/tradedark.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   product: CrateGAMBLINGLOTTERY
   cost: 300000

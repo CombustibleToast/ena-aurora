@@ -12,7 +12,8 @@
     - type: ResistLocker
     - type: Sprite
       drawdepth: Objects
-      sprite: Structures/Storage/Crates/artifact.rsi
+      sprite: _AS/Structures/Storage/Crates/artifact.rsi # Aurora's Song - Storage Resprites Batch 1
+      offset: 0.0,0.125
       layers:
       - state: artifact_container
         map: ["enum.StorageVisualLayers.Base"]
@@ -40,7 +41,7 @@
           layer:
           - MachineLayer
     - type: Icon
-      sprite: Structures/Storage/Crates/artifact.rsi
+      sprite: _AS/Structures/Storage/Crates/artifact.rsi # Aurora's Song - Storage Resprites Batch 1
       state: artifact_container_icon
     - type: EntityStorage
       capacity: 1
@@ -101,7 +102,7 @@
   description: A handheld case used to safely contain and move small artifacts.
   components:
   - type: Sprite
-    sprite: Objects/Storage/artifact_container.rsi
+    sprite: _AS/Objects/Storage/artifact_container.rsi # Aurora's Song - Storage Resprites Batch 1
     state: icon
     layers:
       - state: icon
@@ -117,7 +118,7 @@
       components:
       - XenoArtifact
   - type: Item
-    sprite: Objects/Storage/artifact_container.rsi
+    sprite: _AS/Objects/Storage/artifact_container.rsi # Aurora's Song - Storage Resprites Batch 1
     size: Huge
   - type: MeleeWeapon
     damage:

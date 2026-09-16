@@ -853,9 +853,9 @@
     layers:
     - state: dumpster
       map: ["enum.VehicleVisualLayers.AutoAnimate"]
-    - sprite: _NF/Structures/Storage/magnetbox.rsi
+    - sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
       state: controller
-    - sprite: _NF/Structures/Storage/magnetbox.rsi
+    - sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
       state: controller-on
       visible: False
       map: [ "enum.ToggleableVisuals.Layer" ]

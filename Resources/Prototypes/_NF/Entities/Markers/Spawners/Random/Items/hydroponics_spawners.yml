@@ -123,7 +123,7 @@
   - type: Sprite
     layers:
     - state: green
-    - sprite: Structures/Storage/Crates/hydroponics.rsi
+    - sprite: _AS/Structures/Storage/Crates/hydroponics.rsi # Aurora's Song - Storage Resprites Batch 2
       state: icon
     - sprite: _NF/Markers/general.rsi
       state: questionmark

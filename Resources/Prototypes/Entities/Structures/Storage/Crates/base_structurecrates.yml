@@ -9,11 +9,12 @@
   - type: Transform
     noRot: true
   - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _AS/Structures/Storage/Crates/generic.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _AS/Structures/Storage/Crates/generic.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
@@ -90,10 +91,11 @@
   - type: LockVisuals
   - type: AccessReader
   - type: Icon
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _AS/Structures/Storage/Crates/secure.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   - type: Sprite
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _AS/Structures/Storage/Crates/secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
     - state: closed

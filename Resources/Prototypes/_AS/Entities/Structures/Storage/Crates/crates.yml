@@ -41,6 +41,7 @@
     sprite: _AS/Structures/Storage/Crates/sle_secure1.rsi
   - type: Sprite
     sprite: _AS/Structures/Storage/Crates/sle_secure1.rsi
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
     access: [["Security"]]
 
@@ -53,6 +54,7 @@
     sprite: _AS/Structures/Storage/Crates/sle_secure2.rsi
   - type: Sprite
     sprite: _AS/Structures/Storage/Crates/sle_secure2.rsi
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
     access: [["Security"]]
 
@@ -65,5 +67,6 @@
     sprite: _AS/Structures/Storage/Crates/sle_brigmed.rsi
   - type: Sprite
     sprite: _AS/Structures/Storage/Crates/sle_brigmed.rsi
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
     access: [["Security"]]
