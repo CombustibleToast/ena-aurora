@@ -1,0 +1,41 @@
+- type: marking
+  id: short_bedhead
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/Hair/hair.rsi
+      state: short_bedhead
+
+- type: marking
+  id: classic_bob
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/Hair/hair.rsi
+      state: classic_bob
+
+- type: marking
+  id: classic_messy
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/Hair/hair.rsi
+      state: classic_messy
+
+- type: marking
+  id: classic_gentle
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/Hair/hair.rsi
+      state: classic_gentle
+
+- type: marking
+  id: classic_ombre
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/Hair/hair.rsi
+      state: classic_ombre
+
+- type: marking
+  id: classic_long
+  bodyPart: Hair
+  sprites:
+    - sprite: _DV/Mobs/Customization/Hair/hair.rsi
+      state: classic_long
