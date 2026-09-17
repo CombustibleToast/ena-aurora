@@ -208,7 +208,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
             // Aurora's Song - moved suffix generation
             var random = IoCManager.Resolve<IRobustRandom>();
-            var licensePlate = idCard?.ProfileId is { } profileId ? LicensePlateSystem.GetLicensePlate(profileId) : $"[{random.Next(0, 100):D2}]";
+            var licensePlate = idCard?.ProfileId is { } profileId ? LicensePlateSystem.GetLicensePlate(profileId) : $"{random.Next(0, 100):D2}";
             name = $"{Name(shuttleStation.Value)}-{licensePlate}";
             _station.RenameStation(shuttleStation.Value, name, false);
             // End aurora's Song - moved suffix generation

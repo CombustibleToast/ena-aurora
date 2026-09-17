@@ -159,7 +159,7 @@ namespace Content.Client.PDA
             {
                 _pdaOwner = state.PdaOwnerInfo.ActualOwnerName;
                 PdaOwnerLabel.SetMarkup(Loc.GetString("comp-pda-ui-owner",
-                    ("actualOwnerName", _pdaOwner)));
+                    ("actualOwnerName", FormattedMessage.EscapeText(_pdaOwner)))); // Aurora's Song - Escape text to prevent errors
                 PdaOwnerLabel.Visible = true;
             }
             else
@@ -173,8 +173,8 @@ namespace Content.Client.PDA
                 _owner = state.PdaOwnerInfo.IdOwner ?? Loc.GetString("comp-pda-ui-unknown");
                 _idNumber = state.PdaOwnerInfo.IdNumber ?? ""; // Aurora add id number to pda
                 IdInfoLabel.SetMarkup(Loc.GetString("comp-pda-ui",
-                    ("owner", _owner),
-                    ("canonIdNumber", _idNumber))); // Aurora's Song - swaped out job for id number
+                    ("owner", FormattedMessage.EscapeText(_owner)),
+                    ("canonIdNumber", FormattedMessage.EscapeText(_idNumber)))); // Aurora's Song - swaped out job for id number, Escape text to prevent errors
             }
             else
             {
@@ -183,18 +183,21 @@ namespace Content.Client.PDA
 
             // Aurora's Song Start - add id number to pda
             _jobTitle = state.PdaOwnerInfo.JobTitle ?? Loc.GetString("comp-pda-ui-unassigned");
-            JobInfoLabel.SetMarkup(Loc.GetString("comp-pda-ui-job", ("jobTitle", _jobTitle)));
+            JobInfoLabel.SetMarkup(Loc.GetString("comp-pda-ui-job",
+                ("jobTitle", FormattedMessage.EscapeText(_jobTitle))));
             // Aurora's Song End
 
             _stationName = state.StationName ?? Loc.GetString("comp-pda-ui-unknown");
             StationNameLabel.SetMarkup(Loc.GetString("comp-pda-ui-station",
-                ("station", _stationName)));
+                ("station", FormattedMessage.EscapeText(_stationName)))); // Aurora's Song - Escape text to prevent errors
 
             _balance = BankSystemExtensions.ToSpesoString(state.Balance); // Frontier
-            BalanceLabel.SetMarkup(Loc.GetString("comp-pda-ui-balance", ("balance", _balance))); // Frontier
+            BalanceLabel.SetMarkup(Loc.GetString("comp-pda-ui-balance",
+                ("balance", FormattedMessage.EscapeText(_balance)))); // Frontier, Aurora's Song - Escape text to prevent errors
 
             _shuttleDeed = state.OwnedShipName ?? ""; // Frontier
-            ShuttleDeedLabel.SetMarkup(Loc.GetString("comp-pda-ui-shuttle-deed", ("shipname", _shuttleDeed))); // Frontier
+            ShuttleDeedLabel.SetMarkup(Loc.GetString("comp-pda-ui-shuttle-deed",
+                ("shipname", FormattedMessage.EscapeText(_shuttleDeed)))); // Frontier, Aurora's Song - Escape text to prevent errors
             ShuttleDeedLabel.Visible = !string.IsNullOrEmpty(state.OwnedShipName); // Frontier
 
             var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
