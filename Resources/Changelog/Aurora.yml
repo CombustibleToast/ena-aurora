@@ -3342,3 +3342,12 @@ Entries:
   id: 9797
   time: '2026-09-17T07:41:39.6661046+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1533
+- author: TrixxedHeart
+  changes:
+  - message: Fixed PDAs erroring out on ships that utilized brackets in their name
+    type: Fix
+  - message: Fixed PDAs erroring when using brackets on names/job titles
+    type: Fix
+  id: 9798
+  time: '2026-09-17T21:24:11.2440138+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1546
