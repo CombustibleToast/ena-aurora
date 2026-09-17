@@ -3174,3 +3174,171 @@ Entries:
   id: 9775
   time: '2026-09-12T07:42:20.8918928+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1513
+- author: TrixxedHeart
+  changes:
+  - message: Add the Metabolic Crashes disability, which makes hunger more punishing by occasionally giving you narcolepsy and migraines when your hunger is too low for too long.
+    type: Add
+  id: 9776
+  time: '2026-09-17T07:41:39.6654084+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1523
+- author: TrixxedHeart
+  changes:
+  - message: Overhauled the traits menu, it looks nice now, and there's a search bar!
+    type: Tweak
+  id: 9777
+  time: '2026-09-17T07:41:39.6656379+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1522
+- author: TrixxedHeart, zergologist
+  changes:
+  - message: Added Suppressed Bodily Cues trait that makes hunger/thirst alerts only show when you are starving/parched.
+    type: Add
+  id: 9778
+  time: '2026-09-17T07:41:39.6657978+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1520
+- author: fancyplanks
+  changes:
+  - message: A bunch more storages have been resprited!
+    type: Tweak
+  id: 9779
+  time: '2026-09-17T07:41:39.6658109+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1532
+- author: TrixxedHeart
+  changes:
+  - message: You can now toggle whether or not your belt slot renders above/below your outersuit.
+    type: Add
+  id: 9780
+  time: '2026-09-17T07:41:39.6658233+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1506
+- author: Ayebee123
+  changes:
+  - message: Six classic hairstyles from the Delta-V sector have been reintroduced.
+    type: Add
+  id: 9781
+  time: '2026-09-17T07:41:39.6658466+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1496
+- author: bardicJackal
+  changes:
+  - message: Added Quick Construction menus to Steel, Metal Rods, and all
+    type: Add
+  id: 9782
+  time: '2026-09-17T07:41:39.6658706+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1495
+- author: bardicJackal
+  changes:
+  - message: Adds some loot to ambulances! just jet injectors tho
+    type: Add
+  id: 9783
+  time: '2026-09-17T07:41:39.6658847+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1493
+- author: Sere
+  changes:
+  - message: Made Blueshield Webbing have explosion resistance like chest rigs.
+    type: Tweak
+  id: 9784
+  time: '2026-09-17T07:41:39.6658912+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1536
+- author: Rivalcoolade
+  changes:
+  - message: Changed hugging to patting yaaay.
+    type: Tweak
+  id: 9785
+  time: '2026-09-17T07:41:39.6659047+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1516
+- author: heirdragonair
+  changes:
+  - message: Skinny Jeans, Booty Shorts, and Baggy Pants options have been added to the loadout!
+    type: Add
+  id: 9786
+  time: '2026-09-17T07:41:39.6659187+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1488
+- author: TrixxedHeart
+  changes:
+  - message: Added 36 new Vox markings from Impstation
+    type: Add
+  - message: Adjusted Vox marking point limits to accomodate new markings
+    type: Tweak
+  - message: Moved multiple existing Vox tail markings to the Tail (Overlay) category
+    type: Tweak
+  id: 9787
+  time: '2026-09-17T07:41:39.6659667+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1480
+- author: Phoebe51505
+  changes:
+  - message: Mercenary loot Energy Shields now come packaged in weapon cases rather than just on the floor.
+    type: Tweak
+  id: 9788
+  time: '2026-09-17T07:41:39.6659864+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1525
+- author: TrixxedHeart
+  changes:
+  - message: Added a search bar to the decal selector in the spray painter.
+    type: Add
+  id: 9789
+  time: '2026-09-17T07:41:39.6659989+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1517
+- author: TrixxedHeart
+  changes:
+  - message: You can now view the shift end times in your local time by hovering over them in your PDA.
+    type: Add
+  id: 9790
+  time: '2026-09-17T07:41:39.6660074+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1507
+- author: TrixxedHeart
+  changes:
+  - message: Made many somber/amarath/mantis furniture items and tiles craftable.
+    type: Add
+  - message: Mnemolith (the material) now spawns in chromite asteroids
+    type: Add
+  - message: Mnemolith can now be picked up in ore and construction bags.
+    type: Tweak
+  - message: Electrum can now be picked up in construction bags.
+    type: Tweak
+  - message: Mnemolith can be stacked up to 120 pieces.
+    type: Tweak
+  id: 9791
+  time: '2026-09-17T07:41:39.6660302+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1509
+- author: TrixxedHeart
+  changes:
+  - message: Added inactivity SSD, which will mark players that have been inactive but still connected to the server as SSD after 20 minutes (default) of inactivity.
+    type: Tweak
+  id: 9792
+  time: '2026-09-17T07:41:39.6660437+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1478
+- author: TrixxedHeart
+  changes:
+  - message: IPC batteries no longer drain while SSD.
+    type: Tweak
+  id: 9793
+  time: '2026-09-17T07:41:39.6660498+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1535
+- author: SolStar
+  changes:
+  - message: Changed ship designations to be consistant across rounds and ships per character
+    type: Tweak
+  id: 9794
+  time: '2026-09-17T07:41:39.6660655+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1465
+- author: Sere, TrixxedHeart
+  changes:
+  - message: Took the old DENU out back and shot it!
+    type: Remove
+  - message: The shiny new DENU from DENTWO! Complete with earmuffs and settings that save so you don't need to redo them!
+    type: Add
+  id: 9795
+  time: '2026-09-17T07:41:39.6660766+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1476
+- author: SalamanderSkies
+  changes:
+  - message: The default testing map has been updated.
+    type: Tweak
+  id: 9796
+  time: '2026-09-17T07:41:39.6660884+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1502
+- author: BudaLope
+  changes:
+  - message: removed spillable component from hyposprays and medipens
+    type: Tweak
+  id: 9797
+  time: '2026-09-17T07:41:39.6661046+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1533
