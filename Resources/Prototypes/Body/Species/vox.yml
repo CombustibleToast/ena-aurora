@@ -2,6 +2,9 @@
   parent: Undergarments
   id: Vox
   limits:
+    enum.HumanoidVisualLayers.HeadTop: # Aurora's Song
+      limit: 4
+      required: false
     enum.HumanoidVisualLayers.Hair:
       limit: 1
       onlyGroupWhitelisted: true
@@ -37,19 +40,19 @@
       required: false # Aurora's Song - true>false
       default: [ VoxRHandScales ]
     enum.HumanoidVisualLayers.LLeg:
-      limit: 1
+      limit: 3 # Aurora's Song - 1>3
       required: false
       default: [ VoxLLegScales ]
     enum.HumanoidVisualLayers.RLeg:
-      limit: 1
+      limit: 3 # Aurora's Song - 1>3
       required: false
       default: [ VoxRLegScales ]
     enum.HumanoidVisualLayers.LFoot:
-      limit: 1
+      limit: 2 # Aurora's Song - 1>2
       required: false # Aurora's Song - true>false
       default: [ VoxLFootScales ]
     enum.HumanoidVisualLayers.RFoot:
-      limit: 1
+      limit: 2 # Aurora's Song - 1>2
       required: false # Aurora's Song - true>false
       default: [ VoxRFootScales ]
     enum.HumanoidVisualLayers.Chest:
@@ -59,8 +62,8 @@
       limit: 2 # Aurora's Song -- 1 > 2
       required: true
       default: [ VoxTail ]
-    enum.HumanoidVisualLayers.TailOverlay:
-      limit: 1
+    enum.HumanoidVisualLayers.TailOverlay: # Aurora's Song
+      limit: 4 # Aurora's Song - 1>4
       required: false
     enum.HumanoidVisualLayers.UndergarmentTop:
       limit: 1
@@ -314,6 +317,7 @@
   - type: VisualOrganMarkings
     hideableLayers:
     - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.HeadTop
     - enum.HumanoidVisualLayers.Hair
     - enum.HumanoidVisualLayers.FacialHair
     dependentHidingLayers:

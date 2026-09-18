@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: CrateMedicalSurgery
   icon:
-    sprite: Structures/Storage/Crates/surgery.rsi
+    sprite: _AS/Structures/Storage/Crates/surgery.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   product: CrateMedicalSurgery
   cost: 3000

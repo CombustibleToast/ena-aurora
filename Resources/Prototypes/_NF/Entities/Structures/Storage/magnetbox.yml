@@ -34,7 +34,7 @@
   - type: Climbable
   - type: Sprite
     noRot: true
-    sprite: /Textures/_NF/Structures/Storage/magnetbox.rsi
+    sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Appearance
   - type: GenericVisualizer
     visuals:

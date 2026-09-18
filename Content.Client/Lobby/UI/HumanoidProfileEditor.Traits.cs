@@ -1,8 +1,6 @@
 using System.Linq;
-using Content.Client.Lobby.UI.Roles;
-using Content.Client.Stylesheets;
+using Content.Client._Starfall.UserInterface.Lobby.Traits; // Aurora's Song
 using Content.Shared.Traits;
-using Robust.Client.UserInterface.Controls;
 using Robust.Shared.Utility;
 
 namespace Content.Client.Lobby.UI;
@@ -15,18 +13,16 @@ public sealed partial class HumanoidProfileEditor
     /// </summary>
     public void RefreshTraits()
     {
-        TraitsList.RemoveAllChildren();
+        TraitsEditor.RefreshRequested ??= RefreshTraits; // Aurora's Song
+        TraitsEditor.Clear(); // Aurora's Song
 
-        var traits = _prototypeManager.EnumeratePrototypes<TraitPrototype>().OrderBy(t => Loc.GetString(t.Name)).ToList();
+        var traits = TraitsEditor.FilterSearch(_prototypeManager.EnumeratePrototypes<TraitPrototype>()) // Aurora's Song
+            .ToList();
         TabContainer.SetTabTitle(2, Loc.GetString("humanoid-profile-editor-traits-tab")); // Aurora's Song - 3>2
 
         if (traits.Count < 1)
         {
-            TraitsList.AddChild(new Label
-            {
-                Text = Loc.GetString("humanoid-profile-editor-no-traits"),
-                FontColorOverride = Color.Gray,
-            });
+            TraitsEditor.ShowNoTraits(); // Aurora's Song
             return;
         }
 
@@ -67,24 +63,16 @@ public sealed partial class HumanoidProfileEditor
             TraitCategoryPrototype? category = null;
 
             if (categoryId != TraitCategoryPrototype.Default)
-            {
                 category = _prototypeManager.Index<TraitCategoryPrototype>(categoryId);
-                // Label
-                TraitsList.AddChild(new Label
-                {
-                    Text = Loc.GetString(category.Name),
-                    Margin = new Thickness(0, 10, 0, 0),
-                    StyleClasses = { StyleClass.LabelHeading },
-                });
-            }
 
-            List<TraitPreferenceSelector?> selectors = new();
+            var traitGrid = TraitsEditor.AddCategory(category); // Aurora's Song
+            List<StarfallTraitCard?> selectors = new(); // Aurora's Song
             var selectionCount = 0;
 
             foreach (var traitProto in categoryTraits)
             {
                 var trait = _prototypeManager.Index<TraitPrototype>(traitProto);
-                var selector = new TraitPreferenceSelector(trait);
+                var selector = new StarfallTraitCard(trait); // Aurora's Song
 
                 selector.Preference = Profile?.TraitPreferences.Contains(trait.ID) == true;
                 if (selector.Preference)
@@ -110,12 +98,10 @@ public sealed partial class HumanoidProfileEditor
             // Selection counter
             if (category is { MaxTraitPoints: >= 0 })
             {
-                TraitsList.AddChild(new Label
-                {
-                    Text = Loc.GetString("humanoid-profile-editor-trait-count-hint", ("current", selectionCount), ("max", category.MaxTraitPoints)),
-                    FontColorOverride = Color.Gray
-                });
+                TraitsEditor.AddPointCounter(selectionCount, category.MaxTraitPoints.Value); // Aurora's Song
             }
+
+            TraitsEditor.AddTraitGrid(traitGrid); // Aurora's Song
 
             foreach (var selector in selectors)
             {
@@ -123,12 +109,11 @@ public sealed partial class HumanoidProfileEditor
                     continue;
 
                 if (category is { MaxTraitPoints: >= 0 } &&
+                    !selector.Preference && // Aurora's Song
                     selector.Cost + selectionCount > category.MaxTraitPoints)
-                {
-                    selector.Checkbox.Label.FontColorOverride = Color.Red;
-                }
+                    selector.SetUnavailable(true); // Aurora's Song
 
-                TraitsList.AddChild(selector);
+                traitGrid.AddChild(selector); // Aurora's Song
             }
         }
     }

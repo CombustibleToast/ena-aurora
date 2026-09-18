@@ -1,4 +1,4 @@
-﻿namespace Content.Shared.Toggleable;
+namespace Content.Shared.Toggleable;
 
 /// <summary>
 /// Holds the state for whether the undergarment (top and bottom) are hidden.

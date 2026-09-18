@@ -6,6 +6,8 @@
             <Label Text="{Loc 'spray-painter-selected-decals'}" />
             <Label Name="SelectedDecalName" StyleClasses="Italic" Margin="4 0" />
         </BoxContainer>
+        <!-- Aurora's Song -->
+        <LineEdit Name="Search" PlaceHolder="Search decals..." Margin="0 0 0 8" />
         <ScrollContainer VerticalExpand="True">
             <GridContainer Columns="7" Name="DecalsGrid">
                 <!-- populated by code -->

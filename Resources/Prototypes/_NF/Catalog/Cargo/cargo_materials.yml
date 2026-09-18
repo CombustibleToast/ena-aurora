@@ -45,7 +45,7 @@
 - type: cargoProduct
   id: CargoConstructionBox
   icon:
-    sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
+    sprite:  _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
     state: constructionbox
   product: NFMagnetBoxConstruction
   cost: 1000
@@ -55,7 +55,7 @@
 - type: cargoProduct
   id: CargoRubbishBox
   icon:
-    sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
+    sprite:  _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
     state: rubbishbox
   product: NFMagnetBoxRubbish
   cost: 1000
@@ -65,7 +65,7 @@
 - type: cargoProduct
   id: CargoTreasureBox
   icon:
-    sprite:  /Textures/_NF/Structures/Storage/magnetbox.rsi
+    sprite:  _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
     state: treasurebox-closed
   product: NFMagnetBoxTreasure
   cost: 1000

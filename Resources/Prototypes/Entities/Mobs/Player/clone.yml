@@ -28,12 +28,14 @@
   # - LegsParalyzed (you get healed)
   - BlackAndWhiteOverlay
   - LightweightDrunk
+  - MetabolicCrashesScheduler # Aurora's Song
   - Muted
   - Narcolepsy
   - Pacified
   - Paracusia
   - PermanentBlindness
   - Snoring
+  - SuppressedBodilyCues # _Funkystation
   - Unrevivable
   # accents
   - Accentless

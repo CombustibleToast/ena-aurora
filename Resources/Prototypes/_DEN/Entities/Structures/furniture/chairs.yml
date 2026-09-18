@@ -10,6 +10,9 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberChairCushion
   - type: Sprite
     sprite: _DEN/Structures/Furniture/chairs.rsi
     state: somberfloorcushion
@@ -53,6 +56,9 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberChairLeather
   - type: Sprite
     sprite: _DEN/Structures/Furniture/chairs.rsi
     state: somberleather
@@ -96,6 +102,9 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberChairLeatherMantisWheelchair
   - type: Foldable
     canFoldInsideContainer: false
   - type: Sprite
@@ -108,7 +117,7 @@
   - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
     damageContainer: Inorganic
   - type: StaticPrice
-    price: 125
+    price: 545 # Aurora's Song
   - type: Destructible
     thresholds:
     - trigger:
@@ -164,6 +173,9 @@
   placement:
     mode: SnapgridCenter
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberChairWood
   - type: Sprite
     sprite: _DEN/Structures/Furniture/chairs.rsi
     state: somberwood

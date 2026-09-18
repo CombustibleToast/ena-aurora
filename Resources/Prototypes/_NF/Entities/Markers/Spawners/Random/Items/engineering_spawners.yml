@@ -233,7 +233,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/engineering.rsi
+      - sprite: _AS/Structures/Storage/Crates/engineering.rsi # Aurora's Song - Storage Resprites Batch 2
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark
@@ -253,7 +253,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/engineering.rsi
+      - sprite: _AS/Structures/Storage/Crates/engineering.rsi # Aurora's Song - Storage Resprites Batch 2
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark
@@ -273,7 +273,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/engineering.rsi
+      - sprite: _AS/Structures/Storage/Crates/engineering.rsi # Aurora's Song - Storage Resprites Batch 2
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark

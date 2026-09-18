@@ -65,6 +65,7 @@ public sealed partial class ClientClothingSystem : ClothingSystem
         SubscribeLocalEvent<InventoryComponent, VisualsChangedEvent>(OnVisualsChanged);
         SubscribeLocalEvent<SpriteComponent, DidUnequipEvent>(OnDidUnequip);
         SubscribeLocalEvent<InventoryComponent, AppearanceChangeEvent>(OnAppearanceUpdate);
+        InitializeBeltLayerToggle(); // Aurora's Song - Belt layer toggle
     }
 
     private void OnAppearanceUpdate(EntityUid uid, InventoryComponent component, ref AppearanceChangeEvent args)
@@ -283,7 +284,9 @@ public sealed partial class ClientClothingSystem : ClothingSystem
         // temporary, until layer draw depths get added. Basically: a layer with the key "slot" is being used as a
         // bookmark to determine where in the list of layers we should insert the clothing layers.
         var bookmarkSlot = slot == "neck2" ? "neck" : slot; // Aurora's Song: neck2 shares neck bookmark
+        AdjustBeltLayerBookmark(equipee, slot, ref bookmarkSlot); // Aurora's Song - Belt layer toggle
         var slotLayerExists = _sprite.LayerMapTryGet((equipee, sprite), bookmarkSlot, out var index, false);
+        AdjustBeltLayerInsertionIndex(equipee, sprite, slot, inventorySlots, ref index); // Aurora's Song - Belt layer toggle
 
         // Select displacement maps
         var displacementData = inventory.Displacements.GetValueOrDefault(slot); //Default unsexed map

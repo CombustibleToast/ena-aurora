@@ -4,6 +4,9 @@
   name: somber chaise lounge
   description: "Technically it's a chaise \"longue,\" which is French for \"long chair,\" but you do lounge on it."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberPsychBed
   - type: Sprite
     sprite: _DEN/Structures/Furniture/furniture.rsi
     state: somberpsychbed

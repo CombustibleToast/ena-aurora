@@ -58,6 +58,9 @@ trait-cryox-blood-desc = You have cryoxadone for blood, as seen in Sheleg and ma
 trait-methylated-blood-name = Methylated blood
 trait-methylated-blood-desc = You have ethanol-based blood, as seen in Allulalo.
 
+trait-metabolic-crashes-name = Metabolic Crashes
+trait-metabolic-crashes-desc = Your metabolism has the resilience of wet cardboard. critically low hunger or thirst causes recurring migraines and sudden bouts of sleep.
+
 trait-heavyweight-name = Heavyweight
 trait-heavyweight-desc = Makes you harder to move.
 

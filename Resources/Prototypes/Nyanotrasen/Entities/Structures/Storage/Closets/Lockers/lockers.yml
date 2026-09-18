@@ -13,6 +13,9 @@
   suffix: Empty
   description: "Concealed knowledge stirs within, revealed only to those who can pierce the veil." # TheDen
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: LockerForensicMantis
   #- type: AccessReader
   #  access: [["Mantis"]]
   - type: Sprite # TheDen - Edited everything below this point wow

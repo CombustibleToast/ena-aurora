@@ -4,6 +4,9 @@
   name: somber amaranth door
   description: "A door made of exotic, extremely durable hardwood. Also called purpleheart, or incorrectly, rosewood."
   components:
+  - type: Construction # Aurora's Song
+    graph: ASSomberDoors
+    node: somberAmaranthDoor
   - type: Door
     openSound:
       path: /Audio/Effects/door_open.ogg
@@ -50,6 +53,9 @@
   name: somber mnemolith door
   description: "A door made of mnemolith, a dark, glassy stone that forms during severe noospheric storms."
   components:
+  - type: Construction # Aurora's Song
+    graph: ASSomberDoors
+    node: somberMnemolithDoor
   - type: Sprite
     sprite: _DEN/Structures/Doors/MineralDoors/mnemolith_door.rsi
     layers:

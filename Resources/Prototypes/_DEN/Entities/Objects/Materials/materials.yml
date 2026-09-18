@@ -19,9 +19,11 @@
     heldPrefix: mnemolith
     size: Small # Can be smaller than other materials since it's almost useless
   - type: Appearance
+  - type: ConstructionMaterials # Aurora's Song - Allow mnemolith in construction bags
   - type: Tag
     tags:
     - RawMaterial
+    - Ore # Aurora's Song - Allow mnemolith to be collected by ore bags.
     - MantisBeltStorable # Why not, their gear is made of it
   - type: Stack
     stackType: Mnemolith
@@ -180,3 +182,19 @@
   components:
   - type: Stack
     count: 1
+
+# Aurora's Song - Start - Cherrypick quickconstruct
+- type: entity
+  id: BaseQuickConstructionMaterial
+  abstract: true
+  components:
+  - type: ActivatableUI
+    inHandsOnly: true
+    singleUser: true
+    requireActiveHand: false
+    key: enum.QuickConstructionUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.QuickConstructionUiKey.Key:
+        type: QuickConstructionBoundUserInterface
+# Aurora's Song - End

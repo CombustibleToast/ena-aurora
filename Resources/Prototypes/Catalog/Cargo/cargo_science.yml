@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: ArtifactContainer
   icon:
-    sprite: Structures/Storage/Crates/artifact.rsi
+    sprite: _AS/Structures/Storage/Crates/artifact.rsi # Aurora's Song - Storage Resprites Batch 1
     state: artifact_container_icon
   product: CrateArtifactContainer
   cost: 500
@@ -11,7 +11,7 @@
 - type: cargoProduct
   id: HandheldArtifactContainer
   icon:
-    sprite: Objects/Storage/artifact_container.rsi
+    sprite: _AS/Objects/Storage/artifact_container.rsi # Aurora's Song - Storage Resprites Batch 1
     state: icon
   product: HandheldArtifactContainer
   cost: 500

@@ -54,6 +54,9 @@
     sprite: _DEN/Structures/stairs.rsi
     state: stairs_somber_amaranth
     drawdepth: FloorTiles
+  - type: Construction # Aurora's Song
+    graph: ASstairs
+    node: StairSomberAmaranth
   - type: Destructible
     thresholds:
     - trigger:
@@ -89,6 +92,9 @@
     sprite: _DEN/Structures/stairs.rsi
     state: stairs_somber_mnemolith
     drawdepth: FloorTiles
+  - type: Construction # Aurora's Song
+    graph: ASstairs
+    node: StairSomberMnemolith
   - type: Destructible
     thresholds:
     - trigger:
@@ -107,8 +113,8 @@
       - !type:SpawnEntitiesBehavior
         spawn:
           MaterialMnemolith1:
-            min: 10
-            max: 20
+            min: 4 # Aurora's Song - Match construction recipe cost
+            max: 4 # Aurora's Song - Match construction recipe cost
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
 
@@ -145,6 +151,9 @@
     sprite: _DEN/Structures/stairs.rsi
     state: stairs_stage_somber_amaranth
     drawdepth: FloorTiles
+  - type: Construction # Aurora's Song
+    graph: ASstairs
+    node: StairStageSomberAmaranth
 
 - type: entity
   parent: StairSomberMnemolith
@@ -156,3 +165,6 @@
     sprite: _DEN/Structures/stairs.rsi
     state: stairs_stage_somber_mnemolith
     drawdepth: FloorTiles
+  - type: Construction # Aurora's Song
+    graph: ASstairs
+    node: StairStageSomberMnemolith

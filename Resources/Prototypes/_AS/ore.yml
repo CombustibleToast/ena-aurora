@@ -1,0 +1,5 @@
+- type: ore
+  id: ASOreMnemolith
+  oreEntity: MaterialMnemolith1
+  minOreYield: 2
+  maxOreYield: 6

@@ -46,6 +46,12 @@ public sealed partial class SprayPainterDecals : Control
 
         ColorPalette.OnPressed += ColorPaletteOnPressed;
         ColorPicker.OnPressed += args => OnColorPickerToggled?.Invoke(args.Button.Pressed);
+        // Aurora's Song
+        Search.OnTextChanged += _ =>
+        {
+            if (_sprite is not null)
+                PopulateDecals(_decals, _sprite);
+        };
     }
 
     private void UseCustomColorCheckBoxOnOnPressed(BaseButton.ButtonEventArgs _)
@@ -71,6 +77,10 @@ public sealed partial class SprayPainterDecals : Control
 
         foreach (var decal in decals)
         {
+            // Aurora's Song
+            if (!decal.Name.Contains(Search.Text, StringComparison.InvariantCultureIgnoreCase))
+                continue;
+
             var button = new TextureButton()
             {
                 TextureNormal = sprite.Frame0(decal.Sprite),

@@ -256,3 +256,187 @@
   parent: NFBaseFloorTileClothRecipe
   id: FloorTileItemCarpetRed
   result: FloorTileItemCarpetRed
+
+# Somber tiles
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteel
+  result: FloorTileItemSomberSteel
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelBandedDark
+  result: FloorTileItemSomberSteelBandedDark
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelBandedMagenta
+  result: FloorTileItemSomberSteelBandedMagenta
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelBandedPurple
+  result: FloorTileItemSomberSteelBandedPurple
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelCheckerDark
+  result: FloorTileItemSomberSteelCheckerDark
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelCheckerMagenta
+  result: FloorTileItemSomberSteelCheckerMagenta
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelCheckerPurple
+  result: FloorTileItemSomberSteelCheckerPurple
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonal
+  result: FloorTileItemSomberSteelDiagonal
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalDark
+  result: FloorTileItemSomberSteelDiagonalDark
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalMagenta
+  result: FloorTileItemSomberSteelDiagonalMagenta
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalMini
+  result: FloorTileItemSomberSteelDiagonalMini
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalMiniDark
+  result: FloorTileItemSomberSteelDiagonalMiniDark
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalMiniMagenta
+  result: FloorTileItemSomberSteelDiagonalMiniMagenta
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalMiniPurple
+  result: FloorTileItemSomberSteelDiagonalMiniPurple
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelDiagonalPurple
+  result: FloorTileItemSomberSteelDiagonalPurple
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelHerringbone
+  result: FloorTileItemSomberSteelHerringbone
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelMini
+  result: FloorTileItemSomberSteelMini
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelMono
+  result: FloorTileItemSomberSteelMono
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelMonoDark
+  result: FloorTileItemSomberSteelMonoDark
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelMonoEye
+  result: FloorTileItemSomberSteelMonoEye
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelOffset
+  result: FloorTileItemSomberSteelOffset
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelPavement
+  result: FloorTileItemSomberSteelPavement
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberSteelPavementVertical
+  result: FloorTileItemSomberSteelPavementVertical
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberMnemolithRough
+  result: FloorTileItemSomberMnemolithRough
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberMnemolithSmooth
+  result: FloorTileItemSomberMnemolithSmooth
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberWood
+  result: FloorTileItemSomberWood
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberWoodChess
+  result: FloorTileItemSomberWoodChess
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberWoodLarge
+  result: FloorTileItemSomberWoodLarge
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberWoodParquet
+  result: FloorTileItemSomberWoodParquet
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberWoodPattern
+  result: FloorTileItemSomberWoodPattern
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberAmaranth
+  result: FloorTileItemSomberAmaranth
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemSomberAmaranthEye
+  result: FloorTileItemSomberAmaranthEye
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberGlass
+  result: FloorTileItemSomberGlass
+  materials:
+    Glass: 25
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberGlassPlasma
+  result: FloorTileItemSomberGlassPlasma
+  materials:
+    Glass: 25
+    Plasma: 25
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemSomberGlassUranium
+  result: FloorTileItemSomberGlassUranium
+  materials:
+    Glass: 25
+    Uranium: 25

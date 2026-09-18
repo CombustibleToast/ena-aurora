@@ -4,6 +4,9 @@
   name: electrum psi
   description: "A Greek psi, symbolizing the noosphere and the mantis who watches over it."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: WallDecorSomberPsi
   - type: Sprite
     sprite: _DEN/Structures/Specific/Mantis/walldecor.rsi
     state: psi
@@ -29,8 +32,13 @@
   name: electrum eye
   description: "An electrum eye, symbolizing the mind, decorated with magenta tassles."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: WallDecorSomberEye
   - type: Sprite
     state: eye
+  - type: StaticPrice # Aurora's Song
+    price: 505
 
 - type: entity
   parent: WallDecorSomberPsi

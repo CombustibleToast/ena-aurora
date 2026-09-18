@@ -212,7 +212,7 @@
   id: FunToyBox
   abstract: true # Frontier
   icon:
-    sprite: Structures/Storage/Crates/toybox.rsi
+    sprite: _AS/Structures/Storage/Crates/toybox.rsi # Aurora's Song - Storage Resprites Batch 2
     state: crate_icon
   product: CrateFunToyBox
   cost: 900

@@ -4,6 +4,9 @@
   name: somber mannequin
   description: "A gloomy mannequin with only slightly unsettling electrum eyes, made to display clothes."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberMannequin
   - type: Sprite
     sprite: _DEN/Structures/Decoration/mannequin.rsi
     state: sombermannequin

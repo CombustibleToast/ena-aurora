@@ -1,0 +1,238 @@
+- type: construction
+  id: SomberChairCushion
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberChairCushion
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: &mantisFurnitureConditions
+    - !type:TileNotBlocked
+
+- type: construction
+  id: SomberChairLeather
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberChairLeather
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberChairLeatherMantisWheelchair
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberChairLeatherMantisWheelchair
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberChairWood
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberChairWood
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberPsychBed
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberPsychBed
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberTable
+  graph: Table
+  startNode: start
+  targetNode: SomberTable
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberCounter
+  graph: Table
+  startNode: start
+  targetNode: SomberCounter
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberDresser
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberDresser
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: BookshelfSomber
+  graph: MantisFurniture
+  startNode: start
+  targetNode: BookshelfSomber
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberCloset
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberCloset
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberWallCloset
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberWallCloset
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: LockerForensicMantis
+  graph: MantisFurniture
+  startNode: start
+  targetNode: LockerForensicMantis
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberMannequin
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberMannequin
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberNoticeBoard
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberNoticeBoard
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SomberFireplace
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberFireplace
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: SomberHangingBrazier
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberHangingBrazier
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: SomberMirror
+  graph: MantisFurniture
+  startNode: start
+  targetNode: SomberMirror
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: LightSomberEidoliteWellLamp
+  graph: MantisFurniture
+  startNode: start
+  targetNode: LightSomberEidoliteWellLamp
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: LightSomberEidoliteFloorLamp
+  graph: MantisFurniture
+  startNode: start
+  targetNode: LightSomberEidoliteFloorLamp
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions: *mantisFurnitureConditions
+
+- type: construction
+  id: WallDecorSomberPsi
+  graph: MantisFurniture
+  startNode: start
+  targetNode: WallDecorSomberPsi
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+
+- type: construction
+  id: WallDecorSomberEye
+  graph: MantisFurniture
+  startNode: start
+  targetNode: WallDecorSomberEye
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: true
+  conditions:
+    - !type:WallmountCondition
+

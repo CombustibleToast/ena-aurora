@@ -642,3 +642,201 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratkhaki.rsi
 
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDenimSkinnyJeans
+  name: denim skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/denim_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/denim_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlackDenimSkinnyJeans
+  name: black skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_denim_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_denim_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrownSkinnyJeans
+  name: brown skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCamoSkinnyJeans
+  name: camo green skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBloodRedSkinnyJeans
+  name: blood red skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/blood_red_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/blood_red_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGreenSkinnyJeans
+  name: green skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/green_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/green_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitOrangeSkinnyJeans
+  name: orange skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/orange_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/orange_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPinkSkinnyJeans
+  name: pink skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pink_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pink_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPurpleSkinnyJeans
+  name: purple skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/purple_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/purple_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitYellowSkinnyJeans
+  name: yellow skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/yellow_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/yellow_skinny.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPupShorts
+  name: pup shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pup_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pup_shorts.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDarkPupShorts
+  name: dark pup shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/dark_pup_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/dark_pup_shorts.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitKitShorts
+  name: kit shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/kit_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/kit_shorts.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPuppyShorts
+  name: puppy shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/puppy_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/puppy_shorts.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlackBaggyPants
+  name: baggy pants
+  description: A pair of sturdy, loose fitting pants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_baggy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_baggy.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrownBaggyPants
+  name: brown baggy pants
+  description: A pair of sturdy, loose fitting pants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_baggy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_baggy.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCamoBaggyPants
+  name: camo green baggy pants
+  description: A pair of sturdy, loose fitting pants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_baggy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_baggy.rsi
+
+- type: entity 
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBaggyJeans
+  name: baggy jeans
+  description: A pair of sturdy, loose fitting jants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/baggy_jeans.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/baggy_jeans.rsi
+

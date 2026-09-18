@@ -4,6 +4,9 @@
   name: somber electrum mirror
   description: "A glossy electrum mirror with a polished mu-metal backing that prevents psionic scrying. A calm, private moment."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberMirror
   - type: Sprite
     sprite: _DEN/Structures/Wallmounts/mirror.rsi
     state: sombermirror

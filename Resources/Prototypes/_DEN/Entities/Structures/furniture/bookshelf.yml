@@ -4,6 +4,9 @@
   name: somber bookshelf
   description: "A gloomy bookshelf full of gloomy books."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: BookshelfSomber
   - type: Sprite
     sprite: _DEN/Structures/Furniture/somberbookshelf.rsi
   - type: Damageable

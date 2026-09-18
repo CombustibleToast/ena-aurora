@@ -220,6 +220,30 @@
   - ContractorClothingUniformJumpsuitMilitaryBratCargonia # Aurora's Song - Military Brat Outfit
   - ContractorClothingUniformJumpsuitMilitaryBratDenim # Aurora's Song - Military Brat Outfit
   - ContractorClothingUniformJumpsuitMilitaryBratKhaki # Aurora's Song - Military Brat Outfit
+   # Aurora's Song Start - skinny jeans 
+  - ContractorClothingUniformJumpsuitDenimSkinnyJeans 
+  - ContractorClothingUniformJumpsuitBlackDenimSkinnyJeans
+  - ContractorClothingUniformJumpsuitBrownSkinnyJeans
+  - ContractorClothingUniformJumpsuitCamoSkinnyJeans
+  - ContractorClothingUniformJumpsuitBloodRedSkinnyJeans
+  - ContractorClothingUniformJumpsuitGreenSkinnyJeans
+  - ContractorClothingUniformJumpsuitOrangeSkinnyJeans
+  - ContractorClothingUniformJumpsuitPinkSkinnyJeans
+  - ContractorClothingUniformJumpsuitPurpleSkinnyJeans
+  - ContractorClothingUniformJumpsuitYellowSkinnyJeans 
+  # Aurora's Song End - skinny jeans 
+  # Aurora's Song Start - shorts 
+  - ContractorClothingUniformJumpsuitPupShorts 
+  - ContractorClothingUniformJumpsuitDarkPupShorts
+  - ContractorClothingUniformJumpsuitKitShorts
+  - ContractorClothingUniformJumpsuitPuppyShorts
+  # Aurora's Song End - shorts
+  # Aurora's Song Start - baggy pants
+  - ContractorClothingUniformJumpsuitBlackBaggyPants
+  - ContractorClothingUniformJumpsuitBrownBaggyPants
+  - ContractorClothingUniformJumpsuitCamoBaggyPants
+  - ContractorClothingUniformJumpsuitBaggyJeans
+  # Aurora's Song End - baggy pants
   - ContractorClothingUniformJumpskirtBlackElegantDress
   - ContractorClothingUniformJumpskirtRedElegantDress
   - ContractorClothingUniformJumpskirtGreenElegantDress

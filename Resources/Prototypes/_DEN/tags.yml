@@ -52,6 +52,11 @@
   id: MagazineBRDIP15
 
 # Mantis tags start, alphabetized
+# Aurora's Song start
+- type: Tag
+  id: ElectrumScrap
+# Aurora's Song end
+
 - type: Tag
   id: MantisBeltStorable
 

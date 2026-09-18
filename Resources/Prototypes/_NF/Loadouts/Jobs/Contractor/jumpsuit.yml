@@ -397,6 +397,138 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryBratKhaki
 
+# Aurora's Song Start - skinny jeans
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitDenimSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDenimSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitBlackDenimSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBlackDenimSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitBrownSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrownSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitCamoSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCamoSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitBloodRedSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBloodRedSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitGreenSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitGreenSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitOrangeSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitOrangeSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitPinkSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPinkSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitPurpleSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPurpleSkinnyJeans
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitYellowSkinnyJeans
+  groupBy: skinnyjeans
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitYellowSkinnyJeans
+# Aurora's Song End - skinny jeans
+
+# Aurora's Song Start - shorts
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitPupShorts
+  groupBy: shorts
+  price: 200 # same cost as the coyote pants as the names are a direct reference to the coyote-wolf-jackal-hound series
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPupShorts
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitDarkPupShorts
+  groupBy: shorts
+  price: 200 # same cost as the coyote pants as the names are a direct reference to the coyote-wolf-jackal-hound series
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDarkPupShorts
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitKitShorts
+  groupBy: shorts
+  price: 200 # same cost as the coyote pants as the names are a direct reference to the coyote-wolf-jackal-hound series
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitKitShorts
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitPuppyShorts
+  groupBy: shorts
+  price: 200 # same cost as the coyote pants as the names are a direct reference to the coyote-wolf-jackal-hound series
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitPuppyShorts
+# Aurora's Song End - shorts
+
+# Aurora's Song Start - baggy pants
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitBlackBaggyPants
+  groupBy: baggy pants
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBlackBaggyPants
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitBrownBaggyPants
+  groupBy: baggy pants
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBrownBaggyPants
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitCamoBaggyPants
+  groupBy: baggy pants
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCamoBaggyPants
+
+- type: loadout 
+  id: ContractorClothingUniformJumpsuitBaggyJeans
+  groupBy: baggy pants
+  price: 500
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitBaggyJeans
+# Aurora's Song End - baggy pants
+
 #T1
 - type: loadout
   id: ContractorClothingUniformJumpsuitColorDarkBlue

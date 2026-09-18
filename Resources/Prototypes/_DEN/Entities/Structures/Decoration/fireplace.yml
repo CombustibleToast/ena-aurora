@@ -4,6 +4,9 @@
   name: somber electrum fireplace
   description: "An avant-garde fireplace shaped like an eye, its smokeless psionic flame rippling like liquid."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberFireplace
   - type: Sprite
     noRot: true
     sprite: _DEN/Structures/Decoration/somberfireplace.rsi
@@ -85,6 +88,9 @@
   placement:
     mode: WallmountLight
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberHangingBrazier
   - type: Sprite
     drawdepth: SmallObjects
     noRot: true
@@ -114,7 +120,7 @@
     softness: 1.1
     color: "#4dc4ff"
   - type: StaticPrice
-    price: 125
+    price: 500 # Aurora's Song
   - type: AlwaysHot
   - type: Damageable
     damageModifierSet: Metallic

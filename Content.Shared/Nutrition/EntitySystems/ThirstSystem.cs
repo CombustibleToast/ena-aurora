@@ -154,7 +154,8 @@ public sealed partial class ThirstSystem : EntitySystem
         }
 
         // Update UI
-        if (ThirstComponent.ThirstThresholdAlertTypes.TryGetValue(component.CurrentThirstThreshold, out var alertId))
+        // _Funkystation - Suppressed Bodily Cues
+        if (!IsThirstAlertSuppressed(uid, component.CurrentThirstThreshold) && ThirstComponent.ThirstThresholdAlertTypes.TryGetValue(component.CurrentThirstThreshold, out var alertId))
         {
             _alerts.ShowAlert(uid, alertId);
         }

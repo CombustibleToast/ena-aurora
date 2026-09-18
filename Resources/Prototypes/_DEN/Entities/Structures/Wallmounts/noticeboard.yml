@@ -12,6 +12,9 @@
   - type: Storage
     grid:
     - 0,0,1,1
+  - type: Construction # Aurora's Song - Use the craftable Mantis pinboard graph.
+    graph: MantisFurniture
+    node: SomberNoticeBoard
   - type: Damageable
     damageModifierSet: Wood
   - type: Injurable # Aurora's Song - Extract damageContainer to Injurable

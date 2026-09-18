@@ -105,29 +105,29 @@
   bodyPart: Hair
   groupWhitelist: [Vox]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
-    state: hijabsimplevox
+  - sprite: _Impstation/Mobs/Customization/Vox/hair.rsi
+    state: hijabsimple
 
 - type: marking
   id: HijabFashionableVox
   bodyPart: Hair
   groupWhitelist: [Vox]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
-    state: hijabchicvox
+  - sprite: _Impstation/Mobs/Customization/Vox/hair.rsi
+    state: hijabchic
 
 - type: marking
   id: TichelSimpleVox
   bodyPart: Hair
   groupWhitelist: [Vox]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
-    state: tichelsimplevox
+  - sprite: _Impstation/Mobs/Customization/Vox/hair.rsi
+    state: tichelsimple
 
 - type: marking
   id: TichelFashionableVox
   bodyPart: Hair
   groupWhitelist: [Vox]
   sprites:
-  - sprite: _Impstation/Mobs/Customization/headcovers.rsi
-    state: tichelfashionablevox
+  - sprite: _Impstation/Mobs/Customization/Vox/hair.rsi
+    state: tichelfashionable

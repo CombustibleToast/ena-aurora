@@ -16,7 +16,7 @@
   - type: SpaceGarbage # Aurora's Song
 
 - type: entity
-  parent: PartBase
+  parent: [PartBase, BaseQuickConstructionMaterial] # DEN add quick construction parent
   id: PartRodMetal
   name: metal rod
   suffix: Full
@@ -62,6 +62,8 @@
     guides:
     - ExpandingRepairingStation
   - type: ConstructionMaterials # Frontier
+  - type: QuickConstructable # DEN quick construction
+    category: MetalRod
 
 - type: entity
   parent: PartRodMetal

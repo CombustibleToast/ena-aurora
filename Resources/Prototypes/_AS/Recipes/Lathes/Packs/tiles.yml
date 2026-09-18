@@ -58,3 +58,43 @@
   - FloorTileItemWoodHouse
   - FloorTileItemWoodMaple
   - FloorTileItemCarpetRed
+
+# Somber tiles
+- type: latheRecipePack
+  id: ASSomberTilesStatic
+  recipes:
+  - FloorTileItemSomberSteel
+  - FloorTileItemSomberSteelBandedDark
+  - FloorTileItemSomberSteelBandedMagenta
+  - FloorTileItemSomberSteelBandedPurple
+  - FloorTileItemSomberSteelCheckerDark
+  - FloorTileItemSomberSteelCheckerMagenta
+  - FloorTileItemSomberSteelCheckerPurple
+  - FloorTileItemSomberSteelDiagonal
+  - FloorTileItemSomberSteelDiagonalDark
+  - FloorTileItemSomberSteelDiagonalMagenta
+  - FloorTileItemSomberSteelDiagonalMini
+  - FloorTileItemSomberSteelDiagonalMiniDark
+  - FloorTileItemSomberSteelDiagonalMiniMagenta
+  - FloorTileItemSomberSteelDiagonalMiniPurple
+  - FloorTileItemSomberSteelDiagonalPurple
+  - FloorTileItemSomberSteelHerringbone
+  - FloorTileItemSomberSteelMini
+  - FloorTileItemSomberSteelMono
+  - FloorTileItemSomberSteelMonoDark
+  - FloorTileItemSomberSteelMonoEye
+  - FloorTileItemSomberSteelOffset
+  - FloorTileItemSomberSteelPavement
+  - FloorTileItemSomberSteelPavementVertical
+  - FloorTileItemSomberMnemolithRough
+  - FloorTileItemSomberMnemolithSmooth
+  - FloorTileItemSomberWood
+  - FloorTileItemSomberWoodChess
+  - FloorTileItemSomberWoodLarge
+  - FloorTileItemSomberWoodParquet
+  - FloorTileItemSomberWoodPattern
+  - FloorTileItemSomberAmaranth
+  - FloorTileItemSomberAmaranthEye
+  - FloorTileItemSomberGlass
+  - FloorTileItemSomberGlassPlasma
+  - FloorTileItemSomberGlassUranium
