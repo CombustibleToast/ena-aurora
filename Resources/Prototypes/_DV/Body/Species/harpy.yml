@@ -209,7 +209,7 @@
     markingData:
       group: Harpy
 
-# Aurora's Song START - Harpy internals for sensitive lungs
+# DeltaV START - Harpy internals for sensitive lungs
 - type: entity
   parent: OrganHarpy
   id: OrganHarpyInternal
@@ -217,7 +217,7 @@
   components:
   - type: Sprite
     sprite: _DV/Mobs/Species/Harpy/organs.rsi
-# Aurora's Song END
+# DeltaV END
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHarpyExternal ] # Aurora's Song - Add sexed organs

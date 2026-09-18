@@ -291,7 +291,7 @@
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
         factor: -4
-      - !type:Oxygenate # Aurora Song- Harpy air quality sensitivty
+      - !type:Oxygenate # DeltaV - Harpy air quality sensitivty
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Harpy ]
