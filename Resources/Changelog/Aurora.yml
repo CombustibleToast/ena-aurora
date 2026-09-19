@@ -3351,3 +3351,10 @@ Entries:
   id: 9798
   time: '2026-09-17T21:24:11.2440138+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1546
+- author: TillsterRulz
+  changes:
+  - message: The NC Loader's price has been increased from 20600 to 21000
+    type: Tweak
+  id: 9799
+  time: '2026-09-19T07:41:47.8761527+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1548
