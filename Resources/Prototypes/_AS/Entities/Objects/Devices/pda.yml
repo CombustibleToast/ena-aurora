@@ -71,11 +71,6 @@
   components:
   - type: Pda
     id: ASMedicIDCard
-    penSlot:
-      priority: -1
-      whitelist:
-        tags:
-        - Write
   - type: PdaBorderColor
     borderColor: "#d7d7d0"
     accentVColor: "#2a4b5b"
@@ -109,11 +104,6 @@
   components:
   - type: Pda
     id: ASServiceWorkerIDCard
-    penSlot:
-      priority: -1
-      whitelist:
-        tags:
-        - Write
   - type: PdaBorderColor
     borderColor: "#d7d7d0"
     accentVColor: "#2a4b5b"
