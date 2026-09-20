@@ -1,0 +1,72 @@
+# Funfact: sourcePorts don't support prototype inheritance
+- type: sourcePort
+  id: Console1
+  name: signal-port-name-console-1
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console2
+  name: signal-port-name-console-2
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console3
+  name: signal-port-name-console-3
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console4
+  name: signal-port-name-console-4
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console5
+  name: signal-port-name-console-5
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console6
+  name: signal-port-name-console-6
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console7
+  name: signal-port-name-console-7
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console8
+  name: signal-port-name-console-8
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console9
+  name: signal-port-name-console-9
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console10
+  name: signal-port-name-console-10
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console11
+  name: signal-port-name-console-11
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
+
+- type: sourcePort
+  id: Console12
+  name: signal-port-name-console-12
+  description: signal-port-description-console
+  defaultLinks: [Toggle, Trigger, Timer, On, Off, Open, Close, DoorBolt, Forward, Reverse]
