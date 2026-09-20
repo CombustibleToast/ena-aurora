@@ -4,5 +4,6 @@
   description: trait-suppressed-bodily-cues-desc
   category: Disabilities
   cost: 0
+  speciesBlacklist: [IPC] # Aurora's Song - Non-functional on IPC due to not having hunger/thirst
   components:
   - type: SuppressedBodilyCues
