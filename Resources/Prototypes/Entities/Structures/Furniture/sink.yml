@@ -64,7 +64,6 @@
     sound:
       path: /Audio/Ambience/Objects/drain.ogg
 
-
 - type: entity
   parent: SinkEmpty
   id: Sink
@@ -75,6 +74,11 @@
       reagents:
       - ReagentId: Water
         Quantity: 480
+  # Aurora's Song Start - Craftable Sinks
+  - type: Construction
+    graph: ASSink
+    node: Sink
+  # Aurora's Song End
 
 - type: entity
   parent: Sink
@@ -92,6 +96,11 @@
       maxFillLevels: 1
       fillBaseName: sink_wide-fill-
       solutionName: drainBuffer
+  # Aurora's Song Start - Craftable Sinks
+    - type: Construction
+      graph: ASSinkWide
+      node: SinkWide
+  # Aurora's Song End
 
 #Stemless Sink
 
@@ -119,3 +128,8 @@
       reagents:
       - ReagentId: Water
         Quantity: 480
+  # Aurora's Song Start - Craftable Sinks
+  - type: Construction
+    graph: ASSinkStemless
+    node: SinkStemless
+  # Aurora's Song End

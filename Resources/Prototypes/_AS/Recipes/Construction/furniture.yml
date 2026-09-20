@@ -361,3 +361,43 @@
   canRotate: true
   conditions:
     - !type:TileNotBlocked
+
+# Sinks
+- type: construction
+  id: ASSink
+  graph: ASSink
+  startNode: start
+  targetNode: Sink
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: true
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: ASSinkStemless
+  graph: ASSinkStemless
+  startNode: start
+  targetNode: SinkStemless
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: true
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: ASSinkWide
+  graph: ASSinkWide
+  startNode: start
+  targetNode: SinkWide
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  canRotate: true
+  conditions:
+  - !type:TileNotBlocked
