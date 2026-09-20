@@ -5,3 +5,4 @@ guide-entry-aurora-erp = ERP Rules
 guide-entry-shipyard-dinghy = Dinghy
 guide-entry-shipyard-dove = Dove
 guide-entry-shipyard-scavenger = Scavenger
+guide-entry-shipyard-strike = Strike
