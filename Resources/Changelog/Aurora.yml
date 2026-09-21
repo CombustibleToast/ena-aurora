@@ -3358,3 +3358,59 @@ Entries:
   id: 9799
   time: '2026-09-19T07:41:47.8761527+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1548
+- author: TillsterRulz
+  changes:
+  - message: Added the TZ Strike, a refitted fighter jet now made for space and expeditions for 100k spesos!
+    type: Add
+  id: 9800
+  time: '2026-09-21T07:41:44.9225458+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1527
+- author: Sere
+  changes:
+  - message: Construction/deconstruction for Sinks.
+    type: Add
+  id: 9801
+  time: '2026-09-21T07:41:44.9228032+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1543
+- author: TrixxedHeart
+  changes:
+  - message: Added the Signal Control Computer, this can be used to link linkable entities to up to 12 distinct channels with customizable labels.
+    type: Add
+  id: 9802
+  time: '2026-09-21T07:41:44.9232301+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1484
+- author: Phoebe51505
+  changes:
+  - message: Fixed extraneous appraisal checks on UIV and Vgroid grids causing lag.
+    type: Fix
+  id: 9803
+  time: '2026-09-21T07:41:44.9232963+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1555
+- author: Sere
+  changes:
+  - message: IPCs can toggle their belt layer now too.
+    type: Fix
+  id: 9804
+  time: '2026-09-21T07:41:44.9233148+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1553
+- author: Sere
+  changes:
+  - message: IPCs can no longer supress non-existent bodily cues.
+    type: Fix
+  id: 9805
+  time: '2026-09-21T07:41:44.9233214+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1554
+- author: GreyScaleHarlequin
+  changes:
+  - message: NT UIV bridge has been reinforced, looks like they're sick of getting canopy cracked.
+    type: Tweak
+  id: 9806
+  time: '2026-09-21T07:41:44.9233538+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1521
+- author: SalamanderSkies
+  changes:
+  - message: Medic and service worker PDAs now come with pens.
+    type: Fix
+  id: 9807
+  time: '2026-09-21T07:41:44.9233658+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1545
