@@ -41,3 +41,8 @@
       types:
         Blunt: 8
     bonkTime: 3
+    # Aurora's Song Start - Make Constructable
+  - type: Construction
+    graph: Table
+    node: TableReinforcedWood
+    # Aurora's Song End

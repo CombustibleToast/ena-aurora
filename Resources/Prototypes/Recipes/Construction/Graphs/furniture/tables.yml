@@ -31,7 +31,6 @@
               amount: 1
               doAfter: 1
 
-
     - node: TableFrame
       entity: TableFrame
       edges:
@@ -100,6 +99,17 @@
             - material: ChitinPlate
               amount: 1
               doAfter: 1
+
+        - to: TableReinforcedWood
+          steps:
+          - material: MetalRod
+            amount: 2
+            doAfter: 1
+          - material: WoodPlank
+            amount: 2
+            doAfter: 1
+          - tool: Screwing
+            doAfter: 3
         # Aurora's Song End
 
     - node: CounterWoodFrame
@@ -135,7 +145,6 @@
             - material: Steel
               amount: 1
               doAfter: 1
-
 
     - node: Table
       entity: Table
@@ -467,7 +476,7 @@
             - tool: Prying
               doAfter: 1
 
-    # Aurora's Song start
+    # Aurora's Song Start
     - node: SomberTable
       entity: SomberTable
       edges:
@@ -491,7 +500,24 @@
           steps:
             - tool: Prying
               doAfter: 1
-    # Aurora's Song end
+
+    - node: TableReinforcedWood
+      entity: TableWoodReinforced
+      edges:
+      - to: TableFrame
+        completed:
+        - !type:SpawnPrototype
+          prototype: MaterialWoodPlank1
+          amount: 2
+        - !type:SpawnPrototype
+          prototype: PartRodMetal
+          amount: 2
+        steps:
+        - tool: Screwing
+          doAfter: 3
+        - tool: Prying
+          doAfter: 1
+    # Aurora's Song End
 
     - node: TableXeno
       entity: TableXeno

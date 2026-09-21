@@ -401,3 +401,16 @@
   canRotate: true
   conditions:
   - !type:TileNotBlocked
+
+# Reinforced Wooden Table
+- type: construction
+  id: TableReinforcedWood
+  graph: Table
+  startNode: start
+  targetNode: TableReinforcedWood
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
