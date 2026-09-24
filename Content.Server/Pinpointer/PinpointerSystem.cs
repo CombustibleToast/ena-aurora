@@ -100,8 +100,8 @@ public sealed partial class PinpointerSystem : SharedPinpointerSystem
         var query = EntityQueryEnumerator<PinpointerComponent>();
         while (query.MoveNext(out var uid, out var pinpointer))
         {
-            // aurora's song
-            if (!pinpointer.HasTarget || pinpointer.Target == null || !Exists(pinpointer.Target.Value))
+            // Aurora's Song: Don't check for something before we have the chance to even set it.
+            if (pinpointer.Target == null || !Exists(pinpointer.Target.Value))
                 continue;
 
             UpdateDirectionToTarget((uid, pinpointer));
