@@ -3414,3 +3414,31 @@ Entries:
   id: 9807
   time: '2026-09-21T07:41:44.9233658+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1545
+- author: Phoebe51505
+  changes:
+  - message: Pinpointing Llc. has properly radiation hardened their Pinpointing universal Pinpointer, allowing them to once more function.
+    type: Fix
+  id: 9808
+  time: '2026-09-24T07:42:18.4827400+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1568
+- author: Sere
+  changes:
+  - message: Mantis belts and BSO webbing fit inside backpacks like the other belts.
+    type: Fix
+  id: 9809
+  time: '2026-09-24T07:42:18.4829982+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1560
+- author: Sere
+  changes:
+  - message: Construction for reinforced wood tables.
+    type: Add
+  id: 9810
+  time: '2026-09-24T07:42:18.4830420+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1562
+- author: TrixxedHeart
+  changes:
+  - message: The bloodied visuals that appear when taking brute damage now respect blood swap traits.
+    type: Fix
+  id: 9811
+  time: '2026-09-24T07:42:18.4834512+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1564
