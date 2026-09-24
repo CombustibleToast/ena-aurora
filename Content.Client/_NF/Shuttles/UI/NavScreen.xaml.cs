@@ -13,8 +13,8 @@ namespace Content.Client.Shuttles.UI
     public sealed partial class NavScreen
     {
         // Aurora's Song - Added a regex for shuttle designations
-        // follows the pattern of capital letters, followed by dash, followed by digits.
-        private static readonly Regex ShuttleDesignationRegex = new(@"^[A-Z]+\-[0-9]+$");
+        // follows the pattern of capital letters, followed by dash, followed by alphanum.
+        private static readonly Regex ShuttleDesignationRegex = new(@"^[A-Z]+\-[A-Z0-9]+$");
 
         private readonly ButtonGroup _buttonGroup = new();
         public event Action<NetEntity?, InertiaDampeningMode>? OnInertiaDampeningModeChanged;

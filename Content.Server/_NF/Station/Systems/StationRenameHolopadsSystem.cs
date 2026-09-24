@@ -22,7 +22,7 @@ public sealed partial class StationRenameHolopadsSystem : EntitySystem
         SyncHolopadsNames(uid);
     }
 
-    private void SyncHolopadsNames(EntityUid stationUid)
+    public void SyncHolopadsNames(EntityUid stationUid) // Aurora's Song - Public method to allow post init renames
     {
         // update all holopads that belong to this station grid
         var query = EntityQueryEnumerator<HolopadComponent>();

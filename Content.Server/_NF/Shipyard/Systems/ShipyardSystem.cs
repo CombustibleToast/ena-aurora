@@ -371,6 +371,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             _station.RenameStation(shuttleStation, fullName, loud: false);
             _metaData.SetEntityName(shuttle.Value, fullName);
             _metaData.SetEntityName(shuttleStation, fullName);
+            _holopad.SyncHolopadsNames(shuttleStation); // Aurora's Song - update holopads to match
         }
         else
         {
