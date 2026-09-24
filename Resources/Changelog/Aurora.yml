@@ -3442,3 +3442,16 @@ Entries:
   id: 9811
   time: '2026-09-24T07:42:18.4834512+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1564
+- author: SolStar
+  changes:
+  - message: Fixed bug where designations did not show properly.
+    type: Fix
+  - message: Fixed bug where holopads did not include the full license number
+    type: Fix
+  - message: Fixed bug where holopads did not update to use custom ship names
+    type: Fix
+  - message: Changed license plates to follow a prefix - 2letter 3number format
+    type: Tweak
+  id: 9812
+  time: '2026-09-24T08:38:54.9499621+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1565
