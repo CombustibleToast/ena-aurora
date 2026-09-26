@@ -143,3 +143,24 @@
     - type: BloodSwap
       bloodReagent: BloodAllulalo
 
+- type: trait
+  id: RightArmRemoval
+  name: trait-right-arm-removal-name
+  description: trait-right-arm-removal-desc
+  category: ArmRemovalTraits
+  components:
+  - type: OrganRemoval
+    organs:
+    - ArmRight
+    - HandRight
+
+- type: trait
+  id: LeftArmRemoval
+  name: trait-right-arm-removal-name
+  description: trait-right-arm-removal-desc
+  category: ArmRemovalTraits
+  components:
+  - type: OrganRemoval
+    organs:
+    - ArmLeft
+    - HandLeft
