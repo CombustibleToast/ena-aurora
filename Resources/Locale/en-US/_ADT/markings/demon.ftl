@@ -42,8 +42,8 @@ marking-DemonHornsDevil3-horns_devil3 = Thin Horns
 marking-DemonHornsDevil4 = Spiraling Horns
 marking-DemonHornsDevil4-horns_devil4 = Spiraling Horns
 marking-DemonHornsRam = Ram Horns
-marking-DemonHornsRam_horns_ram = Ram Horns
+marking-DemonHornsRam-horns_ram = Ram Horns
 marking-DemonHornsUnicorn = Unicorn Horns
-marking-DemonHornsUnicorn_horns_unicorn = Unicorn Horns
+marking-DemonHornsUnicorn-horns_unicorn = Unicorn Horns
 marking-DemonHornsFat_Horn = Thick Horns
 
