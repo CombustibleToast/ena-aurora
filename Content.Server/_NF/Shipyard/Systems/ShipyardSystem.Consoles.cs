@@ -48,6 +48,7 @@ using Robust.Server.Player;
 using Robust.Shared.Timing;
 using Content.Server._NF.GC.Components;
 using Content.Server._Mono.Shipyard;
+using Content.Server._NF.Station.Systems; // AS
 using Content.Shared._AS.Traits;
 using Content.Shared.Maps; // AS
 using Robust.Shared.Random; // AS
@@ -61,6 +62,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private IPlayerManager _player = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
     [Dependency] private IServerPreferencesManager _prefManager = default!;
+    [Dependency] private IRobustRandom _random = default!; // Aurora's Song
     [Dependency] private AccessSystem _accessSystem = default!;
     [Dependency] private AccessReaderSystem _access = default!;
     [Dependency] private PopupSystem _popup = default!;
@@ -76,6 +78,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
     [Dependency] private IEntityManager _entityManager = default!;
     [Dependency] private ShipyardDirectionSystem _directionSystem = default!; // Aurora Song port of Monolith direction system
     [Dependency] private GameTicker _gameTicker = default!; // Aurora's Song - Owner crew registration time.
+    [Dependency] private StationRenameHolopadsSystem _holopad = default!; // Aurora's Song - Rename holopads to match ship
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -207,10 +210,12 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             };
             shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
             // Aurora's Song - moved suffix generation
-            var random = IoCManager.Resolve<IRobustRandom>();
-            var licensePlate = idCard?.ProfileId is { } profileId ? LicensePlateSystem.GetLicensePlate(profileId) : $"{random.Next(0, 100):D2}";
+            var licensePlate = idCard?.ProfileId is { } profileId ? LicensePlateSystem.GetLicensePlate(profileId) : $"{_random.Next(0, 100):D2}";
             name = $"{Name(shuttleStation.Value)}-{licensePlate}";
             _station.RenameStation(shuttleStation.Value, name, false);
+            _metaData.SetEntityName(shuttleUid, name);
+            _metaData.SetEntityName(shuttleStation.Value, name);
+            _holopad.SyncHolopadsNames(shuttleStation.Value);
             // End aurora's Song - moved suffix generation
 
             var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
@@ -370,7 +375,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // This may cause problems but ONLY when renaming a ship. It will still display properly regardless of this.
         var nameParts = name.Split(' ');
 
-        var hasSuffix = nameParts.Length > 1 && nameParts.Last().Length < ShuttleDeedComponent.MaxSuffixLength && nameParts.Last().Contains('-');
+        var hasSuffix = nameParts.Length > 1 && nameParts.Last().Length <= ShuttleDeedComponent.MaxSuffixLength && nameParts.Last().Contains('-'); // Aurora's Song changed < to <=
         deed.ShuttleNameSuffix = hasSuffix ? nameParts.Last() : null;
         deed.ShuttleName = String.Join(" ", nameParts.SkipLast(hasSuffix ? 1 : 0));
     }

@@ -3,8 +3,7 @@ namespace Content.Server.Maps;
 public sealed partial class LicensePlateSystem
 {
     // These are the parameters that generates the license plate numbers. Changing these will cause all license plates to change.
-    private const string Alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ456789"; // 0,1 excluded for similarity to O and L/I, 2,3 excluded to drop to base 32 which is nicer to work with.
-    private const int Length = 4;
+    private const string Alphabet = "ABCDEFGHJKLMNPQRSTUVWXYZ"; // Exclude I and O to avoid confusion with 0 and 1
     private const uint Seed = 0x8008;
 
     public static string GetLicensePlate(int id)
@@ -19,7 +18,7 @@ public sealed partial class LicensePlateSystem
     /// </summary>
     private static uint Feistel(uint x)
     {
-        const int bits = Length * 5; // base 32 == 5 bits per char
+        const int bits = 19; // 2 alpha + 3 decimal = 24^2 * 10^3 = 576000. Use the highest power of 2 that does not exceed expressible set.
         // splits the bits into two halves (called l and r)
         const int wideHalf = (bits + 1) / 2;
         const int narrowHalf = bits / 2;
@@ -43,17 +42,18 @@ public sealed partial class LicensePlateSystem
     }
 
     /// <summary>
-    /// Cuts a number up into 5 bit slices (base 32) and transforms them into the base 32 character view.
+    /// Projects the number into AADDD form.
     /// </summary>
-    private static string Encode(uint v)
+    private static string Encode(uint input)
     {
-        Span<char> buf = stackalloc char[Length];
-        for (var i = 0; i < Length; i++)
-        {
-            buf[Length - 1 - i] = Alphabet[(int)((v >> (5 * i)) & 31)];
-        }
+        if (input >= 24*24*10*10*10)
+            return "NULL";
+        var decimalPart = (input % 1000).ToString("D3");
+        input /= 1000;
 
-        return new string(buf);
+        var alphaPart = $"{Alphabet[(int)input / 24]}{Alphabet[(int)input % 24]}";
+
+        return alphaPart+decimalPart;
     }
 
     /// <summary>

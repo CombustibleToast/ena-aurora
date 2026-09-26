@@ -4,3 +4,10 @@
   parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: ASBluespaceReagentGrinderIndustrialMachineCircuitboard
   result: ASBluespaceReagentGrinderIndustrialMachineCircuitboard
+
+#region Computers
+
+- type: latheRecipe
+  parent: [BaseGoldCircuitboardRecipe, BaseResearchComputerRecipeCategory]
+  id: SignalControlComputerCircuitboard
+  result: SignalControlComputerCircuitboard

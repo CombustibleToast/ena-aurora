@@ -1,0 +1,54 @@
+- type: entity
+  parent: BaseComputer
+  id: ComputerSignalConsole
+  name: signal control computer
+  description: A configurable computer for controlling linked signals with pulses and toggles.
+  components:
+  - type: Construction
+    graph: Computer
+    node: computer
+    containers:
+    - board
+  - type: Computer
+    board: SignalControlComputerCircuitboard
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"] # TODO: make a custom sprite for this
+      state: comm
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+    - map: ["enum.WiresVisualLayers.MaintenancePanel"]
+      state: generic_panel_open
+  - type: SignalConsole
+  - type: ActivatableUI
+    key: enum.SignalConsoleUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.SignalConsoleUiKey.Key:
+        type: SignalConsoleBoundUserInterface
+      enum.WiresUiKey.Key:
+        type: WiresBoundUserInterface
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSource
+    range: 200
+    ports:
+    - Console1
+    - Console2
+    - Console3
+    - Console4
+    - Console5
+    - Console6
+    - Console7
+    - Console8
+    - Console9
+    - Console10
+    - Console11
+    - Console12

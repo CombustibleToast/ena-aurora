@@ -17,6 +17,12 @@
   description: "A structured, layered sash designed to carry mantis equipment. All the company would pay for prior to the mantis equipment refresh, but it does have sheaths for certain weapons." # TheDen
   abstract: true # made abstract so it can be referenced without worrying about the missing sprites - Aurora Song
   components:
+  # Aurora's Song Start - Sizing Parity Tweak
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,3
+    # Aurora's Song End
   - type: Storage # Aurora: Change storage to match other aurora belts
     maxItemSize: Normal
     defaultStorageOrientation: Vertical
