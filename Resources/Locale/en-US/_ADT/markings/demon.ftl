@@ -51,7 +51,9 @@ marking-DemonHornsDevil4 = Spiraling Horns
 marking-DemonHornsDevil4-horns_devil4 = Spiraling Horns
 marking-DemonHornsRam = Ram Horns
 marking-DemonHornsRam-horns_ram = Ram Horns
-marking-DemonHornsUnicorn = Unicorn Horns
-marking-DemonHornsUnicorn-horns_unicorn = Unicorn Horns
+# Aurora's Song - "Unicorn Horns">"Unicorn Horn"
+marking-DemonHornsUnicorn = Unicorn Horn
+# Aurora's Song - "Unicorn Horns">"Unicorn Horn"
+marking-DemonHornsUnicorn-horns_unicorn = Unicorn Horn
 marking-DemonHornsFat_Horn = Thick Horns
 
