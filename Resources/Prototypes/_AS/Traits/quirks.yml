@@ -148,6 +148,8 @@
   name: trait-right-arm-removal-name
   description: trait-right-arm-removal-desc
   category: ArmRemovalTraits
+  speciesBlacklist: [Decapoid, Allulalo, Harpy]
+  cost: 1
   components:
   - type: OrganRemoval
     organs:
@@ -156,9 +158,11 @@
 
 - type: trait
   id: LeftArmRemoval
-  name: trait-right-arm-removal-name
-  description: trait-right-arm-removal-desc
+  name: trait-left-arm-removal-name
+  description: trait-left-arm-removal-desc
   category: ArmRemovalTraits
+  speciesBlacklist: [Decapoid, Allulalo, Harpy]
+  cost: 1
   components:
   - type: OrganRemoval
     organs:
