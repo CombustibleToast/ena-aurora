@@ -33,13 +33,21 @@ marking-DemonHornsBuffalo = Buffalo Horns
 marking-DemonHornsBuffalo-horns_buffalo = Buffalo Horns
 marking-DemonHornsCarpicorn = Capricorn Horns
 marking-DemonHornsCarpicorn-horns_capricorn = Capricorn Horns
+# Aurora's Song - "Devil Horns">"Horns"
 marking-DemonHornsDevil = Horns
+# Aurora's Song - "Devil Horns">"Horns"
 marking-DemonHornsDevil-horns_devil = Horns
+# Aurora's Song - "Devil Horns 2">"Wide Horns"
 marking-DemonHornsDevil2 = Wide Horns
+# Aurora's Song - "Devil Horns 2">"Wide Horns"
 marking-DemonHornsDevil2-horns_devil2 = Wide Horns
+# Aurora's Song - "Devil Horns 3">"Thin Horns"
 marking-DemonHornsDevil3 = Thin Horns
+# Aurora's Song - "Devil Horns 3">"Thin Horns"
 marking-DemonHornsDevil3-horns_devil3 = Thin Horns
+# Aurora's Song - "Devil Horns 4">"Spiraling Horns"
 marking-DemonHornsDevil4 = Spiraling Horns
+# Aurora's Song - "Devil Horns 4">"Spiraling Horns"
 marking-DemonHornsDevil4-horns_devil4 = Spiraling Horns
 marking-DemonHornsRam = Ram Horns
 marking-DemonHornsRam-horns_ram = Ram Horns
