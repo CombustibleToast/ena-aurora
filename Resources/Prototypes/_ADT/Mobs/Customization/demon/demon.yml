@@ -57,7 +57,7 @@
   id: DemonCowEars
   bodyPart: HeadSide
   # markingCategory: HeadSide # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: cow_ears
@@ -66,7 +66,7 @@
   id: DemonEars
   bodyPart: HeadSide
   # markingCategory: HeadSide # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: demon_ears
@@ -75,7 +75,7 @@
   id: DemonElfEars
   bodyPart: HeadSide
   # markingCategory: HeadSide # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: ears_elf
@@ -84,7 +84,7 @@
   id: DemonCowHorns
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: cow_horns
@@ -93,7 +93,7 @@
   id: DemonHornsDeer
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: deer_antlers_horns
@@ -102,7 +102,7 @@
   id: DemonHornsSmall
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: small_horns
@@ -111,7 +111,7 @@
   id: DemonHornsBuffalo
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_buffalo
@@ -120,7 +120,7 @@
   id: DemonHornsCarpicorn
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_capricorn
@@ -129,7 +129,7 @@
   id: DemonHornsDevil
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_devil
@@ -138,7 +138,7 @@
   id: DemonHornsDevil2
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_devil2
@@ -147,7 +147,7 @@
   id: DemonHornsDevil3
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_devil3
@@ -156,7 +156,7 @@
   id: DemonHornsDevil4
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_devil4
@@ -165,7 +165,7 @@
   id: DemonHornsRam
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_ram
@@ -174,7 +174,7 @@
   id: DemonHornsUnicorn
   bodyPart: HeadTop
   # markingCategory: HeadTop # Aurora's Song
-  groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Harpy, Feroxi] # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Harpy, Feroxi, Tajaran, Sheleg] # Aurora's Song
   sprites:
   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
     state: horns_unicorn
