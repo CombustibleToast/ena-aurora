@@ -1108,8 +1108,9 @@
   loadouts:
   - ContractorEncryptionKeyTraffic
   - ContractorEncryptionKeyShipboard # Aurora's Song - Shipboard encryption key added
+  - ContractorEncryptionKeyBluespace # Aurora's Song
   - ContractorEncryptionKeyMedical
-  - ContractorEncryptionKeyCargo
+  #- ContractorEncryptionKeyCargo - Aurora's Song - Made obsolete.
   - ContractorEncryptionKeyEngineering
   - ContractorEncryptionKeyScience
   fallbacks:

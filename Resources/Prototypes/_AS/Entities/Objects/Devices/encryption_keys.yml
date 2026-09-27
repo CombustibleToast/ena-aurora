@@ -92,3 +92,22 @@
     layers:
     - state: crypt_silver
     - state: nano_label
+
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyBluespace
+  name: bluespace monitoring system encryption key
+  description: An encryption key for the automated bluespace monitoring channel. Notifies when derelicts and other bluespace objects appear.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Bluespace
+    readOnlyChannels:
+    - Bluespace
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_blue
+    - state: ship_label

@@ -6,11 +6,11 @@
   components:
   - type: StationEvent
     startRadioAnnouncement: station-event-bluespace-scrap-start-announcement
-    startRadioAnnouncementChannel: Engineering
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song - Engineering > Bluespace
     warningRadioAnnouncement: station-event-bluespace-scrap-warning-announcement
-    warningRadioAnnouncementChannel: Engineering
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song - Engineering > Bluespace
     endRadioAnnouncement: station-event-bluespace-scrap-end-announcement
-    endRadioAnnouncementChannel: Engineering
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song - Engineering > Bluespace
     weight: 5
     duration: 1800 # 30 minutes
     maxDuration: 1800 # 30 minutes
@@ -48,4 +48,6 @@
         - /Maps/_NF/Shuttles/Scrap/scrap-sprinter.yml
   - type: ActiveRadio
     channels:
-    - Engineering
+    - Bluespace # Aurora's Song - Engineering > Bluespace
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic

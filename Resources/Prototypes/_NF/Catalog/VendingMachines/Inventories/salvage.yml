@@ -14,6 +14,7 @@
     BoxDispenserFlare: 5
     FlashlightLantern: 15
     RadioHandheldNF: 5
+    EncryptionKeyBluespace: 5 # Aurora's Song
 
 - type: vendingMachineInventory
   id: NFSalvageEquipmentPOIInventory
@@ -31,3 +32,4 @@
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite
+    EncryptionKeyBluespace: 4294967295 # Infinite

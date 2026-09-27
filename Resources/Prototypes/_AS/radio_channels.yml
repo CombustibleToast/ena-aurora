@@ -20,3 +20,11 @@
   keycode: 'a'
   frequency: 3228
   color: "#fc9a9a"
+
+- type: radioChannel
+  id: Bluespace
+  name: chat-radio-bluespace
+  keycode: 'p'
+  frequency: 5768
+  color: "#3870E0"
+  longRange: true

@@ -6,16 +6,16 @@
 - type: entity
   id: ASBluespaceTriageEvent
   parent: BaseStationEventShortDelay
-  name: Aurora Song Bluespace Monitoring
+  name: Aurora Bluespace Monitoring
   categories: [ HideSpawnMenu ]
   components:
   - type: StationEvent
     startRadioAnnouncement: as-event-bluespace-grid-start-announcement
-    startRadioAnnouncementChannel: Medical
+    startRadioAnnouncementChannel: Bluespace
     warningRadioAnnouncement: as-event-bluespace-grid-warning-announcement
-    warningRadioAnnouncementChannel: Medical
+    warningRadioAnnouncementChannel: Bluespace
     endRadioAnnouncement: as-event-bluespace-grid-end-announcement
-    endRadioAnnouncementChannel: Medical
+    endRadioAnnouncementChannel: Bluespace
     earliestStart: 30  # 30 minutes after shift start minimum before event can trigger
     weight: 5
     duration: 1500 # 25 minutes
@@ -54,4 +54,6 @@
         - /Maps/_AS/Shuttles/Triage/apothecary_xeno.yml
   - type: ActiveRadio
     channels:
-    - Medical
+    - Bluespace
+  - type: Speech
+    speechVerb: Robotic

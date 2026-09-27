@@ -134,14 +134,18 @@
 
 - type: entity
   id: BluespaceSyndicateFTLInterception
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song
     earliestStart: 80
     minimumPlayers: 2 #Revert to 15 when tests are done, Aurora
     weight: 1
@@ -171,17 +175,26 @@
         - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/syndieftlintercept.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic
 
 - type: entity
   id: BluespaceWizardFederationScout
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song
     earliestStart: 100
     minimumPlayers: 2 #Revert to 15 when tests are done, Aurora
     weight: 1
@@ -211,17 +224,26 @@
         - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/wizardtower.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic
 
 - type: entity
   id: BluespaceBloodMoon
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song
     earliestStart: 80
     minimumPlayers: 2 #Revert to 15 when tests are done, Aurora
     weight: 1
@@ -251,17 +273,26 @@
         - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/bloodmoon.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic
 
 - type: entity
   id: BluespaceCave
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song
     earliestStart: 20
     weight: 1
     duration: 1800
@@ -287,17 +318,26 @@
         - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/cave.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic
 
 - type: entity
   id: NFBluespaceBrokenMcDelivery
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-mcargo-ftl-start-announcement #Aurora event text
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-mcargo-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-mcargo-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-mccargo-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
+    warningRadioAnnouncement: station-event-bluespace-mccargo-ftl-warning-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song
+    endRadioAnnouncement: station-event-bluespace-mccargo-ftl-end-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song
     earliestStart: 20
     maximumPlayers: 20
     weight: 5
@@ -322,17 +362,26 @@
         - type: DeletionCensusExempt
         paths:
         - /Maps/_NF/Bluespace/mcevent.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic
 
 - type: entity #aurora
   id: BluespaceMercenaryFTLCrash
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    warningRadioAnnouncementChannel: Bluespace # Aurora's Song
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    endRadioAnnouncementChannel: Bluespace # Aurora's Song
     earliestStart: 80
     minimumPlayers: 2
     weight: 1
@@ -361,20 +410,27 @@
         - type: ForceAnchor
         paths:
         - /Maps/_AS/Bluespace/mercuiv.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic
 
 - type: entity # Aurora
   id: BluespaceShipmindFTLCrash
+  name: Aurora Bluespace Monitoring # Aurora's Song
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-shipmind-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
+    startRadioAnnouncement: station-event-bluespace-shipmind-ftl-start-announcement # Aurora's Song - startAnnouncement > startRadioAnnouncement
+    startRadioAnnouncementChannel: Bluespace # Aurora's Song
+    #startAudio:
+    #  path: /Audio/Misc/notice1.ogg
     earliestStart: 5
-    minimumPlayers: 2 
+    minimumPlayers: 2
     weight: 1
     duration: 1
-    reoccurrenceDelay: 720 # 12 hours, once per shift 
+    reoccurrenceDelay: 720 # 12 hours, once per shift
     maxOccurrences: 1
   - type: BluespaceErrorRule
     deleteGridsOnEnd: false
@@ -384,10 +440,15 @@
         nameLoc:
         - station-event-bluespace-name-shipmind
         minCount: 1
-        maxCount: 1 
+        maxCount: 1
         minimumDistance: 3500
         maximumDistance: 6000
         addComponents:
         - type: DeletionCensusExempt
         paths:
         - /Maps/_AS/Event/respite.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace # Aurora's Song
+  - type: Speech # Aurora's Song
+    speechVerb: Robotic

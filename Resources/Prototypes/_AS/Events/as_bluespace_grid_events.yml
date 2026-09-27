@@ -1,13 +1,15 @@
 ﻿- type: entity
   id: ASBluespaceNanoTrasenCrash
+  name: Aurora Bluespace Monitoring
   parent: BaseStationEventShortDelay
   components:
   - type: StationEvent
-    startAnnouncement: station-event-bluespace-generic-ftl-start-announcement
-    startAudio:
-      path: /Audio/Misc/notice1.ogg
-    warningAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
-    endAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startRadioAnnouncementChannel: Bluespace
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
+    warningRadioAnnouncementChannel: Bluespace
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    endRadioAnnouncementChannel: Bluespace
     earliestStart: 80
     minimumPlayers: 15
     weight: 1
@@ -37,3 +39,8 @@
         - type: ForceAnchor
         paths:
         - /Maps/_AS/Bluespace/NTMaul.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace
+  - type: Speech
+    speechVerb: Robotic

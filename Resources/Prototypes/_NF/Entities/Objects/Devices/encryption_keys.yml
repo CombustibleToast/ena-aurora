@@ -22,7 +22,7 @@
   id: EncryptionKeyNfsd
   name: SLE encryption key # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   categories: [ DoNotMap ]
-  description: An encryption key for the New Frontier Sheriff's Department channel.
+  description: An encryption key for the Sector Law Enforcement channel. # Aurora Song - NFSD > SLE
   components:
   - type: EncryptionKey
     channels: # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)

@@ -58,7 +58,7 @@
   id: EncryptionKeyCentCom
   name: central command encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by captain's bosses.
+  description: An encryption key used by NanoTrasen Central Command. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -101,7 +101,7 @@
   id: EncryptionKeyCommand
   name: command encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by crew's bosses.
+  description: An encryption key used by sector command. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -120,7 +120,7 @@
   id: EncryptionKeyEngineering
   name: engineering encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by the engineers.
+  description: An encryption key used by Damascus employees. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -138,7 +138,7 @@
   parent: [EncryptionKey, RecyclableItemDeviceTiny] # Frontier: added RecyclableItemDeviceTiny, removed BaseMedicalContraband
   id: EncryptionKeyMedical
   name: medical encryption key
-  description: An encryption key used by those who save lives.
+  description: An encryption key used by medical staff. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -228,7 +228,7 @@
   id: EncryptionKeyService
   name: service encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by the service staff, tasked with keeping the station full, happy and clean.
+  description: An encryption key used by Port service staff, tasked with keeping the station full, happy and clean. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
