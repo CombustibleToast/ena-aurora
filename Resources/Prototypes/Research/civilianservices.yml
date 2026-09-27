@@ -53,7 +53,6 @@
   - SurveillanceWirelessCameraMonitorCircuitboard
   - TelecomServerCircuitboard
   - HolopadMachineCircuitboard
-  - SignalControlComputerCircuitboard # Aurora's Song
 
 - type: technology
   id: AdvancedEntertainment

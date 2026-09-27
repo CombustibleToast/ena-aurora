@@ -863,6 +863,7 @@
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
+  - SignalControlComputerCircuitboard # Aurora's Song - Signal Control Computer
   position: 0, 19
 
 - type: technology
