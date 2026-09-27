@@ -915,6 +915,12 @@
           amount: 1
           defaultPrototype: SaxophoneInstrument
           examineName: construction-insert-info-examine-name-instrument-woodwind
+  # Aurora's Song Start - Obtainable MP3 Players
+  - type: Construction
+    deconstructionTarget: null
+    graph: MP3Player
+    node: daw
+  # Aurora's Song End
 
 - type: entity
   id: PortableGeneratorPacmanMachineCircuitboard

@@ -37,6 +37,10 @@
     inHandsOnly: false
   - type: Item
     size: Tiny
+  - type: Construction
+    deconstructionTarget: null
+    graph: MP3Player
+    node: mp3
 
 - type: entity
   parent: MediaPlayerInstrument
@@ -78,3 +82,31 @@
   components:
   - type: Sprite
     state: mediaplayer_red
+
+- type: entity
+  parent: BaseItem
+  id: MediaPlayerInstrumentRandomBox
+  name: media player mystery box
+  suffix: Random
+  components:
+  - type: StaticPrice
+    price: 10000 # For some god-forsaken reason this auto adds a zero/10xs the price. Its 100k.
+  - type: Sprite
+    sprite: Objects/Fun/figurines.rsi
+    layers:
+    - state: fig_box
+  - type: SpawnItemsOnUse
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+    items:
+    - id: MysteryFigureBoxTrash
+    - id: MediaPlayerInstrument
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentPink
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentBlue
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentGreen
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentRed
+      orGroup: MP3Box
