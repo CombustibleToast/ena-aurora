@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Server.StationEvents.Components;
+using Content.Server._NF.Salvage;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Mech.Components;
@@ -161,6 +162,10 @@ public sealed partial class LinkedLifecycleGridSystem : EntitySystem
 
             // All humans and borgs should have mind containers - if we've handled them already, no need.
             if (handledMindContainers.Contains(mobUid))
+                continue;
+
+            // Aurora's Song: If we have salvage mob restrictions and are on the UIV, we're about to be deleted and don't want to be considered
+            if (HasComp<NFSalvageMobRestrictionsComponent>(mobUid))
                 continue;
 
             var (targetUid, targetXform) = GetParentToReparent(mobUid, xform);
