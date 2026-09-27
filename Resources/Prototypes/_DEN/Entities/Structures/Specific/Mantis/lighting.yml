@@ -7,7 +7,7 @@
   components:
   - type: Sprite
     sprite: _DEN/Structures/Lighting/LightPosts/lampeidolitewell.rsi
-    drawdepth: Objects
+    drawdepth: FloorObjects # Aurora's Song: Fixes rendering on top of things it shouldn't
     snapCardinals: true
     noRot: true
     layers:
