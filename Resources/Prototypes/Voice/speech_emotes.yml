@@ -532,6 +532,9 @@
   category: Vocal
   icon: Interface/Emotes/weh.png
   chatMessages: ["chat-emote-msg-weh"]
+  whitelist:
+    tags: # Funky
+    - LizardEmotes
   chatTriggers: # Funky
     - weh
     - wehs
