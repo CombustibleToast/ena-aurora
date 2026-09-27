@@ -139,7 +139,8 @@ public sealed partial class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTri
 
             if (retrigger || buffered) // At least one implant needs to be retriggered, so tell the body to try and retrigger all of its rattle implants.
             {                     // Unfortunantly, we can't just leave it up to the implant to reject a trigger if not enough time has elapsed, as things independent of the timer want to retrigger them too.
-                var deathrattleEvent = new ReTriggerRattleImplantEvent(mobUid, state.CurrentState);
+                // Send the event with the Forced argument, so it will go through even if they are alive.
+                var deathrattleEvent = new ReTriggerRattleImplantEvent(mobUid, state.CurrentState, true);
                 RaiseLocalEvent(mobUid, deathrattleEvent);
             }
         }

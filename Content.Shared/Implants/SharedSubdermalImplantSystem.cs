@@ -215,8 +215,11 @@ public readonly record struct ImplantRemovedEvent
 /// </summary>
 public sealed class ReTriggerRattleImplantEvent(
     EntityUid implanted,
-    MobState currentState) : EventArgs
+    MobState currentState,
+    bool forced = false) : EventArgs // Aurora's Song: If forced is true, listening code may force their triggers to happen that may otherwise be prevented
 {
     public readonly EntityUid Implanted = implanted;
     public readonly MobState CurrentState = currentState;
+    public readonly bool Forced = forced;
+    // Aurora's Song: Only force this if absolutely necessary, or if the person has already been dead. You WILL accidentally set off someones macrobomb otherwise.
 }
