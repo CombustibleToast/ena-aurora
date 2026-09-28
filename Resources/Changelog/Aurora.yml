@@ -3512,3 +3512,30 @@ Entries:
   id: 9819
   time: '2026-09-28T07:42:10.4104901+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1586
+- author: DimesEqual9
+  changes:
+  - message: All .30Lg Cartridge Types
+    type: Add
+  - message: .30 Marksman OP & Standard Mags into .30Lg
+    type: Tweak
+  - message: .30Lg Ammo Boxxes
+    type: Add
+  - message: .30 Projectiles
+    type: Add
+  - message: Hazard Zone Industries to become "ASBaseWeaponFrameRifleArtificielFederale" Based upon current convention of being a parody of real fire-arms manufacturing companies.
+    type: Fix
+  - message: Reparented, and Attributed Vulcan Types to be .30Lg, and statistically worse than the Jackhammer, a CAF Rifle while still remaining strong.
+    type: Tweak
+  - message: rarity of Vulcan to be a T5 Weapon given DPS puts this fire-arm on par with the Soland Moss.
+    type: Tweak
+  - message: Jackhammer Reworked to be .30Lg, and slightly buffed accuracy.
+    type: Tweak
+  - message: Expedition Blueprint for Box .30LgOP, and Mags
+    type: Add
+  - message: SLE Blueprint, and Sprites, for Box .30LgOP, and Mags
+    type: Add
+  - message: SLE .30LgOp Blueprint added to SLE uplink for 100 SCU to serve as an SCU sink.
+    type: Add
+  id: 9820
+  time: '2026-09-28T09:56:38.9706518+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1498
