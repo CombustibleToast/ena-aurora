@@ -20,3 +20,78 @@
     layers: # TODO: add tip
     - state: base
       map: [ "enum.AmmoVisualLayers.Base" ]
+
+- type: entity
+  id: ASCartridgeRifle30LongOverpressure
+  name: cartridge (.30 Long rifle, overpressure)
+  parent: ASBaseCartridgeRifle30Long
+  components:
+  - type: CartridgeAmmo
+    proto: ASBulletRifle30LongOverpressure
+  - type: Sprite
+    layers: # TODO: add tip
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+#    - state: tip
+#      map: [ "enum.AmmoVisualLayers.Tip" ]
+#      color: "#ff8d00"
+
+- type: entity
+  id: ASCartridgeRifle30LongIncendiary
+  name: cartridge (.30 Long rifle, incendiary)
+  parent: ASBaseCartridgeRifle30Long
+  components:
+  - type: CartridgeAmmo
+    proto: ASBulletRifle30LongIncendiary
+  - type: Sprite
+    layers: # TODO: add tip
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+#    - state: tip
+#      map: [ "enum.AmmoVisualLayers.Tip" ]
+#      color: "#ff0000"
+
+- type: entity
+  id: ASCartridgeRifle30LongUranium
+  name: cartridge (.30 Long rifle, uranium)
+  parent: ASBaseCartridgeRifle30Long
+  components:
+  - type: CartridgeAmmo
+    proto: ASBulletRifle30LongUranium
+  - type: Sprite
+    layers: # TODO: add tip
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+#    - state: tip
+#      map: [ "enum.AmmoVisualLayers.Tip" ]
+#      color: "#00ff00"
+
+- type: entity
+  id: ASCartridgeRifle30LongPractice
+  name: cartridge (.30 Long rifle, practice)
+  parent: ASBaseCartridgeRifle30Long
+  components:
+  - type: CartridgeAmmo
+    proto: ASBulletRifle30LongPractice
+  - type: Sprite
+    layers: # TODO: add tip
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+#    - state: tip
+#      map: [ "enum.AmmoVisualLayers.Tip" ]
+#      color: "#dddddd"
+
+- type: entity
+  id: ASCartridgeRifle30LongRubber # CartridgeLightRifleRubber
+  name: cartridge (.30 Long rifle, rubber)
+  parent: ASBaseCartridgeRifle30Long
+  components:
+  - type: CartridgeAmmo
+    proto: ASBulletRifle30LongRubber
+  - type: Sprite
+    layers: # TODO: add tip
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+#    - state: tip
+#      map: [ "enum.AmmoVisualLayers.Tip" ]
+#      color: "#00b0ff"

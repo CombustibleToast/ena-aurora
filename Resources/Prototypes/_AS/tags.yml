@@ -53,6 +53,9 @@
   id: ASCartridgeRifle30Long
 
 - type: Tag
+  id: ASMagazineMarksmanRifle30Long
+
+- type: Tag
   id: ASMagazineEnblocRifle30Long
 
 - type: Tag

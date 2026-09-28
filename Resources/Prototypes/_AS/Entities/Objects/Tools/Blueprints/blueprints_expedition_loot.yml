@@ -34,6 +34,17 @@
     - ASAmmunitionBoxShellShotgun8gHE
     - MagazineShotgunLeverEmpty
 
+- type: entity # This ammo should be supremely rare.
+  parent: [ NFBaseBlueprintExpeditionArmory ]
+  id: ASBlueprintMarksmanRifle30LongOverpressure
+  name: .30 Long rifle Overpressure schematic
+  description: a schematic for fabricating .30 Long rifle Overpressure
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - ASAmmunitionBoxRifle30LongOverpressure
+    - ASMagazineMarksmanRifle30LongOverpressureEmpty
+
 - type: entity
   parent: NFBaseBlueprintExpeditionArmory
   id: ASBlueprintAmmoEchionCanisterCybersun
@@ -53,3 +64,4 @@
   - type: Blueprint
     providedRecipes:
     - PunkEchionCanisterRecipe
+

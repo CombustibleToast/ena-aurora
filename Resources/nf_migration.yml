@@ -556,7 +556,7 @@ WeaponRifleLecterRubber: NFWeaponRifleAssaultLecterLessLethal # ??
 WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher < NFWeaponRifleAssaultM90
 WeaponRifleNovaliteC1: NFWeaponRifleAssaultNovaliteC1
 WeaponRifleSVS: NFWeaponRifleSVS
-WeaponRifleVulcan: NFWeaponRifleAssaultVulcan
+#WeaponRifleVulcan: NFWeaponRifleAssaultVulcan # Aurora's Song - Reattributed during firearm rework
 WeaponShotgunBlunderbuss: NFWeaponShotgunBlunderbuss
 WeaponShotgunBulldog: NFWeaponShotgunBulldog
 WeaponShotgunDoubleBarreled: NFWeaponShotgunDoubleBarreled

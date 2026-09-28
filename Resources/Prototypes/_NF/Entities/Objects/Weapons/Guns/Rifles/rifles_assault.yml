@@ -67,21 +67,21 @@
   components: *lecterComponents
 
 #region DeltaV
-- type: entity
-  id: NFWeaponRifleAssaultVulcan
-  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
-  name: Vulcan
-  description: |-
-    One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World".
-  components: &vulcanComponents
-  - type: Sprite
-    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
-  - type: Clothing
-    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
-  - type: MagazineVisuals
-    magState: mag
-    steps: 3
-    zeroVisible: true
+#- type: entity  -  Aurora's Song - Moved to ~/Resources/_As/Entities/Weapons/Rifles/Rifles_Marksman.YML for changing how the gun functions in it's entirety.
+#  id: NFWeaponRifleAssaultVulcan
+#  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+#  name: Vulcan
+#  description: |-
+#    One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World".
+#  components: &vulcanComponents
+#  - type: Sprite
+#    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
+#  - type: Clothing
+#    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
+#  - type: MagazineVisuals
+#    magState: mag
+#    steps: 3
+#    zeroVisible: true
 
 - type: entity
   id: NFWeaponRifleAssaultJackdaw
@@ -108,14 +108,14 @@
       path: /Audio/_DV/Weapons/Guns/Gunshots/jackdaw.ogg
 
 #region DeltaV: Rubber
-- type: entity
-  id: NFWeaponRifleAssaultVulcanLessLethal
-  parent: [ NFBaseWeaponRifleAssaultChamber30Rubber, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
-  name: Vulcan
-  description: |-
-    One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World".
-  suffix: Frontier, Less-lethal
-  components: *vulcanComponents
+#- type: entity  -  Aurora's Song - Moved to ~/Resources/_As/Entities/Weapons/Rifles/Rifles_Marksman.YML for changing how the gun functions in it's entirety.
+#  id: NFWeaponRifleAssaultVulcanLessLethal
+#  parent: [ NFBaseWeaponRifleAssaultChamber30Rubber, NFBaseWeaponFrameRifleAssaultFrontierGunsmith ]
+#  name: Vulcan
+#  description: |-
+#    One of the heaviest small arms to grace Security's armory, this rifle is a modern take on a classic, informally dubbed the "Right Arm of the Free World".
+#  suffix: Frontier, Less-lethal
+#  components: *vulcanComponents
 
 #region Frontier
 - type: entity

@@ -29,7 +29,7 @@
       - id: WeaponCaseLongWT550Expedition
       - id: WeaponCaseLongM90Expedition
       - id: WeaponCaseLongBulldog
-      - id: WeaponCaseLongVulcanExpedition
+#      - id: WeaponCaseLongVulcanExpeditionT5
       - id: ASPlasmaRifleScourer
       - id: WeaponCaseLongAtreidesExpedition
       - id: Telecrystal1
@@ -116,6 +116,10 @@
       - id: StorageFillAmmoBoxHonk35SMG
       - id: ClothingHandsKnuckleDustersQM
     # Rare items
+    - !type:GroupSelector
+      weight: 0.005
+      children:
+      - id: WeaponCaseLongVulcanExpeditionT5 # Vulcan has been made par with a CAF rifle.
     - !type:GroupSelector
       weight: 0.001
       children:

@@ -34,6 +34,7 @@
     - UplinkSecurityUtility
     - UplinkSecurityExplosives
     - UplinkSecurityBundles
+    - UplinkSecurityBlueprints # Aurora's Song - Added Blueprints Category
     currencyWhitelist:
     - FrontierUplinkCoin
     balance:

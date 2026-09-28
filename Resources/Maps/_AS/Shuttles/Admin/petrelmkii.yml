@@ -1061,7 +1061,7 @@ entities:
     - type: Transform
       pos: -0.5,7.5
       parent: 1
-- proto: ASMagazineMarksmanRifle30Overpressure
+- proto: ASMagazineMarksmanRifle30LongOverpressure
   entities:
   - uid: 750
     components:
@@ -1111,7 +1111,7 @@ entities:
     - type: Transform
       pos: -1.5,10.5
       parent: 1
-- proto: ASWeaponRifleMarksmanHZ-3-3-MOverpressure
+- proto: ASWeaponRifleMarksmanAF-17MOverpressure
   entities:
   - uid: 746
     components:

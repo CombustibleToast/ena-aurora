@@ -85,7 +85,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"NFWeaponShotgunEnforcerExpedition","NFWeaponShotgunEnforcer"},
         {"NFWeaponShotgunBulldogExpedition","NFWeaponShotgunBulldog"},
         {"NFWeaponRifleAssaultSmExpedition","ASWeaponRifleAssaultSurpSm"},
-        {"NFWeaponRifleAssaultVulcanExpedition","NFWeaponRifleAssaultVulcan"},
+        {"ASWeaponRifleMarksmanVulcanExpedition","ASWeaponRifleMarksmanVulcan"}, // Aurora's Song - Changed from NFWeaponRifleMarksmanVulcan to ASWeaponRifleMarksmanVulcan
         {"NFWeaponEnergyRifleCarbineExpedition","NFWeaponEnergyRifleCarbine"},
         {"NFWeaponEnergyPistolLaserAdvancedExpedition","NFWeaponEnergyPistolLaserAdvanced"},
         {"NFWeaponEnergyPistolLaserAntiqueExpedition","NFWeaponEnergyPistolLaserAntique"},

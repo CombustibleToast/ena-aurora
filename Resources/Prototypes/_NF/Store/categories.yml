@@ -23,6 +23,10 @@
   id: UplinkSecurityExplosives
   name: store-category-secexplosives
 
+- type: storeCategory # Aurora's Song - added blueprint category
+  id: UplinkSecurityBlueprints
+  name: store-category-secblueprints
+
 #pirate
 - type: storeCategory
   id: UplinkPirateBundles

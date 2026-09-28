@@ -425,20 +425,20 @@
         - id: NFMagazineLowCapacityRifle30
           amount: 2
 
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongVulcanExpedition
-  suffix: Dungeon, Vulcan
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: NFWeaponRifleAssaultVulcanExpedition
-          amount: 1
-        - id: NFMagazineRifle30
-          amount: 2
+#- type: entity  -  Aurora's Song -  Moved to AS, following rework of the Vulcan.
+#  parent: WeaponCaseLong
+#  id: WeaponCaseLongVulcanExpedition
+#  suffix: Dungeon, Vulcan
+#  categories: [ HideSpawnMenu ]
+#  components:
+#  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+#    containers:
+#      storagebase: !type:AllSelector
+#        children:
+#        - id: NFWeaponRifleAssaultVulcanExpedition
+#          amount: 1
+#        - id: NFMagazineRifle30
+#          amount: 2
 
 - type: entity
   parent: WeaponCaseLong

@@ -281,7 +281,7 @@
       weight: 0.95
       children:
       - id: WeaponCaseLongSm
-      - id: WeaponCaseLongVulcanExpedition
+#      - id: WeaponCaseLongVulcanExpedition # Aurora's Song - Reattributed, and moved to T5
       - id: WeaponCaseLongBulldog
       - id: WeaponCaseLongEnforcerExpedition
       - id: WeaponCaseShortAntiqueLaserExpedition
@@ -309,6 +309,7 @@
       children:
       #- id: WeaponCaseLongLauncherRocketExpedition #Aurora: t6
       #- id: WeaponCaseLongLauncherChinaLake #  #Aurora: t6
+      - id: WeaponCaseLongVulcanExpeditionT5 # Aurora's Song - Moved from T4 to T5 following major buff.
       - id: WeaponCaseHeavyLightMachineGunL6
       - id: WeaponCaseLongEnergyGunExpedition
       - id: WeaponCaseLongLaserCannonExpedition

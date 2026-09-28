@@ -182,6 +182,21 @@
 
 - type: entity
   parent: WeaponCaseLong
+  id: WeaponCaseLongVulcanExpeditionT5
+  suffix: Dungeon, Vulcan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponRifleMarksmanVulcan
+          amount: 1
+        - id: ASMagazineMarksmanRifle30Long
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
   id: WeaponCaseLongEstocExpeditionT5
   suffix: Dungeon, Estoc
   categories: [ HideSpawnMenu ]

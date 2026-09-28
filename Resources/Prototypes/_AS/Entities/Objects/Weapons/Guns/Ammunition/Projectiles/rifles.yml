@@ -8,3 +8,64 @@
     damage:
       types:
         Piercing: 30
+
+- type: entity
+  id: ASBulletRifle30LongOverpressure
+  name: bullet (.30 Long rifle, overpressure)
+  parent: NFBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 34
+
+- type: entity
+  id: ASBulletRifle30LongIncendiary
+  name: bullet (.30 Long rifle, incendiary)
+  parent: NFBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 5
+        Heat: 25
+  - type: IgniteOnCollide
+    fireStacks: 0.45 # Roughly half a mag, or 3.5 seconds of being shot at, on most rifles.
+
+- type: entity
+  id: ASBulletRifle30LongUranium
+  name: bullet (.30 Long rifle, uranium)
+  parent: NFBaseBulletUranium
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Radiation: 15 # This scares me, however as I'm not adding this to loot pools will be admeme only for a while.
+        Piercing: 15
+
+- type: entity
+  id: ASBulletRifle30LongPractice
+  name: bullet (.30 Long rifle, practice)
+  parent: NFBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 3
+
+- type: entity
+  id: ASBulletRifle30LongRubber
+  name: bullet (.30 Long rifle, rubber)
+  parent: NFBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 3
+  - type: StaminaDamageOnCollide
+    damage: 20 # 5 hits to stun, this is from 6 hits on .30 as .30 long rifles drop ~1.5rounds per second. (100 stamina HP)

@@ -423,12 +423,12 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultSmExpedition
 
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4
-  - NFWeaponRifleAssaultVulcan
-  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleAssaultVulcanExpedition
+#- type: entity - Aurora's Song - Moved to AS Expedition weapons.
+#  parent:
+#  - BaseExpeditionWeaponTier4
+#  - NFWeaponRifleAssaultVulcan
+#  categories: [ HideSpawnMenu ]
+#  id: NFWeaponRifleAssaultVulcanExpedition
 
 ## SMGs
 - type: entity #The infamous C-20r, should be a Tier 4 in value | Aurora Song

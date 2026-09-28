@@ -17,6 +17,7 @@
   - NFAmmunitionBoxPistol35Incendiary
   - NFAmmunitionBoxRifle30Incendiary
   - NFAmmunitionBoxShellShotgunIncendiary
+  - ASAmmunitionBoxRifle30LongIncendiary
 
 - type: latheRecipePack
   id: ASSalvageLatheEmag

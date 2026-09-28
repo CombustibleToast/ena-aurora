@@ -94,7 +94,7 @@
         children:
         - id: NFWeaponRifleAssaultLecter
           amount: 5
-        - id: NFWeaponRifleAssaultVulcan
+        - id: ASWeaponRifleMarksmanVulcan # Aurora's Song - Gun Re-attributed following rework.
           amount: 4
         - id: NFWeaponSubMachineGunWt550
           amount: 4
@@ -125,7 +125,7 @@
           amount: 5
         - id: NFWeaponRifleAssaultLecterLessLethal
           amount: 4
-        - id: NFWeaponRifleAssaultVulcanLessLethal
+        - id: ASWeaponRifleMarksmanVulcanLessLethal # Aurora's Song - Gun Re-attributed following rework.
           amount: 4
         - id: NFWeaponShotgunEnforcerLessLethal
           amount: 4

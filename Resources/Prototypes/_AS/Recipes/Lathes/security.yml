@@ -1,23 +1,5 @@
 # Aurora Song
 
-#region .30 marksman rifle
-
-- type: latheRecipe
-  parent: BaseEmptyMagazineRecipe
-  id: ASMagazineMarksmanRifle30Empty
-  result: ASMagazineMarksmanRifle30Empty
-  materials:
-    Steel: 30
-
-- type: latheRecipe
-  parent: BaseEmptyMagazineRecipe
-  id: ASMagazineMarksmanRifle30OverpressureEmpty
-  result: ASMagazineMarksmanRifle30OverpressureEmpty
-  materials:
-    Steel: 30
-
-#endregion
-
 #region .40 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -202,6 +184,24 @@
   materials:
       Steel: 210 # 10 [speedloader] + 5 [bullets] * 40 [Steel per bullet]
 
+#region .30 Long marksman rifle
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30LongEmpty
+  result: ASMagazineMarksmanRifle30LongEmpty
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30LongOverpressureEmpty
+  result: ASMagazineMarksmanRifle30LongOverpressureEmpty
+  materials:
+    Steel: 30
+
+#endregion
+
 #region .30 long rifle ammo boxes
 
 - type: latheRecipe
@@ -210,6 +210,44 @@
   result: ASAmmunitionBoxRifle30Long
   materials:
     Steel: 2000 # box - free, 50 [bullets] * 40 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongOverpressure
+  result: ASAmmunitionBoxRifle30LongOverpressure
+  materials:
+    Steel: 3000 # box - free, 50 [bullets] * 60 [Steel per bullet]
+    Brass: 3000 # box - free, 50 [bullets] * 60 [Brass per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongPractice
+  result: ASAmmunitionBoxRifle30LongPractice
+  materials:
+    Steel: 1000 # box - free, 50 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongIncendiary
+  result: ASAmmunitionBoxRifle30LongIncendiary
+  materials:
+    Plastic: 3000 # box - free, 50 [bullets] * 60 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongUranium
+  result: ASAmmunitionBoxRifle30LongUranium
+  materials:
+    Plastic: 1500 # box - free, 50 [bullets] * 30 [Plastic per bullet]
+    Uranium: 1500 # box - free, 50 [bullets] * 30 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongRubber
+  result: ASAmmunitionBoxRifle30LongRubber
+  materials:
+    Plastic: 1000 # box - free, 50 [bullets] * 20 [Plastic per bullet]
+    Steel: 1000 # box - free, 50 [bullets] * 20 [Steel per bullet]
 
 #region 8gauge enblocs
 - type: latheRecipe

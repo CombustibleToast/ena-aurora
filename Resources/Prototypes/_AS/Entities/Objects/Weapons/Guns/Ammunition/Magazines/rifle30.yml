@@ -1,20 +1,20 @@
-#region base .30 marksman magazines
+#region base .30 Long marksman magazines
 
 - type: entity
-  id: ASBaseMagazineMarksmanRifle30
-  name: magazine (.30 rifle)
+  id: ASBaseMagazineMarksmanRifle30Long
+  name: magazine (.30 Long rifle)
   parent: NFBaseMagazineRifle30
   abstract: true
   components:
   - type: Tag
     tags:
-      - ASMagazineMarksmanRifle30 # TODO: make it make sense, change the tags
+      - ASMagazineMarksmanRifle30Long # TODO: make it make sense, change the tags
   - type: BallisticAmmoProvider
     mayTransfer: true
     whitelist:
       tags:
-        - NFCartridgeRifle30
-    proto: NFCartridgeRifle30
+        - ASCartridgeRifle30Long
+    proto: ASCartridgeRifle30Long
     capacity: 20
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/marksmanrifle30_mag.rsi
@@ -68,9 +68,9 @@
 
 #region .30 magazines
 - type: entity
-  id: ASMagazineMarksmanRifle30Empty
-  name: marksman magazine (.30 rifle, any)
-  parent: ASBaseMagazineMarksmanRifle30
+  id: ASMagazineMarksmanRifle30LongEmpty
+  name: marksman magazine (.30 Long rifle, any)
+  parent: ASBaseMagazineMarksmanRifle30Long
   suffix: empty
   components:
   - type: BallisticAmmoProvider
@@ -78,7 +78,7 @@
 
 - type: entity
   id: ASMagazineEnblocRifle30LongEmpty
-  name: en-bloc clip (.30 rifle, any)
+  name: en-bloc clip (.30 Long rifle, any)
   parent: ASBaseMagazineEnblocRifle30Long
   suffix: empty
   components:
@@ -86,12 +86,12 @@
     proto: null
 
 - type: entity
-  id: ASMagazineMarksmanRifle30
-  name: marksman magazine (.30 rifle)
-  parent: ASBaseMagazineMarksmanRifle30
+  id: ASMagazineMarksmanRifle30Long
+  name: marksman magazine (.30 Long rifle)
+  parent: ASBaseMagazineMarksmanRifle30Long
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle30
+    proto: ASCartridgeRifle30Long
 
 - type: entity
   id: ASMagazineEnblocRifle30Long
@@ -102,12 +102,12 @@
     proto: ASCartridgeRifle30Long
 
 - type: entity
-  id: ASMagazineMarksmanRifle30Overpressure
-  name: marksman magazine (.30 rifle, overpressure)
-  parent: ASBaseMagazineMarksmanRifle30
+  id: ASMagazineMarksmanRifle30LongOverpressure
+  name: marksman magazine (.30 Long rifle, overpressure)
+  parent: ASBaseMagazineMarksmanRifle30Long
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle30Overpressure
+    proto: ASCartridgeRifle30LongOverpressure
   - type: Sprite
     layers:
     - state: base
@@ -128,20 +128,20 @@
         color: "#ff8d00"
 
 - type: entity
-  id: ASMagazineMarksmanRifle30OverpressureEmpty
-  name: marksman magazine (.30 rifle, fillable, overpressure)
-  parent: ASMagazineMarksmanRifle30Overpressure
+  id: ASMagazineMarksmanRifle30LongOverpressureEmpty
+  name: marksman magazine (.30 Long rifle, fillable, overpressure)
+  parent: ASMagazineMarksmanRifle30LongOverpressure
   components:
   - type: BallisticAmmoProvider
     proto: null
 
 - type: entity
-  id: ASMagazineMarksmanRifle30Incendiary
-  name: marksman magazine (.30 rifle, incendiary)
-  parent: ASBaseMagazineMarksmanRifle30
+  id: ASMagazineMarksmanRifle30LongIncendiary
+  name: marksman magazine (.30 Long rifle, incendiary)
+  parent: ASBaseMagazineMarksmanRifle30Long
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle30Incendiary
+    proto: ASCartridgeRifle30LongIncendiary
   - type: Sprite
     layers:
     - state: base
@@ -162,12 +162,12 @@
         color: "#ff0000"
 
 - type: entity
-  id: ASMagazineMarksmanRifle30Uranium
-  name: marksman magazine (.30 rifle, uranium)
-  parent: ASBaseMagazineMarksmanRifle30
+  id: ASMagazineMarksmanRifle30LongUranium
+  name: marksman magazine (.30 Long rifle, uranium)
+  parent: ASBaseMagazineMarksmanRifle30Long
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle30Uranium
+    proto: ASCartridgeRifle30LongUranium
   - type: Sprite
     layers:
     - state: base
@@ -188,12 +188,12 @@
         color: "#00ff00"
 
 - type: entity
-  id: ASMagazineMarksmanRifle30Practice
-  name: marksman magazine (.30 rifle, practice)
-  parent: ASBaseMagazineMarksmanRifle30
+  id: ASMagazineMarksmanRifle30LongPractice
+  name: marksman magazine (.30 Long rifle, practice)
+  parent: ASBaseMagazineMarksmanRifle30Long
   components:
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle30Practice
+    proto: ASCartridgeRifle30LongPractice
   - type: Sprite
     layers:
     - state: base
@@ -212,6 +212,34 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#dddddd"
+
+- type: entity
+  id: ASMagazineMarksmanRifle30LongRubber
+  name: marksman magazine (.30 Long rifle, Rubber)
+  parent: ASBaseMagazineMarksmanRifle30Long
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30LongRubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
+
+#"#00b0ff"
 
 #region .30 Top Mounted
 - type: entity

@@ -140,6 +140,9 @@ uplink-sle-softsuit-patrol-commissioner-desc = The standard-issue SLE space proo
 uplink-security-prison-tracking-implanter-name = Prison Tracking Implant
 uplink-security-prison-tracking-implanter-desc = A subermal implant meant for tracking prisoners.
 
+uplink-security-blueprint-30-lr-op = .30 Long rifle Blueprint
+uplink-security-blueprint-30-lr-op-desc = A blueprint containing a license for an SLE techfab to produce .30 Long rifle boxes, and magazines.
+
 # region ExchangeVend - Aurora
 store-category-exchangehardsuits = EVA Suits
 store-category-exchangearmor = Armor

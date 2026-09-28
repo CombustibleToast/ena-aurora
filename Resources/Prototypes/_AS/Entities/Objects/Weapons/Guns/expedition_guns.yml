@@ -97,6 +97,11 @@
   id: ASWeaponShotgunHushpupExpedition
 
 - type: entity
+  parent: [ ASWeaponRifleMarksmanVulcan, BaseExpeditionWeaponTier5 ]
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponRifleMarksmanVulcanExpedition
+
+- type: entity
   parent: [ASWeaponEnergyPistolPulse, BaseC3NanoTrasenContrabandLowValue, BaseExpeditionWeaponTier5]
   categories: [ HideSpawnMenu ]
   id: ASWeaponEnergyPistolPulseExpedition
