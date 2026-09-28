@@ -3455,3 +3455,60 @@ Entries:
   id: 9812
   time: '2026-09-24T08:38:54.9499621+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1565
+- author: SalamanderSkies
+  changes:
+  - message: Added the Bluespace Monitoring System encryption key to the loadout.
+    type: Add
+  - message: Most bluespace events now announce over the aforementioned channel.
+    type: Tweak
+  - message: Removed the Supply channel. Sorry Cargonians.
+    type: Remove
+  - message: Many encryption keys have had their descriptions modified to reflect their purpose.
+    type: Tweak
+  id: 9813
+  time: '2026-09-28T07:42:10.4101565+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1497
+- author: Phoebe51505
+  changes:
+  - message: Fixed UIV's staying behind if a player took a ghost role on them
+    type: Fix
+  id: 9814
+  time: '2026-09-28T07:42:10.4102905+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1592
+- author: Sere
+  changes:
+  - message: Added MP3 Players to the instruments loot pool, AutoTune and EMAGed AutoTune.
+    type: Add
+  - message: A secret third way of obtaining them. Try experimenting!
+    type: Add
+  id: 9815
+  time: '2026-09-28T07:42:10.4104368+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1572
+- author: Phoebe51505
+  changes:
+  - message: Fixed an edgecase preventing the 'revived' message from being buffered by medical alerts.
+    type: Fix
+  id: 9816
+  time: '2026-09-28T07:42:10.4104504+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1550
+- author: TrixxedHeart
+  changes:
+  - message: Eidolite well lamps now correctly render on the floor
+    type: Fix
+  id: 9817
+  time: '2026-09-28T07:42:10.4104695+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1591
+- author: TrixxedHeart
+  changes:
+  - message: Vox no longer turn into fried chicken upon reaching 1500 burn, 1984.
+    type: Tweak
+  id: 9818
+  time: '2026-09-28T07:42:10.4104812+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1590
+- author: Sere
+  changes:
+  - message: Made signal control computer circuit boards researchable and lathable.
+    type: Fix
+  id: 9819
+  time: '2026-09-28T07:42:10.4104901+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1586
