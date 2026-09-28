@@ -769,11 +769,8 @@
   name: uplink-combat-medipen-name
   description: uplink-combat-medipen-desc
   productEntity: CombatMedipen
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 2
   cost:
-    Telecrystal: 3
+    Telecrystal: 1 #Aurora's Song - from 3 TC > 1 TC
   categories:
   - UplinkChemicals
 
@@ -809,7 +806,7 @@
   description: uplink-cigarettes-desc
   productEntity: CigPackSyndicate
   cost:
-    Telecrystal: 1
+    Telecrystal: 2 #Aurora's Song - from 1 TC > 2 TC
   categories:
   - UplinkChemicals
 
