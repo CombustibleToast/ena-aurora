@@ -31,6 +31,7 @@
       - EncryptionKeyNfsd
       - EncryptionKeyCommand
       - EncryptionKeyMedical
+      - EncryptionKeyBluespace
 
 - type: entity
   parent: ASClothingHeadsetAltSLENavy

@@ -8,7 +8,6 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
-      - EncryptionKeyCargo
       - EncryptionKeyEngineering
       - EncryptionKeyMedical
       - EncryptionKeyScience

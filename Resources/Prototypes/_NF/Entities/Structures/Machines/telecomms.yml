@@ -18,6 +18,7 @@
       - EncryptionKeyTraffic
       - EncryptionKeyShipboard # Aurora's Song - Added Shipboard key to shuttle server, so all ships can have short-range comms
       - EncryptionKeyGreeting
+      - EncryptionKeyBluespace # Aurora's Song
   - type: EncryptionKeyHolder
     keysExtractionMethod: Prying
     keySlots: 12 # Aurora's Song - Increased to 12 to fit all keys, including new Shipboard key
@@ -31,7 +32,7 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
-      - EncryptionKeyCargo
+      # - EncryptionKeyCargo  # Aurora's Song - Made obsolete
       - EncryptionKeyEngineering
       - EncryptionKeyMedical
       - EncryptionKeyScience

@@ -49,6 +49,7 @@
     - Science
     - Greeting
     - Command
+    - Bluespace
     defaultChannel: Common
   - type: Item
     sprite: _AS/Objects/Devices/encryption_keys.rsi

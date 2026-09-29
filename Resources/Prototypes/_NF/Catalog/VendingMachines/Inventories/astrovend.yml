@@ -15,9 +15,10 @@
     EncryptionKeyTraffic: 3
     EncryptionKeyShipboard: 3 # Aurora's Song - Added Shipboard key to vending machine
     EncryptionKeyMedical: 3
-    EncryptionKeyCargo: 3
+    # EncryptionKeyCargo: 3  Aurora's Song - Made obsolete
     EncryptionKeyEngineering: 3
     EncryptionKeyScience: 3
+    EncryptionKeyBluespace: 3 # Aurora's Song
 # Pilot drip
     ClothingBackpackPilot: 3
     ClothingBackpackDuffelPilot: 3
@@ -53,9 +54,10 @@
     EncryptionKeyTraffic: 4294967295 # Infinite
     EncryptionKeyShipboard: 4294967295 # Aurora's Song - Infinite, Added Shipboard key to vending machine
     EncryptionKeyMedical: 4294967295 # Infinite
-    EncryptionKeyCargo: 4294967295 # Infinite
+    # EncryptionKeyCargo: 4294967295 # Infinite  Aurora's Song - Made obsolete
     EncryptionKeyEngineering: 4294967295 # Infinite
     EncryptionKeyScience: 4294967295 # Infinite
+    EncryptionKeyBluespace: 4294967295 # Aurora's Song - Infinite
 # Pilot drip
     ClothingBackpackPilot: 3
     ClothingBackpackDuffelPilot: 3

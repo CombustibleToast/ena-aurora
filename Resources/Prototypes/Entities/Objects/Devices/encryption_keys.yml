@@ -74,7 +74,7 @@
   id: EncryptionKeyStationMaster
   name: station master encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by station's bosses.
+  description: An encryption key used by sector command. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -86,10 +86,11 @@
     - Security
     - Sle # Frontier - Aurora Song: Changed from Nfsd to Sle (Sector Law Enforcement)
     - Service
-    - Supply
+    # - Supply  Aurora's Song - Made obsolete.
     - Traffic # Frontier
     - Greeting # Frontier
     - Shipboard # Aurora's Song - Shipboard channel, incredibly short range
+    - Bluespace # Aurora's Song
     defaultChannel: Command
   - type: Sprite
     layers:
