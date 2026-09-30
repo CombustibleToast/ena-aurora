@@ -27,6 +27,7 @@
   - ClothingBeltBandolier
   - NFBaseClothingNeckHolsterThigh
   - NFBaseClothingNeckSheathThigh
+  - Tourniquet # Aurora's Song - No better staticPack for this to slot into w/ the MercFab
 
 - type: latheRecipePack
   id: NFMercenaryStorageStatic
