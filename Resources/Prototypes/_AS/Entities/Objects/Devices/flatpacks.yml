@@ -1,3 +1,15 @@
+# region Mercenary
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: AmmoFridgeFlatpack
+  name: AmmoFridge flatpack
+  description: A flatpack used for constructing a AmmoFridge.
+  components:
+  - type: Flatpack
+    entity: AmmoFridge
+  - type: StaticPrice
+    vendPrice: 7500
 # region SLE
 
 - type: entity

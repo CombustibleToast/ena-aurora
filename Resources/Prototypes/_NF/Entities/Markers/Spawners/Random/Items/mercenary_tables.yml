@@ -500,6 +500,8 @@
       weight: 0.3
     - id: MercenaryTechFabHackedFlatpack
       weight: 0.1
+    - id: AmmoFridgeFlatpack # Aurora Song
+      weight: 0.25
 
 # region Circuit Boards
 - type: entityTable
@@ -514,3 +516,5 @@
       weight: 0.1
     - id: ComputerIFFCircuitboard
       weight: 0.1
+    - id: AmmoFridgeCircuitboard # Aurora Song
+      weight: 0.2
