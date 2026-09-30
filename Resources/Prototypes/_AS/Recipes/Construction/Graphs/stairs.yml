@@ -95,11 +95,8 @@
             - material: WoodPlank
               amount: 4
               doAfter: 5
-            - tag: ElectrumScrap
-              name: construction-graph-tag-electrum-scrap
-              icon:
-                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
-                state: electrum1
+            - material: ElectrumScrap
+              amount: 1
               doAfter: 1
 
         - to: StairStageSomberAmaranth
@@ -111,11 +108,8 @@
             - material: WoodPlank
               amount: 4
               doAfter: 5
-            - tag: ElectrumScrap
-              name: construction-graph-tag-electrum-scrap
-              icon:
-                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
-                state: electrum1
+            - material: ElectrumScrap
+              amount: 1
               doAfter: 1
 
         - to: StairSomberMnemolith

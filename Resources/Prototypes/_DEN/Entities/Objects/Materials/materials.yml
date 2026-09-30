@@ -132,6 +132,7 @@
   - type: Tag
     tags:
     - RawMaterial
+    - Ore # Aurora's Song - Allow mined eidolite to be collected by ore bags.
     - MantisBeltStorable # Why not, their gear is made of it
   - type: Stack
     stackType: Eidolite

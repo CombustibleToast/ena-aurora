@@ -13,11 +13,8 @@
             - material: WoodPlank
               amount: 8
               doAfter: 8
-            - tag: ElectrumScrap
-              name: construction-graph-tag-electrum-scrap
-              icon:
-                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
-                state: electrum1
+            - material: ElectrumScrap
+              amount: 1
               doAfter: 1
 
         - to: somberMnemolithDoor

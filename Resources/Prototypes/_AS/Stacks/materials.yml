@@ -1,0 +1,7 @@
+- type: stack
+  parent: BaseVeryLargeStack
+  id: ElectrumScrap
+  name: stack-electrum-scrap
+  icon: { sprite: /Textures/_DEN/Objects/Materials/Scrap/generic.rsi, state: electrum1 }
+  spawn: ScrapElectrum
+  maxCount: 120

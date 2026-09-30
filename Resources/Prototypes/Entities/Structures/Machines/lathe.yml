@@ -754,6 +754,7 @@
       whitelist:
         tags:
           - Ore
+          - Ingot # Aurora's Song - Allow gold and silver bars to be alloyed into electrum.
     - type: Lathe
       idleState: icon
       runningState: building

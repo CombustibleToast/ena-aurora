@@ -238,11 +238,8 @@
         # Aurora's Song start
         - to: SomberTable
           steps:
-            - tag: ElectrumScrap
-              name: construction-graph-tag-electrum-scrap
-              icon:
-                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
-                state: electrum1
+            - material: ElectrumScrap
+              amount: 1
               doAfter: 1
         # Aurora's Song end
         - to: TableFrame
@@ -460,11 +457,8 @@
         # Aurora's Song start
         - to: SomberCounter
           steps:
-            - tag: ElectrumScrap
-              name: construction-graph-tag-electrum-scrap
-              icon: # Aurora's Song
-                sprite: _DEN/Objects/Materials/Scrap/generic.rsi
-                state: electrum1
+            - material: ElectrumScrap
+              amount: 1
               doAfter: 1
         # Aurora's Song end
         - to: CounterWoodFrame

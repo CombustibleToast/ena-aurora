@@ -3,3 +3,9 @@
   oreEntity: MaterialMnemolith1
   minOreYield: 2
   maxOreYield: 6
+
+- type: ore
+  id: ASOreEidolite
+  oreEntity: MaterialEidolite1
+  minOreYield: 2
+  maxOreYield: 6

@@ -9,6 +9,9 @@
     "states": [
         {
             "name": "rock_mnemolith"
+        },
+        {
+            "name": "rock_eidolite"
         }
     ]
 }

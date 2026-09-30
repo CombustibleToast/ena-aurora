@@ -21,3 +21,27 @@
     - sprite: _AS/Structures/Walls/rocks.rsi
       state: rock_mnemolith
       map: [ "enum.MiningScannerVisualLayers.Overlay" ]
+
+- type: entity
+  id: ASWallRockChromiteEidolite
+  parent: NFWallRockChromiteOre
+  description: An ore vein rich with eidolite.
+  suffix: Eidolite
+  components:
+  - type: OreVein
+    oreChance: 1.0
+    currentOre: ASOreEidolite
+  - type: Sprite
+    layers:
+    - state: rock_chromite
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_chromite_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_chromite_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_chromite_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_chromite_west
+    - sprite: _AS/Structures/Walls/rocks.rsi
+      state: rock_eidolite
+      map: [ "enum.MiningScannerVisualLayers.Overlay" ]
