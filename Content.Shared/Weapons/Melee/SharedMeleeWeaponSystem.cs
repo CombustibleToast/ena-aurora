@@ -155,7 +155,7 @@ public abstract partial class SharedMeleeWeaponSystem : EntitySystem
 
         // If someone swaps to this weapon then reset its cd.
         var curTime = Timing.CurTime;
-        var minimum = curTime + TimeSpan.FromSeconds(1 / attackRate);
+        var minimum = curTime + TimeSpan.FromSeconds(0.25); // Aurora's Song - Reduced delay to (0.25) from (1/attack rate).
 
         if (minimum < component.NextAttack)
             return;
