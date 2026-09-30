@@ -175,6 +175,13 @@
   #   slots:
   #   - Tail
   - type: HarpyHideWings # Frontier, needed for Harpies
+  # Aurora's Song Start - Hardsuit Equip/Unequip Delay
+  - type: Clothing
+    equipSound: /Audio/Mecha/mechmove03.ogg
+    unequipSound: /Audio/Mecha/mechmove03.ogg
+    equipDelay: 2
+    unequipDelay: 2
+  # Aurora's Song End
   - type: StaticPrice # Frontier
     price: 20 # Frontier
     vendPrice: 1500 # Frontier
