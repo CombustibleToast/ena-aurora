@@ -14,7 +14,7 @@
 #      required: false
     enum.HumanoidVisualLayers.HeadTop:
       limit: 1
-      required: true
+      required: false # Aurora's Song: Some ear options are marked as HeadSide, should be able to not put a HeadTop ear on.
       default: [ FeroxiEars ]
     enum.HumanoidVisualLayers.Snout:
       limit: 1
@@ -48,7 +48,7 @@
       limit: 4 # Aurora: 1>4
       required: false
     enum.HumanoidVisualLayers.Tail:
-      limit: 1
+      limit: 2 # Aurora's Song: 1>2 (overlays for robot tail)
       required: true
       default: [ FeroxiTailAndDorsal ]
 
