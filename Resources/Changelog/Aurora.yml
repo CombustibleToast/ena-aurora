@@ -3539,3 +3539,89 @@ Entries:
   id: 9820
   time: '2026-09-28T09:56:38.9706518+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1498
+- author: Sere
+  changes:
+  - message: Reduced melee weapon swing delay after swapping hands.
+    type: Tweak
+  id: 9821
+  time: '2026-10-01T07:41:41.5838891+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1537
+- author: Toasterblast
+  changes:
+  - message: A handful of new markings for feroxi. The sharks have been fed.
+    type: Add
+  id: 9822
+  time: '2026-10-01T07:41:41.5844849+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1552
+- author: TrixxedHeart
+  changes:
+  - message: Eidolite now spawns in chromite asteroids
+    type: Add
+  - message: Mnemolith has been made more common in chromite asteroids
+    type: Tweak
+  - message: Electrum can now be made in ore processors using gold and silver
+    type: Add
+  id: 9823
+  time: '2026-10-01T07:41:41.5845520+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1551
+- author: Ratkona
+  changes:
+  - message: Two second delay to the equipping and unequipping of hardsuits.
+    type: Add
+  id: 9824
+  time: '2026-10-01T07:41:41.5845711+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1556
+- author: ThatOneMoon, Thlrds
+  changes:
+  - message: Adds the AmmoFridge, a new solution to store ammo boxes and gun magazines, found within mercenary loot tables.
+    type: Add
+  id: 9825
+  time: '2026-10-01T07:41:41.5845859+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1566
+- author: Moodotsuki
+  changes:
+  - message: NanoMed Plus machines now stock tourniquets.
+    type: Tweak
+  - message: Medical TechFabs and Mercenary TechFabs can now print tourniquets.
+    type: Tweak
+  id: 9826
+  time: '2026-10-01T07:41:41.5846090+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1547
+- author: RobotFox
+  changes:
+  - message: updated to RT 277.2.2
+    type: Tweak
+  id: 9827
+  time: '2026-10-01T07:41:41.5846211+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1610
+- author: TrixxedHeart
+  changes:
+  - message: Added Particles, there are now new effects for gibbing and being sat on fire!
+    type: Add
+  id: 9828
+  time: '2026-10-01T07:41:41.5846816+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1432
+- author: SalamanderSkies
+  changes:
+  - message: Sector command now spawns with the Bluespace channel pre-installed into their headset.
+    type: Fix
+  - message: The McCargo bluespace event now announces correctly.
+    type: Fix
+  - message: Removed the free Science encryption key from the Mantis headsets.
+    type: Remove
+  - message: Removed Cargo (comms).
+    type: Remove
+  id: 9829
+  time: '2026-10-01T07:41:41.5847105+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1598
+- author: ThatOneMoon
+  changes:
+  - message: Omnizine has been significantly rebalanced, it now heals more per unit than it did previously but does it over a much longer period of time, and has a minor OD effect now
+    type: Tweak
+  - message: Interdynes now cost 2 TC (from 1 TC)
+    type: Tweak
+  - message: Combat Medipens now cost 1 TC (from 3 TC) and contain 20u Polly and 10u Derma (from 25 Omni and 5u Tranex)
+    type: Tweak
+  id: 9830
+  time: '2026-10-01T07:41:41.5847317+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1501
