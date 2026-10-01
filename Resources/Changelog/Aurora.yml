@@ -3625,3 +3625,10 @@ Entries:
   id: 9830
   time: '2026-10-01T07:41:41.5847317+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1501
+- author: fancyplanks
+  changes:
+  - message: Magnet code had a massive sweep up.
+    type: Tweak
+  id: 9831
+  time: '2026-10-01T08:25:54.2075817+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1494
