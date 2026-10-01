@@ -41,7 +41,8 @@
         - Book
   - type: MagnetPickup # Frontier
     magnetEnabled: false
-    magnetCanBeEnabled: false
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: false Aurora's Song - Magnet Rewrite
   # Frontier: port toggle from White Dream
   - type: ItemToggle
     soundActivate: &soundActivate
@@ -57,3 +58,6 @@
     off: item-toggle-examine-magnet-off
   - type: Appearance
   # End Frontier
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 5
+    looping: true

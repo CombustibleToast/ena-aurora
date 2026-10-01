@@ -6,7 +6,8 @@
   components:
   - type: MagnetPickup
     magnetEnabled: false
-    magnetCanBeEnabled: false
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: true Aurora's Song - Magnet Rewrite
   - type: Sprite
     sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi
     layers:
@@ -56,6 +57,9 @@
   - type: NFConstructionBag
   - type: Item # Aurora
     size: Normal # Aurora
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 5
+    looping: true
 
 - type: entity
   parent: ConstructionBag

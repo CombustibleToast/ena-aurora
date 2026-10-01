@@ -1,4 +1,4 @@
-﻿using Content.Shared.Administration.Logs;
+using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
 using Content.Shared.DeviceLinking;
 using Content.Shared.EntityTable;
@@ -146,6 +146,24 @@ public sealed partial class TriggerSystem : EntitySystem
 
         _adminLogger.Add(LogType.Trigger, $"A timer trigger was stopped before triggering on entity {ToPrettyString(ent.Owner):timer}");
         return true;
+    }
+
+    /// <summary>
+    /// Aurora's Song - Magnet Rewrite
+    /// Restarts the timer if it is already active
+    /// </summary>
+    public void RestartTimer(Entity<TimerTriggerComponent?> ent)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+
+        if (!TryComp<ActiveTimerTriggerComponent>(ent, out var activeTimer))
+            return; // the timer is not active
+
+        ent.Comp.NextTrigger = _timing.CurTime + ent.Comp.Delay;
+        var delay = ent.Comp.InitialBeepDelay ?? ent.Comp.BeepInterval;
+        ent.Comp.NextBeep = _timing.CurTime + delay;
+        Dirty(ent);
     }
 
     /// <summary>

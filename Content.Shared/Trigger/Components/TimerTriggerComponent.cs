@@ -23,6 +23,13 @@ public sealed partial class TimerTriggerComponent : Component
     public List<string> KeysIn = new() { TriggerSystem.DefaultTriggerKey };
 
     /// <summary>
+    /// Aurora's Song - Magnet Rewrite
+    /// Sets the timer to restart upon hitting the time
+    /// </summary>
+    [DataField("looping"), AutoNetworkedField]
+    public bool LoopingTimer = false;
+
+    /// <summary>
     /// The key that will trigger once the timer is finished.
     /// </summary>
     [DataField, AutoNetworkedField]

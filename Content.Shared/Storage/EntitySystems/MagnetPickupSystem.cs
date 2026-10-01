@@ -16,6 +16,14 @@ namespace Content.Shared.Storage.EntitySystems;
 /// <summary>
 /// <see cref="MagnetPickupComponent"/>
 /// </summary>
+///
+
+/*
+ * Aurora's song - Magnet Rewrite
+ * Migrated to Content.Shared._AS.Storage.EntitySystems
+/*
+
+/*
 public sealed partial class MagnetPickupSystem : EntitySystem
 {
     [Dependency] private IGameTiming _timing = default!;
@@ -206,3 +214,4 @@ public sealed partial class MagnetPickupSystem : EntitySystem
         }
     }
 }
+*/

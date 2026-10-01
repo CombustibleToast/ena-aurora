@@ -64,7 +64,8 @@
   - type: MagnetPickup
     range: 1.5 # Ore bag has a range of 1.0
     magnetEnabled: false
-    magnetCanBeEnabled: false
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: false Aurora's Song - Magnet Rewrite
   - type: Fixtures
     fixtures:
       fix1:
@@ -88,6 +89,22 @@
   - type: ItemToggleExamine
     on: item-toggle-examine-magnet-on
     off: item-toggle-examine-magnet-off
+    # Aurora's Song - Magnet Rewrite
+  - type: TimerTrigger 
+    delay: 5
+    looping: true
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - On
+      - Off
+      - Toggle
+      - Trigger
+    # Aurora's Song Edit End
 
 #region ore box
 - type: entity

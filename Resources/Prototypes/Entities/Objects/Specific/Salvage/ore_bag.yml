@@ -6,7 +6,8 @@
   components:
   - type: MagnetPickup
     magnetEnabled: false # Frontier
-    magnetCanBeEnabled: false # Frontier
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: false # Frontier Aurora's Song - Magnet Rewrite
   - type: Sprite
     sprite: Objects/Specific/Mining/ore_bag.rsi
     # Frontier: layered sprite
@@ -56,6 +57,9 @@
           True: { visible: True }
           False: { visible: False }
   # End DeltaV Additions
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 5
+    looping: true
 
 - type: entity
   parent: OreBag
@@ -64,8 +68,8 @@
   description: A large ore bag built into the frame of a mining cyborg. Magnetises any nearby ores when held.
   components:
     - type: MagnetPickup
-      slotFlags: null
-      requireActiveHand: true
+      # slotFlags: null Aurora's Song - Magnet Rewrite
+      # requireActiveHand: true Aurora's Song - Magnet Rewrite
     - type: Storage
       grid:
       - 0,0,9,5

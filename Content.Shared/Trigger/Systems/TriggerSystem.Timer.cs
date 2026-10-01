@@ -1,4 +1,4 @@
-﻿using Content.Shared.Trigger.Components;
+using Content.Shared.Trigger.Components;
 using Content.Shared.Trigger.Components.Triggers;
 using Content.Shared.Examine;
 using Content.Shared.Verbs;
@@ -172,7 +172,12 @@ public sealed partial class TriggerSystem
                 var user = TerminatingOrDeleted(timer.User) ? null : timer.User;
                 Trigger(uid, user, timer.KeyOut);
                 // Remove after triggering to prevent it from starting the timer again
-                RemComp<ActiveTimerTriggerComponent>(uid);
+                // Aurora's Song - Magnet Rewrite
+                // Don't remove the active timer if the timer is looping
+                if (!timer.LoopingTimer)
+                    RemComp<ActiveTimerTriggerComponent>(uid);
+                else
+                    RestartTimer((uid, timer));
                 if (TryComp<AppearanceComponent>(uid, out var appearance))
                     _appearance.SetData(uid, TriggerVisuals.VisualState, TriggerVisualState.Unprimed, appearance);
             }

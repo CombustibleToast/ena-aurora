@@ -175,7 +175,8 @@
   - type: Dumpable
   - type: MagnetPickup # Frontier
     magnetEnabled: false # Frontier
-    magnetCanBeEnabled: false # Frontier
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: false # Frontier Aurora's Song - Magnet Rewrite
   - type: NFPlantBag # Frontier
   # Begin DeltaV Additions: toggle magnet from White Dream
   - type: ItemToggle
@@ -198,3 +199,6 @@
           True: { visible: True }
           False: { visible: False }
   # End DeltaV Additions
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 5
+    looping: true

@@ -6,6 +6,13 @@ namespace Content.Shared.Storage.Components;
 /// <summary>
 /// Applies an ongoing pickup area around the attached entity.
 /// </summary>
+
+/*
+ * Aurora's Song - Magnet Rewrite
+ * Migrated to Content.Shared._AS.Storage.Components
+*/
+
+/*
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]
 [AutoGenerateComponentPause]
@@ -48,3 +55,4 @@ public sealed partial class MagnetPickupComponent : Component
     public int MagnetTogglePriority = 3;
     // End Frontier: togglable magnets
 }
+*/
