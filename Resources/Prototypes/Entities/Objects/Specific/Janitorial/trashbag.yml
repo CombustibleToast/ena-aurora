@@ -42,6 +42,9 @@
   - type: MagnetPickup # Frontier
     magnetEnabled: false # Frontier
   - type: GoblinPreciousTrashBag # Frontier
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 2
+    looping: true
 
 - type: entity
   name: trash bag

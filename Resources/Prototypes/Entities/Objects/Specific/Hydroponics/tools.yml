@@ -200,5 +200,5 @@
           False: { visible: False }
   # End DeltaV Additions
   - type: TimerTrigger # Aurora's Song - Magnet Rewrite
-    delay: 5
+    delay: 2
     looping: true

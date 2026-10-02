@@ -91,7 +91,7 @@
     off: item-toggle-examine-magnet-off
     # Aurora's Song - Magnet Rewrite
   - type: TimerTrigger 
-    delay: 5
+    delay: 2
     looping: true
   - type: DeviceNetwork
     deviceNetId: Wireless
