@@ -3632,3 +3632,19 @@ Entries:
   id: 9831
   time: '2026-10-01T08:25:54.2075817+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1494
+- author: dragydevi
+  changes:
+  - message: CMO Turtleneck is now foldable
+    type: Add
+  id: 9832
+  time: '2026-10-03T07:41:38.9948689+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1570
+- author: fancyplanks
+  changes:
+  - message: Magnet timers should be back to normal.
+    type: Fix
+  - message: Trash bag magnets don't require constant toggling
+    type: Fix
+  id: 9833
+  time: '2026-10-03T07:41:38.9952459+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1622
