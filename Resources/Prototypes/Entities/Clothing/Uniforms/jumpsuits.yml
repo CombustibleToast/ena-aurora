@@ -252,7 +252,7 @@
     sprite: Clothing/Uniforms/Jumpsuit/cmo.rsi
 
 - type: entity
-  parent: ClothingUniformBase # Frontier: remove BaseCommandContraband
+  parent: [ClothingUniformBase, ClothingUniformFoldableBase ] # Frontier: remove BaseCommandContraband, Aurora's Song - Added ClothingUniformFoldableBase
   id: ClothingUniformJumpsuitCMOTurtle
   name: chief medical officer's turtleneck jumpsuit
   description: It's a turtleneck worn by those with the experience to be Chief Medical Officer. It provides minor biological protection.
