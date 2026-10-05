@@ -9,7 +9,6 @@
     channels:
     - Binary
     - Common
-    - Command
     - Engineering
     - Medical
     - Science
@@ -22,7 +21,6 @@
     channels:
     - Binary
     - Common
-    - Command
     - Engineering
     - Medical
     - Science
