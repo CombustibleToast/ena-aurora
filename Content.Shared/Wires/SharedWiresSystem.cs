@@ -103,7 +103,7 @@ public abstract partial class SharedWiresSystem : EntitySystem
 
     private void OnGetVerbs(Entity<WiresPanelComponent> ent, ref GetVerbsEvent<AlternativeVerb> args)
     {
-        if (!IsPanelOpen(ent.Owner))
+        if (!IsPanelOpen(ent.Owner) || !UI.HasUi(ent,WiresUiKey.Key)) // Aurora's Song - Check if a UI exists before adding a verb to open said UI
             return;
 
         var actor = args.User;
