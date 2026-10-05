@@ -556,6 +556,18 @@
       collection: IPCWhirrs
       params:
         variation: 0
+    Crying: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/cry_robot_1.ogg
+      params:
+        variation: 0.125
+    Whistle: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      params:
+        variation: 0.125
+    Sigh: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
+      params:
+        variation: 0.125
 
 - type: emoteSounds
   id: UnisexSiliconXenoborg
@@ -584,6 +596,18 @@
       collection: IPCWhirrs
       params:
         variation: 0
+    Crying: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/cry_robot_1.ogg
+      params:
+        variation: 0.125
+    Whistle: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      params:
+        variation: 0.125
+    Sigh: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
+      params:
+        variation: 0.125
 
 # Vulp Sounds
 # Aurora's Song - Disable upstream vulpkanin
