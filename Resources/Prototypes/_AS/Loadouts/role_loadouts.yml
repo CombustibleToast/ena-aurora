@@ -26,7 +26,7 @@
   - MercenaryLongarm
   - MercenarySidearm
   - MercenaryAmmo
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 #region Medical
@@ -110,7 +110,7 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 - type: roleLoadout
@@ -136,7 +136,7 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 - type: roleLoadout
@@ -162,7 +162,7 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 - type: roleLoadout
@@ -188,7 +188,7 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 - type: roleLoadout
@@ -264,7 +264,7 @@
   - ContractorEncryptionKey
   - SergeantBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 - type: roleLoadout
@@ -290,7 +290,7 @@
   - ContractorEncryptionKey
   - SergeantBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 - type: roleLoadout
@@ -315,7 +315,7 @@
   - ContractorImplanter
   - CommissionerBackpackItems
   - ContractorHandItems
-  - SLESpeciesSpecific
+  - NFSpeciesSpecific
   - ASDecapoidSpeciesSpecific
 
 #region Command
