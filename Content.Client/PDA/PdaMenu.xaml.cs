@@ -3,6 +3,7 @@ using Content.Shared.PDA;
 using Robust.Shared.Utility;
 using Content.Shared.CartridgeLoader;
 using Content.Client.Message;
+using Content.Client.Playtime; // Aurora's Song
 using Content.Shared._AS.PersistentSystems; // Aurora's Song
 using Content.Shared._AS.Utils; // Aurora's Song - Allow round timer to go over 24h
 using Content.Shared._NF.Bank;
@@ -21,6 +22,7 @@ namespace Content.Client.PDA
         [Dependency] private IClipboardManager _clipboard = null!;
         [Dependency] private IGameTiming _gameTiming = default!;
         [Dependency] private IEntitySystemManager _entitySystem = default!;
+        [Dependency] private ClientsidePlaytimeTrackingManager _playtimeTracking = default!; // Aurora's Song
         private readonly ClientGameTicker _gameTicker;
 
         public const int HomeView = 0;
@@ -36,6 +38,7 @@ namespace Content.Client.PDA
         private string _stationName = Loc.GetString("comp-pda-ui-unknown");
         private string _alertLevel = Loc.GetString("comp-pda-ui-unknown");
         private string _instructions = Loc.GetString("comp-pda-ui-unknown");
+        private double _playtime = 0; // Aurora's Song - Playtime tracker
 
 
         private string _balance = Loc.GetString("comp-pda-ui-unknown"); // Frontier
@@ -231,6 +234,10 @@ namespace Content.Client.PDA
                 "comp-pda-ui-station-alert-level-instructions",
                 ("instructions", _instructions))
             );
+            // Aurora's Song - Start - I might as well get my grubby paws in here too
+            _playtime = Math.Round(_playtimeTracking.PlaytimeMinutesToday / 60f, 1);
+            PlaytimeLabel.SetMarkup(Loc.GetString("lobby-state-playtime-comment-normal", ("hours", _playtime)));
+            // Aurora's Song - End
 
             AddressLabel.Text = state.Address?.ToUpper() ?? " - ";
 

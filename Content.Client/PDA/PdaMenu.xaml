@@ -65,6 +65,11 @@
                 <RichTextLabel Name="ShuttleDeedLabel" Access="Public"/>
             </ContainerButton>
             <!-- End Frontier -->
+            <!-- Aurora's Song - Start -->
+            <ContainerButton VerticalAlignment="Bottom" VerticalExpand="True" Name="PlaytimeButton">
+                <RichTextLabel Name="PlaytimeLabel" Access="Public"/>
+            </ContainerButton>
+            <!-- Aurora's Song - End -->
         </BoxContainer>
         <ScrollContainer HorizontalExpand="True" VerticalExpand="True" HScrollEnabled="True">
             <BoxContainer Orientation="Vertical"
