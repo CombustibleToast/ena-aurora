@@ -86,6 +86,8 @@
       collection: Pops # Imp
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
+    Whirr:
+      collection: IPCWhirrs
 
 - type: emoteSounds
   id: MaleVulpkanin

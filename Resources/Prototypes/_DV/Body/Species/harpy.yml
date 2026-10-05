@@ -31,7 +31,7 @@
 #      limit: 2
 #      required: false
     enum.HumanoidVisualLayers.RArmExtension:
-      limit: 1 
+      limit: 1
       required: true
       default: [ HarpyWingDefaultHuescale ]
     enum.HumanoidVisualLayers.LHand:
@@ -155,7 +155,7 @@
   - type: Speech
     speechSounds: Harpy
     speechVerb: Harpy
-    allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Honk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'Beep', 'HarpyRev', 'HarpyCaw', 'Squish', 'Chitter', 'Chirp', 'Squeak', 'Click'] # Aurora's Song - Remove Harpy in front of unified emotes
+    allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Honk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'Beep', 'HarpyRev', 'HarpyCaw', 'Squish', 'Chitter', 'Chirp', 'Squeak', 'Click', 'Whirr'] # Aurora's Song - Remove Harpy in front of unified emotes, added 'whirr'
   - type: Vocal
     sounds:
       Male: SoundsHarpy
