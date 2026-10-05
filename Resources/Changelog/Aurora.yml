@@ -3648,3 +3648,17 @@ Entries:
   id: 9833
   time: '2026-10-03T07:41:38.9952459+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1622
+- author: TrixxedHeart
+  changes:
+  - message: Added digital signs that can be crafted and drawn on by players, with functionality for saving and exporting designs.
+    type: Add
+  id: 9834
+  time: '2026-10-05T07:46:49.3347555+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1587
+- author: KiasT4DisasT4
+  changes:
+  - message: Made impstation hairstyles usable by IPCs.
+    type: Tweak
+  id: 9835
+  time: '2026-10-05T07:46:49.3353774+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1580
