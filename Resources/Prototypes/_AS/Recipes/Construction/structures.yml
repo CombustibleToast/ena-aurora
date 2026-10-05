@@ -305,3 +305,162 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+# DeltaV Wooden Railings
+- type: construction
+  id: RailingWood
+  name: construction-recipe-railing-wood
+  graph: RailingWood
+  startNode: start
+  targetNode: RailingWood
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodCorner
+  name: construction-recipe-railing-wood-corner
+  graph: RailingWoodCorner
+  startNode: start
+  targetNode: RailingWoodCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodCornerSmall
+  name: construction-recipe-railing-wood-corner-small
+  graph: RailingWoodCornerSmall
+  startNode: start
+  targetNode: RailingWoodCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodRound
+  name: construction-recipe-railing-wood-round
+  graph: RailingWoodRound
+  startNode: start
+  targetNode: RailingWoodRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+# DeltaV Modern Railings
+- type: construction
+  id: RailingModern
+  name: construction-recipe-railing-modern
+  graph: RailingModern
+  startNode: start
+  targetNode: RailingModern
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernCorner
+  name: construction-recipe-railing-modern-corner
+  graph: RailingModernCorner
+  startNode: start
+  targetNode: RailingModernCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernCornerSmall
+  name: construction-recipe-railing-modern-corner-small
+  graph: RailingModernCornerSmall
+  startNode: start
+  targetNode: RailingModernCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernRound
+  name: construction-recipe-railing-modern-round
+  graph: RailingModernRound
+  startNode: start
+  targetNode: RailingModernRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+# DeltaV Modern Railings (Grey)
+- type: construction
+  id: RailingModernGrey
+  name: construction-recipe-railing-modern-grey
+  graph: RailingModernGrey
+  startNode: start
+  targetNode: RailingModernGrey
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernGreyCorner
+  name: construction-recipe-railing-modern-grey-corner
+  graph: RailingModernGreyCorner
+  startNode: start
+  targetNode: RailingModernGreyCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernGreyCornerSmall
+  name: construction-recipe-railing-modern-grey-corner-small
+  graph: RailingModernGreyCornerSmall
+  startNode: start
+  targetNode: RailingModernGreyCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernGreyRound
+  name: construction-recipe-railing-modern-grey-round
+  graph: RailingModernGreyRound
+  startNode: start
+  targetNode: RailingModernGreyRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
