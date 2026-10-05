@@ -1,3 +1,130 @@
+#   Snouts
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - BaseSnout
+  id: ASIPCSnoutBeak
+  sprites:
+    - sprite: _AS/Mobs/Customization/IPC/snouts.rsi
+      state: beak
+
+#   Vox tails
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTail
+  id: IPCVoxTail
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailShort
+  id: IPCVoxTailShort
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailBig
+  id: IPCVoxTailBig
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailSpikes
+  id: IPCVoxTailSpikes
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailDocked
+  id: IPCVoxTailDocked
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailNub
+  id: IPCVoxTailNub
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailRaptor
+  id: IPCVoxTailRaptor
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailShort1
+  id: IPCVoxTailShort1
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailShort2
+  id: IPCVoxTailShort2
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailBalled
+  id: IPCVoxTailBalled
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailSplit
+  id: IPCVoxTailSplit
+  forcedColoring: false
+
+# animated Vox variants
+
+- type: marking
+  parent: VoxTailAnimated
+  id: IPCVoxTailAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailShortAnimated
+  id: IPCVoxTailShortAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailBigAnimated
+  id: IPCVoxTailBigAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailSpikesAnimated
+  id: IPCVoxTailSpikesAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailDockedAnimated
+  id: IPCVoxTailDockedAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailSplitAnimated
+  id: IPCVoxTailSplitAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+# Fish Markings
 - type: marking
   id: IPCHeadSideFins
   bodyPart: HeadSide
