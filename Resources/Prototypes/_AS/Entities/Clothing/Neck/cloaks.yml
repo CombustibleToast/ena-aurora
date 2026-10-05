@@ -1,3 +1,12 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: ClothingNeckCloakSyndie
+  name: syndicate cloak
+  description: An imposing cloak, worn by syndicate operatives. Very stylish and might get you arrested.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Cloaks/sanabi.rsi
+
 #region SLE
 - type: entity
   parent: ClothingNeckBase
