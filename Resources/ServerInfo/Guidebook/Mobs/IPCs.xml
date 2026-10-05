@@ -8,7 +8,19 @@
   </Box>
   Like borgs, IPCs have a positronic brain as their processing source. However, unlike them, IPCs can't be assembled. "It's cheaper to create a shell that obeys you than one that doesn't! *wink*"
 
-  ## Recharging an IPC
+ <!-- Aurora Edit Start -->## Benefits
+  -Immunity to barotrauma.
+  -Immunity to poison damage.
+  -Receive 50% [color=blue]less cold[/color] damage.
+  -Receive 50% [color=blue]less radiation[/color] damage.
+  -Do not go crit.
+
+  ## Drawbacks
+  -Dies at 120 damage.
+  -Unaffected by most chemicals.
+  -Receive 50% [color=red]more heat[/color] damage.
+  -Receive 100% [color=red]more shock[/color] damage.
+ <!-- Aurora Edit End -->## Recharging an IPC
   <Box>
     <GuideEntityEmbed Entity="APCBasic" Caption="APC Terminal"/>
     <GuideEntityEmbed Entity="BorgCharger" Caption="Borg Charger"/>
