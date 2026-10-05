@@ -1,0 +1,9 @@
+marking-IPCHeadSideFins = Fins (Side)
+marking-IPCHeadSideFins-head_fins = Fins
+marking-IPCArmFinL = Arm Fin (Left)
+marking-IPCArmFinL-arm_fin_l = Fin
+marking-IPCArmFinR = Arm Fin (Right)
+marking-IPCArmFinR-arm_fin_r = Fin
+marking-IPCTailEel = Eel Tail
+marking-IPCTailEel-tail_eel = Tail
+marking-IPCTailEel-tail_eel_overlay = Dots

@@ -1,0 +1,33 @@
+- type: marking
+  id: IPCHeadSideFins
+  bodyPart: HeadSide
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_head.rsi
+    state: head_fins
+
+- type: marking
+  id: IPCArmFinL
+  bodyPart: LArm
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_arms.rsi
+    state: arm_fin_l
+
+- type: marking
+  id: IPCArmFinR
+  bodyPart: RArm
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_arms.rsi
+    state: arm_fin_r
+
+- type: marking
+  id: IPCTailEel
+  bodyPart: Tail
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_tail.rsi
+    state: tail_eel
+  - sprite: _AS/Mobs/Customization/IPC/ipc_tail.rsi
+    state: tail_eel_overlay
