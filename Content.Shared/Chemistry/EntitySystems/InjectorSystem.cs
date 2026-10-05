@@ -607,6 +607,7 @@ public sealed partial class InjectorSystem : EntitySystem
             LocId msg = target.Owner == user ? "injector-component-target-is-empty-message-self" : "injector-component-target-is-empty-message";
             var targetIdentity = Identity.Entity(target, EntityManager);
             _popup.PopupClient(Loc.GetString(msg, ("target", targetIdentity)), injector.Owner, user);
+            _solutionContainer.TryAddSolution(targetSolution, temporarilyRemovedSolution); // Aurora's Song - Without this, the temporary solution doesn't get readded! this is bad.
             return false;
         }
 
@@ -614,6 +615,7 @@ public sealed partial class InjectorSystem : EntitySystem
         if (target.Comp != null)
         {
             DrawFromBlood(injector, user, (target.Owner, target.Comp), injector.Comp.Solution.Value, realTransferAmount);
+            _solutionContainer.TryAddSolution(targetSolution, temporarilyRemovedSolution); // Aurora's Song - I don't think there's anything that could make a bug exist without this line *yet*, but if there *was* a filterable syringe, without this line, you could erase someone's blood.
             return true;
         }
 
