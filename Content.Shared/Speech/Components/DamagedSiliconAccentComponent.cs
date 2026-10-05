@@ -78,4 +78,11 @@ public sealed partial class DamagedSiliconAccentComponent : Component
     /// </summary>
     [DataField]
     public float ProbToCorruptDotFromPower = 0.6f;
+
+    // Aurora's Song: Added min damage threshold
+    /// <summary>
+    /// The minimum amount of damage before letters will start being corrupted
+    /// </summary>
+    [DataField]
+    public float MinDamageToCorrupt = 30f;
 }

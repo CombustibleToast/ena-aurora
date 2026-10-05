@@ -139,7 +139,8 @@ public sealed partial class DamagedSiliconAccentSystem : EntitySystem
                 _ => disableCorruption,
             };
 
-            if (disableCorruption == -1  && _random.Prob(chanceToCorruptLetter)) // Corrupt!
+            // Aurora's Song: Added min damage threshold
+            if (disableCorruption == -1 && _random.Prob(chanceToCorruptLetter) && totalDamage >= ent.Comp.MinDamageToCorrupt) // Corrupt!
             // End Aurora's Song
             {
                 outMsg.Append(CorruptLetterDamage(letter));
