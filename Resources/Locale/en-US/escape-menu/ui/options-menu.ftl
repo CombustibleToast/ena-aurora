@@ -51,6 +51,12 @@ ui-options-misc-label = Misc
 ui-options-interface-label = Interface
 
 
+## Funky Station
+ui-options-crayon-overlay-transparency = Crayon overlay transparency
+
+## Funky Station
+ui-options-crayon-overlay-transparency = Crayon overlay transparency
+
 ui-options-auto-fill-highlights = Automatically set the highlights list based on your character's name and job
 ui-options-highlights-color = Highlights color:
 # Frontier: "an"<"a", "text"<"sentence"
