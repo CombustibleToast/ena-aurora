@@ -143,7 +143,8 @@ public sealed partial class GunExecutionSystem : EntitySystem
         if (!TryComp<DamageableComponent>(victim, out var damageable))
             return;
 
-        var takeAmmo = new TakeAmmoEvent(1, new List<(EntityUid? Entity, IShootable Shootable)>(), Transform(attacker).Coordinates, attacker);
+        // Aurora's Song - Frontier made TakeAmmoEvent distinguish between firing and removing ammo, based but broke my code.
+        var takeAmmo = new TakeAmmoEvent(1, new List<(EntityUid? Entity, IShootable Shootable)>(), Transform(attacker).Coordinates, attacker, willBeFired: true);
 
         RaiseLocalEvent(weapon, takeAmmo);
 
