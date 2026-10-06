@@ -57,6 +57,9 @@
         acts: [ "Destruction" ]
   - type: ToggleableVisuals # Aurora's Song | ToggleableLightVisuals > ToggleableVisuals
     spriteLayer: null
+  - type: Tag # Aurora's Song - Fix Torches
+    tags:
+    - Torch
 # - type: PointLight # Aurora's Song | No more pointlight even while unlit. makes the intended behavior of how to light the torch confusing
 #   color: "#e39c40"
 #   radius: 5

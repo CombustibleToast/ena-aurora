@@ -1,6 +1,7 @@
 using Content.Shared._Starfall.Particles;
 using Content.Shared.Atmos;
 using Content.Shared.Atmos.Components;
+using Content.Shared.Tag; // Aurora's Song - Fix Candles
 using Robust.Client.GameObjects;
 using Robust.Shared.Prototypes;
 
@@ -14,9 +15,11 @@ public sealed partial class FlammableParticleSystem : EntitySystem
     [Dependency] private ParticleSystem _particles = null!;
     [Dependency] private AppearanceSystem _appearance = null!;
     [Dependency] private SharedTransformSystem _transform = null!;
+    [Dependency] private TagSystem _tags = null!; // Aurora's Song - Fix Candles
 
     private static readonly ProtoId<ParticleEffectPrototype> FireEffect  = "SfFireContinuous";
     private static readonly ProtoId<ParticleEffectPrototype> SmokeEffect = "SfFireSmoke";
+    private static readonly ProtoId<TagPrototype>[] IgnoredTag = ["Candle", "Torch"]; // Aurora's Song - Fix Candles
 
     private const float MaxStacks = 10f;
 
@@ -38,6 +41,9 @@ public sealed partial class FlammableParticleSystem : EntitySystem
 
     private void OnAppearanceChange(Entity<FlammableComponent> ent, ref AppearanceChangeEvent args)
     {
+        if (_tags.HasAnyTag(ent, IgnoredTag)) // Aurora's Song - Fix Candles
+            return;
+
         if (!_appearance.TryGetData(ent, FireVisuals.OnFire, out bool onFire))
             onFire = false;
 
