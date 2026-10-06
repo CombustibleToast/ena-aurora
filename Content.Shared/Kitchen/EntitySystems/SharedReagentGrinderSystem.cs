@@ -328,7 +328,7 @@ public abstract partial class SharedReagentGrinderSystem : EntitySystem
 
                 // Maximum number of items we can process in the stack without going over AvailableVolume
                 // We add a small tolerance, because floats are inaccurate.
-                var fitsCount = (int)(stack.Count * FixedPoint2.Min(beakerSolution.AvailableVolume / totalVolume + 0.01, 1));
+                var fitsCount = Math.Min(stack.Count, (int)(beakerSolution.AvailableVolume / solution.Volume + 0.01)); // Aurora's Song - (int) apparently rounds down, so with the fudge factor, this should work for our stack sizes
                 if (fitsCount <= 0)
                     continue;
 
