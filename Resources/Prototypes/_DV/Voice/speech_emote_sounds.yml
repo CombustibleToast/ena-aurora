@@ -86,8 +86,10 @@
       collection: Pops # Imp
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
-    Whirr:
-      collection: IPCWhirrs
+    Yawn: # Aurora's Song
+      collection: HarpyYawns # Aurora's Song
+    Whirr: # Aurora's Song
+      collection: IPCWhirrs # Aurora's Song
 
 - type: emoteSounds
   id: MaleVulpkanin
