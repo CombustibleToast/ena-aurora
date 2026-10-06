@@ -14,6 +14,7 @@
   - type: Edible # Aurora's Song - Food>Edible
     trash:
       - DragonEggshells
+  - type: BadFood # Aurora's Song - I hate rats.
   - type: DamageOnHighSpeedImpact
     minimumSpeed: 0.1
     damage:
