@@ -342,3 +342,12 @@
   - sprite: _Impstation/Mobs/Customization/Vox/tail.rsi
     state: short2
 
+- type: marking
+  parent: TattooEyeVoxLeft
+  id: VoxEyesGlowLeft
+  shader: unshaded
+
+- type: marking
+  parent: TattooEyeVoxRight
+  id: VoxEyesGlowRight
+  shader: unshaded

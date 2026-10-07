@@ -140,3 +140,7 @@ marking-VoxTailShort2-short2 = Tail
 marking-VoxTailSmallPlume-smallplume = Small Plume
 marking-VoxTailSpines-spines = Tail Spines
 marking-VoxSunAndMoon-sunandmoon = Sun and Moon
+marking-VoxEyesGlowLeft = Glowing Eye (Left)
+marking-VoxEyesGlowLeft-tattoo_eye_vox_l = Glowing Eye (Left)
+marking-VoxEyesGlowRight = Glowing Eye (Right)
+marking-VoxEyesGlowRight-tattoo_eye_vox_r = Glowing Eye (Right)
