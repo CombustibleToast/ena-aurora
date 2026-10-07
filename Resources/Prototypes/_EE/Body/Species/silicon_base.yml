@@ -121,4 +121,5 @@
     - type: ToggleUndergarment # Aurora's Song - Add undergarment toggle
     - type: ToggleBeltLayer # Aurora's Song - Add belt layer toggle
     - type: Carriable # Aurora's Song - Move carriable to species base
+    - type: Fingerprint # Aurora's Song - Give IPCs fingerprints
 
