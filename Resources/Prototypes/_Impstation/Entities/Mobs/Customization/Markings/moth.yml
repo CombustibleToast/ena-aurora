@@ -18,7 +18,7 @@
   id: ChestChimeraMaleMoth
   bodyPart: Chest
   groupWhitelist: [ Moth ]
-  sexRestriction: [ Male, Unsexed ]
+  sexRestriction: [ Male ] # Aurora's Song
   coloring:
     default:
       type:
@@ -41,7 +41,7 @@
   id: ChestTwistingLeftMaleMoth
   bodyPart: Chest
   groupWhitelist: [ Moth ]
-  sexRestriction: [ Male, Unsexed ]
+  sexRestriction: [ Male ] # Aurora's Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/chest.rsi
     state: twistingleftm
@@ -59,7 +59,7 @@
   id: ChestTwistingRightMaleMoth
   bodyPart: Chest
   groupWhitelist: [ Moth ]
-  sexRestriction: [ Male, Unsexed ]
+  sexRestriction: [ Male ] # Aurora's Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/chest.rsi
     state: twistingrightm
