@@ -49,7 +49,7 @@ public sealed partial class PinpointerComponent : Component
     [DataField]
     public bool CanRetarget;
 
-    [ViewVariables]
+    [ViewVariables, AutoNetworkedField] // Aurora's Song
     public EntityUid? Target = null;
 
     [ViewVariables, AutoNetworkedField]
