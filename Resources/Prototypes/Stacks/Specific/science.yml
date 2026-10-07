@@ -9,5 +9,5 @@
   parent: BaseSmallStack
   id: Manipulator
   name: stack-micro-manipulator
-  icon: { sprite: /Textures/Objects/Misc/stock_parts.rsi, state: micro_mani }
+  icon: { sprite: /Textures/_NF/Objects/Misc/stock_parts.rsi, state: micro_mani } # Aurora's Song - Set this back to the NF namespace
   spawn: MicroManipulatorStockPart
