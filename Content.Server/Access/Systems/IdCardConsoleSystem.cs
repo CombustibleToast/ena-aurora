@@ -201,7 +201,7 @@ public sealed partial class IdCardConsoleSystem : SharedIdCardConsoleSystem
         if ((!TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
             || keyStorage.Key is not { } key
             || !_record.TryGetRecord<GeneralStationRecord>(key, out _))
-            && newJobProto != string.Empty)
+            && newJobProto != string.Empty && newJobProto != null) // Aurora's Song - string.Empty != null
         {
             Comp<IdCardComponent>(targetId).JobPrototype = newJobProto;
         }
