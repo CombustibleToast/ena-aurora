@@ -174,7 +174,7 @@
   - type: Speech
     speechVerb: Vox
     speechSounds: Vox
-    allowedEmotes: ['Click', 'Chitter', 'Coo', 'Hiss', 'Thump'] # _Starfall Add Thump
+    allowedEmotes: ['Click', 'Chitter', 'HarpyCaw', 'Coo', 'Hiss', 'Thump'] # _Starfall Add Thump # Aurora's Song - Add Coo/Caw/Hiss
   - type: TypingIndicator
     proto: vox
   - type: CreamPied

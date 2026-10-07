@@ -284,6 +284,8 @@
     Belch: # Frontier
       collection: Belch # Frontier
     # Aurora's Song Start
+    HarpyCaw:
+      collection: HarpyCaws
     Coo:
       collection: VoxCoo
     Hiss:
