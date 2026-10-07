@@ -1113,6 +1113,12 @@
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  # Aurora's Song Start - Shuttle Walls/Windows in RCD
+  - type: RCDDeconstructable
+    cost: 6
+    delay: 8
+    fx: EffectRCDDeconstruct8
+  # Aurora's Song End
 
 - type: entity
   parent: WallSolid

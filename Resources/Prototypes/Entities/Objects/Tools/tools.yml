@@ -318,6 +318,14 @@
     - HVCable
     - CableTerminal
     - Deconstruct
+    # Aurora's Song Start - Shuttle Walls and Windows
+    - WallSolidDiagonal
+    - WallShuttle
+    - WallShuttleInterior
+    - WallShuttleDiagonal
+    - ShuttleWindow
+    - ShuttleWindowDiagonal
+    # Aurora's Song End
   - type: LimitedCharges
     maxCharges: 30
   - type: Sprite

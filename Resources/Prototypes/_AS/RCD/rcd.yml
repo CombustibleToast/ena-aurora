@@ -1,0 +1,81 @@
+# Solid Walls
+- type: rcd
+  id: WallSolidDiagonal
+  category: WallsAndFlooring
+  sprite: /Textures/_AS/Interface/Radial/RCD/solid_diagonal.png
+  mode: ConstructObject
+  prototype: WallSolidDiagonal
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+# Shuttle Walls
+- type: rcd
+  id: WallShuttle
+  category: WallsAndFlooring
+  sprite: /Textures/_AS/Interface/Radial/RCD/shuttlewall.png
+  mode: ConstructObject
+  prototype: WallShuttle
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallShuttleInterior
+  category: WallsAndFlooring
+  sprite: /Textures/_AS/Interface/Radial/RCD/shuttlewall_interior.png
+  mode: ConstructObject
+  prototype: WallShuttleInterior
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: WallShuttleDiagonal
+  category: WallsAndFlooring
+  sprite: /Textures/_AS/Interface/Radial/RCD/shuttlewall_diagonal.png
+  mode: ConstructObject
+  prototype: WallShuttleDiagonal
+  cost: 6
+  delay: 2
+  collisionMask: FullTileMask
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
+
+# Windows
+- type: rcd
+  id: ShuttleWindow
+  category: WindowsAndGrilles
+  sprite: /Textures/_AS/Interface/Radial/RCD/shuttlewindow.png
+  mode: ConstructObject
+  prototype: ShuttleWindow
+  cost: 5
+  delay: 2
+  collisionMask: Impassable
+  rules:
+  - IsWindow
+  rotation: Fixed
+  fx: EffectRCDConstruct2
+
+- type: rcd
+  id: ShuttleWindowDiagonal
+  category: WindowsAndGrilles
+  sprite: /Textures/_AS/Interface/Radial/RCD/shuttlewindow_diagonal.png
+  mode: ConstructObject
+  prototype: ShuttleWindowDiagonal
+  cost: 5
+  delay: 2
+  collisionMask: Impassable
+  rules:
+  - IsWindow
+  rotation: User
+  fx: EffectRCDConstruct2
+  allowMultiDirection: true
