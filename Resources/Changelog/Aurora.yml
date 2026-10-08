@@ -3662,3 +3662,242 @@ Entries:
   id: 9835
   time: '2026-10-05T07:46:49.3353774+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1580
+- author: bardicJackal
+  changes:
+  - message: Made pinpointers work even after reconnecting
+    type: Fix
+  id: 9836
+  time: '2026-10-08T07:42:36.5403510+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1647
+- author: SalamanderSkies
+  changes:
+  - message: Wallmount substations now drop capacitors on deconstruction.
+    type: Fix
+  id: 9837
+  time: '2026-10-08T07:42:36.5408701+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1604
+- author: Sere
+  changes:
+  - message: Shuttle walls, windows, diagonals and solid diagonals can be created via RCD.
+    type: Add
+  - message: Solid walls (diagonal) can be destroyed via RCD.
+    type: Fix
+  id: 9838
+  time: '2026-10-08T07:42:36.5410095+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1649
+- author: TrixxedHeart
+  changes:
+  - message: Fixed neck2 slot not utilizing the Vox neck displacement map
+    type: Fix
+  - message: Fixed outerClothing items that do not have a Vox-specific sprite from clipping on top of their faces
+    type: Fix
+  id: 9839
+  time: '2026-10-08T07:42:36.5410465+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1611
+- author: TrixxedHeart
+  changes:
+  - message: Vox now have glowing eye markings
+    type: Add
+  id: 9840
+  time: '2026-10-08T07:42:36.5410548+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1638
+- author: TrixxedHeart
+  changes:
+  - message: Added Vox caw emote
+    type: Add
+  id: 9841
+  time: '2026-10-08T07:42:36.5410655+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1597
+- author: bardicJackal
+  changes:
+  - message: Fixed Chimera and Twisted Scar markings for moffs
+    type: Fix
+  id: 9842
+  time: '2026-10-08T07:42:36.5410706+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1639
+- author: bardicJackal
+  changes:
+  - message: Manipulators appeared wrong in recipes. No More.
+    type: Fix
+  id: 9843
+  time: '2026-10-08T07:42:36.5410800+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1640
+- author: bardicJackal
+  changes:
+  - message: Iced coffee has been browned. sorry.
+    type: Tweak
+  id: 9844
+  time: '2026-10-08T07:42:36.5410877+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1641
+- author: bardicJackal
+  changes:
+  - message: Gives IPCs fingerprints
+    type: Tweak
+  id: 9845
+  time: '2026-10-08T07:42:36.5410925+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1645
+- author: bardicJackal
+  changes:
+  - message: fixed the ID computer bug that made everyone's icons contractor
+    type: Fix
+  id: 9846
+  time: '2026-10-08T07:42:36.5411022+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1643
+- author: AlDente
+  changes:
+  - message: Made harpies actually be able to make the yawn sound.
+    type: Fix
+  id: 9847
+  time: '2026-10-08T07:42:36.5411121+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1605
+- author: bardicJackal
+  changes:
+  - message: Made grinders stop voiding reagents with large stacks of materials
+    type: Fix
+  id: 9848
+  time: '2026-10-08T07:42:36.5411229+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1626
+- author: Parorya
+  changes:
+  - message: Candles and torches no longer look like campfires.
+    type: Fix
+  id: 9849
+  time: '2026-10-08T07:42:36.5411351+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1619
+- author: TrixxedHeart
+  changes:
+  - message: Chambered guns (the spinny ones) can execute properly again, you may play russian roulette in peace now.
+    type: Fix
+  id: 9850
+  time: '2026-10-08T07:42:36.5411558+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1621
+- author: Aldente
+  changes:
+  - message: Armblades can butcher now.
+    type: Tweak
+  id: 9851
+  time: '2026-10-08T07:42:36.5411651+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1606
+- author: AlDente
+  changes:
+  - message: Dragon have mutated to make their egg shells harder. Pests can no longer eat dragon eggs.
+    type: Tweak
+  id: 9852
+  time: '2026-10-08T07:42:36.5411811+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1607
+- author: bardicJackal
+  changes:
+  - message: Let you alt-click beakers out of biogenerators with the maintenance panels open, and removed the "View Maintenance Panel" verb from machines that don't have a UI for it
+    type: Fix
+  id: 9853
+  time: '2026-10-08T07:42:36.5411920+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1637
+- author: Phoebe51505
+  changes:
+  - message: IPC's now need 30 damage before their damaged accent starts taking affect.
+    type: Fix
+  id: 9854
+  time: '2026-10-08T07:42:36.5411981+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1635
+- author: Ratkona
+  changes:
+  - message: Added more info to the  IPC guidebook entry.
+    type: Tweak
+  id: 9855
+  time: '2026-10-08T07:42:36.5412122+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1630
+- author: BabyCarrotz
+  changes:
+  - message: The Syndicate has begun stocking Syndicate Cloaks in the SyndieDrobe at unbelievable prices. Get one, today!
+    type: Add
+  id: 9856
+  time: '2026-10-08T07:42:36.5412228+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1613
+- author: bardicJackal
+  changes:
+  - message: Made selective service droppers quit breaking jugs
+    type: Fix
+  id: 9857
+  time: '2026-10-08T07:42:36.5412293+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1628
+- author: Sere
+  changes:
+  - message: Construction Weekly now contains instructions for Delta-V's wooden and modern railings.
+    type: Add
+  id: 9858
+  time: '2026-10-08T07:42:36.5412390+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1632
+- author: bardicJackal
+  changes:
+  - message: Removed Command comms from AIs
+    type: Tweak
+  id: 9859
+  time: '2026-10-08T07:42:36.5412438+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1629
+- author: bardicJackal
+  changes:
+  - message: Made SLE Vox clock in with their breathing apparatus!
+    type: Tweak
+  id: 9860
+  time: '2026-10-08T07:42:36.5412543+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1624
+- author: bardicJackal
+  changes:
+  - message: Added a playtime reminder to the PDA!!
+    type: Add
+  id: 9861
+  time: '2026-10-08T07:42:36.5412635+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1623
+- author: TrixxedHeart
+  changes:
+  - message: IPCs now have a beak marking under snouts
+    type: Add
+  - message: IPCs can now use Vox tail markings
+    type: Add
+  id: 9862
+  time: '2026-10-08T07:42:36.5412798+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1589
+- author: Ratkona
+  changes:
+  - message: Added default IPC sfx to them emotes sigh, cry, and whistle to the Syndie and  Xorg speech synth trait
+    type: Tweak
+  id: 9863
+  time: '2026-10-08T07:42:36.5412889+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1618
+- author: salpphie, Ekpy
+  changes:
+  - message: overlay to crayons when drawing
+    type: Add
+  - message: option in settings menu to change crayon overlay transparency
+    type: Add
+  id: 9864
+  time: '2026-10-08T07:42:36.5413034+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1601
+- author: Sere
+  changes:
+  - message: EMAGs can now cycle the color variations on energy blades (esword, ecutlass, desword, hyper, holopick, edagger).
+    type: Add
+  id: 9865
+  time: '2026-10-08T07:42:36.5413153+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1558
+- author: AlDente
+  changes:
+  - message: Harpies have learnt to replicate whirring, harpies can now whirr.
+    type: Add
+  id: 9866
+  time: '2026-10-08T07:42:36.5413243+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1599
+- author: Phoebe51505
+  changes:
+  - message: Added the framework for Ablative Armour, armour that becomes less effective as it absorbs damage and can be repaired.
+    type: Add
+  id: 9867
+  time: '2026-10-08T07:42:36.5413691+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1549
+- author: Sere, Thlrds
+  changes:
+  - message: Thaven IPC stocks on the rise. New eel tail, head (side) fins and L/R arm fins.
+    type: Add
+  id: 9868
+  time: '2026-10-08T07:42:36.5413745+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1584
