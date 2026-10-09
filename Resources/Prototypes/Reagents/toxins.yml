@@ -431,6 +431,9 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [Animal] # Applying damage to the mobs with lower metabolism capabilities
+        - !type:MetabolizerTypeCondition
+          type: [Slime] # Aurora's Song - Excludes slimes from taking damage since slime stomachs are now animal organs
+          inverted: true
         damage:
           types:
             Poison: 0.3 # DeltaV - slightly reduced to account for slowed metabolism rate
@@ -439,6 +442,9 @@
         conditions:
           - !type:MetabolizerTypeCondition
             type: [Animal]
+          - !type:MetabolizerTypeCondition
+            type: [Slime] # Aurora's Song - Excludes slimes from vomiting since slime stomachs are now animal organs
+            inverted: true
           - !type:ReagentCondition # DeltaV - Readded this. No longer causes vomitting at the lightest whiff of coffee # Aurora's Song - ReagentThreshold>ReagentCondition
             reagent: Theobromine
             min: 0.5
@@ -568,6 +574,9 @@
         conditions:
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ] # Aurora's Song - Prevents slimes from getting additional Protein from having Vox stomachs
+          inverted: true
         reagent: Protein
         amount: 0.25
       # Frontier: goblin metabolism
@@ -575,6 +584,9 @@
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: [ Goblin ]
+        - !type:MetabolizerTypeCondition
+          type: [ Slime ] # Aurora's Song - Prevents slimes from getting additional Protein from having Goblin stomachs
+          inverted: true
         reagent: Protein
         amount: 0.5
       # End Frontier: goblin metabolism
@@ -599,6 +611,9 @@
           min: 1
         - !type:MetabolizerTypeCondition
           type: [Animal]
+        - !type:MetabolizerTypeCondition
+          type: [Slime] # Aurora's Song - Excludes slimes from taking damage since slime stomachs are now animal organs
+          inverted: true
         damage:
           types:
             Poison: 0.06
