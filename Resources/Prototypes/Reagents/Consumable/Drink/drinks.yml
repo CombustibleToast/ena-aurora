@@ -484,9 +484,14 @@
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: [ FeroxiDehydrated ]
-        ratios: # DeltaV no duplicating O2 >:3
+        ratios: # no duplicating O2 >:3
           CarbonDioxide: 0.5
           WaterVapor: -1.0
+      - !type:Oxygenate # DeltaV - Harpy air quality sensitivty
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -1.0
         #MACROCOSM START
       - !type:Oxygenate # for decapoids.
         conditions:

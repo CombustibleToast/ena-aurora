@@ -186,6 +186,15 @@
   abstract: true
   suffix: harpy
 
+# Aurora's Song START - Harpy metabolizer for sensitive lungs
+- type: entity
+  id: OrganHarpyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Harpy, Animal ]
+# Aurora's Song END
+
 - type: entity
   parent: OrganHarpy
   id: OrganHarpyExternal
@@ -199,6 +208,16 @@
   - type: VisualOrganMarkings
     markingData:
       group: Harpy
+
+# DeltaV START - Harpy internals for sensitive lungs
+- type: entity
+  parent: OrganHarpy
+  id: OrganHarpyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DV/Mobs/Species/Harpy/organs.rsi
+# DeltaV END
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHarpyExternal ] # Aurora's Song - Add sexed organs
@@ -250,7 +269,7 @@
   id: OrganHarpyFootRight
 
 - type: entity
-  parent: [ OrganBaseLungs, OrganHarpy, OrganHumanInternal, OrganAnimalMetabolizer ] # Aurora's Song - HumanMetabolizer>AnimalMetabolizer
+  parent: [ OrganBaseLungs, OrganHarpyInternal, OrganHarpyMetabolizer ] # Aurora Song- Added unique harpy metabolizer and internals
   id: OrganHarpyLungs
   name: lungs
   description: An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs.
