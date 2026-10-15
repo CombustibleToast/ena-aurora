@@ -1,12 +1,5 @@
 AdminOnly: false
 Entries:
-- author: portfiend
-  changes:
-  - message: A vast majority of loadouts no longer have playtime requirements.
-    type: Tweak
-  id: 9096
-  time: '2026-04-07T12:23:47.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/915
 - author: Zenixic
   changes:
   - message: Added ship and intra ship prototypes for gloomy holopads for mapping
@@ -3908,3 +3901,24 @@ Entries:
   id: 9869
   time: '2026-10-12T07:43:24.7302226+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1531
+- author: TrixxedHeart
+  changes:
+  - message: Added double-click confirmation when attempting to delete a player using the entity spawn menu
+    type: Tweak
+  id: 9870
+  time: '2026-10-15T07:41:43.5134516+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1668
+- author: SolStar
+  changes:
+  - message: Rejoice Billionares banks can now hold up to 9.22 quintillion spessos
+    type: Fix
+  id: 9871
+  time: '2026-10-15T07:41:43.5136292+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1669
+- author: concursum
+  changes:
+  - message: added limb gradient markings
+    type: Add
+  id: 9872
+  time: '2026-10-15T07:41:43.5137882+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1663
