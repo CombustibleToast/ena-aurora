@@ -110,6 +110,8 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
         EntityUid? entity = null,
         ICommonSession? session = null) // Frontier
     {
+        Log.Info($"Player {profile?.Name} has {profile?.BankBalance} spesos before spawning"); // Aurora's Song - Extra logging
+
         _prototypeManager.Resolve(job, out var prototype);
         RoleLoadout? loadout = null;
 
@@ -257,12 +259,12 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
             if (prototype?.StartingGear is not null)
                 EquipStartingGear(entity.Value, prototype.StartingGear, raiseEvent: false);
 
-            var bankComp = EnsureComp<BankAccountComponent>(entity.Value);
+            EnsureComp<BankAccountComponent>(entity.Value); // Aurora's Song - Remove variable
 
             if (hasBalance)
             {
                 // Aurora's Song - casting to int with guards for overflows and negative values.
-                _bank.TryBankWithdraw(session!, prefs!, profile!, (int)Math.Clamp(bankBalance - bankComp.Balance, 0, int.MaxValue), out var newBalance);
+                _bank.TryBankWithdraw(session!, prefs!, profile!, (int)Math.Clamp(initialBankBalance - bankBalance, 0, int.MaxValue), out var newBalance);
             }
 
             EquipRoleName(entity.Value, loadout, roleProto!);
