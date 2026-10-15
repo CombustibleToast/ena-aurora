@@ -60,3 +60,34 @@
   components:
   - type: SubdermalImplant
     permanent: true
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: SectorWatchlistImplant
+  name: sector watchlist implant
+  description: A permanent tracker issued to high-risk individuals. Transmits to the SLE frequency.
+  categories: [ HideSpawnMenu ]
+  components: # Pretty much just copied the Prison Tracker, so that changes to it won't affect this.
+  - type: SubdermalImplant
+    permanent: true
+    whitelist:
+      components:
+      - MobState
+  - type: SuitSensor
+    randomMode: false
+    controlsLocked: true
+    mode: SensorCords
+    activationContainer: "implant"
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+  - type: StationLimitedNetwork
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Alive
+    - Critical
+    - Dead
+  - type: RattleOnTrigger
+    radioChannel: Sle

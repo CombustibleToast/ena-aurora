@@ -9,7 +9,7 @@
     - ActionRetractableItemArmBlade
   - type: AutoImplant
     implants:
-    - PrisonTrackingImplantPermanent
+    - SectorWatchlistImplant
 
 - type: trait
   id: Replicant

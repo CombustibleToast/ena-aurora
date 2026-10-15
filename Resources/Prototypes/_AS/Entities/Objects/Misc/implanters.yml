@@ -16,4 +16,12 @@
   - type: Implanter
     implant: PrisonTrackingImplant
 
+- type: entity
+  id: SectorWatchlistImplanter
+  name: sector watchlist implanter
+  parent: [ BaseC2ContrabandUnredeemable, BaseImplantOnlyImplanter ]
+  components:
+  - type: Implanter
+    implant: SectorWatchlistImplant
+
 #endregion SLE
