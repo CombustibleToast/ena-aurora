@@ -1,12 +1,5 @@
 AdminOnly: false
 Entries:
-- author: Zenixic
-  changes:
-  - message: Added ship and intra ship prototypes for gloomy holopads for mapping
-    type: Add
-  id: 9097
-  time: '2026-04-08T14:19:42.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/914
 - author: Vandanna
   changes:
   - message: Undo UI lock on Damascus Shipyard
@@ -3922,3 +3915,10 @@ Entries:
   id: 9872
   time: '2026-10-15T07:41:43.5137882+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1663
+- author: RobotFox
+  changes:
+  - message: Your loadout should no longer cost your bank account
+    type: Fix
+  id: 9873
+  time: '2026-10-15T14:10:54.5063070+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1671
