@@ -21,7 +21,7 @@ public sealed partial class BankATMMenu : FancyWindow
         WithdrawEdit.OnTextChanged += OnAmountChanged;
     }
 
-    public void SetBalance(int amount)
+    public void SetBalance(long amount) // Aurora's Song - Expand balance to long
     {
         BalanceLabel.Text = BankSystemExtensions.ToSpesoString(amount);
     }

@@ -100,7 +100,7 @@ public sealed partial class NFCargoConsoleMenu : FancyWindow
                     Product = prototype,
                     ProductName = { Text = prototype.Name },
                     MainButton = { ToolTip = prototype.Description },
-                    PointCost = { Text = BankSystemExtensions.ToSpesoString(prototype.Cost) }, // Frontier: 
+                    PointCost = { Text = BankSystemExtensions.ToSpesoString(prototype.Cost) }, // Frontier:
                     Icon = { Texture = _spriteSystem.Frame0(prototype.Icon) },
                 };
                 button.MainButton.OnPressed += args =>
@@ -180,7 +180,7 @@ public sealed partial class NFCargoConsoleMenu : FancyWindow
         ShuttleCapacityLabel.Text = Loc.GetString("cargo-console-menu-nf-order-capacity", ("count", quantitySum), ("capacity", orderCapacity));
     }
 
-    public void UpdateBankData(string name, int bankBalance)
+    public void UpdateBankData(string name, long bankBalance) // Aurora's Song - Expand balance to long
     {
         AccountNameLabel.Text = name;
         PointsLabel.Text = BankSystemExtensions.ToSpesoString(bankBalance);

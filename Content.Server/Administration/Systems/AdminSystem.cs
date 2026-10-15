@@ -231,7 +231,7 @@ public sealed partial class AdminSystem : EntitySystem
         var entityName = string.Empty;
         var identityName = string.Empty;
         var sortWeight = 0;
-        int balance = int.MinValue; // Frontier
+        var balance = long.MinValue; // Frontier // Aurora's Song - Expand balance to long
 
         // Visible (identity) name can be different from real name
         if (session?.AttachedEntity != null)

@@ -13,7 +13,7 @@ public sealed class MarketConsoleBoundUserInterface : BoundUserInterface
     private MarketMenu? _menu;
 
     [ViewVariables]
-    public int BankBalance { get; private set; }
+    public long BankBalance { get; private set; } // Aurora's Song - Expand balance to long
 
     public MarketConsoleBoundUserInterface(EntityUid owner, Enum uiKey) : base(owner, uiKey) { }
 

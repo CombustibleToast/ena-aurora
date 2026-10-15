@@ -78,7 +78,7 @@ public sealed partial class CheckBankBalance : IConsoleCommand
         shell.WriteLine($"Could not find bank account for player {username}.");
     }
 
-    private bool TryGetOfflinePlayerBalance(string username, out int balance)
+    private bool TryGetOfflinePlayerBalance(string username, out long balance) // Aurora's Song - Expand balance to long
     {
         balance = 0;
 

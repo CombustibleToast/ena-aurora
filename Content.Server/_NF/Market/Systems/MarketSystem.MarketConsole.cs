@@ -357,7 +357,7 @@ public sealed partial class MarketSystem
 
     private void RefreshState(
         EntityUid consoleUid,
-        int balance,
+        long balance, // Aurora's Song - Expand balance to long
         float marketMultiplier,
         MarketConsoleComponent? component
     )

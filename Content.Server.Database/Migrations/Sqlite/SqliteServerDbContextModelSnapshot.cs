@@ -872,6 +872,23 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.ToTable("consent_toggle", (string)null);
                 });
 
+            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
+                {
+                    b.Property<Guid>("PlayerUserId")
+                        .HasColumnType("TEXT")
+                        .HasColumnName("player_user_id");
+
+                    b.Property<string>("SettingsJson")
+                        .IsRequired()
+                        .HasColumnType("jsonb")
+                        .HasColumnName("settings");
+
+                    b.HasKey("PlayerUserId")
+                        .HasName("PK_denu_settings");
+
+                    b.ToTable("denu_settings", (string)null);
+                });
+
             modelBuilder.Entity("Content.Server.Database.IPIntelCache", b =>
                 {
                     b.Property<int>("Id")
@@ -1057,7 +1074,7 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("INTEGER")
                         .HasColumnName("age");
 
-                    b.Property<int>("BankBalance")
+                    b.Property<long>("BankBalance")
                         .HasColumnType("INTEGER")
                         .HasColumnName("bank_balance");
 
@@ -2002,21 +2019,6 @@ namespace Content.Server.Database.Migrations.Sqlite
                     b.Navigation("Server");
                 });
 
-            // DEN Start - DENU
-            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
-            {
-                b.HasOne("Content.Server.Database.Player", "Player")
-                    .WithOne()
-                    .HasForeignKey("Content.Server.Database.DenuModel+DenuSettings", "PlayerUserId")
-                    .HasPrincipalKey("Content.Server.Database.Player", "UserId")
-                    .OnDelete(DeleteBehavior.Cascade)
-                    .IsRequired()
-                    .HasConstraintName("FK_denu_settings_player_player_id");
-
-                b.Navigation("Player");
-            });
-            // DEN End
-
             modelBuilder.Entity("Content.Server.Database.ConsentToggle", b =>
                 {
                     b.HasOne("Content.Server.Database.ConsentSettings", "ConsentSettings")
@@ -2027,6 +2029,19 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasConstraintName("FK_consent_toggle_consent_settings_consent_settings_id");
 
                     b.Navigation("ConsentSettings");
+                });
+
+            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
+                {
+                    b.HasOne("Content.Server.Database.Player", "Player")
+                        .WithOne()
+                        .HasForeignKey("Content.Server.Database.DenuModel+DenuSettings", "PlayerUserId")
+                        .HasPrincipalKey("Content.Server.Database.Player", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("FK_denu_settings_player_player_id");
+
+                    b.Navigation("Player");
                 });
 
             modelBuilder.Entity("Content.Server.Database.Job", b =>

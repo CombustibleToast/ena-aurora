@@ -8,7 +8,7 @@ public sealed class BankATMMenuInterfaceState : BoundUserInterfaceState
     /// <summary>
     /// bank balance of the character using the atm
     /// </summary>
-    public int Balance;
+    public long Balance; // Aurora's Song - Expand balance to long
 
     /// <summary>
     /// are the buttons enabled
@@ -20,7 +20,7 @@ public sealed class BankATMMenuInterfaceState : BoundUserInterfaceState
     /// </summary>
     public int Deposit;
 
-    public BankATMMenuInterfaceState(int balance, bool enabled, int deposit)
+    public BankATMMenuInterfaceState(long balance, bool enabled, int deposit) // Aurora's Song - Expand balance to long
     {
         Balance = balance;
         Enabled = enabled;

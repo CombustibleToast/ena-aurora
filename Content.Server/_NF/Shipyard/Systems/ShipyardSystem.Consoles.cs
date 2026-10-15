@@ -865,7 +865,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         return (available, unavailable);
     }
 
-    private void RefreshState(EntityUid uid, int balance, bool access, string? shipDeed, int shipSellValue, EntityUid? targetId, ShipyardConsoleUiKey uiKey, bool freeListings)
+    // Aurora's Song - Expand balance to long
+    private void RefreshState(EntityUid uid, long balance, bool access, string? shipDeed, int shipSellValue, EntityUid? targetId, ShipyardConsoleUiKey uiKey, bool freeListings)
     {
         var newState = new ShipyardConsoleInterfaceState(
             balance,
@@ -1016,7 +1017,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             PlayConfirmSound(player, uid, component);
 
             // Get the player's balance or use 0 if they don't have a bank account
-            int balance = 0;
+            long balance = 0; // Aurora's Song - Expand balance to long
             if (TryComp<BankAccountComponent>(player, out var bank))
                 balance = bank.Balance;
 
@@ -1088,7 +1089,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         PlayConfirmSound(player, uid, component);
 
         // Get the player's balance or use 0 if they don't have a bank account
-        int balance = 0;
+        long balance = 0; // Aurora's Song - Expand balance to long
         if (TryComp<BankAccountComponent>(player, out var bank))
             balance = bank.Balance;
 

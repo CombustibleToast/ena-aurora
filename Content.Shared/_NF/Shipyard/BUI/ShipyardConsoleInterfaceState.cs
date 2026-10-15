@@ -5,7 +5,7 @@ namespace Content.Shared._NF.Shipyard.BUI;
 [NetSerializable, Serializable]
 public sealed class ShipyardConsoleInterfaceState : BoundUserInterfaceState
 {
-    public int Balance;
+    public long Balance; // Aurora's Song - Expand balance to long
     public readonly bool AccessGranted;
     public readonly string? ShipDeedTitle;
     public int ShipSellValue;
@@ -18,7 +18,7 @@ public sealed class ShipyardConsoleInterfaceState : BoundUserInterfaceState
     public readonly float SellRate;
 
     public ShipyardConsoleInterfaceState(
-        int balance,
+        long balance, // Aurora's Song - Expand balance to long
         bool accessGranted,
         string? shipDeedTitle,
         int shipSellValue,

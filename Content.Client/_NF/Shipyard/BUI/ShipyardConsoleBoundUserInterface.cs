@@ -11,7 +11,7 @@ public sealed class ShipyardConsoleBoundUserInterface : BoundUserInterface
 {
     private ShipyardConsoleMenu? _menu;
     // private ShipyardRulesPopup? _rulesWindow; // Frontier
-    public int Balance { get; private set; }
+    public long Balance { get; private set; } // Aurora's Song - Expand balance to long
 
     public int? ShipSellValue { get; private set; }
 

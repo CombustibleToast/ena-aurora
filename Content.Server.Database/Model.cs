@@ -438,7 +438,7 @@ namespace Content.Server.Database
         public string NsfwFlavorText { get; set; } = null!;
         public string CharacterConsent { get; set; } = null!;
         public int Age { get; set; }
-        public int BankBalance { get; set; }
+        public long BankBalance { get; set; } // Aurora's Song - Expand balance to long
         public string Sex { get; set; } = null!;
         public string Gender { get; set; } = null!;
         public string Species { get; set; } = null!;

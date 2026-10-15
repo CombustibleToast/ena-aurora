@@ -28,7 +28,7 @@ public sealed class CargoOrderConsoleNFBoundUserInterface : BoundUserInterface
     public string? AccountName { get; private set; }
 
     [ViewVariables]
-    public int BankBalance { get; private set; }
+    public long BankBalance { get; private set; } // Aurora's Song - Expand balance to long
 
     [ViewVariables]
     public int OrderCapacity { get; private set; }

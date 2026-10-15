@@ -113,7 +113,7 @@ namespace Content.Shared.Preferences
         public Gender Gender { get; private set; } = Gender.Male;
 
         [DataField] // Frontier: Bank balance
-        public int BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance
+        public long BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance // Aurora's Song - Expand balance to long
 
         /// <summary>
         /// Stores markings, eye colors, etc for the profile.
@@ -159,7 +159,7 @@ namespace Content.Shared.Preferences
             int age,
             Sex sex,
             Gender gender,
-            int bankBalance,
+            long bankBalance, // Aurora's Song - Expand balance to long
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
@@ -339,7 +339,7 @@ namespace Content.Shared.Preferences
         }
 
         // Frontier: this is probably an issue and should be removed.
-        public HumanoidCharacterProfile WithBankBalance(int bankBalance)
+        public HumanoidCharacterProfile WithBankBalance(long bankBalance) // Aurora's Song - Expand balance to long
         {
             return new(this) { BankBalance = bankBalance };
         }

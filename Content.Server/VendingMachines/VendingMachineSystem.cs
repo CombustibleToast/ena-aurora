@@ -344,7 +344,7 @@ namespace Content.Server.VendingMachines
 
             if (IsAuthorized(uid, sender, component))
             {
-                int bankBalance = 0;
+                long bankBalance = 0; // Aurora's Song - Expand balance to long
                 if (TryComp<BankAccountComponent>(sender, out var bank))
                     bankBalance = bank.Balance;
 

@@ -261,7 +261,8 @@ public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
 
             if (hasBalance)
             {
-                _bank.TryBankWithdraw(session!, prefs!, profile!, initialBankBalance - bankBalance, out var newBalance);
+                // Aurora's Song - casting to int with guards for overflows and negative values.
+                _bank.TryBankWithdraw(session!, prefs!, profile!, (int)Math.Clamp(bankBalance - bankComp.Balance, 0, int.MaxValue), out var newBalance);
             }
 
             EquipRoleName(entity.Value, loadout, roleProto!);

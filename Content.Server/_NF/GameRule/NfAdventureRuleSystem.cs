@@ -51,16 +51,16 @@ public sealed partial class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRu
     public sealed partial class PlayerRoundBankInformation
     {
         // Initial balance, obtained on spawn
-        public int StartBalance;
+        public long StartBalance; // Aurora's Song - Expand balance to long
         // Ending balance, obtained on game end or detach (NOTE: multiple detaches possible), whichever happens first.
-        public int EndBalance;
+        public long EndBalance; // Aurora's Song - Expand balance to long
         // Entity name: used for display purposes ("The Feel of Fresh Bills earned 100,000 spesos")
         public string Name;
         // User ID: used to validate incoming information.
         // If, for whatever reason, another player takes over this character, their initial balance is inaccurate.
         public NetUserId UserId;
 
-        public PlayerRoundBankInformation(int startBalance, string name, NetUserId userId)
+        public PlayerRoundBankInformation(long startBalance, string name, NetUserId userId) // Aurora's Song - Expand balance to long
         {
             StartBalance = startBalance;
             EndBalance = -1;
@@ -87,7 +87,7 @@ public sealed partial class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRu
     protected override void AppendRoundEndText(EntityUid uid, NFAdventureRuleComponent component, GameRuleComponent gameRule, ref RoundEndTextAppendEvent ev)
     {
         ev.AddLine(Loc.GetString("adventure-list-start"));
-        var allScore = new List<Tuple<string, int>>();
+        var allScore = new List<Tuple<string, long>>(); // Aurora's Song - Expand balance to long
 
         var sortedPlayers = _players.ToList();
         sortedPlayers.Sort((p1, p2) => p1.Value.Name.CompareTo(p2.Value.Name));
@@ -115,7 +115,7 @@ public sealed partial class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRu
                 summaryText = Loc.GetString("adventure-list-profit", ("amount", BankSystemExtensions.ToSpesoString(profit)));
             }
             ev.AddLine($"- {playerInfo.Name} {summaryText}");
-            allScore.Add(new Tuple<string, int>(playerInfo.Name, profit));
+            allScore.Add(new Tuple<string, long>(playerInfo.Name, profit)); // Aurora's Song - Expand balance to long
         }
 
         if (!(allScore.Count >= 1))

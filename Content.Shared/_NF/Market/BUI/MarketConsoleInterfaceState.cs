@@ -8,7 +8,7 @@ public sealed class MarketConsoleInterfaceState : BoundUserInterfaceState
     /// <summary>
     /// The player's balance
     /// </summary>
-    public int Balance;
+    public long Balance; // Aurora's Song - Expand balance to long
 
     /// <summary>
     /// The market modifier to apply on to the price.
@@ -46,7 +46,8 @@ public sealed class MarketConsoleInterfaceState : BoundUserInterfaceState
     /// </summary>
     public int CartEntities;
 
-    public MarketConsoleInterfaceState(int balance, float marketModifier, List<MarketData> marketDataList, List<MarketData> cartDataList, int cartBalance, bool enabled, int transactionCost, int cartEntities)
+    // Aurora's Song - Expand balance to long
+    public MarketConsoleInterfaceState(long balance, float marketModifier, List<MarketData> marketDataList, List<MarketData> cartDataList, int cartBalance, bool enabled, int transactionCost, int cartEntities)
     {
         Balance = balance;
         MarketModifier = marketModifier;

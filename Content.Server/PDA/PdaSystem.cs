@@ -214,7 +214,7 @@ namespace Content.Server.PDA
             var id = CompOrNull<IdCardComponent>(pda.ContainedId);
 
             // Frontier: balance & ship deeds
-            var balance = 0;
+            long balance = 0; // Aurora's Song - Expand balance to long
             if (actorUid != null && TryComp<BankAccountComponent>(actorUid, out var account))
                 balance = account.Balance;
             var ownedShipName = "";

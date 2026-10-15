@@ -170,7 +170,7 @@ public sealed partial class NFCargoSystem
             if (!TryComp(user, out MetaDataComponent? meta))
                 continue;
 
-            var balance = 0;
+            long balance = 0; // Aurora's Song - Expand balance to long
             if (TryComp<BankAccountComponent>(user, out var playerBank))
                 balance = playerBank.Balance;
 

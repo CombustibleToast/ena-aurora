@@ -17,6 +17,7 @@ public static class BankSystemExtensions
     const int SuffixCurrencyPositivePattern = 3; //N $
     const int SuffixCurrencyNegativePattern = 8; //-N $
 
+    // Aurora's Song - Expand balance to long
     /// <summary>
     /// Formats a integer to the current CultureInfo's number formatting for currency.
     /// </summary>
@@ -25,7 +26,7 @@ public static class BankSystemExtensions
     /// <param name="symbolOverride">Optionally override the symbol</param>
     /// <param name="separatorOverride">Optionally override the separator</param>
     /// <returns></returns>
-    public static string ToCurrencyString(int amount, CultureInfo? culture = null, string? symbolOverride = null, string? separatorOverride = null, CurrencySymbolLocation symbolLocation = CurrencySymbolLocation.Default)
+    public static string ToCurrencyString(long? amount, CultureInfo? culture = null, string? symbolOverride = null, string? separatorOverride = null, CurrencySymbolLocation symbolLocation = CurrencySymbolLocation.Default)
     {
         culture ??= CultureInfo.CurrentCulture;
         var numberFormat = (NumberFormatInfo) culture.NumberFormat.Clone();
@@ -62,7 +63,7 @@ public static class BankSystemExtensions
         return ToCurrencyString(amount, culture, symbolOverride: "", symbolLocation: CurrencySymbolLocation.Prefix); //Prefix results in no space, prefer that.
     }
 
-    public static string ToSpesoString(int amount, CultureInfo? culture = null)
+    public static string ToSpesoString(long amount, CultureInfo? culture = null) // Aurora's Song - Expand balance to long
     {
         return ToCurrencyString(amount, culture, symbolOverride: "$", symbolLocation: CurrencySymbolLocation.Prefix);
     }
