@@ -87,14 +87,15 @@ public sealed class CanvasDesignControl : Control
 
     protected override void Draw(DrawingHandleScreen handle)
     {
-        var cellSize = Math.Max(1, _pixelScale - 1);
+        var step = _pixelScale * UIScale;
+        var cellSize = Math.Max(1, _pixelScale - 1) * UIScale;
         for (var y = 0; y < _height; y++)
         for (var x = 0; x < _width; x++)
         {
             var value = _pixels[y * _width + x];
             var color = new Color((byte) (value >> 16), (byte) (value >> 8), (byte) value,
                 (byte) (value >> 24));
-            var box = UIBox2.FromDimensions(new Vector2(x, y) * _pixelScale, new Vector2(cellSize));
+            var box = UIBox2.FromDimensions(new Vector2(x, y) * step, new Vector2(cellSize));
             handle.DrawRect(box, color);
         }
     }
