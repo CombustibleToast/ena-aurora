@@ -10,3 +10,12 @@
       whitelist:
         tags:
         - SiliconOrIPCEmotes
+
+- type: Interaction
+  id: Poke
+  parent: [BaseGlobal, BaseHands]
+  priority: 0
+  delay: 0
+  range: {max: 1.2}
+  action:
+    !type:NoOpAction
