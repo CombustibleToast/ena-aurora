@@ -39,7 +39,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingOuterHardsuitBaseAS, BaseC2ContrabandUnredeemable]
+  parent: [ClothingOuterHardsuitBaseAS, C2ContrabandRestricted]
   id: ASClothingOuterHardsuitBaseSle
   components:
   - type: PressureProtection

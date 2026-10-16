@@ -43,7 +43,7 @@
     coverage: MOUTH
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingMaskGasSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingMaskGasNfsd
   name: NFSD gas mask
   description: A standard issue NFSD gas mask.
@@ -55,7 +55,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSwat ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingMaskGasSwat ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingMaskGasSheriff
   name: NFSD sheriff gas mask
   description: A gas mask worthy of a sheriff.
@@ -66,7 +66,7 @@
     sprite: _NF/Clothing/Mask/nfsd_sheriff.rsi
 
 - type: entity
-  parent: [ BaseC3CultContrabandUnredeemable, ContrabandClothing, ClothingMaskGasExplorer ]
+  parent: [ BaseC1Contraband, ContrabandClothing, ClothingMaskGasExplorer ] # Aurora's Song - BaseC3CultContrabandUnredeemable<BaseC1Contraband
   id: ClothingMaskCultJanitor
   name: cult janitor mask
   description: A close-fitting, imposing breath mask designed for accursed custodians who value style.

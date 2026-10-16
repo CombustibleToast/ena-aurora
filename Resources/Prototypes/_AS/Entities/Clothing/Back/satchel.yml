@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingBackpackSatchelSecurity
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingBackpackSatchelSecurity ]
   id: ASClothingBackpackSatchelSLENavy
   name: SLE satchel
   description: A tactical satchel used by Sector Law Enforcement personnel.

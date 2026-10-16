@@ -8,7 +8,7 @@
     sprite: _NF/Clothing/Back/Duffels/arcadia.rsi
 
 - type: entity
-  parent: ClothingBackpackDuffelSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingBackpackDuffelSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBackpackDuffelNfsdBrown
   name: NFSD duffel
   components:

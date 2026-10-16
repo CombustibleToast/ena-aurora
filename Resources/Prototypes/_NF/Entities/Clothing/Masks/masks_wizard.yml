@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingMaskGasExplorer, RecyclableItemClothDevice, ContrabandClothing ]
+  parent: [ ClothingMaskGasExplorer, RecyclableItemClothDevice, BaseC1Contraband ] # Aurora's Song - Added BaseC1Contraband
   id: ClothingMaskWizardBlue
   name: blue wizard gas mask
   description: A close-fitting magical mask.
@@ -28,7 +28,7 @@
         shader: unshaded
 
 - type: entity
-  parent: [ ClothingMaskGasExplorer, RecyclableItemClothDevice, ContrabandClothing ]
+  parent: [ ClothingMaskGasExplorer, RecyclableItemClothDevice, BaseC1Contraband ] # Aurora's Song - Added BaseC1Contraband
   id: ClothingMaskWizardRed
   name: red wizard gas mask
   description: A close-fitting magical mask.
@@ -57,7 +57,7 @@
         shader: unshaded
 
 - type: entity
-  parent: [ ClothingMaskGasExplorer, RecyclableItemClothDevice, ContrabandClothing ]
+  parent: [ ClothingMaskGasExplorer, RecyclableItemClothDevice, BaseC1Contraband ] # Aurora's Song - Added BaseC1Contraband
   id: ClothingMaskWizardPurple
   name: purple wizard gas mask
   description: A close-fitting magical mask.

@@ -1,7 +1,7 @@
 #Empty security
 - type: entity
   id: JetpackNfsd
-  parent: JetpackSecurity
+  parent: [ JetpackSecurity, C2ContrabandNanoTrasenRestricted] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   name: NFSD jetpack
   suffix: Empty
   components:
@@ -18,7 +18,7 @@
 #Filled security
 - type: entity
   id: JetpackNfsdFilled
-  parent: JetpackSecurityFilled
+  parent: [ JetpackSecurityFilled, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   name: NFSD jetpack
   suffix: Filled
   components:

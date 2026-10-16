@@ -22,7 +22,7 @@
 
 - type: entity
   id: ASWeaponShotgunBailiff
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
+  parent: [ C2ContrabandRestricted, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
   name: Bailiff
   description: |-
     A tube-fed shotgun with full-auto capacity. The commisoner's trusty longarm, It always finds its way back to its true master.
@@ -71,7 +71,7 @@
     manufacturer: weapon-details-colonial-weapon-manufacturer
 
 - type: entity
-  parent: [ASBaseLeverActionShotgun, ASBaseWeaponShotgunChamber8gMagFed, NFBaseWeaponEncumbranceRifle, ASBaseWeaponFrameShotgunNanotrasen]
+  parent: [ C2ContrabandNanoTrasenRestricted, ASBaseLeverActionShotgun, ASBaseWeaponShotgunChamber8gMagFed, NFBaseWeaponEncumbranceRifle, ASBaseWeaponFrameShotgunNanotrasen]
   id: ASWeaponShotgunLeverChester
   name: Chester
   description: |-
@@ -96,7 +96,7 @@
       path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
 
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ASWeaponShotgunLeverChester]
+  parent: [ C2ContrabandNanoTrasenRestricted, ASWeaponShotgunLeverChester ]
   id: ASWeaponShotgunLeverChesterRegistered
 
 - type: entity

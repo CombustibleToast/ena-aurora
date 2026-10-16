@@ -62,7 +62,7 @@
     price: 30 # Frontier
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, C2ContrabandRestricted] # Aurora's Song - BaseSecurityContraband<C2ContrabandRestricted
   id: ClothingEyesHudSecurity
   name: security hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and security records.
@@ -171,7 +171,7 @@
   - type: ShowThirstIcons
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons, C2ContrabandRestricted] # Aurora's Song - BaseSecurityCommandContraband<C2ContrabandRestricted
   id: ClothingEyesHudMedSec
   name: medsec hud
   description: An eye display that looks like a mixture of medical and security huds.
@@ -185,7 +185,7 @@
     node: medsecHud
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, C2ContrabandRestricted, ShowMedicalIcons] # Aurora's Song - Added C2ContrabandRestricted
   id: ClothingEyesHudMultiversal
   name: multiversal hud
   description: Filler
@@ -201,7 +201,7 @@
   - type: ShowSyndicateIcons
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, ShowMedicalIcons]
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, C2ContrabandRestricted, ShowMedicalIcons] # Aurora's Song - Added C2ContrabandRestricted
   id: ClothingEyesHudOmni
   name: omni hud
   description: Filler
@@ -219,7 +219,7 @@
   - type: ShowSyndicateIcons
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, C2ContrabandSyndicateRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestricted
   id: ClothingEyesHudSyndicate
   name: syndicate visor
   description: The syndicate's professional head-up display, designed for better detection of humanoids and their subsequent elimination.
@@ -235,7 +235,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, C2ContrabandSyndicateRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestricted
   id: ClothingEyesHudSyndicateAgent
   name: syndicate medical visor
   description: The Syndicate Corpsman's professional heads-up display, designed for quick diagnosis of their team's status.
@@ -252,7 +252,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons, ContrabandClothing] # Frontier: added ContrabandClothing as parent
+  parent: [ClothingEyesGlassesSunglasses, ShowSecurityIcons, C2ContrabandRestricted] # Aurora's Song - Added C2ContrabandRestricted as parent
   id: ClothingEyesGlassesHiddenSecurity
   suffix: Syndicate
   components:

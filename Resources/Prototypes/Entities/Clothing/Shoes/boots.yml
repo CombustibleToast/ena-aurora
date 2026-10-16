@@ -156,7 +156,7 @@
     sprite: Clothing/Shoes/Boots/winterbootssci.rsi
 
 - type: entity
-  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingShoesBaseWinterBoots, ClothingShoesMilitaryBase, C2ContrabandNanoTrasen] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingShoesBootsWinterSec
   name: security winter boots
   components:
@@ -166,7 +166,7 @@
     sprite: Clothing/Shoes/Boots/winterbootssec.rsi
 
 - type: entity
-  parent: [ClothingShoesBaseWinterBoots, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ClothingShoesBaseWinterBoots, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingShoesBootsWinterSyndicate
   name: syndicate's winter boots
   description: Durable heavy boots, looks like merch from "Syndieland".

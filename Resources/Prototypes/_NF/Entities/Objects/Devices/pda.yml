@@ -119,7 +119,7 @@
         - Write
 
 - type: entity
-  parent: [BaseSecurityPDA, BaseCommandContraband]
+  parent: [BaseSecurityPDA, C2ContrabandNanoTrasenRestricted] # Aurora's Song - BaseCommandContraband<C2ContrabandNanoTrasenRestricted
   id: SheriffPDA
   name: sheriff PDA
   description: Whosoever bears this PDA is the law.

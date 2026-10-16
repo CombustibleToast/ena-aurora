@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingBackpackDuffelSecurity
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingBackpackDuffelSecurity ]
   id: ASClothingBackpackDuffelSLENavy
   name: SLE duffel
   description: A large duffel bag used by Sector Law Enforcement personnel.
@@ -19,7 +19,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingBackpackDuffel
+  parent: [ ClothingBackpackDuffel, C2ContrabandUnredeemableRestricted ]
   id: ASClothingBackpackDuffelColonialRepresentative
   name: colonial representative duffel bag
   description: A large duffel bag for holding extra colonial administrative supplies.

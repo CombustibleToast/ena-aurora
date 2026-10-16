@@ -1,7 +1,7 @@
 #region SLE
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandRestricted ]
   id: ASClothingOuterCoatSLEBomber
   name: SLE bomber
   description: A stylish bomber jacket worn by Sector Law Enforcement personnel.
@@ -12,7 +12,7 @@
     sprite: _AS/Clothing/OuterClothing/Misc/sle_bomber.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandRestricted ]
   id: ASClothingOuterCoatSLEBomberCorpsman
   name: SLE corpsman bomber
   description: A corpsman bomber jacket with medical insignia. Blood may stain.
@@ -23,7 +23,7 @@
     sprite: _AS/Clothing/OuterClothing/Misc/sle_corpsman_bomber.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandRestricted ]
   id: ASClothingOuterCoatSLEFormal
   name: SLE formal coat
   description: A formal dress coat for Sector Law Enforcement officers. Snazzy.
@@ -34,7 +34,7 @@
     sprite: _AS/Clothing/OuterClothing/Misc/sle_formal.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandRestricted ]
   id: ASClothingOuterCoatSLEFormalCommissioner
   name: SLE commissioner's formal coat
   description: The Commissioner's formal dress coat. Very snazzy.
@@ -45,7 +45,7 @@
     sprite: _AS/Clothing/OuterClothing/Misc/sle_commissioner_formal.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandRestricted ]
   id: ASClothingOuterCoatSLELongCoat
   name: SLE long coat
   description: A long duster coat favored by SLE personnel. Big iron on his hip...
@@ -72,7 +72,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingOuterBase
+  parent: [ ClothingOuterBase, C2ContrabandRestricted ]
   id: ASClothingOuterJacketColonialRepresentative
   name: colonial representative's jacket
   description: An expensive jacket tailored for the frontier's colonial representative.

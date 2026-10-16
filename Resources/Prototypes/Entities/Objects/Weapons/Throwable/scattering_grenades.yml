@@ -63,7 +63,7 @@
     positional: true
 
 - type: entity
-  parent: [VolatileGrenadeBase, ScatteringGrenadeBase, TimerGrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [VolatileGrenadeBase, ScatteringGrenadeBase, TimerGrenadeBase, C2ContrabandRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandRestricted
   id: ClusterGrenade
   name: clustergrenade
   description: Why use one grenade when you can use three at once!
@@ -120,7 +120,7 @@
     positional: true
 
 - type: entity
-  parent: [SoapSyndie, ScatteringGrenadeBase, ImpactGrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [SoapSyndie, ScatteringGrenadeBase, ImpactGrenadeBase, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: SlipocalypseClusterSoap
   name: slipocalypse clustersoap
   description: Spreads small pieces of syndicate soap over an area upon landing on the floor.

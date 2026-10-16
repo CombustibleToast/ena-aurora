@@ -395,7 +395,7 @@
 
 - type: entity
   name: mirror shield
-  parent: [ BaseShield, BaseC3WizardContraband] # Frontier: BaseMagicalContraband<BaseC3WizardContraband
+  parent: [ BaseShield, C2ContrabandRestricted] # Aurora's Song - BaseMagicalContraband<C2ContrabandRestricted
   id: MirrorShield
   description: Eerily glows red... you hear the geometer whispering
   components:

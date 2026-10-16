@@ -2,7 +2,7 @@
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
-  parent: ClothingHeadset
+  parent: [ ClothingHeadset, C2ContrabandRestricted ]
   id: ASClothingHeadsetSLENavy
   name: SLE headset
   description: An updated headset for Sector Law Enforcement personnel.

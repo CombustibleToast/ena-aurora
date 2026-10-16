@@ -1,7 +1,7 @@
 #region SLE campaign
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLECampaign
   name: SLE campaign hat
   description: A Campaign hat bearing SLE's colors.
@@ -16,7 +16,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLESmallCampaign
   name: SLE campaign cap
   description: All yee, no haw.
@@ -30,7 +30,7 @@
     id: CampaignHat
 
 - type: entity
-  parent: ClothingHeadHatNfsdCampaignFilled
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingHeadHatNfsdCampaignFilled ]
   id: ASClothingHeadHatSLECampaignFilled
   name: SLE campaign hat
   suffix: Filled
@@ -45,7 +45,7 @@
 #region SLE Berets
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLEBeretOrange
   name: orange SLE beret
   description: A stylish orange beret for Sector Law Enforcement personnel.
@@ -56,7 +56,7 @@
     sprite: _AS/Clothing/Head/Hats/sle_beret_orange.rsi
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLEBeretBigOrange
   name: orange SLE beret
   description: A stylish orange beret for Sector Law Enforcement personnel.
@@ -68,7 +68,7 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLEBeretNavy
   name: navy SLE beret
   description: A stylish navy beret for Sector Law Enforcement personnel.
@@ -79,7 +79,7 @@
     sprite: _AS/Clothing/Head/Hats/sle_beret_navy.rsi
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLEBeretBigNavy
   name: navy SLE beret
   description: A stylish navy beret for Sector Law Enforcement personnel.
@@ -91,7 +91,7 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLEBeretCobalt
   name: cobalt SLE beret
   description: A stylish cobalt beret for Sector Law Enforcement personnel.
@@ -102,7 +102,7 @@
     sprite: _AS/Clothing/Head/Hats/sle_beret_cobalt.rsi
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatSLEBeretBigCobalt
   name: cobalt SLE beret
   description: A stylish cobalt beret for Sector Law Enforcement personnel.
@@ -128,7 +128,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingHeadHatHopcap
+  parent: [ ClothingHeadHatHopcap, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatColonialRepresentativeCap
   name: colonial representative's cap
   description: A cap issued to the frontier's colonial representative. Try not to lose it.
@@ -140,7 +140,7 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatColonialRepresentativeBeretBig
   name: colonial representative's big beret
   description: Stylish beret given to the Colonial Representative. To help them stand out.
@@ -152,7 +152,7 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadHatHopcap
+  parent: [ ClothingHeadHatHopcap, C2ContrabandUnredeemableRestricted ]
   id: ASClothingHeadHatColonialRepresentativeBeret
   name: colonial representative's beret
   description: A simple beret given to the Colonial Representative.
@@ -164,7 +164,7 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: [ ASClothingHeadHatColonialRepresentativeBeretBig, BaseColcommContraband ]
+  parent: [ BaseColcommContraband, ASClothingHeadHatColonialRepresentativeBeretBig ]
   id: ASClothingHeadHatColonialOfficialBeretBig
   name: colonial official's big beret
   description: Stylish beret given to Colonial Officials. To help them stand out.
@@ -178,7 +178,7 @@
 #region Syndicate
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing]
+  parent: [ClothingHeadBase, BaseC1Contraband, ContrabandClothing]
   id: ClothingHeadBeretSyndie
   name: syndicate beret
   description: First coined by Gorlex's best of the best and later adopted by the rest of the Syndicate, They will never let the others forget that fact
@@ -207,7 +207,7 @@
 
 #region NanoTrasen
 - type: entity
-  parent: ClothingHeadBase
+  parent: [ ClothingHeadBase, C2ContrabandNanoTrasenRestricted ]
   id: ASClothingHeadHatBeretBlueshield
   name: blueshield's beret
   description: A vibrant navy blue beret that marks out a Blueshield of NanoTrasen's Command On-Site Security programme

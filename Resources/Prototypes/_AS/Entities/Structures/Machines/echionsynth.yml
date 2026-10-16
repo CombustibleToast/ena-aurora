@@ -1,6 +1,6 @@
 - type: entity
   id: ASSyndicateEchionSynth
-  parent: [ SolutionTank, SolutionNormal, BaseMachinePowered, ConstructibleMachine, BaseC3Contraband ] # Aurora's Song - Solution refactor
+  parent: [ SolutionTank, SolutionNormal, BaseMachinePowered, ConstructibleMachine, C2ContrabandSyndicateRestricted ] # Aurora's Song - Solution refactor
   name: Echion synthesizer
   description: A causal loop in the core of this machine somehow fluctuates space and time at a microscopic scale to create the dangerous energy condensate known as Echion.
   components:
@@ -87,7 +87,7 @@
 
 - type: entity
   id: ASPunkEchionSynth
-  parent: [SolutionSmall, ASSyndicateEchionSynth] # Aurora's Song - Solution refactor
+  parent: [SolutionSmall, ASSyndicateEchionSynth] # Aurora's Song - Solution refactor, contraband changes
   name: kitbashed Echion synthesizer
   description: The fact that scrap electronics, sheet metal, and duct tape are capable of theoretical quantum physics evokes a fair bit of concern.
   components:

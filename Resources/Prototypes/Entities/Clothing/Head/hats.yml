@@ -68,7 +68,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue] # Aurora's Song | Add NanoTrasen Contraband
+  parent: [ClothingHeadBase, C2ContrabandNanoTrasen] # Aurora's Song - Add NanoTrasen Contraband
   id: ClothingHeadHatSecurityTrooper
   name: trooper hat
   description: A campaign hat for the Nanotrasen Troopers. It's supposed to come with a case, too...
@@ -155,7 +155,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue] # Aurora's Song | Add NT contraband
+  parent: [ClothingHeadBase, C2ContrabandNanoTrasenRestricted] # Aurora's Song - Add NT contraband
   id: ClothingHeadHatBeretHoS
   name: head of security's beret
   description: A black beret with a commander's rank emblem. For officers that are more inclined towards style than safety.
@@ -174,7 +174,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue] # Aurora's Song | Add NT Contraband
+  parent: [ClothingHeadBase, C2ContrabandNanoTrasenRestricted] # Aurora's Song - Add NT Contraband
   id: ClothingHeadHatBeretWarden
   name: warden's beret
   description: A corporate-blue beret with a warden's rank emblem. For officers that are more inclined towards style than safety.
@@ -301,7 +301,7 @@
   - type: IngestionBlocker
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue ] # Aurora's Song | BaseCentcommContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [ ClothingHeadBase, BaseC3ContrabandCentCommLowValue ] # Aurora's Song - BaseCentcommContraband<BaseC3ContrabandCentCommLowValue
   id: ClothingHeadHatCentcom
   name: CentComm brand hat
   description: Feels good being the king's boss.
@@ -425,7 +425,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue] # Aurora's Song | BaseCentcommContraband<BaseC2ContrabandUnredeemable<BaseC3NanoTrasenContrabandLowValue
+  parent: [ClothingHeadBase, C2ContrabandNanoTrasenRestricted] # Aurora's Song - BaseCentcommContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingHeadHatHoshat
   name: head of security cap
   description: A stylish cap worn by the Head of Security. Shows the officers who's in charge.
@@ -751,7 +751,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue] #Aurora's Song | Add NT Contraband
+  parent: [ClothingHeadBase, C2ContrabandNanoTrasen] #Aurora's Song - Add NT Contraband
   id: ClothingHeadHatWarden
   name: warden's cap
   description: This hat emphasizes that you are THE LAW.
@@ -806,7 +806,7 @@
 
 - type: entity
   abstract: true
-  parent: [ ClothingHeadBase, BaseC3WizardContraband ] # Frontier: BaseMagicalContraband<BaseC3WizardContraband
+  parent: [ ClothingHeadBase, BaseC1Contraband ] # Aurora's Song - BaseMagicalContraband<BaseC1Contraband
   id: ClothingHeadHatWizardBase
   components:
   - type: WizardClothes
@@ -853,7 +853,7 @@
     sprite: Clothing/Head/Hats/truckershat.rsi
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: ClothingHeadPyjamaSyndicateBlack
   name: syndicate black pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -869,7 +869,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: ClothingHeadPyjamaSyndicatePink
   name: syndicate pink pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -885,7 +885,7 @@
       HeadSide : HEAD
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: ClothingHeadPyjamaSyndicateRed
   name: syndicate red pyjama hat
   description: For keeping that traitor head of yours warm.
@@ -1089,7 +1089,7 @@
         Caustic: 0.95
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband added ContrabandClothing as parent
+  parent: [ClothingHeadBase, BaseC1Contraband] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: ClothingHeadHatSyndie
   name: syndicate hat
   description: A souvenir hat from "Syndieland", their production has already been closed.
@@ -1100,7 +1100,7 @@
     sprite: Clothing/Head/Hats/syndiecap.rsi
 
 - type: entity
-  parent: [ClothingHeadBase, BaseC3SyndicateContraband , ContrabandClothing] # Frontier: added ContrabandClothing as parent | #Aurora's Song - added BaseC3SyndicateContraband as parent
+  parent: [ClothingHeadBase, C2ContrabandSyndicate] #Aurora's Song - added C2ContrabandSyndicate as parent
   id: ClothingHeadHatSyndieMAA
   name: master at arms hat
   description: Master at arms hat, looks intimidating, I doubt that you will like to communicate with its owner...
@@ -1195,7 +1195,7 @@
   - type: BlockMovement
 
 - type: entity
-  parent: [ ClothingHeadBase, BaseC3NanoTrasenContrabandLowValue ] # Aurora's Song | BaseCentcommContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [ ClothingHeadBase, BaseC3ContrabandCentCommLowValue ] # Aurora's Song -Aurora's Song - BaseCentcommContraband<BaseC3ContrabandCentCommLowValue
   id: ClothingHeadHatCentcomcap
   name: CentComm cap
   description: An extravagant, stylish cap worn by CentComm officials. Shows the Captain who's in charge.

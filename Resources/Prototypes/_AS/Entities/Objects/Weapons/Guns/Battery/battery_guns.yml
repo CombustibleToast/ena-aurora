@@ -324,7 +324,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Renamed Xray Cannon for cyborgs.
   name: volatile particle driver
-  parent: [BaseWeaponBattery, BaseC3Contraband]
+  parent: [BaseWeaponBattery, BaseC2ContrabandUnredeemable]
   id: WeaponXrayCannonCyborg
   description: An advanced energy weapon that uses high-energy particles to damage targets.
   components:
@@ -397,7 +397,7 @@
 
 - type: entity
   name: Mk.1 UE pulse rifle
-  parent: [ ASBaseWeaponFramePulseRifle, BaseC3NanoTrasenContraband, ASBaseWeaponManufacturerNanoTrasen ]
+  parent: [ ASBaseWeaponFramePulseRifle, BaseC3ContrabandCentCommLowValue, ASBaseWeaponManufacturerNanoTrasen ]
   description: the MK.1 "Unit-Expeditionary" pulse rifle is a limited production run from NanoTrasen, designed for commando units targeting HVTs in high-risk environments.
   id: ASWeaponMk1UEPulseRifle
   components:
@@ -453,7 +453,7 @@
 
 - type: entity
   name: EG-4 energy magnum
-  parent: [ ASBaseWeaponFrameEnergyPistolHighCap, ASBaseWeaponEnergyPistolFireModesMagnum, BaseC2ContrabandUnredeemable, ASBaseWeaponManufacturerNanoTrasen ]
+  parent: [ ASBaseWeaponFrameEnergyPistolHighCap, ASBaseWeaponEnergyPistolFireModesMagnum, C2ContrabandNanoTrasenRestricted, ASBaseWeaponManufacturerNanoTrasen ]
   id: ASWeaponEG4EnergyMagnum
   description: An advanced energy pistol with a rotating staged power system that allows for shots that are both high power and rapid fire.
   components:
@@ -496,7 +496,7 @@
 
 - type: entity
   id: ASWeaponEnergyCharonMagnum
-  parent: [ ASBaseWeaponManufacturerNanoTrasen, ASBaseWeaponFrameEnergyPistolHighCap, BaseC3NanoTrasenContraband]
+  parent: [ ASBaseWeaponManufacturerNanoTrasen, ASBaseWeaponFrameEnergyPistolHighCap, C2ContrabandNanoTrasenRestricted]
   name: Mk.II charon magnum
   suffix: Aurora's Song
   description: |-
@@ -616,7 +616,7 @@
 
 - type: entity
   name: energy shotgun # Yeah I ripped this from upstream's files too because it wasn't initialising the prototype and I'm lazy, sue me
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC3NanoTrasenContraband, ASBaseWeaponManufacturerNanoTrasen] # Aurora's Song | BaseGrandTheftContraband<BaseC2ContrabandUnredeemable<BaseCeNanoTrasenContraband
+  parent: [BaseWeaponBattery, BaseGunWieldable, C2ContrabandNanoTrasenRestricted, ASBaseWeaponManufacturerNanoTrasen]
   id: ASWeaponEnergyShotgun
   description: A limited run energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon. # Aurora's Song | Not one of a kind
   components:

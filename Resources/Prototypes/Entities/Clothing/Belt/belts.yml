@@ -64,7 +64,7 @@
 ## Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltStorageBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband Aurora's Song: ClothingBeltAmmoProviderBase < ClothingBeltStorageBase
+  parent: [ClothingBeltStorageBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband Aurora's Song - ClothingBeltAmmoProviderBase < ClothingBeltStorageBase
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -84,7 +84,7 @@
 
 
 - type: entity
-  parent: [NFClothingBeltStorageBase, BaseC3WizardContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseMagicalContraband<BaseC3WizardContraband, ContrabandClothing as parent
+  parent: [NFClothingBeltStorageBase, BaseC1Contraband] # Aurora's Song - BaseMagicalContraband<BaseC1Contraband # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltWand
   name: wizard belt # Frontier: changed the name from 'wand belt' -> 'wizard belt'
   description: A belt designed to hold various rods of power. A veritable fanny pack of exotic magic.
@@ -119,7 +119,7 @@
     # - 0,0,3,1 # Frontier: commented out
 
 - type: entity
-  parent: [NFClothingBeltStorageHolsterBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [NFClothingBeltStorageHolsterBase, BaseC1Contraband] # Aurora's Song - BaseC3SyndicateContraband<BaseC1Contraband Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
   id: ClothingBeltSyndieHolster
   name: syndicate shoulder holster
   description: A deep shoulder holster capable of holding many types of ballistics.
@@ -259,7 +259,7 @@
       medkit: !type:ContainerSlot { }
 
 - type: entity
-  parent: [ BaseC3NanoTrasenContrabandLowValue, ClothingBeltMilitaryWebbing ] # Aurora's Song | added NT Contraband parent
+  parent: [ C2ContrabandNanoTrasenRestricted, ClothingBeltMilitaryWebbing ] # Aurora's Song - added C2ContrabandNanoTrasenRestricted parent
   id: ClothingBeltMilitaryWebbingERT
   name: ERT chest rig
   description: A set of tactical webbing worn by Emergency Response Team operatives.

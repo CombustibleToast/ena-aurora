@@ -1,7 +1,7 @@
 # Different from loading a water gun or fire extinguisher with phlog, these will use welding fuel and shoot limited-range fireballs
 - type: entity
   name: FG13 Xiuhcoatl
-  parent: [SolutionGun, BaseWeaponFlamer, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  parent: [SolutionGun, BaseWeaponFlamer] # Aurora's Song - Solution refactor, removed BaseC3SyndicateContraband reparented to base.
   id: WeaponFlamerXiuhcoatl
   description: Simple as it is deadly, the Xiuhcoatl fulfills a long-standing craving of the Gorlex Marauders for Nanotrasen Barbeque.
   components:

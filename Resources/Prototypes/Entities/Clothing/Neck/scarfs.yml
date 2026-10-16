@@ -87,7 +87,7 @@
       sprite: Clothing/Neck/Scarfs/purple.rsi
 
 - type: entity
-  parent: [ ClothingScarfBase, BaseC3SyndicateContraband, ContrabandClothing ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ ClothingScarfBase, BaseC1Contraband ] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: ClothingNeckScarfStripedSyndieGreen
   name: striped syndicate green scarf
   description: A stylish striped syndicate green scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
@@ -100,7 +100,7 @@
       price: 500
 
 - type: entity
-  parent: [ClothingScarfBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingScarfBase, BaseC1Contraband ] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: ClothingNeckScarfStripedSyndieRed
   name: striped syndicate red scarf
   description: A stylish striped syndicate red scarf. The perfect winter accessory for those with a keen fashion sense, and those who are in the mood to steal something.
@@ -113,7 +113,7 @@
       price: 500
 
 - type: entity
-  parent: [ ClothingScarfBase, BaseC3NanoTrasenContrabandLowValue ] # Aurora's Song - BaseCommandContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [ ClothingScarfBase, BaseC3ContrabandCentCommLowValue ] # Aurora's Song - BaseCommandContraband<BaseC3ContrabandCentCommLowValue
   id: ClothingNeckScarfStripedCentcom
   name: striped CentComm scarf
   description: A stylish striped centcomm colored scarf. The perfect winter accessory for those with a keen fashion sense, and those who need to do paperwork in the cold.

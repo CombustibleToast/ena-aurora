@@ -120,7 +120,7 @@
 
 - type: entity
   name: CentComm pen
-  parent: [BaseAdvancedPen, BaseCentcommCommandContraband] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
+  parent: [BaseAdvancedPen, BaseC3ContrabandCentComm] # Aurora's Song - BaseCentcommContraband<BaseC3ContrabandCentComm
   id: PenCentcom
   description: In an attempt to keep up with the "power" of the cybersun bureaucracy, NT made a replica of cyber pen, in their corporate style.
   components:
@@ -149,7 +149,7 @@
 
 - type: entity
   name: wizard's magical pen
-  parent: [ PenEmbeddable, BaseC3WizardContraband ] # Frontier: BaseMagicalContraband<BaseC3WizardContraband
+  parent: [ PenEmbeddable, BaseC1Contraband ] # Aurora's Song - BaseMagicalContraband<BaseC1Contraband
   id: PenWiz
   description: A luxurious fountain pen. Seems to have a magical crystal eraser.
   components:

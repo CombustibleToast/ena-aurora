@@ -7,7 +7,7 @@
 
 - type: entity
   name: Chester
-  parent: [ BaseWeaponRifle, BaseGunWieldable]
+  parent: [ BaseWeaponRifle, C2ContrabandNanoTrasenRestricted, BaseGunWieldable] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: WeaponLeverChester
   description: An improved lever-action rifle designed to fire specialized 8 gauge ammunition for rapid threat removal.
   abstract: true

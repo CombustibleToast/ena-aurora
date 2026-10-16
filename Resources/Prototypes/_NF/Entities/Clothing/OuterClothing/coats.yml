@@ -56,7 +56,7 @@
     clothingPrototype: ClothingHeadHatHoodCardinalHood
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingOuterCoatNfsdBomber
   name: NFSD bomber
   description: Lookin' slick Tom.
@@ -67,7 +67,7 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_bomber.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingOuterCoatNfsdBomberBrigmed
   name: NFSD brigmedic bomber
   description: Blood may stain.
@@ -78,7 +78,7 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_brigmed_bomber.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingOuterCoatNfsdFormal
   name: NFSD formal coat
   description: Snazzy.
@@ -89,7 +89,7 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_formal.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingOuterCoatNfsdFormalSheriff
   name: NFSD sheriff's formal coat
   description: Very snazzy.
@@ -100,7 +100,7 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_sheriff_formal.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingOuterCoatNfsdLongCoat
   name: NFSD long coat
   description: Big iron on his hip...
@@ -111,7 +111,7 @@
     sprite: _NF/Clothing/OuterClothing/Misc/nfsd_long.rsi
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingOuterJacketSr
   name: station representative's jacket
   description: The upper part of the station representative's uniform.
@@ -175,7 +175,7 @@
     damageCoefficient: 0.60
 
 - type: entity
-  parent: [ ClothingOuterStorageBase, BaseC3WizardContraband ]
+  parent: [ ClothingOuterStorageBase, BaseC1Contraband ] # Aurora's Song - BaseC3WizardContraband<BaseC1Contraband
   id: ClothingOuterWizardBrick
   name: brick wizard coat
   description: ClothingOuterWizardBrick

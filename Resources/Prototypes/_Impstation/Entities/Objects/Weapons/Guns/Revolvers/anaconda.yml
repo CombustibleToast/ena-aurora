@@ -1,6 +1,6 @@
 - type: entity
   name: Anaconda
-  parent: [NFBaseWeaponFrameRevolver, BaseC3SyndicateContraband]
+  parent: [BaseC3SyndicateContraband, NFBaseWeaponFrameRevolver] # Aurora's Song - Changed Order of Parents to properly display due to inheritence issues.
   id: WeaponAnaconda
   description: A junior designer at Waffle Corp. swears they submitted this as a joke. Kicks like a blood-red horse when fired. Uses .60 anti-materiel ammo.
   components:

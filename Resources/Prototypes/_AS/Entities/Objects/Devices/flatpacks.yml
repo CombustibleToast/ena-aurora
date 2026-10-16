@@ -13,7 +13,7 @@
 # region SLE
 
 - type: entity
-  parent: HoverbikeFlatpack
+  parent: [ C2ContrabandUnredeemableRestricted, HoverbikeFlatpack ]
   id: HoverbikeSLEFlatpack
   name: SLE hoverbike flatpack
   description: A flatpack used for constructing an SLE hoverbike. Keys already slotted in the ignition.
@@ -24,7 +24,7 @@
     price: 2000
 
 - type: entity
-  parent: NfsdTechFabFlatpack
+  parent: [ C2ContrabandUnredeemableRestricted, NfsdTechFabFlatpack ]
   id: ASTechFabSLEFlatpack
   name: SLE techfab flatpack
   description: A flatpack used for constructing an SLE techfab.

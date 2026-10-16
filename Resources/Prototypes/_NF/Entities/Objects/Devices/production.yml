@@ -1,6 +1,6 @@
 - type: entity
-  id: CargoTechFabCircuitboardNF
   parent: BaseMachineCircuitboard
+  id: CargoTechFabCircuitboardNF
   name: cargo techfab machine board
   description: A machine printed circuit board for a cargo techfab.
   components:
@@ -17,8 +17,8 @@
           defaultPrototype: Beaker
 
 - type: entity
-  id: ShredderMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: ShredderMachineCircuitboard
   name: shredder machine board
   description: A machine printed circuit board for a shredder.
   components:
@@ -32,8 +32,8 @@
         Glass: 1
 
 - type: entity
-  id: SalvageTechFabCircuitboardNF
   parent: BaseMachineCircuitboard
+  id: SalvageTechFabCircuitboardNF
   name: salvage techfab machine board
   description: A machine printed circuit board for a salvage techfab.
   components:
@@ -50,8 +50,8 @@
           defaultPrototype: Beaker
 
 - type: entity
-  id: MercenaryTechFabCircuitboardNF
   parent: SecurityTechFabCircuitboard
+  id: MercenaryTechFabCircuitboardNF
   name: mercenary techfab machine board
   description: A machine printed circuit board for a mercenary techfab.
   components:
@@ -69,8 +69,8 @@
           defaultPrototype: Beaker
 
 - type: entity
-  id: MercenaryTechFabCircuitboardHackedNF
   parent: SecurityTechFabCircuitboard
+  id: MercenaryTechFabCircuitboardHackedNF
   name: hacked mercenary techfab machine board
   description: A spray painted circuit board for a mercenary techfab with some doodads attached to it. Don't worry 'bout it, choomba.
   components:
@@ -88,8 +88,8 @@
           defaultPrototype: Beaker
 
 - type: entity
-  id: NFScrapProcessorCircuitboard
   parent: BaseMachineCircuitboard
+  id: NFScrapProcessorCircuitboard
   name: scrap processor machine board
   description: A machine printed circuit board for a scrap processor.
   components:
@@ -106,8 +106,8 @@
           defaultPrototype: Beaker
 
 - type: entity
-  id: GasMiningDrillMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: GasMiningDrillMachineCircuitboard
   name: gas mining drill machine board
   description: A machine printed circuit board for a gas mining drill.
   components:
@@ -123,8 +123,8 @@
       enabled: false # should be draggable between stations
 
 - type: entity
-  id: GaslockFrameMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: GaslockFrameMachineCircuitboard
   name: portable gaslock machine board
   description: A machine printed circuit board for a gas mining drill.
   components:
@@ -139,8 +139,8 @@
 
 # TechFab
 - type: entity
+  parent: [ SecurityTechFabCircuitboard, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: NfsdTechFabCircuitboard
-  parent: SecurityTechFabCircuitboard
   name: NFSD techfab machine board
   description: A machine printed circuit board for an NFSD techfab.
   components:
@@ -152,8 +152,8 @@
 
 # Thrusters
 - type: entity
-  id: ThrusterSecurityMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: ThrusterSecurityMachineCircuitboard
   name: security thruster machine board
   components:
   - type: Sprite
@@ -166,8 +166,8 @@
       Steel: 5
 
 - type: entity
+  parent: [ BaseMachineCircuitboard, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: ThrusterNfsdMachineCircuitboard
-  parent: BaseMachineCircuitboard
   name: NFSD thruster machine board
   components:
   - type: Sprite
@@ -181,8 +181,8 @@
       Steel: 5
 
 - type: entity
-  id: SmallThrusterMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: SmallThrusterMachineCircuitboard
   name: small thruster machine board
   components:
   - type: Sprite
@@ -201,8 +201,8 @@
 
 # Gyroscope
 - type: entity
-  id: GyroscopeSecurityMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: GyroscopeSecurityMachineCircuitboard
   name: security gyroscope machine board
   components:
   - type: Sprite
@@ -216,8 +216,8 @@
       Glass: 2
 
 - type: entity
-  id: SmallGyroscopeSecurityMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: SmallGyroscopeSecurityMachineCircuitboard
   name: small security gyroscope machine board
   components:
   - type: Sprite
@@ -233,8 +233,8 @@
     price: 20
 
 - type: entity
+  parent: [ BaseMachineCircuitboard, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: GyroscopeNfsdMachineCircuitboard
-  parent: BaseMachineCircuitboard
   name: NFSD gyroscope machine board
   components:
   - type: Sprite
@@ -249,8 +249,8 @@
       Glass: 2
 
 - type: entity
+  parent: [ BaseMachineCircuitboard, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: SmallGyroscopeNfsdMachineCircuitboard
-  parent: BaseMachineCircuitboard
   name: small NFSD gyroscope machine board
   components:
   - type: Sprite
@@ -267,8 +267,8 @@
     price: 18 # 12.5<18
 
 - type: entity
-  id: SmallGyroscopeMachineCircuitboard
   parent: BaseMachineCircuitboard
+  id: SmallGyroscopeMachineCircuitboard
   name: small gyroscope machine board
   components:
   - type: Sprite
@@ -301,8 +301,8 @@
       Cable: 2
 
 - type: entity
+  parent: [ BaseMachineCircuitboard, BaseC1Contraband ] # Aurora's Song - BaseC2ContrabandUnredeemable<BaseC1Contraband
   id: PortableGeneratorDKMachineCircuitboard
-  parent: [ BaseMachineCircuitboard, BaseC2ContrabandUnredeemable ]
   name: D-K portable generator machine board
   description: A machine printed circuit board for a D-K-type portable generator.
   components:
@@ -323,8 +323,8 @@
       price: 40
 
 - type: entity
+  parent: [ BaseMachineCircuitboard, BaseC1Contraband ] # Aurora's Song - BaseC2ContrabandUnredeemable<BaseC1Contraband
   id: PortableGeneratorDKJrMachineCircuitboard
-  parent: [ BaseMachineCircuitboard, BaseC1Contraband ]
   name: D-K Jr. portable generator machine board
   description: A machine printed circuit board for a D-K Jr.-type portable generator.
   components:
@@ -346,7 +346,7 @@
 
 # Wizards and cultists
 - type: entity
-  parent: BaseMachineCircuitboard
+  parent: [ BaseC3WizardContraband, BaseMachineCircuitboard ] # Aurora's Song - Added BaseC3WizardContraband
   id: ScrollWizardStaffRechargerAltar
   name: wizard staff altar binding scroll
   description: An odd amalgamation of wizardry and circuitry. Somehow it has a number of ports matching a standard NanoTrasen machine frame.
@@ -378,7 +378,7 @@
       price: 0
 
 - type: entity
-  parent: ScrollWizardStaffRechargerAltar
+  parent: [ BaseC3CultContraband, ScrollWizardStaffRechargerAltar ] # Aurora's Song - Added BaseC3CultContraband
   id: ScrollCultStaffRechargerAltar
   name: blood cult staff altar binding scroll
   description: An odd amalgamation of eldritch magic and circuitry. Somehow it has a number of ports matching a standard NanoTrasen machine frame.
@@ -423,8 +423,8 @@
         # CableHV: 10
 
 - type: entity
+  parent: [ BaseC3CultContraband, ScrollWizardStaffRechargerAltar ] # Aurora's Song - Added BaseC3CultContraband
   id: ScrollCultForge
-  parent: ScrollWizardStaffRechargerAltar
   name: cult forge binding scroll
   components:
     - type: Sprite

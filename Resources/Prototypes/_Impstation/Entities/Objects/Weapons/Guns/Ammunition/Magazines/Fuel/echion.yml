@@ -1,6 +1,6 @@
 # Fuel Canisters compatible with any Echion weapon.
 - type: entity
-  parent: [ SolutionTank, SolutionTiny, BaseItem, BaseC3SyndicateContraband ] # Aurora's Song - Solution refactor
+  parent: [ SolutionTank, SolutionTiny, BaseItem, C2ContrabandSyndicateRestricted ] # Aurora's Song - Solution refactor, Added C2ContrabandSyndicateRestricted
   id: EchionCanister
   name: Echion canister
   description: A special containment device designed for quickly refueling Echion weapons.
@@ -51,7 +51,7 @@
     - EchionGun
 
 - type: entity
-  parent: [ SolutionTank, SolutionVeryTiny, BaseItem, BaseC2ExpeditionContraband ] # Aurora's Song - Solution refactor
+  parent: [ SolutionTank, SolutionVeryTiny, BaseItem, BaseC2ContrabandUnredeemable ] # Aurora's Song - Solution refactor, added BaseC2ContrabandUnredeemable
   id: PunkEchionCanister
   name: Echion canister
   description: A home-made canister designed for quickly refueling Echion weapons, but it feels kinda fragile.

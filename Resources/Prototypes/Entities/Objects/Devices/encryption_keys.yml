@@ -70,7 +70,7 @@
     - state: nano_label
 
 - type: entity
-  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseCentcommCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [EncryptionKey, C2ContrabandRestricted] # Aurora's Song - BaseCentcommCommandContraband<C2ContrabandRestricted
   id: EncryptionKeyStationMaster
   name: station master encryption key
   categories: [ DoNotMap ] # Frontier
@@ -98,7 +98,7 @@
     - state: cap_label
 
 - type: entity
-  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [EncryptionKey, C2ContrabandRestricted] # Aurora's Song - BaseCommandContraband<C2ContrabandRestricted
   id: EncryptionKeyCommand
   name: command encryption key
   categories: [ DoNotMap ] # Frontier
@@ -206,7 +206,7 @@
     - state: robotics_label
 
 - type: entity
-  parent: [ EncryptionKey, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityLawyerContraband<BaseC2ContrabandUnredeemable
+  parent: [ EncryptionKey, C2ContrabandRestricted ] # Aurora's Song - BaseSecurityLawyerContraband<C2ContrabandRestricted
   id: EncryptionKeySecurity
   name: security encryption key
   categories: [ DoNotMap ] # Frontier
@@ -244,7 +244,7 @@
     - EncryptionService
 
 - type: entity
-  parent: [EncryptionKey, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [EncryptionKey, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: EncryptionKeySyndie
   name: blood-red encryption key
   categories: [ DoNotMap ] # Frontier
@@ -278,7 +278,7 @@
     - state: ai_label
 
 - type: entity
-  parent: [ EncryptionKey, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: [ EncryptionKey, BaseC1Contraband ] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: EncryptionKeyBinarySyndicate
   name: binary translator key
   description: A syndicate encryption key that translates binary signals used by silicons.

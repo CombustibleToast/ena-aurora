@@ -290,7 +290,7 @@
     - Chemicals
 
 - type: entity
-  parent: [ BaseFlatpack, BaseC3SyndicateContraband ] # Aurora's Song - BaseSyndicateContraband>BaseC3SyndicateContraband
+  parent: [ BaseFlatpack, BaseC1Contraband ] # Aurora's Song - BaseSyndicateContraband>BaseC1Contraband
   id: SyndicateMicrowaveFlatpack
   name: donk co. microwave flatpack
   description: A flatpack used for constructing a microwave too hot for Nanotrasen to handle.

@@ -24,7 +24,7 @@
       path: /Audio/Items/smoke_grenade_prime.ogg
 
 - type: entity
-  parent: [ SmokeGrenade ] # Frontier: removed BaseCivilianContraband
+  parent: [ BaseC1Contraband, SmokeGrenade ] # Aurora's Song - Added BaseC1Contraband, to fix Contraband Status.
   id: CleanerGrenade
   name: cleanade
   description: Special grenade for janitors, releasing large cloud of space cleaner foam.

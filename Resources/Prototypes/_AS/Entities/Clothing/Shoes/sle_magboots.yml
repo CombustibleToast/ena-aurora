@@ -2,7 +2,7 @@
 # Using recolored sprites from master branch
 
 - type: entity
-  parent: ClothingShoesBootsMagSecurity
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingShoesBootsMagSecurity ]
   id: ASClothingShoesBootsMagSLE
   name: SLE magboots
   description: Magnetic boots issued to SLE personnel for extravehicular activity.

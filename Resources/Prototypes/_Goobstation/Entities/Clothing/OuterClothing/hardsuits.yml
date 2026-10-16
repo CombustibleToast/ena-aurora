@@ -9,7 +9,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
 
 - type: entity
-  parent: [BaseC3NanoTrasenContrabandLowValue, ClothingOuterHardsuitSecurity] #Aurora's Song | Contraband corrected
+  parent: [C2ContrabandNanoTrasenRestricted, ClothingOuterHardsuitSecurity] #Aurora's Song | Contraband corrected
   id: ClothingOuterHardsuitBlueshield
   name: gargoyle hardsuit # Aurora's Song | renamed in line with other NT hardsuits
   description: A special security hardsuit made for the Blueshield Officer, has extra armor yet somehow feels lighter.
@@ -57,7 +57,7 @@
     size: Huge
   - type: Clothing
     sprite: _Goobstation/Clothing/OuterClothing/Hardsuits/cybersunstealth.rsi
-#    onEquipFunctions: # Aurora's Song | These functions don't exist here
+#    onEquipFunctions: # Aurora's Song - These functions don't exist here
 #      - !type:TraitAddComponent
 #        components:
 #          - type: BreakStealthOnAttack

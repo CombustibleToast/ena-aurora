@@ -42,7 +42,7 @@
   - type: NoSlip
 
 - type: entity
-  parent: ClothingShoesBootsMagSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingShoesBootsMagSecurity ] # Aurora's Song -Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingShoesBootsMagNfsd
   name: NFSD magboots
   components:

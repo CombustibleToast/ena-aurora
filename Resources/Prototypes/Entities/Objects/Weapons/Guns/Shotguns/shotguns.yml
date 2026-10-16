@@ -48,7 +48,7 @@
   categories: [ HideSpawnMenu ] # Frontier
   name: Bulldog
   # Don't parent to BaseWeaponShotgun because it differs significantly
-  parent: [BaseItem, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseItem, BaseGunWieldable, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: WeaponShotgunBulldog
   description: An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids. Uses .50 shotgun shells.
   components:

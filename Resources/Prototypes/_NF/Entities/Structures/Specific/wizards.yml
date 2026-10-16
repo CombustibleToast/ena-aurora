@@ -145,7 +145,7 @@
 
 #region Inf. canisters
 - type: entity
-  parent: [ GasCanister, BaseC3WizardContraband ]
+  parent: [ GasCanister ] # Aurora's Song - Removed BaseC3WizardContraband
   id: WizardGasCanisterBottomlessOxygen
   name: bottomless canister
   suffix: Filled, Oxygen
@@ -175,7 +175,7 @@
       price: 1250
 
 - type: entity
-  parent: [ GasCanister, BaseC3WizardContraband ]
+  parent: [ GasCanister ] # Aurora's Song - Removed BaseC3WizardContraband
   id: WizardGasCanisterBottomlessNitrogen
   name: bottomless canister
   suffix: Filled, Nitrogen

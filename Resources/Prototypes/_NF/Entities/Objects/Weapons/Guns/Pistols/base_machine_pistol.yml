@@ -39,7 +39,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameMachinePistolGorlex
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameMachinePistol ] # Contraband adjusted | Aurora
+  parent: [ C2ContrabandSyndicate, NFBaseWeaponFrameMachinePistol ] # Aurora's Song - Added C2ContrabandSyndicate
   abstract: true
   components:
   - type: Gun

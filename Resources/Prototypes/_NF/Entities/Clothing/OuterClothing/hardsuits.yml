@@ -106,7 +106,7 @@
 
 # Security
 - type: entity
-  parent: ClothingOuterHardsuitBaseNFNfsd
+  parent: ClothingOuterHardsuitBaseNFNfsd # Aurora's Song - Parent added C2ContrabandNanoTrasenRestricted
   id: ClothingOuterHardsuitNfsdBronze
   name: NFSD bronze patrol suit
   description: The standard-issue NFSD space proof suit for patrol duty. This bronze variant has cadet rank markings.
@@ -138,7 +138,7 @@
     sprintModifier: 0.9
 
 - type: entity
-  parent: ClothingOuterHardsuitNfsdBronze
+  parent: ClothingOuterHardsuitNfsdBronze # Aurora's Song - Parent added C2ContrabandNanoTrasenRestricted
   id: ClothingOuterHardsuitNfsdSilver
   name: NFSD silver patrol suit
   description: The standard-issue NFSD space proof suit for patrol duty. This silver variant has officer rank markings.
@@ -151,7 +151,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdSilver
 
 - type: entity
-  parent: ClothingOuterHardsuitNfsdBronze
+  parent: ClothingOuterHardsuitNfsdBronze # Aurora's Song - Parent added C2ContrabandNanoTrasenRestricted
   id: ClothingOuterHardsuitNfsdGold
   name: NFSD gold patrol suit
   description: The standard-issue NFSD space proof suit for patrol duty. This gold variant has supervisor rank markings.
@@ -164,7 +164,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdGold
 
 - type: entity
-  parent: ClothingOuterHardsuitNfsdBronze
+  parent: ClothingOuterHardsuitNfsdBronze # Aurora's Song - Parent added C2ContrabandNanoTrasenRestricted
   id: ClothingOuterHardsuitNfsdSheriff
   name: NFSD sheriff patrol suit
   description: The standard-issue NFSD space proof suit for patrol duty. This gold variant has sheriff rank markings.
@@ -177,7 +177,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdSheriff
 
 - type: entity
-  parent: ClothingOuterHardsuitNfsdBronze
+  parent: ClothingOuterHardsuitNfsdBronze # Aurora's Song - Parent added C2ContrabandNanoTrasenRestricted
   id: ClothingOuterHardsuitNfsdBrigmedic
   name: NFSD brigmedic patrol suit
   description: The standard-issue NFSD space proof suit for patrol duty. This brighter variant has brigmedic rank markings.
@@ -190,7 +190,7 @@
     clothingPrototype: ClothingHeadHelmetHardsuitNfsdBrigmedic
 
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterHardsuitJuggernaut] # Jugger Suit
+  parent: [BaseC3NanoTrasenContraband, ClothingOuterHardsuitJuggernaut] # Aurora's Song - Added BaseC3NanoTrasenContraband, Juggernaut Hardsuit
   id: ClothingOuterHardsuitNfsdExperimental
   name: NFSD experimental combat suit
   description: A very heavily armored NFSD suit. This space proof marvel of engineering uses state of the art alloys to provide immense protection while sacrificing little mobility.
@@ -398,7 +398,7 @@
 
 #Wizard Hardsuit
 - type: entity
-  parent: [ClothingOuterHardsuitBase, BaseC3WizardContraband, ContrabandClothing] # Frontier: BaseMagicalContraband<BaseC3WizardContraband, ContrabandClothing as parent
+  parent: [ClothingOuterHardsuitBase, BaseC1Contraband] # Aurora's Song - BaseMagicalContraband<BaseC1Contraband
   id: ClothingOuterHardsuitWizardBrick
   name: brick wizard hardsuit
   description: A weird hardsuit with ornaments made of baked clay and magical gemstones.

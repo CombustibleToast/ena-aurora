@@ -10,7 +10,7 @@
     sprite: _DV/Clothing/Uniforms/Jumpsuit/littleguy_overalls.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasen ] # Aurora's Song - Added C2ContrabandNanoTrasen
   id: ClothingUniformJumpsuitSecFormal
   name: security formal suit
   description: A ceremonial piece of Station Security kit, for special occasions of any kind.

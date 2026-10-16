@@ -1,6 +1,6 @@
 - type: entity
   name: SLE energy sword
-  parent: [BaseC2ContrabandUnredeemable, EnergySword]
+  parent: [C2ContrabandUnredeemableRestricted, EnergySword]
   id: EnergySwordSLE
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:
@@ -11,7 +11,7 @@
 
 - type: entity
   name: BSO energy sword
-  parent: [BaseC3NanoTrasenContraband, EnergySword]
+  parent: [C2ContrabandNanoTrasenRestricted, EnergySword]
   id: EnergySwordBSO
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:

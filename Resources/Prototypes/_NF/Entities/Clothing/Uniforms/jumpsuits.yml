@@ -77,7 +77,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/ert_mailcarrier.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitNfsd
   name: NFSD jumpsuit
   description: A long sleeved jumpsuit produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
@@ -88,7 +88,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_jump.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase , C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitNfsdShort
   name: NFSD jumpsuit
   description: A short sleeved jumpsuit produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
@@ -99,7 +99,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_jump_short.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitNfsdTacBlack
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -110,7 +110,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_black.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitNfsdTacGray
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -121,7 +121,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_gray.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitNfsdTacCamo
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -132,7 +132,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_camo.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitNfsdTacCream
   name: NFSD tactical jumpsuit
   description: A tactical jumpsuit for deputies in the field.
@@ -143,7 +143,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/nfsd_tac_cream.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ ClothingUniformBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitPublicAffairsLiaison
   name: public affairs liaison jumpsuit
   description: A starched and pressed suit for the public affairs liaison.
@@ -155,9 +155,7 @@
 
 # Syndicate Jupsuits with sensors off
 - type: entity
-  parent:
-  - ClothingUniformJumpsuitRecruitSyndie
-  - ContrabandClothing
+  parent: ClothingUniformJumpsuitRecruitSyndie # Aurora's Song - Removed ContrabandClothing
   id: ClothingUniformJumpsuitRecruitSyndieNF
   components:
   - type: SuitSensor
@@ -165,9 +163,7 @@
     mode: SensorOff
 
 - type: entity
-  parent:
-  - ClothingUniformJumpsuitRepairmanSyndie
-  - ContrabandClothing
+  parent: ClothingUniformJumpsuitRepairmanSyndie # Aurora's Song - Removed ContrabandClothing
   id: ClothingUniformJumpsuitRepairmanSyndieNF
   components:
   - type: SuitSensor
@@ -175,9 +171,7 @@
     mode: SensorOff
 
 - type: entity
-  parent:
-  - ClothingUniformJumpsuitParamedicSyndie
-  - ContrabandClothing
+  parent: ClothingUniformJumpsuitParamedicSyndie # Aurora's Song - Removed ContrabandClothing
   id: ClothingUniformJumpsuitParamedicSyndieNF
   components:
   - type: SuitSensor
@@ -185,9 +179,7 @@
     mode: SensorOff
 
 - type: entity
-  parent:
-  - ClothingUniformJumpsuitChiefEngineerSyndie
-  - ContrabandClothing
+  parent: ClothingUniformJumpsuitChiefEngineerSyndie # Aurora's Song - Removed ContrabandClothing
   id: ClothingUniformJumpsuitChiefEngineerSyndieNF
   components:
   - type: SuitSensor
@@ -195,9 +187,7 @@
     mode: SensorOff
 
 - type: entity
-  parent:
-  - ClothingUniformJumpsuitSyndieFormal
-  - ContrabandClothing
+  parent: ClothingUniformJumpsuitSyndieFormal # Aurora's Song - Removed ContrabandClothing
   id: ClothingUniformJumpsuitSyndieFormalNF
   components:
   - type: SuitSensor
@@ -216,7 +206,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpsuit/private_security.rsi
 
 - type: entity
-  parent: ClothingUniformJumpsuitHoP
+  parent: [ ClothingUniformJumpsuitHoP, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpsuitSr
   name: station representative's uniform
   description: A top of the line outfit for Frontier Outpost's station representative. No expense was spared in the tailoring, every stitch is a masterpiece. The fact this suit was even issued shows the trust Central Command is placing in their representative on this outpost.

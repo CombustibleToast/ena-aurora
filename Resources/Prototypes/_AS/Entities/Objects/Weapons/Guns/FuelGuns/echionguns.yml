@@ -1,7 +1,7 @@
 # Guns that use Echion as fuel and typically shoot energy-style projectiles
 - type: entity
   name: BS Shuvit
-  parent: [SolutionToolVeryTiny, BaseWeaponEchion, BaseC2ExpeditionContraband] # Aurora's Song - Solution refactor
+  parent: [SolutionToolVeryTiny, BaseC2ContrabandUnredeemable, BaseWeaponEchion] # Aurora's Song - Solution refactor
   id: ASWeaponEchionBSShuvit
   description: It remains unclear if the make of this weapon is that of pure genius or absolute insanity.
   components:
@@ -63,7 +63,7 @@
 
 - type: entity
   name: Casper Slide
-  parent: [SolutionToolTiny, BaseWeaponEchion, BaseGunWieldable, BaseC2ExpeditionContraband] # Aurora's Song - Solution refactor
+  parent: [SolutionToolTiny, BaseC2ContrabandUnredeemable, BaseWeaponEchion, BaseGunWieldable] # Aurora's Song - Solution refactor
   id: ASWeaponEchionCasperSlide
   description: Despite the suggestions of the haphazard paint job, you can tell there's real care put into this weapon's construction.
   components:

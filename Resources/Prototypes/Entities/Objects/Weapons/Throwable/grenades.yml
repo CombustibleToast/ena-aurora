@@ -1,7 +1,7 @@
 - type: entity
   name: explosive grenade
   description: Grenade that creates a small but devastating explosion.
-  parent: [VolatileGrenadeBase, TimerGrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [VolatileGrenadeBase, TimerGrenadeBase, C2ContrabandRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandRestricted
   id: ExGrenade
   components:
   - type: ExplodeOnTrigger
@@ -79,7 +79,7 @@
 - type: entity
   name: syndicate minibomb
   description: A syndicate-manufactured explosive used to stow destruction and cause chaos.
-  parent: [VolatileGrenadeBase, TimerGrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [VolatileGrenadeBase, TimerGrenadeBase, C2ContrabandRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandRestricted
   id: SyndieMiniBomb
   components:
   - type: Sprite
@@ -152,7 +152,7 @@
 
 
 - type: entity
-  parent: [ FragileGrenadeBase, TimerGrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ FragileGrenadeBase, TimerGrenadeBase, C2ContrabandRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandRestricted
   id: SingularityGrenade
   name: singularity grenade
   description: Grenade that simulates the power of a singularity, pulling things in a heap.
@@ -286,7 +286,7 @@
 - type: entity
   name: the nuclear option
   description: Please don't throw it, think of the children.
-  parent: [TimerGrenadeBase, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [TimerGrenadeBase, BaseClass3Restricted] # Aurora's Song - added BaseClass3Restricted
   id: NuclearGrenade
   components:
   - type: Sprite
@@ -369,7 +369,7 @@
 - type: entity
   name: EMP grenade
   description: A grenade designed to wreak havoc on electronic systems.
-  parent: [ImpactGrenadeBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ImpactGrenadeBase, C2ContrabandRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandRestricted
   id: EmpGrenade
   components:
   - type: Sprite

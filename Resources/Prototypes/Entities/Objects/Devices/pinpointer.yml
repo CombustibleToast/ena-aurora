@@ -55,7 +55,7 @@
 - type: entity
   name: pinpointer
   id: PinpointerNuclear
-  parent: [ BaseC2ContrabandUnredeemable, PinpointerBase ] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [ C2ContrabandUnredeemableRestricted, PinpointerBase ] # Aurora's Song - BaseCommandContraband<C2ContrabandUnredeemableRestricted
   components:
   - type: Pinpointer
     component: NukeDisk
@@ -65,7 +65,7 @@
   name: syndicate pinpointer
   description: Produced specifically for nuclear operative missions, get that disk!
   id: PinpointerSyndicateNuclear
-  parent: [ BaseC3SyndicateContraband, PinpointerBase ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ C2ContrabandSyndicateRestrictedUnredeemable, PinpointerBase ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestrictedUnredeemable
   components:
   - type: Sprite
     layers:

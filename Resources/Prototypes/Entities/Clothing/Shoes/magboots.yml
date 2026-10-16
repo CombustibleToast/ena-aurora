@@ -88,7 +88,7 @@
     price: 3000
 
 - type: entity
-  parent: [ClothingShoesBootsMagBase, BaseJetpack, C2ContrabandUnregistered, ContrabandClothing] # Aurora - BaseSyndicateContraband > C2ContrabandUnregistered
+  parent: [ClothingShoesBootsMagBase, BaseJetpack, C2ContrabandSyndicate] # Aurora - BaseSyndicateContraband > C2ContrabandSyndicate
   id: ClothingShoesBootsMagSyndie
   name: blood-red magboots
   description: Reverse-engineered from ERT magboots, they have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.
@@ -117,7 +117,7 @@
     price: 1500
 
 - type: entity
-  parent: [BaseC3NanoTrasenContraband, ClothingShoesBootsMagSyndie] # Aurora's Song | BaseCentcommContraband<BaseC3NanoTrasenContraband
+  parent: [C2ContrabandNanoTrasenRestricted, ClothingShoesBootsMagSyndie] # Aurora's Song - BaseCentcommContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingShoesBootsMagERT
   name: ERT magboots
   description: Upgraded magnetic boots utilized by Nanotrasen's Emergency Response Teams, they have a heavy magnetic pull and integrated thrusters. It can hold 0.75 L of gas.

@@ -1,7 +1,7 @@
 #region Weapons
 
 - type: entity
-  parent: [ClothingHandsButcherable, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband added ContrabandClothing as parent
+  parent: [ClothingHandsButcherable, C2ContrabandSyndicateRestricted, ContrabandClothing]
   id: ClothingHandsGlovesNorthStarRaiden
   name: Ultima Gauntlets
   description: Standing here, I realize...
@@ -34,7 +34,7 @@
 #region SLE
 
 - type: entity
-  parent: ClothingHandsGlovesCombat
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingHandsGlovesCombat ]
   id: ASClothingHandsGlovesCombatSLEDarkBlue
   name: SLE combat gloves
   description: Insulated gloves for Sector Law Enforcement officers.
@@ -62,7 +62,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingHandsGlovesCaptain
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingHandsGlovesCaptain ]
   id: ASClothingHandsGlovesColonialRepresentative
   name: colonial representative's gloves
   description: Fine gloves befitting a colonial representative.

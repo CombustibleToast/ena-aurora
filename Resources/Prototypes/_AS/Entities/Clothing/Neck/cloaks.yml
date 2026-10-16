@@ -9,7 +9,7 @@
 
 #region SLE
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, C2ContrabandRestricted ]
   id: ASClothingNeckCloakCommissioner
   name: commissioner's cloak
   description: The cloak of the SLE commissioner. Projects authority.
@@ -22,7 +22,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, C2ContrabandRestricted ]
   id: ASClothingNeckCloakColonialRepresentative
   name: colonial representative's cloak
   description: A stylish cloak denoting the wearer's position as Colonial Representative.

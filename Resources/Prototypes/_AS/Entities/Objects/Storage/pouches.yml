@@ -2,7 +2,7 @@
 
 - type: entity
   id: ASPouchSLE
-  parent: NFPouchUtility
+  parent: [ NFPouchUtility, C2ContrabandUnredeemableRestricted ]
   name: SLE pouch
   components:
   - type: Sprite
@@ -57,7 +57,7 @@
 #region Command
 
 - type: entity
-  parent: NFPouchSr
+  parent: [ C2ContrabandUnredeemableRestricted, NFPouchSr ]
   id: ASPouchCR
   name: colonial representative pouch
   description: A handy pouch for carrying colonial administrative items.

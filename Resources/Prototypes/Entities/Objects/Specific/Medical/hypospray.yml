@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [SolutionHypospraySmall, BaseItem]
+  parent: [ BaseC2ExpeditionContraband, SolutionHypospraySmall, BaseItem] # Aurora's Song - Added  BaseC2ExpeditionContraband
   id: BaseHypospray
   components:
   - type: Injector
@@ -69,7 +69,7 @@
     solutionName: hypospray
 
 - type: entity
-  parent: [BaseHypospray, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
+  parent: [BaseHypospray, C2ContrabandSyndicate] # Aurora's Song - add C2ContrabandSyndicate
   id: SyndiHypo
   name: gorlex hypospray
   description: A sterile injector for rapid administration of drugs. Reverse-engineered from Nanotrasen designs, Cybersun produces these in limited quantities for Gorlex Marauders' corpsmen.
@@ -561,7 +561,7 @@
 
 - type: entity
   abstract: true
-  parent: [SolutionToolSmall, ChemicalMedipen, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [SolutionToolSmall, ChemicalMedipen, C2ContrabandSyndicateRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestricted
   id: SyndicateMedipen # Interdyne gets more capacity
 
 - type: entity
@@ -639,7 +639,7 @@
     price: 583 # 3500 for 6 as a freaky fraction
 
 - type: entity
-  parent: SyndicateMedipen
+  parent: [ SolutionToolSmall, ChemicalMedipen ] # Aurora's Song - Reworked in a way that it wosn't parented to Syndicate medipens, for post Combat Pen rework. Syndicate medipen is larger.
   id: CombatMedipen
   name: combat medipen
   description: A single-dose, non-refillable medipen containing a chemical cocktail that treats most forms of damage.
@@ -676,7 +676,7 @@
     price: 1500
 
 - type: entity
-  parent: [Pen, SolutionHyposprayTiny] # It is just like normal pen, isn't it?
+  parent: [BaseC2ExpeditionContraband, Pen, SolutionHyposprayTiny] # It is just like normal pen, isn't it? # Aurora's Song - Add BaseC2ExpeditionContraband
   id: Hypopen
   suffix: Hypopen
   components:
@@ -705,7 +705,7 @@
     allowedJobs: [ DirectorOfCare ] # Aurora's Song - Director of care should be the only one with this
 
 - type: entity
-  parent: [ BaseItem, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ BaseItem, BaseC2ExpeditionContraband ] # Aurora's Song - BaseSyndicateContraband<BaseC2ExpeditionContraband
   id: HypopenBox
   name: hypopen box
   description: A small box containing a hypopen. Packaging disintegrates when opened, leaving no evidence behind.

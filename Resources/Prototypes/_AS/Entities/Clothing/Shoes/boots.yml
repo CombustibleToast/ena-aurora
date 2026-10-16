@@ -2,7 +2,7 @@
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
-  parent: ClothingShoesBootsCombat
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingShoesBootsCombat ]
   id: ASClothingShoesBootsSLEDarkBlue
   name: SLE dark blue boots
   description: Stylish boots for running in circles on a deck during emergencies.
@@ -13,7 +13,7 @@
     sprite: _AS/Clothing/Shoes/Boots/sle_brown_boots.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ClothingShoesBootsCombat
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingShoesBootsCombat ]
   id: ASClothingShoesBootsSLELightBlue
   name: SLE light blue boots
   description: Stylish boots for running in circles on a deck during emergencies.

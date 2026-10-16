@@ -19,7 +19,7 @@
     sprite: _NF/Clothing/Ears/Headsets/pilot.rsi
 
 - type: entity
-  parent: ClothingHeadsetAlt
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingHeadsetAlt ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingHeadsetAltNfsdBrown
   name: NFSD over-ear headset
   components:

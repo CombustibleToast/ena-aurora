@@ -1,7 +1,7 @@
 #region SLE Softsuits
 
 - type: entity
-  parent: ASClothingOuterEVASuitBase
+  parent: [ ASClothingOuterEVASuitBase, C2ContrabandRestricted ]
   id: ClothingOuterSoftsuitSlePatrol
   name: SLE patrol suit
   description: The standard-issue SLE space proof suit for patrol duty.

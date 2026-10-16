@@ -2,7 +2,7 @@
 - type: entity
   id: BaseMagazineCaselessRifle
   name: "magazine (.25 caseless)"
-  parent: [ BaseItem, BaseC3SyndicateContrabandNoValue, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband, added RecyclableItemSteelTiny | Aurora's Song: BaseCartridge changed to BaseItem
+  parent: [ BaseItem, C2ContrabandSyndicateRestricted, RecyclableItemSteelTiny ] # Frontier: added RecyclableItemSteelTiny | Aurora's Song -  BaseSecurityContraband<C2ContrabandSyndicateRestricted, BaseCartridge changed to BaseItem
   abstract: true
   components:
   - type: Tag
@@ -35,7 +35,7 @@
 
 - type: entity
   abstract: true
-  parent: [ BaseItem, BaseC3SyndicateContrabandNoValue, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband, added RecyclableItemSteelTiny | Aurora's Song: BaseCartridge changed to BaseItem
+  parent: [ BaseItem, C2ContrabandSyndicateRestricted, RecyclableItemSteelTiny ] # Frontier: added RecyclableItemSteelTiny | Aurora's Song - BaseCartridge changed to BaseItem, BaseSecurityContraband<C2ContrabandSyndicateRestricted
   id: BaseMagazinePistolCaselessRifle
   name: "pistol magazine (.25 caseless)"
   components:

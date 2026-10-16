@@ -33,7 +33,7 @@
 # Tools
 
 - type: entity
-  parent: NFBaseBlueprintExpeditionSalvage
+  parent: [ BaseC1Contraband, NFBaseBlueprintExpeditionSalvage ] # Aurora's Song - Added BaseC1Contraband
   id: NFBlueprintEnergyPickaxe
   name: holopickaxe blueprint
   description: A blueprint with a schematic of a holopickaxe. It can be inserted into a protolathe or techfab.

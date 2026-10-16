@@ -191,7 +191,7 @@
 
 - type: entity
   name: portable flasher
-  parent: [BaseMachine, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseMachine, C2ContrabandRestricted] # Aurora's Song - BaseSecurityContraband<C2ContrabandRestricted
   id: PortableFlasher
   description: An ultrabright flashbulb with a proximity trigger, useful for making an area security-only.
   components:

@@ -14,7 +14,7 @@
 #region SLE
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, C2ContrabandRestricted ]
   id: ASClothingNeckMantleCommissioner
   name: commissioner's mantle
   description: Shoulder mantle for the Commissioner. Projects authority.
@@ -27,7 +27,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, C2ContrabandRestricted ]
   id: ASClothingNeckMantleColonialRepresentative
   name: colonial representative's mantle
   description: A decorative mantle worn by the Colonial Representative.
@@ -40,7 +40,7 @@
 #region NanoTrasen
 
 - type: entity
-  parent: [ClothingNeckBase, BaseC2ContrabandUnredeemable]
+  parent: [ClothingNeckBase, C2ContrabandNanoTrasenRestricted]
   id: ASClothingNeckMantleBlueshieldOperative
   name: blushield operative's mantle
   description: Decorative and clearly expensive, supposedly these are granted for exceptional service

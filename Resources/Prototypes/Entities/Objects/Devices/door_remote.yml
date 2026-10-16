@@ -206,10 +206,10 @@
     - Engineering
 
 - type: entity
-  parent: [DoorRemoteCanEletrifyDoors, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [DoorRemoteCanEletrifyDoors, BaseClass3Restricted]  # Aurora's Song - BaseCommandContraband<BaseClass3Restricted, It's an admeme item, not an item someone besides mins, or w/ permission of mins should have/use :shrug:
   id: DoorRemoteAll
   name: super door remote
-  description: A gadget which can open and bolt doors remotely. This one works even on wooden doors!
+  description: A gadget which can open and bolt doors remotely. This one works even on wooden doors! If you find it, let an admin know! # Aurora's Song - Added "If you find it, let an admin know!"
   suffix: Admeme
   components:
   - type: Sprite

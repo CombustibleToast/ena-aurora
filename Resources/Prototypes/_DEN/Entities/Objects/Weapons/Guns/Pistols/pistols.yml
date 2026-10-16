@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 - type: entity
   name: BRDI P-15
-  parent: [ BaseWeaponPistol ]
+  parent: [ BaseWeaponPistol, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: WeaponPistolBRDIP15
   description: A rugged and reliable handgun, outfitted with a heavy muzzle counterweight. Used by the special forces of the Biesel Republic Foreign Legion, they are sometimes purchased by Nanotrasen for their operatives. Uses .35 auto ammo.
   suffix: BSO

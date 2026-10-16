@@ -42,7 +42,7 @@
         - Write
 
 - type: entity
-  parent: BasePDA
+  parent: [ BasePDA, C2ContrabandUnredeemableRestricted ]
   id: ASBaseSecurityPDA # copy of BaseSecurityPDA from NF with different sprite directory
   abstract: true
   components:
@@ -460,7 +460,7 @@
       - NanoChatCartridge # Auroras Song
 
 - type: entity
-  parent: ASBaseSecurityPDA
+  parent: [ ASBaseSecurityPDA, BaseC3ContrabandCAFUnredeemable ]
   id: CAFLeaderPDA
   name: CAF Leader PDA
   suffix: Leader

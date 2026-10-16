@@ -123,7 +123,7 @@
 
 - type: entity
   name: suspicious toolbox
-  parent: [ToolboxBase, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ToolboxBase, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: ToolboxSyndicate
   description: A sinister looking toolbox filled with elite syndicate tools.
   components:

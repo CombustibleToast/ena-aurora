@@ -59,7 +59,7 @@
 
 # Aurora's Song - NFSD Uplinks converted to SLE
 - type: entity
-  parent: [ BaseItem, StorePresetSecurityUplink ]
+  parent: [ BaseItem, StorePresetSecurityUplink, C2ContrabandUnredeemableRestricted ] # Aurora's Song - Added C2ContrabandUnredeemableRestricted
   id: BaseSecurityUplinkRadio
   name: SLE uplink # Aurora's Song - changed to SLE uplink
   description: Retro looking old radio...
@@ -93,7 +93,7 @@
       FrontierUplinkCoin: 99999
 
 - type: entity
-  parent: BaseSecurityUplinkRadio
+  parent: [ BaseCommandContraband, BaseSecurityUplinkRadio ] # Aurora's Song - Added BaseCommandContraband
   id: BaseSecurityUplinkRadioSheriff
   suffix: Commissioner 20 # Aurora's Song - changed from Sheriff to Commissioner
   components:

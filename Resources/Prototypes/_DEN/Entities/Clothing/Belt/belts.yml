@@ -146,7 +146,7 @@
     - BeltSlotNotBelt
 
 - type: entity
-  parent: [ ClothingBeltStorageBase, ContentsExplosionResistanceBase ] # Aurora's Song - Add Explosion Resistance
+  parent: [ ClothingBeltStorageBase, ContentsExplosionResistanceBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Add Explosion Resistance, Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBeltBSOWebbing
   name: blueshield webbing
   description: A robust chest rig made to fit the needs of a blueshield officer.

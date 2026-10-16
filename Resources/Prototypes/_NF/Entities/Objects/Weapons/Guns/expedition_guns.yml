@@ -367,7 +367,7 @@
 
 - type: entity # Aurora's Song | BSO Wt550 with proper contraband components
   parent:
-  - BaseExpeditionWeaponTier3NanoTrasen
+  - C2ContrabandNanoTrasenRestricted # Aurora's Song - BaseExpeditionWeaponTier3NanoTrasen<C2ContrabandNanoTrasenRestricted
   - WeaponSubMachineGunWt550BSO
   categories: [ HideSpawnMenu ]
   id: WeaponSubMachineGunWt550BSOExpedition
@@ -411,7 +411,7 @@
   id: NFWeaponShotgunBulldogExpedition
 
 - type: entity # Aurora's Song | Lever action shotgun with NT branding, 8 gauge.
-  parent: [C2ContrabandUnregistered, BaseExpeditionWeaponTier4NanoTrasen, ASWeaponShotgunLeverChester]
+  parent: [C2ContrabandNanoTrasenRestricted, BaseExpeditionWeaponTier4NanoTrasen, ASWeaponShotgunLeverChester] # Aurora's Song - C2ContrabandUnregistered<C2ContrabandNanoTrasenRestricted
   categories: [ HideSpawnMenu ]
   id: ASWeaponShotgunLeverChesterExpedition
 

@@ -18,7 +18,7 @@
     - state: stc_label
 
 - type: entity
-  parent: EncryptionKey
+  parent: [ EncryptionKey, C2ContrabandUnredeemableRestricted ] # Aurora Song - Added Restricted contraband status.
   id: EncryptionKeyNfsd
   name: SLE encryption key # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   categories: [ DoNotMap ]
@@ -37,7 +37,7 @@
     - state: nfsd_label
 
 - type: entity
-  parent: EncryptionKey
+  parent: [ EncryptionKey, C2ContrabandUnredeemableRestricted ] # Aurora Song - Added Restricted contraband status.
   id: EncryptionKeyDoc
   name: medical dispatch encryption key
   categories: [ DoNotMap ]

@@ -1,7 +1,7 @@
 #region Teapot
 - type: entity
   id: DrinkTeapotEndless
-  parent: [ DrinkTeapot, BaseC3WizardContraband ]
+  parent: [ DrinkTeapot ] # Aurora's Song - Removed BaseC3WizardContraband
   name: the teapot of infinite tea
   description: An elegant teapot that quickly replenishes tea inside.
   components:
@@ -96,7 +96,7 @@
 #region The Shaker
 - type: entity
   id: DrinkShakerShaking
-  parent: [ DrinkShaker, BaseC3WizardContraband ]
+  parent: [ DrinkShaker ] # Aurora's Song - Removed BaseC3WizardContraband
   name: The Shaker
   components:
   - type: Sprite
@@ -137,7 +137,7 @@
 #region Gas tank
 - type: entity
   id: GasTankWizardBottomless
-  parent: [ GasTankRoundBase, BaseC3WizardContraband ]
+  parent: [ GasTankRoundBase ] # Aurora's Song - Removed BaseC3WizardContraband
   name: bottomless gas tank
   description: An unusual looking gas tank that can hold more volume that it's size would suggest. Lovingly crafted for commercial use by the "Bottomless" brand.
   components:
@@ -158,7 +158,7 @@
 
 #region Wings
 - type: entity
-  parent: [ BaseJetpack, BaseC3WizardContraband ]
+  parent: [ BaseJetpack ] # Aurora's Song - Removed BaseC3WizardContraband
   id: FairyDragonWings
   name: fairy dragon wings
   suffix: Filled
@@ -188,7 +188,7 @@
 #region Wallet
 - type: entity
   id: ClothingWalletInfiniteGreed
-  parent: [ ClothingWalletLeatherBrown, BaseC3WizardContraband ]
+  parent: [ ClothingWalletLeatherBrown ] # Aurora's Song - Removed BaseC3WizardContraband
   name: the wallet of boundless greed
   description: Surprisingly thick. Careful not to lose it, and don't sit on it.
   components:

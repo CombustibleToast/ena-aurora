@@ -1,7 +1,7 @@
 #region SLE
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseC2ContrabandUnredeemable ]
+  parent: [ ClothingOuterBaseLarge, C2ContrabandRestricted ]
   id: ASClothingOuterArmorSLE
   name: SLE Durathread Vest
   description: Standard issue armor for Sector Law Enforcement personnel.

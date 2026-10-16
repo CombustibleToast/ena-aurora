@@ -76,7 +76,7 @@
 
 - type: entity
   name: energy sword
-  parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseMeleeWeaponEnergy, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: EnergySword
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:
@@ -96,7 +96,7 @@
 
 - type: entity
   name: energy dagger
-  parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseMeleeWeaponEnergy, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: EnergyDaggerLoud
   description: A not as loud and dangerous dagger with a beam made of pure, concentrated plasma. This one is completely undisguised.
   components:
@@ -160,7 +160,7 @@
 
 - type: entity
   name: pen
-  parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [BaseMeleeWeaponEnergy, C2ContrabandUnregistered] # Aurora's Song - added C2ContrabandUnregistered
   id: EnergyDagger
   suffix: E-Dagger
   description: 'A dark ink pen.'
@@ -241,7 +241,7 @@
     hideValues: true # Frontier
 
 - type: entity
-  parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseItem, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: EnergyDaggerBox
   name: e-dagger box
   suffix: E-Dagger

@@ -7,7 +7,7 @@
 
 # Blueshield Armour Vest
 - type: entity
-  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, BaseC3NanoTrasenContrabandLowValue] #Aurora's Song | change to NanoTrasen Contraband
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, C2ContrabandNanoTrasenRestricted] # Aurora's Song - change to NanoTrasen Contraband
   id: ClothingBlueshieldArmourVest
   name: blueshield's security armour
   description: An armoured vest with the badge of the blueshield
@@ -36,7 +36,7 @@
   name: blueshield's armored jacket
   description: A jacket with sewn-in reinforcement layers.
   components:
-  - type: Armor # Aurora's Song | Each BSO item should have its own armor values
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
     modifiers:
       coefficients:
         Blunt: 0.55
@@ -58,7 +58,7 @@
   name: blueshield's armored cowboy jacket
   description: A jacket to protect important people in wild areas.
   components:
-  - type: Armor # Aurora's Song | Each BSO item should have its own armor values
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
     modifiers:
       coefficients:
         Blunt: 0.6
@@ -75,7 +75,7 @@
     price: 400
 
 - type: entity
-  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, ClothingOuterStorageFoldableBase, BaseC3NanoTrasenContrabandLowValue] #Aurora's Song | change to NanoTrasen Contraband
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, ClothingOuterStorageFoldableBase, C2ContrabandNanoTrasenRestricted] # Aurora's Song - change to NanoTrasen Contraband
   id: ClothingBlueshieldArmoredCoat
   name: blueshield's armored coat
   description: A coat for cold winter seasons with sewn in plates.
@@ -113,7 +113,7 @@
   name: blueshield's armored marine vest
   description: A vest from the blueshield's time in the marines.
   components:
-  - type: Armor # Aurora's Song | Each BSO item should have its own armor values
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
     modifiers:
       coefficients:
         Blunt: 0.55
@@ -148,7 +148,7 @@
   name: blueshield's armored kimono
   description: As times evolve, so must the Blueshield.
   components:
-  - type: Armor # Aurora's Song | Each BSO item should have its own armor values
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
     modifiers:
       coefficients:
         Blunt: 0.55

@@ -1,7 +1,7 @@
 # Guns that use Echion as fuel and typically shoot energy-style projectiles
 - type: entity
   name: Adder
-  parent: [BaseWeaponEchion, BaseC3SyndicateContraband]
+  parent: [BaseWeaponEchion] # Aurora's Song - Removed BaseC3SyndicateContraband reparented to base.
   id: WeaponPlasmaAdder
   description: The future of stellar warfare in the palm of your hand. Uses Echion, produced from advanced synthesizers.
   components:
@@ -37,7 +37,7 @@
 
 - type: entity
   name: Akurra
-  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable] # Aurora's Song - Solution refactor, Removed BaseC3SyndicateContraband reparented to base.
   id: WeaponPlasmaAkurra
   description: A beautiful marriage of technology and malice in a single package. Uses Echion, produced from advanced synthesizers.
   components:
@@ -91,7 +91,7 @@
 
 - type: entity
   name: Ananke
-  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable] # Aurora's Song - Solution refactor, Removed BaseC3SyndicateContraband reparented to base.
   id: WeaponPlasmaAnanke
   description: The short-range of this brutal shotgun makes it a favorite among operatives who wish to see the whites of Nanotrasen eyes in the heat of combat. Uses Echion, produced from advanced synthesizers.
   components:
@@ -141,7 +141,7 @@
 
 - type: entity
   name: Glykon
-  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable] # Aurora's Song - Solution refactor, Removed BaseC3SyndicateContraband reparented to base.
   id: WeaponPlasmaGlykon
   description: Deadly, precise, and beautiful-- a state-of-the-art tool for the most merciless of assassins. Uses Echion, produced from advanced synthesizers.
   components:

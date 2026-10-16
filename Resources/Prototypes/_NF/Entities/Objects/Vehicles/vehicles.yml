@@ -734,9 +734,8 @@
 
 # Syndicate
 - type: entity
-  parent:
+  parent: # Aurora's Song - Removed BaseC3SyndicateContraband
   - VehicleHoverbikeMailcarrier
-  - BaseC3SyndicateContraband
   id: VehicleHoverbikeSyndicate
   name: syndicate hoverbike
   description: This thing screams style. And war crimes.

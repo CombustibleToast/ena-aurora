@@ -51,7 +51,7 @@
 # Echion Synth Circuitboards
 - type: entity
   id: KitbashEchionSynthesizerCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: [ BaseMachineCircuitboard, C2ContrabandSyndicateRestricted ]
   name: kitbashed Echion synthesizer machine board
   description: A haphazard control board for some homemade theoretical partical physics.
   components:
@@ -70,7 +70,7 @@
 
 - type: entity
   id: CybersunEchionSynthesizerCircuitboard
-  parent: BaseMachineCircuitboard
+  parent: [ BaseMachineCircuitboard, C2ContrabandSyndicateRestricted ]
   name: Echion synthesizer machine board
   description: You can feel a weird power buzzing from inside this board and it's not even plugged into anything...
   components:

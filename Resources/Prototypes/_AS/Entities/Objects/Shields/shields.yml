@@ -1,7 +1,7 @@
 # Aurora Song - SLE Energy Shield
 - type: entity
   name: SLE energy shield
-  parent: [BaseC2ContrabandUnredeemable, EnergyShield]
+  parent: [C2ContrabandUnredeemableRestricted, EnergyShield]
   id: ASEnergyShieldSLE
   components:
   - type: Sprite

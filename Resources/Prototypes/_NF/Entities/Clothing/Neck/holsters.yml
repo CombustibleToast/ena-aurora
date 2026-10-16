@@ -134,7 +134,7 @@
     sprite: _NF/Clothing/Neck/Misc/holster_thigh.rsi
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseClothingNeckHolsterThigh ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, NFBaseClothingNeckHolsterThigh ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: NFBaseClothingNeckHolsterThighNfsd
   name: nfsd drop leg holster
   components:
@@ -186,7 +186,7 @@
     sprite: _NF/Clothing/Neck/Misc/holster_thigh_sheath.rsi
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseClothingNeckSheathThigh ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, NFBaseClothingNeckSheathThigh ] # Aurora's Song - BaseC2ContrabandUnredeemable<C2ContrabandNanoTrasenNoValueRestricted
   id: NFBaseClothingNeckSheathThighNfsd
   name: nfsd drop leg sheath
   components:

@@ -1,7 +1,7 @@
 #region SLE
 
 - type: entity
-  parent: ClothingBackpackSecurity
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingBackpackSecurity ]
   id: ASClothingBackpackSLENavy
   name: SLE backpack
   description: A sturdy backpack used by Sector Law Enforcement personnel.

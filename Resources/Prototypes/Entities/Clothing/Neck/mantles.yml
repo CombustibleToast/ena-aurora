@@ -43,7 +43,7 @@
     sprite: Clothing/Neck/mantles/hopmantle.rsi
 
 - type: entity
-  parent: [ClothingNeckBase, BaseC3NanoTrasenContrabandLowValue] # Aurora's Song - BaseCommandContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [ClothingNeckBase, C2ContrabandNanoTrasenRestricted] # Aurora's Song - BaseCommandContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingNeckMantleHOS
   name: head of security's mantle
   description: Shootouts with syndicate agents are just another Tuesday for this HoS. This mantle is a symbol of commitment to the station.

@@ -1,6 +1,6 @@
 #region SLE
 - type: entity
-  parent: ClothingHeadsetAlt
+  parent: [ ClothingHeadsetAlt, C2ContrabandRestricted ]
   id: ASClothingHeadsetAltSLENavy
   name: SLE over-ear headset
   description: An updated over-ear headset for Sector Law Enforcement personnel.
@@ -129,7 +129,7 @@
 
 # Nanotrasen
 - type: entity
-  parent: ClothingHeadsetAlt
+  parent: [ ClothingHeadsetAlt, C2ContrabandNanoTrasenRestricted ]
   id: ASClothingHeadsetNanotrasen
   name: nanotrasen over-ear headset
   description: An updated over-ear headset used by employees of Nanotrasen.

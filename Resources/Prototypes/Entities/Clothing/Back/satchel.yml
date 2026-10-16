@@ -115,7 +115,7 @@
     sprite: Clothing/Back/Satchels/science.rsi
 
 - type: entity
-  parent: [ClothingBackpackSatchel, BaseC1Contraband] # Frontier: BaseSecurityContraband<BaseC1Contraband
+  parent: [ClothingBackpackSatchel, C2ContrabandNanoTrasenUnredeemable] # Aurora's Song - BaseC1Contraband<C2ContrabandNanoTrasenUnredeemable
   id: ClothingBackpackSatchelSecurity
   name: security satchel
   description: A robust satchel for security related needs.
@@ -124,7 +124,7 @@
     sprite: Clothing/Back/Satchels/security.rsi
 
 - type: entity
-  parent: [ClothingBackpackSatchel, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingBackpackSatchel, C2ContrabandNanoTrasenUnredeemable] # Aurora's Song - BaseC1Contraband<C2ContrabandNanoTrasenUnredeemable
   id: ClothingBackpackSatchelBrigmedic
   name: brigmedic satchel
   description: A sterile satchel for medical related needs.
@@ -169,7 +169,7 @@
       sprite: Clothing/Back/Satchels/salvage.rsi
 
 - type: entity
-  parent: [ClothingBackpackSatchel, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ClothingBackpackSatchel, BaseC1Contraband] # Aurora's Song - BaseC3SyndicateContraband<BaseC1Contraband
   id: ClothingBackpackSatchelNinja
   name: spider clan satchel
   description: A robust satchel for stashing your loot.

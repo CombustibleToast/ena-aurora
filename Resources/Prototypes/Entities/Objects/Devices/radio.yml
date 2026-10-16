@@ -28,7 +28,7 @@
 - type: entity
   name: security radio
   description: A handy security radio.
-  parent: [ RadioHandheld, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ RadioHandheld, C2ContrabandUnredeemableRestricted ] # Aurora's Song - BaseSecurityContraband<C2ContrabandUnredeemableRestricted
   id: RadioHandheldSecurity
   components:
   - type: RadioMicrophone

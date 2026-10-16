@@ -134,7 +134,7 @@
     - WhitelistChameleon
 
 - type: entity
-  parent: [ClothingOuterArmorBaseCarapace, BaseC3NanoTrasenContrabandLowValue] # Aurora's Song - BaseCentcommContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [ClothingOuterArmorBaseCarapace, BaseC3ContrabandCentCommLowValue] # Aurora's Song - BaseCentcommContraband<BaseC3ContrabandCentCommLowValue
   id: ClothingOuterArmorCentcommCarapace
   name: centcomm carapace
   description: An armored chestpiece that provides protection whilst still offering maximum mobility and flexibility. Issued only to centcomm officials and agents.
@@ -146,7 +146,7 @@
 
 #Web vest
 - type: entity
-  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing
+  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, C2ContrabandSyndicateRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestricted
   id: ClothingOuterVestWeb
   name: web vest
   description: A synthetic armor vest. This one has added webbing and ballistic plates.
@@ -169,7 +169,7 @@
 
 #Elite web vest
 - type: entity
-  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing
+  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, C2ContrabandSyndicateRestricted] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestricted
   id: ClothingOuterVestWebElite
   name: elite web vest
   description: A synthetic armor vest. This one has added webbing and heat resistant fibers.
@@ -222,7 +222,7 @@
 
 # Armor covering multiple body parts including limbs
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, BaseC3SyndicateContraband, ContrabandClothing ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing, C2ContrabandSyndicateRestricted ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateRestricted
   id: ClothingOuterArmorRaid
   name: syndicate raid suit
   description: A somewhat flexible and well-armored suit with a powerful shoulder mounted flashlight manufactured in the Gorlex Marauder's iconic blood-red color scheme, it does not protect its wearer from space.
@@ -323,7 +323,7 @@
   - type: GroupExamine
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseC3CultContraband, AllowSuitStorageClothing, ContrabandClothing ] # Frontier: BaseMajorContraband<BaseC3CultContraband, added ContrabandClothing as parent
+  parent: [ ClothingOuterBaseLarge, BaseC2ExpeditionContraband, AllowSuitStorageClothing ] # Aurora's Song - BaseMajorContraband<BaseC2ExpeditionContraband
   id: ClothingOuterArmorCult
   name: acolyte armor
   description: An evil-looking piece of cult armor, made of bones.
@@ -388,7 +388,7 @@
     sprite: Clothing/OuterClothing/Armor/heavyred.rsi
 
 - type: entity
-  parent: [ClothingOuterArmorHeavy, BaseC3CultContraband, ContrabandClothing] # Frontier: added BaseC3CultContraband, ContrabandClothing as parent
+  parent: [ClothingOuterArmorHeavy, BaseC2ExpeditionContraband] # Aurora's Song - added BaseC2ExpeditionContraband
   id: ClothingOuterArmorMagusblue
   name: blue magus armor
   description: An blue armored suit that provides good protection.
@@ -399,7 +399,7 @@
     sprite: Clothing/OuterClothing/Armor/magusblue.rsi
 
 - type: entity
-  parent: [ClothingOuterArmorHeavy, BaseC3WizardContraband, ContrabandClothing] # Frontier: added BaseC3WizardContraband, ContrabandClothing as parent
+  parent: [ClothingOuterArmorHeavy, BaseC2ExpeditionContraband] # Aurora's Song - added BaseC2ExpeditionContraband
   id: ClothingOuterArmorMagusred
   name: red magus armor
   description: A red armored suit that provides good protection.
@@ -410,7 +410,7 @@
     sprite: Clothing/OuterClothing/Armor/magusred.rsi
 
 - type: entity
-  parent: [ ClothingOuterBaseLarge, BaseC3Contraband, AllowSuitStorageClothing ] # Frontier: BaseMajorContraband<BaseC3Contraband
+  parent: [ ClothingOuterBaseLarge, BaseC1Contraband, AllowSuitStorageClothing ] # Aurora's Song - BaseMajorContraband<BaseC1Contraband
   id: ClothingOuterArmorChangeling
   name: chitinous armor
   description: Inflates the changeling's body into an all-consuming chitinous mass of armor.

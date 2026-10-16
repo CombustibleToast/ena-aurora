@@ -1,6 +1,6 @@
 - type: entity
   id: ASWeaponRifleMarksmanAF-17M
-  parent: [ ASBaseWeaponRifleMarksmanChamber30Long, ASBaseWeaponFrameRifleArtificielFederale ]
+  parent: [ BaseC3ContrabandCAFUnredeemable, ASBaseWeaponRifleMarksmanChamber30Long, ASBaseWeaponFrameRifleArtificielFederale ]
   name: AF-17M "Jackhammer"
   description: |-
     This rifle made by Artificiel Federale rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
@@ -23,7 +23,7 @@
 
 - type: entity
   id: ASWeaponRifleMarksmanAF-17C
-  parent: ASWeaponRifleMarksmanAF-17M
+  parent: [ C2ContrabandRestricted, ASWeaponRifleMarksmanAF-17M ]
   name: AF-17C "Jackhammer"
   description: |-
     This rifle made by Artificiel Federale rehashes an old design, a battle-tested workhorse with many scars. Marked for the SLE Commissioner.
@@ -138,7 +138,7 @@
 
 - type: entity
   name: Basilisk-11
-  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun, BaseC3SyndicateContraband ]
+  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun ]
   id: ASWeaponRifleBasilisk
   description: A fearsome state-of-the-art battle rifle often used by Syndicate agents who care more for violence than secrecy.
   components:

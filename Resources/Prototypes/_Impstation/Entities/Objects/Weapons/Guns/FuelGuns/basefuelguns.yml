@@ -1,7 +1,7 @@
 # Flamethrowers that specifically want welding fuel and only want to refuel at Welding Fuel sources
 - type: entity
   name: BaseWeaponFlamer
-  parent: [ BaseItem, BaseGunWieldable ]
+  parent: [ BaseItem, C2ContrabandSyndicateRestricted, BaseGunWieldable ] # Aurora's Song - added C2ContrabandSyndicateRestricted
   id: BaseWeaponFlamer
   abstract: true
   description: A rooty tooty point and shooty.
@@ -54,7 +54,7 @@
 # Echion weapons that specifically want to only use Echion and refuel from those sources
 - type: entity
   name: BaseWeaponEchion
-  parent: [SolutionGun, SolutionToolTiny, BaseItem] # Aurora's Song - Solution refactor
+  parent: [SolutionGun, SolutionToolTiny, C2ContrabandSyndicateRestricted, BaseItem] # Aurora's Song - Solution refactor, added C2ContrabandSyndicateRestricted
   id: BaseWeaponEchion
   description: A rooty tooty point and shooty.
   abstract: true

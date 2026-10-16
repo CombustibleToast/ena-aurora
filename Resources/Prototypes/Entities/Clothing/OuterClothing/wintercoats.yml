@@ -160,7 +160,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterCE
 
 - type: entity
-  parent: [ ClothingOuterWinterCoatToggleable, BaseCentcommContraband ]
+  parent: [ ClothingOuterWinterCoatToggleable, BaseC3ContrabandCentCommLowValue ] # Aurora's Song - BaseC3ContrabandCentCommLowValue>BaseCentcommContraband
   id: ClothingOuterWinterCentcom
   name: CentComm winter coat
   components:
@@ -353,7 +353,7 @@
 
 ##########################################################
 - type: entity
-  parent: [BaseC3NanoTrasenContrabandLowValue, ClothingOuterArmorHoS, ClothingOuterWinterCoatToggleable] # Aurora's Song | BaseSecurityCommandContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [C2ContrabandNanoTrasenRestricted, ClothingOuterArmorHoS, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityCommandContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingOuterWinterHoS
   name: head of security's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a head of security from any brig-bound threats and hypothermic events.
@@ -372,7 +372,7 @@
 ##########################################################
 
 - type: entity
-  parent: [BaseC3NanoTrasenContrabandLowValue, ClothingOuterWinterCoatToggleable] # Aurora's Song | BaseSecurityCommandContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [C2ContrabandNanoTrasenRestricted, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityCommandContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingOuterWinterHoSUnarmored
   name: head of security's winter coat
   description: A sturdy coat, a warm coat, but not an armored coat.
@@ -663,7 +663,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterWinterCoatToggleable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [C2ContrabandNanoTrasen, ClothingOuterWinterCoatToggleable] # Aurora's Song -  BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterWinterSec
   name: security winter coat
   components:
@@ -717,7 +717,7 @@
 
 ################################################################
 - type: entity
-  parent: [BaseC3NanoTrasenContrabandLowValue, ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable] # Aurora's Song | BaseSecurityContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [C2ContrabandNanoTrasen, ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterWinterWarden
   name: warden's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a warden from any brig-bound threats and hypothermic events.
@@ -736,7 +736,7 @@
 ################################################################
 
 - type: entity
-  parent: [BaseC3NanoTrasenContrabandLowValue, ClothingOuterWinterCoatToggleable] # Aurora's Song | BaseSecurityContraband<BaseC3NanoTrasenContrabandLowValue
+  parent: [C2ContrabandNanoTrasen, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterWinterWardenUnarmored
   name: warden's winter coat
   description: A sturdy coat, a warm coat, but not an armored coat.
@@ -760,7 +760,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterWarden
 
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterWinterCoatToggleable, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterWinterCoatToggleable] # Aurora's Song -  BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterWinterSyndieCap
   name: syndicate's winter coat
   description: "The syndicate's winter coat is made of durable fabric, with gilded patterns, and coarse wool."
@@ -785,7 +785,7 @@
 
 ##############################################################
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterWinterWarden, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterWinterWarden] # Aurora's Song -  BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterWinterSyndieCapArmored
   name: syndicate's armored winter coat
   description: "The syndicate's armored winter coat is made of durable fabric, with gilded patterns, and coarse wool."
@@ -799,7 +799,7 @@
 ##############################################################
 
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterWinterCoatToggleable, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterWinterCoatToggleable] # Aurora's Song -  BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterWinterSyndie
   name: syndicate's winter coat
   description: Insulated winter coat, looks like a merch from "Syndieland".

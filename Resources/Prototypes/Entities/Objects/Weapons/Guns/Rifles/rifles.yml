@@ -56,7 +56,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: AKMS
-  parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
+  parent: [BaseWeaponRifle, C2ContrabandUnregistered] # Aurora's Song - BaseSecurityContraband<C2ContrabandUnregistered
   id: WeaponRifleAk
   description: A somewhat battered combat rifle of a design originating from old Earth. Favored by criminals, militias, and terrorists due to its famed reliability and easy-to-manufacture design. Feeds from .30 rifle magazines.
   components:
@@ -196,7 +196,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
   name: Estoc DMR
-  parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseWeaponRifle, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: WeaponRifleEstoc
   description: A designated marksman rifle, favored for medium-to-long range engagements. Uses .20 rifle ammo.
   components:

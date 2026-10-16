@@ -660,7 +660,7 @@
 #region Antagonists / Contraband
 - type: entity
   parent:
-  - BaseC3SyndicateContrabandUnredeemable
+  - BaseC1Contraband # Aurora's Song - BaseC3SyndicateContrabandUnredeemable<BaseC1Contraband
   - ClothingBackpackMessengerContractor
   - ContrabandClothing
   id: ClothingBackpackMessengerSyndicate
@@ -912,7 +912,7 @@
 
 #region NFSD
 - type: entity
-  parent: ClothingBackpackMessengerContractor
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingBackpackMessengerContractor ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBackpackMessengerNfsdBrown
   name: NFSD messenger bag
   components:
@@ -957,7 +957,7 @@
         color: "#e1af4e"
 
 - type: entity
-  parent: ClothingBackpackMessengerContractor
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingBackpackMessengerContractor ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBackpackMessengerNfsdCream
   name: NFSD messenger bag
   components:
