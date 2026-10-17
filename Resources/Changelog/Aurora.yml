@@ -2,56 +2,6 @@ AdminOnly: false
 Entries:
 - author: Vandanna
   changes:
-  - message: Undo UI lock on Damascus Shipyard
-    type: Fix
-  id: 9098
-  time: '2026-04-09T07:10:01.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/917
-- author: LizArmchair
-  changes:
-  - message: space movement speed to Avali
-    type: Add
-  - message: 'Ionstorm stun chance, thirst factor of reagents. '
-    type: Tweak
-  - message: carriable component
-    type: Fix
-  id: 9099
-  time: '2026-04-09T21:33:33.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/922
-- author: ZigTag
-  changes:
-  - message: New railings from delta
-    type: Add
-  - message: New stair texture from delta
-    type: Tweak
-  id: 9100
-  time: '2026-04-10T11:37:12.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/884
-- author: Vandanna
-  changes:
-  - message: Admin access config now has correct card
-    type: Fix
-  id: 9101
-  time: '2026-04-10T19:51:47.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/928
-- author: Vandanna
-  changes:
-  - message: Petrel nacelle gantry lights were unpowered
-    type: Fix
-  id: 9102
-  time: '2026-04-10T20:46:48.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/931
-- author: Phoenix51505
-  changes:
-  - message: Fixes the ESS. Again.
-    type: Fix
-  - message: Makes the ESS less zealous about rescuing you pre-maturely
-    type: Tweak
-  id: 9103
-  time: '2026-04-10T21:27:00.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/926
-- author: Vandanna
-  changes:
   - message: missing spray painter stuff for SLE
     type: Fix
   - message: add paramed siren to medic armored hardsuit
@@ -3922,3 +3872,67 @@ Entries:
   id: 9873
   time: '2026-10-15T14:10:54.5063070+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1671
+- author: KiasT4DisasT4
+  changes:
+  - message: Ported some Horn and Ear markings from Byrdstation and gave them to a few species.
+    type: Add
+  id: 9874
+  time: '2026-10-17T07:41:40.6983744+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1582
+- author: TrixxedHeart
+  changes:
+  - message: you can poke things now.
+    type: Add
+  id: 9875
+  time: '2026-10-17T07:41:40.6985450+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1677
+- author: sowelipililimute
+  changes:
+  - message: The canvas for digital signs now works properly on hidpi monitors.
+    type: Fix
+  id: 9876
+  time: '2026-10-17T07:41:40.6987174+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1678
+- author: fancyplanks
+  changes:
+  - message: Ported Gravy from Frontier
+    type: Add
+  id: 9877
+  time: '2026-10-17T07:41:40.6987432+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1574
+- author: DimesEqual9
+  changes:
+  - message: Added >10 contraband classes.
+    type: Add
+  - message: Tweaked contraband class descriptions.
+    type: Tweak
+  - message: Expedition contraband class descriptions.
+    type: Remove
+  - message: 'Tweaked NT Clothing contraband: NTCC Gear(C3 NT), NTComm(C2 NT-R), NFSD(C2 NT-R), NTSec(C2 NT)'
+    type: Tweak
+  - message: 'Tweaked Syn Clothing contraband: SynHComm(C3 Syn), SynComm(C2 Syn-R), Gorlex(C2 Syn), Syndie Cloth'
+    type: Tweak
+  - message: 'Tweaked Syn Weapon contraband: Gorlex(C2 Syn-R), Cybersun/Interdyne/...(C2 Syn)'
+    type: Tweak
+  - message: 'Tweaked Syn Equipment/Tools contraband: Sabotage(C3 Syn), SyndieBranded(C2 Syn)'
+    type: Tweak
+  - message: 'Tweaked Wiz Equipment: Dropped to C1 at maximum. (This includes canisters, tanks, etc.)'
+    type: Tweak
+  - message: 'Tweaked Changeling Armor, and armblades to be C1. (Justification here: https://discord.com/channels/1374826764169117827/1380937116284092647/1559579856742785055)'
+    type: Tweak
+  - message: Fixxed the prototype parent order of operations of many items.
+    type: Fix
+  id: 9878
+  time: '2026-10-17T07:41:40.6987994+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1500
+- author: Sere
+  changes:
+  - message: Made a new (currently admin/trait only) implant, the Sector Watchlist Implant.
+    type: Add
+  - message: Adjusted the Armblade trait to use this implant.
+    type: Tweak
+  - message: Further adjusted the Armblade trait to have more generic wording, omitting mention of Changelings in specific.
+    type: Tweak
+  id: 9879
+  time: '2026-10-17T07:41:40.6988140+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1573
