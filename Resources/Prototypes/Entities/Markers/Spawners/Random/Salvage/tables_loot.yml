@@ -120,8 +120,8 @@
       tableId: TreasureCoinPile
       rolls: !type:RangeNumberSelector
         range: 1, 2
-    - !type:NestedSelector
-      tableId: SalvageInstrumentTable
+#    - !type:NestedSelector #Aurora's Song - removed to reduce the amount of random useless clutter spawned
+#      tableId: SalvageInstrumentTable
 
 - type: entityTable
   id: SalvageTreasureUncommon

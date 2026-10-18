@@ -50,7 +50,7 @@
   name: stack-tech-scrap-chunk
   icon: { sprite: /Textures/_NF/Objects/Materials/ore.rsi, state: scrapore }
   spawn: ScrapOreTech1
-  maxCount: 100
+  maxCount: 120 # Aurora's Song - buffed from 100 -> 120
 
 - type: entity
   parent: ScrapOreTech
@@ -81,7 +81,7 @@
   name: stack-scrap-chunk
   icon: { sprite: /Textures/_NF/Objects/Materials/ore.rsi, state: scrapore }
   spawn: ScrapOre1
-  maxCount: 100
+  maxCount: 120 # Aurora's Song - buffed from 100 -> 120
 
 - type: entity
   parent: ScrapOre
@@ -316,10 +316,10 @@
       - id: AdvancedMatterBinStockPart
       - id: PowerCellHighPrinted
     - !type:GroupSelector
-      # T2: more advanced tools and parts
+      # T2: more advanced tools and part, Aurora's Song - Removed the RPED from T2 and swaped it with other items
       weight: 18
       children:
-      - id: RPED
+      - id: WelderExperimental
       - id: ShipyardRCD
       - id: ShipyardRCDAmmo
       - id: AdvancedMineralScannerEmpty
@@ -328,10 +328,12 @@
       - id: SuperMatterBinStockPart
       - id: PowerCellHyperPrinted
     - !type:GroupSelector
-      # T3: cool tools and parts
+      # T3: cool tools and parts, Aurora's Song - Added Bluespace machine parts T3 drops
       weight: 2
       children:
-      - id: WelderExperimental
+      - id: QuadraticCapacitorStockPart
+      - id: FemtoManipulatorStockPart
+      - id: BluespaceMatterBinStockPart
       - id: MiningDrillDiamond
       - id: HoloprojectorFieldEmpty
 
@@ -357,11 +359,11 @@
   id: TableScrapProcessorRandomMaterial
   table: !type:GroupSelector
     children:
-    # Normal yield (Avg: 20/stack)
+    # Normal yield (Avg: 20/stack) Aurora's Song - Removed most of the less useful clutter items to give more materials on average
     - id: SheetSteelRandom
       weight: 2.25
-    - id: PartRodMetalRandom
-      weight: 0.75
+#    - id: PartRodMetalRandom
+#      weight: 0.75
     - id: SheetGlassRandom
       weight: 1
     - id: SheetRGlassRandom
@@ -372,12 +374,12 @@
       weight: 0.3
     - id: SheetPlasticRandom
       weight: 1
-    - id: SheetPaperRandom
-      weight: 0.1
+#    - id: SheetPaperRandom
+#      weight: 0.1
     - id: MaterialCardboardRandom
       weight: 0.1
-    - id: MaterialWoodPlankRandom
-      weight: 0.2
+#    - id: MaterialWoodPlankRandom
+#      weight: 0.2
     - id: SheetPlasmaRandom
       weight: 0.4
     - id: SheetUraniumRandom
@@ -392,27 +394,27 @@
       weight: 0.2
     - id: MaterialDurathreadRandom
       weight: 0.2
-    - id: SheetUGlassRandom
-      weight: 0.15
-    - id: SheetPGlassRandom
-      weight: 0.175
+#    - id: SheetUGlassRandom
+#      weight: 0.15
+#    - id: SheetPGlassRandom
+#      weight: 0.175
     - id: SheetRUGlassRandom
       weight: 0.1
     - id: SheetRPGlassRandom
       weight: 0.125
-    - id: SheetClockworkGlassRandom
-      weight: 0.1
-    - id: CableHVStackRandom
-      weight: 0.2
-    - id: CableMVStackRandom
-      weight: 0.2
-    - id: CableApcStackRandom
-      weight: 0.2
-    # Reduced yield (Avg: 15/stack)
-    - id: MaterialBonesRandomReduced
-      weight: 0.1
-    - id: ArtifactFragmentRandomReduced
-      weight: 0.025
+#    - id: SheetClockworkGlassRandom
+#      weight: 0.1
+#    - id: CableHVStackRandom
+#      weight: 0.2
+#    - id: CableMVStackRandom
+#      weight: 0.2
+#    - id: CableApcStackRandom
+#      weight: 0.2
+#    # Reduced yield (Avg: 15/stack)
+#    - id: MaterialBonesRandomReduced
+#      weight: 0.1
+#    - id: ArtifactFragmentRandomReduced
+#      weight: 0.025
     # Low yield (Avg: 10/stack)
     - id: MaterialDiamondRandomLow
       weight: 0.01

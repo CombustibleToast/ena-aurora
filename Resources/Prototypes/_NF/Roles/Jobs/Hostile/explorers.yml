@@ -2,7 +2,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearMeleeT1
   equipment:
-    pocket1: ClothingBackpackExplorerMeleeT1
+    pocket1: ASLootBagExplorerT1 # Aurora's Song - remade loot bags
     pocket2: OreBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
@@ -11,7 +11,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearRangedT1
   equipment:
-    pocket1: ClothingBackpackExplorerRangedT1
+    pocket1: ASLootBagExplorerT1 # Aurora's Song - remade loot bags
     pocket2: ConstructionBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
@@ -21,7 +21,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearMeleeT2
   equipment:
-    pocket1: ClothingBackpackExplorerMeleeT2
+    pocket1: ASLootBagExplorerT2 # Aurora's Song - remade loot bags
     pocket2: OreBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
@@ -30,7 +30,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearRangedT2
   equipment:
-    pocket1: ClothingBackpackExplorerRangedT2
+    pocket1: ASLootBagExplorerT2 # Aurora's Song - remade loot bags
     pocket2: ConstructionBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
@@ -40,7 +40,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearMeleeT3
   equipment:
-    pocket1: ClothingBackpackExplorerMeleeT3
+    pocket1: ASLootBagExplorerT3 # Aurora's Song - remade loot bags
     pocket2: OreBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
@@ -49,7 +49,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearRangedT3
   equipment:
-    pocket1: ClothingBackpackExplorerRangedT3
+    pocket1: ASLootBagExplorerT3 # Aurora's Song - remade loot bags
     pocket2: ConstructionBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
@@ -65,7 +65,7 @@
 - type: startingGear
   id: MobHumanoidExplorerGearBoss
   equipment:
-    pocket1: ClothingBackpackExplorerBoss
+    pocket1: ASLootBagExplorerBoss # Aurora's Song - remade loot bags
     pocket2: ConstructionBag
     shoes: ClothingShoesBootsSalvage
     suitstorage: AirTankFilled
