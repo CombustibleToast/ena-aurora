@@ -62,9 +62,9 @@
   description: An advanced heads-up display providing the health and ID status of organics and robotics.
   components:
   - type: Sprite
-    sprite: Clothing/Eyes/Hud/omni.rsi
+    sprite: _AS/Clothing/Eyes/Hud/universal_status.rsi
   - type: Clothing
-    sprite: Clothing/Eyes/Hud/omni.rsi
+    sprite: _AS/Clothing/Eyes/Hud/universal_status.rsi
   - type: ShowHealthBars
     damageContainers:
     - Biological
