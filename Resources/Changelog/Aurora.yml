@@ -2,41 +2,6 @@ AdminOnly: false
 Entries:
 - author: Vandanna
   changes:
-  - message: missing spray painter stuff for SLE
-    type: Fix
-  - message: add paramed siren to medic armored hardsuit
-    type: Tweak
-  - message: switch logprobe icon
-    type: Tweak
-  - message: add forensic upgrade and shuttle records to SLEO
-    type: Tweak
-  id: 9104
-  time: '2026-04-10T21:27:59.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/929
-- author: Vandanna
-  changes:
-  - message: Undeprecates Cargo access, grants to STC, Valet, Mail Carrier
-    type: Tweak
-  id: 9105
-  time: '2026-04-10T21:29:37.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/932
-- author: Vandanna
-  changes:
-  - message: switch ColRep dresser for proper one
-    type: Fix
-  - message: adjust disposals to hopefully allow better trash flow
-    type: Tweak
-  - message: some decals
-    type: Tweak
-  - message: ATMs to cargo bays
-    type: Add
-  - message: IFF marker
-    type: Fix
-  id: 9106
-  time: '2026-04-10T21:36:28.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/930
-- author: Vandanna
-  changes:
   - message: Exped Falchions should be registerable now
     type: Fix
   id: 9107
@@ -3936,3 +3901,28 @@ Entries:
   id: 9879
   time: '2026-10-17T07:41:40.6988140+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1573
+- author: ThatOneMoon
+  changes:
+  - message: The Explorer Loot Bags have been completely redone, they now focus on items such as ores, scrap and materials alongside treasure items.
+    type: Tweak
+  - message: Holoflares and vending machine restocks can now be recycled
+    type: Tweak
+  - message: the Scrap Processor has been overall buffed, needing less ore while giving out useful material more often.
+    type: Tweak
+  id: 9880
+  time: '2026-10-19T07:42:17.6693012+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1511
+- author: drricky, Sere
+  changes:
+  - message: Gave the universal status hud a custom sprite, done by drricky.
+    type: Add
+  id: 9881
+  time: '2026-10-19T07:42:17.6694290+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1656
+- author: TrixxedHeart
+  changes:
+  - message: The material silo UI now lists machines and materials in 2 panels side-by-side instead of stacked atop each other.
+    type: Tweak
+  id: 9882
+  time: '2026-10-19T07:42:17.6698762+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1652
