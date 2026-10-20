@@ -17,6 +17,12 @@ public sealed class ASCCVars
         CVarDef.Create("as.afk.ssd_time", 1200, CVar.SERVER | CVar.REPLICATED);
 
     /// <summary>
+    /// Disables scopophobia-triggering visual effects.
+    /// </summary>
+    public static readonly CVarDef<bool> Scopophobia =
+        CVarDef.Create("accessibility.scopophobia", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
     /// The number of Cargo Depots to spawn in every round
     /// </summary>
     public static readonly CVarDef<int> Motels =

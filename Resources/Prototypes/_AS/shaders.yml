@@ -1,0 +1,8 @@
+- type: shader
+  id: Mnemolith
+  kind: source
+  path: "/Textures/_AS/Shaders/mnemolith.swsl"
+  params:
+    Intensity: 0.0
+    Stage: 0.0
+    ReducedMotion: 0.0
