@@ -29,3 +29,5 @@
   - type: Tracer
     color: "#ff0000FF"
     length: 0
+  - type: ParticleEmitter # Aurora's Song - I love fire
+    effect: AsFlameThrower

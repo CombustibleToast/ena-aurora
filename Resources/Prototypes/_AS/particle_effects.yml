@@ -1,0 +1,27 @@
+- type: particleEffect
+  id: AsFlameThrower
+  sprite:
+    sprite: _Impstation/Objects/Weapons/Guns/Projectiles/flamer.rsi
+    state: fireball
+  startColor: "#FFFFFFFF"
+  endColor: "#FFFFFF00"
+  colorOverLifetime:
+    - time: 0
+      color: "#FFFFFFFF"
+    - time: 1
+      color: "#FFFFFF00"
+  alphaOverLifetime:
+    - time: 0
+      value: 1
+    - time: 1
+      value: 0
+  shader: unshaded
+  particleSize: 1
+  simulationSpace: local
+  speedVariance: 0.3
+  sizeVariance: 0.25
+  shape:
+    type: CircleFill
+    radius: 0.5
+  noiseStrength: 2
+  noiseFrequency: 1
