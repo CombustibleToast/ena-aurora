@@ -32,4 +32,8 @@ public sealed class ASCCVars
     /// Should admin alerts give TP and Coordinate links
     /// </summary>
     public static readonly CVarDef<bool> ShowAdminLinks = CVarDef.Create("as.adminlogs.show_admin_links", false, CVar.SERVERONLY);
+
+    // Opt-in for RMC dedicated unique action pump/breech keybinds.
+    public static readonly CVarDef<bool> RmcUniqueAction =
+        CVarDef.Create("as.control.rmc_unique_action", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 }

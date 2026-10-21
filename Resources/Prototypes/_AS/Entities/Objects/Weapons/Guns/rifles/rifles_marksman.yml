@@ -96,7 +96,7 @@
 
 - type: entity
   id: ASWeaponRifleMosinBolt
-  parent: [ ASBaseWeaponRifleEnblocChamber30Long, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
+  parent: [ ASBaseWeaponRifleClipChamber30Long, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
   name: Mosin bolt-action rifle #please do not look upon my wretched creation, my hubris is boundless and my shame is immeasurable
   description: A weapon for hunting, or endless trench warfare. Equipped with bayonet.
   suffix: AS
@@ -105,36 +105,30 @@
     fireRate: 0.9
     availableModes:
     - SemiAuto
-  - type: ChamberMagazineAmmoProvider
-    autoCycle: false
-    autoEject: true
-    soundAutoEject:
-      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
-  - type: ItemSlots
-    slots:
-      gun_magazine:
-        name: Magazine
-        startingItem: ASSpeedLoaderRifle30Long
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-        priority: 2
-        whitelist:
-          tags:
-          - ASSpeedLoaderRifle30Long
-        whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem: ASCartridgeRifle30Long
-        priority: 1
-        whitelist:
-          tags:
-          - ASCartridgeRifle30Long
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    layers:
+    - state: base
+      map: [ "enum.BreechVisuals.Open" ]
+    - state: base1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
   - type: Clothing
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
   - type: AltFireMelee
     attackType: Light
+  - type: BreechLoaded
+    needOpenClose: true
+    openSound:
+      path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_open_chamber.ogg"
+    closeSound:
+      path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_close_chamber.ogg"
+  - type: GenericVisualizer
+    visuals:
+      enum.BreechVisuals.Open:
+        enum.BreechVisuals.Open:
+          True: {state: bolt-open}
+          False: {state: base}
 
 - type: entity
   name: Basilisk-11

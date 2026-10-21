@@ -87,6 +87,10 @@
   - type: Tag #Aurora, makes it work with wall cabinets
     tags:
     - WeaponShotgunKammerer
+  # Aurora's Song Start - RMC Pump Action
+  - type: UniqueAction
+  - type: PumpAction
+  # Aurora's Song End
 
 - type: entity
   id: NFWeaponShotgunSawn

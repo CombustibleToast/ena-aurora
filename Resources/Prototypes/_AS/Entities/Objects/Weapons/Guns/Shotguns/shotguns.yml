@@ -69,6 +69,8 @@
     capacity: 6
   - type: NFWeaponDetails
     manufacturer: weapon-details-colonial-weapon-manufacturer
+  - type: UniqueAction
+  - type: PumpAction
 
 - type: entity
   parent: [ C2ContrabandNanoTrasenRestricted, ASBaseLeverActionShotgun, ASBaseWeaponShotgunChamber8gMagFed, NFBaseWeaponEncumbranceRifle, ASBaseWeaponFrameShotgunNanotrasen]
@@ -149,3 +151,5 @@
     capacity: 6
   - type: NFWeaponDetails
     manufacturer: weapon-details-colonial-weapon-manufacturer
+  - type: UniqueAction
+  - type: PumpAction

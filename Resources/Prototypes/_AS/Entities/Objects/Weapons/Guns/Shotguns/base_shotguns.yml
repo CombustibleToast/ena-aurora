@@ -16,23 +16,13 @@
   - type: GunWieldBonus
     minAngle: -10.9
     maxAngle: -21.8
-  - type: ChamberMagazineAmmoProvider
-    autoCycle: false
-    autoEject: true
-    soundAutoEject:
-      path: /Audio/_Goobstation/Weapons/Guns/MagOut/garand_eject.ogg
-    soundRack:
+  - type: UniqueAction
+  - type: PumpAction
+    sound:
       path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
-      params:
-        volume: -3
-    soundBoltClosed:
-      path: /Audio/Weapons/Guns/Bolt/lever_bolt_closed.ogg
-      params:
-        volume: -3
-    soundBoltOpened:
-      path: /Audio/Weapons/Guns/Bolt/lever_bolt_opened.ogg
-      params:
-        volume: -3
+    examine: "cm-gun-cycle-examine"
+    popup: "cm-gun-cycle-first"
+    popupKey: "cm-gun-cycle-first-with"
 
 #Slightly hacky, but I needed a way to get the standardised "frame" values into this gun without worrying about
 #following the NF parenting all the way up to ensure it worked with the Chester. Execute me at leisure - GreyScaleHarlequin
@@ -56,6 +46,10 @@
     examineCaliber: gun-examine-caliber-8g
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+  - type: MagazineAmmoProvider # Changed to just Magazine from ChamberMagazine, for more intuitive handling with RMC UniqueAction.
+    autoEject: true
+    soundAutoEject:
+      path: /Audio/_Goobstation/Weapons/Guns/MagOut/garand_eject.ogg
   - type: ItemSlots #This is to allow for the use of En-Blocs for faster loading, and avoid the use of the same system as revolvers.
     slots:
       gun_magazine:
@@ -63,19 +57,10 @@
         startingItem: MagazineShotgunLever
         insertSound: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
-        priority: 2
         whitelist:
           tags:
           - MagazineShotgunLever
         whitelistFailPopup: gun-magazine-whitelist-fail
-      gun_chamber:
-        name: Chamber
-        startingItem:
-        priority: 1
-        whitelist:
-          tags:
-          - ShellShotgun8g
   - type: ContainerContainer
     containers:
       gun_magazine: !type:ContainerSlot
-      gun_chamber: !type:ContainerSlot

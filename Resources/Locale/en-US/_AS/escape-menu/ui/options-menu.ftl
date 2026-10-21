@@ -2,3 +2,4 @@
 
 ui-options-function-smart-equip-legs = Smart-equip to legs
 ui-options-function-smart-equip-feet = Smart-equip to feet
+ui-options-rmc-unique-action = RMC style breech/pump

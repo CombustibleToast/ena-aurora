@@ -1,4 +1,4 @@
-﻿version: 1 # Not used right now, whatever.
+version: 1 # Not used right now, whatever.
 binds:
 - function: UIClick
   type: State
@@ -671,3 +671,6 @@ binds:
   type: State
   key: MouseRight
   canFocus: true
+- function: CMUniqueAction # RMC Unique Action System
+  type: State
+  key: Space

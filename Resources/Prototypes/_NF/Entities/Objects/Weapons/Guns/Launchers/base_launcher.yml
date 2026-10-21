@@ -116,28 +116,27 @@
     examineCaliber: gun-examine-caliber-40mm-grenade
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
-  - type: ItemSlots
-    slots:
-      gun_chamber:
-        name: Chamber
-        startingItem: null
-        priority: 1
-        whitelist:
-          tags:
-            - Grenade # Aurora's Song - Allows the Projector to use blast grenades
-            - NFTrackingDart
-            - NFCartridgeGrenade40mmEmp
-            - NFCartridgeGrenade40mmFlash
-  - type: ChamberMagazineAmmoProvider
-    autoCycle: false
-    boltClosed: false
-    canRack: false
-    soundBoltClosed: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-    soundBoltOpened: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
-    soundRack: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
+  # Aurora's Song Start - RMC Breech Loading
+  - type: BallisticAmmoProvider
+    proto: NFGrenadeFrag
+    whitelist:
+      tags:
+      - Grenade # Aurora's Song - Allows the Projector to use blast grenades
+      - NFTrackingDart
+      - NFCartridgeGrenade40mmEmp
+      - NFCartridgeGrenade40mmFlash
+    capacity: 1
   - type: ContainerContainer
     containers:
-      gun_chamber: !type:ContainerSlot
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: BreechLoaded
+    needOpenClose: false
+    openSound:
+      path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_open_chamber.ogg"
+    closeSound:
+      path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_close_chamber.ogg"
+  # Aurora's Song End
 
 - type: entity
   id: NFBaseWeaponLauncherChamberRockets

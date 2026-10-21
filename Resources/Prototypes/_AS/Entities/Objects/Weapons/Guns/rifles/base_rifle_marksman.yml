@@ -128,3 +128,30 @@
     whitelist:
       tags:
       - ASCartridgeRifle30Long
+
+- type: entity
+  id: ASBaseWeaponRifleClipChamber30Long # Pretty much just the Mosin; Magazine-only .30 Long to make use of RMC bolt action
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-30-long
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: MagazineAmmoProvider
+    autoEject: true
+    soundAutoEject:
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ASSpeedLoaderRifle30Long
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        whitelist:
+          tags:
+          - ASSpeedLoaderRifle30Long
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
