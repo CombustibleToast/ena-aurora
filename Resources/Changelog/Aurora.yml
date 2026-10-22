@@ -1,33 +1,5 @@
 AdminOnly: false
 Entries:
-- author: Vandanna
-  changes:
-  - message: Exped Falchions should be registerable now
-    type: Fix
-  id: 9107
-  time: '2026-04-10T21:36:50.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/927
-- author: Zenixic
-  changes:
-  - message: RPEDs no longer drop their parts when upgrading ore processors.
-    type: Fix
-  id: 9108
-  time: '2026-04-11T08:52:03.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/935
-- author: Phoenix51505
-  changes:
-  - message: Changed both the Shipmind's lawset and ghost role description to disincentivize leaving your ship for minimal reason.
-    type: Tweak
-  id: 9109
-  time: '2026-04-12T03:29:03.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/937
-- author: BudaLope
-  changes:
-  - message: Fiber now fills you up the default amount
-    type: Tweak
-  id: 9110
-  time: '2026-04-13T09:55:30.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/942
 - author: Phoenix51505
   changes:
   - message: Fixed inconsistent sprites on remote traffic consoles
@@ -3926,3 +3898,45 @@ Entries:
   id: 9882
   time: '2026-10-19T07:42:17.6698762+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1652
+- author: TrixxedHeart
+  changes:
+  - message: Made the Xiuhcoatl feel more flamethrowery
+    type: Add
+  id: 9883
+  time: '2026-10-22T07:41:56.5607769+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1615
+- author: Sere
+  changes:
+  - message: Added RMC's Pump Action/Breech Loading features! Check your controls for "Unique Action", Space by default. You'll need it for the following guns.
+    type: Add
+  - message: Changed the Mosin and Hristov to be bolt-action. Unique Action twice to cycle the bolt.
+    type: Tweak
+  - message: Changed the GP-40 (CLake), Kammer and Falchion to pump action. Unique Action once for every shot.
+    type: Tweak
+  - message: Changed the Chester to use the Unique Action system for its levering. Unique Action once for every shot.
+    type: Tweak
+  - message: Changed the NGP-40 (SLE CLake) to a break-action single shot. Fire, then Unique Action to open the breech and load ammo, then again to close and fire.
+    type: Tweak
+  id: 9884
+  time: '2026-10-22T07:41:56.5611497+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1544
+- author: TrixxedHeart
+  changes:
+  - message: Added visuals to mnemolith
+    type: Add
+  - message: There is now a scopophobia toggle in accessibility settings
+    type: Tweak
+  - message: IPCs can now use mnemolith (reagent)
+    type: Tweak
+  id: 9885
+  time: '2026-10-22T07:41:56.5611979+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1542
+- author: TrixxedHeart
+  changes:
+  - message: Energy swords and daggers can be placed into boots
+    type: Add
+  - message: Energy weapons can no longer be activated inside of containers
+    type: Fix
+  id: 9886
+  time: '2026-10-22T07:41:56.5612148+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1561
