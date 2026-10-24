@@ -11,7 +11,7 @@
   startingGear: SyndicateRepresentativeGear
   alwaysUseSpawner: true
   requireAdminNotify: true
-  supervisors: job-supervisors-hire
+  supervisors: job-supervisors-syndicate
   weight: 180
   displayWeight: 56
   access:

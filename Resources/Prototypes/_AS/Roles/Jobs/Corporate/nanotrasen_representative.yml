@@ -11,7 +11,7 @@
   startingGear: NanotrasenRepresentativeGear
   alwaysUseSpawner: true
   requireAdminNotify: true
-  supervisors: job-supervisors-hire
+  supervisors: job-supervisors-centcom
   weight: 180
   displayWeight: 55
   access:
