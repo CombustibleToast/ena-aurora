@@ -685,7 +685,7 @@
 #region Corporate
 
 - type: entity
-  parent: [ SyndiCommanderPDA] #, C2ContrabandSyndicateRestrictedUnredeemable] This is just commented out until the contra rework is merged, otherwise build fails
+  parent: [ SyndiCommanderPDA, C2ContrabandSyndicateRestrictedUnredeemable]
   id: ASSyndicateRepresentativePDA
   name: syndicate representative PDA
   description: How many did you have to sacrifice to get here?
@@ -709,7 +709,7 @@
       - NanoChatCartridge
 
 - type: entity
-  parent: [ SrPDA] #, C2ContrabandNanoTrasenRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  parent: [ SrPDA, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASNanotrasenRepresentativePDA
   name: nanotrasen representative PDA
   description: Looks like it's been clawed on.

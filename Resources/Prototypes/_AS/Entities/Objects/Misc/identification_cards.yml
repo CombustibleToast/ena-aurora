@@ -1,5 +1,5 @@
 ﻿- type: entity
-  parent: [ ASIDCardStandard] #, C2ContrabandSyndicateRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  parent: [ ASIDCardStandard, C2ContrabandSyndicateRestrictedUnredeemable ]
   id: ASSyndicateRepresentativeIDCard
   name: syndicate representative ID card
   components:
@@ -18,7 +18,7 @@
     jobIcon: JobIconSyndicate
 
 - type: entity
-  parent: [ ASIDCardStandard] #, C2ContrabandNanoTrasenRestrictedUnredeemable ] This is just commented out until the contra rework is merged, otherwise build fails
+  parent: [ ASIDCardStandard, C2ContrabandNanoTrasenRestrictedUnredeemable ]
   id: ASNanotrasenRepresentativeIDCard
   name: nanotrasen representative ID card
   components:
