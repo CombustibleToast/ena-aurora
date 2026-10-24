@@ -1,4 +1,4 @@
-﻿- type: inventoryTemplate
+- type: inventoryTemplate
   id: thaven
   slots:
     - name: shoes
@@ -35,6 +35,13 @@
       strippingWindowPos: 0,1
       displayName: Neck
       offset: 0, 0.03125 # 1 pixel up
+    - name: neck2 # Aurora's Song - Second neck slot (slotflags edition)
+      slotTexture: neck
+      slotFlags: NECK2 # Aurora's Song - Second neck slot (slotflags edition)
+      uiWindowPos: 2,2
+      strippingWindowPos: 2,1
+      displayName: Neck 2
+      offset: 0, 0.03125 # 1 pixel up
     - name: mask
       slotTexture: mask
       slotFlags: MASK
@@ -54,7 +61,7 @@
       slotTexture: ears
       slotFlags: EARS
       stripTime: 3
-      uiWindowPos: 2,2
+      uiWindowPos: 2,3 # Aurora's Song - Template Consistency
       strippingWindowPos: 2,0
       displayName: Ears
       offset: 0, 0.0625 # 2 pixels up
@@ -98,6 +105,17 @@
       dependsOnComponents:
       - type: AllowSuitStorage
       displayName: Suit Storage
+  # Aurora's Song Start - Wallet Slot
+    - name: wallet
+      slotTexture: wallet
+      slotFlags: WALLET
+      slotGroup: SecondHotbar
+      stripTime: 6
+      uiWindowPos: 2,0
+      strippingWindowPos: 2,3
+      dependsOn: jumpsuit
+      displayName: Wallet
+  # Aurora's Song End
     - name: id
       slotTexture: id
       fullTextureName: template_small
@@ -126,3 +144,12 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,5
       displayName: Back
+  # Aurora's Song Start - Legs Slot
+    - name: legs
+      slotTexture: legs
+      slotFlags: LEGS
+      stripTime: 6
+      uiWindowPos: 2,0
+      strippingWindowPos: 0,3
+      displayName: Legs
+  # Aurora's Song End
