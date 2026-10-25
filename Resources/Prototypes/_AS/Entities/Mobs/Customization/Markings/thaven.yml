@@ -1,0 +1,164 @@
+#region Head
+- type: marking
+  id: ThavenHeadSideFairy
+  bodyPart: HeadSide
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
+    state: fairyfins
+
+- type: marking
+  id: ThavenHeadTopAnglerStem
+  bodyPart: HeadTop
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
+    state: angler-stem
+
+- type: marking
+  id: ThavenHeadTopAnglerBulb
+  bodyPart: HeadTop
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
+    state: angler-bulb
+  shader: unshaded
+
+#region Chest
+- type: marking
+  id: ThavenBackFin
+  bodyPart: Chest
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/chest.rsi
+    state: backfin
+
+#region RArm
+- type: marking
+  id: ThavenArmFinsSmallRight
+  bodyPart: RArm
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
+    state: rarmfins1
+
+- type: marking
+  id: ThavenArmFinsBigRight
+  bodyPart: RArm
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
+    state: rarmfins2
+
+#region LArm
+- type: marking
+  id: ThavenArmFinsSmallLeft
+  bodyPart: LArm
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
+    state: larmfins1
+
+- type: marking
+  id: ThavenArmFinsBigLeft
+  bodyPart: LArm
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
+    state: larmfins2
+
+#region RLeg
+- type: marking
+  id: ThavenLegFinsSmallRight
+  bodyPart: RLeg
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/rleg.rsi
+    state: rlegfins1
+
+#region LLeg
+- type: marking
+  id: ThavenLegFinsSmallLeft
+  bodyPart: LLeg
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/lleg.rsi
+    state: llegfins1
+
+#region Tail
+- type: marking
+  id: ThavenTailCarpish
+  bodyPart: Tail
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
+    state: carpish
+
+- type: marking
+  id: ThavenTailDraconicLong
+  bodyPart: Tail
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
+    state: draconiclong
+
+- type: marking
+  id: ThavenTailFish
+  bodyPart: Tail
+  groupWhitelist: [Thaven]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
+    state: fishtail
+
