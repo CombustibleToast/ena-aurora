@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using Content.Shared.Database;
 using Content.Shared.Roles;
+using Content.Shared.Radio; // Aurora's Song
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -112,6 +113,12 @@ public interface IBanManager
     /// </summary>
     /// <param name="pSession">Player's session</param>
     public void SendRoleBans(ICommonSession pSession);
+
+    // Aurora's Song - Radio Bans
+    void CreateRadioBan(CreateRadioBanInfo banInfo);
+    bool IsRadioBanned(ICommonSession player, ProtoId<RadioChannelPrototype> channel);
+    HashSet<ProtoId<RadioChannelPrototype>>? GetRadioBans(NetUserId playerUserId);
+    // End Aurora's Song
 }
 
 /// <summary>

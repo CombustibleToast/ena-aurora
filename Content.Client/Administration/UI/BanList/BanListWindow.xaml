@@ -7,5 +7,6 @@
     <TabContainer Name="TabContainer">
         <bans:BanListControl Name="BanList" Access="Public"/>
         <roleBans:RoleBanListControl Name="RoleBanList" Access="Public"/>
+        <roleBans:RoleBanListControl Name="RadioBanList" Access="Public"/> <!-- Aurora's Song - Radio bans -->
     </TabContainer>
 </controls:BanListWindow>

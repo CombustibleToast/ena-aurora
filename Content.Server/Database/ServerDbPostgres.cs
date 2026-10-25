@@ -112,7 +112,7 @@ namespace Content.Server.Database
 
             await using var db = await GetDbImpl();
 
-            var exempt = type == BanType.Role ? null : await GetBanExemptionCore(db, userId);
+            var exempt = type is BanType.Role or BanType.Radio ? null : await GetBanExemptionCore(db, userId); // Aurora's Song - Add radio bans
             var newPlayer = !await db.PgDbContext.Player.AnyAsync(p => p.UserId == userId);
             var query = MakeBanLookupQuery(address, userId, hwId, modernHWIds, db, includeUnbanned, exempt, newPlayer, type);
             var queryBans = await query.ToArrayAsync();
@@ -223,7 +223,7 @@ namespace Content.Server.Database
             var unbanDef = ConvertUnban(ban.Unban);
 
             ImmutableArray<BanRoleDef>? roles = null;
-            if (ban.Type == BanType.Role)
+            if (ban.Type is BanType.Role or BanType.Radio) // Aurora's Song - Radio bans
             {
                 roles = [..ban.Roles!.Select(br => new BanRoleDef(br.RoleType, br.RoleId))];
             }

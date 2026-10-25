@@ -14,7 +14,8 @@
                    SizeFlagsStretchRatio="4.5"
                    HorizontalExpand="True"/>
             <cc:VSeparator Name="ReasonSeparator" Access="Public"/>
-            <Label Text="{Loc ban-list-header-role}"
+            <!-- Aurora's Song - Reuse roleban UI for radio bans. -->
+            <Label Name="ScopeHeader" Access="Public" Text="{Loc ban-list-header-role}"
                    SizeFlagsStretchRatio="1.5"
                    HorizontalExpand="True"/>
             <cc:VSeparator/>

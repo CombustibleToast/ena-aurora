@@ -28,9 +28,10 @@ public record struct RadioReceiveAttemptEvent(RadioChannelPrototype Channel, Ent
 /// Use this event to cancel sending message to every receiver
 /// </summary>
 [ByRefEvent]
-public record struct RadioSendAttemptEvent(RadioChannelPrototype Channel, EntityUid RadioSource)
+public partial record struct RadioSendAttemptEvent(RadioChannelPrototype Channel, EntityUid RadioSource) // Aurora's Song - Extended in RadioSendAttemptEvent.Aurora.cs
 {
     public readonly RadioChannelPrototype Channel = Channel;
     public readonly EntityUid RadioSource = RadioSource;
+    public readonly EntityUid? MessageSource = null; // Aurora's Song - Identifies the speaker for radio-ban checks.
     public bool Cancelled = false;
 }

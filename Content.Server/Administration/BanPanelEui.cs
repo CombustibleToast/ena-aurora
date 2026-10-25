@@ -74,6 +74,7 @@ public sealed partial class BanPanelEui : BaseEui
         }
 
         var isRoleBan = ban.BannedJobs?.Length > 0 || ban.BannedAntags?.Length > 0;
+        var isRadioBan = ban.RadioChannels?.Length > 0; // Aurora's Song - Radio bans
 
         CreateBanInfo banInfo = isRoleBan ? new CreateRoleBanInfo(ban.Reason) : new CreateServerBanInfo(ban.Reason);
 
@@ -127,6 +128,9 @@ public sealed partial class BanPanelEui : BaseEui
 
         if (targetUid != null)
             banInfo.AddUser(targetUid.Value, ban.Target!);
+
+        if (isRadioBan && CreateRadioBans(ban, targetUid)) // Aurora's Song
+            return;
 
         banInfo.AddHWId(targetHWid);
 

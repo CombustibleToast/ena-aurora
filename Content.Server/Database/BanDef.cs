@@ -93,6 +93,15 @@ namespace Content.Server.Database
                         throw new ArgumentException("Role bans cannot have exempt flags", nameof(exemptFlags));
                     break;
 
+                // Aurora's Song - Radio Bans
+                case BanType.Radio:
+                    if (roles is not { Length: > 0 })
+                        throw new ArgumentException("Must specify channels for radio ban types", nameof(roles));
+                    if (exemptFlags != 0)
+                        throw new ArgumentException("Radio bans cannot have exempt flags", nameof(exemptFlags));
+                    break;
+                // End Aurora's Song
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(type));
             }

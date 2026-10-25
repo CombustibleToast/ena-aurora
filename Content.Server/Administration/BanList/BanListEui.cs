@@ -44,7 +44,7 @@ public sealed partial class BanListEui : BaseEui
 
     public override EuiStateBase GetNewState()
     {
-        return new BanListEuiState(BanListPlayerName, Bans, RoleBans);
+        return new BanListEuiState(BanListPlayerName, Bans, RoleBans, RadioBans); // Aurora's Song - Add Radio Bans
     }
 
     private void OnPermsChanged(AdminPermsChangedEventArgs args)
@@ -59,6 +59,7 @@ public sealed partial class BanListEui : BaseEui
     {
         await LoadBansCore(userId, BanType.Server, Bans);
         await LoadBansCore(userId, BanType.Role, RoleBans);
+        await LoadRadioBans(userId); // Aurora's Song
     }
 
     private async Task LoadBansCore(NetUserId userId, BanType banType, List<SharedBan> list)
@@ -105,6 +106,7 @@ public sealed partial class BanListEui : BaseEui
     {
         Bans.Clear();
         RoleBans.Clear();
+        ClearRadioBans(); // Aurora's Song
 
         var userId = new NetUserId(BanListPlayer);
         BanListPlayerName = (await _playerLocator.LookupIdAsync(userId))?.Username ??

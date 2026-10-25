@@ -78,6 +78,15 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             modernHwids,
             false,
             type: BanType.Role);
+        // Aurora's Song - Persisted radio bans.
+        var radioBans = await _db.GetBansAsync(
+            netChannel.RemoteEndPoint.Address,
+            player.UserId,
+            hwId,
+            modernHwids,
+            false,
+            type: BanType.Radio);
+        // End Aurora's Song
 
         var userRoleBans = new List<BanDef>();
         foreach (var ban in roleBans)
@@ -88,6 +97,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         cancel.ThrowIfCancellationRequested();
         _cachedBanExemptions[player] = flags;
         _cachedRoleBans[player] = userRoleBans;
+        _cachedRadioBans[player] = radioBans; // Aurora's Song - Radio Ban
 
         SendRoleBans(player);
     }
@@ -95,6 +105,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private void ClearPlayerData(ICommonSession player)
     {
         _cachedBanExemptions.Remove(player);
+        _cachedRadioBans.Remove(player); // Aurora's Song - Radio Ban
     }
 
     public void Restart()
@@ -117,6 +128,11 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         {
             roleBans.RemoveAll(ban => DateTimeOffset.Now > ban.ExpirationTime);
         }
+
+        // Aurora's Song - Radio Ban
+        foreach (var radioBans in _cachedRadioBans.Values)
+            radioBans.RemoveAll(ban => DateTimeOffset.Now > ban.ExpirationTime);
+        // End Aurora's Song
     }
 
     #region Server Bans

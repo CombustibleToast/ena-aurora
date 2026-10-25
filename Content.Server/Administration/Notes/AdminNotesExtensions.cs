@@ -45,6 +45,15 @@ public static class AdminNotesExtensions
                 unbannedTime = roleBan.UnbanTime;
                 unbannedByName = roleBan.UnbanningAdmin?.LastSeenUserName ?? Loc.GetString("system-user");
                 break;
+            // Aurora's Song - Radio bans
+            case BanNoteRecord { Type: BanType.Radio } radioBan:
+                type = NoteType.RoleBan;
+                severity = radioBan.Severity;
+                bannedRoles = radioBan.Roles;
+                unbannedTime = radioBan.UnbanTime;
+                unbannedByName = radioBan.UnbanningAdmin?.LastSeenUserName ?? Loc.GetString("system-user");
+                break;
+            // End Aurora's Song
             default:
                 throw new ArgumentOutOfRangeException(nameof(type), note.GetType(), "Unknown note type");
         }
