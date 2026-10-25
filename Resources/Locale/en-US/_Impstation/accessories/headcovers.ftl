@@ -1,5 +1,4 @@
 marking-BurqaSolid = Burqa
-marking-BurqaSolidThaven = Burqa
 marking-BurqaSolidLizard = Burqa
 marking-BurqaSolidLizard-burqasolidlizard = Burqa
 
