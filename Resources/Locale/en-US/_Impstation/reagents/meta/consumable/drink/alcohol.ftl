@@ -21,3 +21,6 @@ reagent-desc-burnchamber = Burns as hot as the real thing. Don't forget a firesu
 
 reagent-name-weldingcoils = weldin' coils
 reagent-desc-weldingcoils = Perfect for drinking away your problems! There's coils to weld.
+
+reagent-name-feverdream = fever dream
+reagent-desc-feverdream = A creamy, dizzying cocktail of exotic blood, absinthe, and champagne, topped with frothed egg whites. Traditionally served with a thaven good luck charm. Open your eyes.

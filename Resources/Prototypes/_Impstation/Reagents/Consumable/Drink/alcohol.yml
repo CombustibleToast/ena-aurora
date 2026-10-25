@@ -21,7 +21,7 @@
       - !type:SatiateHunger
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
-          type: [ Moth ] # Aurora's Song - add brackets 
+          type: [ Moth ] # Aurora's Song - add brackets
         factor: 4
       - !type:Emote
         conditions:
@@ -196,7 +196,7 @@
       # Aurora's Song End
   fizziness: .2
 
-- type: reagent 
+- type: reagent
   id: Burnchamber
   name: reagent-name-burnchamber
   parent: BaseAlcohol
@@ -236,7 +236,7 @@
         probability: 0.2
   fizziness: .5
 
-- type: reagent 
+- type: reagent
   id: WeldingCoils
   name: reagent-name-weldingcoils
   parent: BaseAlcohol
@@ -264,4 +264,46 @@
         probability: 0.05
         # Aurora's Song End
   fizziness: .5
-  
+
+- type: reagent
+  id: FeverDream
+  name: reagent-name-feverdream
+  parent: BaseDrink
+  desc: reagent-desc-feverdream
+  physicalDesc: reagent-physical-desc-shimmering-blood
+  flavor: feverdream
+  metamorphicSprite:
+    sprite: _Impstation/Objects/Consumable/Drinks/feverdream.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 6
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: true
+  metabolisms:
+  # Aurora's Song Start - Metabolism Refactor
+    Digestion: # Drink > Digestion, moved Ethanol from AdjustReagent to metabolite
+      metabolites:
+        Ethanol: 0.3
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+    Bloodstream: # Narcotic > Bloodstream
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:ModifyStatusEffect # Changed from generic to modify
+        effectProto: StatusEffectSeeingRainbow
+        type: Add
+        time: 5
+    # Aurora's Song End
+  plantMetabolism:
+  - !type:PlantAdjustNutrition
+    amount: 0.5
+  - !type:PlantAdjustWater
+    amount: 0.5
+  - !type:PlantAdjustToxins
+    amount: 1
+  - !type:PlantAdjustWeeds
+    amount: -1
+  - !type:PlantAdjustPests
+    amount: -1
+  fizziness: 0.1

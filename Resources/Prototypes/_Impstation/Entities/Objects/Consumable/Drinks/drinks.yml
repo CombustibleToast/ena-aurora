@@ -189,3 +189,19 @@
   - type: Icon
     sprite: _Impstation/Objects/Consumable/Drinks/supermixerpsych.rsi
     state: icon
+
+- type: entity
+  parent: DrinkGlass
+  id: DrinkFeverDreamGlass
+  suffix: fever dream
+  components:
+  # Aurora's Song Start - Solution Refactor
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: FeverDream
+        Quantity: 60
+  # Aurora's Song End
+  - type: Icon
+    sprite: _Impstation/Objects/Consumable/Drinks/feverdream.rsi
+    state: icon
