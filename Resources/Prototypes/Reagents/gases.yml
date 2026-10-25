@@ -113,6 +113,10 @@
     Respiration:
       effects:
       - !type:HealthChange
+        conditions: # Aurora's Song - Thaven Can Safely Breathe Gases
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
+          inverted: true
         ignoreResistances: true
         damage:
           types:
@@ -120,6 +124,10 @@
               0.1
       # We need a metabolism effect on reagent removal
       - !type:AdjustAlert
+        conditions: # Aurora's Song - Thaven Can Safely Breathe Gases
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
+          inverted: true
         alertType: Toxins
         minScale: 1.5
         clear: True
@@ -168,6 +176,10 @@
     Respiration:
       effects:
       - !type:HealthChange
+        conditions: # Aurora's Song - Thaven Can Safely Breathe Gases
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
+          inverted: true
         ignoreResistances: true
         damage:
           types:
@@ -175,6 +187,10 @@
               1
       # We need a metabolism effect on reagent removal
       - !type:AdjustAlert
+        conditions: # Aurora's Song - Thaven Can Safely Breathe Gases
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
+          inverted: true
         alertType: Toxins
         minScale: 1.5
         clear: True
@@ -235,7 +251,7 @@
         minScale: 0.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Plant, Vox ]
+          type: [ Plant, Vox, Thaven ]  # Aurora's Song - Thaven Can Safely Breathe Gases
           inverted: true
         # Don't want people to get toxin damage from the gas they just
         # exhaled, right?
@@ -337,7 +353,7 @@
         minScale: 0.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Slime ]
+          type: [ Slime, Thaven ] # Aurora's Song - Thaven Can Safely Breathe Gases ]
           inverted: true
         type: Local
         visualType: Medium
@@ -347,7 +363,7 @@
         minScale: 1
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Slime ]
+          type: [ Slime, Thaven ] # Aurora's Song - Thaven Can Safely Breathe Gases ]
           inverted: true
         walkSpeedModifier: 0.65
         sprintSpeedModifier: 0.65
@@ -355,7 +371,7 @@
         minScale: 1.8
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Slime ]
+          type: [ Slime, Thaven ] # Aurora's Song - Thaven Can Safely Breathe Gases
           inverted: true
         effectProto: StatusEffectForcedSleeping
         time: 3
@@ -364,7 +380,7 @@
         minScale: 3.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Slime ]
+          type: [ Slime, Thaven ] # Aurora's Song - Thaven Can Safely Breathe Gases
           inverted: true
         ignoreResistances: true
         scaling: true
@@ -419,6 +435,10 @@
     Respiration:
       effects:
       - !type:HealthChange
+        conditions: # Aurora's Song - Thaven Can Safely Breathe Gases
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
+          inverted: true
         minScale: 0.5
         ignoreResistances: true
         damage:
