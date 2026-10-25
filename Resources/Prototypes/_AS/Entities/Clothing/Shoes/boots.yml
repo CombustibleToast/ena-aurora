@@ -59,6 +59,6 @@
         variation: 0.09
 
 - type: entity
-  parent: [ASClothingShoesHighheelBootsNanotrasen, C2ContrabandSyndciateRestrictedUnredeemable ]
+  parent: [ASClothingShoesHighheelBootsNanotrasen, C2ContrabandSyndicateRestrictedUnredeemable ]
   id: ASClothingShoesHighheelBootsSyndicate
   name: syndicate official's heel boots
