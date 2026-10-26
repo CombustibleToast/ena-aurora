@@ -196,7 +196,7 @@
 #region Mini gravity generator
 - type: entity
   id: BloodCultGravityGeneratorMini
-  parent: [BaseStructureDisableToolUse, GravityGeneratorMini]
+  parent: [GravityGeneratorMini] # Aurora's Song - removed BaseStructureDisableToolUse. Why does it have this? I want the evil fuckoff blood portal on my ship.
   name: blood cult gravity generator
   components:
   - type: Sprite
