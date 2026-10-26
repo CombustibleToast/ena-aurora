@@ -9,7 +9,7 @@ namespace Content.Server._MACRO.Speech.EntitySystems;
 /// </summary>
 public sealed partial class ThavenAccentComponentAccentSystem : EntitySystem
 {
-    [Dependency] private ReplacementAccentSystem _replacement = default!;
+    [Dependency] private ReplacementAccentSystem _replacement = null!;
 
     public override void Initialize()
     {

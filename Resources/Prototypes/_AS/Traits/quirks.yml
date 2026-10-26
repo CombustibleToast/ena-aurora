@@ -168,3 +168,14 @@
     organs:
     - ArmLeft
     - HandLeft
+
+- type: trait
+  id: BloodSwapShimmering
+  name: trait-shimmering-blood-name
+  description: trait-shimmering-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Thaven]
+  components:
+  - type: BloodSwap
+    bloodReagent: ShimmeringBlood

@@ -74,3 +74,13 @@
     - type: Vocal
       sounds:
         Unsexed: UnisexSiliconXenoborg
+
+- type: trait
+  id: ThavenAccent
+  name: trait-thaven-accent-name
+  description: trait-thaven-accent-desc
+  category: SpeechTraits
+  speciesBlacklist: [Thaven]
+  cost: 1
+  components:
+  - type: ThavenAccent
