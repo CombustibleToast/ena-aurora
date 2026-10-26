@@ -238,7 +238,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Rat ]
+          type: [ Rat, Thaven ] # Aurora's Song - Thaven Safely Breathe Gases
           inverted: true
         - !type:ReagentCondition
           reagent: Ammonia
@@ -252,7 +252,7 @@
         probability: 0.12
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Rat, Vox ]
+          type: [ Rat, Vox, Thaven ] # Aurora's Song - Thaven Safely Breathe Gases ]
           inverted: true
         - !type:ReagentCondition
           reagent: Ammonia
