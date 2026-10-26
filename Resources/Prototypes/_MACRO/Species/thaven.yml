@@ -14,10 +14,10 @@
   - Male
   - Female
   - Unsexed
-  defaultSoundsBySex:
-  - MaleThaven
-  - FemaleThaven
-  - MaleThaven
+#  defaultSoundsBySex: # Aurora's Song Start - Commenting out until upmerge
+#  - MaleThaven
+#  - FemaleThaven
+#  - MaleThaven
 
 # Developer Notes
 #

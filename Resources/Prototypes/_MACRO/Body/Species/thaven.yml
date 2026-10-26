@@ -146,7 +146,13 @@
   - type: TypingIndicator
     proto: thaven # DeltaV unique typing indicator
   - type: Vocal
-    emoteSounds: MaleThaven
+    # Aurora's Song Start - Revert to sounds from emoteSounds pending upmerge
+    sounds:
+      Male: MaleThaven
+      Female: FemaleThaven
+      Unsexed: MaleThaven
+      #emoteSounds: MaleThaven
+    # Aurora's Song End
   - type: Speech
     speechSounds: Alto
   - type: ThavenAccent
