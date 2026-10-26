@@ -1,21 +1,5 @@
 AdminOnly: false
 Entries:
-- author: Phoenix51505
-  changes:
-  - message: Fixed inconsistent sprites on remote traffic consoles
-    type: Fix
-  - message: Mapped the correct consoles onto PB and TS for controlling traffic
-    type: Fix
-  id: 9111
-  time: '2026-04-13T10:50:56.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/939
-- author: Phoenix51505
-  changes:
-  - message: Fixed the temperature damage values for tajaran's so being cold no longer causes heat burns and vice versa
-    type: Fix
-  id: 9112
-  time: '2026-04-13T10:51:10.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/941
 - author: Zenixic
   changes:
   - message: Added the GT Dinghy into the scrapyard, an expedition capable "ship" intended for custom shipbuilding
@@ -3940,3 +3924,19 @@ Entries:
   id: 9886
   time: '2026-10-22T07:41:56.5612148+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1561
+- author: TrixxedHeart
+  changes:
+  - message: Added radio bans, admins can now ban a player from any given radio channel, Speak Wisely.
+    type: Add
+  - message: Ban type tabs now refresh properly upon selecting a ban type
+    type: Fix
+  id: 9887
+  time: '2026-10-26T07:42:07.6509755+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1557
+- author: Sere
+  changes:
+  - message: Standard-issue clothing budgets have increased, allowing jackboots to provide ample support again. (Injury slowdown resist parity with combat/mercboots).
+    type: Fix
+  id: 9888
+  time: '2026-10-26T07:42:07.6511798+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1559
