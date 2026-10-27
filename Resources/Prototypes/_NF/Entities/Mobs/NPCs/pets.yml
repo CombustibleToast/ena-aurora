@@ -329,6 +329,33 @@
   name: blood cult cat
   description: Founded the Blood Cult out of boredom.
   components:
+  # Aurora's Song
+  - type: PressureImmunity
+  - type: TemperatureDamage
+    coldDamage:
+      types: {}
+    heatDamage:
+      types: {}
+  - type: Respirator
+    updateInterval: 99999
+    suffocationThreshold: -100
+    damage:
+      types: {}
+    damageRecovery:
+      types: {}
+  - type: Vocal
+    sounds:
+      Unsexed: BloodCultCat
+  - type: Speech
+    allowedEmotes: [ 'Meow', 'Hiss', 'Mew', 'Purr', 'Growl' ]
+  - type: Inventory
+    templateId: nfcat
+    speciesId: cat
+  - type: NpcFactionMember
+    factions:
+    - Cat
+    - BloodCultNF
+  # Aurora's Song end
   - type: MeleeWeapon
     damage:
       types:
@@ -349,10 +376,10 @@
         Base: cultcat
         BaseUnshaded: cultcat_unshaded
       Critical:
-        Base: cultcat
+        Base: cultcat_dead # Aurora's Song - Fix it not using the dead sprite
         BaseUnshaded: mask_null
       Dead:
-        Base: cultcat
+        Base: cultcat_dead # Aurora's Song - Fix it not using the dead sprite
         BaseUnshaded: mask_null
   - type: GhostRole
     name: ghost-role-information-cult-cat-name

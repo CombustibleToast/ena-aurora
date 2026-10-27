@@ -55,3 +55,21 @@
       collection: FairyFlutter
     Flap:
       collection: FairyFlutter
+
+- type: emoteSounds
+  id: BloodCultCat
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FelinidScreams
+    Meow:
+      collection: FelinidMeows
+    Hiss:
+      collection: FelinidHisses
+    Mew:
+      collection: FelinidMews
+    Purr:
+      collection: FelinidPurrs
+    Growl:
+      collection: FelinidGrowls
