@@ -33,6 +33,12 @@ public sealed class ASCCVars
     /// </summary>
     public static readonly CVarDef<bool> ShowAdminLinks = CVarDef.Create("as.adminlogs.show_admin_links", false, CVar.SERVERONLY);
 
+    /// <summary>
+    /// Whether players may make the result of /roll visible to nearby players with the "show" argument.
+    /// Private rolls are always available.
+    /// </summary>
+    public static readonly CVarDef<bool> ChatRollShowEnabled = CVarDef.Create("as.chat.roll_show_enabled", true, CVar.SERVERONLY);
+	
     // Opt-in for RMC dedicated unique action pump/breech keybinds.
     public static readonly CVarDef<bool> RmcUniqueAction =
         CVarDef.Create("as.control.rmc_unique_action", false, CVar.CLIENTONLY | CVar.ARCHIVE);
