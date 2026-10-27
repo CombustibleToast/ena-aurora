@@ -132,7 +132,7 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish', 'Bubble', 'Pop'] # Imp: add Bubble, Pop
+    allowedEmotes: ['Squish', 'Bubble', 'Slosh','Pop', 'Fizz','Wobble'] # Imp: add Bubble, Pop # Funky: add Slosh, Fizz and Wobble
   - type: TypingIndicator
     proto: slime
   - type: Vocal # Imp

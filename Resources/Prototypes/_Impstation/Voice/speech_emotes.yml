@@ -4,7 +4,7 @@
   name: chat-emote-name-bubble
   category: Vocal
   available: false
-  icon: Interface/Emotes/squish.png
+  icon: _Funkystation/Interface/Emotes/Slime/bubble.png # FunkyStation
   whitelist:
     components:
     - Vocal
@@ -26,7 +26,7 @@
   name: chat-emote-name-pop
   category: Vocal
   available: false
-  icon: Interface/Emotes/squish.png
+  icon: _Funkystation/Interface/Emotes/Slime/pop.png # FunkyStation
   whitelist:
     components:
     - Vocal

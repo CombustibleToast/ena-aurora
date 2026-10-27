@@ -100,6 +100,10 @@
       collection: ReptilianHiss # Imp
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
+    Gurgle:
+      collection: LizardGurgle # Funky
+    Chirp:
+      collection: LizardChirp # Funky
     Honk:
       collection: BikeHorn
     Whistle:
@@ -128,6 +132,10 @@
       path: /Audio/Animals/lizard_happy.ogg
     Hiss: # Imp
       collection: ReptilianHiss # Imp
+    Gurgle:
+      collection: LizardGurgle # Funky
+    Chirp:
+      collection: LizardChirp # Funky
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
@@ -157,6 +165,14 @@
       collection: Bubbles # Imp
     Pop: # Imp
       collection: Pops # Imp
+# Funky start
+    Slosh:
+      collection: Sloshes
+    Fizz:
+      collection: Fizzes
+    Wobble:
+      collection: Wobbles
+# Funky end
     Scream:
       collection: MaleSlimeScreams # Imp
     Laugh:
@@ -207,6 +223,14 @@
       collection: Bubbles # Imp
     Pop: # Imp
       collection: Pops # Imp
+# Funky start
+    Slosh:
+      collection: Sloshes
+    Fizz:
+      collection: Fizzes
+    Wobble:
+      collection: Wobbles
+# Funky end
     Scream:
       collection: FemaleSlimeScreams # Imp
     Laugh:
