@@ -238,6 +238,21 @@
       tags:
       - ExchangeUplink
 
+- type: listing
+  id: UplinkMercenaryEnergyShield
+  name:  uplink-exchange-energy-shield-name
+  description: uplink-exchange-energy-shield-desc
+  productEntity: EnergyShieldMercenary
+  cost:
+    ExchangeCoin: 50
+  categories:
+  - UplinkExchangeUtility
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
 #- type: listing
 #  id: UplinkMercenaryGauze
 #  name:  uplink-mercenary-gauze-name

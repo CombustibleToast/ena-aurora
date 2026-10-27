@@ -187,3 +187,6 @@ uplink-exchange-ap4c-desc = A compact submachine gun chambered in .40 pistol. Ba
 
 uplink-exchange-mk32-name = Mk32 Universal
 uplink-exchange-mk32-desc = The Mark 32 Offensive Handgun. Has an OD-Green grip. Chambered in .45.
+
+uplink-exchange-energy-shield-name = Mercenary Gravity Shield
+uplink-exchange-energy-shield-desc = Prototype energy shield. First iteration offered to mercenaries for field testing. Exchanges the ability to deflect energy weapons reliably for more generalized protection against all projectiles.
