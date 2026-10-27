@@ -43,7 +43,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameRevolverGorlex
-  parent: [ C2ContrabandSyndicate, NFBaseWeaponFrameRevolver ] # Aurora's Song - Added C2ContrabandSyndicate
+  parent: [ C2ContrabandSyndicateUnredeemable, NFBaseWeaponFrameRevolver ] # Aurora's Song - Added C2ContrabandSyndicateUnredeemable
   abstract: true
   components:
   - type: Gun

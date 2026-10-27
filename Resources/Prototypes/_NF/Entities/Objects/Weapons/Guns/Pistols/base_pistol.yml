@@ -38,7 +38,7 @@
 
 - type: entity
   id: NFBaseWeaponFramePistolCybersun
-  parent: [ C2ContrabandSyndicate, NFBaseWeaponFramePistol ] # Aurora's Song - Added C2Contraband Syndicate
+  parent: [ C2ContrabandSyndicateUnredeemable, NFBaseWeaponFramePistol ] # Aurora's Song - Added C2ContrabandSyndicateUnredeemable
   abstract: true
   components:
   - type: Gun

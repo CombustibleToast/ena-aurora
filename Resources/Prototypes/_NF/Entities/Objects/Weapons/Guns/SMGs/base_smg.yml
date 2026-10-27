@@ -43,7 +43,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunCybersun
-  parent: [ C2ContrabandSyndicate, NFBaseWeaponFrameSubMachineGun ] # Aurora's Song - Added C2ContrabandSyndicate
+  parent: [ C2ContrabandSyndicateUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Aurora's Song - Added C2ContrabandSyndicateUnredeemable
   abstract: true
   components:
   - type: Gun
@@ -63,7 +63,7 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunGorlex
-  parent: [ C2ContrabandSyndicate, NFBaseWeaponFrameSubMachineGun ] # Aurora's Song - Added C2ContrabandSyndicate
+  parent: [ C2ContrabandSyndicateUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Aurora's Song - Added C2ContrabandSyndicateUnredeemable
   abstract: true
   components:
 # SMG frames no longer inherently wieldable | AS

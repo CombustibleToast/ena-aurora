@@ -45,7 +45,7 @@
 # For syndicate/pirate labeled guns
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - BaseExpeditionWeaponTier1
   id: BaseExpeditionWeaponTier1Syndicate
   abstract: true
@@ -66,14 +66,14 @@
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - BaseExpeditionWeaponTier2
   id: BaseExpeditionWeaponTier2Syndicate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - BaseExpeditionWeaponTier3
   id: BaseExpeditionWeaponTier3Syndicate
   abstract: true
