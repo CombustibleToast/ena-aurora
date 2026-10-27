@@ -18,15 +18,31 @@
       "directions": 4
     },
     {
+      "name": "up-equipped-MASK",
+      "directions": 4
+    },
+    {
       "name": "equipped-MASK-vox",
+      "directions": 4
+    },
+    {
+      "name": "up-equipped-MASK-vox",
       "directions": 4
     },
 	{
       "name": "equipped-MASK-vulpkanin",
       "directions": 4
     },
+    {
+      "name": "up-equipped-MASK-vulpkanin",
+      "directions": 4
+    },
 	{
       "name": "equipped-MASK-feroxi",
+      "directions": 4
+    },	
+	{
+      "name": "up-equipped-MASK-feroxi",
       "directions": 4
     },
     {
@@ -35,6 +51,14 @@
     },
     {
       "name": "inhand-right",
+      "directions": 4
+    },
+    {
+      "name": "up-inhand-left",
+      "directions": 4
+    },
+    {
+      "name": "up-inhand-right",
       "directions": 4
     }
   ]

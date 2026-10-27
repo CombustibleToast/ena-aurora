@@ -776,10 +776,10 @@
   description: A gas mask with built in welding goggles and face shield. Looks like a skull, clearly designed by a nerd.
   components:
   - type: Sprite
-    sprite: Clothing/Mask/welding-gas.rsi
+    sprite: _AS/Clothing/Mask/welding-gas.rsi # Aurora's Song - Redirect to AS for toggle hiding
     state: icon
   - type: Clothing
-    sprite: Clothing/Mask/welding-gas.rsi
+    sprite: _AS/Clothing/Mask/welding-gas.rsi # Aurora's Song - Redirect to AS for toggle hiding
   - type: FlashImmunity
   - type: EyeProtection
   - type: PhysicalComposition
