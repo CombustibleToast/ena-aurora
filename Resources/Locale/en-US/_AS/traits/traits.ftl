@@ -75,3 +75,9 @@ trait-ultra-lightweight-drunk-desc = Alcohol has a much stronger effect on you. 
 
 trait-alcohol-immune-name = Alcohol resistant
 trait-alcohol-immune-desc = Alcohol does not get you drunk at all. It can still poison you, though.
+
+trait-right-arm-removal-name = Right arm removal
+trait-right-arm-removal-desc = You're completely missing your right arm, and can no longer wield two-handed items.
+
+trait-left-arm-removal-name = Left arm removal
+trait-left-arm-removal-desc = You're completely missing your left arm, and can no longer wield two-handed items.
