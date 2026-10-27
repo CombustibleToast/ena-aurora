@@ -1,0 +1,35 @@
+- type: construction
+  id: ASChameleonPoster
+  name: construction-recipe-as-chameleon-poster
+  graph: ASChameleonPoster
+  startNode: start
+  targetNode: poster
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+
+- type: construction
+  id: ASChameleonPainting
+  name: construction-recipe-as-chameleon-painting
+  graph: ASChameleonPainting
+  startNode: start
+  targetNode: painting
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true
+
+- type: construction
+  id: ASChameleonSign
+  name: construction-recipe-as-chameleon-sign
+  graph: ASChameleonSign
+  startNode: start
+  targetNode: sign
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: true

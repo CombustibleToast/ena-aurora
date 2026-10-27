@@ -1,0 +1,49 @@
+- type: constructionGraph
+  id: ASChameleonPoster
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: poster
+      completed:
+      - !type:SnapToGrid {}
+      steps:
+      - material: Paper
+        amount: 1
+        doAfter: 1
+  - node: poster
+    entity: ASChameleonPoster
+
+- type: constructionGraph
+  id: ASChameleonPainting
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: painting
+      completed:
+      - !type:SnapToGrid {}
+      steps:
+      - material: WoodPlank
+        amount: 1
+      - material: Paper
+        amount: 1
+        doAfter: 1
+  - node: painting
+    entity: ASChameleonPainting
+
+- type: constructionGraph
+  id: ASChameleonSign
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: sign
+      completed:
+      - !type:SnapToGrid {}
+      steps:
+      - material: Steel
+        amount: 1
+        doAfter: 1
+  - node: sign
+    entity: ASChameleonSign
