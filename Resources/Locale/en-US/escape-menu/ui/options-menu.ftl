@@ -50,10 +50,6 @@ ui-options-quality-label = Quality
 ui-options-misc-label = Misc
 ui-options-interface-label = Interface
 
-
-## Funky Station
-ui-options-crayon-overlay-transparency = Crayon overlay transparency
-
 ## Funky Station
 ui-options-crayon-overlay-transparency = Crayon overlay transparency
 
