@@ -3,9 +3,6 @@
   name: chat-emote-name-gurgle
   category: Vocal
   available: false
-  whitelist:
-    tags:
-    - LizardEmotes
   blacklist:
     components:
     - BorgChassis

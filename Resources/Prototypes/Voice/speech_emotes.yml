@@ -530,11 +530,9 @@
   id: Weh
   name: chat-emote-name-weh
   category: Vocal
+  available: false # Aurora's Song - Granted through Speech.allowedEmotes.
   icon: Interface/Emotes/weh.png
   chatMessages: ["chat-emote-msg-weh"]
-  whitelist:
-    tags: # Funky
-    - LizardEmotes
   chatTriggers: # Funky
     - weh
     - wehs
@@ -556,8 +554,6 @@
     components:
     - Nymph
     - Vocal
-    tags: # Funky
-    - LizardEmotes
   blacklist:
     components:
     - BorgChassis
