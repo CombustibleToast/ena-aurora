@@ -1,74 +1,5 @@
 AdminOnly: false
 Entries:
-- author: Zenixic
-  changes:
-  - message: Added the GT Dinghy into the scrapyard, an expedition capable "ship" intended for custom shipbuilding
-    type: Add
-  id: 9113
-  time: '2026-04-13T10:56:36.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/936
-- author: CombustibleToast
-  changes:
-  - message: Scrubbers now scrub helium by default.
-    type: Tweak
-  id: 9114
-  time: '2026-04-14T04:24:22.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/943
-- author: AvianMaiden
-  changes:
-  - message: All holsters make a unique sound now!
-    type: Add
-  id: 9115
-  time: '2026-04-14T04:24:51.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/938
-- author: assignedgod
-  changes:
-  - message: 'Updated height and width sliders to be more convenient '
-    type: Add
-  - message: Made fairies bigger
-    type: Tweak
-  - message: Made Oni bigger
-    type: Tweak
-  - message: Made Sheleg bigger
-    type: Tweak
-  id: 9116
-  time: '2026-04-16T03:15:44.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/889
-- author: entings
-  changes:
-  - message: Added the scrambled speech accent, for fun and profit.
-    type: Add
-  id: 9117
-  time: '2026-04-16T03:46:02.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/898
-- author: Oberonics
-  changes:
-  - message: Changed the emote system so that you are no longer restricted on the emotes you can send in chat. Everyone can yap!
-    type: Tweak
-  id: 9118
-  time: '2026-04-16T03:47:54.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/924
-- author: Phoenix51505
-  changes:
-  - message: Auroran Public Transit is proud to present a new engine for their buses, presenting a 4 fold decrease in transit time.
-    type: Tweak
-  id: 9119
-  time: '2026-04-16T03:51:27.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/950
-- author: BudaLope
-  changes:
-  - message: Imp accessibility notifier
-    type: Add
-  id: 9120
-  time: '2026-04-16T05:32:43.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/946
-- author: BudaLope
-  changes:
-  - message: Ported nanochat from DeltaV
-    type: Add
-  id: 9121
-  time: '2026-04-16T05:37:43.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/944
 - author: emergency-ketchup
   changes:
   - message: Wooden railings to Little Byte Key in place of the old metal railings
@@ -3940,3 +3871,76 @@ Entries:
   id: 9888
   time: '2026-10-26T07:42:07.6511798+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1559
+- author: fancyplanks
+  changes:
+  - message: Ported Wallpapers from Impstation
+    type: Add
+  id: 9889
+  time: '2026-10-29T07:41:42.6603061+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1706
+- author: TrixxedHeart
+  changes:
+  - message: Added chameleon posters/signs/paintings in the crafting menu.
+    type: Add
+  id: 9890
+  time: '2026-10-29T07:41:42.6604991+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1578
+- author: Amethystowo, Frogoo, ThatOneMoon
+  changes:
+  - message: Lizard people now have new emotes they can use, being Chirp and Gurgle. They can also now weh to their hearts content, like a true lizard should.
+    type: Add
+  - message: Added more slime emotes including Fizzing, Sloshing and wobbling. Some of their existing emotes now have new icons.
+    type: Add
+  id: 9891
+  time: '2026-10-29T07:41:42.6605559+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1593
+- author: DimesEqual9
+  changes:
+  - message: Syndicate weapons should no longer be sellable after registration.
+    type: Fix
+  id: 9892
+  time: '2026-10-29T07:41:42.6606428+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1683
+- author: concursum, TrixxedHeart
+  changes:
+  - message: added two traits that remove the left or right arm
+    type: Add
+  id: 9893
+  time: '2026-10-29T07:41:42.6606570+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1579
+- author: TrixxedHeart
+  changes:
+  - message: Blood Cult cats can now meow/hiss/mew/purr and growl.
+    type: Add
+  - message: The Blood Cult cat is now immune to pressure and atmos.
+    type: Tweak
+  - message: The Blood Cult cat can now wear cat wearable belts/hats/PDAs/outer suits.
+    type: Tweak
+  - message: Blood Cultists will no longer murder the Blood Cult cat upon spawning.
+    type: Fix
+  - message: Blood Cult cats now correctly use their dead sprite when dead or in critical.
+    type: Fix
+  id: 9894
+  time: '2026-10-29T07:41:42.6607407+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1636
+- author: Phoebe51505
+  changes:
+  - message: The prototype Gravity Shield is available for Auroran Mercenaries, available in exchange for returning any Syndicate or NT equivalents and for sale using Exchange Credits.
+    type: Add
+  id: 9895
+  time: '2026-10-29T07:41:42.6607515+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1617
+- author: TrixxedHeart
+  changes:
+  - message: Added a /roll command for your dice rolling adventures
+    type: Add
+  id: 9896
+  time: '2026-10-29T07:41:42.6607786+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1563
+- author: concursum
+  changes:
+  - message: the blood cult gravity generator can now be taken from UIVs
+    type: Tweak
+  id: 9897
+  time: '2026-10-29T07:41:42.6607845+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1664
