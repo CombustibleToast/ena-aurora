@@ -1,36 +1,23 @@
 #region Head
 - type: marking
+  parent: [BaseHeadSide, BaseSpeciesThaven]
   id: ThavenHeadSideFairy
-  bodyPart: HeadSide
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
     state: fairyfins
 
 - type: marking
+  parent: [BaseHeadTop, BaseSpeciesThaven]
   id: ThavenHeadTopAnglerStem
-  bodyPart: HeadTop
   groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
     state: angler-stem
 
 - type: marking
+  parent: [BaseHeadTop, BaseSpeciesThaven]
   id: ThavenHeadTopAnglerBulb
-  bodyPart: HeadTop
   groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
     state: angler-bulb
@@ -38,127 +25,82 @@
 
 #region Chest
 - type: marking
+  parent: [BaseChest, BaseSpeciesThaven]
   id: ThavenBackFin
-  bodyPart: Chest
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/chest.rsi
     state: backfin
 
 #region RArm
 - type: marking
+  parent: BaseSpeciesThaven
   id: ThavenArmFinsSmallRight
   bodyPart: RArm
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
     state: rarmfins1
 
 - type: marking
+  parent: BaseSpeciesThaven
   id: ThavenArmFinsBigRight
   bodyPart: RArm
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
     state: rarmfins2
 
 #region LArm
 - type: marking
+  parent: BaseSpeciesThaven
   id: ThavenArmFinsSmallLeft
   bodyPart: LArm
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
     state: larmfins1
 
 - type: marking
+  parent: BaseSpeciesThaven
   id: ThavenArmFinsBigLeft
   bodyPart: LArm
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
     state: larmfins2
 
 #region RLeg
 - type: marking
+  parent: BaseSpeciesThaven
   id: ThavenLegFinsSmallRight
   bodyPart: RLeg
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/rleg.rsi
     state: rlegfins1
 
 #region LLeg
 - type: marking
+  parent: BaseSpeciesThaven
   id: ThavenLegFinsSmallLeft
   bodyPart: LLeg
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/lleg.rsi
     state: llegfins1
 
 #region Tail
 - type: marking
+  parent: [BaseTail, BaseSpeciesThaven]
   id: ThavenTailCarpish
-  bodyPart: Tail
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
     state: carpish
 
 - type: marking
+  parent: [BaseTail, BaseSpeciesThaven]
   id: ThavenTailDraconicLong
-  bodyPart: Tail
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
     state: draconiclong
 
 - type: marking
+  parent: [BaseTail, BaseSpeciesThaven]
   id: ThavenTailFish
-  bodyPart: Tail
-  groupWhitelist: [Thaven]
-  coloring:
-    default:
-      type:
-        !type:SkinColoring
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
     state: fishtail
-

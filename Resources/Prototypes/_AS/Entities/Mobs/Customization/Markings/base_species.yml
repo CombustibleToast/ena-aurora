@@ -121,6 +121,12 @@
 
 - type: marking
   abstract: true
+  id: BaseSpeciesThaven
+  groupWhitelist: [Thaven]
+  preferredSpecies: [Thaven]
+
+- type: marking
+  abstract: true
   id: BaseSpeciesUndergarmentStandard
   invertGroupWhitelist: true
   groupWhitelist:
