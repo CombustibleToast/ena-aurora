@@ -1,53 +1,5 @@
 AdminOnly: false
 Entries:
-- author: emergency-ketchup
-  changes:
-  - message: Wooden railings to Little Byte Key in place of the old metal railings
-    type: Tweak
-  - message: Boardwalk layout changes on Little Byte Key
-    type: Tweak
-  - message: Fixed missing floor tile on Little Byte Key
-    type: Fix
-  id: 9122
-  time: '2026-04-16T07:14:26.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/954
-- author: Zenixic
-  changes:
-  - message: Added a ChemVend and a medical gun safe to the Caladrius.
-    type: Add
-  - message: Changed the power generator on the Caladrius to an AME.
-    type: Tweak
-  - message: Replaced thrusters on the Caladrius with their medic variant.
-    type: Tweak
-  id: 9123
-  time: '2026-04-16T07:18:58.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/947
-- author: Phoenix51505
-  changes:
-  - message: Prison timers are announced over SLE comms when they are over
-    type: Add
-  - message: SLEO Polished
-    type: Tweak
-  - message: SLE Basic equipment made more accessible
-    type: Tweak
-  - message: SLE Long Coat is now armoured
-    type: Tweak
-  - message: DoC Accessed added to ID Console
-    type: Fix
-  - message: STC was given command comms and access
-    type: Fix
-  - message: Medics have access to chemistry
-    type: Fix
-  id: 9124
-  time: '2026-04-16T10:26:14.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/955
-- author: GreyScaleHarlequin
-  changes:
-  - message: Pomelustine now requires fabrication, no more accidental horny while eating.
-    type: Tweak
-  id: 9125
-  time: '2026-04-17T15:48:50.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/956
 - author: BudaLope
   changes:
   - message: Fixed nanochat notifications
@@ -3944,3 +3896,43 @@ Entries:
   id: 9897
   time: '2026-10-29T07:41:42.6607845+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1664
+- author: The Thaven Team, AraiMai, TrixxedHeart, Sere
+  changes:
+  - message: 'Added Thaven! Disclaimer: These currently DO NOT have Moods.'
+    type: Add
+  - message: Modified Thaven to safely breathe all gases.
+    type: Tweak
+  - message: Modified the guidebook to reflect these changes.
+    type: Tweak
+  - message: Fever Dream! A drink made absinthe, champagne, raw egg and shimmering blood.
+    type: Add
+  - message: Several Thaven markings from Funkystation.
+    type: Add
+  - message: Bloodswap and Accent traits for Shimmering Blood and Thaven Accent (no contractions, basically).
+    type: Add
+  id: 9898
+  time: '2026-10-31T07:41:49.0378317+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1708
+- author: SalamanderSkies
+  changes:
+  - message: Deathgasping can be done as an emote again.
+    type: Tweak
+  id: 9899
+  time: '2026-10-31T07:41:49.0384040+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1700
+- author: the_bweepers
+  changes:
+  - message: Allows Slime People to eat cloth, paper, raw meat, blood, trash, and more that other species can!
+    type: Add
+  - message: Adjusts Allicin and Theobromise to stop slime people from being effected by them after the above change made them susceptible, and prevents UncookedAnimalProteins from giving duplicate Protein when metabolized
+    type: Tweak
+  id: 9900
+  time: '2026-10-31T07:41:49.0384372+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1658
+- author: TrixxedHeart
+  changes:
+  - message: Fixed reptilians not being able to pilot shuttles, have footsteps, and bump into doors to open them.
+    type: Fix
+  id: 9901
+  time: '2026-10-31T07:41:49.0384589+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1716
