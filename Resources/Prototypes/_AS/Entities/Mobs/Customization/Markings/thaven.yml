@@ -1,0 +1,106 @@
+#region Head
+- type: marking
+  parent: [BaseHeadSide, BaseSpeciesThaven]
+  id: ThavenHeadSideFairy
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
+    state: fairyfins
+
+- type: marking
+  parent: [BaseHeadTop, BaseSpeciesThaven]
+  id: ThavenHeadTopAnglerStem
+  groupWhitelist: [Thaven]
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
+    state: angler-stem
+
+- type: marking
+  parent: [BaseHeadTop, BaseSpeciesThaven]
+  id: ThavenHeadTopAnglerBulb
+  groupWhitelist: [Thaven]
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/head.rsi
+    state: angler-bulb
+  shader: unshaded
+
+#region Chest
+- type: marking
+  parent: [BaseChest, BaseSpeciesThaven]
+  id: ThavenBackFin
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/chest.rsi
+    state: backfin
+
+#region RArm
+- type: marking
+  parent: BaseSpeciesThaven
+  id: ThavenArmFinsSmallRight
+  bodyPart: RArm
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
+    state: rarmfins1
+
+- type: marking
+  parent: BaseSpeciesThaven
+  id: ThavenArmFinsBigRight
+  bodyPart: RArm
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
+    state: rarmfins2
+
+#region LArm
+- type: marking
+  parent: BaseSpeciesThaven
+  id: ThavenArmFinsSmallLeft
+  bodyPart: LArm
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
+    state: larmfins1
+
+- type: marking
+  parent: BaseSpeciesThaven
+  id: ThavenArmFinsBigLeft
+  bodyPart: LArm
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
+    state: larmfins2
+
+#region RLeg
+- type: marking
+  parent: BaseSpeciesThaven
+  id: ThavenLegFinsSmallRight
+  bodyPart: RLeg
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/rleg.rsi
+    state: rlegfins1
+
+#region LLeg
+- type: marking
+  parent: BaseSpeciesThaven
+  id: ThavenLegFinsSmallLeft
+  bodyPart: LLeg
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/lleg.rsi
+    state: llegfins1
+
+#region Tail
+- type: marking
+  parent: [BaseTail, BaseSpeciesThaven]
+  id: ThavenTailCarpish
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
+    state: carpish
+
+- type: marking
+  parent: [BaseTail, BaseSpeciesThaven]
+  id: ThavenTailDraconicLong
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
+    state: draconiclong
+
+- type: marking
+  parent: [BaseTail, BaseSpeciesThaven]
+  id: ThavenTailFish
+  sprites:
+  - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
+    state: fishtail

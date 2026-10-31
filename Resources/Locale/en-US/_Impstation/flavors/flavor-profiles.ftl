@@ -13,3 +13,4 @@ flavor-complex-supermixerpsych = like a psychiatric appointment
 
 flavor-base-stardust = like stardust
 flavor-base-whimsy = whimsical
+flavor-complex-feverdream = like you're losing your mind

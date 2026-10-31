@@ -81,3 +81,9 @@ trait-right-arm-removal-desc = You're completely missing your right arm, and can
 
 trait-left-arm-removal-name = Left arm removal
 trait-left-arm-removal-desc = You're completely missing your left arm, and can no longer wield two-handed items.
+
+trait-shimmering-blood-name = Shimmering blood
+trait-shimmering-blood-desc = You have nacreous, narcotic blood, as seen in Thaven.
+
+trait-thaven-accent-name = Thaven accent
+trait-thaven-accent-desc = You do not speak with contractions.

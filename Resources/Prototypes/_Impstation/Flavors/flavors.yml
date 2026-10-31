@@ -21,12 +21,12 @@
   id: cottonbool
   flavorType: Complex
   description: flavor-complex-cottonbool
- 
+
 - type: flavor
   id: zombieslushie
   flavorType: Complex
   description: flavor-complex-zombieslushie
-  
+
 - type: flavor
   id: lungclogger
   flavorType: Complex
@@ -66,3 +66,8 @@
   id: supermixerpsych
   flavorType: Complex
   description: flavor-complex-supermixerpsych
+
+- type: flavor
+  id: feverdream
+  flavorType: Complex
+  description: flavor-complex-feverdream

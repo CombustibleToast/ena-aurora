@@ -144,6 +144,17 @@
       bloodReagent: BloodAllulalo
 
 - type: trait
+  id: BloodSwapShimmering
+  name: trait-shimmering-blood-name
+  description: trait-shimmering-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Thaven]
+  components:
+  - type: BloodSwap
+    bloodReagent: ShimmeringBlood
+
+- type: trait
   id: RightArmRemoval
   name: trait-right-arm-removal-name
   description: trait-right-arm-removal-desc

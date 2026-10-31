@@ -7,3 +7,8 @@
   id: Allulalo
   name: species-name-allulalo # Aurora's Song - Allulalo > species-name-allulalo
   text: "/ServerInfo/_MACRO/Guidebook/Mobs/Allulalo.xml"
+
+- type: guideEntry
+  id: Thaven
+  name: species-name-thaven
+  text: "/ServerInfo/_MACRO/Guidebook/Mobs/Thaven.xml"
