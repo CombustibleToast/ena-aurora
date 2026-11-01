@@ -23,6 +23,34 @@
     state: angler-bulb
   shader: unshaded
 
+- type: marking
+  parent: [BaseHead, BaseSpeciesThaven]
+  id: HeadTwistingThaven
+  sprites:
+  - sprite: _AS/Mobs/Customization/Thaven/scars.rsi
+    state: head_twisting_thaven
+
+- type: marking
+  parent: [BaseHead, BaseSpeciesThaven]
+  id: HeadSmileScarsThaven
+  sprites:
+  - sprite: _AS/Mobs/Customization/Thaven/scars.rsi
+    state: head_smile_thaven
+
+- type: marking
+  parent: [BaseHead, BaseSpeciesThaven]
+  id: HeadHeavyTattoosThaven
+  coloring:
+    default:
+      type:
+        !type:TattooColoring
+      fallbackColor: "#666666"
+  sprites:
+  - sprite: _AS/Mobs/Customization/Thaven/tattoos.rsi
+    state: head_heavy1_thaven
+  - sprite: _AS/Mobs/Customization/Thaven/tattoos.rsi
+    state: head_heavy2_thaven
+
 #region Chest
 - type: marking
   parent: [BaseChest, BaseSpeciesThaven]
@@ -33,52 +61,46 @@
 
 #region RArm
 - type: marking
-  parent: BaseSpeciesThaven
+  parent: [BaseRightArm, BaseSpeciesThaven]
   id: ThavenArmFinsSmallRight
-  bodyPart: RArm
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
     state: rarmfins1
 
 - type: marking
-  parent: BaseSpeciesThaven
+  parent: [BaseRightArm, BaseSpeciesThaven]
   id: ThavenArmFinsBigRight
-  bodyPart: RArm
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/rarm.rsi
     state: rarmfins2
 
 #region LArm
 - type: marking
-  parent: BaseSpeciesThaven
+  parent: [BaseLeftArm, BaseSpeciesThaven]
   id: ThavenArmFinsSmallLeft
-  bodyPart: LArm
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
     state: larmfins1
 
 - type: marking
-  parent: BaseSpeciesThaven
+  parent: [BaseLeftArm, BaseSpeciesThaven]
   id: ThavenArmFinsBigLeft
-  bodyPart: LArm
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/larm.rsi
     state: larmfins2
 
 #region RLeg
 - type: marking
-  parent: BaseSpeciesThaven
+  parent: [BaseRightLeg, BaseSpeciesThaven]
   id: ThavenLegFinsSmallRight
-  bodyPart: RLeg
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/rleg.rsi
     state: rlegfins1
 
 #region LLeg
 - type: marking
-  parent: BaseSpeciesThaven
+  parent: [BaseLeftLeg, BaseSpeciesThaven]
   id: ThavenLegFinsSmallLeft
-  bodyPart: LLeg
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/lleg.rsi
     state: llegfins1

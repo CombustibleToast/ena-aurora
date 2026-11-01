@@ -835,11 +835,13 @@ marking-ThavenHibiscus = Hibiscus
 marking-ThavenHibiscus-hibiscus1 = Petals
 marking-ThavenHibiscus-hibiscus2 = Anthers
 
-marking-ThavenPiercings =  Helix Piercing
-marking-ThavenPiercings-piercings = Helix Piercing
+# Aurora's Song Start - Swapped hoop and helix strings to better fit their sprites
+marking-ThavenPiercings =  Hoop Piercing
+marking-ThavenPiercings-piercings = Hoop Piercing
 
-marking-ThavenPiercings2 = Hoop Piercing
-marking-ThavenPiercings2-piercings2 = Hoop Piercing
+marking-ThavenPiercings2 = Helix Piercing
+marking-ThavenPiercings2-piercings2 = Helix Piercing
+# Aurora's Song End
 
 # Tail
 

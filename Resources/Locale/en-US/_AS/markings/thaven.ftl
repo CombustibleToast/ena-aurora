@@ -8,6 +8,16 @@ marking-ThavenHeadTopAnglerStem-angler-stem = Stem
 marking-ThavenHeadTopAnglerBulb = Angler Bulb
 marking-ThavenHeadTopAnglerBulb-angler-bulb = Bulb
 
+marking-HeadTwistingThaven = Twisted Scar
+marking-HeadTwistingThaven-head_twisting_thaven = Twisted Scar
+
+marking-HeadSmileScarsThaven = The Jonker
+marking-HeadSmileScarsThaven-head_smile_thaven = The Jonker
+
+marking-HeadHeavyTattoosThaven = Heavy Neck Tattoos
+marking-HeadHeavyTattoosThaven-head_heavy1_thaven = Heavy Neck Tattoos (Lower)
+marking-HeadHeavyTattoosThaven-head_heavy2_thaven = Heavy Neck Tattoos (Upper)
+
 #region Chest
 marking-ThavenBackFin = Dorsal Fin
 marking-ThavenBackFin-backfin = Fin

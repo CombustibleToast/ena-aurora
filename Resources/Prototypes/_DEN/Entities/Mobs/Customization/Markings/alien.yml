@@ -40,7 +40,7 @@
   id: AlienEyes
   bodyPart: Eyes
   # markingCategory: Face # Aurora's Song
-  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Decapoid ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added decapoid.
+  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Decapoid, Thaven ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added decapoid, added Thaven
   invertGroupWhitelist: true # Aurora's Song - invertSpeciesRestriction>invertGroupWhitelist
   coloring:
     default:
@@ -54,7 +54,7 @@
   id: AlienEyesBig
   bodyPart: Eyes
   # markingCategory: Face # Aurora's Song
-  groupWhitelist: [ Moth, Arachnid, IPC, Vox ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist
+  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Thaven ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Thaven
   invertGroupWhitelist: true # Aurora's Song - invertSpeciesRestriction>invertGroupWhitelist
   coloring:
     default:
@@ -68,7 +68,7 @@
   id: AlienEyesThree
   bodyPart: Eyes
   # markingCategory: Face # Aurora's Song
-  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Allulalo.
+  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo, Thaven ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Allulalo, added Thaven
   invertGroupWhitelist: true # Aurora's Song - invertSpeciesRestriction>invertGroupWhitelist
   coloring:
     default:
@@ -82,7 +82,7 @@
   id: AlienEyesWide
   bodyPart: Eyes
   # markingCategory: Face # Aurora's Song
-  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo, Decapoid ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Allulalo and Decapoid.
+  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo, Decapoid, Thaven ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Allulalo and Decapoid, added Thaven
   invertGroupWhitelist: true # Aurora's Song - invertSpeciesRestriction>invertGroupWhitelist
   coloring:
     default:

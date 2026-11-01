@@ -19,21 +19,6 @@
 
 - type: marking
   abstract: true
-  id: BaseEyes
-  bodyPart: Eyes
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-          negative: true
-
-- type: marking
-  abstract: true
-  id: BaseChest
-  bodyPart: Chest
-
-- type: marking
-  abstract: true
   id: BaseHead
   bodyPart: Head
 
@@ -49,13 +34,73 @@
 
 - type: marking
   abstract: true
+  id: BaseEyes
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: true
+
+- type: marking
+  abstract: true
   id: BaseSnout
   bodyPart: Snout
 
 - type: marking
   abstract: true
+  id: BaseChest
+  bodyPart: Chest
+
+- type: marking
+  abstract: true
+  id: BaseRightArm
+  bodyPart: RArm
+
+- type: marking
+  abstract: true
+  id: BaseRightHand
+  bodyPart: RHand
+
+- type: marking
+  abstract: true
+  id: BaseLeftArm
+  bodyPart: LArm
+
+- type: marking
+  abstract: true
+  id: BaseLeftHand
+  bodyPart: LHand
+
+- type: marking
+  abstract: true
+  id: BaseRightLeg
+  bodyPart: RLeg
+
+- type: marking
+  abstract: true
+  id: BaseRightFoot
+  bodyPart: RFoot
+
+- type: marking
+  abstract: true
+  id: BaseLeftLeg
+  bodyPart: LLeg
+
+- type: marking
+  abstract: true
+  id: BaseLeftFoot
+  bodyPart: LFoot
+
+- type: marking
+  abstract: true
   id: BaseTail
   bodyPart: Tail
+
+- type: marking
+  abstract: true
+  id: BaseTailOverlay
+  bodyPart: TailOverlay
 
 # Cyberlimbs
 ## (These are basic IPC parts, but they're also prosthetic markings for other species.)
