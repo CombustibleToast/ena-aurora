@@ -80,10 +80,10 @@ public abstract partial class SharedTypingIndicatorSystem : EntitySystem
             return;
         }
 
-        if(ev.State != TypingIndicatorState.Idle) // DeltaV - don't remove override when transitioning to idle
+        if(ev.IsTyping == true) // Aurora's Song - convert DV conditional to use IsTyping. Merge conflict bait I fear
             SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
 
-        SetTypingIndicatorState(uid.Value, ev.State);
+        SetTypingIndicatorEnabled(uid.Value, ev.IsTyping);
     }
 
     private void SetTypingIndicatorState(EntityUid uid, TypingIndicatorState state, AppearanceComponent? appearance = null)
