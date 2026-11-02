@@ -26,6 +26,8 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
         switch (channel)
         {
             case ChatSelectChannel.Whisper:
+            case ChatSelectChannel.Subtle: // Aurora's Song
+            case ChatSelectChannel.SubtleOOC: // Aurora's Song
                 _typingIndicator?.ClientAlternateTyping(WhisperID);
                 break;
 
