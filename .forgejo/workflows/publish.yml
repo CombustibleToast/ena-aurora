@@ -42,7 +42,7 @@ jobs:
         git fetch --depth=1
 
     - name: Save old changelog
-      run: cp Resources/Changelog/Aurora.yml Resources/Changelog/Old.yml
+      run: cp Resources/Changelog/Aurora.yml Old.yml
 
     - name: Update changelog
       run: | # Aurora's Song - Use AS version until upstream updates theirs
@@ -101,6 +101,9 @@ jobs:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         # GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }} # Aurora's Song
 
+    - name: Move changelog for Discord publish
+      run: mv Old.yml Resources/Changelog/Old.yml
+    
     - name: Publish changelog (Discord)
       run: Tools/actions_changelogs_since_last_run.py
       env:
