@@ -5,7 +5,7 @@
         "y": 32
     },
     "license": "CC-BY-SA-3.0",
-    "copyright": "Felinid sprites made by Adrian16199 (Github), Rodentia sprites made by portfiend, Feroxi sprites made by BlitzTheSquishy, AAC sprites by _.requiem._ (Discord). Thaven sprites made by kushbreth, thaven3 based on thaven sprites made by combustibletoast (github) for Impstation.",
+    "copyright": "Felinid sprites made by Adrian16199 (Github), Rodentia sprites made by portfiend, Feroxi sprites made by BlitzTheSquishy, AAC sprites by _.requiem._ (Discord). (aac3) by little_meow_meow for starcup. Thaven sprites made by kushbreth, thaven3 based on thaven sprites made by combustibletoast (github) for Impstation.",
     "states": [
         {
             "name": "aac0",
@@ -15,6 +15,19 @@
                     0.3,
                     0.3,
                     0.5
+                ]
+            ]
+        },
+        {
+            "name": "aac3",
+            "delays": [
+                [
+                    0.1,
+                    0.1,
+                    0.2,
+                    0.3,
+                    0.3,
+                    0.4
                 ]
             ]
         },

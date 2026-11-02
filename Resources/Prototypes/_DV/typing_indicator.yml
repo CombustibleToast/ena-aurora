@@ -37,7 +37,7 @@
   id: aac
   spritePath: /Textures/_DV/Effects/speech.rsi
   typingState: aac0
-  idleState: aac0
+  idleState: aac3 # starcup
   offset: -0.05, 0.1
 
 - type: typingIndicator
