@@ -5,7 +5,7 @@
   abstract: true
   components:
   - type: Transform
-    noRot: true
+    noRot: false
   - type: Sprite
     sprite: _AS/Structures/Decoration/digital_sign.rsi
     snapCardinals: false
