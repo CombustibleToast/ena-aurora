@@ -93,5 +93,7 @@ namespace Content.Shared.Verbs
             new("verb-categories-pen", "/Textures/Interface/pencil.png"); // Frontier
 
         public static readonly VerbCategory Interaction = new("verb-categories-interaction", null);
+
+        public static readonly VerbCategory ToggleChannel = new("Toggle Channels", null); // Aurora's Song - Channel toggling
     }
 }

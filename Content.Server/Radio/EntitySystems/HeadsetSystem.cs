@@ -51,7 +51,8 @@ public sealed partial class HeadsetSystem : SharedHeadsetSystem
             && keys.Channels.Contains(args.Channel.ID))
         {
             //RMC14
-            if (keys.ReadOnlyChannels.Contains(args.Channel.ID))
+            if (keys.ReadOnlyChannels.Contains(args.Channel.ID) ||
+                keys.DisabledChannels.Contains(args.Channel.ID)) // Aurora's Song - Check for disabled channel too
             {
                 _popup.PopupEntity("You hear a crackle as if nothing goes through", uid, uid); // Aurora's Song - Use popup entity here
                 args.Channel = null;
@@ -111,6 +112,12 @@ public sealed partial class HeadsetSystem : SharedHeadsetSystem
         // to have an ActiveRadioComponent
 
         var parent = Transform(uid).ParentUid;
+
+        // Aurora's Song Start - Channel toggling
+        if (TryComp(uid, out EncryptionKeyHolderComponent? keys) &&
+            keys.DisabledChannels.Contains(args.Channel))
+            return;
+        // Aurora's Song End
 
         if (parent.IsValid())
         {

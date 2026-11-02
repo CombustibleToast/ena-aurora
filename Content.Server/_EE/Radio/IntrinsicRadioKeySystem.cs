@@ -16,22 +16,25 @@ public sealed class IntrinsicRadioKeySystem : EntitySystem
 
     private void OnTransmitterChannelsChanged(EntityUid uid, IntrinsicRadioTransmitterComponent component, EncryptionChannelsChangedEvent args)
     {
-        UpdateChannels(uid, args.Component, ref component.Channels, ref component.ReadOnlyChannels); // Aurora's Song
+        // Aurora's Song Start - Intrinsic readonly channels
+        component.ReadOnlyChannels.Clear();
+        component.ReadOnlyChannels.UnionWith(args.Component.ReadOnlyChannels);
+        // Aurora's Song End
+        UpdateChannels(uid, args.Component, ref component.Channels);
     }
 
     private void OnReceiverChannelsChanged(EntityUid uid, ActiveRadioComponent component, EncryptionChannelsChangedEvent args)
     {
-        HashSet<ProtoId<RadioChannelPrototype>> doNothing = []; // Aurora's Song - I HAVE to do this
-        UpdateChannels(uid, args.Component, ref component.Channels, ref doNothing); // Aurora's Song
+        // Aurora's Song Start - Intrinsic disabled channels
+        component.DisabledChannels.Clear();
+        component.DisabledChannels.UnionWith(args.Component.DisabledChannels);
+        // Aurora's Song End
+        UpdateChannels(uid, args.Component, ref component.Channels);
     }
 
-    private void UpdateChannels(EntityUid _, EncryptionKeyHolderComponent keyHolderComp, ref HashSet<ProtoId<RadioChannelPrototype>> channels, ref HashSet<ProtoId<RadioChannelPrototype>> readonlyChannels) // Aurora's Song
+    private void UpdateChannels(EntityUid _, EncryptionKeyHolderComponent keyHolderComp, ref HashSet<ProtoId<RadioChannelPrototype>> channels)
     {
         channels.Clear();
         channels.UnionWith(keyHolderComp.Channels);
-        // Aurora's Song Start
-        readonlyChannels.Clear();
-        readonlyChannels.UnionWith(keyHolderComp.ReadOnlyChannels);
-        // Aurora's Song End
     }
 }

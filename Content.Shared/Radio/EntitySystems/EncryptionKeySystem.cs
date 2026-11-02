@@ -197,7 +197,8 @@ public sealed partial class EncryptionKeySystem : EntitySystem
                     args,
                     _protoManager,
                     "examine-encryption-channel",
-                    component.ReadOnlyChannels); //RMC14
+                    component.ReadOnlyChannels, //RMC14
+                    component.DisabledChannels); // Aurora's Song - Toggleable channels
             }
         }
     }
@@ -210,7 +211,7 @@ public sealed partial class EncryptionKeySystem : EntitySystem
         if(component.Channels.Count > 0)
         {
             args.PushMarkup(Loc.GetString("examine-encryption-channels-prefix"));
-            AddChannelsExamine(component.Channels, component.DefaultChannel, args, _protoManager, "examine-encryption-channel", component.ReadOnlyChannels); //RMC14
+            AddChannelsExamine(component.Channels, component.DefaultChannel, args, _protoManager, "examine-encryption-channel", component.ReadOnlyChannels, null); //RMC14 // Aurora's Song - Add null
         }
     }
 
@@ -220,7 +221,7 @@ public sealed partial class EncryptionKeySystem : EntitySystem
     /// <param name="channels">HashSet of channels in headset, encryptionkey or etc.</param>
     /// <param name="protoManager">IPrototypeManager for getting prototypes of channels with their variables.</param>
     /// <param name="channelFTLPattern">String that provide id of pattern in .ftl files to format channel with variables of it.</param>
-    public void AddChannelsExamine(HashSet<ProtoId<RadioChannelPrototype>> channels, string? defaultChannel, ExaminedEvent examineEvent, IPrototypeManager protoManager, string channelFTLPattern, HashSet<ProtoId<RadioChannelPrototype>>? ReadonlyChannels) //RMC14
+    public void AddChannelsExamine(HashSet<ProtoId<RadioChannelPrototype>> channels, string? defaultChannel, ExaminedEvent examineEvent, IPrototypeManager protoManager, string channelFTLPattern, HashSet<ProtoId<RadioChannelPrototype>>? ReadonlyChannels, HashSet<ProtoId<RadioChannelPrototype>>? disabledChannels) //RMC14 - Readonly channels // Aurora's Song - Disabled channels
     {
         RadioChannelPrototype? proto;
         foreach (var id in channels)
@@ -234,13 +235,19 @@ public sealed partial class EncryptionKeySystem : EntitySystem
             //RMC14
             var readOnlyMarkup = "";
             if (ReadonlyChannels != null && ReadonlyChannels.Contains(id))
-                readOnlyMarkup = " Read Only";
+                readOnlyMarkup = $" ({Loc.GetString("encryption-keys-examine-readonly")})"; // Aurora's Song - " Read Only">" (Loc)"
+
+            // Aurora's Song Start
+            var disabledMarkup = "";
+            if (disabledChannels != null && disabledChannels.Contains(id))
+                disabledMarkup = $" ({Loc.GetString("encryption-keys-examine-disabled")})";
+            // Aurora's Song End
 
             examineEvent.PushMarkup(Loc.GetString(channelFTLPattern,
                 ("color", proto.Color),
                 ("key", key),
                 ("id", proto.LocalizedName),
-                ("freq", proto.Frequency / 10f)) + $"{readOnlyMarkup}"); //RMC14
+                ("freq", proto.Frequency / 10f)) + readOnlyMarkup + disabledMarkup); //RMC14 // Aurora's Song - Cleanup RMC code and add disabledMarkup
         }
 
         if (defaultChannel != null && _protoManager.TryIndex(defaultChannel, out proto))

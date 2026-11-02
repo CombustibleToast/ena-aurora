@@ -49,7 +49,8 @@ public sealed partial class RadioSystem : EntitySystem
         if (args.Channel != null && component.Channels.Contains(args.Channel.ID))
         {
             // Aurora's Song Start - Readonly intrinsic channels
-            if (component.ReadOnlyChannels.Contains(args.Channel.ID))
+            if (component.ReadOnlyChannels.Contains(args.Channel.ID) ||
+                TryComp<ActiveRadioComponent>(uid, out var active) && active.DisabledChannels.Contains(args.Channel.ID))
             {
                 _popup.PopupEntity("You hear a crackle as if nothing goes through", uid, uid);
                 args.Channel = null;
@@ -167,7 +168,8 @@ public sealed partial class RadioSystem : EntitySystem
             if (!radio.ReceiveAllChannels)
             {
                 if (!radio.Channels.Contains(channel.ID) || (TryComp<IntercomComponent>(receiver, out var intercom) &&
-                                                             !intercom.SupportedChannels.Contains(channel.ID)))
+                                                             !intercom.SupportedChannels.Contains(channel.ID)) ||
+                    radio.DisabledChannels.Contains(channel.ID)) // Aurora's Song - Ignore disabled channels
                     continue;
             }
 
