@@ -1,69 +1,5 @@
 AdminOnly: false
 Entries:
-- author: BudaLope
-  changes:
-  - message: Fixed nanochat notifications
-    type: Fix
-  id: 9126
-  time: '2026-04-18T09:37:57.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/957
-- author: Phoenix51505
-  changes:
-  - message: Added a toggle to the SCU Output Terminal to enable or disable SLE events
-    type: Add
-  id: 9127
-  time: '2026-04-20T05:18:28.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/961
-- author: sev7ves
-  changes:
-  - message: The energy to air machine in Damascus has been re-calibrated to output respiron.
-    type: Tweak
-  id: 9128
-  time: '2026-04-20T05:19:20.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/959
-- author: sev7ves
-  changes:
-  - message: Notifier should only show for those who have it enabled now. Also minor grammar fixes.
-    type: Fix
-  id: 9129
-  time: '2026-04-20T05:20:04.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/958
-- author: Zenixic
-  changes:
-  - message: Added a Service techfab and chain shutters to the Port Boreal kitchen.
-    type: Add
-  - message: Added a bunch of beacons and signs to Port Boreal.
-    type: Add
-  - message: Added a stack of cloth and durathread near the staff uniform printer on Port Boreal
-    type: Add
-  - message: Added a drain to chemistry on Port Boreal.
-    type: Add
-  - message: Added a chemical locker to chemistry on Port Boreal
-    type: Add
-  - message: Painted dock numbers onto the Port Boreal docking arms.
-    type: Add
-  - message: Removed a few lights from Port Boreal.
-    type: Remove
-  - message: Service locked the Port Boreal freezer.
-    type: Tweak
-  - message: More dirt has appeared on Port Boreal.
-    type: Tweak
-  - message: Replaced most railings on Port Boreal with newer variants.
-    type: Tweak
-  - message: Replaced the christmas tree with a normal one. Christmas is finally over.
-    type: Tweak
-  - message: Replaced the CentComm bedsheet in the CR's quarters for the HoP's Bedsheet. (For now)
-    type: Tweak
-  id: 9130
-  time: '2026-04-20T08:57:06.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/960
-- author: Oberonics
-  changes:
-  - message: Your character should (HOPEFULLY) no longer get deleted by a ESS failure and instead get throw into the depths of space if all else fails.
-    type: Fix
-  id: 9131
-  time: '2026-04-21T05:00:49.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/966
 - author: AvianMaiden
   changes:
   - message: Gas tanks worn on armor are now a little more fashionable and strapless!
@@ -3936,3 +3872,53 @@ Entries:
   id: 9901
   time: '2026-10-31T07:41:49.0384589+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1716
+- author: TrixxedHeart
+  changes:
+  - message: Added particles for cold breath when exhaling in a cold environment
+    type: Add
+  id: 9902
+  time: '2026-11-02T09:21:15.2643488+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1625
+- author: RobotFox
+  changes:
+  - message: Added ability to disable certain channels on headsets and IPCs
+    type: Add
+  id: 9903
+  time: '2026-11-02T09:21:15.2665873+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1724
+- author: Ratkona
+  changes:
+  - message: Added reactions tab to the chemical section of the guidebook
+    type: Add
+  id: 9904
+  time: '2026-11-02T09:21:15.2667412+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1642
+- author: Sere
+  changes:
+  - message: Added IMP's scar and prosthetic markings to Thaven.
+    type: Add
+  - message: Removed the defunct Earrings from Thaven's HeadSide.
+    type: Fix
+  - message: Removed default alien eye versions from Thaven's eye markings.
+    type: Fix
+  - message: Sharkminnow Eyeliner now properly changes color.
+    type: Fix
+  - message: Swapped the names for Thaven's Hoop and Helix piercings to better reflect their sprites.
+    type: Fix
+  id: 9905
+  time: '2026-11-02T09:21:15.2668470+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1726
+- author: Thlrds, Sere
+  changes:
+  - message: IPC eel tails and fin markings no longer have missing pixel gaps.
+    type: Fix
+  id: 9906
+  time: '2026-11-02T09:21:15.2668609+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1679
+- author: heirdragonair
+  changes:
+  - message: vulpkanin using the vulpine marking have chins again.
+    type: Tweak
+  id: 9907
+  time: '2026-11-02T09:21:15.2668802+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1720
