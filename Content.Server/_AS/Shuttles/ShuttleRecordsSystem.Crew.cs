@@ -75,6 +75,10 @@ public sealed partial class ShuttleRecordsSystem
         if (args.Handled || !args.CanReach)
             return;
 
+        // Shuttle crew registration only applies when this console's grid has a shuttle record.
+        if (!TryGetConsoleShuttleRecord(consoleUid, out var shuttleRecord))
+            return;
+
         var hasKeyStorage = TryComp(idUid, out StationRecordKeyStorageComponent? keyStorage);
         var hasIdCard = TryComp(idUid, out IdCardComponent? idCard);
         if (!hasKeyStorage && !hasIdCard)
@@ -88,21 +92,6 @@ public sealed partial class ShuttleRecordsSystem
             return;
         }
 
-        if (Transform(consoleUid).GridUid is not { } shuttleGrid || !TryGetShuttleRecordsDataComponent(out var records))
-        {
-            _popup.PopupEntity(Loc.GetString("general-station-record-console-shuttle-crew-no-station"), consoleUid, args.User);
-            PlayCrewRecordsSound(consoleUid, false);
-            return;
-        }
-
-        var shuttleNet = GetNetEntity(shuttleGrid);
-        var shuttleRecord = records.ShuttleRecords.Values.FirstOrDefault(record => record.EntityUid == shuttleNet);
-        if (shuttleRecord == null)
-        {
-            _popup.PopupEntity(Loc.GetString("general-station-record-console-shuttle-crew-no-station"), consoleUid, args.User);
-            PlayCrewRecordsSound(consoleUid, false);
-            return;
-        }
         var owningStation = _station.GetOwningStation(consoleUid);
         if (owningStation is not { } stationUid)
         {

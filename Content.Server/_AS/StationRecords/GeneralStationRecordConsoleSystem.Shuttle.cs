@@ -77,18 +77,6 @@ public sealed partial class GeneralStationRecordConsoleSystem
             _crewStateHashes.Remove(ent.Owner);
     }
 
-    private void OnAddShuttleNote(Entity<GeneralStationRecordConsoleComponent> ent, ref AddShuttleRecordNote args)
-    {
-        if (_shuttleRecords.TryAddShuttleNote(ent.Owner, args.Actor, args.TargetProfileId, args.Title, args.Description))
-            UpdateUserInterface(ent);
-    }
-
-    private void OnDeleteShuttleNote(Entity<GeneralStationRecordConsoleComponent> ent, ref DeleteShuttleRecordNote args)
-    {
-        if (_shuttleRecords.TryDeleteShuttleNote(ent.Owner, args.Actor, args.Id))
-            UpdateUserInterface(ent);
-    }
-
     private void OnUpdateShuttleCrew(Entity<GeneralStationRecordConsoleComponent> ent, ref UpdateShuttleCrewRecord args)
     {
         if (_shuttleRecords.TryUpdateCrewRecord(ent.Owner, args.Actor, args.StationRecordId, args.Minutes))
@@ -109,21 +97,26 @@ public sealed partial class GeneralStationRecordConsoleSystem
 
     private void SetStationRecordsUiState(EntityUid uid, GeneralStationRecordConsoleState state)
     {
-        state.ShuttleNotes = _shuttleRecords.GetShuttleNoteViews(uid, null);
         state.ShuttleCrew = _shuttleRecords.GetShuttleCrewViews(uid, false);
+        state.ShuttleNotes = state.ShuttleCrew != null
+            ? _shuttleRecords.GetShuttleNoteViews(uid, null)
+            : GetStationNoteViews(uid);
         state.ShuttleOwnerStationRecordId = state.ShuttleCrew?.FirstOrDefault(member => member.IsShuttleOwner)?.StationRecordId;
-        state.CanCreateShuttleNotes = state.ShuttleCrew != null;
+        state.CanCreateShuttleNotes = state.ShuttleCrew != null || _station.GetOwningStation(uid) is { } station && HasComp<StationRecordsComponent>(station);
         _ui.SetUiState(uid, GeneralStationRecordConsoleKey.Key, state);
 
         foreach (var actor in _ui.GetActors(uid, GeneralStationRecordConsoleKey.Key))
         {
             var profileId = _shuttleRecords.GetUserProfileId(actor);
             var canManage = _shuttleRecords.IsRegisteredShuttleOwner(uid, actor);
-            var deletableNotes = _shuttleRecords.GetDeletableShuttleNoteIds(uid, profileId);
+            var deletableNotes = state.ShuttleCrew != null
+                ? _shuttleRecords.GetDeletableShuttleNoteIds(uid, profileId)
+                : GetDeletableStationNoteIds(uid, profileId);
             _ui.ServerSendUiMessage(uid,
                 GeneralStationRecordConsoleKey.Key,
                 new ShuttleRecordViewerPermissions(canManage, deletableNotes),
                 actor);
         }
     }
+
 }

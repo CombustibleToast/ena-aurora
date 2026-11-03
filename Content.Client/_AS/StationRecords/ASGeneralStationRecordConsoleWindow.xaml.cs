@@ -25,12 +25,13 @@ public sealed partial class ASGeneralStationRecordConsoleWindow : DefaultWindow
     public Action<uint>? OnDeleted;
 
     public event Action<int, string, string>? OnShuttleNoteAdded;
-    public event Action<int>? OnShuttleNoteDeleted;
+    public event Action<int, int>? OnShuttleNoteDeleted;
     public event Action<uint, int>? OnShuttleCrewUpdated;
     public event Action<uint>? OnShuttleCrewRestored;
     public event Action<uint, string>? OnShuttleCrewArchived; // Owner archive reason
     private bool _isPopulating;
     private ShuttleCrewRecordView? _selectedCrew;
+    private int? _selectedProfileId;
     private List<ShuttleRecordNoteView>? _shuttleNotes;
     private bool _canCreateShuttleNotes;
     private int? _viewingArchivedProfile;
@@ -51,6 +52,8 @@ public sealed partial class ASGeneralStationRecordConsoleWindow : DefaultWindow
         RecordsTabs.SetTabTitle(1, Loc.GetString("general-station-record-console-tab-applicants"));
         CrewTabs.SetTabTitle(0, Loc.GetString("general-station-record-console-crew-tab-active"));
         CrewTabs.SetTabTitle(1, Loc.GetString("general-station-record-console-crew-tab-archived"));
+        CrewTabs.TabsVisible = false;
+        CrewTabs.SetTabVisible(1, false);
         NewShuttleNoteButton.OnPressed += _ => OpenNewNoteDialog();
         InitializeApplicantsPanel();
 
@@ -189,7 +192,7 @@ public sealed partial class ASGeneralStationRecordConsoleWindow : DefaultWindow
             PopulateShuttleNotes(null);
         }
     }
-    
+
     /// Applies permissions sent specifically for this viewer, separate from the console's shared UI state.
     public void ApplyViewerPermissions(ShuttleRecordViewerPermissions permissions)
     {
@@ -237,7 +240,8 @@ public sealed partial class ASGeneralStationRecordConsoleWindow : DefaultWindow
         newRecord.OnCrewUpdated = OnShuttleCrewUpdated;
         newRecord.OnCrewRestored = OnShuttleCrewRestored;
         _selectedCrew = crew;
-        PopulateShuttleNotes(crew?.ProfileId);
+        _selectedProfileId = crew?.ProfileId ?? record.ProfileId;
+        PopulateShuttleNotes(_selectedProfileId);
         AttachRecordView(newRecord);
     }
 

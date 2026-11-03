@@ -168,7 +168,7 @@ public sealed partial class GeneralStationRecordConsoleSystem : EntitySystem
                 SetStationRecordsUiState(uid, consoleState); // Aurora's Song: Add shuttle state under _AS.
                 return;
             default:
-                if (console.ActiveKey == null)
+                if (console.ActiveKey == null || !listing.ContainsKey(console.ActiveKey.Value)) // Aurora's Song
                     console.ActiveKey = listing.Keys.First();
                 break;
         }

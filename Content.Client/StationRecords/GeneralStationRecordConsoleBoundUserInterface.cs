@@ -32,7 +32,7 @@ public sealed class GeneralStationRecordConsoleBoundUserInterface : BoundUserInt
         _window.OnAdvertisementChanged += OnAdvertisementChanged; // Frontier: job modification buttons
         // Aurora's Song Start: Shuttle crew records messages.
         _window.OnShuttleNoteAdded += (profileId, title, description) => SendMessage(new AddShuttleRecordNote(profileId, title, description));
-        _window.OnShuttleNoteDeleted += id => SendMessage(new DeleteShuttleRecordNote(id));
+        _window.OnShuttleNoteDeleted += (profileId, id) => SendMessage(new DeleteShuttleRecordNote(profileId, id));
         _window.OnShuttleCrewUpdated += (id, minutes) => SendMessage(new UpdateShuttleCrewRecord(id, minutes));
         _window.OnShuttleCrewRestored += id => SendMessage(new RestoreShuttleCrewRecord(id));
         _window.OnShuttleCrewArchived += (id, reason) => SendMessage(new ArchiveShuttleCrewRecord(id, reason));

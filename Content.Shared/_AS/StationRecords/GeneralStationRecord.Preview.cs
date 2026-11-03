@@ -22,4 +22,5 @@ public sealed partial record GeneralStationRecord
 
     [DataField]
     public RoleLoadout? SelectedLoadout;
+
 }

@@ -85,8 +85,9 @@ public sealed class AddShuttleRecordNote(int targetProfileId, string title, stri
 }
 
 [Serializable, NetSerializable]
-public sealed class DeleteShuttleRecordNote(int id) : BoundUserInterfaceMessage
+public sealed class DeleteShuttleRecordNote(int targetProfileId, int id) : BoundUserInterfaceMessage
 {
+    public int TargetProfileId { get; set; } = targetProfileId;
     public int Id { get; set; } = id;
 }
 
