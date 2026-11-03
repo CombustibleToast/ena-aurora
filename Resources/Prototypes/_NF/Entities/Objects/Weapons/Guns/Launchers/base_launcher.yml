@@ -132,6 +132,7 @@
         ents: []
   - type: BreechLoaded
     needOpenClose: false
+    ready: true
     openSound:
       path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_open_chamber.ogg"
     closeSound:
