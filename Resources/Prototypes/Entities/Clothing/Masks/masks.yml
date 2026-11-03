@@ -655,9 +655,10 @@
   description: Stylish neck gaiter for your neck, can protect from the cosmic wind?...
   components:
   - type: Sprite
-    sprite: Clothing/Mask/neckgaiter.rsi
+    sprite: _AS/Clothing/Mask/neckgaiter.rsi # Aurora's Song - Neck Gaiters Go In Neck
   - type: Clothing
-    sprite: Clothing/Mask/neckgaiter.rsi
+    sprite: _AS/Clothing/Mask/neckgaiter.rsi # Aurora's Song - Neck Gaiters Go In Neck
+    slots: [ mask, neck] # Aurora's Song - Neck Gaiters Go In Neck
   - type: IdentityBlocker
     coverage: MOUTH
   - type: Tag
@@ -671,9 +672,9 @@
   name: red neck gaiter
   components:
   - type: Sprite
-    sprite: Clothing/Mask/neckgaiterred.rsi
+    sprite:  _AS/Clothing/Mask/neckgaiterred.rsi # Aurora's Song - Neck Gaiters Go In Neck
   - type: Clothing
-    sprite: Clothing/Mask/neckgaiterred.rsi
+    sprite: _AS/Clothing/Mask/neckgaiterred.rsi # Aurora's Song - Neck Gaiters Go In Neck
 
 - type: entity
   parent: ClothingMaskClownBase
