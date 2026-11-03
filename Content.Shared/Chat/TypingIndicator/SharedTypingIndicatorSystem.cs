@@ -80,12 +80,10 @@ public abstract partial class SharedTypingIndicatorSystem : EntitySystem
             return;
         }
 
-        // Aurora's Song - When this inevitably needs to be updated when somebody decides to make idle states work
-        // again, change this to the version in https://github.com/new-frontiers-14/frontier-station-14/pull/4347/
-        if(ev.IsTyping == true) // Aurora's Song - convert DV conditional to use IsTyping. Merge conflict bait I fear
+        if(ev.State != TypingIndicatorState.Idle) // DeltaV - don't remove override when transitioning to idle
             SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
 
-        SetTypingIndicatorEnabled(uid.Value, ev.IsTyping);
+        SetTypingIndicatorState(uid.Value, ev.State);
     }
 
     private void SetTypingIndicatorState(EntityUid uid, TypingIndicatorState state, AppearanceComponent? appearance = null)

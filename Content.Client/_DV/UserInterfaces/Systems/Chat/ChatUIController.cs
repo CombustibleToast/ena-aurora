@@ -28,20 +28,20 @@ public sealed partial class ChatUIController : IOnSystemChanged<CharacterInfoSys
             case ChatSelectChannel.Whisper:
             case ChatSelectChannel.Subtle: // Aurora's Song
             case ChatSelectChannel.SubtleOOC: // Aurora's Song
-                _typingIndicator?.ClientAlternateTyping(WhisperID);
+                _typingIndicator?.ClientAlternateTyping(TypingIndicatorState.Typing, WhisperID); // Aurora's Song - feed state for starcup changes
                 break;
 
             case ChatSelectChannel.Radio:
-                _typingIndicator?.ClientAlternateTyping(RadioID);
+                _typingIndicator?.ClientAlternateTyping(TypingIndicatorState.Typing, RadioID); // Aurora's Song - feed state for starcup changes
                 break;
 
             case ChatSelectChannel.Emotes:
-                _typingIndicator?.ClientAlternateTyping(EmoteID);
+                _typingIndicator?.ClientAlternateTyping(TypingIndicatorState.Typing, EmoteID); // Aurora's Song - feed state for starcup changes
                 break;
 
             case ChatSelectChannel.LOOC:
             case ChatSelectChannel.OOC:
-                _typingIndicator?.ClientAlternateTyping(OocID);
+                _typingIndicator?.ClientAlternateTyping(TypingIndicatorState.Typing, OocID); // Aurora's Song - feed state for starcup changes
                 break;
 
             default:
