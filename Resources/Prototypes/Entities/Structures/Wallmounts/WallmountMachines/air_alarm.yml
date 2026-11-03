@@ -61,8 +61,9 @@
   - type: Wires
     boardName: wires-board-name-airalarm
     layoutId: AirAlarm
-  - type: AccessReader
-    access: [["Atmospherics"], ["Captain"]] # Frontier: allowed ["Captain"] to access air alarms
+  # Aurora's Song - Disable access on air-alarms
+  # - type: AccessReader
+  #   access: [ [ "Atmospherics" ] ],
   - type: ContainerFill
     containers:
       board: [ AirAlarmElectronics ]

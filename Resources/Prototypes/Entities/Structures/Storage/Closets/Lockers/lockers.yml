@@ -70,8 +70,8 @@
     stateBaseClosed: cap
     stateDoorOpen: cap_open
     stateDoorClosed: cap_door
-  - type: AccessReader
-    access: [["Captain"]]
+  # - type: AccessReader # Aurora's Song: Un-Captains ship owners
+  #  access: [["Captain"]]
 
 - type: entity
   id: LockerHeadOfPersonnel

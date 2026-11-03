@@ -25,7 +25,7 @@
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
     shipyardChannel: Sle
-    newAccessLevels: [Captain, Security, Brig]
+    newAccessLevels: [Security, Brig] # Aurora's Song: Un-Captains ship owners
 
 #region Command
 

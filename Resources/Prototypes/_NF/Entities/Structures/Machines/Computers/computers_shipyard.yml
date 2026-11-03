@@ -49,7 +49,7 @@
   id: ComputerShipyard
   components:
   - type: ShipyardConsole
-    newJobTitle: job-name-captain
+    # newJobTitle: job-name-captain # Aurora's Song: Un-Captains ship owners
 
 - type: entity
   id: ComputerShipyardSecurity
@@ -76,7 +76,7 @@
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
     shipyardChannel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
-    newAccessLevels: [Captain, Security, Brig]
+    newAccessLevels: [Security, Brig] # Aurora's Song: Un-Captains ship owners
 
 - type: entity
   id: ComputerShipyardNfsd
@@ -103,7 +103,7 @@
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
     shipyardChannel: Sle
-    newAccessLevels: [Captain, Security, Brig]
+    newAccessLevels: [Security, Brig] # Aurora's Song: Un-Captains ship owners
 
 - type: entity
   id: ComputerShipyardSyndicate

@@ -421,19 +421,17 @@ entities:
       parent: 1
     - type: Physics
       bodyType: Static
-- proto: AirlockCaptainLocked
-  entities:
-  - uid: 39
-    components:
-    - type: Transform
-      pos: 1.5,-0.5
-      parent: 1
 - proto: AirlockCommand
   entities:
   - uid: 8
     components:
     - type: Transform
       pos: 0.5,4.5
+      parent: 1
+  - uid: 39
+    components:
+    - type: Transform
+      pos: 1.5,-0.5
       parent: 1
 - proto: AirlockExternalGlass
   entities:

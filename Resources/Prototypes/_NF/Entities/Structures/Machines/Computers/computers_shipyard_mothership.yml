@@ -40,7 +40,7 @@
   - type: ShipyardConsole
     newJobTitle: null
     shipyardChannel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
-    newAccessLevels: [Captain, Security, Brig]
+    newAccessLevels: [Security, Brig] # Aurora's Song: Un-Captains ship owners
   - type: ShipyardListing
     shuttles:
     - Fighter
