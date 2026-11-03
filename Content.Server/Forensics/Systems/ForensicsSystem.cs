@@ -24,6 +24,7 @@ using Robust.Shared.Random;
 using Content.Shared.Verbs;
 using Robust.Shared.Utility;
 using Content.Shared.Hands.Components;
+using Content.Shared._AS.Forensics.Components; // Aurora's Song - Alt Fingerprint Styles
 
 namespace Content.Server.Forensics
 {
@@ -344,6 +345,11 @@ namespace Content.Server.Forensics
                 return;
 
             ent.Comp.DNA = GenerateDNA();
+
+            // Aurora's Song - Alt DNA Styles
+            if (TryComp<DnaFormatComponent>(ent, out var format))
+                ent.Comp.DNA = FormatDna(ent.Comp.DNA, format.Format);
+
             Dirty(ent);
 
             var ev = new GenerateDnaEvent { Owner = ent.Owner, DNA = ent.Comp.DNA };
@@ -356,6 +362,11 @@ namespace Content.Server.Forensics
                 return;
 
             ent.Comp.Fingerprint = GenerateFingerprint();
+
+            // Aurora's Song - Alt Fingerprint Styles
+            if (TryComp<FingerprintFormatComponent>(ent, out var format))
+                ent.Comp.Fingerprint = FormatFingerprint(ent.Comp.Fingerprint, format.Format);
+
             Dirty(ent);
         }
 

@@ -122,4 +122,8 @@
     - type: ToggleBeltLayer # Aurora's Song - Add belt layer toggle
     - type: Carriable # Aurora's Song - Move carriable to species base
     - type: Fingerprint # Aurora's Song - Give IPCs fingerprints
+    - type: FingerprintFormat # Aurora's Song - Give silicon HWID styled fingerprints
+      format: HardwareId
+    - type: DnaFormat # Aurora's Song - Give silicon MAC address styled DNA
+      format: MacAddress
 
