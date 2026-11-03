@@ -157,7 +157,7 @@ public sealed partial class GunExecutionSystem : EntitySystem
             return;
         }
 
-        var damageType = GetExecutionDamageType(takeAmmo.Ammo[0]);
+        var damageType = GetExecutionDamageType(takeAmmo.Ammo[0], out var dealsStaminaDamage);
 
         if (damageType == null &&
             attacker == victim &&
@@ -182,6 +182,9 @@ public sealed partial class GunExecutionSystem : EntitySystem
 
         if (projectile != null)
             _projectiles.ResolveProjectile(projectile.Value, victim, attacker);
+
+        if (dealsStaminaDamage && TryComp<StaminaComponent>(victim, out var stamina))
+            _suicide.ApplyStaminaCritDamage((victim, stamina), source: attacker, with: weapon);
 
         ConsumeExecutionAmmo(ammoEntity, shootable);
 
@@ -258,9 +261,10 @@ public sealed partial class GunExecutionSystem : EntitySystem
     }
 
     private string? GetExecutionDamageType(
-        (EntityUid? Entity, IShootable Shootable) ammo)
+        (EntityUid? Entity, IShootable Shootable) ammo, out bool dealsStaminaDamage)
     {
         var (ammoEntity, shootable) = ammo;
+        dealsStaminaDamage = false;
 
         switch (shootable)
         {
@@ -270,6 +274,9 @@ public sealed partial class GunExecutionSystem : EntitySystem
                 {
                     return null;
                 }
+
+                dealsStaminaDamage = projectilePrototype.TryGetComponent<StaminaDamageOnCollideComponent>(out var staminaDamage, _compFactory) &&
+                                     staminaDamage.Damage > 0f;
 
                 if (!projectilePrototype.TryGetComponent<ProjectileComponent>(out var projectile, _compFactory))
                 {
@@ -281,6 +288,8 @@ public sealed partial class GunExecutionSystem : EntitySystem
 
             case AmmoComponent:
             {
+                dealsStaminaDamage = ammoEntity != null && TryComp<StaminaDamageOnCollideComponent>(ammoEntity.Value, out var staminaDamage) && staminaDamage.Damage > 0f;
+
                 if (ammoEntity == null || !TryComp<ProjectileComponent>(ammoEntity.Value, out var projectile))
                 {
                     return null;
@@ -291,6 +300,8 @@ public sealed partial class GunExecutionSystem : EntitySystem
 
             case HitscanAmmoComponent:
             {
+                dealsStaminaDamage = ammoEntity != null && TryComp<HitscanStaminaDamageComponent>(ammoEntity.Value, out var staminaDamage) && staminaDamage.StaminaDamage > 0f;
+
                 if (ammoEntity == null || !TryComp<HitscanBasicDamageComponent>(ammoEntity.Value, out var hitscanDamage))
                 {
                     return null;
