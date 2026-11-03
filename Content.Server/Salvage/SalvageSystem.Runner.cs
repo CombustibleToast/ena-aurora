@@ -365,7 +365,9 @@ public sealed partial class SalvageSystem
                 comp.Warped = true;
             } // End Aurora's Song
 
-            if (remaining < TimeSpan.Zero)
+            // Aurora's Song - OnFTLStarted cleans up the map after the last shuttle actually leaves.
+            // Do not delete an expired expedition out from under a shuttle that can't FTL yet.
+            if (remaining < TimeSpan.Zero && !HasShuttleOnMap(uid))
                 QueueDel(uid);
         }
 
@@ -567,6 +569,23 @@ public sealed partial class SalvageSystem
         }
         return false;
     }
+
+    // Aurora's Song Start - Fix exped shuttle deletion
+    /// <summary>
+    /// Checks whether any shuttle grid is still present on a map.
+    /// </summary>
+    private bool HasShuttleOnMap(EntityUid mapUid)
+    {
+        var query = EntityQueryEnumerator<ShuttleComponent, TransformComponent>();
+        while (query.MoveNext(out _, out _, out var xform))
+        {
+            if (xform.MapUid == mapUid)
+                return true;
+        }
+
+        return false;
+    }
+    // Aurora's Song End
 
     // Aurora's Song
     /// <summary>
