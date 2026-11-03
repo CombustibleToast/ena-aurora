@@ -730,7 +730,6 @@
     sprite: Objects/Fun/Plushies/ratvar.rsi
     slots:
     - neck
-    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: FoodSequenceElement
     entries:
       CottonBurger: RatvarPlushie
@@ -753,7 +752,6 @@
     sprite: Objects/Fun/Plushies/narsie.rsi
     slots:
     - neck
-    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: FoodSequenceElement
     entries:
       CottonBurger: NarPlushie
@@ -931,7 +929,6 @@
     quickEquip: false
     slots:
     - NECK
-    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: Speech
     speechVerb: Reptilian # for pais (In the secret stash)
   - type: FoodSequenceElement

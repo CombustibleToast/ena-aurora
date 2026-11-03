@@ -72,7 +72,6 @@
     quickEquip: false
     slots:
       - neck
-      - neck2
 
 - type: entity
   name: shoulder-mounted taclight

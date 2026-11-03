@@ -30,6 +30,7 @@
 - type: loadoutGroup
   id: CommissionerNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   loadouts:
   - CommissionerClothingNeckSLEBadgeCommissioner
   - CommissionerClothingNeckMantleCommissioner

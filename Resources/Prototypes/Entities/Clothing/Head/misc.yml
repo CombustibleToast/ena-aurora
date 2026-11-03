@@ -51,7 +51,6 @@
     slots:
     - HEAD
     - neck
-    - NECK2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: Construction
     graph: flowerwreath
     node: flowerwreath

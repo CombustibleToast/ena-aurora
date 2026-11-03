@@ -167,7 +167,8 @@ public abstract partial class SharedStationSpawningSystem : EntitySystem
                 if (!string.IsNullOrEmpty(equipmentStr))
                 {
                     var equipmentEntity = Spawn(equipmentStr, xform.Coordinates);
-                    InventorySystem.TryEquip(entity, equipmentEntity, slot.Name, silent: true, force: true);
+                    var slotName = GetLoadoutSlot(entity, equipmentEntity, slot, slotDefinitions); // Aurora's Song - Use an empty equivalent slot when available
+                    InventorySystem.TryEquip(entity, equipmentEntity, slotName, silent: true, force: true); // Aurora's Song - Use an empty equivalent slot when available
                 }
             }
         }

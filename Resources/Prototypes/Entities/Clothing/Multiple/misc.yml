@@ -16,7 +16,6 @@
     - HEAD
     - EARS
     - NECK
-    - NECK2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: ToggleableVisuals
     spriteLayer: enum.ToggleableVisuals.Layer
     clothingVisuals:

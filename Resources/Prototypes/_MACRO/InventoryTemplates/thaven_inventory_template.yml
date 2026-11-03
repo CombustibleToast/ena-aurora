@@ -35,9 +35,9 @@
       strippingWindowPos: 0,1
       displayName: Neck
       offset: 0, 0.03125 # 1 pixel up
-    - name: neck2 # Aurora's Song - Second neck slot (slotflags edition)
+    - name: neck2 # Aurora's Song - Second neck slot
       slotTexture: neck
-      slotFlags: NECK2 # Aurora's Song - Second neck slot (slotflags edition)
+      slotFlags: NECK # Aurora's Song - Both neck slots accept normal neck items
       uiWindowPos: 2,2
       strippingWindowPos: 2,1
       displayName: Neck 2

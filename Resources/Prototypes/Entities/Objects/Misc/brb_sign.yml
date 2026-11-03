@@ -12,7 +12,6 @@
     quickEquip: false
     slots:
     - Neck
-    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: Item
     storedRotation: -90
   - type: StaticPrice # Frontier

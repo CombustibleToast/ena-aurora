@@ -79,6 +79,7 @@
 - type: loadoutGroup
   id: OffDutyOfficerNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   loadouts: []
   subgroups:
   - MercenaryNeck

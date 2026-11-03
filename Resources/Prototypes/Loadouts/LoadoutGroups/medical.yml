@@ -64,6 +64,7 @@
 - type: loadoutGroup
   id: ChiefMedicalOfficerNeck
   name: loadout-group-chief-medical-officer-neck
+  maxLimit: 2 # Aurora's Song - Two neck slots
   minLimit: 0
   loadouts:
   - ChiefMedicalOfficerCloak

@@ -26,6 +26,7 @@
 - type: loadoutGroup
   id: SergeantNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   hidden: true
   loadouts:
   - SergeantClothingNeckBadgeSergeant

@@ -57,6 +57,9 @@ public abstract partial class ClothingSystem : EntitySystem
             if (slotDef.SlotFlags.HasFlag(SlotFlags.POCKET))
                 continue;
 
+            if (ShouldDeferQuickEquip(toEquipEnt, userEnt, slotDef)) // Aurora's Song - Fill an empty equivalent slot before swapping.
+                continue;
+
             if (!_invSystem.CanEquip(userEnt, toEquipEnt, slotDef.Name, out _, slotDef, userEnt, toEquipEnt))
                 continue;
 

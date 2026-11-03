@@ -66,6 +66,7 @@
 - type: loadoutGroup
   id: ColonialRepresentativeNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   minLimit: 0
   loadouts:
   - ColonialRepresentativeClothingNeckCloakColonialRepresentative
