@@ -91,6 +91,18 @@
           BulletEnergyGunMagnum: { state: mode-lethal } # Firemode Refactor, lethal > BulletEnergyGunMagnum
           NFBulletDisabler: { state: mode-disabler } # Firemode Refactor, disabler > NFBulletDisabler
 
+- type: entity
+  id: ASBaseWeaponEnergyRifleEmp
+  parent: NFBaseWeaponEnergyRifleEmp
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-emp
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
+    proto: HitscanEmp
+    fireCost: 500
 
 # region - battery rifle frames | Aurora Song
 - type: entity
@@ -423,6 +435,12 @@
     sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
   - type: StaticPrice
     price: 10000
+
+- type: entity
+  name: emp emitter # The same as the standard version, except its hitscan and longer range
+  parent: [ASBaseWeaponEnergyRifleEmp, WeaponEmpEmitter]
+  id: ASWeaponEmpEmitter
+  suffix: Aurora's Song
 
 # endregion - battery rifles | Aurora Song
 # region - battery pistols | Aurora Song

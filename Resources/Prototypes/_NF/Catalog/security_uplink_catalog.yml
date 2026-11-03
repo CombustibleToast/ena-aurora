@@ -462,7 +462,7 @@
   id: UplinkSecurityEmitter
   name:  uplink-security-emitter-name
   description: uplink-security-emitter-desc
-  productEntity: WeaponEmpEmitter
+  productEntity: ASWeaponEmpEmitter # Aurora's Song: Use the hitscan version
   icon: { sprite: _NF/Objects/Weapons/Guns/Battery/emp.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 1

@@ -71,7 +71,7 @@
   # Energy Rifles
     NFWeaponEnergyRifleCarbine: 4294967295
     NFWeaponEnergyRiflePulse: 4294967295
-    WeaponEmpEmitter: 4294967295
+    ASWeaponEmpEmitter: 4294967295 # Aurora's Song: Use the Hitscan version
     NFWeaponEnergyRifleCarbinePractice: 4294967295
     NFWeaponEnergyRifleTemperature: 4294967295
   # Energy Assault Rifles
