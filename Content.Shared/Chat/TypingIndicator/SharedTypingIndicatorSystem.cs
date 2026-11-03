@@ -81,7 +81,7 @@ public abstract partial class SharedTypingIndicatorSystem : EntitySystem
         }
 
         SetTypingOverride(uid.Value, ev.OverrideIndicator); // DeltaV
-        SetTypingIndicatorEnabled(uid.Value, ev.IsTyping);
+        SetTypingIndicatorState(uid.Value, ev.State);
     }
 
     private void SetTypingIndicatorState(EntityUid uid, TypingIndicatorState state, AppearanceComponent? appearance = null)
