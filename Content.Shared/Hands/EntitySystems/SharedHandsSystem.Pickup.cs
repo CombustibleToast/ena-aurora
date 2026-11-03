@@ -292,7 +292,8 @@ public abstract partial class SharedHandsSystem
         }
         RaiseLocalEvent(entity, new PickedUpEvent(uid, entity), false); // Frontier
 
-        _interactionSystem.DoContactInteraction(uid, entity); //Possibly fires twice if manually picked up via interacting with the object
+        // Stellar - we need more data in the contact interaction
+        _interactionSystem.DoContactInteraction(uid, entity, null, true); //Possibly fires twice if manually picked up via interacting with the object
 
         if (log)
         {
