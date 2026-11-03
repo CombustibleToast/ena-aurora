@@ -104,6 +104,8 @@
   name: Urist McPositronic
   description: A positronic brain in a metal body.
   components: # Aurora's Song - Components cleaned up for the nubody changes to silicon_base
+  - type: SparksOnDamage # Aurora's Song - IPCs spark on being hit
+    chance: 0.15
   - type: PowerCellSlot
     cellSlotId: cell_slot
     fitsInCharger: true

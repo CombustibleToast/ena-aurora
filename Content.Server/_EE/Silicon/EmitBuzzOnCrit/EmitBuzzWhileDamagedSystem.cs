@@ -1,4 +1,5 @@
 using Content.Server.Popups;
+using Content.Shared._Starfall.Particles.Visuals;
 using Content.Shared._EE.Silicon.EmitBuzzWhileDamaged;
 using Content.Shared.Audio;
 using Content.Shared.Damage;
@@ -53,7 +54,17 @@ public sealed partial class EmitBuzzWhileDamagedSystem : EntitySystem
             // Start buzzing
             emitBuzzOnCritComponent.LastBuzzPopupTime = _gameTiming.CurTime;
             _popupSystem.PopupEntity(Loc.GetString("silicon-behavior-buzz"), uid);
-            Spawn("EffectSparks", Transform(uid).Coordinates);
+            // Aurora's Song - Use particle sparks from the SparkOnDamage system which also acts as an ignition for gas.
+            if (HasComp<SparksOnDamageComponent>(uid))
+            {
+                var ev = new TriggerSparksEvent();
+                RaiseLocalEvent(uid, ref ev);
+            }
+            else
+            {
+                Spawn("EffectSparks", Transform(uid).Coordinates);
+            }
+            // Aurora's Song end
             _audio.PlayPvs(emitBuzzOnCritComponent.Sound, uid, AudioHelpers.WithVariation(0.05f, _robustRandom));
         }
     }

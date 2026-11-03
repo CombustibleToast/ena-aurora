@@ -1,4 +1,4 @@
-using Content.Shared._EE.Silicon.EmitBuzzWhileDamaged;
+using Content.Shared._Starfall.Particles.Visuals;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
 using Content.Shared.Jittering;
@@ -22,7 +22,6 @@ public sealed partial class MigraineSystem : EntitySystem
 {
     // IPCs get a special effect! yay, this doesn't have any other gameplay effect besides the sparking.
     private static readonly ProtoId<SpeciesPrototype> IpcSpecies = "IPC";
-    private static readonly EntProtoId SparkEffect = "EffectSparks";
     private static readonly TimeSpan IpcSparkInterval = TimeSpan.FromSeconds(4);
 
     private static readonly SoundSpecifier MigraineSound = new SoundPathSpecifier("/Audio/_Starfall/Effects/migraine.ogg");
@@ -123,10 +122,7 @@ public sealed partial class MigraineSystem : EntitySystem
 
     private void PlayIpcSparks(EntityUid target)
     {
-        if (!TryComp<EmitBuzzWhileDamagedComponent>(target, out var damaged))
-            return;
-
-        Spawn(SparkEffect, Transform(target).Coordinates);
-        _audio.PlayPvs(damaged.Sound, target, damaged.Sound.Params.WithVariation(0.05f));
+        var ev = new TriggerSparksEvent();
+        RaiseLocalEvent(target, ref ev);
     }
 }
