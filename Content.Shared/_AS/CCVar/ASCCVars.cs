@@ -23,6 +23,12 @@ public sealed class ASCCVars
         CVarDef.Create("accessibility.scopophobia", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
     /// <summary>
+    /// Disables the visual particles shown when entities interact.
+    /// </summary>
+    public static readonly CVarDef<bool> DisableStellarInteractionParticles =
+        CVarDef.Create("accessibility.disable_stellar_interaction_particles", false, CVar.CLIENTONLY | CVar.ARCHIVE);
+
+    /// <summary>
     /// The number of Cargo Depots to spawn in every round
     /// </summary>
     public static readonly CVarDef<int> Motels =

@@ -4,10 +4,12 @@
 // SPDX-License-Identifier: MIT
 
 using System.Numerics;
+using Content.Shared._AS.CCVar; // Aurora's Song
 using Content.Shared._ST.Interaction;
 using Content.Shared.Humanoid; // Aurora's Song
 using Robust.Client.Animations;
 using Robust.Client.GameObjects;
+using Robust.Shared.Configuration; // Aurora's Song
 using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
@@ -19,6 +21,7 @@ public sealed partial class StellarInteractionParticleSystem : EntitySystem
     [Dependency] private IRobustRandom _random = null!;
     [Dependency] private SpriteSystem _sprite = null!;
     [Dependency] private AnimationPlayerSystem _animation = null!;
+    [Dependency] private IConfigurationManager _configuration = null!; // Aurora's Song - Interaction particle toggle
 
     private const string AnimateKey = "particle-animation";
     private const string DefaultHandState = "hand"; // Aurora's Song - Species hand sprites
@@ -34,6 +37,10 @@ public sealed partial class StellarInteractionParticleSystem : EntitySystem
 
     private void OnInteractionParticle(StellarInteractionParticleEvent ev)
     {
+        // Aurora's Song - Interaction particle toggle
+        if (_configuration.GetCVar(ASCCVars.DisableStellarInteractionParticles))
+            return;
+
         var performer = GetEntity(ev.Performer);
         var used = GetEntity(ev.Used);
         var target = GetEntity(ev.Target);

@@ -19,6 +19,7 @@ public sealed partial class AccessibilityTab : Control
         Control.AddOptionCheckBox(CCVars.AccessibilityColorblindFriendly, ColorblindFriendlyCheckBox);
         Control.AddOptionCheckBox(CCVars.ReducedMotion, ReducedMotionCheckBox);
         Control.AddOptionCheckBox(ASCCVars.Scopophobia, ScopophobiaCheckBox); // Aurora's Song
+        Control.AddOptionCheckBox(ASCCVars.DisableStellarInteractionParticles, DisableStellarInteractionParticlesCheckBox); // Aurora's Song
         Control.AddOptionCheckBox(CCVars.DisableAiStatic, DisableAiStaticCheckBox);
         Control.AddOptionPercentSlider(CCVars.ScreenShakeIntensity, ScreenShakeIntensitySlider);
         Control.AddOptionPercentSlider(CCVars.ChatWindowOpacity, ChatWindowOpacitySlider);
