@@ -74,6 +74,15 @@
         whitelist:
           components:
           - RCD
+    # Aurora's Song Start - RSD
+    - item: ASShipyardRSD
+      hand:
+        emptyLabel: borg-placeholder-display-name-rsd
+        emptyRepresentative: ASShipyardRSD
+        whitelist:
+          components:
+          - RCD
+    # Aurora's Song End
     - hand:
         emptyLabel: borg-placeholder-display-name-compressed-matter
         emptyRepresentative: ShipyardRCDAmmo

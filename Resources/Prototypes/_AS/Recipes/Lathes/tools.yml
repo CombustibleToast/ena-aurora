@@ -7,3 +7,12 @@
   applyMaterialDiscount: false
   materials:
     Steel: 50
+
+- type: latheRecipe
+  id: ASShipyardRSD
+  parent: NFBaseToolsRecipe
+  result: ASShipyardRSDEmpty
+  completetime: 4
+  materials:
+    Steel: 1250
+    Plastic: 300

@@ -18,6 +18,7 @@
     ShipyardRCDAmmo: 20 # Frontier
     DoorRemoteShipyard: 5 # Frontier
     AccessConfiguratorCivilian: 5 # Aurora Song: Civilian access configurator.
+    ASShipyardRSD: 10 # Aurora's Song - RSD
   contrabandInventory:
     CowToolboxFilled: 1
     DrinkBeerCan: 3
