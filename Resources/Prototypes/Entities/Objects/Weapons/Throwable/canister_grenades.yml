@@ -126,3 +126,6 @@
     components:
     - type: TriggerOnUse
     - type: TimerTrigger
+  - type: PhysicalComposition #Aurora's Song - Got tired of not being able to scrap them.
+    materialComposition:
+      RawScrap: 50
