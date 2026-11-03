@@ -617,18 +617,6 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
 
-
-
-
-
-
-
-
-
-
-
-
-
 - type: entity
   id: ASMagazineSubMachineGun40Rubber
   name: smg magazine (.40 pistol, rubber)

@@ -112,3 +112,38 @@
     layers:
     - state: crypt_blue
     - state: ship_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyDEBUG
+  name: debug encryption key
+  description: An encryption ke- how did you get this? Contact your nearest admin. Put it in a locked vault in the depths of your mind.
+  suffix: DEBUG, DO NOT MAP
+  categories: [ DoNotMap ]
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Command
+    - Engineering
+    - Medical
+    - Science
+    - Security
+    - Sle
+    - Service
+    - Traffic
+    - Greeting
+    - Shipboard
+    - Bluespace
+    - Syndicate
+    - ColCom
+    - CentCom
+    - Arcadia
+    - Binary
+    - Freelance
+    - Handheld
+    defaultChannel: Command
+  - type: Sprite
+    layers:
+    - state: crypt_gold
+    - state: cap_label

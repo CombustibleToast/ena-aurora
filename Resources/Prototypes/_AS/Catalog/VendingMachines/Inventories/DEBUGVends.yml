@@ -1,0 +1,469 @@
+#region Guns
+- type: vendingMachineInventory
+  id: ASDEBUGVendingMachineInventoryRangedWeapons
+  startingInventory:
+    # Pistols
+    NFWeaponPistolMk58: 4294967295
+    NFWeaponPistolN1984: 4294967295
+    NFWeaponPistolCobra: 4294967295
+    NFWeaponPistolUniversal: 4294967295
+    NFWeaponPistolUniversalNfsd: 4294967295
+    ASWeaponPistolMk58S: 4294967295
+    ASWeaponPistolMk58SLessLethal: 4294967295
+    ASWeaponPistolUniversal: 4294967295
+    ASWeaponPistolUniversalS: 4294967295
+    ASWeaponPistolUniversalSLessLethal: 4294967295
+    ASWeaponPistolHZ-1-3: 4294967295
+    ASTrackingPistol: 4294967295
+    ASWeaponPistolBRDIP15BSO: 4294967295
+    ASWeaponPistolBRDIP15: 4294967295
+    WeaponPistolPsiBreaker: 4294967295
+    # Energy Pistols
+    NFWeaponEnergyPistolLaserSvalinn: 4294967295
+    NFWeaponEnergyPistolLaserMakeshift: 4294967295
+    NFWeaponEnergyPistolLaserAntique: 4294967295
+    NFWeaponEnergyPistolLaserX01Multiphase: 4294967295
+    NFWeaponEnergyPistolLaserAdvanced: 4294967295
+    NFWeaponEnergyPistolLaser: 4294967295
+    NFWeaponEnergyPistolPulse: 4294967295
+    NFWeaponEnergyPistolDisabler: 4294967295
+    NFWeaponEnergyPistolDisablerPractice: 4294967295
+    NFWeaponPistolCHIMP: 4294967295
+    NFWeaponPistolCHIMPUpgraded: 4294967295
+    NFWeaponHoloflareGun: 4294967295
+    ASWeaponBasinLasPistol: 4294967295
+    ASWeaponEG4EnergyMagnum: 4294967295
+    ASWeaponEnergyPistolPulse: 4294967295
+    ASWeaponEnergyCharonMagnum: 4294967295
+    ASWeaponAdvancedHoloflareGun: 4294967295
+    ASWeaponExperimentalHoloflareGun: 4294967295
+    MantisRangedPistol: 4294967295
+    MantisRangedRevolver: 4294967295
+    # Machine Pistols
+    NFWeaponPistolEchis: 4294967295
+    NFWeaponPistolViper: 4294967295
+    NFWeaponPistolPollock: 4294967295
+    NFWeaponPistolPollockHighCapacityMag: 4294967295
+    # Revolvers
+    NFWeaponRevolverInspector: 4294967295
+    NFWeaponRevolverWard45: 4294967295
+    NFWeaponRevolverDeckard: 4294967295
+    NFWeaponRevolverPython45: 4294967295
+    NFWeaponRevolverPirate: 4294967295
+    NFWeaponPistolFlintlock: 4294967295
+    NFWeaponRevolverDeckardExpeditionGrifty: 4294967295
+    NFWeaponRevolverFitz: 4294967295
+    NFWeaponRevolverFaith: 4294967295
+    NFWeaponRevolverLucky: 4294967295
+    NFWeaponRevolverArgenti: 4294967295
+    NFWeaponRevolverArgentiLessLethal: 4294967295
+    WeaponAnaconda: 4294967295
+    # SMGs
+    NFWeaponSubMachineGunAtreides: 4294967295
+    NFWeaponSubMachineGunC20r: 4294967295
+    NFWeaponSubMachineGunDrozd: 4294967295
+    NFWeaponSubMachineGunDrozdLessLethal: 4294967295
+    NFWeaponSubMachineGunWt550: 4294967295
+    NFWeaponSubMachineGunTypewriter: 4294967295
+    ASWeaponSubMachineGunSurpWt550: 4294967295
+    ASWeaponSubMachineGunSurpAtreides: 4294967295
+    ASWeaponSubMachineGunAP4C: 4294967295
+    # Energy SMGs
+    NFWeaponEnergySubMachineGunDeltaV: 4294967295
+    NFWeaponEnergySubMachineGunDisabler: 4294967295
+    WeaponDisablerSMGCyborg: 4294967295
+    MantisRangedSubMachineGun: 4294967295
+    WeaponPulsePDW: 4294967295
+    # Rifles
+    NFWeaponRifleBarlowsBolt: 4294967295
+    NFWeaponRifleBarlowsBoltLessLethal: 4294967295
+    NFWeaponRifleMusket: 4294967295
+    NFWeaponRifleFoam: 4294967295
+    NFWeaponRifleCeremonial: 4294967295
+    NFWeaponRifleRepeater: 4294967295
+    NFWeaponRifleSVS: 4294967295
+    ASWeaponRifleMosinBolt: 4294967295
+    ASWeaponRifleGarandCeremonial: 4294967295
+    # Energy Rifles
+    NFWeaponEnergyRifleCarbine: 4294967295
+    NFWeaponEnergyRifleCarbinePractice: 4294967295
+    NFWeaponEnergyRiflePulse: 4294967295
+    WeaponEmpEmitter: 4294967295
+    NFWeaponParticleDecelerator: 4294967295
+    NFWeaponEnergyRifleTemperature: 4294967295
+    ASWeaponKasyreLasRifle: 4294967295
+    # Assault Rifles
+    NFWeaponRifleAssaultSm: 4294967295
+    NFWeaponRifleAssaultM90: 4294967295
+    NFWeaponRifleAssaultLecter: 4294967295
+    NFWeaponRifleAssaultLecterLessLethal: 4294967295
+    NFWeaponRifleAssaultJackdaw: 4294967295
+    NFWeaponRifleAssaultGestio: 4294967295
+    NFWeaponRifleAssaultNovaliteC1: 4294967295
+    ASWeaponRifleAK: 4294967295
+    ASWeaponRifleAssaultStarTechLDR: 4294967295
+    ASWeaponRifleAssaultStarTechLDRLessLethal: 4294967295
+    ASWeaponRifleAssaultEstoc: 4294967295
+    # Energy Assault Rifles
+    NFWeaponEnergyRifleAssaultPulseCarbine: 4294967295
+    NFWeaponEnergyLightMachineGunTurbo: 4294967295
+    ASWeaponMk1UEPulseRifle: 4294967295
+    # Marksman Rifles
+    ASWeaponRifleMarksmanAF-17M: 4294967295
+    ASWeaponRifleMarksmanAF-17C: 4294967295
+    ASWeaponRifleMarksmanAF-17MOverpressure: 4294967295
+    ASWeaponRifleBasilisk: 4294967295
+    ASWeaponRifleMarksmanVulcan: 4294967295
+    # Sniper Rifles
+    NFWeaponRifleSniperHristov: 4294967295
+    # Energy Sniper Rifles
+    NFWeaponEnergyRifleSniperCannon: 4294967295
+    NFWeaponEnergyRifleSniperXrayCannon: 4294967295
+    WeaponXrayCannonCyborg: 4294967295
+    # Shotguns
+    NFWeaponShotgunBulldog: 4294967295
+    NFWeaponShotgunDoubleBarreled: 4294967295
+    NFWeaponShotgunEnforcer: 4294967295
+    NFWeaponShotgunKammerer: 4294967295
+    NFWeaponShotgunSawn: 4294967295
+    NFWeaponShotgunHandmade: 4294967295
+    NFWeaponShotgunBlunderbuss: 4294967295
+    NFWeaponShotgunImprovised: 4294967295
+    NFWeaponShotgunSawnLessLethal: 4294967295
+    NFWeaponShotgunKammererLessLethal: 4294967295
+    NFWeaponShotgunEnforcerLessLethal: 4294967295
+    ASWeaponShotgunAdjutant: 4294967295
+    ASWeaponShotgunBailiff: 4294967295
+    ASWeaponShotgunFalchion: 4294967295
+    ASWeaponShotgunLeverChester: 4294967295
+    ASWeaponShotgunHushpup: 4294967295
+    WeaponShotgunSoulshatter: 4294967295
+    # Energy Shotguns
+    ASWeaponEnergyShotgun: 4294967295
+    MantisRangedShotgun: 4294967295
+    # LMGs
+    NFWeaponLightMachineGunL6: 4294967295
+    NFWeaponLightMachineGunL6C: 4294967295
+    # Launchers
+    NFWeaponLauncherChinaLake: 4294967295
+    NFWeaponLauncherChinaLakeEmp: 4294967295
+    NFWeaponLauncherRocket: 4294967295
+    NFWeaponLauncherRocketEmp: 4294967295
+    NFWeaponLauncherMultipleRocket: 4294967295
+    NFWeaponLauncherPirateCannon: 4294967295
+    NFWeaponLauncherMail: 4294967295
+    NFWeaponLauncherGrenadeNfsd: 4294967295
+    WeaponLauncherBazooka: 4294967295
+    # Crossbows
+    CrossbowModern: 4294967295
+    CrossbowImprovised: 4294967295
+    CrossbowBloodCult: 4294967295
+    CrossbowModernHand: 4294967295
+    CrossbowImprovisedHand: 4294967295
+    CrossbowBloodCultHand: 4294967295
+    # Plasma
+    ASplasmacannon: 4294967295
+    ASPlasmaRifleScourer: 4294967295
+    # Echion
+    ASWeaponEchionBSShuvit: 4294967295
+    ASWeaponEchionCasperSlide: 4294967295
+    WeaponPlasmaAdder: 4294967295
+    WeaponPlasmaAkurra: 4294967295
+    WeaponPlasmaAnanke: 4294967295
+    WeaponPlasmaGlykon: 4294967295
+    WeaponFlamerXiuhcoatl: 4294967295
+
+#region Magazines
+- type: vendingMachineInventory
+  id: ASDEBUGVendingMachineInventoryMagazines
+  startingInventory:
+    # .35 Pistol
+    NFMagazinePistol35Empty: 4294967295
+    NFMagazinePistol35: 4294967295
+    NFMagazinePistol35Overpressure: 4294967295
+    NFMagazinePistol35Incendiary: 4294967295
+    NFMagazinePistol35Uranium: 4294967295
+    NFMagazinePistol35Practice: 4294967295
+    NFMagazinePistol35Emp: 4294967295
+    NFMagazinePistol35Rubber: 4294967295
+    ASMagazinePistol35Funny: 4294967295
+    # .35 Pistol High-Cap
+    NFMagazineHighCapacityPistol35Empty: 4294967295
+    NFMagazineHighCapacityPistol35: 4294967295
+    NFMagazineHighCapacityPistol35Overpressure: 4294967295
+    NFMagazineHighCapacityPistol35Incendiary: 4294967295
+    NFMagazineHighCapacityPistol35Uranium: 4294967295
+    NFMagazineHighCapacityPistol35Practice: 4294967295
+    NFMagazineHighCapacityPistol35Emp: 4294967295
+    NFMagazineHighCapacityPistol35Rubber: 4294967295
+    ASMagazineHighCapacityPistol35Funny: 4294967295
+    # .35 Pistol SMG
+    NFMagazineSubMachineGun35Empty: 4294967295
+    NFMagazineSubMachineGun35: 4294967295
+    NFMagazineSubMachineGun35Overpressure: 4294967295
+    NFMagazineSubMachineGun35Incendiary: 4294967295
+    NFMagazineSubMachineGun35Uranium: 4294967295
+    NFMagazineSubMachineGun35Practice: 4294967295
+    NFMagazineSubMachineGun35Emp: 4294967295
+    NFMagazineSubMachineGun35Rubber: 4294967295
+    ASMagazineSubMachineGun35Funny: 4294967295
+    # .35 Pistol SMG Top-Mounted
+    NFMagazineSubMachineGunTopMounted35Empty: 4294967295
+    NFMagazineSubMachineGunTopMounted35: 4294967295
+    NFMagazineSubMachineGunTopMounted35Overpressure: 4294967295
+    NFMagazineSubMachineGunTopMounted35Incendiary: 4294967295
+    NFMagazineSubMachineGunTopMounted35Uranium: 4294967295
+    NFMagazineSubMachineGunTopMounted35Practice: 4294967295
+    NFMagazineSubMachineGunTopMounted35Emp: 4294967295
+    NFMagazineSubMachineGunTopMounted35Rubber: 4294967295
+    # .35 Pistol Speed-loaders
+    NFSpeedLoaderPistol35Empty: 4294967295
+    NFSpeedLoaderPistol35: 4294967295
+    NFSpeedLoaderPistol35Practice: 4294967295
+    NFSpeedLoaderPistol35Rubber: 4294967295
+    # .40 Pistol
+    ASMagazinePistol40Empty: 4294967295
+    ASMagazinePistol40: 4294967295
+    ASMagazinePistol40OverpressureEmpty: 4294967295
+    ASMagazinePistol40Overpressure: 4294967295
+    ASMagazinePistol40Incendiary: 4294967295
+    ASMagazinePistol40Uranium: 4294967295
+    ASMagazinePistol40Practice: 4294967295
+    ASMagazinePistol40Emp: 4294967295
+    ASMagazinePistol40Rubber: 4294967295
+    # .40 Pistol High-Cap
+    ASMagazineHighCapacityPistol40Empty: 4294967295
+    ASMagazineHighCapacityPistol40: 4294967295
+    ASMagazineHighCapacityPistol40OverpressureEmpty: 4294967295
+    ASMagazineHighCapacityPistol40Overpressure: 4294967295
+    ASMagazineHighCapacityPistol40Incendiary: 4294967295
+    ASMagazineHighCapacityPistol40Uranium: 4294967295
+    ASMagazineHighCapacityPistol40Practice: 4294967295
+    ASMagazineHighCapacityPistol40Emp: 4294967295
+    ASMagazineHighCapacityPistol40Rubber: 4294967295
+    # .40 Pistol SMG
+    ASMagazineSubMachineGun40Empty: 4294967295
+    ASMagazineSubMachineGun40: 4294967295
+    ASMagazineSubMachineGun40OverpressureEmpty: 4294967295
+    ASMagazineSubMachineGun40Overpressure: 4294967295
+    ASMagazineSubMachineGun40Incendiary: 4294967295
+    ASMagazineSubMachineGun40Uranium: 4294967295
+    ASMagazineSubMachineGun40Practice: 4294967295
+    ASMagazineSubMachineGun40Emp: 4294967295
+    ASMagazineSubMachineGun40Rubber: 4294967295
+    # .40 Pistol Speed-loaders
+    ASSpeedLoaderPistol40Empty: 4294967295
+    ASSpeedLoaderPistol40: 4294967295
+    ASSpeedLoaderPistol40Practice: 4294967295
+    ASSpeedLoaderPistol40Rubber: 4294967295
+    # .45 Pistol
+    NFMagazinePistol45Empty: 4294967295
+    NFMagazinePistol45: 4294967295
+    NFMagazinePistol45Overpressure: 4294967295
+    NFMagazinePistol45Incendiary: 4294967295
+    NFMagazinePistol45Uranium: 4294967295
+    NFMagazinePistol45Practice: 4294967295
+    NFMagazinePistol45Rubber: 4294967295
+    NFMagazineSubMachineGun45Empty: 4294967295
+    NFMagazineSubMachineGun45: 4294967295
+    NFMagazineSubMachineGun45Overpressure: 4294967295
+    NFMagazineSubMachineGun45Rubber: 4294967295
+    # .45 Pistol Speed-loaders
+    NFSpeedLoaderPistol45Empty: 4294967295
+    NFSpeedLoaderPistol45: 4294967295
+    NFSpeedLoaderPistol45Incendiary: 4294967295
+    NFSpeedLoaderPistol45Uranium: 4294967295
+    NFSpeedLoaderPistol45Practice: 4294967295
+    NFSpeedLoaderPistol45Rubber: 4294967295
+    # .20 Rifle
+    NFMagazineRifle20Empty: 4294967295
+    NFMagazineDrumRifle20: 4294967295
+    NFMagazineRifle20: 4294967295
+    NFMagazineRifle20Overpressure: 4294967295
+    NFMagazineRifle20Incendiary: 4294967295
+    NFMagazineRifle20Uranium: 4294967295
+    NFMagazineRifle20Practice: 4294967295
+    NFMagazineRifle20Rubber: 4294967295
+    NFMagazineBoxRifle20: 4294967295
+    NFMagazineClipRifle20Empty: 4294967295
+    NFMagazineClipRifle20: 4294967295
+    NFMagazineClipRifle20Rubber: 4294967295
+    # .30 Rifle
+    NFMagazineRifle30Empty: 4294967295
+    NFMagazineRifle30: 4294967295
+    NFMagazineRifle30Overpressure: 4294967295
+    NFMagazineRifle30Incendiary: 4294967295
+    NFMagazineRifle30Uranium: 4294967295
+    NFMagazineRifle30Practice: 4294967295
+    NFMagazineRifle30Rubber: 4294967295
+    NFMagazineLowCapacityRifle30Empty: 4294967295
+    NFMagazineLowCapacityRifle30: 4294967295
+    NFMagazineLowCapacityRifle30Overpressure: 4294967295
+    NFMagazineLowCapacityRifle30Incendiary: 4294967295
+    NFMagazineLowCapacityRifle30Uranium: 4294967295
+    NFMagazineLowCapacityRifle30Practice: 4294967295
+    NFMagazineLowCapacityRifle30Rubber: 4294967295
+    # .30 Top-Mounted
+    ASMagazineBRTopMountedRifle30Empty: 4294967295
+    ASMagazineBRTopMountedRifle30: 4294967295
+    # .30 Long Rifle
+    ASMagazineMarksmanRifle30LongEmpty: 4294967295
+    ASMagazineEnblocRifle30LongEmpty: 4294967295
+    ASMagazineMarksmanRifle30Long: 4294967295
+    ASMagazineEnblocRifle30Long: 4294967295
+    ASMagazineMarksmanRifle30LongOverpressureEmpty: 4294967295
+    ASMagazineMarksmanRifle30LongOverpressure: 4294967295
+    ASMagazineMarksmanRifle30LongIncendiary: 4294967295
+    ASMagazineMarksmanRifle30LongUranium: 4294967295
+    ASMagazineMarksmanRifle30LongPractice: 4294967295
+    ASMagazineMarksmanRifle30LongRubber: 4294967295
+    # .30 Long Rifle Speed-loaders
+    ASSpeedLoaderRifle30LongEmpty: 4294967295
+    ASSpeedLoaderRifle30Long: 4294967295
+    # 12g Shotgun Drum
+    NFMagazineShotgunDrumEmpty: 4294967295
+    NFMagazineShotgunDrum: 4294967295
+    NFMagazineShotgunDrumSlug: 4294967295
+    NFMagazineShotgunDrumIncendiary: 4294967295
+    NFMagazineShotgunDrumBeanbag: 4294967295
+    # 8g Shotgun En-bloc
+    MagazineShotgunLeverEmpty: 4294967295
+    MagazineShotgunLever: 4294967295
+    # ASMGT turret
+    MagazineAsmgtUniversalEmpty: 4294967295
+    MagazineAsmgtUniversalPistol: 4294967295
+    # Crossbow Quivers
+    ClothingBeltQuiverCrossbowFilledBolt: 4294967295
+    ClothingBeltQuiverCrossbowFilledUranium: 4294967295
+    ClothingBeltQuiverCrossbowFilledPlasma: 4294967295
+    # Bolts
+    CrossbowBolt: 4294967295
+    CrossbowBoltBroadhead: 4294967295
+    CrossbowBoltSponge: 4294967295
+    CrossbowBoltGlassShard: 4294967295
+    CrossbowBoltPlasmaGlassShard: 4294967295
+    CrossbowBoltUraniumGlassShard: 4294967295
+    CrossbowBoltSyringe: 4294967295
+    CrossbowBoltPlasteel: 4294967295
+    CrossbowBoltExplosive: 4294967295
+    CrossbowBoltEMP: 4294967295
+    CrossbowBoltIncendiary: 4294967295
+    CrossbowBoltShrapnel: 4294967295
+    Plunger: 4294967295
+    FoodBreadBaguette: 4294967295
+
+#region Ammo Boxes
+- type: vendingMachineInventory
+  id: ASDEBUGVendingMachineInventoryAmmoBoxes
+  startingInventory:
+    # .35 Pistol
+    NFAmmunitionBoxPistol35: 4294967295
+    NFAmmunitionBoxPistol35Overpressure: 4294967295
+    NFAmmunitionBoxPistol35Incendiary: 4294967295
+    NFAmmunitionBoxPistol35Uranium: 4294967295
+    NFAmmunitionBoxPistol35Practice: 4294967295
+    NFAmmunitionBoxPistol35Emp: 4294967295
+    NFAmmunitionBoxPistol35Rubber: 4294967295
+    # .35 Pistol Big
+    ASAmmunitionBoxBigPistol35: 4294967295
+    ASAmmunitionBoxBigPistol35Overpressure: 4294967295
+    ASAmmunitionBoxBigPistol35Incendiary: 4294967295
+    ASAmmunitionBoxBigPistol35Uranium: 4294967295
+    ASAmmunitionBoxBigPistol35Practice: 4294967295
+    ASAmmunitionBoxBigPistol35Emp: 4294967295
+    ASAmmunitionBoxBigPistol35Rubber: 4294967295
+    # .40 Pistol
+    ASAmmunitionBoxPistol40: 4294967295
+    ASAmmunitionBoxPistol40Overpressure: 4294967295
+    ASAmmunitionBoxPistol40Incendiary: 4294967295
+    ASAmmunitionBoxPistol40Uranium: 4294967295
+    ASAmmunitionBoxPistol40Practice: 4294967295
+    ASAmmunitionBoxPistol40Emp: 4294967295
+    ASAmmunitionBoxPistol40Rubber: 4294967295
+    # .40 Pistol Big
+    ASAmmunitionBoxBigPistol40: 4294967295
+    ASAmmunitionBoxBigPistol40Overpressure: 4294967295
+    ASAmmunitionBoxBigPistol40Incendiary: 4294967295
+    ASAmmunitionBoxBigPistol40Uranium: 4294967295
+    ASAmmunitionBoxBigPistol40Practice: 4294967295
+    ASAmmunitionBoxBigPistol40Emp: 4294967295
+    ASAmmunitionBoxBigPistol40Rubber: 4294967295
+    # .45 Pistol
+    NFAmmunitionBoxPistol45: 4294967295
+    NFAmmunitionBoxPistol45Overpressure: 4294967295
+    NFAmmunitionBoxPistol45Incendiary: 4294967295
+    NFAmmunitionBoxPistol45Uranium: 4294967295
+    NFAmmunitionBoxPistol45Practice: 4294967295
+    NFAmmunitionBoxPistol45Emp: 4294967295
+    NFAmmunitionBoxPistol45Rubber: 4294967295
+    # .10 Rifle
+    NFAmmunitionBoxRifle10: 4294967295
+    NFAmmunitionBoxRifle10Practice: 4294967295
+    NFAmmunitionBoxRifle10Rubber: 4294967295
+    # .10 Rifle Big
+    NFAmmunitionBoxBigRifle10: 4294967295
+    NFAmmunitionBoxBigRifle10Practice: 4294967295
+    NFAmmunitionBoxBigRifle10Rubber: 4294967295
+    # .20 Rifle
+    NFAmmunitionBoxRifle20: 4294967295
+    NFAmmunitionBoxRifle20Overpressure: 4294967295
+    NFAmmunitionBoxRifle20Incendiary: 4294967295
+    NFAmmunitionBoxRifle20Uranium: 4294967295
+    NFAmmunitionBoxRifle20Practice: 4294967295
+    NFAmmunitionBoxRifle20Rubber: 4294967295
+    # .20 Rifle Big
+    NFAmmunitionBoxBigRifle20: 4294967295
+    NFAmmunitionBoxBigRifle20Overpressure: 4294967295
+    NFAmmunitionBoxBigRifle20Incendiary: 4294967295
+    NFAmmunitionBoxBigRifle20Uranium: 4294967295
+    NFAmmunitionBoxBigRifle20Practice: 4294967295
+    NFAmmunitionBoxBigRifle20Rubber: 4294967295
+    # .25 Rifle
+    NFAmmunitionBoxRifle25: 4294967295
+    NFAmmunitionBoxRifle25Overpressure: 4294967295
+    NFAmmunitionBoxRifle25Incendiary: 4294967295
+    NFAmmunitionBoxRifle25Uranium: 4294967295
+    NFAmmunitionBoxRifle25Practice: 4294967295
+    NFAmmunitionBoxRifle25Rubber: 4294967295
+    # .25 Rifle Big
+    NFAmmunitionBoxBigRifle25: 4294967295
+    NFAmmunitionBoxBigRifle25Overpressure: 4294967295
+    NFAmmunitionBoxBigRifle25Incendiary: 4294967295
+    NFAmmunitionBoxBigRifle25Uranium: 4294967295
+    NFAmmunitionBoxBigRifle25Practice: 4294967295
+    NFAmmunitionBoxBigRifle25Rubber: 4294967295
+    # .30 Rifle
+    NFAmmunitionBoxRifle30: 4294967295
+    NFAmmunitionBoxRifle30Overpressure: 4294967295
+    NFAmmunitionBoxRifle30Incendiary: 4294967295
+    NFAmmunitionBoxRifle30Uranium: 4294967295
+    NFAmmunitionBoxRifle30Practice: 4294967295
+    NFAmmunitionBoxRifle30Rubber: 4294967295
+    # .30 Rifle Big
+    NFAmmunitionBoxBigRifle30: 4294967295
+    NFAmmunitionBoxBigRifle30Overpressure: 4294967295
+    NFAmmunitionBoxBigRifle30Incendiary: 4294967295
+    NFAmmunitionBoxBigRifle30Uranium: 4294967295
+    NFAmmunitionBoxBigRifle30Practice: 4294967295
+    NFAmmunitionBoxBigRifle30Rubber: 4294967295
+    # .60 Rifle
+    NFAmmunitionBoxRifle60: 4294967295
+    NFAmmunitionBoxRifle60Rubber: 4294967295
+    # .60 Rifle Big
+    NFAmmunitionBoxBigRifle60: 4294967295
+    NFAmmunitionBoxBigRifle60Rubber: 4294967295
+    # 12g Shotgun
+    NFAmmunitionBoxShellShotgunBuckshot: 4294967295
+    NFAmmunitionBoxShellShotgunSlug: 4294967295
+    NFAmmunitionBoxShellShotgunIncendiary: 4294967295
+    NFAmmunitionBoxShellShotgunUranium: 4294967295
+    NFAmmunitionBoxShellShotgunPractice: 4294967295
+    NFAmmunitionBoxShellShotgunBeanbag: 4294967295
+    NFAmmunitionBoxShellShotgunFlare: 4294967295
+    NFAmmunitionBoxShellShotgunTranquilizer: 4294967295
+    # 8g Shotgun
+    ASAmmunitionBoxShellShotgun8gBuckshot: 4294967295
+    ASAmmunitionBoxShellShotgun8gSlug: 4294967295
+    ASAmmunitionBoxShellShotgun8gHE: 4294967295
+    # Mail Capsules
+    BoxMailCapsulePrimed: 4294967295

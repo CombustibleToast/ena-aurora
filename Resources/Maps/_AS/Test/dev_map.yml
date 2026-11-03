@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.2.1
   forkId: ""
   forkVersion: ""
-  time: 09/10/2026 19:02:01
-  entityCount: 3108
+  time: 09/28/2026 18:36:01
+  entityCount: 3113
 maps:
 - 23
 grids:
@@ -1332,7 +1332,8 @@ entities:
           12,5:
             1: 36076
           12,6:
-            1: 61166
+            1: 61134
+            3: 32
           12,7:
             1: 12
           13,6:
@@ -1437,7 +1438,8 @@ entities:
             0: 192
           16,10:
             0: 16
-            1: 52428
+            3: 68
+            1: 52360
           9,9:
             1: 63232
           9,10:
@@ -1520,9 +1522,9 @@ entities:
             1: 61166
           20,6:
             1: 14
-            3: 61152
+            4: 61152
           20,7:
-            3: 238
+            4: 238
             0: 16384
           20,8:
             0: 68
@@ -1533,9 +1535,9 @@ entities:
             1: 65535
           21,6:
             1: 52431
-            3: 13104
+            4: 13104
           21,7:
-            3: 51
+            4: 51
             1: 2252
             0: 32768
           21,3:
@@ -1556,37 +1558,37 @@ entities:
             1: 65520
           23,4:
             1: 63479
-            4: 8
-            5: 2048
+            5: 8
+            6: 2048
           23,5:
             1: 63479
-            3: 2056
+            4: 2056
           23,6:
             1: 63479
-            3: 2056
+            4: 2056
           23,7:
             1: 55
             0: 63488
-            3: 8
+            4: 8
           23,3:
             1: 63479
-            3: 8
-            6: 2048
+            4: 8
+            7: 2048
           23,8:
             0: 9
             1: 65520
           24,4:
-            4: 1
+            5: 1
             1: 4112
-            5: 256
+            6: 256
           24,5:
-            3: 257
+            4: 257
             1: 4112
           24,6:
-            3: 257
+            4: 257
             1: 4112
           24,7:
-            3: 1
+            4: 1
           20,1:
             1: 61166
           20,2:
@@ -1595,36 +1597,36 @@ entities:
           21,0:
             1: 7936
             0: 24576
-            7: 32768
+            8: 32768
           21,1:
             1: 65297
             0: 98
-            7: 136
+            8: 136
           21,2:
             1: 65535
           22,0:
             1: 18176
-            7: 12288
+            8: 12288
           22,1:
-            7: 51
+            8: 51
             1: 65484
           22,2:
             1: 65535
           23,1:
             1: 13111
-            3: 52224
+            4: 52224
             0: 8
           23,2:
             1: 13107
-            3: 3276
+            4: 3276
           24,1:
-            3: 30464
+            4: 30464
           24,2:
-            3: 1911
+            4: 1911
           24,3:
-            3: 1
+            4: 1
             1: 4112
-            6: 256
+            7: 256
           20,9:
             1: 63351
           19,8:
@@ -1662,7 +1664,8 @@ entities:
           24,10:
             1: 17
           16,9:
-            1: 52428
+            3: 1092
+            1: 51336
           16,11:
             1: 35020
           17,9:
@@ -1676,9 +1679,11 @@ entities:
           18,8:
             1: 61440
           18,9:
-            1: 65535
+            1: 64447
+            3: 1088
           18,10:
-            1: 65535
+            1: 65467
+            3: 68
           18,11:
             1: 13303
           8,17:
@@ -1739,6 +1744,11 @@ entities:
           moles:
             Oxygen: 27.225372
             Nitrogen: 102.419266
+        - volume: 2500
+          temperature: 293.14975
+          moles:
+            Oxygen: 20.078888
+            Nitrogen: 75.53487
         - volume: 2500
           temperature: 293.15
           moles: {}
@@ -1963,17 +1973,35 @@ entities:
       rot: 3.141592653589793 rad
       pos: 16.5,19.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -1096.3511
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 227
     components:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 14.5,19.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -1097.5844
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 233
     components:
     - type: Transform
       pos: 15.5,10.5
       parent: 1
+    - type: Door
+      secondsUntilStateChange: -1093.1843
+      state: Opening
+    - type: DeviceLinkSource
+      lastSignals:
+        DoorStatus: True
   - uid: 2711
     components:
     - type: Transform
@@ -2150,6 +2178,49 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: 23.5,15.5
+      parent: 1
+- proto: ASDEBUGVendingMachineAmmoBoxes
+  entities:
+  - uid: 280
+    components:
+    - type: Transform
+      pos: 24.5,13.5
+      parent: 1
+  - uid: 386
+    components:
+    - type: Transform
+      pos: 66.5,35.5
+      parent: 1
+- proto: ASDEBUGVendingMachineMagazines
+  entities:
+  - uid: 351
+    components:
+    - type: Transform
+      pos: 67.5,35.5
+      parent: 1
+  - uid: 407
+    components:
+    - type: Transform
+      pos: 25.5,13.5
+      parent: 1
+- proto: ASDEBUGVendingMachineRangedWeapons
+  entities:
+  - uid: 279
+    components:
+    - type: Transform
+      pos: 68.5,35.5
+      parent: 1
+  - uid: 361
+    components:
+    - type: Transform
+      pos: 26.5,13.5
+      parent: 1
+- proto: ASTelecomServerDEBUG
+  entities:
+  - uid: 411
+    components:
+    - type: Transform
+      pos: 47.5,65.5
       parent: 1
 - proto: ASWeaponEnergyShotgun
   entities:
@@ -3186,6 +3257,13 @@ entities:
     - type: Transform
       pos: 86.5,4.5
       parent: 1
+- proto: BlueprintLithograph
+  entities:
+  - uid: 277
+    components:
+    - type: Transform
+      pos: 50.5,24.5
+      parent: 1
 - proto: BoozeDispenser
   entities:
   - uid: 925
@@ -3201,6 +3279,14 @@ entities:
     - type: Transform
       pos: 49.5,25.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
 - proto: Bucket
   entities:
   - uid: 289
@@ -3239,6 +3325,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2120
     components:
     - type: Transform
@@ -3246,6 +3333,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2121
     components:
     - type: Transform
@@ -3253,6 +3341,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2122
     components:
     - type: Transform
@@ -3260,6 +3349,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2123
     components:
     - type: Transform
@@ -3267,6 +3357,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2124
     components:
     - type: Transform
@@ -3274,6 +3365,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2125
     components:
     - type: Transform
@@ -3281,6 +3373,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2126
     components:
     - type: Transform
@@ -3288,6 +3381,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2128
     components:
     - type: Transform
@@ -3295,6 +3389,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2129
     components:
     - type: Transform
@@ -3302,6 +3397,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
 - proto: CableApcExtension
   entities:
   - uid: 238
@@ -8723,6 +8819,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: CloningPod
   entities:
   - uid: 1184
@@ -9147,6 +9244,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: 27.5,15.5
       parent: 1
+- proto: ComputerShipyardSyndicate
+  entities:
+  - uid: 278
+    components:
+    - type: Transform
+      pos: 28.5,18.5
+      parent: 1
 - proto: ComputerShuttle
   entities:
   - uid: 2638
@@ -9417,20 +9521,28 @@ entities:
     - type: Transform
       pos: 66.5,41.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
+          - 2050
           - 2043
-          - 2044
           - 2045
           - 2046
           - 2047
           - 2048
           - 2049
-          - 2050
+          - 2044
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9440,20 +9552,28 @@ entities:
     - type: Transform
       pos: 66.5,40.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
+          - 2059
           - 2052
-          - 2053
           - 2054
           - 2055
           - 2056
           - 2057
           - 2058
-          - 2059
+          - 2053
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9463,18 +9583,26 @@ entities:
     - type: Transform
       pos: 66.5,38.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
+          - 2067
           - 2062
-          - 2063
           - 2064
           - 2065
           - 2066
-          - 2067
+          - 2063
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9484,6 +9612,16 @@ entities:
     - type: Transform
       pos: 66.5,37.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
+    - type: Pullable
+      prevFixedRotation: True
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
@@ -9492,12 +9630,12 @@ entities:
           ents:
           - 2069
           - 2070
-          - 2071
-          - 2072
-          - 2073
-          - 2074
-          - 2075
           - 2076
+          - 2075
+          - 2074
+          - 2073
+          - 2072
+          - 2071
           - 2077
         paper_label: !type:ContainerSlot
           showEnts: False
@@ -9508,40 +9646,48 @@ entities:
     - type: Transform
       pos: 74.5,41.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 2079
           - 2080
-          - 2081
-          - 2082
-          - 2083
-          - 2084
-          - 2085
-          - 2086
-          - 2087
-          - 2088
-          - 2089
-          - 2090
-          - 2091
-          - 2092
-          - 2093
-          - 2094
-          - 2095
-          - 2096
-          - 2097
-          - 2098
-          - 2099
-          - 2100
-          - 2101
-          - 2102
-          - 2103
-          - 2104
-          - 2105
           - 2106
+          - 2105
+          - 2104
+          - 2103
+          - 2102
+          - 2101
+          - 2100
+          - 2099
+          - 2098
+          - 2097
+          - 2096
+          - 2095
+          - 2094
+          - 2093
+          - 2092
+          - 2091
+          - 2090
+          - 2089
+          - 2088
+          - 2087
+          - 2086
+          - 2085
+          - 2084
+          - 2083
+          - 2082
+          - 2081
+          - 2079
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9551,20 +9697,28 @@ entities:
     - type: Transform
       pos: 74.5,40.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 2114
           - 2113
-          - 2112
-          - 2111
-          - 2110
-          - 2109
-          - 2108
           - 2116
+          - 2108
+          - 2109
+          - 2110
+          - 2111
+          - 2112
+          - 2114
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9574,32 +9728,40 @@ entities:
     - type: Transform
       pos: 74.5,38.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 2123
           - 2122
-          - 2121
-          - 2120
-          - 2119
-          - 2124
-          - 2125
-          - 2126
-          - 2127
-          - 2128
-          - 2129
-          - 2130
-          - 2131
-          - 2132
-          - 2133
-          - 2134
-          - 2135
-          - 2136
-          - 2137
           - 2138
+          - 2137
+          - 2136
+          - 2135
+          - 2134
+          - 2133
+          - 2132
+          - 2131
+          - 2130
+          - 2129
+          - 2128
+          - 2127
+          - 2126
+          - 2125
+          - 2124
+          - 2119
+          - 2120
+          - 2121
+          - 2123
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9609,30 +9771,38 @@ entities:
     - type: Transform
       pos: 74.5,37.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 2151
           - 2150
-          - 2149
-          - 2148
-          - 2147
-          - 2146
-          - 2145
-          - 2144
-          - 2143
-          - 2142
-          - 2141
-          - 2140
-          - 2152
-          - 2153
-          - 2154
-          - 2155
-          - 2156
           - 2157
+          - 2156
+          - 2155
+          - 2154
+          - 2153
+          - 2152
+          - 2140
+          - 2141
+          - 2142
+          - 2143
+          - 2144
+          - 2145
+          - 2146
+          - 2147
+          - 2148
+          - 2149
+          - 2151
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9640,39 +9810,49 @@ entities:
   - uid: 2176
     components:
     - type: Transform
-      pos: 66.5,35.5
+      pos: 66.5,36.5
       parent: 1
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14673
+        moles:
+          Oxygen: 1.7459903
+          Nitrogen: 6.568249
+    - type: Pullable
+      prevFixedRotation: True
     - type: ContainerContainer
       containers:
         entity_storage: !type:Container
           showEnts: False
           occludes: True
           ents:
-          - 2177
           - 2178
-          - 2179
-          - 2180
-          - 2181
-          - 2182
-          - 2183
-          - 2185
-          - 2186
-          - 2188
-          - 2189
-          - 2190
-          - 2191
-          - 2192
-          - 2193
-          - 2194
-          - 2195
-          - 2196
-          - 2197
-          - 2198
-          - 2199
-          - 2200
-          - 2201
-          - 2202
           - 2203
+          - 2202
+          - 2201
+          - 2200
+          - 2199
+          - 2198
+          - 2197
+          - 2196
+          - 2195
+          - 2194
+          - 2193
+          - 2192
+          - 2191
+          - 2190
+          - 2189
+          - 2188
+          - 2186
+          - 2185
+          - 2183
+          - 2182
+          - 2181
+          - 2180
+          - 2179
+          - 2177
         paper_label: !type:ContainerSlot
           showEnts: False
           occludes: True
@@ -9813,27 +9993,6 @@ entities:
       supplyRampRate: 500000
       supplyRampTolerance: 5000
       supplyRate: 3000000
-- proto: DEBUGVendingMachineAmmoBoxes
-  entities:
-  - uid: 3169
-    components:
-    - type: Transform
-      pos: 24.5,13.5
-      parent: 1
-- proto: DEBUGVendingMachineMagazines
-  entities:
-  - uid: 3167
-    components:
-    - type: Transform
-      pos: 26.5,13.5
-      parent: 1
-- proto: DEBUGVendingMachineRangedWeapons
-  entities:
-  - uid: 3168
-    components:
-    - type: Transform
-      pos: 25.5,13.5
-      parent: 1
 - proto: DefaultStationBeaconMedical
   entities:
   - uid: 2882
@@ -9931,6 +10090,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2203
     components:
     - type: Transform
@@ -9938,6 +10098,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: EnergyKatana
   entities:
   - uid: 2204
@@ -9961,6 +10122,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2201
     components:
     - type: Transform
@@ -9968,6 +10130,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: ExosuitFabricator
   entities:
   - uid: 831
@@ -11131,6 +11294,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2181
     components:
     - type: Transform
@@ -11138,6 +11302,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: GrenadeFlashBang
   entities:
   - uid: 2196
@@ -11147,6 +11312,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2199
     components:
     - type: Transform
@@ -11154,6 +11320,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: GrenadeIncendiary
   entities:
   - uid: 2194
@@ -11163,6 +11330,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2197
     components:
     - type: Transform
@@ -11170,6 +11338,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: GrenadeShrapnel
   entities:
   - uid: 2190
@@ -11179,6 +11348,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2193
     components:
     - type: Transform
@@ -11186,6 +11356,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: GrenadeStinger
   entities:
   - uid: 2186
@@ -11195,6 +11366,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2189
     components:
     - type: Transform
@@ -11202,6 +11374,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: Grille
   entities:
   - uid: 48
@@ -11848,6 +12021,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2195
     components:
     - type: Transform
@@ -11855,6 +12029,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: ModularGrenade
   entities:
   - uid: 2856
@@ -11906,6 +12081,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
 - proto: NFAmmunitionBoxPistol35
   entities:
   - uid: 2140
@@ -11915,6 +12091,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2142
     components:
     - type: Transform
@@ -11922,6 +12099,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFAmmunitionBoxPistol35Incendiary
   entities:
   - uid: 2145
@@ -11931,6 +12109,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2148
     components:
     - type: Transform
@@ -11938,6 +12117,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFAmmunitionBoxPistol35Practice
   entities:
   - uid: 2143
@@ -11947,6 +12127,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2146
     components:
     - type: Transform
@@ -11954,6 +12135,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFAmmunitionBoxPistol35Uranium
   entities:
   - uid: 2141
@@ -11963,6 +12145,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2144
     components:
     - type: Transform
@@ -11970,6 +12153,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFAmmunitionBoxRifle30
   entities:
   - uid: 2071
@@ -11979,6 +12163,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
 - proto: NFAmmunitionBoxRifle30Incendiary
   entities:
   - uid: 2072
@@ -11988,6 +12173,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
 - proto: NFAmmunitionBoxRifle30Practice
   entities:
   - uid: 2073
@@ -11997,6 +12183,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
 - proto: NFAmmunitionBoxRifle30Uranium
   entities:
   - uid: 2070
@@ -12006,6 +12193,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
 - proto: NFCartridgeRocket
   entities:
   - uid: 2127
@@ -12015,6 +12203,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2130
     components:
     - type: Transform
@@ -12022,6 +12211,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2131
     components:
     - type: Transform
@@ -12029,6 +12219,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2132
     components:
     - type: Transform
@@ -12036,6 +12227,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2133
     components:
     - type: Transform
@@ -12043,6 +12235,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2134
     components:
     - type: Transform
@@ -12050,6 +12243,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2135
     components:
     - type: Transform
@@ -12057,6 +12251,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2136
     components:
     - type: Transform
@@ -12064,6 +12259,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2137
     components:
     - type: Transform
@@ -12071,6 +12267,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
   - uid: 2138
     components:
     - type: Transform
@@ -12078,6 +12275,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2118
 - proto: NFGrenadeBaton
   entities:
   - uid: 2087
@@ -12087,6 +12285,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2088
     components:
     - type: Transform
@@ -12094,6 +12293,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFGrenadeBlast
   entities:
   - uid: 2085
@@ -12103,6 +12303,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2086
     components:
     - type: Transform
@@ -12110,6 +12311,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFGrenadeEMP
   entities:
   - uid: 2079
@@ -12119,6 +12321,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2080
     components:
     - type: Transform
@@ -12126,6 +12329,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2089
     components:
     - type: Transform
@@ -12133,6 +12337,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2090
     components:
     - type: Transform
@@ -12140,6 +12345,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFGrenadeFlash
   entities:
   - uid: 2083
@@ -12149,6 +12355,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2084
     components:
     - type: Transform
@@ -12156,6 +12363,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFGrenadeFrag
   entities:
   - uid: 2081
@@ -12165,6 +12373,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2082
     components:
     - type: Transform
@@ -12172,6 +12381,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFLockerScienceFilled
   entities:
   - uid: 814
@@ -12190,6 +12400,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
   - uid: 2075
     components:
     - type: Transform
@@ -12197,6 +12408,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
   - uid: 2076
     components:
     - type: Transform
@@ -12204,6 +12416,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
   - uid: 2077
     components:
     - type: Transform
@@ -12211,6 +12424,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2068
 - proto: NFMagazineGrenadeBaton
   entities:
   - uid: 2767
@@ -12255,6 +12469,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2092
     components:
     - type: Transform
@@ -12262,6 +12477,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2093
     components:
     - type: Transform
@@ -12269,6 +12485,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2094
     components:
     - type: Transform
@@ -12276,6 +12493,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFMagazineRifle20Incendiary
   entities:
   - uid: 2103
@@ -12285,6 +12503,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2104
     components:
     - type: Transform
@@ -12292,6 +12511,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2105
     components:
     - type: Transform
@@ -12299,6 +12519,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2106
     components:
     - type: Transform
@@ -12306,6 +12527,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFMagazineRifle20Practice
   entities:
   - uid: 2099
@@ -12315,6 +12537,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2100
     components:
     - type: Transform
@@ -12322,6 +12545,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2101
     components:
     - type: Transform
@@ -12329,6 +12553,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2102
     components:
     - type: Transform
@@ -12336,6 +12561,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFMagazineRifle20Uranium
   entities:
   - uid: 2095
@@ -12345,6 +12571,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2096
     components:
     - type: Transform
@@ -12352,6 +12579,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2097
     components:
     - type: Transform
@@ -12359,6 +12587,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
   - uid: 2098
     components:
     - type: Transform
@@ -12366,6 +12595,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2078
 - proto: NFMagazineRifle30
   entities:
   - uid: 2109
@@ -12375,6 +12605,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
   - uid: 2116
     components:
     - type: Transform
@@ -12382,6 +12613,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
 - proto: NFMagazineRifle30Incendiary
   entities:
   - uid: 2112
@@ -12391,6 +12623,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
   - uid: 2114
     components:
     - type: Transform
@@ -12398,6 +12631,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
 - proto: NFMagazineRifle30Practice
   entities:
   - uid: 2110
@@ -12407,6 +12641,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
   - uid: 2113
     components:
     - type: Transform
@@ -12414,6 +12649,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
 - proto: NFMagazineRifle30Uranium
   entities:
   - uid: 2108
@@ -12423,6 +12659,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
   - uid: 2111
     components:
     - type: Transform
@@ -12430,6 +12667,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2107
 - proto: NFMagazineShotgunDrum
   entities:
   - uid: 2045
@@ -12439,6 +12677,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2049
     components:
     - type: Transform
@@ -12446,6 +12685,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2053
     components:
     - type: Transform
@@ -12453,6 +12693,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
   - uid: 2056
     components:
     - type: Transform
@@ -12460,6 +12701,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
 - proto: NFMagazineShotgunDrumBeanbag
   entities:
   - uid: 2047
@@ -12469,6 +12711,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2050
     components:
     - type: Transform
@@ -12476,6 +12719,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2057
     components:
     - type: Transform
@@ -12483,6 +12727,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
   - uid: 2059
     components:
     - type: Transform
@@ -12490,6 +12735,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
 - proto: NFMagazineShotgunDrumIncendiary
   entities:
   - uid: 2044
@@ -12499,6 +12745,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2048
     components:
     - type: Transform
@@ -12506,6 +12753,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2055
     components:
     - type: Transform
@@ -12513,6 +12761,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
   - uid: 2058
     components:
     - type: Transform
@@ -12520,6 +12769,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
 - proto: NFMagazineShotgunDrumSlug
   entities:
   - uid: 2043
@@ -12529,6 +12779,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2046
     components:
     - type: Transform
@@ -12536,6 +12787,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2042
   - uid: 2052
     components:
     - type: Transform
@@ -12543,6 +12795,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
   - uid: 2054
     components:
     - type: Transform
@@ -12550,6 +12803,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2051
 - proto: NFMagazineSubMachineGun35
   entities:
   - uid: 2062
@@ -12559,6 +12813,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2061
   - uid: 2063
     components:
     - type: Transform
@@ -12566,6 +12821,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2061
   - uid: 2152
     components:
     - type: Transform
@@ -12573,6 +12829,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2153
     components:
     - type: Transform
@@ -12580,6 +12837,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFMagazineSubMachineGun35Practice
   entities:
   - uid: 2066
@@ -12589,6 +12847,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2061
   - uid: 2067
     components:
     - type: Transform
@@ -12596,6 +12855,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2061
   - uid: 2156
     components:
     - type: Transform
@@ -12603,6 +12863,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2157
     components:
     - type: Transform
@@ -12610,6 +12871,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFMagazineSubMachineGun35Uranium
   entities:
   - uid: 2064
@@ -12619,6 +12881,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2061
   - uid: 2065
     components:
     - type: Transform
@@ -12626,6 +12889,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2061
   - uid: 2154
     components:
     - type: Transform
@@ -12633,6 +12897,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2155
     components:
     - type: Transform
@@ -12640,6 +12905,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFMagazineSubMachineGunTopMounted35
   entities:
   - uid: 2147
@@ -12649,6 +12915,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2149
     components:
     - type: Transform
@@ -12656,6 +12923,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2150
     components:
     - type: Transform
@@ -12663,6 +12931,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
   - uid: 2151
     components:
     - type: Transform
@@ -12670,6 +12939,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2139
 - proto: NFPosterLegitMagnusWatching
   entities:
   - uid: 3164
@@ -12866,6 +13136,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2183
     components:
     - type: Transform
@@ -12873,6 +13144,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: OperatingTable
   entities:
   - uid: 1216
@@ -15031,6 +15303,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2191
     components:
     - type: Transform
@@ -15038,6 +15311,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: SodaDispenser
   entities:
   - uid: 926
@@ -16094,6 +16368,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2185
     components:
     - type: Transform
@@ -16101,6 +16376,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: TegCenter
   entities:
   - uid: 1569
@@ -16127,13 +16403,6 @@ entities:
       parent: 1
     - type: PointLight
       color: '#FF3300FF'
-- proto: TelecomServerFilled
-  entities:
-  - uid: 2699
-    components:
-    - type: Transform
-      pos: 47.5,65.5
-      parent: 1
 - proto: Thruster
   entities:
   - uid: 2802
@@ -20356,6 +20625,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
   - uid: 2179
     components:
     - type: Transform
@@ -20363,6 +20633,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
+      storage: 2176
 - proto: WindoorSecureUranium
   entities:
   - uid: 751

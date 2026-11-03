@@ -353,3 +353,67 @@
   - type: VendingMachine
     pack: ASNanoTrasenOfficerVendD
 
+#region DEBUG
+
+- type: entity
+  parent: VendingMachineBountyVendPunk
+  id: ASDEBUGVendingMachineRangedWeapons
+  name: All Guns
+  suffix: DEBUG, Guns
+  categories: [ DoNotMap ]
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: VendingMachine
+    pack: ASDEBUGVendingMachineInventoryRangedWeapons
+
+- type: entity
+  parent: VendingMachineClothingPunk
+  id: ASDEBUGVendingMachineMagazines
+  name: All Gun Magazines
+  suffix: DEBUG, Magazines
+  categories: [ DoNotMap ]
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: VendingMachine
+    pack: ASDEBUGVendingMachineInventoryMagazines
+
+- type: entity
+  parent: VendingMachineClothingPunk
+  id: ASDEBUGVendingMachineAmmoBoxes
+  name: All Ammo Boxes
+  suffix: DEBUG, Ammo
+  categories: [ DoNotMap ]
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: VendingMachine
+    pack: ASDEBUGVendingMachineInventoryAmmoBoxes

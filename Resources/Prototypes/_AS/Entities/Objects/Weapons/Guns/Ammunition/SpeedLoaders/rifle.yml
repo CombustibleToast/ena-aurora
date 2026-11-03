@@ -32,7 +32,6 @@
       ballistic-ammo: !type:Container
         ents: []
 
-
 - type: entity
   id: ASSpeedLoaderRifle30LongEmpty
   name: speed loader (.30 Long rifle, any)
