@@ -275,6 +275,11 @@ namespace Content.Client.Inventory
                 _ui.GetUIController<VerbMenuUIController>().OpenVerbMenu(slot.Entity.Value);
                 ev.Handle();
             }
+            // Aurora's Song: allow toggling toggleable clothing from the strip menu
+            else if (ev.Function == ContentKeyFunctions.AltActivateItemInWorld && TryToggleClothingFromSlot(slot.Entity.Value))
+            {
+                ev.Handle();
+            }
         }
 
         private void AddInventoryButton(EntityUid invUid, string slotId, InventoryComponent inv)

@@ -298,6 +298,10 @@ namespace Content.Shared.Interaction
             // in-reach item being used in a slot... that should have no impact. This is functionally the same as if
             // they had somehow directly clicked on that item.
 
+            // Aurora's Song: toggleable clothing can be alt clicked to toggle
+            if (msg.AltInteract && TryHandleToggleableClothingAltClick(user.Value, item))
+                return;
+
             if (msg.AltInteract)
                 // Use 'UserInteraction' function - behaves as if the user alt-clicked the item in the world.
                 UserInteraction(user.Value, itemXform.Coordinates, item, msg.AltInteract);
