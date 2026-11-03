@@ -188,6 +188,9 @@
     enabled: true
     radius: 2
     energy: 10
+  - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 820
 
 - type: entity
   parent: OrganBaseOrganic
