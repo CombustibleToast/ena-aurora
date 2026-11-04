@@ -13,6 +13,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTail
+    - EmoteHardThump
   id: IPCVoxTail
   forcedColoring: false
 
@@ -20,6 +21,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailShort
+    - EmoteHardThump
   id: IPCVoxTailShort
   forcedColoring: false
 
@@ -27,6 +29,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailBig
+    - EmoteHardThump
   id: IPCVoxTailBig
   forcedColoring: false
 
@@ -34,6 +37,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailSpikes
+    - EmoteHardThump
   id: IPCVoxTailSpikes
   forcedColoring: false
 
@@ -41,6 +45,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailDocked
+    - EmoteHardThump
   id: IPCVoxTailDocked
   forcedColoring: false
 
@@ -48,6 +53,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailNub
+    - EmoteHardThump
   id: IPCVoxTailNub
   forcedColoring: false
 
@@ -55,6 +61,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailRaptor
+    - EmoteHardThump
   id: IPCVoxTailRaptor
   forcedColoring: false
 
@@ -62,6 +69,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailShort1
+    - EmoteHardThump
   id: IPCVoxTailShort1
   forcedColoring: false
 
@@ -69,6 +77,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailShort2
+    - EmoteHardThump
   id: IPCVoxTailShort2
   forcedColoring: false
 
@@ -76,6 +85,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailBalled
+    - EmoteHardThump
   id: IPCVoxTailBalled
   forcedColoring: false
 
@@ -83,6 +93,7 @@
   parent:
     - BaseSpeciesIPC
     - VoxTailSplit
+    - EmoteHardThump
   id: IPCVoxTailSplit
   forcedColoring: false
 
@@ -151,6 +162,7 @@
 
 - type: marking
   id: IPCTailEel
+  parent: EmoteWhipThump
   bodyPart: Tail
   groupWhitelist: [IPC]
   sprites:

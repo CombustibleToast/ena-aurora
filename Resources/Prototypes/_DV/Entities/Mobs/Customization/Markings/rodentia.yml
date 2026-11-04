@@ -317,6 +317,7 @@
   parent: # Aurora Song: Inherit species restrictions and part categories.
   - BaseSpeciesRodentiaHybrid
   - BaseTail
+  - EmoteHardThump
   id: RodentiaTailBeaver
   sprites:
     - sprite: _DV/Mobs/Customization/Rodentia/tail_markings.rsi
@@ -368,6 +369,7 @@
   parent: # Aurora Song: Inherit species restrictions and part categories.
   - BaseSpeciesRodentiaHybrid
   - BaseTail
+  - EmoteHardThump
   id: RodentiaTailMouse
   sprites:
     - sprite: _DV/Mobs/Customization/Rodentia/tail_markings.rsi

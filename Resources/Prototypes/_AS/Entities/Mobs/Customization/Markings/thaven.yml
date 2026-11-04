@@ -107,21 +107,21 @@
 
 #region Tail
 - type: marking
-  parent: [BaseTail, BaseSpeciesThaven]
+  parent: [BaseTail, BaseSpeciesThaven, EmoteWhipThump]
   id: ThavenTailCarpish
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
     state: carpish
 
 - type: marking
-  parent: [BaseTail, BaseSpeciesThaven]
+  parent: [BaseTail, BaseSpeciesThaven, EmoteWhipThump]
   id: ThavenTailDraconicLong
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi
     state: draconiclong
 
 - type: marking
-  parent: [BaseTail, BaseSpeciesThaven]
+  parent: [BaseTail, BaseSpeciesThaven, EmoteWhipThump]
   id: ThavenTailFish
   sprites:
   - sprite: _Funkystation/Mobs/Customization/Thaven/tail.rsi

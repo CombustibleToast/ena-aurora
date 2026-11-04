@@ -1,4 +1,4 @@
-﻿- type: emoteSounds
+- type: emoteSounds
   id: FairySpeech
   params:
     variation: 0.125
@@ -55,6 +55,24 @@
       collection: FairyFlutter
     Flap:
       collection: FairyFlutter
+
+- type: emoteSounds
+  id: ThavenTailEmotes
+  sounds:
+    Thump:
+      path: /Audio/_AS/Effects/Towel/towel_whip_crack3.ogg
+      params:
+        volume: -5
+        variation: 0.125
+
+- type: emoteSounds
+  id: AllulaloTailEmotes
+  sounds:
+    Thump:
+      path: /Audio/Voice/Reptilian/reptilian_tailthump.ogg
+      params:
+        volume: -6
+        variation: 0.125
 
 - type: emoteSounds
   id: BloodCultCat

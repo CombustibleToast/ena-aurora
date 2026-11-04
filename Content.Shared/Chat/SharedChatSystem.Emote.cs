@@ -216,7 +216,7 @@ public abstract partial class SharedChatSystem
         }
 
         // Check if the emote is available for all
-        if (!emote.Available)
+        if (!emote.Available && !HasGrantedEmote(source, emote)) // Aurora's Song - emote grants
         {
             return false;
         }

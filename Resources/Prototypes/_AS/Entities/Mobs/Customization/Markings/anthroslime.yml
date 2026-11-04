@@ -101,6 +101,7 @@
 
 - type: marking
   id: SlimeFeroxiTail
+  parent: EmoteWhipThump
   bodyPart: Tail
   groupWhitelist: [Slime]
   sprites:
@@ -168,6 +169,7 @@
 # Lizard slimes
 - type: marking
   id: SlimeLizardTail
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Slime]
   sprites:
@@ -176,6 +178,7 @@
 
 - type: marking
   id: SlimeLizardSnake
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Slime]
   sprites:
@@ -184,6 +187,7 @@
 
 - type: marking
   id: SlimeLizardSnakeLarge
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Slime]
   sprites:
@@ -193,6 +197,7 @@
 # Vox slimes
 - type: marking
   id: SlimeVoxTail
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Slime]
   sprites:

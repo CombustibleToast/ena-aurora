@@ -237,6 +237,7 @@
 
 - type: marking
   id: DionaLightTail
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -249,6 +250,7 @@
 
 - type: marking
   id: DionaNymphTail
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -273,6 +275,7 @@
 
 - type: marking
   id: DionaSnakeTail
+  parent: EmoteHardThump
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -281,6 +284,7 @@
 
 - type: marking
   id: DionaWillowWingChest
+  parent: EmoteFlutter
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -291,6 +295,7 @@
 
 - type: marking
   id: DionaBranchWingChest
+  parent: EmoteFlutter
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -299,6 +304,7 @@
 
 - type: marking
   id: DionaLadybugChest
+  parent: EmoteFlutter
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -309,6 +315,7 @@
 
 - type: marking
   id: DionaSylvanChest
+  parent: EmoteFlutter
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:
@@ -317,6 +324,7 @@
 
 - type: marking
   id: DionaLittleWingChest
+  parent: EmoteFlutter
   bodyPart: Tail
   groupWhitelist: [Diona]
   sprites:

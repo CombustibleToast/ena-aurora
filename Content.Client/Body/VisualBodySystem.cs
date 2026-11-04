@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Client.DisplacementMap;
+using Content.Shared._AS.Chat; // Aurora's Song - cached emote grants.
 using Content.Shared.Body;
 using Content.Shared.CCVar;
 using Content.Shared.DisplacementMap;
@@ -20,6 +21,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
     [Dependency] private DisplacementMapSystem _displacement = default!;
     [Dependency] private MarkingManager _marking = default!;
     [Dependency] private SpriteSystem _sprite = default!;
+    [Dependency] private MarkingEmoteCacheSystem _markingEmoteCache = null!; // Aurora's Song - caching for emote grants
 
     public override void Initialize()
     {
@@ -110,6 +112,7 @@ public sealed partial class VisualBodySystem : SharedVisualBodySystem
 
     private void OnMarkingsState(Entity<VisualOrganMarkingsComponent> ent, ref AfterAutoHandleStateEvent args)
     {
+        _markingEmoteCache.InvalidateOrgan(ent.Owner); // Aurora's Song - refresh cached emote grants.
         if (Comp<OrganComponent>(ent).Body is not { } body)
             return;
 

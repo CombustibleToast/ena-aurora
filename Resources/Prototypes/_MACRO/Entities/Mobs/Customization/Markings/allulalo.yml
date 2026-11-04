@@ -277,6 +277,7 @@
 
 - type: marking
   id: AllulaloTailDefault
+  parent: EmoteSmallHardThump # Aurora's Song - quieter tail thump.
   bodyPart: Tail
   groupWhitelist: [ Allulalo ]
   sprites:
@@ -289,6 +290,7 @@
 
 - type: marking
   id: AllulaloTailThick
+  parent: EmoteSmallHardThump # Aurora's Song - quieter tail thump.
   bodyPart: Tail
   groupWhitelist: [ Allulalo ]
   sprites:
@@ -299,6 +301,7 @@
 
 - type: marking
   id: AllulaloTailThickSpikes
+  parent: EmoteSmallHardThump # Aurora's Song - quieter tail thump.
   bodyPart: Tail
   groupWhitelist: [ Allulalo ]
   sprites:

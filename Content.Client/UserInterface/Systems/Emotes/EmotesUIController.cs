@@ -134,7 +134,8 @@ public sealed partial class EmotesUIController : UIController, IOnStateChanged<G
 
     private IEnumerable<RadialMenuOptionBase> ConvertToButtons(IEnumerable<EmotePrototype> emotePrototypes)
     {
-        var whitelistSystem = EntitySystemManager.GetEntitySystem<EntityWhitelistSystem>();
+        // var whitelistSystem = EntitySystemManager.GetEntitySystem<EntityWhitelistSystem>(); // Aurora's Song - emote granting
+        var chatSystem = EntitySystemManager.GetEntitySystem<SharedChatSystem>(); // Aurora's Song - emote granting
         var player = _playerManager.LocalSession?.AttachedEntity;
 
         Dictionary<EmoteCategory, List<RadialMenuOptionBase>> emotesByCategory = new();
@@ -143,17 +144,13 @@ public sealed partial class EmotesUIController : UIController, IOnStateChanged<G
             if(emote.Category == EmoteCategory.Invalid)
                 continue;
 
-            // only valid emotes that have ways to be triggered by chat and player have access / no restriction on
+            // Aurora's Song start - Use shared emote eligibility for marking and trait grants.
             if (emote.Category == EmoteCategory.Invalid
                 || emote.ChatTriggers.Count == 0
-                || !(player.HasValue && whitelistSystem.IsWhitelistPassOrNull(emote.Whitelist, player.Value))
-                || whitelistSystem.IsWhitelistPass(emote.Blacklist, player.Value))
+                || !player.HasValue
+                || !chatSystem.AllowedToUseEmote(player.Value, emote))
                 continue;
-
-            if (!emote.Available
-                && EntityManager.TryGetComponent<SpeechComponent>(player.Value, out var speech)
-                && !speech.AllowedEmotes.Contains(emote.ID))
-                continue;
+            // Aurora's Song end
 
             if (!emotesByCategory.TryGetValue(emote.Category, out var list))
             {
