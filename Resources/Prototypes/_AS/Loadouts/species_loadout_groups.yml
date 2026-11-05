@@ -36,3 +36,30 @@
   - SLEForcedClothingOuterEVASuitSLE
   fallbacks:
   - SLEForcedClothingOuterEVASuitSLE
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeForcedHelmet
+  name: loadout-group-contractor-head
+  hidden: true # Auto applied to Sheleg
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SyndicateRepresentativeForcedHelmetSyndicate
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeForcedOuterClothing
+  name: loadout-group-contractor-outerclothing
+  hidden: true # Auto applied to Sheleg
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SyndicateRepresentativeForcedClothingOuterEVASuit
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeForcedOuterClothing
+  name: loadout-group-contractor-outerclothing
+  hidden: true # Auto applied to Sheleg
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - NanotrasenRepresentativeForcedClothingOuterEVASuit

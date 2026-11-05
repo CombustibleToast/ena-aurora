@@ -128,6 +128,7 @@
     sprite: Clothing/Ears/Headsets/engineering.rsi
 
 # Nanotrasen
+
 - type: entity
   parent: [ ClothingHeadsetAlt, C2ContrabandNanoTrasenRestricted ]
   id: ASClothingHeadsetNanotrasen
@@ -143,3 +144,27 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyNanotrasen
+
+- type: entity
+  parent: [ ASClothingHeadsetNanotrasen, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingHeadsetNanotrasenRepresentative
+  name: nanotrasen representative's over-ear headset
+  description: An updated over-ear headset used by employees of Nanotrasen.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyNanotrasen
+
+#region Syndicate
+
+- type: entity
+  parent: [ ClothingHeadsetAltSyndicate, C2ContrabandSyndicateRestrictedUnredeemable ]
+  id: ASClothingHeadsetSyndicateRepresentative
+  name: blood-red representative's over-ear headset
+  description: An updated, modular syndicate intercom that fits over the head and takes encryption keys (there are 5 key slots.).
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeySyndie

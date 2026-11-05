@@ -1,0 +1,25 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingNeckScarf
+  equipment:
+    neck: ClothingNeckScarfStripedCentcom
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingNeckCloakOffcoat
+  equipment:
+    neck: ASClothingNeckCloakNanotrasenRepresentativeOffcoat
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingNeckCloak
+  equipment:
+    neck: ASClothingNeckCloakNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingNeckMantle
+  equipment:
+    neck: ASClothingNeckMantleNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingNeckCollar
+  equipment:
+    neck: ClothingNeckCollarCC
+

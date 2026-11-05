@@ -1,0 +1,14 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingBackpackMessenger
+  equipment:
+    back: ASClothingBackpackDuffelNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBackpackDuffel
+  equipment:
+    back: ASClothingBackpackMessengerNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingBackpackSatchelCommandveteran
+  equipment:
+    back: ClothingBackpackSatchelCommandveteran

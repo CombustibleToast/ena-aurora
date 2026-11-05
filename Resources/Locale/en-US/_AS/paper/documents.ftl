@@ -1,0 +1,41 @@
+contraband-permit-nanotrasen = {"["}color=#1a7334]▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    █▄░█░░ [color=#0a4822][bold]CONTRABAND LICENSURE[/bold][/color]
+    █░▀██▀ [color=#0a4822]LICENSED BY[/color]: [color=#a7671c]TEXT HERE[/color]
+    ░░░░█░ [color=#0a4822]DATE & TIME[/color]: [color=#a7671c]TEXT HERE[/color]
+    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄[/color]
+    {"["}head=3]1) Recipient[/head]
+    Recipient name: [color=#a7671c]Sample Person[/color]
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+    {"["}head=3]2) Items[/head]
+    Allowed Item(s):
+    - [color=#a7671c]Sample Item[/color]
+    - [color=#a7671c]Sample Item[/color]
+    - [color=#a7671c]Sample Item[/color]
+    - [color=#a7671c]Sample Item[/color]
+    {"["}color=#0a4822]══──══──══──══──══──══──══──══──══──══──══[/color]
+    {"["}italic][color=DarkGray]This document is legally binding when signed by the NanoTrasen Representative and the requesting party.[/color][/italic]
+    {"["}color=#1a7334]══════════════════════════════════════════[/color]
+    {"["}italic][color=DarkGray]Treaty stipulations pertaining to § 201.2 // this document is officiated between the Auroran Government and NanoTrasen.[/color][/italic]
+    {"["}color=#0a4822]══──══──══──══──══──══──══──══──══──══──══[/color]
+    {"["}color=#1a7334]                       ♦[mono]For the Glory of NanoTrasen[/mono]♦[/color]
+
+contraband-permit-syndicate = {"["}color=#b12023]▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+    ▄█▀▀▀▀ [bold]CONTRABAND LICENSURE[/bold]
+    ▀████▄ LICENSED BY: [color=#0a573a]TEXT HERE[/color]
+    ▄▄▄▄█▀ DATE & TIME: [color=#0a573a]TEXT HERE[/color]
+    ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄[/color]
+    {"["}head=3]1) Recipient[/head]
+    Recipient name:   [color=#0a573a]Sample Person[/color]
+    ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+    {"["}head=2]2) Items[/head]
+    Allowed Item(s):
+    - [color=#0a573a]Sample Item[/color]
+    - [color=#0a573a]Sample Item[/color]
+    - [color=#0a573a]Sample Item[/color]
+    - [color=#0a573a]Sample Item[/color]
+    {"["}color=#b12023]══──══──══──══──══──══──══──══──══──══──══[/color]
+    {"["}italic][color=DarkGray]This document is legally binding when signed by the Syndicate Representative and the requesting party.[/color][/italic]
+    {"["}color=#b12023]══════════════════════════════════════════[/color]
+    {"["}italic][color=DarkGray]Treaty stipulations pertaining to § 201.1 // this document is officiated between the Auroran Government and Spinward Sector Authorties.[/color][/italic]
+    {"["}color=#b12023]══──══──══──══──══──══──══──══──══──══──══[/color]
+    {"["}color=#b12023]                           ♦[mono]For the Spinward Sector[/mono]♦[/color]

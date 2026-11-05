@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.2.1
   forkId: ""
   forkVersion: ""
-  time: 09/26/2026 06:19:55
-  entityCount: 13760
+  time: 10/24/2026 21:03:11
+  entityCount: 13762
 maps:
 - 1
 grids:
@@ -81986,6 +81986,13 @@ entities:
     - type: Transform
       pos: -12.5,-12.5
       parent: 2
+- proto: SpawnPointNanotrasenRepresentative
+  entities:
+  - uid: 13761
+    components:
+    - type: Transform
+      pos: -16.5,3.5
+      parent: 2
 - proto: SpawnPointObserver
   entities:
   - uid: 12006
@@ -82047,6 +82054,13 @@ entities:
     components:
     - type: Transform
       pos: 0.5,46.5
+      parent: 2
+- proto: SpawnPointSyndicateRepresentative
+  entities:
+  - uid: 13762
+    components:
+    - type: Transform
+      pos: -18.5,3.5
       parent: 2
 - proto: SpawnPointValet
   entities:

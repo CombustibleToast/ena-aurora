@@ -29,3 +29,13 @@
   roles:
   - SiteManager
   - SiteWorker
+
+- type: department
+  id: Corporate
+  name: department-corporate
+  description: department-corporate
+  color: "#334E6D"
+  weight: 90
+  roles:
+  - SyndicateRepresentative
+  - NanotrasenRepresentative

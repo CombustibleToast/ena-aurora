@@ -415,3 +415,56 @@
 
 - type: roleLoadout
   id: JobColonialCommandOfficial
+
+#region Corporate
+
+- type: roleLoadout
+  id: JobSyndicateRepresentative
+  groups:
+  - SyndicateRepresentativeHead
+  - SyndicateRepresentativeForcedHelmet # Auto applied to sheleg, needs a forced helmet since syndicate EVA isn't a toggle like the rest
+  - SyndicateRepresentativeNeck
+  - SyndicateRepresentativeJumpsuit
+  - SyndicateRepresentativeGloves
+  - SyndicateRepresentativeBackpack
+  - SyndicateRepresentativeOuterClothing
+  - SyndicateRepresentativeForcedOuterClothing # Auto applied to sheleg
+  - SyndicateRepresentativeShoes
+  - SyndicateRepresentativeEars
+  - SyndicateRepresentativeBelt
+  - SyndicateRepresentativePDA
+  - SyndicateRepresentativeBackpackItems
+  - SyndicateRepresentativeHandItems
+  - ContractorGlasses
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific
+
+- type: roleLoadout
+  id: JobNanotrasenRepresentative
+  groups:
+  - NanotrasenRepresentativeHead
+  - NanotrasenRepresentativeNeck
+  - NanotrasenRepresentativeJumpsuit
+  - NanotrasenRepresentativeGloves
+  - NanotrasenRepresentativeBackpack
+  - NanotrasenRepresentativeOuterClothing
+  - NanotrasenRepresentativeForcedOuterClothing # Auto applied to sheleg
+  - NanotrasenRepresentativeShoes
+  - NanotrasenRepresentativeEars
+  - NanotrasenRepresentativeBelt
+  - NanotrasenRepresentativePDA
+  - NanotrasenRepresentativeBackpackItems
+  - NanotrasenRepresentativeHandItems
+  - ContractorGlasses
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific

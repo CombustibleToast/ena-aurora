@@ -22,3 +22,7 @@ job-description-cafjanitor = Keep the sector clean at all costs.
 job-description-cafleader = Command CAF Tactical Teams in high-risk operations.
 job-description-cafmedic = Provide aid in the most dangerous of circumstances.
 job-description-caftrooper = Put down any threats your Commander points you at.
+
+# Corporate
+job-description-syndicate-representative = Represent the Syndicate's interests in the sector.
+job-description-nanotrasen-representative = Represent NanoTrasen's interests in the sector.

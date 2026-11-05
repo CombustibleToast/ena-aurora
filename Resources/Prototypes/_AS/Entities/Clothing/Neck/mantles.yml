@@ -51,3 +51,8 @@
     sprite: _Goobstation/Clothing/Neck/Mantle/bsomantle.rsi
   - type: StaticPrice
     price: 200
+
+- type: entity
+  parent: [ ClothingNeckMantleSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingNeckMantleNanotrasenRepresentative
+  name: nanotrasen representative's mantle

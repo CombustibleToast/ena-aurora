@@ -131,3 +131,10 @@
         color: "#0F2854"
       - state: clasp-inhand-right
         color: "#eca615"
+
+#region Nanotrasen
+
+- type: entity
+  parent: [ ClothingBackpackMessengerSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingBackpackMessengerNanotrasenRepresentative
+  name: nanotrasen representative's messenger bag

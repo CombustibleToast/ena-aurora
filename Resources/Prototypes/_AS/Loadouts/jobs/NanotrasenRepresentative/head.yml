@@ -1,0 +1,15 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingHeadHatBeret
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ASClothingHeadBeretNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingHeadHatCap
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ASClothingHeadCapNanotrasenRepresentative

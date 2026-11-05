@@ -1,0 +1,4 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeClothingHeadsetAlt
+  equipment:
+    ears: ASClothingHeadsetNanotrasenRepresentative

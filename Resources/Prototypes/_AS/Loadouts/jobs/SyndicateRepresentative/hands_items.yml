@@ -1,0 +1,17 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeTowel
+  name: syndicate towel
+  inhand:
+  - TowelColorSyndicate
+
+- type: loadout
+  id: SyndicateRepresentativeBalloon
+  name: syndie balloon
+  inhand:
+  - BalloonSyn
+
+- type: loadout
+  id: SyndicateRepresentativeHandyFlag
+  name: syndicate flag
+  inhand:
+  - SyndieHandyFlag

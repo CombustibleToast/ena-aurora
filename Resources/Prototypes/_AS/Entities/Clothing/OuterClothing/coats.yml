@@ -102,3 +102,19 @@
         Piercing: 0.7
         Heat: 0.8
         Shock: 0.9
+
+#region Nanotrasen
+
+- type: entity
+  parent: [ ClothingOuterStorageBase, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingOuterCoatNanotrasenRepresentative
+  name: nanotrasen representative's coat
+  description: An expensive coat worn only by the most esteemed NanoTrasen officials.
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Clothing/OuterClothing/Coats/ntr_coat.rsi
+  - type: Clothing
+    sprite: _Funkystation/Clothing/OuterClothing/Coats/ntr_coat.rsi
+  - type: Item
+    size: Normal
+

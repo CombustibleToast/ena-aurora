@@ -1,0 +1,112 @@
+﻿- type: loadoutGroup
+  id: SyndicateRepresentativeHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - SyndicateRepresentativeClothingHeadBeret
+  - SyndicateRepresentativeClothingHeadCap
+  - SyndicateRepresentativeClothingHeadMasterAtArms
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - SyndicateRepresentativeClothingNeckScarf
+  - SyndicateRepresentativeClothingNeckScarfGreen
+  - SyndicateRepresentativeClothingNeckCollar
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - SyndicateRepresentativeClothingFormalJumpsuit
+  - SyndicateRepresentativeClothingFormalJumpskirt
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeGloves
+  minLimit: 0
+  name: loadout-group-contractor-gloves
+  loadouts:
+  - SyndicateRepresentativeClothingHandsGlovesCombat
+  - SyndicateRepresentativeClothingHandsGlovesFlight
+  - SyndicateRepresentativeClothingHandsGlovesPapercut
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeBackpack
+  name: loadout-group-contractor-backpack
+  loadouts:
+  - SyndicateRepresentativeClothingBackpackMessenger
+  - SyndicateRepresentativeClothingBackpackDuffel
+  - SyndicateRepresentativeClothingBackpack
+  - SyndicateRepresentativeClothingBackpackSatchelCommandveteran
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeOuterClothing
+  minLimit: 0
+  name: loadout-group-contractor-outerclothing
+  loadouts:
+  - SyndicateRepresentativeClothingOuterCoat
+  - SyndicateRepresentativeClothingOuterWinterCoatCap
+  - SyndicateRepresentativeClothingOuterWinterCoat
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - SyndicateRepresentativeClothingBootsWinterSyndicate
+  - SyndicateRepresentativeClothingBootsHighHeel
+  - SyndicateRepresentativeClothingBootsCombat
+  - SyndicateRepresentativeClothingBootsJack
+  - SyndicateRepresentativeClothingBootsWinter
+  - SyndicateRepresentativeClothingShoesBootsLaceup
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeBelt
+  minLimit: 0
+  name: loadout-group-contractor-belt
+  loadouts:
+  - SyndicateRepresentativeClothingBeltSheathFilledHilt
+  - SyndicateRepresentativeBoxFolderClipboard
+  - SyndicateRepresentativeClothingBeltHolster
+  - SyndicateRepresentativeClothingBeltSheathFilled
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeEars
+  name: loadout-group-contractor-ears
+  hidden: true # Auto-selected, therefore hidden
+  loadouts:
+  - SyndicateRepresentativeClothingHeadsetAlt
+
+- type: loadoutGroup
+  id: SyndicateRepresentativePDA
+  name: loadout-group-contractor-pda
+  hidden: true # Auto-selected, therefore hidden
+  loadouts:
+  - SyndicateRepresentativePDA
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeHandItems
+  name: loadout-group-contractor-hand-items
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - SyndicateRepresentativeBalloon
+  - SyndicateRepresentativeTowel
+  - SyndicateRepresentativeHandyFlag
+  subgroups:
+  - ContractorHandItems
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - SyndicateRepresentativeFlippo
+  - SyndicateRepresentativeFlippoCybersun
+  - SyndicateRepresentativeFlippoInterdyne
+  - SyndicateRepresentativeFlippoWaffle
+  - SyndicateRepresentativeFlippoDonk
+  subgroups:
+  - ContractorBackpackItems

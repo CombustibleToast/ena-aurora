@@ -681,3 +681,53 @@
       map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"
       visible: false
+
+#region Corporate
+
+- type: entity
+  parent: [ SyndiCommanderPDA, C2ContrabandSyndicateRestrictedUnredeemable]
+  id: ASSyndicateRepresentativePDA
+  name: syndicate representative PDA
+  description: How many did you have to sacrifice to get here?
+  components:
+  - type: Pda
+    id: ASSyndicateRepresentativeIDCard
+    penSlot:
+      startingItem: CyberPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: CartridgeLoader
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - BountyContractsCartridge
+      - AstroNavCartridge
+      - NanoChatCartridge
+
+- type: entity
+  parent: [ SrPDA, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASNanotrasenRepresentativePDA
+  name: nanotrasen representative PDA
+  description: Looks like it's been clawed on.
+  components:
+  - type: Pda
+    id: ASNanotrasenRepresentativeIDCard
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: CartridgeLoader
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - BountyContractsCartridge
+      - AstroNavCartridge
+      - NanoChatCartridge

@@ -70,3 +70,10 @@
       - state: inhand-right-handle
         color: "#fbe6b8"
       - state: inhand-right-zipper
+
+#region Nanotrasen
+
+- type: entity
+  parent: [ ClothingBackpackDuffelSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingBackpackDuffelNanotrasenRepresentative
+  name: nanotrasen representative's duffel
