@@ -62,15 +62,6 @@
       slotFlags: MASK
       strippingWindowPos: 1,1
       displayName: Mask
-      whitelist:
-        components:
-        - IdentityBlocker
-        tags:
-        - IPCMaskWearable
-        # Start TheDen - Allow IPCs to smoke
-        - Cigarette
-        - Cigar
-        # End TheDen
     - name: neck2 # Aurora's Song - Second neck slot
       slotTexture: neck
       slotFlags: NECK # Aurora's Song - Both neck slots accept normal neck items
