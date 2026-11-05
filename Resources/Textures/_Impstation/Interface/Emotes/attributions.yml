@@ -18,6 +18,7 @@
   source: "https://github.com/impstation/imp-station-14"
 
 - files:
+  - backflip.png
   - jump.png
   - spin.png
   license: "CC-BY-SA-4.0"
