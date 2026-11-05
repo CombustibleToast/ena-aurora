@@ -37,6 +37,7 @@ public sealed partial class StickySystem : EntitySystem
 
         // try stick object to a clicked target entity
         args.Handled = StartSticking(ent, target, args.User);
+        args.SpawnInteractionParticles = false; // Aurora's Song - Sticky objects do not display interaction particles
     }
 
     private void OnGetVerbs(Entity<StickyComponent> ent, ref GetVerbsEvent<Verb> args)
