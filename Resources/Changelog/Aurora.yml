@@ -1,230 +1,5 @@
 AdminOnly: false
 Entries:
-- author: AvianMaiden
-  changes:
-  - message: Gas tanks worn on armor are now a little more fashionable and strapless!
-    type: Add
-  id: 9132
-  time: '2026-04-21T05:06:42.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/964
-- author: Vandanna
-  changes:
-  - message: more holopads to Port Boreal
-    type: Add
-  - message: weird sideways water tile on Port Boreal
-    type: Fix
-  id: 9133
-  time: '2026-04-21T08:12:41.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/969
-- author: BudaLope
-  changes:
-  - message: ghost hearing defaults to off
-    type: Tweak
-  id: 9134
-  time: '2026-04-23T06:13:15.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/975
-- author: AvianMaiden
-  changes:
-  - message: Arcadia no longer has to use Syndicate comms for their own.
-    type: Add
-  - message: Nanotrasen also has their own comms, but currently admeme use only.
-    type: Add
-  id: 9135
-  time: '2026-04-23T08:08:40.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/965
-- author: Zenixic
-  changes:
-  - message: Added beacons, more station maps, posters, emergency closets and ATMs to The Alley.
-    type: Add
-  - message: 'Placed borg chargers on the docking arms at The Alley '
-    type: Add
-  - message: Redid wiring and piping on The Alley.
-    type: Tweak
-  - message: Broke down a few walls on The Alley to make extra storefronts.
-    type: Tweak
-  id: 9136
-  time: '2026-04-23T08:24:32.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/963
-- author: Vandanna
-  changes:
-  - message: Blue Phone added, placed one on SLEO and on the Port Boreal bridge
-    type: Add
-  - message: Restored Red Phone to vanilla loc string
-    type: Tweak
-  id: 9137
-  time: '2026-04-23T08:31:45.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/979
-- author: salamanderskies
-  changes:
-  - message: IPC guidebook is now in the species section of the guidebook.
-    type: Fix
-  id: 9138
-  time: '2026-04-23T08:32:22.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/972
-- author: ZigTag
-  changes:
-  - message: upstream merge to commit before nubody
-    type: Add
-  id: 9415
-  time: '2026-04-26T22:50:01.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/945
-- author: ZigTag
-  changes:
-  - message: NF Deep Fryer
-    type: Fix
-  id: 9416
-  time: '2026-04-28T04:35:41.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/986
-- author: GreyScaleHarlequin
-  changes:
-  - message: Silicon charge System updated to fix draw rate and prevent divide by 0
-    type: Fix
-  - message: IPC HUD battery indicator now shows correctly
-    type: Fix
-  - message: NF canisters RSI adjusted to have labels - still need visual adjust, prevents errors
-    type: Fix
-  - message: Medical rigs carry medkit slot again
-    type: Fix
-  - message: PDA Sentience Obliteration Arc (commented out on the base PDA)
-    type: Remove
-  - message: Reinforced Jugs made to use correct SolutionContainerManager
-    type: Fix
-  - message: Alternate role timers work again
-    type: Fix
-  id: 9417
-  time: '2026-04-28T04:53:41.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/987
-- author: Oberonics
-  changes:
-  - message: Gorlex match boxes are no longer worth 25 EC overall.
-    type: Fix
-  id: 9418
-  time: '2026-04-28T20:57:53.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/982
-- author: Zenixic
-  changes:
-  - message: "Alley: Linked shop windoors to a button that weren't before. unlocked windoors in medical. Tossed a chair out as well."
-    type: Tweak
-  id: 9419
-  time: '2026-04-28T21:05:06.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/981
-- author: CombustibleToast
-  changes:
-  - message: Trit ignites at the normal temperature (revert frontiermos value)
-    type: Tweak
-  id: 9420
-  time: '2026-04-28T21:12:26.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/990
-- author: Zenixic
-  changes:
-  - message: Ported the updated Crescent from NF
-    type: Tweak
-  - message: Adds Dinghy to the Crescent shipyard
-    type: Add
-  id: 9421
-  time: '2026-04-28T22:40:55.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/977
-- author: Zephyrpak
-  changes:
-  - message: Hair is now selectable for reptilians!
-    type: Add
-  id: 9422
-  time: '2026-04-29T01:49:35.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/984
-- author: Zenixic
-  changes:
-  - message: Ported Colored paper from frontier, also adds it to the Crescent.
-    type: Add
-  - message: Increased price of the loader by 100.
-    type: Tweak
-  id: 9423
-  time: '2026-04-29T06:41:22.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/991
-- author: Oberonics
-  changes:
-  - message: The main reason for ESS failures has been fixed. Contraband clothing wearers are no longer left behind by the ESS. Shout out to Salamander and Abigail for figuring this out.
-    type: Fix
-  id: 9424
-  time: '2026-04-29T06:48:51.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/992
-- author: Vandanna
-  changes:
-  - message: Bluespace Auth form
-    type: Fix
-  - message: Citation forms
-    type: Add
-  - message: CAF suit resists
-    type: Tweak
-  id: 9425
-  time: '2026-04-29T14:11:13.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/993
-- author: crekulon
-  changes:
-  - message: 'Two new emotes to fairies: wing fluttering, and glimmering!'
-    type: Add
-  - message: Fairy emotes for yawning, crying, and sighing have new sounds!
-    type: Tweak
-  id: 9426
-  time: '2026-04-29T22:42:23.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/968
-- author: Phoenix51505
-  changes:
-  - message: Reimplements persistent and informative medical implants
-    type: Fix
-  - message: Death Implants now inform medics how long you have been dead for.
-    type: Add
-  id: 9427
-  time: '2026-04-30T23:59:17.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/997
-- author: Phoenix51505
-  changes:
-  - message: Fixed melee attack animations being rotated wrong if your camera is rotated.
-    type: Fix
-  id: 9428
-  time: '2026-05-01T00:05:44.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1008
-- author: entings
-  changes:
-  - message: Replicants are no longer expected to survive on a measly single unit of oxidant.
-    type: Fix
-  id: 9429
-  time: '2026-05-01T00:13:33.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1005
-- author: salamanderskies
-  changes:
-  - message: Energy weapons with multiple firemodes once again show what mode they're set to as a pop-up
-    type: Fix
-  id: 9430
-  time: '2026-05-01T00:19:09.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/998
-- author: entings
-  changes:
-  - message: Gold, silver, and ores should now stack just as neatly as the rest of their fellows.
-    type: Fix
-  id: 9431
-  time: '2026-05-01T00:25:19.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1004
-- author: ZigTag
-  changes:
-  - message: portable pump is now functional
-    type: Fix
-  id: 9432
-  time: '2026-05-01T00:26:19.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1000
-- author: salamanderskies
-  changes:
-  - message: Paracusia-havers will now hallucinate a wider variety of sounds!
-    type: Tweak
-  id: 9433
-  time: '2026-05-01T00:58:26.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1006
-- author: ZigTag
-  changes:
-  - message: the server should no longer delete random grids...hopefully
-    type: Fix
-  id: 9434
-  time: '2026-05-03T11:07:50.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1017
 - author: TheLuggage05
   changes:
   - message: Added the Hushpup silenced shotgun to the game, and to expedition loot tables. Go nuts.
@@ -3922,3 +3697,226 @@ Entries:
   id: 9907
   time: '2026-11-02T09:21:15.2668802+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1720
+- author: unafil
+  changes:
+  - message: Flashlights now follow your cursor in combat mode! And you can spin in chairs a bit better now.
+    type: Tweak
+  id: 9908
+  time: '2026-11-05T07:41:52.8470808+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1732
+- author: Sere
+  changes:
+  - message: Took the IPC mask whitelist out back and shot it. Alot.
+    type: Remove
+  id: 9909
+  time: '2026-11-05T07:41:52.8473083+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1745
+- author: AirFryerBuyOneGetOneFree, crocodilecarousel, hivehum, Sere
+  changes:
+  - message: FLIPPING. @FLIPS. DO A FLIP.
+    type: Add
+  id: 9910
+  time: '2026-11-05T07:41:52.8473248+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1718
+- author: Sere, AraiMai, Zergologist, Kadupul
+  changes:
+  - message: Add the NanoTrasen and Syndicate Representative whitelist roles.
+    type: Add
+  - message: Some drip for the NanoTrasen Representative, ported from Funky Station.
+    type: Add
+  - message: Permit templates for the NT and Syndi Reps, by Kadupul.
+    type: Add
+  id: 9911
+  time: '2026-11-05T07:41:52.8473681+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1701
+- author: TrixxedHeart
+  changes:
+  - message: Certain IPC (Snake/Vox/Reptilian/Eel), Rodentia (Mouse/Beaver), Diona (Inner Light/Nymph/Serpent), Slime (Snake/Reptilian/Vox/Feroxi), markings now grant the tail thump emote.
+    type: Add
+  - message: Certain Diona markings (Willow Wing/Ladybug/Sylvan/Little Wing) now grant the wing flutter emote.
+    type: Add
+  - message: Feroxi/Thaven can now tail thump with a new sound.
+    type: Add
+  - message: IPC's eel tail has the Feroxi tail thump sound.
+    type: Add
+  - message: Allulalo tails, with the exception of the tuft tail, can now tail thump.
+    type: Add
+  id: 9912
+  time: '2026-11-05T07:41:52.8474263+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1703
+- author: unafil
+  changes:
+  - message: Chat mode indicators are here! You can now see when somebody's on the radio, whispering, emoting, or LOOCing!
+    type: Add
+  id: 9913
+  time: '2026-11-05T07:41:52.8474495+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1734
+- author: TrixxedHeart
+  changes:
+  - message: You can now select up to two neck items in your loadout.
+    type: Tweak
+  - message: Quick equipping neck items now fills the second slot before replacing the first.
+    type: Tweak
+  - message: Issues with the second neck slot not accepting all neck items.
+    type: Fix
+  id: 9914
+  time: '2026-11-05T07:41:52.8474639+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1727
+- author: Phoebe51505
+  changes:
+  - message: Removed shipyards renaming some jobs to 'captain' and also assigning captain access groups to ship owners
+    type: Remove
+  - message: Exchanged airlocks locked to captain accesses with their unlocked variants
+    type: Tweak
+  id: 9915
+  time: '2026-11-05T07:41:52.8474755+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1608
+- author: Sere
+  changes:
+  - message: Neck Gaiters can go in neck slots.
+    type: Tweak
+  id: 9916
+  time: '2026-11-05T07:41:52.8474808+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1686
+- author: Sere
+  changes:
+  - message: The SereTech RSD has hit the production lines, a specialised RCD for all your lattice and plating needs. Purchase or print one wherever you get your Shipyard RCDs!
+    type: Add
+  id: 9917
+  time: '2026-11-05T07:41:52.8474941+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1659
+- author: TrixxedHeart
+  changes:
+  - message: Added an accessibility toggle for interaction particles
+    type: Add
+  id: 9918
+  time: '2026-11-05T07:41:52.8474998+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1740
+- author: TrixxedHeart
+  changes:
+  - message: Records computers now function properly again on stations.
+    type: Fix
+  id: 9919
+  time: '2026-11-05T07:41:52.8475100+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1620
+- author: Phoebe51505
+  changes:
+  - message: Doubled the number of names in the shipminds name set
+    type: Add
+  - message: Changed two entries in the shipmind-first nameset to be adjectives instead of adverbs
+    type: Tweak
+  id: 9920
+  time: '2026-11-05T07:41:52.8475216+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1646
+- author: unafil
+  changes:
+  - message: While trying to stand-up, you can now press your Toggle Crawling keybind to get up faster at the cost of stamina. Of course, you still need a free hand to do this.
+    type: Tweak
+  id: 9921
+  time: '2026-11-05T07:41:52.8475296+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1730
+- author: TrixxedHeart
+  changes:
+  - message: Executing with a gun that does stamina damage now stamina crits.
+    type: Tweak
+  id: 9922
+  time: '2026-11-05T07:41:52.8475468+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1685
+- author: TrixxedHeart
+  changes:
+  - message: Silicon cyborgs now have fingerprints
+    type: Add
+  - message: IPC and Silicon now have fingerprints styled like HWIDs (not real ones!)
+    type: Tweak
+  - message: IPC and Silicon now have DNA styled like MAC addresses (not real ones!)
+    type: Tweak
+  id: 9923
+  time: '2026-11-05T07:41:52.8475605+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1653
+- author: TrixxedHeart
+  changes:
+  - message: You can no longer end an expedition before your shuttle's FTL drive has finished cooldown.
+    type: Tweak
+  - message: Hardened checks around expedition map deletion to prevent shuttles from being deleted.
+    type: Tweak
+  - message: Fixed a bug where leaving an expedition before your FTL drive was ready would cause the shuttle and everyone on it to be deleted.
+    type: Fix
+  id: 9924
+  time: '2026-11-05T07:41:52.8475766+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1661
+- author: Phoebe51505
+  changes:
+  - message: An improved focusing kit has been delivered to SLE, allowing their EMP Emitters to have instant transmission and increased range.
+    type: Tweak
+  id: 9925
+  time: '2026-11-05T07:41:52.8475873+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1583
+- author: Sere
+  changes:
+  - message: Adjusted the firearm crosshair to display the red "can't fire' circle when applicable to pump-action and breech-loaded weapons.
+    type: Tweak
+  id: 9926
+  time: '2026-11-05T07:41:52.8475944+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1699
+- author: bardicJackal
+  changes:
+  - message: Gave fairies a massively bloated heat capacity.
+    type: Tweak
+  id: 9927
+  time: '2026-11-05T07:41:52.8476030+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1644
+- author: TrixxedHeart
+  changes:
+  - message: Various machines now have a chance to spark upon being hit, making them able to ignite gases and other flammable things.
+    type: Add
+  - message: Replaced IPC sparks with particles.
+    type: Tweak
+  - message: IPCs now have a 20% chance to spark upon taking any damage.
+    type: Add
+  - message: IPCs can now ignite gases when they spark.
+    type: Add
+  id: 9928
+  time: '2026-11-05T07:41:52.8476175+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1627
+- author: TrixxedHeart, sowelipililimute, Thlrds
+  changes:
+  - message: There are now interaction particles to make some of the invisible things people do more visible.
+    type: Add
+  id: 9929
+  time: '2026-11-05T07:41:52.8476292+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1614
+- author: TrixxedHeart
+  changes:
+  - message: You can now alt-click toggleable clothing in yours and other's inventories
+    type: Add
+  id: 9930
+  time: '2026-11-05T07:41:52.8476410+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1595
+- author: Sere
+  changes:
+  - message: Added Syndicate shuttle console, blueprint lithograph, new/updated debug vendors and a debug telecom server/key to the dev map.
+    type: Add
+  id: 9931
+  time: '2026-11-05T07:41:52.8476471+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1600
+- author: AlDente
+  changes:
+  - message: Air grenades can be reclaimed now, providing .5 scrap each.
+    type: Tweak
+  id: 9932
+  time: '2026-11-05T07:41:52.8476590+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1704
+- author: RobotFox
+  changes:
+  - message: Idle typing states
+    type: Fix
+  id: 9933
+  time: '2026-11-05T07:41:52.8476689+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1737
+- author: AhDente
+  changes:
+  - message: Digital signs no longer rotate.
+    type: Tweak
+  id: 9934
+  time: '2026-11-05T07:41:52.8476804+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1693
