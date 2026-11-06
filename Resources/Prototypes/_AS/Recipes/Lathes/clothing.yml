@@ -28,3 +28,10 @@
   id: ASClothingEyesHudUniversal
   parent: NFBaseWearableDeviceRecipe
   result: ASClothingEyesHudUniversal
+
+#region Belts
+
+- type: latheRecipe
+  parent: NFBaseBeltRecipe
+  id: ASClothingBeltSheath
+  result: ClothingBeltSheath

@@ -28,6 +28,7 @@
   - NFBaseClothingNeckHolsterThigh
   - NFBaseClothingNeckSheathThigh
   - Tourniquet # Aurora's Song - No better staticPack for this to slot into w/ the MercFab
+  - ASClothingBeltSheath # Aurora's Song - Add saber sheath
 
 - type: latheRecipePack
   id: NFMercenaryStorageStatic
