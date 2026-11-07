@@ -1,6 +1,7 @@
 using Content.Shared._Starfall.Particles.Visuals;
 using Content.Shared.Humanoid;
 using Content.Shared.Humanoid.Prototypes;
+using Content.Shared.IdentityManagement; // Aurora's Song
 using Content.Shared.Jittering;
 using Content.Shared.Movement.Systems;
 using Content.Shared.Popups;
@@ -101,7 +102,8 @@ public sealed partial class MigraineSystem : EntitySystem
             _popup.PopupEntity(Loc.GetString(popupEvent.SelfPopup), args.Target, args.Target, PopupType.MediumCaution);
 
         if (popupEvent.OthersPopup != null)
-            _popup.PopupEntity(Loc.GetString(popupEvent.OthersPopup, ("target", args.Target)), args.Target, Filter.PvsExcept(args.Target), true, PopupType.SmallCaution);
+            // Aurora's Song - Use proper identity
+            _popup.PopupEntity(Loc.GetString(popupEvent.OthersPopup, ("target", Identity.Entity(args.Target, EntityManager))), args.Target, Filter.PvsExcept(args.Target), true, PopupType.SmallCaution);
     }
 
     private void OnMigraineRemoved(Entity<MigraineEffectComponent> entity, ref StatusEffectRemovedEvent args)
