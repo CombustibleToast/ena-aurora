@@ -180,6 +180,8 @@ public abstract partial class SharedInteractionVerbsSystem : EntitySystem
         }
 
         CreateVerbEffects(proto.EffectSuccess, Success, proto, args);
+
+        OnInteractionVerbPerformed(proto, args); // Aurora's Song - Interaction particles
     }
 
     #endregion
@@ -277,6 +279,7 @@ public abstract partial class SharedInteractionVerbsSystem : EntitySystem
         verb.Text = proto.Name;
         verb.Message = proto.Description;
         verb.DoContactInteraction = proto.DoContactInteraction;
+        ApplyInteractionParticleTiming(proto, verb); // Aurora's Song - Interaction particles
         verb.Priority = proto.Priority;
         verb.Icon = proto.Icon;
         verb.Category = VerbCategory.Interaction;

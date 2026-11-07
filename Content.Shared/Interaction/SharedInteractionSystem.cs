@@ -530,7 +530,8 @@ namespace Content.Shared.Interaction
             var extraLogs = LoggingExtensions.GetExtraLogs(EntityManager, target);
 
             _adminLogger.Add(LogType.InteractHand, LogImpact.Low, $"{ToPrettyString(user):user} interacted with {ToPrettyString(target):target}{extraLogs}"); // Frontier
-            DoContactInteraction(user, target, null, true, message); // Stellar - interaction particles
+            // Aurora's Song - Generically clicking on someone doesn't produce a particle.
+            DoContactInteraction(user, target, null, true, message, interactionParticles: false); // Stellar - interaction particles
             if (message.Handled || userMessage.Handled)
                 return;
 
@@ -1184,7 +1185,7 @@ namespace Content.Shared.Interaction
             RaiseLocalEvent(used, activateMsg, true);
             if (activateMsg.Handled)
             {
-                DoContactInteraction(user, used, null, true); // Interaction particles
+                DoContactInteraction(user, used, null, true, interactionParticles: activateMsg.InteractionParticle); // Stellar - Interaction particles
                 if (!activateMsg.WasLogged)
                     _adminLogger.Add(LogType.InteractActivate, LogImpact.Low, $"{ToPrettyString(user):user} activated {ToPrettyString(used):used}");
 

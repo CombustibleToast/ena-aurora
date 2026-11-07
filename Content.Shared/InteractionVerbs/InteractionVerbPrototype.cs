@@ -148,6 +148,12 @@ public sealed partial class InteractionVerbPrototype : IPrototype, IInheritingPr
     [DataField("contactInteraction")]
     public bool DoContactInteraction = true;
 
+    /// <summary>
+    /// Whether this interaction displays a Stellar interaction particle.
+    /// </summary>
+    [DataField]
+    public bool InteractionParticle = true; // Aurora's Song
+
     [DataField]
     public bool RequiresHands = false;
 
