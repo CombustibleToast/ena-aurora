@@ -36,6 +36,6 @@ contraband-permit-syndicate = {"["}color=#b12023]▄▄▄▄▄▄▄▄▄▄�
     {"["}color=#b12023]══──══──══──══──══──══──══──══──══──══──══[/color]
     {"["}italic][color=DarkGray]This document is legally binding when signed by the Syndicate Representative and the requesting party.[/color][/italic]
     {"["}color=#b12023]══════════════════════════════════════════[/color]
-    {"["}italic][color=DarkGray]Treaty stipulations pertaining to § 201.1 // this document is officiated between the Auroran Government and Spinward Sector Authorties.[/color][/italic]
+    {"["}italic][color=DarkGray]Treaty stipulations pertaining to § 201.1 // this document is officiated between the Auroran Government and Orion Sector Authorties.[/color][/italic]
     {"["}color=#b12023]══──══──══──══──══──══──══──══──══──══──══[/color]
-    {"["}color=#b12023]                           ♦[mono]For the Spinward Sector[/mono]♦[/color]
+    {"["}color=#b12023]                           ♦[mono]For the Orion Sector[/mono]♦[/color]

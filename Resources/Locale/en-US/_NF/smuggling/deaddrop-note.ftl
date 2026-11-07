@@ -1,12 +1,13 @@
+# Aurora's Song Start - Changed to Orion from Spinward
 dead-drop-hint-note = Not much time.
-    Spinward Syndicate needs help.
+    Orion Syndicate needs help.
     Known drops:
 
     {$drops}
 
     Check these to lend a hand.
     For a better tomorrow.
-
+# Aurora's Song End
 dead-drop-time-known = next drop around {$time}
 dead-drop-time-unknown = next drop placed when we can
 dead-drop-hint-line = - {CAPITALIZE(INDEFINITE($object))} {$object} at {$poi} ({$time})
