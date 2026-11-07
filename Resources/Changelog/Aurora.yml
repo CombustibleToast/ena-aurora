@@ -1,40 +1,5 @@
 AdminOnly: false
 Entries:
-- author: TheLuggage05
-  changes:
-  - message: Added the Hushpup silenced shotgun to the game, and to expedition loot tables. Go nuts.
-    type: Add
-  id: 9435
-  time: '2026-05-03T17:27:02.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/988
-- author: crekulon
-  changes:
-  - message: Fairies can now be picked up and stored like items (similar to mice!)
-    type: Tweak
-  id: 9436
-  time: '2026-05-03T17:27:29.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1002
-- author: Phoenix51505
-  changes:
-  - message: Times displayed on smuggling faxes/notes no longer round the days.
-    type: Tweak
-  id: 9437
-  time: '2026-05-03T20:01:56.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1015
-- author: mart33no
-  changes:
-  - message: Added a long snake tail for Reptilians.
-    type: Add
-  id: 9438
-  time: '2026-05-03T22:40:30.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/948
-- author: CombustibleToast
-  changes:
-  - message: Mounted cannons (especially the matter dematerializer) can now shoot again
-    type: Fix
-  id: 9439
-  time: '2026-05-03T22:54:16.0000000+00:00'
-  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/999
 - author: entings
   changes:
   - message: McCargo has solved their supply problems, and their meals are once again fully stocked.
@@ -3920,3 +3885,54 @@ Entries:
   id: 9934
   time: '2026-11-05T07:41:52.8476804+00:00'
   url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1693
+- author: unafil
+  changes:
+  - message: Migraines will no longer dox you while wearing a mask.
+    type: Fix
+  id: 9935
+  time: '2026-11-07T08:42:07.5341118+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1758
+- author: Sere
+  changes:
+  - message: Replaced all mentions of Spinward with Orion.
+    type: Tweak
+  id: 9936
+  time: '2026-11-07T08:42:07.5343664+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1756
+- author: TrixxedHeart, sowelipililimute
+  changes:
+  - message: Interaction particles are now less energetic.
+    type: Tweak
+  - message: Generically clicking on an entity (like patting someone on the back) no longer produces an interaction particle.
+    type: Tweak
+  - message: Interaction particles such as hugging now only produce a particle interaction when the DoAfter is complete.
+    type: Tweak
+  - message: Sticky objects (placing C4) no longer produce an interaction particle when being placed.
+    type: Tweak
+  - message: Pulling someone now produces the correct interaction particles.
+    type: Fix
+  - message: Lumari now use the correct hand sprite for interaction particles.
+    type: Fix
+  - message: Interaction particles no longer spawn when opening the strip menu.
+    type: Fix
+  - message: Kiss and lick verb interactions no longer produce an interaction particle.
+    type: Fix
+  id: 9937
+  time: '2026-11-07T08:42:07.5344755+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1751
+- author: Sere
+  changes:
+  - message: Explosive cases display resistance on examine.
+    type: Tweak
+  - message: Explosive cases are made of slightly sturdier material, putting them on par with your beloved chest rig. (Upped to 90% resist from 80%).
+    type: Tweak
+  id: 9938
+  time: '2026-11-07T08:42:07.5345085+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1680
+- author: Sere
+  changes:
+  - message: Sabre sheathes are now lathable and purchasable via BountyVend.
+    type: Add
+  id: 9939
+  time: '2026-11-07T08:42:07.5345168+00:00'
+  url: https://codeberg.org/Aurora-Song/Aurora-Song-14/pulls/1655
