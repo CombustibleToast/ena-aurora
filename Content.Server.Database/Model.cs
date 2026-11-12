@@ -764,6 +764,8 @@ namespace Content.Server.Database
 
         [Required] public string Message { get; set; } = default!;
 
+        [Required] public bool Sensitive { get; set; } // Aurora's Song - Track sensitive admin logs independently of their message text.
+
         [Required, Column(TypeName = "jsonb")] public JsonDocument Json { get; set; } = default!;
 
         public List<AdminLogPlayer> Players { get; set; } = default!;

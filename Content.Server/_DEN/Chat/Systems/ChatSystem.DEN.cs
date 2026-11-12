@@ -76,9 +76,9 @@ public sealed partial class ChatSystem
             return;
 
         if (name != Name(source))
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {source} as {name}: {action}");
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, true, $"Subtle from {source} as {name}: {action}"); // Aurora's Song - Sensitive log
         else
-            _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle from {source}: {action}");
+            _adminLogger.Add(LogType.Chat, LogImpact.Low, true, $"Subtle from {source}: {action}"); // Aurora's Song - Sensitive log
     }
 
     private void SendSubtleOOC(EntityUid source, ICommonSession player, string message, bool hideChat)
@@ -107,6 +107,6 @@ public sealed partial class ChatSystem
             source,
             hideChat ? ChatTransmitRange.HideChat : ChatTransmitRange.Normal,
             player.UserId);
-        _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Subtle OOC from {source}: {message}");
+        _adminLogger.Add(LogType.Chat, LogImpact.Low, true, $"Subtle OOC from {source}: {message}"); // Aurora's Song - Sensitive log
     }
 }

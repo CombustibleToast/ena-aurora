@@ -311,7 +311,14 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         Add(type, LogImpact.Medium, ref handler);
     }
 
+    // Aurora's Song Start - Allow excluding sensitive flag so we don't have to change every call.
     public override void Add(LogType type, LogImpact impact, [System.Runtime.CompilerServices.InterpolatedStringHandlerArgument("")] ref LogStringHandler handler)
+    {
+        Add(type, impact, false, ref handler);
+    }
+
+    // Aurora's Song - Allow log to mark sensitive content.
+    public override void Add(LogType type, LogImpact impact, bool sensitive, [System.Runtime.CompilerServices.InterpolatedStringHandlerArgument("")] ref LogStringHandler handler)
     {
         var message = handler.ToStringAndClear();
         if (!Enabled)
@@ -344,9 +351,11 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             Impact = impact,
             Date = DateTime.UtcNow,
             Message = message,
+            Sensitive = sensitive, // Aurora's Song - Sensitive Logs
             Json = json,
             Players = players,
         };
+        // Aurora's Song End
 
         DoAdminAlerts(players, message, impact, handler);
 

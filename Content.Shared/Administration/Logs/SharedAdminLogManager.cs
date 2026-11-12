@@ -17,6 +17,12 @@ public partial class SharedAdminLogManager : ISharedAdminLogManager
         // noop
     }
 
+    // Aurora's Song - Allow logs to mark sensitive content.
+    public virtual void Add(LogType type, LogImpact impact, bool sensitive, ref LogStringHandler handler)
+    {
+        // noop
+    }
+
     public virtual void Add(LogType type, ref LogStringHandler handler)
     {
         // noop

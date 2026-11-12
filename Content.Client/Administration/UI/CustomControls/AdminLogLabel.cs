@@ -4,7 +4,8 @@ using Robust.Client.UserInterface.Controls;
 
 namespace Content.Client.Administration.UI.CustomControls;
 
-public sealed class AdminLogLabel : RichTextLabel
+// Aurora's Song - Make partial
+public sealed partial class AdminLogLabel : RichTextLabel
 {
     public AdminLogLabel(ref SharedAdminLog log, HSeparator separator)
     {
@@ -15,7 +16,7 @@ public sealed class AdminLogLabel : RichTextLabel
         OnVisibilityChanged += VisibilityChanged;
     }
 
-    public new SharedAdminLog Log { get; }
+    public new SharedAdminLog Log { get; private set; } // Aurora's Song - Sensitive admin log revealing
 
     public HSeparator Separator { get; }
 

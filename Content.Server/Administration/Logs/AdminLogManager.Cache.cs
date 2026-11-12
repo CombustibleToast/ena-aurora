@@ -51,7 +51,11 @@ public sealed partial class AdminLogManager
     private void CacheLog(AdminLog log)
     {
         var players = log.Players.Select(player => player.PlayerUserId).ToArray();
-        var record = new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players);
+        // Aurora's Song - Preserve sensitive status in cached admin logs.
+        var record = new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players)
+        {
+            Sensitive = log.Sensitive,
+        };
 
         CacheLog(record);
     }
@@ -99,6 +103,13 @@ public sealed partial class AdminLogManager
         {
             query = query.Where(log => log.Message.Contains(filter.Search, StringComparison.OrdinalIgnoreCase));
         }
+
+        // Aurora's Song Start - Exact admin log ID searches
+        if (filter.LogId != null)
+        {
+            query = query.Where(log => log.Id == filter.LogId);
+        }
+        // Aurora's Song End
 
         if (filter.Types != null && filter.Types.Count != _logTypes)
         {

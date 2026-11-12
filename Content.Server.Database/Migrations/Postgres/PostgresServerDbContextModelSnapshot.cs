@@ -120,6 +120,10 @@ namespace Content.Server.Database.Migrations.Postgres
                         .HasColumnType("text")
                         .HasColumnName("message");
 
+                    b.Property<bool>("Sensitive")
+                        .HasColumnType("boolean")
+                        .HasColumnName("sensitive");
+
                     b.Property<int>("Type")
                         .HasColumnType("integer")
                         .HasColumnName("type");
@@ -848,24 +852,6 @@ namespace Content.Server.Database.Migrations.Postgres
                             t.HasCheckConstraint("AddressNotIPv6MappedIPv4", "NOT inet '::ffff:0.0.0.0/96' >>= address");
                         });
                 });
-            // DEN Start - DENU
-            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
-            {
-                b.Property<Guid>("PlayerUserId")
-                    .HasColumnType("uuid")
-                    .HasColumnName("player_user_id");
-
-                b.Property<string>("SettingsJson")
-                    .IsRequired()
-                    .HasColumnType("jsonb")
-                    .HasColumnName("settings");
-
-                b.HasKey("PlayerUserId")
-                    .HasName("PK_denu_settings");
-
-                b.ToTable("denu_settings", (string)null);
-            });
-            // DEN End
 
             modelBuilder.Entity("Content.Server.Database.ConsentSettings", b =>
                 {

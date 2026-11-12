@@ -166,17 +166,17 @@ public sealed partial class ChatSystem
             if (originalMessage == message)
             {
                 if (name != Name(source))
-                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Whisper from {source} as {name}: {originalMessage}.");
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, true, $"Whisper from {source} as {name}: {originalMessage}."); // Aurora's Song - Sensitive admin log
                 else
-                    _adminLogger.Add(LogType.Chat, LogImpact.Low, $"Whisper from {source}: {originalMessage}.");
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, true, $"Whisper from {source}: {originalMessage}."); // Aurora's Song - Sensitive admin log
             }
             else
             {
                 if (name != Name(source))
-                    _adminLogger.Add(LogType.Chat, LogImpact.Low,
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, true, // Aurora's Song - Sensitive admin log
                     $"Whisper from {source} as {name}, original: {originalMessage}, transformed: {message}.");
                 else
-                    _adminLogger.Add(LogType.Chat, LogImpact.Low,
+                    _adminLogger.Add(LogType.Chat, LogImpact.Low, true, // Aurora's Song - Sensitive admin log
                     $"Whisper from {source}, original: {originalMessage}, transformed: {message}.");
             }
     }

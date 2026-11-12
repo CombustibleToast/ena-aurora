@@ -109,6 +109,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("message");
 
+                    b.Property<bool>("Sensitive")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("sensitive");
+
                     b.Property<int>("Type")
                         .HasColumnType("INTEGER")
                         .HasColumnName("type");
@@ -797,25 +801,6 @@ namespace Content.Server.Database.Migrations.Sqlite
 
                     b.ToTable("connection_log", (string)null);
                 });
-
-            // DEN Start - DENU
-            modelBuilder.Entity("Content.Server.Database.DenuModel+DenuSettings", b =>
-            {
-                b.Property<Guid>("PlayerUserId")
-                    .HasColumnType("TEXT")
-                    .HasColumnName("player_user_id");
-
-                b.Property<string>("SettingsJson")
-                    .IsRequired()
-                    .HasColumnType("jsonb")
-                    .HasColumnName("settings");
-
-                b.HasKey("PlayerUserId")
-                    .HasName("PK_denu_settings");
-
-                b.ToTable("denu_settings", (string)null);
-            });
-            // DEN End
 
             modelBuilder.Entity("Content.Server.Database.ConsentSettings", b =>
                 {

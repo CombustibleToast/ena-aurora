@@ -125,6 +125,11 @@ namespace Content.Shared.Administration
         NameColor = 1 << 21,
 
         /// <summary>
+        ///     Aurora's Song - Lets you reveal sensitive whisper and subtle-message admin logs.
+        /// </summary>
+        SensitiveLogs = 1 << 22,
+
+        /// <summary>
         ///     DeltaV - The ability to whitelist people. Either this permission or +BAN is required for remove.
         /// </summary>
         Whitelist = 1 << 25,

@@ -58,6 +58,8 @@ public sealed partial class AdminLogsEui : BaseEui
     {
         base.Opened();
 
+        AuditLogsOpened(); // Aurora's Song - Sensitive log auditing
+
         _adminManager.OnPermsChanged += OnPermsChanged;
 
         var roundId = _filter.Round ?? CurrentRoundId;
@@ -81,13 +83,26 @@ public sealed partial class AdminLogsEui : BaseEui
     {
         if (_isLoading)
         {
-            return new AdminLogsEuiState(CurrentRoundId, new Dictionary<Guid, string>(), 0)
+            // Aurora's Song - Replaced to include whether the admin can reveal sensitive logs.
+            // return new AdminLogsEuiState(CurrentRoundId, new Dictionary<Guid, string>(), 0)
+
+            // Aurora's Song - Sensitive log permission
+            return new AdminLogsEuiState(
+                CurrentRoundId,
+                new Dictionary<Guid, string>(),
+                0,
+                _adminManager.HasAdminFlag(Player, AdminFlags.SensitiveLogs))
             {
                 IsLoading = true
             };
         }
 
-        var state = new AdminLogsEuiState(CurrentRoundId, _players, _roundLogs);
+        // Aurora's Song - Sensitive log permission
+        var state = new AdminLogsEuiState(
+            CurrentRoundId,
+            _players,
+            _roundLogs,
+            _adminManager.HasAdminFlag(Player, AdminFlags.SensitiveLogs));
 
         return state;
     }
@@ -101,6 +116,10 @@ public sealed partial class AdminLogsEui : BaseEui
             return;
         }
 
+        // Aurora's Song - Sensitive log revealing
+        if (HandleSensitiveLogMessage(msg))
+            return;
+
         switch (msg)
         {
             case LogsRequest request:
@@ -109,11 +128,13 @@ public sealed partial class AdminLogsEui : BaseEui
 
                 _logSendCancellation.Cancel();
                 _logSendCancellation = new CancellationTokenSource();
+                ClearSensitiveLogRequestCache(); // Aurora's Song - Sensitive logs
                 _filter = new LogFilter
                 {
                     CancellationToken = _logSendCancellation.Token,
                     Round = request.RoundId,
-                    Search = request.Search,
+                    Search = NormalizeLogSearch(request.Search, out var logId), // Aurora's Song - Exact admin log ID searches
+                    LogId = logId, // Aurora's Song - Exact admin log ID searches
                     Types = request.Types,
                     Impacts = request.Impacts,
                     Before = request.Before,
@@ -174,6 +195,8 @@ public sealed partial class AdminLogsEui : BaseEui
             _filter.LastLogId = logs[largestId].Id;
         }
 
+        RedactSensitiveLogs(logs); // Aurora's Song - Sensitive admin log redaction
+
         var message = new NewLogs(logs, replace, logs.Count >= _filter.Limit);
 
         SendMessage(message);
@@ -185,6 +208,8 @@ public sealed partial class AdminLogsEui : BaseEui
 
     public override void Closed()
     {
+        ConcludeInvestigations(); // Aurora's Song - Sensitive admin log investigation auditing
+
         base.Closed();
 
         _configuration.UnsubValueChanged(CCVars.AdminLogsClientBatchSize, ClientBatchSizeChanged);

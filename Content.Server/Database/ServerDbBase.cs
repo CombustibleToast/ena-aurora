@@ -889,6 +889,12 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 query = query.Where(log => log.RoundId == filter.Round);
             }
 
+            // Aurora's Song - Allow querying admin log ID searches (i.e id:33)
+            if (filter.LogId != null)
+            {
+                query = query.Where(log => log.Id == filter.LogId);
+            }
+
             if (filter.Types != null)
             {
                 query = query.Where(log => filter.Types.Contains(log.Type));
@@ -987,7 +993,11 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                     players[i] = log.Players[i].PlayerUserId;
                 }
 
-                yield return new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players);
+                // Aurora's Song - Keep sensitive log flag
+                yield return new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players)
+                {
+                    Sensitive = log.Sensitive,
+                };
             }
         }
 
