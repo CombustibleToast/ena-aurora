@@ -52,7 +52,7 @@
 
 - type: entity
   name: syndicate jaws of death
-  parent: [JawsOfLife, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [JawsOfLife, C2ContrabandSyndicate] # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   id: SyndicateJawsOfLife
   description: Useful for breaking into secure areas and other nefarious activities.
   components:

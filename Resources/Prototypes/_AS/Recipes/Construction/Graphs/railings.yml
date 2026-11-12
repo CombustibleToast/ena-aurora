@@ -1,0 +1,338 @@
+# DeltaV Wooden Railings
+- type: constructionGraph
+  id: RailingWood
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingWood
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: WoodPlank
+        amount: 1
+        doAfter: 1
+
+  - node: RailingWood
+    entity: RailingDeltaVWood
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWoodPlank1
+        amount: 1
+      steps:
+      - tool: Prying
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingWoodCorner
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingWoodCorner
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 1
+
+  - node: RailingWoodCorner
+    entity: RailingCornerDeltaVWood
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWoodPlank1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingWoodCornerSmall
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingWoodCornerSmall
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: WoodPlank
+        amount: 1
+        doAfter: 1
+
+  - node: RailingWoodCornerSmall
+    entity: RailingCornerSmallDeltaVWood
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWoodPlank1
+        amount: 1
+      steps:
+      - tool: Prying
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingWoodRound
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingWoodRound
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: WoodPlank
+        amount: 2
+        doAfter: 1
+
+  - node: RailingWoodRound
+    entity: RailingRoundDeltaVWood
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: MaterialWoodPlank1
+        amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
+
+# DeltaV Modern Railings
+- type: constructionGraph
+  id: RailingModern
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModern
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 1
+        doAfter: 1
+
+  - node: RailingModern
+    entity: RailingDeltaV
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingModernCorner
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernCorner
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 2
+        doAfter: 1
+
+  - node: RailingModernCorner
+    entity: RailingCornerDeltaV
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 2
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingModernCornerSmall
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernCornerSmall
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 1
+        doAfter: 1
+
+  - node: RailingModernCornerSmall
+    entity: RailingCornerSmallDeltaV
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingModernRound
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernRound
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 2
+        doAfter: 1
+
+  - node: RailingModernRound
+    entity: RailingRoundDeltaV
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 2
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+# DeltaV Modern Railings, Grey
+- type: constructionGraph
+  id: RailingModernGrey
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernGrey
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 1
+        doAfter: 1
+
+  - node: RailingModernGrey
+    entity: RailingDeltaVGrey
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingModernGreyCorner
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernGreyCorner
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 2
+        doAfter: 1
+
+  - node: RailingModernGreyCorner
+    entity: RailingCornerDeltaVGrey
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 2
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingModernGreyCornerSmall
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernGreyCornerSmall
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 1
+        doAfter: 1
+
+  - node: RailingModernGreyCornerSmall
+    entity: RailingCornerSmallDeltaVGrey
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 1
+      steps:
+      - tool: Welding
+        doAfter: 1
+
+- type: constructionGraph
+  id: RailingModernGreyRound
+  start: start
+  graph:
+  - node: start
+    actions:
+    - !type:DestroyEntity {}
+    edges:
+    - to: RailingModernGreyRound
+      completed:
+      - !type:SnapToGrid
+      steps:
+      - material: Steel
+        amount: 2
+        doAfter: 1
+
+  - node: RailingModernGreyRound
+    entity: RailingRoundDeltaVGrey
+    edges:
+    - to: start
+      completed:
+      - !type:SpawnPrototype
+        prototype: SheetSteel1
+        amount: 2
+      steps:
+      - tool: Welding
+        doAfter: 1

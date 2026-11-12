@@ -82,9 +82,9 @@ stack-artifact-fragment = artifact {$amount ->
     [1] fragment
     *[other] fragments
 }
-stack-xenoborg-circuit = dvanced xenoborg {$amount ->
-    [1] circuitboard
-    *[other] circuitboards
+stack-conveyor-belt = {$amount ->
+    [1] conveyor belt
+    *[other] conveyor belts
 }
 
 # best materials
@@ -131,7 +131,7 @@ stack-brutepack = brutepack
 stack-bloodpack = bloodpack
 stack-medicated-suture = medicated-suture
 stack-regenerative-mesh = regenerative-mesh
-stack-micro-manipulator = modular machine part
+stack-micro-manipulator = manipulator
 stack-pancake = pancake
 stack-blueberry-pancake = blueberry pancake
 stack-chocolate-chip-pancake = chocolate chip pancake

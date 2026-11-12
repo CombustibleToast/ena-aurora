@@ -4,7 +4,8 @@ using Robust.Shared.Serialization;
 namespace Content.Shared.Administration.Logs;
 
 [Serializable, NetSerializable]
-public readonly record struct SharedAdminLog(
+// Aurora's Song - Make partial
+public readonly partial record struct SharedAdminLog(
     int Id,
     LogType Type,
     LogImpact Impact,

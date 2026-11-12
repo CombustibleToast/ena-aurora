@@ -1,6 +1,15 @@
-#region SLE
 - type: entity
   parent: ClothingNeckBase
+  id: ClothingNeckCloakSyndie
+  name: syndicate cloak
+  description: An imposing cloak, worn by syndicate operatives. Very stylish and might get you arrested.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Neck/Cloaks/sanabi.rsi
+
+#region SLE
+- type: entity
+  parent: [ ClothingNeckBase, C2ContrabandRestricted ]
   id: ASClothingNeckCloakCommissioner
   name: commissioner's cloak
   description: The cloak of the SLE commissioner. Projects authority.
@@ -13,7 +22,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingNeckBase
+  parent: [ ClothingNeckBase, C2ContrabandRestricted ]
   id: ASClothingNeckCloakColonialRepresentative
   name: colonial representative's cloak
   description: A stylish cloak denoting the wearer's position as Colonial Representative.
@@ -22,3 +31,22 @@
     sprite: _AS/Clothing/Neck/Cloaks/cr.rsi
   - type: Clothing
     sprite: _AS/Clothing/Neck/Cloaks/cr.rsi
+
+#region Nanotrasen
+
+- type: entity
+  parent: [ ClothingNeckBase, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingNeckCloakNanotrasenRepresentativeOffcoat
+  name: nanotrasen representative's off-coat
+  description: A coat imposingly worn as a cloak over your back. Cuts a dashing figure.
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Clothing/Neck/Cloaks/ntr_offcoat.rsi
+  - type: Clothing
+    sprite: _Funkystation/Clothing/Neck/Cloaks/ntr_offcoat.rsi
+
+- type: entity
+  parent: [ ClothingNeckCloakSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingNeckCloakNanotrasenRepresentative
+  name: nanotrasen representative's cloak
+  description: A top of the line cloak issued by NanoTrasen. Must have cost a fortune.

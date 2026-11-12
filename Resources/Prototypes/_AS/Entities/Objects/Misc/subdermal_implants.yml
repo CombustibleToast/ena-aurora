@@ -7,3 +7,87 @@
   components:
   - type: RattleOnTrigger
     radioChannel: ColCom
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: RadioImplantSLE
+  name: SLE radio implant
+  description: This implant grants access to the SLE channel without a headset.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    permanent: true
+  - type: RadioImplant
+    radioChannels:
+    - Sle
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: PrisonTrackingImplant
+  name: prison tracking implant
+  description: This implant has a condition monitor for the SLE radio channel, for tracking prisoners.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    whitelist:
+      components:
+      - MobState # admeme implanting a chair with tracking implant needs to give the chair mobstate so it can die first
+  - type: SuitSensor
+    randomMode: false
+    controlsLocked: true
+    mode: SensorCords
+    activationContainer: "implant"
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+  - type: StationLimitedNetwork
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Alive
+    - Critical
+    - Dead
+  - type: RattleOnTrigger
+    radioChannel: Sle
+
+- type: entity
+  parent: PrisonTrackingImplant
+  id: PrisonTrackingImplantPermanent
+  name: prison tracking implant
+  description: This implant has a condition monitor for the SLE radio channel, for tracking prisoners.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: SubdermalImplant
+    permanent: true
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: SectorWatchlistImplant
+  name: sector watchlist implant
+  description: A permanent tracker issued to high-risk individuals. Transmits to the SLE frequency.
+  categories: [ HideSpawnMenu ]
+  components: # Pretty much just copied the Prison Tracker, so that changes to it won't affect this.
+  - type: SubdermalImplant
+    permanent: true
+    whitelist:
+      components:
+      - MobState
+  - type: SuitSensor
+    randomMode: false
+    controlsLocked: true
+    mode: SensorCords
+    activationContainer: "implant"
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    transmitFrequencyId: SuitSensor
+  - type: StationLimitedNetwork
+  - type: WirelessNetworkConnection
+    range: 500
+  - type: TriggerOnMobstateChange
+    mobState:
+    - Alive
+    - Critical
+    - Dead
+  - type: RattleOnTrigger
+    radioChannel: Sle

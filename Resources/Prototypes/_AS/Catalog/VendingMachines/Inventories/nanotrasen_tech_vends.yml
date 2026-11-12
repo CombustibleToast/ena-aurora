@@ -1,0 +1,66 @@
+﻿
+- type: vendingMachineInventory
+  id: ASNanoTrasenOfficerVendA
+  startingInventory:
+    BlueShieldShield: 1
+    GreatswordBlueshield: 1
+    ClothingBlueshieldArmoredKimono: 3
+    ClothingBlueshieldArmoredJacket: 3
+    ClothingBlueshieldArmourVest: 3
+    ClothingBlueshieldArmoredCowboyJacket: 3
+    ASClothingNeckMantleBlueshieldOperative: 3
+    ASClothingHeadHatBeretBlueshield: 3
+  emaggedInventory:
+    EnergySwordBSO: 1
+    ClothingShoesBootsJump: 1
+
+- type: vendingMachineInventory
+  id: ASNanoTrasenOfficerVendB
+  startingInventory:
+    ASWeaponPistolBRDIP15BSOExpedition: 2
+    MagazineBRDIP15: 2
+    MagazineBRDIP15Practice: 2
+    MagazineBRDIP15Rubber: 2
+    ClothingBlueshieldArmoredVest: 3
+    ClothingBlueshieldArmoredCoat: 3
+    ClothingBlueshieldArmoredCowboyJacket: 3
+    ASClothingNeckMantleBlueshieldOperative: 3
+    ASClothingHeadHatBeretBlueshield: 3
+  emaggedInventory:
+    MagazineBRDIP15Uranium: 2
+    MagazineBRDIP15Incendiary: 2
+    ClothingShoesBootsJump: 1
+
+- type: vendingMachineInventory
+  id: ASNanoTrasenOfficerVendC
+  startingInventory:
+    WeaponSubMachineGunWt550BSOExpedition: 2
+    NFMagazineSubMachineGunTopMounted35: 4
+    NFMagazineSubMachineGunTopMounted35Rubber: 4
+    NFMagazineSubMachineGunTopMounted35Overpressure: 4
+    ClothingBlueshieldArmoredMarine: 3
+    ClothingBlueshieldArmoredCowboyJacket: 3
+    ASClothingNeckMantleBlueshieldOperative: 3
+    ASClothingHeadHatBeretBlueshield: 3
+  emaggedInventory:
+    NFMagazineSubMachineGunTopMounted35Incendiary: 2
+    NFMagazineSubMachineGunTopMounted35Uranium: 2
+    ClothingShoesBootsJump: 1
+
+
+- type: vendingMachineInventory
+  id: ASNanoTrasenOfficerVendD
+  startingInventory:
+    ASWeaponEnergyPistolPulseExpedition: 2
+    ClothingOuterArmorCaptainRepeller: 2
+    ClothingNeckCloakCaptaingreatcoat: 3
+    ClothingShoesBootsCaptainjumpboots: 3
+    ClothingEyesGlassesCaptainvisor: 3
+    ClothingHandsGlovesCaptainflightgloves: 3
+    ClothingHeadHatCaptaincrushercap: 3
+    ClothingBackpackDuffelCommVet: 3
+    ClothingBackpackSatchelCommandveteran: 3
+    ClothingBackpackCommandveteran: 3
+  emaggedInventory:
+    ClothingShoesBootsJump: 1
+

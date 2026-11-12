@@ -19,16 +19,16 @@ namespace Content.Shared.Interaction;
 /// <summary>
 /// This handles smart equipping or inserting/ejecting from slots through keybinds--generally shift+E and shift+B
 /// </summary>
-public sealed class SmartEquipSystem : EntitySystem
+public sealed partial class SmartEquipSystem : EntitySystem
 {
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly SharedStorageSystem _storage = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly ItemSlotsSystem _slots = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
+    [Dependency] private SharedHandsSystem _hands = default!;
+    [Dependency] private SharedStorageSystem _storage = default!;
+    [Dependency] private InventorySystem _inventory = default!;
+    [Dependency] private ItemSlotsSystem _slots = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private SharedPopupSystem _popup = default!;
+    [Dependency] private ActionBlockerSystem _actionBlocker = default!;
+    [Dependency] private EntityWhitelistSystem _whitelistSystem = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -40,6 +40,10 @@ public sealed class SmartEquipSystem : EntitySystem
             .Bind(ContentKeyFunctions.SmartEquipPocket1, InputCmdHandler.FromDelegate(HandleSmartEquipPocket1, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipPocket2, InputCmdHandler.FromDelegate(HandleSmartEquipPocket2, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
+            // Aurora's Song Start - Legs/Feet Smart Equip
+            .Bind(ContentKeyFunctions.SmartEquipLegs, InputCmdHandler.FromDelegate(HandleSmartEquipLegs, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipFeet, InputCmdHandler.FromDelegate(HandleSmartEquipFeet, handle: false, outsidePrediction: false))
+            // Aurora's Song End
             .Register<SmartEquipSystem>();
     }
 
@@ -80,6 +84,18 @@ public sealed class SmartEquipSystem : EntitySystem
     {
         HandleSmartEquip(session, "suitstorage");
     }
+
+    // Aurora's Song Start - Legs/Feet Smart Equip
+    private void HandleSmartEquipLegs(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "legs");
+    }
+
+    private void HandleSmartEquipFeet(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "shoes");
+    }
+    // Aurora End
 
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
     {

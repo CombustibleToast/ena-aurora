@@ -24,10 +24,11 @@ public sealed class TriggerOnFtlArriveRelay : TriggerOnXSystem
         ImplantRelayEvent<ReTriggerRattleImplantEvent> args)
     {
         // Aurora's Song - Prevent retriggering when alive, it causes death acidifiers to activate
-        if (!TryComp<MobStateComponent>(args.Event.Implanted, out var mobstate)
-            || mobstate.CurrentState == MobState.Alive)
+        if (!TryComp<MobStateComponent>(args.ImplantedEntity, out var mobstate)
+            || mobstate.CurrentState == MobState.Alive
+            && !args.Args.Forced) // Aurora's Song: If it's forced, force it to trigger even if they are alive
             return;
 
-        Trigger.Trigger(uid, args.Event.Implanted, component.KeyOut);
+        Trigger.Trigger(uid, args.ImplantedEntity, component.KeyOut);
     }
 }

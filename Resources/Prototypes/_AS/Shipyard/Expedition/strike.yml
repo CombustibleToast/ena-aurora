@@ -1,0 +1,62 @@
+﻿# Author Info
+# GitHub: TillsterRulz
+# Discord: TillsterRulz
+
+# Maintainer Info
+# GitHub: TillsterRulz
+# Discord: TillsterRulz
+
+# Shuttle Notes:
+# Cockpit, 3 cargo bays, ready room, dorms, bathroom, armory, lounge, medbay, kitchen, atmos, salvage, engineering, maintenance hall
+# Engi lathe, merc lathe, salvage lathe.
+# 10 south thrusters, 6 north thrusters, 4 east, 4 west, 4 gyroscopes
+# captain suit locker, 2 merc EVA lockers, 4 emergency EVA lockers, gas tank dispenser
+# condiment station, 2 sinks, 2 dranks, coffee machine
+# 2 chargers, 2 wall chargers
+# TV, harp, lamp plushie, ashtray
+# 4 exinguisher cabinents, 1 defib, 1 regular medkit
+# basic materials wall locker (10 variant), ore and materials box
+# 3 withdraw ATMs
+# 2 gun safes, 2 gun racks
+# named APCs and air alarms for (most) every room, named fire alarms in some rooms
+# disposals network that goes to material reclaimer, 2 bins and 1 toilet
+# shutters for every external window, privacy buttons for dorms, bathroom, and cockpit
+# 2 docks, 3 airlocks each. southern exit airlock, north "deploying" room with blast doors
+# 4 station maps, 4 mass scanners
+# atmos alerts computer and power monitoring computer
+# scrap and ore processor
+- type: vessel
+  id: Strike
+  parent: BaseVessel
+  name: TZ Strike
+  description: A refitted fighter jet now made for life among the stars while still maintaining its atmospheric dominance for expeditions.
+  price: 100000 #Sells for about 65k but it is a very large ship for that price.
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/strike.yml
+  guidebookPage: ShipyardStrike
+  class:
+  - Expedition
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Strike
+  mapName: 'TZ Strike'
+  mapPath: /Maps/_AS/Shuttles/Expedition/strike.yml
+  minPlayers: 0
+  stations:
+    Strike:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Strike {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

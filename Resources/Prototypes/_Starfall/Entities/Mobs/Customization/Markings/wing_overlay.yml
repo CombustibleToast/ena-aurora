@@ -1,0 +1,15 @@
+- type: marking
+  id: LumariWingOverlayPlasmafire
+  bodyPart: TailOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wing_overlay.rsi
+    state: plasmafire_floof_overlay
+
+- type: marking
+  id: LumariWingOverlaySwirly
+  bodyPart: TailOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wing_overlay.rsi
+    state: swirly_floof_overlay

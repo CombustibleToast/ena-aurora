@@ -81,6 +81,7 @@
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceSlimePerson
+  categories: [ HideSpawnMenu ]
   name: SlimePerson appearance
   components:
   - type: Inventory
@@ -139,7 +140,7 @@
   - type: Speech
     speechVerb: Slime
     speechSounds: Slime
-    allowedEmotes: ['Squish', 'Bubble', 'Pop'] # Imp: add Bubble, Pop
+    allowedEmotes: ['Squish', 'Bubble', 'Slosh','Pop', 'Fizz','Wobble'] # Imp: add Bubble, Pop # Funky: add Slosh, Fizz and Wobble
   - type: TypingIndicator
     proto: slime
   - type: Vocal
@@ -147,12 +148,13 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
+  - type: BodyEmotes #imp edit
+    soundsId: SlimeBodyEmotes
   - type: Damageable
     damageModifierSet: Slime
   - type: PassiveDamage # Around 8 damage a minute healed
     allowedStates:
     - Alive
-    damageCap: 65
     damage:
       types:
         Heat: -0.14
@@ -170,7 +172,7 @@
     bloodReferenceSolution: # TODO Color slime blood based on their slime color or smth
       reagents:
       - ReagentId: Slime
-        Quantity: 300
+        Quantity: 600
   - type: Barotrauma
     damage:
       types:
@@ -213,7 +215,7 @@
   - type: SnoutHelmet # Aurora's Song - Animal Slimes
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic
   id: OrganSlimePerson
   abstract: true
   suffix: slime person
@@ -306,23 +308,20 @@
   id: OrganSlimePersonCore
   name: sentient slime core
   components:
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      stomach:
-        maxVol: 50.0
-# Aurora's Song - edible, grindable organs
-      food:
-        maxVol: 10
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
-        - ReagentId: GreyMatter
-          Quantity: 5
-# Aurora's Song edit ends
+    - SolutionStomach
   - type: Stomach
+    specialDigestible: # Aurora's Song - Allows slimes to eat clothes, paper, pills, and trash, but doesn't prevent them from eating anything besides them
+      tags:
+        - ClothMade
+        - Paper
+        - Pill
+        - Trash
+    isSpecialDigestibleExclusive: false # End Aurora's Song
   - type: Metabolizer
     maxReagents: 6
-    metabolizerTypes: [ Slime ]
+    metabolizerTypes: [ Slime, Animal, Moth, Vox, Goblin ] # Aurora's Song - Allows slimes to eat and process reagents the same way Animals, Vox, Moths, and Goblins do
     stages: [ Digestion, Bloodstream, Metabolites ]
 
 - type: entity

@@ -1,0 +1,276 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Lumari
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 4
+      required: true
+      default: [ LumariEyesDefault ]
+    enum.HumanoidVisualLayers.HeadOverlay:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ LumariWingsDefault ]
+    enum.HumanoidVisualLayers.TailOverlay:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ LumariAntennasDefault ]
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.NeckFluff:
+      limit: 1
+      required: true
+      default: [ LumariFloofDefaultFloof ]
+    enum.HumanoidVisualLayers.Snout:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 6
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+
+- type: entity
+  abstract: true
+  id: LumariSpeciesLayers
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadOverlay" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.LHand" ]
+    - map: [ "enum.HumanoidVisualLayers.RHand" ]
+    - map: [ "enum.HumanoidVisualLayers.Overlay" ]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "id" ]
+    - map: [ "outerClothing" ]
+    - map: [ "legs" ]
+    - map: [ "back" ]
+    # Wings sit above worn equipment but behind Lumari neck floof.
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    # Wing overlays sit directly above the wings they decorate.
+    - map: [ "enum.HumanoidVisualLayers.TailOverlay" ]
+    # Neck items sit above wings but under neck floof.
+    - map: [ "neck" ]
+    # Lumari neck floof sits over equipment
+    - map: [ "enum.HumanoidVisualLayers.NeckFluff" ]
+    # Guns/tanks appear over wings
+    - map: [ "suitstorage" ]
+    # Snout sit above everything else
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.SnoutCover" ]
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "enum.HumanoidVisualLayers.RArmExtension" ]
+    - map: [ "enum.HumanoidVisualLayers.LArmExtension" ]
+
+- type: entity
+  parent: [ LumariSpeciesLayers, AppearanceMoth ]
+  id: AppearanceLumari
+  categories: [ HideSpawnMenu ]
+  name: lumari appearance
+  components:
+  - type: Inventory
+    speciesId: lumari
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: jumpsuit_female }
+      outerClothing:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: outerlayer }
+      gloves:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: gloves }
+      shoes:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: shoes }
+      ears:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: ears }
+      neck:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: neck }
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: jumpsuit_male }
+      outerClothing:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: outerlayer }
+      gloves:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: gloves }
+      shoes:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: shoes }
+      ears:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: ears }
+      neck:
+        sizeMaps:
+          32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: neck }
+  - type: Hands
+    leftHandDisplacement:
+      sizeMaps:
+        32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: inhand_left }
+    rightHandDisplacement:
+      sizeMaps:
+        32: { sprite: _Starfall/Mobs/Species/Lumari/displacement.rsi, state: inhand_right }
+  - type: InitialBody
+    organs:
+      Torso: OrganLumariTorso
+      Head: OrganLumariHead
+      ArmLeft: OrganLumariArmLeft
+      ArmRight: OrganLumariArmRight
+      HandRight: OrganLumariHandRight
+      HandLeft: OrganLumariHandLeft
+      LegLeft: OrganLumariLegLeft
+      LegRight: OrganLumariLegRight
+      FootLeft: OrganLumariFootLeft
+      FootRight: OrganLumariFootRight
+      Brain: OrganMothBrain
+      Eyes: OrganLumariEyes
+      Tongue: OrganMothTongue
+      Appendix: OrganMothAppendix
+      Ears: OrganMothEars
+      Lungs: OrganMothLungs
+      Heart: OrganMothHeart
+      Stomach: OrganMothStomach
+      Liver: OrganMothLiver
+      Kidneys: OrganMothKidneys
+  - type: HumanoidProfile
+    species: Lumari
+
+- type: entity
+  parent: [ AppearanceLumari, MobMoth ]
+  id: MobLumari
+  name: Urist McLumari
+
+- type: entity
+  parent: OrganMothExternal
+  id: OrganLumariExternal
+  abstract: true
+  suffix: Lumari
+  components:
+  - type: Sprite
+    sprite: _Starfall/Mobs/Species/Lumari/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _Starfall/Mobs/Species/Lumari/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Lumari
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganLumariExternal ]
+  id: OrganLumariTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganLumariExternal ]
+  id: OrganLumariHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.FacialHair
+    - enum.HumanoidVisualLayers.Hair
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganLumariExternal ]
+  id: OrganLumariArmLeft
+- type: entity
+  parent: [ OrganBaseArmRight, OrganLumariExternal ]
+  id: OrganLumariArmRight
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganLumariExternal ]
+  id: OrganLumariHandLeft
+- type: entity
+  parent: [ OrganBaseHandRight, OrganLumariExternal ]
+  id: OrganLumariHandRight
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganLumariExternal ]
+  id: OrganLumariLegLeft
+- type: entity
+  parent: [ OrganBaseLegRight, OrganLumariExternal ]
+  id: OrganLumariLegRight
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganLumariExternal ]
+  id: OrganLumariFootLeft
+- type: entity
+  parent: [ OrganBaseFootRight, OrganLumariExternal ]
+  id: OrganLumariFootRight
+
+- type: entity
+  parent: OrganMothEyes
+  id: OrganLumariEyes
+  suffix: Lumari
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Starfall/Mobs/Species/Lumari/parts.rsi
+      visible: false # Lumari eye shapes are supplied by markings
+  - type: VisualOrganMarkings
+    markingData:
+      group: Lumari

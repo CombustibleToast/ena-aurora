@@ -27,6 +27,12 @@ public sealed partial class RadarConsoleComponent : Component
     [DataField]
     public bool FollowEntity = false;
 
+    /// <summary>
+    /// Whether this radar should rotate with the viewing player's eye rotation.
+    /// </summary>
+    [DataField]
+    public bool FollowEyeRotation = false; // Aurora's Song
+
     // Frontier: ghost radar restrictions
     /// <summary>
     /// If true, the radar will be centered on the entity. If not - on the grid on which it is located.

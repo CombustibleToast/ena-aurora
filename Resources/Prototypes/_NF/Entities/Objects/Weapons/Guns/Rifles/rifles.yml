@@ -4,6 +4,7 @@
   parent: [ NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ] #Stop parenting from self | Aurora
   name: Barlows bolt-action rifle # Renamed: real brand name
   description: A weapon for hunting, or endless trench warfare. Equipped with bayonet.
+  abstract: true
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
@@ -49,6 +50,7 @@
   id: NFWeaponRifleBarlowsBoltLessLethal
   parent: NFWeaponRifleBarlowsBolt
   suffix: Frontier, Less-lethal
+  abstract: true
   components:
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle30Rubber
@@ -59,6 +61,7 @@
   parent: [ NFBaseWeaponRifleChamber30, NFBaseWeaponFrameRifleFrontierGunsmith ] #Back to .30 rifle with you | Aurora Song
   name: ceremonial rifle
   description: A ceremonial variant of the Mark 1 Rifle, in tasteful blue and white.
+  abstract: true # Aurora's Song | replacing NF ceremonial rifle implementation
   components:
   - type: BallisticAmmoProvider # Internal magazine required | Aurora Song
     capacity: 12

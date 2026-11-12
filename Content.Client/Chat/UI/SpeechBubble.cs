@@ -12,12 +12,12 @@ using Robust.Shared.Utility;
 
 namespace Content.Client.Chat.UI
 {
-    public abstract class SpeechBubble : Control
+    public abstract partial class SpeechBubble : Control
     {
-        [Dependency] private readonly IGameTiming _timing = default!;
-        [Dependency] private readonly IEyeManager _eyeManager = default!;
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] protected readonly IConfigurationManager ConfigManager = default!;
+        [Dependency] private IGameTiming _timing = default!;
+        [Dependency] private IEyeManager _eyeManager = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] protected IConfigurationManager ConfigManager = default!;
         private readonly SharedTransformSystem _transformSystem;
 
         public enum SpeechType : byte
@@ -25,7 +25,9 @@ namespace Content.Client.Chat.UI
             Emote,
             Say,
             Whisper,
-            Looc
+            Looc,
+            Subtle, // Aurora's Song - Subtle and Subtle OOC have unique speech bubble
+            SubtleOOC, // DEN - Add Subtle OOC
         }
 
         /// <summary>
@@ -79,6 +81,14 @@ namespace Content.Client.Chat.UI
 
                 case SpeechType.Looc:
                     return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#48d1cc"));
+
+                // DEN Start - Add Subtle and Subtle OOC
+                case SpeechType.Subtle:
+                    return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#FFBBC0")); // Aurora's Song - Subtle and Subtle OOC have unique speech bubble
+
+                case SpeechType.SubtleOOC:
+                    return new TextSpeechBubble(message, senderEntity, "emoteBox", Color.FromHex("#FF7782")); // Aurora's Song - Subtle and Subtle OOC have unique speech bubble
+                // DEN End
 
                 default:
                     throw new ArgumentOutOfRangeException();

@@ -40,6 +40,7 @@
 - type: loadoutGroup
   id: SiteWorkerNeck
   name: loadout-group-site-worker-neck
+  maxLimit: 2
   minLimit: 0
   loadouts:
   - SiteWorkerNeckScarfStripedOrange

@@ -1,4 +1,5 @@
 using Content.Server.Access.Systems;
+using Content.Server.GameTicking; // Aurora's Song
 using Content.Server.Popups;
 using Content.Server.Radio.EntitySystems;
 using Content.Server._NF.Bank;
@@ -47,32 +48,37 @@ using Robust.Server.Player;
 using Robust.Shared.Timing;
 using Content.Server._NF.GC.Components;
 using Content.Server._Mono.Shipyard;
+using Content.Server._NF.Station.Systems; // AS
 using Content.Shared._AS.Traits;
 using Content.Shared.Maps; // AS
+using Robust.Shared.Random; // AS
 
 namespace Content.Server._NF.Shipyard.Systems;
 
 public sealed partial class ShipyardSystem : SharedShipyardSystem
 {
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IServerPreferencesManager _prefManager = default!;
-    [Dependency] private readonly AccessSystem _accessSystem = default!;
-    [Dependency] private readonly AccessReaderSystem _access = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly RadioSystem _radio = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly IdCardSystem _idSystem = default!;
-    [Dependency] private readonly StationRecordsSystem _records = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly MindSystem _mind = default!;
-    [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
-    [Dependency] private readonly IEntityManager _entityManager = default!;
-    [Dependency] private readonly ShipyardDirectionSystem _directionSystem = default!; // Aurora Song port of Monolith direction system
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IServerPreferencesManager _prefManager = default!;
+    [Dependency] private IRobustRandom _random = default!; // Aurora's Song
+    [Dependency] private AccessSystem _accessSystem = default!;
+    [Dependency] private AccessReaderSystem _access = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
+    [Dependency] private RadioSystem _radio = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private IdCardSystem _idSystem = default!;
+    [Dependency] private StationRecordsSystem _records = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private MindSystem _mind = default!;
+    [Dependency] private ShuttleRecordsSystem _shuttleRecordsSystem = default!;
+    [Dependency] private IEntityManager _entityManager = default!;
+    [Dependency] private ShipyardDirectionSystem _directionSystem = default!; // Aurora Song port of Monolith direction system
+    [Dependency] private GameTicker _gameTicker = default!; // Aurora's Song - Owner crew registration time.
+    [Dependency] private StationRenameHolopadsSystem _holopad = default!; // Aurora's Song - Rename holopads to match ship
 
     private static readonly Regex DeedRegex = new(@"\s*\([^()]*\)");
 
@@ -203,7 +209,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 shuttleUid
             };
             shuttleStation = _station.InitializeNewStation(stationProto.Stations[vessel.ID], gridUids);
-            name = Name(shuttleStation.Value);
+            // Aurora's Song - moved suffix generation
+            var licensePlate = idCard?.ProfileId is { } profileId ? LicensePlateSystem.GetLicensePlate(profileId) : $"{_random.Next(0, 100):D2}";
+            name = $"{Name(shuttleStation.Value)}-{licensePlate}";
+            _station.RenameStation(shuttleStation.Value, name, false);
+            _metaData.SetEntityName(shuttleUid, name);
+            _metaData.SetEntityName(shuttleStation.Value, name);
+            _holopad.SyncHolopadsNames(shuttleStation.Value);
+            // End aurora's Song - moved suffix generation
 
             var vesselInfo = EnsureComp<ExtraShuttleInformationComponent>(shuttleStation.Value);
             vesselInfo.Vessel = vessel.ID;
@@ -247,6 +260,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // its just bad
 
         var stationList = EntityQueryEnumerator<StationRecordsComponent>();
+        StationRecordKey? shuttleOwnerRecordKey = null; // Aurora's Song - Preserve the shuttle-local owner record identity.
+        GeneralStationRecord? shuttleOwnerRecord = null; // Aurora's Song
 
         if (TryComp<StationRecordKeyStorageComponent>(targetId, out var keyStorage)
             && shuttleStation != null
@@ -259,7 +274,13 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                     continue;
 
                 //_records.RemoveRecord(keyStorage.Key.Value);
-                _records.AddRecordEntry(shuttleStation.Value, record);
+                var copiedKey = _records.AddRecordEntry(shuttleStation.Value, record);
+                if (!copiedKey.IsValid())
+                    continue;
+
+                _records.SetIdKey(targetId, copiedKey); // Aurora's Song - Point the ID at the copied shuttle record.
+                shuttleOwnerRecordKey = copiedKey;
+                shuttleOwnerRecord = record with { };
                 recSuccess = true;
                 break;
             }
@@ -274,6 +295,14 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
                 TryComp<StationRecordsComponent>(shuttleStation, out var stationRec);
                 var replicant = HasComp<ReplicantComponent>(player);  // AS: Replika
                 _records.CreateGeneralRecord(shuttleStation.Value, targetId, profile.Name, profile.Age, profile.Species, profile.Gender, $"Captain", fingerprintComponent!.Fingerprint, dnaComponent!.DNA, replicant, profile, stationRec!);  // AS: Replika
+
+                if (TryComp<StationRecordKeyStorageComponent>(targetId, out var createdKeyStorage) &&
+                    createdKeyStorage.Key is { } createdKey &&
+                    _records.TryGetRecord<GeneralStationRecord>(createdKey, out var createdRecord))
+                {
+                    shuttleOwnerRecordKey = createdKey; // Aurora's Song
+                    shuttleOwnerRecord = createdRecord with { }; // Aurora's Song
+                }
             }
         }
         _records.Synchronize(shuttleStation!.Value);
@@ -311,17 +340,30 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // Can be set on the component of the shipyard.
         if (component.CanTransferDeed)
         {
-            _shuttleRecordsSystem.AddRecord(
-                new ShuttleRecord(
+            var shuttleRecord = new ShuttleRecord(
                     name: deedShuttle.ShuttleName ?? "",
                     suffix: deedShuttle.ShuttleNameSuffix ?? "",
                     ownerName: shuttleOwner,
-                    entityUid: EntityManager.GetNetEntity(shuttleUid),
+                    entityUid: GetNetEntity(shuttleUid),
                     purchasedWithVoucher: voucherUsed,
                     purchasePrice: (uint)vessel.Price,
                     vesselPrototypeId: vessel.ID
-                )
-            );
+                );
+
+            // Aurora's Song - Initialize ownership with the stable profile and shuttle-local station record.
+            if (idCard?.ProfileId is { } ownerProfileId &&
+                shuttleOwnerRecordKey is { } ownerKey &&
+                shuttleOwnerRecord is { } ownerRecord)
+            {
+                shuttleRecord.OwnerProfileId = ownerProfileId;
+                shuttleRecord.Crew.Add(new ShuttleCrewRecord(ownerProfileId, shuttleOwner, ownerKey.Id)
+                {
+                    RegisteredAt = _timing.CurTime.Subtract(_gameTicker.RoundStartTimeSpan),
+                    Record = ownerRecord with { },
+                });
+            }
+
+            _shuttleRecordsSystem.AddRecord(shuttleRecord);
         }
 
         RefreshState(shipyardConsoleUid, bank.Balance, true, name, sellValue, targetId, (ShipyardConsoleUiKey)args.UiKey, voucherUsed);
@@ -333,7 +375,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         // This may cause problems but ONLY when renaming a ship. It will still display properly regardless of this.
         var nameParts = name.Split(' ');
 
-        var hasSuffix = nameParts.Length > 1 && nameParts.Last().Length < ShuttleDeedComponent.MaxSuffixLength && nameParts.Last().Contains('-');
+        var hasSuffix = nameParts.Length > 1 && nameParts.Last().Length <= ShuttleDeedComponent.MaxSuffixLength && nameParts.Last().Contains('-'); // Aurora's Song changed < to <=
         deed.ShuttleNameSuffix = hasSuffix ? nameParts.Last() : null;
         deed.ShuttleName = String.Join(" ", nameParts.SkipLast(hasSuffix ? 1 : 0));
     }
@@ -823,7 +865,8 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         return (available, unavailable);
     }
 
-    private void RefreshState(EntityUid uid, int balance, bool access, string? shipDeed, int shipSellValue, EntityUid? targetId, ShipyardConsoleUiKey uiKey, bool freeListings)
+    // Aurora's Song - Expand balance to long
+    private void RefreshState(EntityUid uid, long balance, bool access, string? shipDeed, int shipSellValue, EntityUid? targetId, ShipyardConsoleUiKey uiKey, bool freeListings)
     {
         var newState = new ShipyardConsoleInterfaceState(
             balance,
@@ -974,7 +1017,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
             PlayConfirmSound(player, uid, component);
 
             // Get the player's balance or use 0 if they don't have a bank account
-            int balance = 0;
+            long balance = 0; // Aurora's Song - Expand balance to long
             if (TryComp<BankAccountComponent>(player, out var bank))
                 balance = bank.Balance;
 
@@ -1046,7 +1089,7 @@ public sealed partial class ShipyardSystem : SharedShipyardSystem
         PlayConfirmSound(player, uid, component);
 
         // Get the player's balance or use 0 if they don't have a bank account
-        int balance = 0;
+        long balance = 0; // Aurora's Song - Expand balance to long
         if (TryComp<BankAccountComponent>(player, out var bank))
             balance = bank.Balance;
 

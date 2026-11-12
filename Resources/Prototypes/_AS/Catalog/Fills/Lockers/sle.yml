@@ -103,8 +103,8 @@
       amount: 2
     - id: NFAmmunitionBoxShellShotgunBeanbag
       amount: 2
-    - id: ASWeaponRifleMarksmanHZ-3-3-C
-    - id: ASMagazineMarksmanRifle30
+    - id: ASWeaponRifleMarksmanAF-17C
+    - id: ASMagazineMarksmanRifle30Long
       amount: 2
     - id: ClothingOuterHardsuitSleCombatCommissioner
     - id: ClothingOuterSoftsuitSlePatrolCommissioner

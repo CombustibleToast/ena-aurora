@@ -12,6 +12,7 @@
   - Botanical
   - Biological
   - Special
+  - Reactions #Aurora's Song
   - Others
   - Lewd
   filterEnabled: True
@@ -63,6 +64,14 @@
   name: guide-entry-special
   text: "/ServerInfo/Guidebook/ChemicalTabs/Special.xml"
   filterEnabled: True
+
+  #Aurora's Song start
+- type: guideEntry
+  id: Reactions
+  name: guide-entry-reactions
+  text: "/ServerInfo/_Funkystation/Guidebook/ChemicalTabs/Reactions.xml"
+  filterEnabled: True
+  #Aurora's Songe end
 
 - type: guideEntry
   id: Others

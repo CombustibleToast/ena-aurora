@@ -11,3 +11,76 @@
   metamorphicMaxFillLevels: 4
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: true
+
+- type: reagent
+  id: ZombieSlushie
+  name: reagent-name-zombieslushie
+  parent: BaseSoda
+  desc: reagent-desc-zombieslushie
+  physicalDesc: reagent-physical-desc-clumpy
+  flavor: zombieslushie
+  color: "#ff6fa8"
+  metamorphicSprite:
+    sprite: _Impstation/Objects/Consumable/Drinks/zombieslushie.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Digestion: # Aurora's Song - Drink>Digestion
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+      - !type:SatiateHunger
+        factor: 4
+        conditions:
+        - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
+          type: [ Moth ] # Aurora's Song - add brackets
+          inverted: true # Aurora's Song - shouldHave: false>inverted: true
+  fizziness: 0.2
+  
+- type: reagent
+  id: Supermixer
+  name: reagent-name-supermixer
+  parent: BaseSoda
+  desc: reagent-desc-supermixer
+  physicalDesc: reagent-physical-desc-sweet
+  flavor: supermixer
+  color: "#FDD54E"
+  metamorphicSprite:
+    sprite: _Impstation/Objects/Consumable/Drinks/supermixer.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 4
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    Digestion: # Aurora's Song - Drink>Digestion
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+  fizziness: 0.8
+
+- type: reagent
+  id: Supermixerpsych
+  name: reagent-name-supermixerpsych
+  parent: BaseSoda
+  desc: reagent-desc-supermixerpsych
+  physicalDesc: reagent-physical-desc-shiny
+  flavor: supermixerpsych
+  color: "#5471A8"
+  metamorphicSprite:
+    sprite: _Impstation/Objects/Consumable/Drinks/supermixerpsych.rsi
+    state: icon_empty
+  metamorphicMaxFillLevels: 3
+  metamorphicFillBaseName: fill-
+  metamorphicChangeColor: false
+  metabolisms:
+    # Aurora's Song Start - digestion Fix
+    Digestion:
+      metabolites:
+        Psicodine: 0.10
+    # Aurora's Song End
+      effects:
+      - !type:SatiateThirst
+        factor: 2
+  fizziness: 0.8

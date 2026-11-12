@@ -11,14 +11,14 @@ using Robust.Shared.Network;
 
 namespace Content.Server.Administration;
 
-public sealed class BanPanelEui : BaseEui
+public sealed partial class BanPanelEui : BaseEui
 {
-    [Dependency] private readonly IBanManager _banManager = default!;
-    [Dependency] private readonly IEntityManager _entities = default!;
-    [Dependency] private readonly ILogManager _log = default!;
-    [Dependency] private readonly IPlayerLocator _playerLocator = default!;
-    [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly IAdminManager _admins = default!;
+    [Dependency] private IBanManager _banManager = default!;
+    [Dependency] private IEntityManager _entities = default!;
+    [Dependency] private ILogManager _log = default!;
+    [Dependency] private IPlayerLocator _playerLocator = default!;
+    [Dependency] private IChatManager _chat = default!;
+    [Dependency] private IAdminManager _admins = default!;
 
     private readonly ISawmill _sawmill;
 
@@ -74,6 +74,7 @@ public sealed class BanPanelEui : BaseEui
         }
 
         var isRoleBan = ban.BannedJobs?.Length > 0 || ban.BannedAntags?.Length > 0;
+        var isRadioBan = ban.RadioChannels?.Length > 0; // Aurora's Song - Radio bans
 
         CreateBanInfo banInfo = isRoleBan ? new CreateRoleBanInfo(ban.Reason) : new CreateServerBanInfo(ban.Reason);
 
@@ -127,6 +128,9 @@ public sealed class BanPanelEui : BaseEui
 
         if (targetUid != null)
             banInfo.AddUser(targetUid.Value, ban.Target!);
+
+        if (isRadioBan && CreateRadioBans(ban, targetUid)) // Aurora's Song
+            return;
 
         banInfo.AddHWId(targetHWid);
 

@@ -245,6 +245,7 @@
     - Sap
     - GoblinBlood # Frontier
     - SulfurBlood
+    - ShimmeringBlood # MACRO - Thaven
 
 - type: xenoArchTrigger
   id: TriggerThrow

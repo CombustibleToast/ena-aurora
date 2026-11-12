@@ -16,6 +16,9 @@ job-name-service-worker = Service Worker
 job-name-mail-person = Mail Person
 job-name-director-of-care = Director of Care
 job-name-station-traffic-controller = Station Traffic Controller
+job-name-off-duty-officer = Off-Duty Officer
+job-name-syndicate-representative = Syndicate Representative
+job-name-nanotrasen-representative = NanoTrasen Representative
 
 # Aurora Song: Shortened variants for AAC Tablet (won't conflict with NF)
 job-name-doc-short = DoC

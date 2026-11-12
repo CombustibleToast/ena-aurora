@@ -425,20 +425,20 @@
         - id: NFMagazineLowCapacityRifle30
           amount: 2
 
-- type: entity
-  parent: WeaponCaseLong
-  id: WeaponCaseLongVulcanExpedition
-  suffix: Dungeon, Vulcan
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: NFWeaponRifleAssaultVulcanExpedition
-          amount: 1
-        - id: NFMagazineRifle30
-          amount: 2
+#- type: entity  -  Aurora's Song -  Moved to AS, following rework of the Vulcan.
+#  parent: WeaponCaseLong
+#  id: WeaponCaseLongVulcanExpedition
+#  suffix: Dungeon, Vulcan
+#  categories: [ HideSpawnMenu ]
+#  components:
+#  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+#    containers:
+#      storagebase: !type:AllSelector
+#        children:
+#        - id: NFWeaponRifleAssaultVulcanExpedition
+#          amount: 1
+#        - id: NFMagazineRifle30
+#          amount: 2
 
 - type: entity
   parent: WeaponCaseLong
@@ -576,7 +576,7 @@
 #region Sniper
 - type: entity
   parent: WeaponCaseLong
-  id: WeaponCaseLongBarlowsBoltExpedition
+  id: WeaponCaseLongMosinExpedition
   suffix: Dungeon, Mosin
   categories: [ HideSpawnMenu ]
   components:
@@ -584,10 +584,12 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: NFWeaponRifleBarlowsBoltExpedition
+        - id: ASWeaponRifleMosinBolt # Aurora's Song | Mosin reworked to AS version
           amount: 1
-        - id: NFAmmunitionBoxRifle30
+        - id: ASSpeedLoaderRifle30Long
           amount: 2
+        - id: ASAmmunitionBoxRifle30Long
+          amount: 1
 
 - type: entity
   parent: WeaponCaseLong
@@ -644,10 +646,12 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: NFWeaponRifleCeremonialExpedition
+        - id: ASWeaponRifleGarandCeremonialExpedition # Aurora's Song | Ceremonial rifle reworked
           amount: 1
-        - id: NFAmmunitionBoxRifle30
+        - id: ASMagazineEnblocRifle30Long # Aurora's Song | Ceremonial rifle reworked
           amount: 2
+        - id: ASAmmunitionBoxRifle30Long # Aurora's Song | As Above
+          amount: 1
 
 #region Launchers
 - type: entity
@@ -890,16 +894,16 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillAmmoBoxBigRubber20
 
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  id: WeaponCaseShortAmmoBoxPractice20
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
-    containers:
-      storagebase: !type:NestedSelector
-        tableId: StorageFillAmmoBoxPractice20
+# - type: entity
+#   parent:
+#   - WeaponCaseShortAmmo
+# #   id: WeaponCaseShortAmmoBoxPractice20
+#   categories: [ HideSpawnMenu ]
+  # components:
+  # - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+  #   containers:
+  #     storagebase: !type:NestedSelector
+  #       tableId: StorageFillAmmoBoxPractice20
 
 - type: entity
   parent:
@@ -957,16 +961,16 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillAmmoBoxRubber30
 
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  id: WeaponCaseShortAmmoBoxPractice30
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
-    containers:
-      storagebase: !type:NestedSelector
-        tableId: StorageFillAmmoBoxPractice30
+# - type: entity
+#   parent:
+#   - WeaponCaseShortAmmo
+# #   id: WeaponCaseShortAmmoBoxPractice30
+#   categories: [ HideSpawnMenu ]
+  # components:
+  # - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+  #   containers:
+  #     storagebase: !type:NestedSelector
+  #       tableId: StorageFillAmmoBoxPractice30
 
 - type: entity
   parent:
@@ -1013,16 +1017,16 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillAmmoBoxRubber35
 
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  id: WeaponCaseShortAmmoBoxPractice35
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
-    containers:
-      storagebase: !type:NestedSelector
-        tableId: StorageFillAmmoBoxPractice35
+# - type: entity
+#   parent:
+#   - WeaponCaseShortAmmo
+# #   id: WeaponCaseShortAmmoBoxPractice35
+#   categories: [ HideSpawnMenu ]
+  # components:
+  # - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+  #   containers:
+  #     storagebase: !type:NestedSelector
+  #       tableId: StorageFillAmmoBoxPractice35
 
 - type: entity
   parent:
@@ -1102,16 +1106,16 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillAmmoBoxBigRubber25
 
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  id: WeaponCaseShortAmmoBoxPractice25
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
-    containers:
-      storagebase: !type:NestedSelector
-        tableId: StorageFillAmmoBoxPractice25
+# - type: entity
+#   parent:
+#   - WeaponCaseShortAmmo
+# #   id: WeaponCaseShortAmmoBoxPractice25
+#   categories: [ HideSpawnMenu ]
+  # components:
+  # - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+  #   containers:
+  #     storagebase: !type:NestedSelector
+  #       tableId: StorageFillAmmoBoxPractice25
 
 ## Shotgun
 - type: entity
@@ -1136,16 +1140,16 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillAmmoBoxRubberShotgun
 
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  id: WeaponCaseShortAmmoBoxPracticeShotgun
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
-    containers:
-      storagebase: !type:NestedSelector
-        tableId: StorageFillAmmoBoxPracticeShotgun
+# - type: entity
+#   parent:
+#   - WeaponCaseShortAmmo
+# #   id: WeaponCaseShortAmmoBoxPracticeShotgun
+#   categories: [ HideSpawnMenu ]
+  # components:
+  # - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+  #   containers:
+  #     storagebase: !type:NestedSelector
+  #       tableId: StorageFillAmmoBoxPracticeShotgun
 
 - type: entity
   parent:
@@ -1214,16 +1218,16 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillAmmoBoxRubber45
 
-- type: entity
-  parent:
-  - WeaponCaseShortAmmo
-  id: WeaponCaseShortAmmoBoxPractice45
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
-    containers:
-      storagebase: !type:NestedSelector
-        tableId: StorageFillAmmoBoxPractice45
+# - type: entity
+#   parent:
+#   - WeaponCaseShortAmmo
+# #   id: WeaponCaseShortAmmoBoxPractice45
+#   categories: [ HideSpawnMenu ]
+  # components:
+  # - type: EntityTableContainerFill # Aurora's Song - Convert to entityTable
+  #   containers:
+  #     storagebase: !type:NestedSelector
+  #       tableId: StorageFillAmmoBoxPractice45
 
 - type: entity
   parent:

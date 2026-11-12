@@ -82,6 +82,10 @@ public abstract partial class SharedHandsSystem
         if (handId == null)
             return false;
 
+        // don't try to pick up the item if it's being deleted anyways
+        if (TerminatingOrDeleted(entity) || EntityManager.IsQueuedForDeletion(entity))
+            return false;
+
         if (!Resolve(entity, ref item, false))
             return false;
 
@@ -288,7 +292,8 @@ public abstract partial class SharedHandsSystem
         }
         RaiseLocalEvent(entity, new PickedUpEvent(uid, entity), false); // Frontier
 
-        _interactionSystem.DoContactInteraction(uid, entity); //Possibly fires twice if manually picked up via interacting with the object
+        // Stellar - we need more data in the contact interaction
+        _interactionSystem.DoContactInteraction(uid, entity, null, true); //Possibly fires twice if manually picked up via interacting with the object
 
         if (log)
         {

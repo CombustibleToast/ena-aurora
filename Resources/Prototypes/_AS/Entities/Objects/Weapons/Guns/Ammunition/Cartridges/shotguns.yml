@@ -1,0 +1,53 @@
+﻿- type: entity
+  id: ASBaseShellShotgun8g
+  name: shell (8g)
+  parent: [ BaseC1Contraband, BaseShellShotgun ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - Cartridge
+    - ShellShotgun8g
+
+- type: entity
+  id: AS8gShellBuckshot
+  name: shell (8g buckshot)
+  parent: ASBaseShellShotgun8g
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Guns/Ammunition/Cartridges/highcaliber_shell.rsi
+    layers:
+    - state: base
+      map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ASPelletShotgunSpread8g
+  - type: SpentAmmoVisuals
+    state: "base"
+
+- type: entity
+  id: AS8gShellSlug
+  name: shell (8g slug)
+  parent: ASBaseShellShotgun8g
+  components:
+  - type: Sprite
+    layers:
+    - state: slug
+      map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ASProjectileSlug8g
+  - type: SpentAmmoVisuals
+    state: "slug"
+
+- type: entity
+  id: AS8gShellHE
+  name: shell (8g HE)
+  parent: [ASBaseShellShotgun8g, BaseC3ContrabandUnredeemable]
+  components:
+  - type: Sprite
+    layers:
+    - state: incendiary
+      map: [ "enum.AmmoVisualLayers.Base" ]
+  - type: CartridgeAmmo
+    proto: ASProjectileSlug8gHE
+  - type: SpentAmmoVisuals
+    state: "incendiary"

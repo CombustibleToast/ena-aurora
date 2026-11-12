@@ -86,9 +86,6 @@ namespace Content.Shared.Verbs
 
         public static readonly VerbCategory PowerLevel = new("verb-categories-power-level", null);
 
-        public static readonly VerbCategory VoltageLevel =
-            new("verb-categories-voltage-level", "/Textures/Interface/VerbIcons/zap.svg.192dpi.png");
-
         public static readonly VerbCategory Adjust =
             new("verb-categories-adjust", "/Textures/Interface/VerbIcons/screwdriver.png");
 
@@ -96,5 +93,7 @@ namespace Content.Shared.Verbs
             new("verb-categories-pen", "/Textures/Interface/pencil.png"); // Frontier
 
         public static readonly VerbCategory Interaction = new("verb-categories-interaction", null);
+
+        public static readonly VerbCategory ToggleChannel = new("Toggle Channels", null); // Aurora's Song - Channel toggling
     }
 }

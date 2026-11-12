@@ -56,7 +56,7 @@
 # Shotgun
 - type: entity
   name: wide laser barrage
-  id: HLBulletLaserSpread
+  id: ASBulletLaserSpread
   categories: [ HideSpawnMenu ]
   parent: NFBaseBulletLaser
   components:
@@ -67,7 +67,7 @@
 
 - type: entity
   name: narrow laser barrage
-  id: HLBulletLaserSpreadNarrow
+  id: ASBulletLaserSpreadNarrow
   categories: [ HideSpawnMenu ]
   parent: NFBaseBulletLaser
   components:
@@ -78,7 +78,7 @@
 
 - type: entity
   name: disabling laser barrage
-  id: HLBulletDisablerSmgSpread
+  id: ASBulletDisablerSmgSpread
   categories: [ HideSpawnMenu ]
   parent: NFBulletDisabler
   components:

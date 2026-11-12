@@ -5,3 +5,11 @@
   completetime: 0.06 # Frontier: 0<0.06 (~2/30)
   materials:
     Anomalite: 30
+
+- type: latheRecipe
+  id: ScrapElectrum
+  result: ScrapElectrum
+  completetime: 0.06
+  materials:
+    Gold: 100
+    Silver: 100

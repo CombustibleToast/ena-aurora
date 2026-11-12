@@ -11,6 +11,7 @@
 
 - type: marking
   id: FeroxiTailAndDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -98,6 +99,7 @@
 # Tail Markings
 - type: marking
   id: FeroxiTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -106,6 +108,7 @@
 
 - type: marking
   id: FeroxiStripedTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -116,6 +119,7 @@
 
 - type: marking
   id: FeroxiStripedTailAndDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -130,6 +134,7 @@
 
 - type: marking
   id: FeroxiTipTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -144,6 +149,7 @@
 
 - type: marking
   id: FeroxiTipTailAndDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -162,6 +168,7 @@
 
 - type: marking
   id: FeroxiTailBlitz
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -182,6 +189,7 @@
 
 - type: marking
   id: FeroxiTailBlitzNoDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -198,6 +206,7 @@
 
 - type: marking
   id: FeroxiTwoToneTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -208,6 +217,7 @@
 
 - type: marking
   id: FeroxiTwoToneTailAndDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -220,6 +230,7 @@
 
 - type: marking
   id: FeroxiStripeTwoToneTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -232,6 +243,7 @@
 
 - type: marking
   id: FeroxiStripeTwoToneTailAndDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -248,6 +260,7 @@
 
 - type: marking
   id: FeroxiTipTwoToneTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:
@@ -264,6 +277,7 @@
 
 - type: marking
   id: FeroxiTipTwoToneTailAndDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
   bodyPart: Tail
   groupWhitelist: [ Feroxi ]
   sprites:

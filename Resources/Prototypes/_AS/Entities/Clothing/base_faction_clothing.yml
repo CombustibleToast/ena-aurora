@@ -1,0 +1,13 @@
+﻿- type: entity
+  id: ColonialCommandClothing
+  abstract: true
+  components:
+  - type: FactionClothing
+    faction: ColonialCommand
+
+- type: entity # for parenting onto new items that should be Auroran aligned
+  id: AuroranColonyEquipment
+  abstract: true
+  components:
+  - type: FactionClothing
+    faction: AuroranColony

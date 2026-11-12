@@ -23,8 +23,9 @@
   - type: Item
     size: Normal
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -45,6 +46,11 @@
         acts: [ "Destruction" ]
   - type: StaticPrice # Frontier
     price: 400 # Frontier
+  - type: PhysicalComposition # Aurora's Song - Added PhysicalComposition so it can be recycled
+    materialComposition:
+      Plastic: 500 # 5 sheets
+      Steel: 500 # 5 sheets
+      Glass: 500 # 5 sheets
 
 - type: entity
   parent: BaseVendingMachineRestock

@@ -15,6 +15,8 @@ public static class ChatChannelExtensions
             ChatChannel.AdminAlert => Color.Red,
             ChatChannel.AdminChat => Color.HotPink,
             ChatChannel.Whisper => Color.DarkGray,
+            ChatChannel.Subtle => Color.FromHex("#FFBBC0"), // DEN - Add subtle/subtle OOC // Aurora's Song - Changed for accessibility
+            ChatChannel.SubtleOOC => Color.FromHex("#FF7782"), // DEN - Add subtle/subtle OOC // Aurora's Song - Changed for accessibility
             _ => Color.LightGray
         };
     }

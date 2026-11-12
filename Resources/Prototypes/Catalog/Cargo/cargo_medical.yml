@@ -132,7 +132,7 @@
   id: ChemistryP
   abstract: true # Frontier
   icon:
-    sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/chemcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 1
     state: icon
   product: CrateChemistryP
   cost: 850
@@ -143,7 +143,7 @@
   id: ChemistryS
   abstract: true # Frontier
   icon:
-    sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/chemcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 1
     state: icon
   product: CrateChemistryS
   cost: 750
@@ -154,7 +154,7 @@
   id: CrateChemistryD
   abstract: true # Frontier
   icon:
-    sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/chemcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 1
     state: icon
   product: CrateChemistryD
   cost: 750
@@ -164,7 +164,7 @@
 - type: cargoProduct # Aurora - this is a testing product, may remove later
   id: CrateChemistryLabKit
   icon:
-    sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/chemcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 1
     state: icon
   product: CrateServiceKitChemLab
   cost: 100000

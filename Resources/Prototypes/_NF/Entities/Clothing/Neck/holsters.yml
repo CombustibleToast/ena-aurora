@@ -1,7 +1,7 @@
 # region base
 - type: entity
   abstract: true
-  parent: ClothingNeckBase
+  parent: ASClothingLegsBase # Aurora's Song - Migrated to legs slot. These aren't actually neck items but whatever, I didn't want to make a new leg folder in _NF or move it to _AS.
   id: NFBaseClothingNeckHolster
   components:
   - type: Item
@@ -39,6 +39,7 @@
           - PowerCellHigh # Aurora's Song - Allow power cells to fit
           - PowerCellMedium # Aurora's Song - Allow power cells to fit
           - PowerCellSmall # Aurora's Song - Allow power cells to fit
+          - MagazineBRDIP15 # Auroa's Song - Allow BRDI mags to fit
   - type: Appearance
   - type: ItemMapper
     mapLayers:
@@ -63,16 +64,17 @@
           - PowerCellHigh # Aurora's Song - Allow power cells to fit
           - PowerCellMedium # Aurora's Song - Allow power cells to fit
           - PowerCellSmall # Aurora's Song - Allow power cells to fit
+          - MagazineBRDIP15 # Auroa's Song - Allow BRDI mags to fit
   - type: ContainerContainer
     containers:
-      storagebase: !type:Container
-        ents: []
+#      storagebase: !type:Container # Aurora's Song - This isn't actually needed at all.
+#        ents: []
       weapon: !type:ContainerSlot {}
       magazine: !type:ContainerSlot {}
 
 - type: entity
   abstract: true
-  parent: ClothingNeckBase
+  parent: ASClothingLegsBase # Aurora's Song - Migrated to legs slot. These aren't actually neck items but whatever, I didn't want to make a new leg folder in _NF or move it to _AS.
   id: NFBaseClothingNeckSheath
   components:
   - type: Item
@@ -87,6 +89,7 @@
         whitelist:
           tags:
           - Knife
+          - Baton # Aurora's Song
   - type: Appearance
   - type: ItemMapper
     mapLayers:
@@ -94,10 +97,11 @@
         whitelist:
           tags:
           - Knife
+          - Baton # Aurora's Song
   - type: ContainerContainer
     containers:
-      storagebase: !type:Container
-        ents: []
+#      storagebase: !type:Container # Aurora's Song - This isn't actually needed at all.
+#        ents: []
       weapon: !type:ContainerSlot {}
 
 # region thigh holster
@@ -115,10 +119,7 @@
   - type: Clothing
     sprite: _NF/Clothing/Neck/Misc/holster_thigh.rsi
     clothingVisuals:
-      neck:
-      - state: equipped-NECK
-        color: "#515151"
-      neckalt: # Aurora's Song - second neck slot
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#515151"
   - type: Item
@@ -133,7 +134,7 @@
     sprite: _NF/Clothing/Neck/Misc/holster_thigh.rsi
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseClothingNeckHolsterThigh ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, NFBaseClothingNeckHolsterThigh ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: NFBaseClothingNeckHolsterThighNfsd
   name: nfsd drop leg holster
   components:
@@ -143,7 +144,7 @@
       color: "#493926"
   - type: Clothing
     clothingVisuals:
-      neck:
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#493926"
   - type: Item
@@ -170,10 +171,7 @@
   - type: Clothing
     sprite: _NF/Clothing/Neck/Misc/holster_thigh_sheath.rsi
     clothingVisuals:
-      neck:
-      - state: equipped-NECK
-        color: "#515151"
-      neckalt: # Aurora's Song - second neck slot
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#515151"
   - type: Item
@@ -188,7 +186,7 @@
     sprite: _NF/Clothing/Neck/Misc/holster_thigh_sheath.rsi
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseClothingNeckSheathThigh ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, NFBaseClothingNeckSheathThigh ] # Aurora's Song - BaseC2ContrabandUnredeemable<C2ContrabandNanoTrasenNoValueRestricted
   id: NFBaseClothingNeckSheathThighNfsd
   name: nfsd drop leg sheath
   components:
@@ -198,7 +196,7 @@
       color: "#493926"
   - type: Clothing
     clothingVisuals:
-      neck:
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#493926"
   - type: Item

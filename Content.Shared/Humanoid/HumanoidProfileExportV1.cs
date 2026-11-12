@@ -94,7 +94,7 @@ public sealed partial class HumanoidCharacterProfileV1
 
     public HumanoidCharacterProfile ToV2()
     {
-        return new(Name, FlavorText, NsfwFlavorText, CharacterConsent, Species, Age, Sex, Gender, BankBalance, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts); // Aurora's Song - Add old changes to profile
+        return new(null, Name, FlavorText, NsfwFlavorText, CharacterConsent, Species, Age, Sex, Gender, BankBalance, Appearance.ToV2(Species), SpawnPriority, JobPriorities, PreferenceUnavailable, AntagPreferences, TraitPreferences, Loadouts); // Aurora's Song - Add old changes to profile
     }
 }
 

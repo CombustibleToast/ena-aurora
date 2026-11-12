@@ -11,13 +11,11 @@
   - type: Edible # Aurora's Song - Food>Edible
     trash:
     - FoodFrozenPopsicleTrash
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 10
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 10
   - type: FlavorProfile
     flavors:
     - sweet
@@ -35,20 +33,22 @@
     layers:
     - state: mochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - sweet
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: bungo mochi
@@ -61,20 +61,22 @@
     layers:
     - state: bungomochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - bungo
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: cherry mochi
@@ -87,20 +89,22 @@
     layers:
     - state: cherrymochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - cherry
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: chocolate mochi
@@ -113,20 +117,22 @@
     layers:
     - state: chocomochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - chocolate
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: fiber mochi
@@ -139,23 +145,25 @@
     layers:
     - state: fibermochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 4
-        - ReagentId: Sugar
-          Quantity: 4
-        - ReagentId: Fiber
-          Quantity: 2
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 4
+      - ReagentId: Sugar
+        Quantity: 4
+      - ReagentId: Fiber
+        Quantity: 2
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - fiber
   - type: MothFood # Aurora Song
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: rosy mochi
@@ -168,20 +176,22 @@
     layers:
     - state: mothmochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - pink
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: cinnamon mochi
@@ -194,20 +204,22 @@
     layers:
     - state: spicemochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - cinnamon
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: tea mochi
@@ -220,20 +232,22 @@
     layers:
     - state: teamochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 5
-        - ReagentId: Sugar
-          Quantity: 5
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 5
+      - ReagentId: Sugar
+        Quantity: 5
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - tea
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: ube mochi
@@ -246,22 +260,24 @@
     layers:
     - state: ubemochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 4
-        - ReagentId: Sugar
-          Quantity: 4
-        - ReagentId: PolypyryliumOligomers
-          Quantity: 2
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 4
+      - ReagentId: Sugar
+        Quantity: 4
+      - ReagentId: PolypyryliumOligomers
+        Quantity: 2
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - antiseptic
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: pumpkin mochi
@@ -274,17 +290,15 @@
     layers:
     - state: pumpkinmochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 4
-        - ReagentId: Sugar
-          Quantity: 4
-        - ReagentId: PumpkinFlesh
-          Quantity: 2
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 4
+      - ReagentId: Sugar
+        Quantity: 4
+      - ReagentId: PumpkinFlesh
+        Quantity: 2
   - type: FlavorProfile
     flavors:
     - rice
@@ -294,6 +308,10 @@
     butcheringType: Knife
     spawned:
     - id: FoodFrozenMochiCarvedPumpkin
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: carved pumpkin mochi
@@ -306,19 +324,21 @@
     layers:
     - state: carvedpumpkinmochi
   - type: Edible # Aurora's Song - Food>Edible
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Nutriment
-          Quantity: 4
-        - ReagentId: Sugar
-          Quantity: 4
-        - ReagentId: PumpkinFlesh
-          Quantity: 2
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 4
+      - ReagentId: Sugar
+        Quantity: 4
+      - ReagentId: PumpkinFlesh
+        Quantity: 2
   - type: FlavorProfile
     flavors:
     - rice
     - icecream
     - spooky
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End

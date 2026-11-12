@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingBackpack
+  id: ClothingBackpackCommandveteran
+  name: command veteran backpack
+  description: A sleek backpack, earned through a long career as command.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,6,4
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/commandveteran.rsi

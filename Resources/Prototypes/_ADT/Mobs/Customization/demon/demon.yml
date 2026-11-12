@@ -1,0 +1,223 @@
+# Aurora's Song - Commented out everything but horns and ears. 
+
+# - type: marking
+#   id: DemonChestCowSpots
+#   bodyPart: LLeg
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Shadowkin, Moth, Vulpkanin, Feroxi] #Omu - Feroxi
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: cow_spots
+
+# - type: marking
+#   id: DemonChestGuard
+#   bodyPart: LLeg
+#   # markingCategory: Overlay
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Shadowkin, Moth, Vulpkanin, Feroxi] #Omu - Feroxi
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: guards_stripes
+
+# - type: marking
+#   id: DemonChestLinesEmperos
+#   bodyPart: LLeg
+#   # markingCategory: Overlay
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Shadowkin, Moth, Vulpkanin, Feroxi] #Omu - Feroxi
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: lines_emperos
+
+# - type: marking
+#   id: DemonChestQueenLines
+#   bodyPart: LLeg
+#   # markingCategory: Overlay
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Shadowkin, Moth, Vulpkanin, Feroxi] #Omu - Feroxi
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: queen_lines
+
+# - type: marking
+#   id: DemonChestTreeLines
+#   bodyPart: LLeg
+#   # markingCategory: Overlay
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Shadowkin, Moth, Vulpkanin, Feroxi] #Omu - Feroxi
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: tree_lines
+
+# - type: marking
+#   id: DemonChestTrinitySpots
+#   bodyPart: Chest
+#   # markingCategory: Overlay
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid, Tajaran, Felinid, Shadowkin, Moth, Vulpkanin, Feroxi] #Omu - Feroxi
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: trinity_spots
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonCowEars
+  bodyPart: HeadSide
+  # markingCategory: HeadSide # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: cow_ears
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonEars
+  bodyPart: HeadSide
+  # markingCategory: HeadSide # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: demon_ears
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonElfEars
+  bodyPart: HeadSide
+  # markingCategory: HeadSide # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: ears_elf
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonCowHorns
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: cow_horns
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsDeer
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: deer_antlers_horns
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsSmall
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: small_horns
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsBuffalo
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_buffalo
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsCarpicorn
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_capricorn
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsDevil
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsDevil2
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil2
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsDevil3
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil3
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsDevil4
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_devil4
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsRam
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_ram
+
+# Changed speciesRestriction to groupWhitelist. Commented out markingCategory.
+- type: marking
+  id: DemonHornsUnicorn
+  bodyPart: HeadTop
+  # markingCategory: HeadTop # Aurora's Song
+  groupWhitelist: [Human, Oni, IPC, Reptilian, Slime, Arachnid, Feroxi, Sheleg] # Aurora's Song - Add Feroxi and Shelegs
+  sprites:
+  - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+    state: horns_unicorn
+
+# Aurora's Song - Commented out everything but horns and ears. 
+# - type: marking
+#   id: DemomTail1
+#   bodyPart: Tail
+#   # markingCategory: Tail
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid]
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: demon_tail
+
+# - type: marking
+#   id: DemomTailLong
+#   bodyPart: Tail
+#   # markingCategory: Tail
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid]
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: long
+
+# - type: marking
+#   id: DemomTailUp
+#   bodyPart: Tail
+#   # markingCategory: Tail
+#   groupWhitelist: [Human, Oni, IPC, Reptilian, SlimePerson, Arachnid]
+#   sprites:
+#   - sprite: _ADT/Mobs/Customization/Demon/custom.rsi
+#     state: up
+

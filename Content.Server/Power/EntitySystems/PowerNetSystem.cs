@@ -1,8 +1,10 @@
 using System.Linq;
+using Content.Server._AS;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.Power.Components;
 using Content.Server.Power.NodeGroups;
 using Content.Server.Power.Pow3r;
+using Content.Shared._AS.CCVar;
 using Content.Shared.CCVar;
 using Content.Shared.Power;
 using Content.Shared.Power.Components;
@@ -18,29 +20,27 @@ namespace Content.Server.Power.EntitySystems
     ///     Manages power networks, power state, and all power components.
     /// </summary>
     [UsedImplicitly]
-    public sealed class PowerNetSystem : SharedPowerNetSystem
+    public sealed partial class PowerNetSystem : SharedPowerNetSystem
     {
-        [Dependency] private readonly AppearanceSystem _appearance = default!;
-        [Dependency] private readonly PowerNetConnectorSystem _powerNetConnector = default!;
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IParallelManager _parMan = default!;
-        [Dependency] private readonly BatterySystem _battery = default!;
+        [Dependency] private AppearanceSystem _appearance = default!;
+        [Dependency] private PowerNetConnectorSystem _powerNetConnector = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IParallelManager _parMan = default!;
+        [Dependency] private BatterySystem _battery = default!;
+
+        [Dependency] private EntityQuery<ApcPowerReceiverBatteryComponent> _apcBatteryQuery = default!;
+        [Dependency] private EntityQuery<PowerNetworkBatteryComponent> _powerNetworkBatteryQuery = default!;
+        [Dependency] private EntityQuery<BatteryComponent> _batteryQuery = default!;
 
         private readonly PowerState _powerState = new();
         private readonly HashSet<PowerNet> _powerNetReconnectQueue = new();
         private readonly HashSet<ApcNet> _apcNetReconnectQueue = new();
-
-        private EntityQuery<ApcPowerReceiverBatteryComponent> _apcBatteryQuery;
-        private EntityQuery<BatteryComponent> _batteryQuery;
 
         private BatteryRampPegSolver _solver = new();
 
         public override void Initialize()
         {
             base.Initialize();
-
-            _apcBatteryQuery = GetEntityQuery<ApcPowerReceiverBatteryComponent>();
-            _batteryQuery = GetEntityQuery<BatteryComponent>();
 
             UpdatesAfter.Add(typeof(NodeGroupSystem));
             _solver = new(_cfg.GetCVar(CCVars.DebugPow3rDisableParallel));
@@ -57,7 +57,6 @@ namespace Content.Server.Power.EntitySystems
             SubscribeLocalEvent<PowerNetworkBatteryComponent, EntityPausedEvent>(BatteryPaused);
             SubscribeLocalEvent<PowerNetworkBatteryComponent, EntityUnpausedEvent>(BatteryUnpaused);
 
-            SubscribeLocalEvent<PowerConsumerComponent, MapInitEvent>(PowerConsumerMapInit);
             SubscribeLocalEvent<PowerConsumerComponent, ComponentInit>(PowerConsumerInit);
             SubscribeLocalEvent<PowerConsumerComponent, ComponentShutdown>(PowerConsumerShutdown);
             SubscribeLocalEvent<PowerConsumerComponent, EntityPausedEvent>(PowerConsumerPaused);
@@ -89,7 +88,7 @@ namespace Content.Server.Power.EntitySystems
         private void ApcPowerReceiverShutdown(EntityUid uid, ApcPowerReceiverComponent component,
             ComponentShutdown args)
         {
-            _powerState.Loads.Free(component.NetworkLoad.Id);
+            _powerState.Loads.FreeWithCopyTo(component.NetworkLoad.Id, ref component.NetworkLoad.InitializationStruct);
         }
 
         private void ApcPowerReceiverRemove(EntityUid uid, ApcPowerReceiverComponent component, ComponentRemove args)
@@ -120,7 +119,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void BatteryShutdown(EntityUid uid, PowerNetworkBatteryComponent component, ComponentShutdown args)
         {
-            _powerState.Batteries.Free(component.NetworkBattery.Id);
+            _powerState.Batteries.FreeWithCopyTo(component.NetworkBattery.Id, ref component.NetworkBattery.InitializationStruct);
         }
 
         private static void BatteryPaused(EntityUid uid, PowerNetworkBatteryComponent component, ref EntityPausedEvent args)
@@ -133,11 +132,6 @@ namespace Content.Server.Power.EntitySystems
             component.NetworkBattery.Paused = false;
         }
 
-        private void PowerConsumerMapInit(EntityUid uid, PowerConsumerComponent component, ref MapInitEvent args)
-        {
-            _appearance.SetData(uid, PowerDeviceVisuals.Powered, component.ReceivedPower > 0);
-        }
-
         private void PowerConsumerInit(EntityUid uid, PowerConsumerComponent component, ComponentInit args)
         {
             _powerNetConnector.BaseNetConnectorInit(component);
@@ -146,7 +140,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void PowerConsumerShutdown(EntityUid uid, PowerConsumerComponent component, ComponentShutdown args)
         {
-            _powerState.Loads.Free(component.NetworkLoad.Id);
+            _powerState.Loads.FreeWithCopyTo(component.NetworkLoad.Id, ref component.NetworkLoad.InitializationStruct);
         }
 
         private static void PowerConsumerPaused(EntityUid uid, PowerConsumerComponent component, ref EntityPausedEvent args)
@@ -167,7 +161,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void PowerSupplierShutdown(EntityUid uid, PowerSupplierComponent component, ComponentShutdown args)
         {
-            _powerState.Supplies.Free(component.NetworkSupply.Id);
+            _powerState.Supplies.FreeWithCopyTo(component.NetworkSupply.Id, ref component.NetworkSupply.InitializationStruct);
         }
 
         private static void PowerSupplierPaused(EntityUid uid, PowerSupplierComponent component, ref EntityPausedEvent args)
@@ -281,15 +275,28 @@ namespace Content.Server.Power.EntitySystems
             };
         }
 
+        // Start Aurora Song
+        private TickLimiter Limiter =>
+            field ??= new TickLimiter(Subs, AuroraCVars.TickLimiterPowerSystem);
+        // End Aurora Song
+
         public override void Update(float frameTime)
         {
             base.Update(frameTime);
+
+            // Start Aurora Song
+            frameTime = Limiter.CheckTickLimit(frameTime);
+
+            if (frameTime == 0)
+                return;
+            // End Aurora Song
 
             ReconnectNetworks();
 
             // Synchronize batteries
             RaiseLocalEvent(new NetworkBatteryPreSync());
 
+            // TODO Aurora Song: cut the tickrate for this system a bit with accurate deltas
             // Run power solver.
             _solver.Tick(frameTime, _powerState, _parMan);
 
@@ -420,8 +427,6 @@ namespace Content.Server.Power.EntitySystems
                 lastRecv = newRecv;
                 var msg = new PowerConsumerReceivedChanged(newRecv, consumer.DrawRate);
                 RaiseLocalEvent(uid, ref msg);
-
-                _appearance.SetData(uid, PowerDeviceVisuals.Powered, newRecv > 0);
             }
         }
 
@@ -450,17 +455,20 @@ namespace Content.Server.Power.EntitySystems
 
         private void AllocLoad(PowerState.Load load)
         {
-            _powerState.Loads.Allocate(out load.Id) = load;
+            load.PowerStateInst = _powerState;
+            _powerState.Loads.Allocate(out load.Id) = load.InitializationStruct;
         }
 
         private void AllocSupply(PowerState.Supply supply)
         {
-            _powerState.Supplies.Allocate(out supply.Id) = supply;
+            supply.PowerStateInst = _powerState;
+            _powerState.Supplies.Allocate(out supply.Id) = supply.InitializationStruct;
         }
 
         private void AllocBattery(PowerState.Battery battery)
         {
-            _powerState.Batteries.Allocate(out battery.Id) = battery;
+            battery.PowerStateInst = _powerState;
+            _powerState.Batteries.Allocate(out battery.Id) = battery.InitializationStruct;
         }
 
         private void AllocNetwork(PowerState.Network network)
@@ -488,11 +496,9 @@ namespace Content.Server.Power.EntitySystems
 
             DoReconnectBasePowerNet(net, netNode);
 
-            var batteryQuery = GetEntityQuery<PowerNetworkBatteryComponent>();
-
             foreach (var apc in net.Apcs)
             {
-                var netBattery = batteryQuery.GetComponent(apc.Owner);
+                var netBattery = _powerNetworkBatteryQuery.GetComponent(apc.Owner);
                 netNode.BatterySupplies.Add(netBattery.NetworkBattery.Id);
                 netBattery.NetworkBattery.LinkedNetworkDischarging = netNode.Id;
             }
@@ -509,18 +515,16 @@ namespace Content.Server.Power.EntitySystems
 
             DoReconnectBasePowerNet(net, netNode);
 
-            var batteryQuery = GetEntityQuery<PowerNetworkBatteryComponent>();
-
             foreach (var charger in net.Chargers)
             {
-                var battery = batteryQuery.GetComponent(charger.Owner);
+                var battery = _powerNetworkBatteryQuery.GetComponent(charger.Owner);
                 netNode.BatteryLoads.Add(battery.NetworkBattery.Id);
                 battery.NetworkBattery.LinkedNetworkCharging = netNode.Id;
             }
 
             foreach (var discharger in net.Dischargers)
             {
-                var battery = batteryQuery.GetComponent(discharger.Owner);
+                var battery = _powerNetworkBatteryQuery.GetComponent(discharger.Owner);
                 netNode.BatterySupplies.Add(battery.NetworkBattery.Id);
                 battery.NetworkBattery.LinkedNetworkDischarging = netNode.Id;
             }

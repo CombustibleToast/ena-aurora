@@ -227,7 +227,7 @@ namespace Content.Server.Database
             var unban = ConvertUnban(ban.Unban);
 
             ImmutableArray<BanRoleDef>? roles = null;
-            if (ban.Type == BanType.Role)
+            if (ban.Type is BanType.Role or BanType.Radio) // Aurora's Song - Radio bans
             {
                 roles = [..ban.Roles!.Select(br => new BanRoleDef(br.RoleType, br.RoleId))];
             }

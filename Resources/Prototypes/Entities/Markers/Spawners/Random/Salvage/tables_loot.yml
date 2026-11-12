@@ -120,8 +120,8 @@
       tableId: TreasureCoinPile
       rolls: !type:RangeNumberSelector
         range: 1, 2
-    - !type:NestedSelector
-      tableId: SalvageInstrumentTable
+#    - !type:NestedSelector #Aurora's Song - removed to reduce the amount of random useless clutter spawned
+#      tableId: SalvageInstrumentTable
 
 - type: entityTable
   id: SalvageTreasureUncommon
@@ -259,6 +259,8 @@
     - id: RadioHandheldNF # Frontier RadioHandheld<RadioHandheldNF
     - id: ClothingBeltUtility
     - id: Floodlight
+    - id: ASHandheldFloodlight # Aurora
+    - id: ASShoulderFlashlight # Aurora
     - id: NFWeaponPka # Frontier: WeaponProtoKineticAccelerator<NFWeaponPka
       weight: 0.5
     - id: OxygenTankFilled
@@ -302,6 +304,8 @@
     - id: MysterySpaceBladeBox # Frontier
     - id: CrossbowModernHand # Frontier
     - id: NFWeaponHoloflareGun # Frontier
+    - id: ASWeaponAdvancedHoloflareGun # Aurora
+      weight: 0.5
 
 - type: entityTable
   id: SalvageEquipmentLegendary
@@ -325,6 +329,8 @@
     - id: PowerCellAntiqueProto # Frontier
       weight: 0.1
     - id: NFShovel # Frontier
+    - id: ASWeaponExperimentalHoloflareGun # Aurora
+      weight: 0.5
 
 - type: entityTable
   id: RandomGeneratorTable

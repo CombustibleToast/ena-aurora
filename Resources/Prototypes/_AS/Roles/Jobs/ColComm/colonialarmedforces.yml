@@ -8,7 +8,6 @@
   startingGear: CAFLeaderGearEVAJackhammer
   icon: "JobIconColonialArmedForces"
   supervisors: job-supervisors-colcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   access:
@@ -80,10 +79,10 @@
     id: CAFLeaderPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltMilitaryWebbingSecurityFilled
-    pocket1: ASMagazineMarksmanRifle30Overpressure
-    pocket2: ASMagazineMarksmanRifle30Overpressure
+    pocket1: ASMagazineMarksmanRifle30LongOverpressure
+    pocket2: ASMagazineMarksmanRifle30LongOverpressure
   inhand:
-  - ASWeaponRifleMarksmanHZ-3-3-MOverpressure
+  - ASWeaponRifleMarksmanAF-17MOverpressure
 #  storage: # Commented out backpack filled since storage doesn't work on debug-set gear
 #    back:
 #    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
@@ -116,7 +115,6 @@
   startingGear: CAFTrooperGearEVAJackhammer
   icon: "JobIconColonialArmedForces"
   supervisors: job-supervisors-colcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   access:
@@ -188,10 +186,10 @@
     id: CAFTrooperPDA
     ears: ClothingHeadsetAltColCom
     belt: ClothingBeltMilitaryWebbingSecurityFilled
-    pocket1: ASMagazineMarksmanRifle30Overpressure
-    pocket2: ASMagazineMarksmanRifle30Overpressure
+    pocket1: ASMagazineMarksmanRifle30LongOverpressure
+    pocket2: ASMagazineMarksmanRifle30LongOverpressure
   inhand:
-    - ASWeaponRifleMarksmanHZ-3-3-MOverpressure
+    - ASWeaponRifleMarksmanAF-17MOverpressure
 #  storage: # Commented out backpack filled since storage doesn't work on debug-set gear
 #    back:
 #    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
@@ -224,7 +222,6 @@
   startingGear: CAFMedicalGearEVA
   icon: "JobIconColonialArmedForces"
   supervisors: job-supervisors-colcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   access:
@@ -307,7 +304,6 @@
   startingGear: CAFEngineerGearEVA
   icon: "JobIconColonialArmedForces"
   supervisors: job-supervisors-colcom
-  canBeAntag: false
   accessGroups:
   - AllAccess
   access:

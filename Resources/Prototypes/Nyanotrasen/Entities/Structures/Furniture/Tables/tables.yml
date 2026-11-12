@@ -5,9 +5,9 @@
   description: A classic wooden table. Extra robust.
   components:
   - type: Sprite
-    sprite: Nyanotrasen/Structures/Furniture/Tables/rwood.rsi
+    sprite: _AS/Structures/Furniture/Tables/rwood.rsi # AuroraSong
   - type: Icon
-    sprite: Nyanotrasen/Structures/Furniture/Tables/rwood.rsi
+    sprite: _AS/Structures/Furniture/Tables/rwood.rsi # AuroraSong
   - type: Damageable
     damageModifierSet: Wood
   - type: Destructible
@@ -41,3 +41,8 @@
       types:
         Blunt: 8
     bonkTime: 3
+    # Aurora's Song Start - Make Constructable
+  - type: Construction
+    graph: Table
+    node: TableReinforcedWood
+    # Aurora's Song End

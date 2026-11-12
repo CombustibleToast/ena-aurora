@@ -1,0 +1,100 @@
+- type: entity
+  name: shoulder-mounted flashlight
+  parent: [BaseItem, RecyclableItemDeviceSmall]
+  id: ASShoulderFlashlight
+  description: A compact flashlight that can be securely worn on the shoulder.
+  components:
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+        blacklist:
+          tags:
+          - MantisCaster
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot {}
+  - type: ToggleableVisuals
+    spriteLayer: light
+    inhandVisuals:
+      left:
+      - state: on-inhand-left
+      right:
+      - state: on-inhand-right
+    clothingVisuals:
+      head:
+      - state: on-equipped-NECK
+  - type: HandheldLight
+    addPrefix: true
+    wattage: 0.5
+    blinkingBehaviourId: blinking
+    radiatingBehaviourId: radiating
+  - type: LightBehaviour
+    behaviours:
+      - !type:FadeBehaviour
+        id: radiating
+        maxDuration: 2.0
+        startValue: 3.0
+        endValue: 2.0
+        isLooped: true
+        reverseWhenFinished: true
+      - !type:PulseBehaviour
+        id: blinking
+        interpolate: Nearest
+        maxDuration: 1.0
+        startValue: 0.1
+        endValue: 2.0
+        isLooped: true
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Misc/mounted_flashlight.rsi
+    layers:
+    - state: icon
+    - state: icon-flash
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _AS/Clothing/Neck/Misc/mounted_flashlight.rsi
+    heldPrefix: off
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    radius: 4.5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: Appearance
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Misc/mounted_flashlight.rsi
+    equippedPrefix: off
+    quickEquip: false
+    slots:
+      - neck
+
+- type: entity
+  name: shoulder-mounted taclight
+  parent: ASShoulderFlashlight
+  id: ASShoulderTaclight
+  description: A sturdy and powerful flashlight that can be securely worn on the shoulder.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Misc/mounted_taclight.rsi
+  - type: Item
+    sprite: _AS/Clothing/Neck/Misc/mounted_taclight.rsi
+    heldPrefix: off
+  - type: PointLight
+    enabled: false
+    color: "#cce6ff"
+    radius: 6.5
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Misc/mounted_taclight.rsi
+    equippedPrefix: off
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.975
+        Slash: 0.975
+        Piercing: 0.975
+        Heat: 0.975

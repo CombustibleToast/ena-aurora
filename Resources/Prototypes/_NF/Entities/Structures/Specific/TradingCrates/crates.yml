@@ -5,19 +5,20 @@
   description: Contains goods made in the Frontier sector, ready to be sold at a cargo depot for higher value. MAKE SURE THE CRATE IS INTACT.
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/tradedark.rsi
+    sprite: _AS/Structures/Storage/Crates/tradedark.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/tradedark.rsi
+    sprite: _AS/Structures/Storage/Crates/tradedark.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper
@@ -49,19 +50,20 @@
     expressOnTimeBonus: 1500
     expressLatePenalty: 1500 # 0/1000
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/tradelight.rsi
+    sprite: _AS/Structures/Storage/Crates/tradelight.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/tradelight.rsi
+    sprite: _AS/Structures/Storage/Crates/tradelight.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper
@@ -87,19 +89,20 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/contraband1_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/contraband1_crate.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/contraband1_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/contraband1_crate.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper
@@ -116,19 +119,20 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/contraband2_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/contraband2_crate.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/contraband2_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/contraband2_crate.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper
@@ -148,19 +152,20 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/contraband3_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/contraband3_crate.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/contraband3_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/contraband3_crate.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper
@@ -181,19 +186,20 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/donkco_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/donkco_crate.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/donkco_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/donkco_crate.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper
@@ -214,19 +220,20 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/cybersun_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/cybersun_crate.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/cybersun_crate.rsi
+    sprite: _AS/Structures/Storage/Crates/cybersun_crate.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: icon
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_other
-      offset: 0.275,-0.265
+      offset: 0.275,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Icon"]
       visible: false
     - sprite: _NF/Interface/Misc/cargo_destination_icons.rsi
       state: cargo_priority_inactive
-      offset: 0.025,-0.265
+      offset: 0.025,-0.40625 # Aurora's Song - Storage Resprites Batch 2
       map: ["enum.TradeCrateVisualLayers.Priority"]
       visible: false
     - state: paper

@@ -12,6 +12,9 @@
       - sprite: _DEN/Objects/Materials/Scrap/generic.rsi
         state: electrum1
         map: [ "enum.DamageStateVisualLayers.Base" ]
+  - type: Icon # Aurora's Song
+    sprite: _DEN/Objects/Materials/Scrap/generic.rsi
+    state: electrum1
   - type: RandomSprite
     available:
       - enum.DamageStateVisualLayers.Base:
@@ -24,6 +27,11 @@
       Silver: 50 # 1 ingot
   - type: StaticPrice
     price: 20 # The value of one gold and one silver ingot, if they just sell it # Aurora: 35>20, satisfy abritrage
+  - type: ConstructionMaterials # Aurora's Song - Allow electrum scrap in construction bags
+  - type: Stack # Aurora's Song - Allow electrum scrap to stack.
+    stackType: ElectrumScrap
+    count: 1
   - type: Tag
     tags:
+    - ElectrumScrap # Aurora's Song
     - MantisBeltStorable # Why not, their gear is made of it

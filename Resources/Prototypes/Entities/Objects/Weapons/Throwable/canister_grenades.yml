@@ -24,7 +24,7 @@
       path: /Audio/Items/smoke_grenade_prime.ogg
 
 - type: entity
-  parent: [ SmokeGrenade ] # Frontier: removed BaseCivilianContraband
+  parent: [ BaseC1Contraband, SmokeGrenade ] # Aurora's Song - Added BaseC1Contraband, to fix Contraband Status.
   id: CleanerGrenade
   name: cleanade
   description: Special grenade for janitors, releasing large cloud of space cleaner foam.
@@ -42,6 +42,9 @@
       - ReagentId: SpaceCleaner
         Quantity: 30
   - type: NFCleanade # Frontier
+  - type: Tag
+    tags:
+    - CleanerGrenade
 
 - type: entity
   parent: SmokeGrenade
@@ -116,3 +119,13 @@
         enabled:
           True: { state: active }
           False: { state: spent }
+  - type: RemoveComponentsOnTrigger # should prevent it from being re-triggered
+    keysIn:
+    - timer
+    triggerOnce: true
+    components:
+    - type: TriggerOnUse
+    - type: TimerTrigger
+  - type: PhysicalComposition #Aurora's Song - Got tired of not being able to scrap them.
+    materialComposition:
+      RawScrap: 50

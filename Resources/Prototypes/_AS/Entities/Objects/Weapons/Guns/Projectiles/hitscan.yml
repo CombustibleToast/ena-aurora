@@ -1,0 +1,22 @@
+- type: entity
+  parent: BasicHitscan
+  id: HitscanEmp
+  name: emp ray
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicRaycast
+    maxDistance: 128 # Workable as a ship-to-ship weapon
+  - type: HitscanEmp
+    range: 2
+    energyConsumption: 2700000
+    disableDuration: 30
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _AS/Objects/Weapons/Guns/Projectiles/hitscan.rsi
+      state: muzzle_emp
+    travelFlash:
+      sprite: _AS/Objects/Weapons/Guns/Projectiles/hitscan.rsi
+      state: beam_emp
+    impactFlash:
+      sprite: _AS/Objects/Weapons/Guns/Projectiles/hitscan.rsi
+      state: impact_emp

@@ -1,0 +1,11 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeFlippo
+  storage:
+    back:
+    - NanotrasenFlippo
+
+- type: loadout
+  id: NanotrasenRepresentativeFlippoCentcom
+  storage:
+    back:
+    - CentCommFlippo

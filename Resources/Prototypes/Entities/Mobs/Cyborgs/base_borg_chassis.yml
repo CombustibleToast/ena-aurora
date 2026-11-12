@@ -175,6 +175,7 @@
     - enum.BorgUiKey.Key
   - type: LockedWiresPanel
   - type: Damageable
+  - type: Injurable
     damageContainer: Silicon
   - type: Destructible
     thresholds:
@@ -262,6 +263,12 @@
     requiredMobState:
     - Critical
     - Dead
+  - type: Fingerprint # Aurora's Song - Give silicon fingerprints
+  - type: FingerprintFormat # Aurora's Song - Give silicon HWID styled fingerprints
+    format: HardwareId
+  - type: Dna # Aurora's Song - Give silicon DNA
+  - type: DnaFormat # Aurora's Song - Give silicon MAC address styled DNA
+    format: MacAddress
 
 - type: entity
   abstract: true

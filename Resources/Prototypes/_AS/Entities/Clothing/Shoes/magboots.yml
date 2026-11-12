@@ -26,4 +26,31 @@
     turnInValues:
     allowedDepartments: [ Security, Command ]
   - type: FactionClothing
-    faction: ColonialCommandClothing
+    faction: AuroranColony
+
+- type: entity
+  parent: ClothingShoesBootsMagBase
+  id: ASClothingShoesBootsMagPunkParty
+  name: Steezy Magboots
+  description: Premium, custom-made magboots that are sure to make you the talk of the frontier
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Shoes/Boots/party_magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _AS/Clothing/Shoes/Boots/party_magboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    radius: 1.6
+    energy: 2.5
+    netsync: false
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RgbLightController
+  - type: RotatingLight
+    speed: 360
+  - type: StaticPrice
+    price: 10000

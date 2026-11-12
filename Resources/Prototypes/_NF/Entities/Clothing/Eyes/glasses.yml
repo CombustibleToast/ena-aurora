@@ -27,7 +27,7 @@
   - type: VisionCorrection
 
 - type: entity
-  parent: ClothingEyesGlassesSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingEyesGlassesSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingEyesGlassesNfsd
   name: NFSD glasses
   description: Upgraded sunglasses that provide flash immunity and a security HUD.

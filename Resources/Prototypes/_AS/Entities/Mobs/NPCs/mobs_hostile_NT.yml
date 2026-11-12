@@ -1,0 +1,370 @@
+﻿#region base
+- type: entity
+  name: NT Rogue
+  abstract: true
+  parent:
+  - NFMobNoEquipmentOnGib
+  - MobHumanoidHostileBase
+  - MobHumanoidInvetory
+  id: MobHostileNTBase
+  components:
+  - type: CombatMode # Enable NavSmash behavior
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierEasy
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      100: Critical # Aurora Song 80>100
+      110: Dead # Aurora Song 100>110
+  - type: NpcFactionMember
+    factions:
+    - ASNanoTrasenRogue
+  - type: Vocalizer
+    minVocalizeInterval: 30
+    maxVocalizeInterval: 120
+    hideChat: true
+  - type: DatasetVocalizer
+    dataset: NanoTrasenHumanoidMobChatter
+  - type: AutoWakeUp
+
+#region Tier 1
+- type: entity
+  name: NT sec grunt
+  parent:
+  - MobMovementSpeedModifierRanged
+  - MobStaminaFodder
+  - MobHostileNTBase
+  - MobHumanoidHostileAISimpleRanged
+  id: MobNTSecGruntMk58
+  description: A rogue or "plausibly deniable" NT grunt, doesn't matter for you. Cus they're going to try and kill you. That looks like a MK58 in their hands.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueGruntMk58
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierEasy # Basic ass grunt, should go down fairly easily
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: BasicEntityAmmoProvider
+    proto: NFCartridgePistol35
+    capacity: 10
+    count: 10
+  - type: Gun
+    showExamineText: false
+    fireRate: 3
+    minAngle: 10
+    maxAngle: 20
+    angleIncrease: 2
+    angleDecay: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+
+- type: entity
+  name: NT sec grunt
+  parent:
+  - MobMovementSpeedModifierMelee
+  - MobStaminaFodder
+  - MobHostileNTBase
+  - MobHumanoidHostileAISimpleMelee
+  id: MobNTSecGruntStunstick
+  description: A rogue or "plausibly deniable" NT grunt, and they're ready to harmbaton.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueGruntBaton
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierEasy # Basic ass grunt, should go down fairly easily
+
+- type: entity
+  name: NT sec trooper
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTSecTrooperLecter
+  description: A Sec Trooper, the hard spine of most station combat teams, and absolutely a problem for you.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueOfficerLecter
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: BasicEntityAmmoProvider
+    proto: NFCartridgeRifle20
+    capacity: 12
+    count: 12
+  - type: Gun
+    showExamineText: false
+    fireRate: 6
+    minAngle: 4
+    maxAngle: 12
+    angleIncrease: 2.5
+    angleDecay: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle.ogg
+
+- type: entity
+  name: NT sec trooper
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTSecTrooperLaser
+  description: A Sec Trooper, the hard spine of most station combat teams, and absolutely a problem for you.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueOfficerLaser
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: BatteryAmmoProvider
+    proto: NFBulletLaserHeavy
+    fireCost: 80
+  - type: BatterySelfRecharger
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 600
+    startingCharge: 600
+  - type: Gun
+    showExamineText: false
+    fireRate: 3
+    minAngle: 4
+    maxAngle: 12
+    angleIncrease: 2.5
+    angleDecay: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+
+- type: entity
+  name: NT sec medic
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTSecMedTroopDrozd
+  description: A Sec medic, today they don't care about keeping you alive.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueOfficerDrozd
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: BasicEntityAmmoProvider
+    proto: NFCartridgePistol35
+    capacity: 10
+    count: 10
+  - type: Gun
+    showExamineText: false
+    fireRate: 7
+    minAngle: 6.7
+    maxAngle: 17
+    angleIncrease: 1
+    angleDecay: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+
+- type: entity
+  name: NT sec medic
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTSecMedTroopWt550
+  description: A Sec medic, today they don't care about keeping you alive.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueOfficerWt550
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 1.5
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: BasicEntityAmmoProvider
+    proto: NFCartridgePistol35
+    capacity: 10
+    count: 10
+  - type: Gun
+    showExamineText: false
+    fireRate: 7
+    minAngle: 4
+    maxAngle: 15
+    angleIncrease: 1
+    angleDecay: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+
+- type: entity
+  name: NT sec warden
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTSecWarden
+  description: A Brigmaster, with no brig to guard. Wardloose upon ye.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueWarden
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2.2
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: BasicEntityAmmoProvider
+    proto: NFShellShotgunBuckshot
+    capacity: 5
+    count: 5
+  - type: Gun
+    showExamineText: false
+    fireRate: 1.5
+    minAngle: 6.8
+    maxAngle: 26
+    angleIncrease: 2.5
+    angleDecay: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+
+- type: entity
+  name: NT security director
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTSecHoS
+  description: The head of security, in charge of combat operations and team coordination.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueHoS
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2.2
+    rechargeSound:
+      path: /Audio/_NF/Effects/silence.ogg
+  - type: BasicEntityAmmoProvider
+    proto: ASCartridgeRifle30Long
+    capacity: 5
+    count: 5
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.9
+    minAngle: 6.8
+    maxAngle: 26
+    angleIncrease: 2.5
+    angleDecay: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+
+- type: entity
+  name: NT Field Captain
+  parent: [ MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged ]
+  id: MobNTFieldCaptain
+  description: The head of operations, the commander, the boss. And they're packing heat.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueFieldCaptain
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
+    proto: NFPulse
+    fireCost: 60
+  - type: BatterySelfRecharger # 20 seconds to fully recharge, but it does not do so if it has been fired in the last 5 seconds.
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 300
+    startingCharge: 300
+  - type: Gun
+    minAngle: 3.5
+    maxAngle: 7
+    angleIncrease: 0.25
+    angleDecay: 1
+    fireRate: 1.5 # Pulse rapid fire is a HORROR
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+
+- type: entity
+  name: NT Blueshield
+  parent: [MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged]
+  id: MobNTBlueshield
+  description: A rogue blueshield, someone's about to have a bad day.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueBlueShield
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierMed # Slightly tougher modifiers
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2.2
+    rechargeSound:
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
+  - type: BasicEntityAmmoProvider
+    proto: AS8gShellBuckshot
+    capacity: 5
+    count: 5
+  - type: Gun
+    showExamineText: false
+    fireRate: 0.7
+    minAngle: 6.8
+    maxAngle: 26
+    angleIncrease: 2.5
+    angleDecay: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+
+- type: entity
+  name: Rogue DS-Commando
+  parent: [ MobMovementSpeedModifierRanged, MobStaminaFodder, MobHostileNTBase, MobHumanoidHostileAISimpleRanged ]
+  id: MobNTDeathSquad
+  description: The mask of capitalism has slipped, and it, the beast, is here to kill everything you love.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Inventory
+    templateId: human
+  - type: Loadout
+    prototypes:
+    - ASNanoTrasenRogueDeathSquad
+  - type: Damageable
+    damageModifierSet: MobHostileNanoTrasenDamageModifierHard # Slightly tougher modifiers
+  - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
+    proto: NFPulse
+    fireCost: 60
+  - type: BatterySelfRecharger
+    autoRechargeRate: 50
+  - type: Battery
+    maxCharge: 300
+    startingCharge: 300
+  - type: Gun
+    minAngle: 3.5
+    maxAngle: 7
+    angleIncrease: 0.25
+    angleDecay: 1
+    fireRate: 2.5 # Pulse rapid fire is a HORROR
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg

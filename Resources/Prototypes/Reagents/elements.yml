@@ -8,6 +8,9 @@
   color: "#848789"
   boilingPoint: 2327.0
   meltingPoint: 660.0
+  tags: # Aurora's Song
+  - IPCCompatible
+  - ShelegCompatible
   metabolisms: #Floofstation, wipes aphrodisiacs
     Bloodstream: # Aurora's Song - Medicine>Bloodstream
       effects:
@@ -85,7 +88,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
+          type: [ Arachnid, Decapoid ] #Macrocosm, added Decapoid
           inverted: true
         damage:
           types:
@@ -93,7 +96,7 @@
       - !type:ModifyBloodLevel
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
+          type: [ Arachnid, Decapoid ] #Macrocosm, added Decapoid
         amount: 0.4
 
 - type: reagent
@@ -173,14 +176,14 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
+          type: [ Arachnid, Decapoid ] #Macrocosm, added Decapoid
         damage:
           types:
             Poison: 0.1
       - !type:ModifyBloodLevel
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Arachnid ]
+          type: [ Arachnid, Decapoid ] #Macrocosm, added Decapoid
           inverted: true
         amount: 0.4
 

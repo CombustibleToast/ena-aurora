@@ -10,7 +10,7 @@
   - type: Item
     size: Huge
   - type: MeleeWeapon
-    attackRate: 0.4
+    attackRate: 0.6 # Aurora Song's - Increase APS from 0.4 to 0.6
     range: 1.70
     damage:
       types:
@@ -27,9 +27,9 @@
   - type: IncreaseDamageOnWield
     damage:
       types:
-        Blunt: 20
+        Blunt: 25 # Aurora's Song - Increased Blunt by 5 
         Piercing: 2
-        Structural: 20
+        Structural: 100 # Aurora's Song - Increased Structural by 80
   - type: Tool
     qualities:
       - Prying

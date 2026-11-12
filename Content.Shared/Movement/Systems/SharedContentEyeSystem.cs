@@ -14,9 +14,9 @@ namespace Content.Shared.Movement.Systems;
 /// <summary>
 /// Lets specific sessions scroll and set their zoom directly.
 /// </summary>
-public abstract class SharedContentEyeSystem : EntitySystem
+public abstract partial class SharedContentEyeSystem : EntitySystem
 {
-    [Dependency] private readonly ISharedAdminManager _admin = default!;
+    [Dependency] private ISharedAdminManager _admin = default!;
 
     // Admin flags required to ignore normal eye restrictions.
     public const AdminFlags EyeFlag = AdminFlags.Debug;
@@ -25,7 +25,7 @@ public abstract class SharedContentEyeSystem : EntitySystem
     public static readonly Vector2 DefaultZoom = Vector2.One;
     public static readonly Vector2 MinZoom = DefaultZoom * (float)Math.Pow(ZoomMod, -3);
 
-    [Dependency] private readonly SharedEyeSystem _eye = default!;
+    [Dependency] private SharedEyeSystem _eye = default!;
 
     public override void Initialize()
     {
@@ -140,6 +140,23 @@ public abstract class SharedContentEyeSystem : EntitySystem
         Dirty(uid, component);
     }
 
+    // Aurora's Song - Start - Without this function, using the shuttle console will screw up your maximum zoom *after* you've used it, preventing aghosts from zooming far out, etc.
+    public void SetHeldZoom(EntityUid uid, Vector2 value, ContentEyeComponent? component = null)
+    {
+        if (!Resolve(uid, ref component) || component.HeldZoomLock == true) // Aurora's Song
+            return;
+
+        component.HeldZoom = value;
+        Dirty(uid, component);
+    }
+
+    public void SetHeldZoomLock(EntityUid uid,bool lockValue, ContentEyeComponent? component = null)
+    { // locks the held variable so ideally nothing else can touch it
+        if (!Resolve(uid, ref component))
+            return;
+        component.HeldZoomLock = lockValue;
+    }
+    // Aurora's Song - End
     public void UpdateEyeOffset(Entity<EyeComponent> eye)
     {
         var evAttempt = new GetEyeOffsetAttemptEvent();

@@ -2,7 +2,7 @@
   name: SLE deployable barrier
   id: ASDeployableBarrierSLE
   description: A deployable barrier. Swipe your ID card to lock/unlock it.
-  parent: DeployableBarrier
+  parent: [ C2ContrabandUnredeemableRestricted, DeployableBarrier ]
   components:
   - type: Sprite
     sprite: _AS/Objects/Specific/Security/barrier.rsi

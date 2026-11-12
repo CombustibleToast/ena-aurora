@@ -137,3 +137,10 @@
         shader: unshaded
   - type: ToggleableClothing
     clothingPrototype: ASClothingHeadEVAHelmetColonialRepresentative
+
+#region Nanotrasen
+
+- type: entity
+  parent: [ ClothingOuterEVASuitSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingOuterEVASuitNanotrasenRepresentative
+  name: nanotrasen representative EVA suit

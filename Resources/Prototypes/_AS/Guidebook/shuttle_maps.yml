@@ -21,3 +21,27 @@
     sprite: _AS/Guidebook/shuttle_maps/128x96.rsi
     state: dove
     scale: 1.2, 1.2
+
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapScavenger
+  name: "XED Scavenger"
+  description: "Detailed map of a Scavenger shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _AS/Guidebook/shuttle_maps/128x96.rsi
+    state: scavenger
+    scale: 1.2, 1.2
+
+- type: entity
+  parent: PosterBase
+  id: ShuttleMapStrike
+  name: "TZ Strike"
+  description: "Detailed map of a Strike shuttle."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _AS/Guidebook/shuttle_maps/128x96.rsi
+    state: strike
+    scale: 1.2, 1.2

@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  name: WT-550(B) # Aurora's Song - Name adjusted to reflect special pattern
+  parent: [ C2ContrabandNanoTrasenRestricted, NFWeaponSubMachineGunWt550 ] # Aurora's Song - Corrected to use proper Wt550 as parent for our systems, added C2ContrabandNanoTrasenRestricted
+  id: WeaponSubMachineGunWt550BSO
+  description: An excellent SMG, produced by NanoTrasen's Small Arms Division. This one has been manufactured in the BSO's colors. Uses .35 auto ammo.
+  suffix: BSO
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Guns/SMGs/wt550_BSO.rsi
+  - type: Clothing
+    sprite: _DEN/Objects/Weapons/Guns/SMGs/wt550_BSO.rsi

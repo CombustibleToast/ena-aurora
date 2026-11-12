@@ -57,6 +57,7 @@
       tags:
       - MantisBeltStorable
       - MantisBoxCandlesStorable
+      - Candle # Aurora's Song - Fix Candles
 
 - type: entity
   parent: CandleSomberMantis

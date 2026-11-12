@@ -1,0 +1,466 @@
+# Walls
+- type: construction
+  id: WallSolidChitin
+  graph: Girder
+  startNode: start
+  targetNode: wallChitin
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WallReinforcedChitin
+  graph: Girder
+  startNode: start
+  targetNode: reinforcedWallChitin
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: WallShuttleInterior
+  name: construction-recipe-wall-shuttle-interior
+  graph: Girder
+  startNode: start
+  targetNode: shuttleInteriorWall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+# Windows
+- type: construction
+  id: ResinWindow
+  graph: ASwindow
+  startNode: start
+  targetNode: resinWindow
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+
+# Diagonal Walls
+- type: construction # Aurora - Added name field for proper menu display with (diagonal) suffix
+  id: wallSolidDiagonal
+  name: construction-recipe-wall-solid-diagonal
+  graph: Girder
+  startNode: start
+  targetNode: wallSolidDiagonal
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+# Diagonal Windows
+- type: construction # Aurora - Added name field for proper menu display with (diagonal) suffix
+  id: wallReinforcedDiagonal
+  name: construction-recipe-wall-reinforced-diagonal
+  graph: Girder
+  startNode: start
+  targetNode: wallReinforcedDiagonal
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: true
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: UraniumWindowDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: uraniumWindowDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: UraniumReinforcedWindowDirectional
+  graph: WindowDirectional
+  startNode: start
+  targetNode: uraniumReinforcedWindowDirectional
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+- type: construction
+  id: ShuttleWindowDiagonal
+  name: construction-recipe-window-shuttle-diagonal
+  graph: ASWindowDiagonal
+  startNode: start
+  targetNode: shuttleWindowDiagonal
+  category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
+  objectType: Structure
+  placementMode: SnapgridCenter
+
+# Stairs
+- type: construction
+  id: Stairs
+  name: construction-recipe-stairs
+  graph: ASstairs
+  startNode: start
+  targetNode: Stairs
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStage
+  name: construction-recipe-stair-stage
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStage
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairWhite
+  name: construction-recipe-stair-white
+  graph: ASstairs
+  startNode: start
+  targetNode: StairWhite
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageWhite
+  name: construction-recipe-stair-stage-white
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageWhite
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairDark
+  name: construction-recipe-stair-dark
+  graph: ASstairs
+  startNode: start
+  targetNode: StairDark
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageDark
+  name: construction-recipe-stair-stage-dark
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageDark
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairWood
+  name: construction-recipe-stair-wood
+  graph: ASstairs
+  startNode: start
+  targetNode: StairWood
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageWood
+  name: construction-recipe-stair-stage-wood
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageWood
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairSomberAmaranth
+  graph: ASstairs
+  startNode: start
+  targetNode: StairSomberAmaranth
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageSomberAmaranth
+  name: construction-recipe-stair-stage-somber-amaranth
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageSomberAmaranth
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairSomberMnemolith
+  graph: ASstairs
+  startNode: start
+  targetNode: StairSomberMnemolith
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: StairStageSomberMnemolith
+  name: construction-recipe-stair-stage-somber-mnemolith
+  graph: ASstairs
+  startNode: start
+  targetNode: StairStageSomberMnemolith
+  category: construction-category-structures
+  objectType: Structure
+  canBuildInImpassable: false
+  placementMode: SnapgridCenter
+  conditions:
+    - !type:TileNotBlocked
+
+# Somber material doors
+- type: construction
+  id: SomberAmaranthDoor
+  graph: ASSomberDoors
+  startNode: start
+  targetNode: somberAmaranthDoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: SomberMnemolithDoor
+  graph: ASSomberDoors
+  startNode: start
+  targetNode: somberMnemolithDoor
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+# DeltaV Wooden Railings
+- type: construction
+  id: RailingWood
+  name: construction-recipe-railing-wood
+  graph: RailingWood
+  startNode: start
+  targetNode: RailingWood
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodCorner
+  name: construction-recipe-railing-wood-corner
+  graph: RailingWoodCorner
+  startNode: start
+  targetNode: RailingWoodCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodCornerSmall
+  name: construction-recipe-railing-wood-corner-small
+  graph: RailingWoodCornerSmall
+  startNode: start
+  targetNode: RailingWoodCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingWoodRound
+  name: construction-recipe-railing-wood-round
+  graph: RailingWoodRound
+  startNode: start
+  targetNode: RailingWoodRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+# DeltaV Modern Railings
+- type: construction
+  id: RailingModern
+  name: construction-recipe-railing-modern
+  graph: RailingModern
+  startNode: start
+  targetNode: RailingModern
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernCorner
+  name: construction-recipe-railing-modern-corner
+  graph: RailingModernCorner
+  startNode: start
+  targetNode: RailingModernCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernCornerSmall
+  name: construction-recipe-railing-modern-corner-small
+  graph: RailingModernCornerSmall
+  startNode: start
+  targetNode: RailingModernCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernRound
+  name: construction-recipe-railing-modern-round
+  graph: RailingModernRound
+  startNode: start
+  targetNode: RailingModernRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+# DeltaV Modern Railings (Grey)
+- type: construction
+  id: RailingModernGrey
+  name: construction-recipe-railing-modern-grey
+  graph: RailingModernGrey
+  startNode: start
+  targetNode: RailingModernGrey
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernGreyCorner
+  name: construction-recipe-railing-modern-grey-corner
+  graph: RailingModernGreyCorner
+  startNode: start
+  targetNode: RailingModernGreyCorner
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernGreyCornerSmall
+  name: construction-recipe-railing-modern-grey-corner-small
+  graph: RailingModernGreyCornerSmall
+  startNode: start
+  targetNode: RailingModernGreyCornerSmall
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: RailingModernGreyRound
+  name: construction-recipe-railing-modern-grey-round
+  graph: RailingModernGreyRound
+  startNode: start
+  targetNode: RailingModernGreyRound
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

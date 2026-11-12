@@ -1,0 +1,34 @@
+# for limb gradients
+marking-LArmGradient = Gradient
+marking-LArmGradient-l_arm = Gradient
+marking-LHandGradient = Gradient
+marking-LHandGradient-l_hand = Gradient
+marking-RArmGradient = Gradient
+marking-RArmGradient-r_arm = Gradient
+marking-RHandGradient = Gradient
+marking-RHandGradient-r_hand = Gradient
+marking-LLegGradient = Gradient
+marking-LLegGradient-l_leg = Gradient
+marking-LFootGradient = Gradient
+marking-LFootGradient-l_foot = Gradient
+marking-RLegGradient = Gradient
+marking-RLegGradient-r_leg = Gradient
+marking-RFootGradient = Gradient
+marking-RFootGradient-r_foot = Gradient
+
+marking-LArmGradientU = Gradient (glowing)
+marking-LArmGradientU-l_arm = Gradient (glowing)
+marking-LHandGradientU = Gradient (glowing)
+marking-LHandGradientU-l_hand = Gradient (glowing)
+marking-RArmGradientU = Gradient (glowing)
+marking-RArmGradientU-r_arm = Gradient (glowing)
+marking-RHandGradientU = Gradient (glowing)
+marking-RHandGradientU-r_hand = Gradient (glowing)
+marking-LLegGradientU = Gradient (glowing)
+marking-LLegGradientU-l_leg = Gradient (glowing)
+marking-LFootGradientU = Gradient (glowing)
+marking-LFootGradientU-l_foot = Gradient (glowing)
+marking-RLegGradientU = Gradient (glowing)
+marking-RLegGradientU-r_leg = Gradient (glowing)
+marking-RFootGradientU = Gradient (glowing)
+marking-RFootGradientU-r_foot = Gradient (glowing)

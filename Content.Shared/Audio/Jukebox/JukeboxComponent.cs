@@ -13,13 +13,6 @@ public sealed partial class JukeboxComponent : Component
     public ProtoId<JukeboxPrototype>? SelectedSongId;
 
     // Frontier: Shuffle & Repeat
-    /// <summary>
-    /// Whether or not the currently selected song is the first being played.
-    /// Useful for shuffle.
-    /// </summary>
-    [DataField, AutoNetworkedField]
-    public bool FirstPlay = true;
-
     [ViewVariables]
     public JukeboxPlaybackMode PlaybackMode = JukeboxPlaybackMode.Single;
     // End Frontier: Shuffle & Repeat
@@ -55,6 +48,14 @@ public sealed partial class JukeboxComponent : Component
     [DataField]
     public Vector2 AudioOffset = Vector2.Zero;
     // End Frontier
+
+    // Aurora's Song Start
+    [DataField]
+    public bool ManuallyStopped = false; // Used to track if you pressed the stop button, so it doesn't shuffle on stop
+
+    [DataField]
+    public float Volume = 1f;
+    // Aurora's Song End
 }
 
 [Serializable, NetSerializable]
@@ -83,6 +84,13 @@ public sealed class JukeboxSetTimeMessage(float songTime) : BoundUserInterfaceMe
 public sealed class JukeboxSetPlaybackModeMessage(JukeboxPlaybackMode playbackMode) : BoundUserInterfaceMessage
 {
     public JukeboxPlaybackMode PlaybackMode = playbackMode;
+}
+
+// Aurora's Song: Volume Slider
+[Serializable, NetSerializable]
+public sealed class JukeboxVolumeChangedMessage(float volume) : BoundUserInterfaceMessage
+{
+    public float Volume = volume;
 }
 
 [Serializable, NetSerializable]

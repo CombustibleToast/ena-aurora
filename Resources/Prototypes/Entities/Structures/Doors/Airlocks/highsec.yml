@@ -114,8 +114,10 @@
   - type: Airtight
   - type: Occluder
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StrongMetallic
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: SparksOnDamage # _Starfall
   - type: Destructible
     thresholds:
     - trigger:

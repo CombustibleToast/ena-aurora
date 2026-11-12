@@ -1,5 +1,5 @@
 - type: entity
-  parent: [DoorRemoteDefault, BaseCommandContraband]
+  parent: [DoorRemoteDefault, C2ContrabandUnredeemableRestricted] # Aurora's Song - Added C2ContrabandUnredeemableRestricted, Commissioner's Door Remote.
   id: DoorRemoteNfsd
   name: NFSD door remote
   components:

@@ -51,3 +51,46 @@
           prob: 0.2
         - id: Paper
           prob: 0.2
+
+
+#region Corporate
+
+- type: entity
+  parent: Paper
+  id: ContrabandPermitNanoTrasen
+  name: N-C2-R Contraband Permit
+  components:
+  - type: Paper
+    content: contraband-permit-nanotrasen
+
+- type: entity
+  parent: Paper
+  id: ContrabandPermitSyndicate
+  name: S-C2-R Contraband Permit
+  components:
+  - type: Paper
+    content: contraband-permit-syndicate
+
+- type: entity
+  parent: BoxFolderCentComEmpty
+  id: ContrabandPermitFolderNanoTrasen
+  name: nanotrasen representative's folder
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ContrabandPermitNanoTrasen
+          amount: 3
+
+- type: entity
+  parent: BoxFolderRed
+  id: ContrabandPermitFolderSyndicate
+  name: syndicate representative's folder
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ContrabandPermitSyndicate
+          amount: 3

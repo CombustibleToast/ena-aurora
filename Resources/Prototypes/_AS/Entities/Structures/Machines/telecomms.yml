@@ -8,7 +8,6 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
-      - EncryptionKeyCargo
       - EncryptionKeyEngineering
       - EncryptionKeyMedical
       - EncryptionKeyScience
@@ -36,3 +35,14 @@
     containers:
       key_slots:
       - EncryptionKeyNanotrasen
+
+- type: entity
+  parent: TelecomServer
+  id: ASTelecomServerDEBUG
+  suffix: DEBUG, DO NOT MAP
+  categories: [ DoNotMap ]
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyDEBUG

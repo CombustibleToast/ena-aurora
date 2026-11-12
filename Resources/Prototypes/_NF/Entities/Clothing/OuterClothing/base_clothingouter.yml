@@ -8,7 +8,7 @@
 
 - type: entity
   abstract: true
-  parent: [ClothingOuterHardsuitBaseNF, BaseC2ContrabandUnredeemable]
+  parent: [ ClothingOuterHardsuitBaseNF, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: ClothingOuterHardsuitBaseNFNfsd
   components:
   - type: PressureProtection

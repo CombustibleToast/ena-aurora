@@ -83,5 +83,8 @@
           Closed: { state: closed-coin }
   - type: MagnetPickup
     magnetEnabled: false
-    magnetCanBeEnabled: true
-    slotFlags: WALLET
+    # magnetCanBeEnabled: true Aurora's Song - Magnet Rewrite
+    # slotFlags: WALLET Aurora's Song - Magnet Rewrite
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 2
+    looping: true

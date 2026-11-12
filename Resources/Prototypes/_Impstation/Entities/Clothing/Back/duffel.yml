@@ -1,0 +1,11 @@
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ClothingBackpackDuffelCommVet # Aurora's Song | ClothingBackPackDuffelCommandVeteran > ClothingBackpackDuffelCommVet - truncated for in game UX
+  name: command veteran duffel bag
+  description: A sleek duffel bag, earned through a long career as command.
+  components:
+  - type: Storage
+    grid:
+    - 0, 0, 7, 5
+  - type: Sprite
+    sprite: Clothing/Back/Duffels/commandveteran.rsi

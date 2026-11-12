@@ -1,0 +1,66 @@
+﻿# region: Mechanical actions
+- type: entity
+  parent: ASBaseItemWeaponGun
+  id: ASBaseLeverActionShotgun
+  abstract: true
+  components:
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 2
+    maxAngle: 30
+    angleIncrease: 3
+    angleDecay: 3
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -10.9
+    maxAngle: -21.8
+  - type: UniqueAction
+  - type: PumpAction
+    sound:
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
+    examine: "cm-gun-cycle-examine"
+    popup: "cm-gun-cycle-first"
+    popupKey: "cm-gun-cycle-first-with"
+
+#Slightly hacky, but I needed a way to get the standardised "frame" values into this gun without worrying about
+#following the NF parenting all the way up to ensure it worked with the Chester. Execute me at leisure - GreyScaleHarlequin
+- type: entity
+  id: ASBaseWeaponFrameShotgunNanotrasen
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 6.8
+    maxAngle: 26
+    fireRate: 2.2
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+# region: Chamberings
+- type: entity
+  id: ASBaseWeaponShotgunChamber8gMagFed
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-8g
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+  - type: MagazineAmmoProvider # Changed to just Magazine from ChamberMagazine, for more intuitive handling with RMC UniqueAction.
+    autoEject: true
+    soundAutoEject:
+      path: /Audio/_Goobstation/Weapons/Guns/MagOut/garand_eject.ogg
+  - type: ItemSlots #This is to allow for the use of En-Blocs for faster loading, and avoid the use of the same system as revolvers.
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineShotgunLever
+        insertSound: /Audio/Weapons/Guns/MagIn/rifle_load.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/sfrifle_magout.ogg
+        whitelist:
+          tags:
+          - MagazineShotgunLever
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot

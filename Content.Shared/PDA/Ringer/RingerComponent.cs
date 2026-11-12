@@ -54,4 +54,16 @@ public sealed partial class RingerComponent : Component
     /// </summary>
     [DataField, AutoNetworkedField]
     public bool Active;
+    // Aurora's Song Start
+    /// <summary>
+    /// Minimum volume for the ringer
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float MinVolume = -8f;
+    /// <summary>
+    /// Maximum volume for the ringer
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public float MaxVolume = 1f;
+    // Aurora's Song End
 }

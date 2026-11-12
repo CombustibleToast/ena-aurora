@@ -115,7 +115,7 @@
     - Hair
 
 - type: entity
-  parent: [ClothingHeadBase, ContrabandClothing] # Frontier: added ContrabandClothing as parent
+  parent: ClothingHeadBase
   id: ClothingHeadHatHoodCulthood
   name: cult hood
   description: There's no cult without cult hoods.
@@ -165,6 +165,7 @@
         Heat: 0.95
         Radiation: 0.65
   - type: IdentityBlocker
+  - type: IngestionBlocker
   - type: BreathMask
   - type: HideLayerClothing
     slots:

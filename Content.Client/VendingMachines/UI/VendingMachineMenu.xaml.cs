@@ -23,9 +23,9 @@ namespace Content.Client.VendingMachines.UI
     [GenerateTypedNameReferences]
     public sealed partial class VendingMachineMenu : FancyWindow
     {
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IComponentFactory _componentFactory = default!; // Frontier
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] private IComponentFactory _componentFactory = default!; // Frontier
 
         private readonly Dictionary<EntProtoId, EntityUid> _dummies = [];
         private readonly Dictionary<EntProtoId, (ListContainerButton Button, VendingMachineItem Item)> _listItems = new();
@@ -89,11 +89,12 @@ namespace Content.Client.VendingMachines.UI
             button.Disabled = !_enabled || _amounts[protoID] == 0;
         }
 
+        // Aurora's Song - Expand balance to long
         /// <summary>
         /// Populates the list of available items on the vending machine interface
         /// and sets icons based on their prototypes
         /// </summary>
-        public void Populate(List<VendingMachineInventoryEntry> inventory, bool enabled, float priceModifier, int balance, int? cashSlotBalance) // Frontier: add priceModifier, balance, cashSlotBalance
+        public void Populate(List<VendingMachineInventoryEntry> inventory, bool enabled, float priceModifier, long balance, int? cashSlotBalance) // Frontier: add priceModifier, balance, cashSlotBalance
         {
             _enabled = enabled;
             _listItems.Clear();
@@ -170,7 +171,7 @@ namespace Content.Client.VendingMachines.UI
         }
 
         // Frontier
-        public void UpdateBalance(int balance)
+        public void UpdateBalance(long balance) // Aurora's Song - Expand balance to long
         {
             BalanceLabel.Text = BankSystemExtensions.ToSpesoString(balance);
         }

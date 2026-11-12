@@ -99,7 +99,7 @@
     sprite: _DV/Clothing/Shoes/Boots/winterbootshop.rsi
 
 - type: entity
-  parent: ClothingShoesBaseWinterBoots
+  parent: [ClothingShoesBaseWinterBoots, C2ContrabandNanoTrasenRestricted] # Aurora's Song - Add NT contraband
   id: ClothingShoesBootsWinterHoS
   name: head of security winter boots
   components:
@@ -199,7 +199,7 @@
     sprite: _DV/Clothing/Shoes/Boots/winterbootsviro.rsi
 
 - type: entity
-  parent: ClothingShoesBaseWinterBoots
+  parent: [ClothingShoesBaseWinterBoots, C2ContrabandNanoTrasenRestricted] # Aurora's Song - Add NT Contraband
   id: ClothingShoesBootsWinterWarden
   name: warden's winter boots
   components:

@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Linq;
 using System.Numerics;
+using Content.Client._DEN.Denu.UI.Denu;
 using Content.Client.Administration.Managers;
 using Content.Client.Chat;
 using Content.Client.Chat.Managers;
@@ -11,9 +12,7 @@ using Content.Client.Gameplay;
 using Content.Client.Ghost;
 using Content.Client.Mind;
 using Content.Client.Roles;
-using Content.Client.Stylesheets;
 using Content.Client.UserInterface.Screens;
-using Content.Client.UserInterface.Systems.Chat.Controls.Denu;
 using Content.Client.UserInterface.Systems.Chat.Widgets;
 using Content.Client.UserInterface.Systems.Gameplay;
 using Content.Shared.Administration;
@@ -42,24 +41,23 @@ using Robust.Shared.Replays;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
-
 namespace Content.Client.UserInterface.Systems.Chat;
 
 public sealed partial class ChatUIController : UIController
 {
-    [Dependency] private readonly IClientAdminManager _admin = default!;
-    [Dependency] private readonly IChatManager _manager = default!;
-    [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly IEyeManager _eye = default!;
-    [Dependency] private readonly IEntityManager _ent = default!;
-    [Dependency] private readonly IInputManager _input = default!;
-    [Dependency] private readonly IClientNetManager _net = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IStateManager _state = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IReplayRecordingManager _replayRecording = default!;
-    [Dependency] private readonly DenuUIController _denuUIController = default!;
+    [Dependency] private IClientAdminManager _admin = default!;
+    [Dependency] private IChatManager _manager = default!;
+    [Dependency] private IConfigurationManager _config = default!;
+    [Dependency] private IEyeManager _eye = default!;
+    [Dependency] private IEntityManager _ent = default!;
+    [Dependency] private IInputManager _input = default!;
+    [Dependency] private IClientNetManager _net = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IStateManager _state = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IReplayRecordingManager _replayRecording = default!;
+    [Dependency] private DenuUIController _denuUIController = default!; // DEN
 
     [UISystemDependency] private readonly ExamineSystem? _examine = default;
     [UISystemDependency] private readonly GhostSystem? _ghost = default;
@@ -81,15 +79,14 @@ public sealed partial class ChatUIController : UIController
         {SharedChatSystem.WhisperPrefix, ChatSelectChannel.Whisper},
         {SharedChatSystem.ConsolePrefix, ChatSelectChannel.Console},
         {SharedChatSystem.LOOCPrefix, ChatSelectChannel.LOOC},
+        {SharedChatSystem.SubtleOOCPrefix, ChatSelectChannel.SubtleOOC}, // DEN - Add subtle OOC
         {SharedChatSystem.OOCPrefix, ChatSelectChannel.OOC},
         {SharedChatSystem.EmotesPrefix, ChatSelectChannel.Emotes},
         {SharedChatSystem.EmotesAltPrefix, ChatSelectChannel.Emotes},
-        {SharedChatSystem.SubtlePrefix, ChatSelectChannel.Subtle}, // Floofstation
-        {SharedChatSystem.SubtleOOCPrefix, ChatSelectChannel.SubtleOOC}, // Den
+        {SharedChatSystem.SubtlePrefix, ChatSelectChannel.Subtle}, // DEN - Add subtle
         {SharedChatSystem.AdminPrefix, ChatSelectChannel.Admin},
         {SharedChatSystem.RadioCommonPrefix, ChatSelectChannel.Radio},
         {SharedChatSystem.DeadPrefix, ChatSelectChannel.Dead}
-
     };
 
     public static readonly Dictionary<ChatSelectChannel, char> ChannelPrefixes = new()
@@ -98,10 +95,10 @@ public sealed partial class ChatUIController : UIController
         {ChatSelectChannel.Whisper, SharedChatSystem.WhisperPrefix},
         {ChatSelectChannel.Console, SharedChatSystem.ConsolePrefix},
         {ChatSelectChannel.LOOC, SharedChatSystem.LOOCPrefix},
+        {ChatSelectChannel.SubtleOOC, SharedChatSystem.SubtleOOCPrefix}, // DEN - Add subtle OOC
         {ChatSelectChannel.OOC, SharedChatSystem.OOCPrefix},
         {ChatSelectChannel.Emotes, SharedChatSystem.EmotesPrefix},
-        {ChatSelectChannel.Subtle, SharedChatSystem.SubtlePrefix}, // Floofstation
-        {ChatSelectChannel.SubtleOOC, SharedChatSystem.SubtleOOCPrefix}, // Den
+        {ChatSelectChannel.Subtle, SharedChatSystem.SubtlePrefix}, // DEN - Add subtle
         {ChatSelectChannel.Admin, SharedChatSystem.AdminPrefix},
         {ChatSelectChannel.Radio, SharedChatSystem.RadioCommonPrefix},
         {ChatSelectChannel.Dead, SharedChatSystem.DeadPrefix}
@@ -541,22 +538,21 @@ public sealed partial class ChatUIController : UIController
             FilterableChannels |= ChatChannel.Whisper;
             FilterableChannels |= ChatChannel.Radio;
             FilterableChannels |= ChatChannel.Emotes;
-            FilterableChannels |= ChatChannel.Subtle; //Floof
             FilterableChannels |= ChatChannel.Notifications;
 
             // Can only send local / radio / emote when attached to a non-ghost entity.
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
             if (_ghost is not {IsGhost: true})
             {
-                FilterableChannels |= ChatChannel.Subtle; // Den
-                FilterableChannels |= ChatChannel.SubtleOOC; // Den
-
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
                 CanSendChannels |= ChatSelectChannel.Emotes;
-                CanSendChannels |= ChatSelectChannel.Subtle; // Floofstation
-                CanSendChannels |= ChatSelectChannel.SubtleOOC; // Den
+                CanSendChannels |= ChatSelectChannel.Subtle; // DEN - Add subtle/subtle OOC
+                CanSendChannels |= ChatSelectChannel.SubtleOOC; // DEN - Add subtle/subtle OOC
+
+                FilterableChannels |= ChatChannel.Subtle; // DEN - Add subtle/subtle OOC
+                FilterableChannels |= ChatChannel.SubtleOOC; // DEN - Add subtle/subtle OOC
             }
         }
 
@@ -565,13 +561,6 @@ public sealed partial class ChatUIController : UIController
         {
             FilterableChannels |= ChatChannel.Dead;
             CanSendChannels |= ChatSelectChannel.Dead;
-        }
-
-        // Den, allow aghosts to see subtle conversations
-        if (_admin.HasFlag(AdminFlags.Pii) && _ghost is { IsGhost: true })
-        {
-            FilterableChannels |= ChatChannel.Subtle;
-            FilterableChannels |= ChatChannel.SubtleOOC;
         }
 
         // only admins can see / filter asay
@@ -720,6 +709,13 @@ public sealed partial class ChatUIController : UIController
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(box.SelectedChannel, null);
         else
             box.ChatInput.ChannelSelector.UpdateChannelSelectButton(prefixChannel, radioChannel);
+
+        // DeltaV begin - refresh indicator change
+        if (CurrentChannel != prefixChannel)
+            _typingIndicator?.ClientSubmittedChatText();
+
+        CurrentChannel = prefixChannel;
+        // DeltaV end
     }
 
     public (ChatSelectChannel chatChannel, string text, RadioChannelPrototype? radioChannel) SplitInputContents(string text)
@@ -759,7 +755,6 @@ public sealed partial class ChatUIController : UIController
         _typingIndicator?.ClientSubmittedChatText();
 
         var text = box.ChatInput.Input.Text;
-
         box.ChatInput.Input.Clear();
         box.ChatInput.Input.ReleaseKeyboardFocus();
         UpdateSelectedChannel(box);
@@ -786,10 +781,12 @@ public sealed partial class ChatUIController : UIController
             text = $";{text}";
         }
 
-        if (_denuUIController!.AutoFormatterEnabled)
+        // DEN Start: Denu
+        if (_denuUIController.AutoFormatterEnabled && DenuUIController.InGameICChannels.Contains(channel))
         {
             text = _denuUIController.FormatMessage(text);
         }
+        // DEN End
 
         _manager.SendMessage(text, prefixChannel == 0 ? channel : prefixChannel);
     }
@@ -847,7 +844,7 @@ public sealed partial class ChatUIController : UIController
     public void ProcessChatMessage(ChatMessage msg, bool speechBubble = true)
     {
         // color the name unless it's something like "the old man"
-        if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper || msg.Channel == ChatChannel.Emotes || msg.Channel == ChatChannel.Subtle) && _chatNameColorsEnabled)
+        if ((msg.Channel == ChatChannel.Local || msg.Channel == ChatChannel.Whisper || msg.Channel == ChatChannel.Emotes || msg.Channel == ChatChannel.Subtle) && _chatNameColorsEnabled) // Aurora's Song - Affect emotes and subtle
         {
             var grammar = _ent.GetComponentOrNull<GrammarComponent>(_ent.GetEntity(msg.SenderEntity));
             if (grammar != null && grammar.ProperNoun == true)
@@ -920,6 +917,17 @@ public sealed partial class ChatUIController : UIController
                 if (_config.GetCVar(CCVars.LoocAboveHeadShow))
                     AddSpeechBubble(msg, SpeechBubble.SpeechType.Looc);
                 break;
+
+            // DEN Start - Add Subtle and Subtle OOC
+            case ChatChannel.Subtle:
+                AddSpeechBubble(msg, SpeechBubble.SpeechType.Subtle); // Aurora's Song - Subtle and Subtle OOC have unique speech bubble
+                break;
+
+            case ChatChannel.SubtleOOC:
+                if (_config.GetCVar(CCVars.LoocAboveHeadShow))
+                    AddSpeechBubble(msg, SpeechBubble.SpeechType.SubtleOOC); // Aurora's Song - Subtle and Subtle OOC have unique speech bubble
+                break;
+            // DEN End
         }
     }
 

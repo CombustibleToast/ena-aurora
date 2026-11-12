@@ -1,0 +1,131 @@
+uniform sampler2D SCREEN_TEXTURE;
+
+// Intensity is continuous in the range [0, 1]. Stage is the discrete dose tier [0, 3].
+// ReducedMotion is 1 and reduces animated displacement
+uniform highp float Intensity;
+uniform highp float Stage;
+uniform highp float ReducedMotion;
+
+highp float luminance(highp vec3 color)
+{
+    return dot(color, vec3(0.299, 0.587, 0.114));
+}
+
+// Scrolling noise shared by the displacement and vignette masks.
+highp float mnemolithNoise(highp vec2 point, highp float time)
+{
+    return zFBM(point * 5.0 + vec2(time * 0.07, -time * 0.053));
+}
+
+highp vec3 bloomSample(highp vec2 point)
+{
+    highp vec3 sampleColor = zTextureSpec(SCREEN_TEXTURE, clamp(point, vec2(0.001), vec2(0.999))).rgb;
+    highp float highlight = smoothstep(0.22, 0.72, luminance(sampleColor));
+    return sampleColor * highlight;
+}
+
+void fragment()
+{
+    highp vec2 uv = FRAGCOORD.xy * SCREEN_PIXEL_SIZE.xy;
+    highp vec2 centered = uv - vec2(0.5);
+    centered.x *= SCREEN_PIXEL_SIZE.y / SCREEN_PIXEL_SIZE.x;
+
+    highp float radius = length(centered);
+    // Keep displacement and tint outside the center of the viewport.
+    highp float edge = smoothstep(0.16, 0.64, radius);
+    // Chromatic separation uses a wider mask that begins closer to the center.
+    highp float chromaticEdge = smoothstep(0.055, 0.50, radius);
+    highp float motionTime = TIME * (1.0 - ReducedMotion);
+
+    // Activation values for the 14u, 29u, and 44u dose thresholds.
+    highp float overdose = smoothstep(0.20, 0.35, Intensity);
+    highp float megadose = smoothstep(0.43, 0.58, Intensity);
+    highp float heroic = smoothstep(0.70, 0.88, Intensity);
+    highp float presence = smoothstep(0.0, 0.025, Intensity);
+
+    // Radial displacement with an offset
+    highp float coarseNoise = mnemolithNoise(uv * 1.4, motionTime);
+    highp float fineNoise = mnemolithNoise(uv * 4.5 + coarseNoise, motionTime * 1.7);
+    highp vec2 direction = normalize(centered + vec2(0.0001));
+    highp float breathing = sin(motionTime * 0.75 + radius * 18.0) * 0.5 + 0.5;
+    highp float warpAmount = (0.0015 * Intensity + 0.008 * megadose + 0.016 * heroic) * edge;
+    highp vec2 warp = direction * (coarseNoise - 0.48 + breathing * 0.25) * warpAmount;
+    warp += vec2(fineNoise - 0.5, coarseNoise - 0.5) * 0.006 * heroic * edge;
+
+    warp *= mix(1.0, 0.28, ReducedMotion);
+    highp vec2 sampleUv = clamp(uv + warp, vec2(0.001), vec2(0.999));
+    highp vec4 original = zTextureSpec(SCREEN_TEXTURE, sampleUv);
+    highp vec3 color = original.rgb;
+
+    // Offset red and blue channels in opposite directions beginning at 14u.
+    highp vec2 splitDirection = normalize(direction + vec2(coarseNoise - 0.5));
+    highp vec2 split = splitDirection * SCREEN_PIXEL_SIZE * (1.0 + 7.0 * overdose + 15.0 * heroic);
+    highp vec3 separated = vec3(
+        zTextureSpec(SCREEN_TEXTURE, clamp(sampleUv + split, vec2(0.001), vec2(0.999))).r,
+        color.g,
+        zTextureSpec(SCREEN_TEXTURE, clamp(sampleUv - split, vec2(0.001), vec2(0.999))).b);
+    color = mix(color, separated, (0.42 * overdose + 0.38 * heroic) * chromaticEdge);
+
+    highp float gray = luminance(color);
+    highp vec3 noeticTint = vec3(gray * 0.68, gray * 0.76, gray * 0.92);
+    color = mix(color, noeticTint, (0.12 * Intensity + 0.24 * megadose) * edge);
+    color = mix(color,
+        vec3(step(0.46 + (fineNoise - 0.5) * 0.18, gray)),
+        0.20 * heroic * edge);
+
+    // Purple edge vignette. Colors match the psionic popup text.
+    highp float pulse = 0.88 + 0.12 * sin(motionTime * 0.42 + coarseNoise * 2.0);
+    highp float vignette = smoothstep(0.12 - 0.035 * heroic, 0.56 - 0.10 * heroic, radius);
+    highp vec3 psionicPurple = vec3(0.48, 0.18, 0.72);
+    highp vec3 hotViolet = vec3(0.72, 0.28, 0.92);
+
+    // Combine scrolling noise and a directional wave to break up the radial vignette.
+    highp vec2 currentScroll = vec2(motionTime * 0.007, -motionTime * 0.004);
+    highp float currentA = mnemolithNoise(uv * vec2(0.48, 0.72) + currentScroll, motionTime * 0.42);
+    highp float currentB = sin(centered.x * 6.0 - centered.y * 4.5 + motionTime * 0.14) * 0.5 + 0.5;
+    highp float noeticCurrent = mix(currentA, currentB, 0.32);
+    highp float purpleShape = vignette * mix(0.62, 1.28, noeticCurrent);
+
+    // Apply color mix
+    highp float purpleGlow = purpleShape * (0.018 * presence + 0.20 * Intensity + 0.16 * heroic) * pulse;
+    highp vec3 livingPurple = mix(psionicPurple, hotViolet, noeticCurrent * (0.25 + 0.35 * heroic));
+    color = mix(color, livingPurple + color * 0.45, clamp(purpleGlow, 0.0, 0.48));
+    color += livingPurple * purpleShape * (0.035 * overdose + 0.065 * heroic);
+
+    // "Bloom"
+    highp vec2 nearStep = SCREEN_PIXEL_SIZE * (2.5 + 2.5 * heroic);
+    highp vec2 farStep = SCREEN_PIXEL_SIZE * (7.0 + 7.0 * heroic);
+    highp vec3 bloom = bloomSample(sampleUv + vec2(nearStep.x, nearStep.y));
+    bloom += bloomSample(sampleUv + vec2(-nearStep.x, nearStep.y));
+    bloom += bloomSample(sampleUv + vec2(nearStep.x, -nearStep.y));
+    bloom += bloomSample(sampleUv - vec2(nearStep.x, nearStep.y));
+    bloom += bloomSample(sampleUv + vec2(farStep.x, farStep.y));
+    bloom += bloomSample(sampleUv + vec2(-farStep.x, farStep.y));
+    bloom += bloomSample(sampleUv + vec2(farStep.x, -farStep.y));
+    bloom += bloomSample(sampleUv - vec2(farStep.x, farStep.y));
+    bloom *= 0.125;
+
+    highp float bloomStrength = 0.10 * presence + 0.25 * Intensity
+        + 0.34 * overdose
+        + 0.48 * megadose
+        + 0.68 * heroic;
+    color += bloom * bloomStrength * 1.8;
+
+    highp float coreHighlight = smoothstep(0.34, 0.82, luminance(color));
+    color += color * coreHighlight * bloomStrength * 0.42;
+
+    highp float grain = mnemolithNoise(uv * 9.0, motionTime * 0.08) - 0.5;
+    color += grain * (0.002 * overdose + 0.004 * heroic) * edge;
+
+    highp float stageBoost = Stage / 3.0;
+    color = mix(color, color * vec3(0.88, 0.91, 1.04), stageBoost * 0.12 * edge);
+
+    // Apply the 44u dark vignette
+    highp vec2 darkScroll = vec2(-motionTime * 0.004, motionTime * 0.006);
+    highp float darkNoise = mnemolithNoise(uv * 0.34 + darkScroll, motionTime * 0.28);
+    highp float darkCurrent = mix(0.72, 1.22, darkNoise);
+    highp float finalVignette = smoothstep(0.055, 0.52, radius) * heroic * darkCurrent;
+    color *= 1.0 - clamp(finalVignette * (0.48 + 0.18 * heroic), 0.0, 0.68);
+
+    COLOR = vec4(max(color, vec3(0.0)), original.a);
+}

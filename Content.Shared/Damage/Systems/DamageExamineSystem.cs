@@ -9,16 +9,17 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Damage.Systems;
 
-public sealed class DamageExamineSystem : EntitySystem
+public sealed partial class DamageExamineSystem : EntitySystem
 {
-    [Dependency] private readonly ExamineSystemShared _examine = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
+    [Dependency] private ExamineSystemShared _examine = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<DamageExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
+        // _Starfall: Removed separate damage examine verb health info now shows in the default examine menu (see StarfallDamageExamineSystem).
+        // SubscribeLocalEvent<DamageExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
     }
 
     private void OnGetExamineVerbs(EntityUid uid, DamageExaminableComponent component, GetVerbsEvent<ExamineVerb> args)

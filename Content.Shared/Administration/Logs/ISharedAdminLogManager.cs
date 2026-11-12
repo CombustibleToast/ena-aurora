@@ -15,5 +15,8 @@ public interface ISharedAdminLogManager
 
     void Add(LogType type, LogImpact impact, [InterpolatedStringHandlerArgument("")] ref LogStringHandler handler);
 
+    // Aurora's Song - Allow logs to mark sensitive content.
+    void Add(LogType type, LogImpact impact, bool sensitive, [InterpolatedStringHandlerArgument("")] ref LogStringHandler handler);
+
     void Add(LogType type, [InterpolatedStringHandlerArgument("")] ref LogStringHandler handler);
 }

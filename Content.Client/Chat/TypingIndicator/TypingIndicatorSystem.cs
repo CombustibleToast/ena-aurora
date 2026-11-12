@@ -7,11 +7,11 @@ using Robust.Shared.Timing;
 namespace Content.Client.Chat.TypingIndicator;
 
 // Client-side typing system tracks user input in chat box
-public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem // DeltaV - Made partial
+public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem
 {
-    [Dependency] private readonly IGameTiming _time = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IGameTiming _time = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     private readonly TimeSpan _typingTimeout = TimeSpan.FromSeconds(2);
     private TimeSpan _lastTextChange;
@@ -91,8 +91,7 @@ public sealed partial class TypingIndicatorSystem : SharedTypingIndicatorSystem 
             state = _isClientTyping ? TypingIndicatorState.Typing : TypingIndicatorState.Idle;
 
         // send a networked event to server
-        // Aurora Song: Convert enum state to bool for DeltaV's new TypingChangedEvent signature
-        RaisePredictiveEvent(new TypingChangedEvent(state == TypingIndicatorState.Typing));
+        RaisePredictiveEvent(new TypingChangedEvent(state));
     }
 
     private void OnShowTypingChanged(bool showTyping)

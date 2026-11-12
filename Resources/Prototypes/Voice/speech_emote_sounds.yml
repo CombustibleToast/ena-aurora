@@ -100,6 +100,10 @@
       collection: ReptilianHiss # Imp
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
+    Gurgle:
+      collection: LizardGurgle # Funky
+    Chirp:
+      collection: LizardChirp # Funky
     Honk:
       collection: BikeHorn
     Whistle:
@@ -128,6 +132,10 @@
       path: /Audio/Animals/lizard_happy.ogg
     Hiss: # Imp
       collection: ReptilianHiss # Imp
+    Gurgle:
+      collection: LizardGurgle # Funky
+    Chirp:
+      collection: LizardChirp # Funky
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
@@ -157,6 +165,14 @@
       collection: Bubbles # Imp
     Pop: # Imp
       collection: Pops # Imp
+# Funky start
+    Slosh:
+      collection: Sloshes
+    Fizz:
+      collection: Fizzes
+    Wobble:
+      collection: Wobbles
+# Funky end
     Scream:
       collection: MaleSlimeScreams # Imp
     Laugh:
@@ -207,6 +223,14 @@
       collection: Bubbles # Imp
     Pop: # Imp
       collection: Pops # Imp
+# Funky start
+    Slosh:
+      collection: Sloshes
+    Fizz:
+      collection: Fizzes
+    Wobble:
+      collection: Wobbles
+# Funky end
     Scream:
       collection: FemaleSlimeScreams # Imp
     Laugh:
@@ -266,23 +290,33 @@
     Click:
       path: /Audio/Voice/Vox/vox_click.ogg
     Chitter:
-      path: /Audio/Voice/Vox/vox_chitter.ogg
+      collection: VoxChitter # Aurora's Song
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
       collection: BikeHorn
     Crying:
-      path: /Audio/Voice/Vox/vox_cry.ogg
+      path: /Audio/_MACRO/Voice/Vox/voxcry.ogg # Aurora's Song
     Weh:
       collection: Weh
     Hew:
       collection: Hew
     Gasp:
-      path: /Audio/Effects/Gasp/vox_gasp.ogg
+      collection: VoxGasp # Aurora's Song
     DefaultDeathgasp:
       path: /Audio/Effects/Gasp/vox_DeathGasp.ogg
     Belch: # Frontier
       collection: Belch # Frontier
+    # Aurora's Song Start
+    HarpyCaw:
+      collection: HarpyCaws
+    Coo:
+      collection: VoxCoo
+    Hiss:
+      path: /Audio/_MACRO/Voice/Vox/voxhiss.ogg
+    Whistle:
+      collection: Whistles
+    #  Aurora's Song End
   params:
     variation: 0.125
     # TODO: We need vox sounds for the other emotes
@@ -298,6 +332,8 @@
       collection: DionaSneeze
     Chirp:
       path: /Audio/Animals/nymph_chirp.ogg
+    Multichirp: # Impstation
+      path: /Audio/_Impstation/Effects/Emotes/multichirp.ogg # Aurora's Song
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
@@ -337,11 +373,27 @@
     Honk:
       collection: BikeHorn
     Gasp:
-      collection: MaleGasp
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_gasp.ogg # Aurora's Song
     DefaultDeathgasp:
       collection: DeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    # Macrocosm start
+    Hiss:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_hiss.ogg
+    Sneeze:
+      collection: UnisexSneezes #placeholder
+    Cough:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_cough.ogg
+    Yawn:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_yawn.ogg
+    Sigh:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_sigh.ogg
+    Crying:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_cry.ogg
+    Whistle:
+      collection: Whistles
+    # Macrocosm end
 
 - type: emoteSounds
   id: UnisexDwarf
@@ -457,11 +509,25 @@
     Honk:
       collection: BikeHorn
     Gasp:
-      collection: MaleGasp
+      path: /Audio/_MACRO/Voice/Moth/mothgasp.ogg # Aurora's Song
     DefaultDeathgasp:
       collection: MothDeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    # Macrocosm start
+    Sneeze:
+      collection: UnisexSneezes #placeholder
+    Cough:
+      path: /Audio/_MACRO/Voice/Moth/mothcough.ogg
+    Yawn:
+      path: /Audio/_MACRO/Voice/Moth/mothyawn.ogg
+    Sigh:
+      path: /Audio/_MACRO/Voice/Moth/mothsigh.ogg
+    Crying:
+      path: /Audio/_MACRO/Voice/Moth/mothcry.ogg
+    Whistle:
+      collection: Whistles
+    # Macrocosm end
 
 - type: emoteSounds
   id: UnisexSilicon
@@ -516,6 +582,18 @@
       collection: IPCWhirrs
       params:
         variation: 0
+    Crying: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/cry_robot_1.ogg
+      params:
+        variation: 0.125
+    Whistle: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      params:
+        variation: 0.125
+    Sigh: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
+      params:
+        variation: 0.125
 
 - type: emoteSounds
   id: UnisexSiliconXenoborg
@@ -544,6 +622,18 @@
       collection: IPCWhirrs
       params:
         variation: 0
+    Crying: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/cry_robot_1.ogg
+      params:
+        variation: 0.125
+    Whistle: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/pai_whistle.ogg
+      params:
+        variation: 0.125
+    Sigh: #Aurora's Song - parity for use in speech trait
+      path: /Audio/_EE/Voice/IPC/beep_500.ogg
+      params:
+        variation: 0.125
 
 # Vulp Sounds
 # Aurora's Song - Disable upstream vulpkanin
@@ -645,8 +735,13 @@
         volume: -6
     Salute:
       collection: Salutes
-    Crack: # Imp
-      collection: Cracks # Imp
+    Crack: # Imp addition
+      collection: Cracks
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1
 
 - type: emoteSounds
   id: DionaBodyEmotes
@@ -664,8 +759,13 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
-    Crack: # Imp
-      collection: Cracks # Imp
+    Crack: # imp
+      collection: Cracks
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -686,6 +786,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp
+      collection: Blinks # Imp
 
 - type: emoteSounds
   id: MothBodyEmotes
@@ -702,6 +804,13 @@
         volume: -6
     Salute:
       collection: Salutes
+    Crack: # Aurora's Song
+      collection: Cracks # Aurora's Song
+    Blink: # Aurora's Song
+      collection: Blinks # Aurora's Song
+      params: # imp
+        volume: -3 # imp
+        variation: 0.1 # imp
     Flutter: # Aurora's Song - Add flutter from fairy
       path: /Audio/Voice/Moth/moth_flap.ogg
 

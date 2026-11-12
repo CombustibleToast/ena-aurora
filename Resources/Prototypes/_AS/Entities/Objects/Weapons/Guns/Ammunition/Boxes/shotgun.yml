@@ -1,0 +1,70 @@
+﻿#region base
+- type: entity
+  id: ASBaseAmmunitionBoxShellShotgun8g
+  parent: NFBaseAmmunitionBox
+  name: shell box (8g shell)
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ShellShotgun8g
+    capacity: 16
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/shotgun.rsi
+
+#region boxes - Pellets
+- type: entity
+  id: ASAmmunitionBoxShellShotgun8gBuckshot
+  parent: ASBaseAmmunitionBoxShellShotgun8g
+  name: shell box (8g buckshot)
+  components:
+  - type: BallisticAmmoProvider
+    proto: AS8gShellBuckshot
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+      color: "#897e6a"
+    - state: decal-01
+      color: "#333333"
+    - state: decal-shell-buckshot
+    - state: mag-1
+      map: [ "enum.GunVisualLayers.Mag" ]
+
+- type: entity
+  id: ASAmmunitionBoxShellShotgun8gSlug
+  parent: ASBaseAmmunitionBoxShellShotgun8g
+  name: shell box (8g slug)
+  components:
+  - type: BallisticAmmoProvider
+    proto: AS8gShellSlug
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#897e6a"
+    - state: decal-01
+      color: "#333333"
+    - state: decal-shell-slug
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ASAmmunitionBoxShellShotgun8gHE
+  parent: [ASBaseAmmunitionBoxShellShotgun8g, BaseC3ContrabandUnredeemable]
+  name: shell box (8g HE)
+  components:
+  - type: BallisticAmmoProvider
+    proto: AS8gShellHE
+    capacity: 8
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+      color: "#897e6a"
+    - state: decal-01
+      color: "#333333"
+    - state: decal-shell-incendiary
+    - state: mag-1
+      map: [ "enum.GunVisualLayers.Mag" ]

@@ -1,6 +1,6 @@
 #region blue wizard
 - type: entity
-  parent: [ BaseC3WizardContrabandUnredeemable, ClothingNeckBase, ContrabandClothing ]
+  parent: [ BaseC1Contraband, ClothingNeckBase ] # Aurora's Song - Added BaseC1Contraband
   id: ClothingNeckScarfWizardBlue
   name: blue wizard stole
   description: A scarf imbued with minor enchantments to protect the wearer from cold and minor magical effects.
@@ -38,7 +38,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#96A3B0"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#A396B0"
         map: [ "wizard_stole_base" ]
@@ -92,7 +92,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#7A3D00"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#7A003D"
         map: [ "wizard_stole_base" ]
@@ -146,7 +146,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#AB769E"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#8376AB"
         map: [ "wizard_stole_base" ]
@@ -165,7 +165,7 @@
 
 #region blood cult
 - type: entity
-  parent: [ BaseC3CultContrabandUnredeemable, ClothingNeckScarfWizardBlue ]
+  parent: [ ClothingNeckScarfWizardBlue ] # Aurora's Song - Removed BaseC3CultContrabandUnredeemable
   id: ClothingNeckScarfBloodCult
   name: blood cult stole
   components:
@@ -200,7 +200,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#6e3c3c"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#422424"
         map: [ "wizard_stole_base" ]
@@ -219,7 +219,7 @@
 
 #region scarf of warmth
 - type: entity
-  parent: [ ClothingNeckScarfWizardPurple, BaseC3WizardContraband ]
+  parent: [ ClothingNeckScarfWizardPurple ] # Aurora's Song - Removed BaseC3CultContrabandUnredeemable
   id: ClothingNeckScarfWizardWarmth
   name: wizard scarf of warmth
   description: You don't feel neither cold nor warm wearing it. Wonder if it keeps you safe from plasmafires?
@@ -255,7 +255,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#A65746"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#4593a5"
         map: [ "wizard_stole_base" ]
@@ -279,7 +279,7 @@
 
 #region cloak of holding
 - type: entity
-  parent: [ ClothingNeckBase, BaseC3WizardContraband ]
+  parent: [ ClothingNeckBase ] # Aurora's Song - Removed BaseC3CultContrabandUnredeemable
   id: ClothingNeckCloakWizardHolding
   name: wizard's portal cloak of holding
   description: What happens when your wizardry instructor forbids portal conjuring, yet you do it anyway and attempt to conceal it under your cloak when they are back to check on you?
@@ -299,7 +299,7 @@
       - state: equipped-NECK
       - state: equipped-NECK-unshaded
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
       - state: equipped-NECK-unshaded
         shader: unshaded

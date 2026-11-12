@@ -56,8 +56,8 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"NFWeaponRevolverFaithExpedition","NFWeaponRevolverFaith"},
         {"NFWeaponRevolverDeckardExpedition","NFWeaponRevolverDeckard"},
         {"NFWeaponRevolverPython45Expedition","NFWeaponRevolverPython45"},
-        {"NFWeaponRifleBarlowsBoltExpedition","NFWeaponRifleBarlowsBolt"},
-        {"NFWeaponRifleCeremonialExpedition","NFWeaponRifleCeremonial"},
+        {"ASWeaponRifleMosinBoltExpedition","ASWeaponRifleMosinBolt"},
+        {"ASWeaponRifleGarandCeremonialExpedition","ASWeaponRifleGarandCeremonial"},
         {"NFWeaponRifleRepeaterExpedition","NFWeaponRifleRepeater"},
         {"NFWeaponPistolCobraExpedition","NFWeaponPistolCobra"},
         {"NFWeaponPistolN1984Expedition","NFWeaponPistolN1984"},
@@ -85,7 +85,7 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"NFWeaponShotgunEnforcerExpedition","NFWeaponShotgunEnforcer"},
         {"NFWeaponShotgunBulldogExpedition","NFWeaponShotgunBulldog"},
         {"NFWeaponRifleAssaultSmExpedition","ASWeaponRifleAssaultSurpSm"},
-        {"NFWeaponRifleAssaultVulcanExpedition","NFWeaponRifleAssaultVulcan"},
+        {"ASWeaponRifleMarksmanVulcanExpedition","ASWeaponRifleMarksmanVulcan"}, // Aurora's Song - Changed from NFWeaponRifleMarksmanVulcan to ASWeaponRifleMarksmanVulcan
         {"NFWeaponEnergyRifleCarbineExpedition","NFWeaponEnergyRifleCarbine"},
         {"NFWeaponEnergyPistolLaserAdvancedExpedition","NFWeaponEnergyPistolLaserAdvanced"},
         {"NFWeaponEnergyPistolLaserAntiqueExpedition","NFWeaponEnergyPistolLaserAntique"},
@@ -99,6 +99,8 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"ASWeaponSubMachineGunAP4CExpedition","ASWeaponSubMachineGunAP4C"},
         {"ASWeaponShotgunFalchionExpedition","ASWeaponShotgunSurpFalchion"},
         {"ASWeaponShotgunHushpupExpedition","ASWeaponShotgunHushpup"},
+        {"ASWeaponPistolBRDIP15Expedition", "ASWeaponPistolBRDIP15"},
+        {"ASWeaponShotgunLeverChesterExpedition", "ASWeaponShotgunLeverChesterRegistered"},
 
         {"ClothingOuterHardsuitSyndie","ClothingOuterHardsuitShanlinUnpainted"},
         {"ClothingOuterHardsuitSyndieElite","ClothingOuterHardsuitShiweiUnpainted"},
@@ -107,5 +109,8 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
 
         {"CrateSyndicateLockedHardsuitFilled","ClothingOuterHardsuitShanlinUnpainted"},
         {"CrateSyndicateLockedEliteHardsuitFilled","ClothingOuterHardsuitShiweiUnpainted"},
+
+        {"EnergyShield","EnergyShieldMercenary"},
+        {"BlueShieldShield","EnergyShieldMercenary"},
     };
 }

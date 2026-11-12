@@ -31,6 +31,7 @@
           Piercing: 1
           Heat: 1
     - type: Damageable
+    - type: Injurable
       damageContainer: Shield
     - type: ExaminableDamage
       messages: ShieldMessages
@@ -365,11 +366,13 @@
   name: clockwork shield
   parent: BaseRepairableShield
   id: ClockworkShield
-  description: Ratvar oyrffrf lbh jvgu uvf cebgrpgvba.
+  description: A round, heavy brass shield styled after a set of cogs used by Ratvarian zealots. # Aurora's Song
   components:
     - type: Sprite
+      sprite: _AS/Objects/Weapons/Melee/clockwork_shield.rsi # Aurora's Song
       state: ratvarian-icon
     - type: Item
+      sprite: _AS/Objects/Weapons/Melee/clockwork_shield.rsi # Aurora's Song
       heldPrefix: ratvarian
     - type: Blocking
       passiveBlockModifier:
@@ -392,7 +395,7 @@
 
 - type: entity
   name: mirror shield
-  parent: [ BaseShield, BaseC3WizardContraband] # Frontier: BaseMagicalContraband<BaseC3WizardContraband
+  parent: [ BaseShield, C2ContrabandRestricted] # Aurora's Song - BaseMagicalContraband<C2ContrabandRestricted
   id: MirrorShield
   description: Eerily glows red... you hear the geometer whispering
   components:
@@ -519,6 +522,7 @@
           Piercing: 1
     - type: Appearance
     - type: Damageable
+    - type: Injurable
       damageContainer: Shield
       # Aurora's Song - Remove Destructible
     - type: StaticPrice

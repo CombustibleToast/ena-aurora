@@ -1,0 +1,107 @@
+- type: marking
+  id: LumariHeadHeadEyebagsMoth
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: head_eyebags_moth
+
+- type: marking
+  id: LumariEyesEyebagSoft
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:SkinColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: eyebag_soft_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: eyebag_soft_secondary
+
+- type: marking
+  id: LumariEyesEyelid
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: eyelid_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: eyelid_secondary
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeBlindfold
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: blindfold_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeEyepatchLeft
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: eyepatch_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeEyepatchRight
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: eyepatch_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeWrappedEyepatchLeft
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: gauze_eyepatch_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeWrappedEyepatchRight
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: gauze_eyepatch_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHead
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: head_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHeadwrapLeft
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: headwrap_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHeadwrapRight
+  bodyPart: HeadOverlay
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: headwrap_r_gauze

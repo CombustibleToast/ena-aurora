@@ -49,3 +49,42 @@
         children:
         - id: ASMagazineSubMachineGun35Funny
           amount: 4
+
+- type: entity
+  name: A box of .30 Long rifle mags
+  parent: BoxMagazine
+  id: ASBoxMagazineRifle30Long
+  description: A box full of .30 Long rifle magazines.
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASMagazineMarksmanRifle30Long
+          amount: 4
+
+- type: entity
+  name: A box of rubber .30 Long rifle mags
+  parent: BoxMagazine
+  id: ASBoxMagazineRifle30LongRubber
+  description: A box full of rubber .30 Long rifle magazines.
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASMagazineMarksmanRifle30LongRubber
+          amount: 4
+
+- type: entity
+  name: A box of Echion fuel canisters
+  parent: WeaponCaseShortAmmo
+  id: WeaponCaseShortEchionCanisterSyndicate
+  description: A box full of official Cybersun Echion fuel canisters.
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EchionCanister
+          amount: 4

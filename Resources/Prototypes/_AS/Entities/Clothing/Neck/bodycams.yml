@@ -1,6 +1,6 @@
 - type: entity
   id: ClothingNeckBodyCameraSLE
-  parent: ClothingNeckBodyCamera
+  parent: [ ClothingNeckBodyCamera, C2ContrabandRestricted ]
   name: SLE body camera
   description: A body mounted camera. It's watching you.
   components:

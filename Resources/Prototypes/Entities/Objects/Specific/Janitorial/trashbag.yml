@@ -36,11 +36,15 @@
   - type: Clothing
     slots: [belt]
     sprite: Objects/Specific/Janitorial/trashbag.rsi
+    equippedState: equipped-BELT
   - type: Item
     size: Normal
   - type: MagnetPickup # Frontier
     magnetEnabled: false # Frontier
   - type: GoblinPreciousTrashBag # Frontier
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 2
+    looping: true
 
 - type: entity
   name: trash bag
@@ -55,6 +59,13 @@
     heldPrefix: blue
   - type: StorageFillVisualizer
     fillBaseName: blue-icon
+  - type: Clothing
+    slots: [belt]
+    sprite: Objects/Specific/Janitorial/trashbag.rsi
+    equippedState: blue-equipped-BELT
+  - type: Tag
+    tags:
+    - TrashBagBlue
 
 - type: entity
   name: spell of all-consuming cleanliness

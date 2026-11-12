@@ -187,6 +187,7 @@
   recipeUnlocks:
   - ShipyardRCD
   - ShipyardRCDAmmo
+  - ASShipyardRSD # Aurora's Song - RSD
   technologyPrerequisites:
   - NFMechanicalCompression
   position: 3, 1
@@ -863,6 +864,7 @@
   recipeUnlocks:
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
+  - SignalControlComputerCircuitboard # Aurora's Song - Signal Control Computer
   position: 0, 19
 
 - type: technology
@@ -1695,7 +1697,7 @@
   - ClothingOuterArmorBulletproofNF
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
-  - ClothingEyesHudBountyHunter
+  - ASClothingEyesHudUniversal # Aurora's Song - Universal Status HUD
   - NFForensicPad
   - FlashlightSecliteNF
   technologyPrerequisites:

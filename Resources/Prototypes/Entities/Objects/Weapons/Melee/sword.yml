@@ -135,6 +135,9 @@
     - Back
     - Belt
   - type: DisarmMalus
+  - type: Tag # Aurora's Song | Katana tag applied
+    tags:
+    - Katana
 
 - type: entity
   name: energy katana
@@ -204,7 +207,7 @@
 #Other/Weird
 - type: entity
   name: throngler
-  parent: [ BaseSword, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC3Contraband
+  parent: [ BaseSword, BaseClass3Restricted ] # Aurora's Song - BaseMajorContraband<BaseClass3Restricted
   id: Throngler
   description: If Security dares take it from you, just remind them that they are indeed mortal.
   components:

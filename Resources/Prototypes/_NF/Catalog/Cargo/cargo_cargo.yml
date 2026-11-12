@@ -1,7 +1,7 @@
 - type: cargoProduct
   id: CrateTradeSecureNormal
   icon:
-    sprite: _NF/Structures/Storage/Crates/tradedark.rsi
+    sprite: _AS/Structures/Storage/Crates/tradedark.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   product: CrateTradeSecureNormal
   cost: 1000
@@ -11,7 +11,7 @@
 - type: cargoProduct
   id: CrateTradeSecureHigh
   icon:
-    sprite: _NF/Structures/Storage/Crates/tradelight.rsi
+    sprite: _AS/Structures/Storage/Crates/tradelight.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   product: CrateTradeSecureHigh
   cost: 2000
@@ -42,5 +42,5 @@
   product: MechEmuCargoListing
   cost: 5000
   category: cargoproduct-category-name-cargo
-  description: An old mech with an integral forklift, useful for moving trade crates.
+  description: cargo-product-description-old-mech
   group: market

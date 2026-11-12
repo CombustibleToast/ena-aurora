@@ -108,8 +108,9 @@
     layoutId: APC
   - type: WiresVisuals
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -153,6 +154,7 @@
     - Power
   - type: BatteryDrinkerSource # EE IPCs
     maxAmount: 10000
+  - type: TooShortForUiBlacklist # MACRO
 
 # APC under construction
 - type: entity

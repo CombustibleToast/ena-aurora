@@ -64,3 +64,254 @@
       children:
        - id: SpawnDungeonLootGunT5
        - id: SpawnDungeonLootMeleeT5
+
+# region - NT UIV tables
+# NT suit tables
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVSuitCommon
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 25
+      children:
+        - id: SuitStorageUIVNTEmpty
+    - !type:GroupSelector
+      weight: 25
+      children:
+        - id: SuitStorageUIVNTGeneric
+    - !type:GroupSelector
+      weight: 48
+      children:
+        - id: SuitStorageUIVNTConstable
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVSuitUncommon
+      weight: 2
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVSuitUncommon
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 50
+      children:
+        - id: SuitStorageUIVNTConstable
+        - id: SuitStorageUIVNTShedu
+    - !type:GroupSelector
+      weight: 23
+      children:
+        - id: SuitStorageUIVNTHauberk
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVSuitRare
+      weight: 2
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVSuitRare
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 50
+      children:
+        - id: SuitStorageUIVNTHauberk
+    - !type:GroupSelector
+      weight: 24.9
+      children:
+        - id: SuitStorageUIVNTGolem
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVSuitMythical
+      weight: 0.1
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVSuitMythical
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 100
+      children:
+        - id: SuitStorageUIVNTSatanus
+
+#region NT UIV loose loot tables
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVLootLooseCommon
+  table: !type:GroupSelector
+    children:
+    - id: SpaceCash1000
+    - id: SpaceCash2500
+    - id: SpaceCash5000
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLooseGunsCommon
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVLootLooseUncommon
+  table: !type:GroupSelector
+    children:
+    - id: SpaceCash2500
+    - id: SpaceCash5000
+    - id: SpaceCash10000
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenSecurityClutterClothing
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLooseGunsUncommon
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVLootLooseRare
+  table: !type:GroupSelector
+    children:
+    - id: SpaceCash5000
+    - id: SpaceCash10000
+    - id: SpaceCash20000
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVCaptain
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenCentCommClutterClothing
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLooseGunsRare
+
+#region NT UIV sub-tables for loot population
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVArmoryClutterAll
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 30
+      children:
+      - id: ClothingBeltSheath
+      - id: ClothingBeltKatanaSheathSingle
+    - !type:NestedSelector
+      weight: 25
+      tableId: DungeonLootNanoTrasenUIVArmoryClutterWeapons
+    - !type:NestedSelector
+      weight: 35
+      tableId: DungeonLootNanoTrasenUIVArmoryClutterClothing
+
+- type: entityTable
+  id: DungeonLootNanoTrasenSecurityClutterClothing
+  table: !type:GroupSelector
+    children:
+    - id: ClothingUniformSecurityTrooper
+    - id: ClothingBeltSecurityWebbing
+    - id: ClothingBackpackDuffelSecurity
+    - id: ClothingBackpackSatchelSecurity
+    - id: ClothingUniformJumpsuitSec
+    - id: ClothingUniformJumpsuitSecFormal
+
+- type: entityTable
+  id: DungeonLootNanoTrasenCentCommClutterClothing
+  table: !type:GroupSelector
+    children:
+    - id: ClothingHeadHatCentcomcap
+    - id: ClothingHeadHatCentcom
+    - id: ClothingUniformJumpsuitCentcomAgent
+    - id: ClothingUniformJumpsuitCentcomFormal
+    - id: ClothingUniformJumpskirtCentcomFormalDress
+    - id: ClothingUniformJumpsuitCentcomOfficer
+    - id: ClothingUniformJumpsuitCentcomOfficial
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVCaptain
+  table: !type:GroupSelector
+    children:
+    - id: ClothingHandsGlovesCaptainflightgloves
+    - id: ClothingEyesGlassesCaptainvisor
+    - id: ClothingBackpackSatchelCommandveteran
+    - id: ClothingBackpackCommandveteran
+    - id: ClothingBackpackDuffelCommVet
+    - id: ClothingHeadHatCaptaincrushercap
+    - id: ClothingNeckCloakCaptaingreatcoat
+    - id: ClothingShoesBootsCaptainjumpboots
+    - id: ClothingUniformJumpsuitCaptaineveningattire
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVLooseGunsCommon
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseShortPollockExpedition
+    - id: WeaponCaseShortMk58Expedition
+    - id: WeaponCaseShortUniversalExpedition
+    - id: WeaponCaseShortLaserGunExpedition
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVLooseGunsUncommon
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseLongDrozdExpedition
+    - id: WeaponCaseShortWard45Expedition
+    - id: WeaponCaseLongKammererExpedition
+    - id: WeaponCaseLongLaserCarbineExpedition
+    - id: WeaponCaseLongLecterExpedition
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVLooseGunsRare
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseLongWT550Expedition
+    - id: WeaponCaseShortAntiqueLaserExpedition
+    - id: WeaponCaseLongEnforcerExpedition
+    - id: WeaponCaseLongEnergyGunExpedition
+    - id: WeaponCaseLongLaserCannonExpedition
+
+#region NT UIV armoury specific loot
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVArmoryClutterWeapons
+  table: !type:GroupSelector
+    children:
+    - id: WeaponCaseShortMk58Expedition
+    - id: WeaponCaseBRDPIExpedition
+    - id: Katana
+    - id: CaptainSabre
+    - id: WeaponCaseInspectorExpedition
+    - id: WeaponCaseShortN1984Expedition
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVArmoryClutterClothing
+  table: !type:GroupSelector
+    children:
+    - id: ClothingOuterCoatWarden
+    - id: ClothingOuterCoatHoSTrench
+    - id: ClothingOuterCoatDetective
+    - id: ClothingOuterWinterWarden
+    - id: ClothingOuterWinterWardenUnarmored
+    - id: ClothingHeadHatWarden
+    - id: ClothingHeadHatBeretWarden
+    - id: ClothingHeadHatHoshat
+    - id: ClothingHeadHatBeretHoS
+    - id: ClothingNeckMantleHOS
+
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVRareGuns
+  table: !type:GroupSelector
+    children:
+    - id: ASWeaponMk1UEPulseRifle
+      weight: 50
+    - id: WeaponCaseLongLauncherRocketExpedition
+      weight: 5
+    - id: WeaponCaseChesterExpeditionT4
+      weight: 50
+
+- type: entityTable
+  id: DungeonNanoTrasenUIVSecDrobe
+  table: !type:GroupSelector
+    children:
+    - id: VendingMachineSecDrobe
+
+- type: entityTable
+  id: DungeonNanoTrasenUIVOfficerVend
+  table: !type:GroupSelector
+    children:
+    - id: ASVendingMachineNanoVendA
+    - id: ASVendingMachineNanoVendB
+    - id: ASVendingMachineNanoVendC
+    - id: ASVendingMachineNanoVendD
+
+# NT UIV gun safes
+- type: entityTable
+  id: DungeonLootNanoTrasenUIVGunSafes
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 100
+      children:
+        - id: ASGunSafeExpeditionWT550
+        - id: ASGunSafeExpeditionLecter
+        - id: ASGunSafeExpeditionDrozd
+        - id: ASGunSafeExpeditionMK58
+        - id: ASGunSafeExpeditionBRDIP15

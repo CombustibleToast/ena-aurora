@@ -706,6 +706,12 @@
       weight: 0.01
     - id: WallRockChromiteSilver
       weight: 0.01
+    # Aurora's Song start
+    - id: ASWallRockChromiteMnemolith
+      weight: 0.09
+    - id: ASWallRockChromiteEidolite
+      weight: 0.02
+    # Aurora's Song end
     - id: WallRockChromitePlasma
       weight: 0.04
     - id: WallRockChromiteUranium

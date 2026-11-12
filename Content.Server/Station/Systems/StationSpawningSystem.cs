@@ -40,24 +40,24 @@ namespace Content.Server.Station.Systems;
 /// Also provides helpers for spawning in the player's mob.
 /// </summary>
 [PublicAPI]
-public sealed class StationSpawningSystem : SharedStationSpawningSystem
+public sealed partial class StationSpawningSystem : SharedStationSpawningSystem
 {
-    [Dependency] private readonly SharedAccessSystem _accessSystem = default!;
-    [Dependency] private readonly ActorSystem _actors = default!;
-    [Dependency] private readonly IdCardSystem _cardSystem = default!;
-    [Dependency] private readonly IConfigurationManager _configurationManager = default!;
-    [Dependency] private readonly HumanoidProfileSystem _humanoidProfile = default!;
-    [Dependency] private readonly SharedVisualBodySystem _visualBody = default!;
-    [Dependency] private readonly IdentitySystem _identity = default!;
-    [Dependency] private readonly MetaDataSystem _metaSystem = default!;
-    [Dependency] private readonly PdaSystem _pdaSystem = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly MindSystem _mindSystem = default!;
-    [Dependency] private readonly IDependencyCollection _dependencyCollection = default!; // Frontier
-    [Dependency] private readonly IServerPreferencesManager _preferences = default!; // Frontier
-    [Dependency] private readonly BankSystem _bank = default!; // Frontier
-    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!; // Frontier
-    [Dependency] private readonly TransformSystem _xformSystem = default!; // Frontier
+    [Dependency] private SharedAccessSystem _accessSystem = default!;
+    [Dependency] private ActorSystem _actors = default!;
+    [Dependency] private IdCardSystem _cardSystem = default!;
+    [Dependency] private IConfigurationManager _configurationManager = default!;
+    [Dependency] private HumanoidProfileSystem _humanoidProfile = default!;
+    [Dependency] private SharedVisualBodySystem _visualBody = default!;
+    [Dependency] private IdentitySystem _identity = default!;
+    [Dependency] private MetaDataSystem _metaSystem = default!;
+    [Dependency] private PdaSystem _pdaSystem = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private MindSystem _mindSystem = default!;
+    [Dependency] private IDependencyCollection _dependencyCollection = default!; // Frontier
+    [Dependency] private IServerPreferencesManager _preferences = default!; // Frontier
+    [Dependency] private BankSystem _bank = default!; // Frontier
+    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!; // Frontier
+    [Dependency] private TransformSystem _xformSystem = default!; // Frontier
 
     /// <summary>
     /// Attempts to spawn a player character onto the given station.
@@ -110,6 +110,8 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         EntityUid? entity = null,
         ICommonSession? session = null) // Frontier
     {
+        Log.Info($"Player {profile?.Name} has {profile?.BankBalance} spesos before spawning"); // Aurora's Song - Extra logging
+
         _prototypeManager.Resolve(job, out var prototype);
         RoleLoadout? loadout = null;
 
@@ -257,11 +259,12 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             if (prototype?.StartingGear is not null)
                 EquipStartingGear(entity.Value, prototype.StartingGear, raiseEvent: false);
 
-            var bankComp = EnsureComp<BankAccountComponent>(entity.Value);
+            EnsureComp<BankAccountComponent>(entity.Value); // Aurora's Song - Remove variable
 
             if (hasBalance)
             {
-                _bank.TryBankWithdraw(session!, prefs!, profile!, initialBankBalance - bankBalance, out var newBalance);
+                // Aurora's Song - casting to int with guards for overflows and negative values.
+                _bank.TryBankWithdraw(session!, prefs!, profile!, (int)Math.Clamp(initialBankBalance - bankBalance, 0, int.MaxValue), out var newBalance);
             }
 
             EquipRoleName(entity.Value, loadout, roleProto!);
@@ -274,7 +277,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
 
         if (prototype != null && TryComp(entity.Value, out MetaDataComponent? metaData))
         {
-            SetPdaAndIdCardData(entity.Value, metaData.EntityName, prototype, station);
+            SetPdaAndIdCardData(entity.Value, profile!.ProfileId, metaData.EntityName, prototype, station); // Aurora - add ProfileId
         }
 
         DoJobSpecials(job, entity.Value);
@@ -311,10 +314,11 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     /// Sets the ID card and PDA name, job, and access data.
     /// </summary>
     /// <param name="entity">Entity to load out.</param>
+    /// <param name="profileId">The ID associated with the profile stored in the database.</param>
     /// <param name="characterName">Character name to use for the ID.</param>
     /// <param name="jobPrototype">Job prototype to use for the PDA and ID.</param>
     /// <param name="station">The station this player is being spawned on.</param>
-    public void SetPdaAndIdCardData(EntityUid entity, string characterName, JobPrototype jobPrototype, EntityUid? station)
+    public void SetPdaAndIdCardData(EntityUid entity, int? profileId, string characterName, JobPrototype jobPrototype, EntityUid? station) // Aurora - add ProfileId
     {
         if (!InventorySystem.TryGetSlotEntity(entity, "id", out var idUid))
             return;
@@ -326,6 +330,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         if (!TryComp<IdCardComponent>(cardId, out var card))
             return;
 
+        card.ProfileId = profileId; // Aurora - add ProfileId
         _cardSystem.TryChangeFullName(cardId, characterName, card);
         _cardSystem.TryChangeJobTitle(cardId, jobPrototype.LocalizedName, card);
 

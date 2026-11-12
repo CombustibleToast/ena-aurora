@@ -37,3 +37,22 @@
    - flickers
    - twinkles
    - glitters
+
+- type: emote
+  id: Coo
+  name: chat-emote-name-coo
+  category: Vocal
+  available: false
+  icon: Interface/Actions/scream.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-coo"]
+  chatTriggers:
+    - coo
+    - coos
+    - cooed
+    - cooing

@@ -12,13 +12,13 @@ public sealed class ChannelSelectorPopup : Popup
         ChatSelectChannel.Local,
         ChatSelectChannel.Whisper,
         ChatSelectChannel.Emotes,
-        ChatSelectChannel.Subtle, // Floofstation
-        ChatSelectChannel.SubtleOOC, // Den
+        ChatSelectChannel.Subtle, // DEN - Add subtle
         ChatSelectChannel.Radio,
         ChatSelectChannel.LOOC,
+        ChatSelectChannel.SubtleOOC, // DEN - Add subtle OOC.
         ChatSelectChannel.OOC,
         ChatSelectChannel.Dead,
-        ChatSelectChannel.Admin
+        ChatSelectChannel.Admin,
         // NOTE: Console is not in there and it can never be permanently selected.
         // You can, however, still submit commands as console by prefixing with /.
     };

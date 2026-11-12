@@ -16,11 +16,19 @@ public sealed class IntrinsicRadioKeySystem : EntitySystem
 
     private void OnTransmitterChannelsChanged(EntityUid uid, IntrinsicRadioTransmitterComponent component, EncryptionChannelsChangedEvent args)
     {
+        // Aurora's Song Start - Intrinsic readonly channels
+        component.ReadOnlyChannels.Clear();
+        component.ReadOnlyChannels.UnionWith(args.Component.ReadOnlyChannels);
+        // Aurora's Song End
         UpdateChannels(uid, args.Component, ref component.Channels);
     }
 
     private void OnReceiverChannelsChanged(EntityUid uid, ActiveRadioComponent component, EncryptionChannelsChangedEvent args)
     {
+        // Aurora's Song Start - Intrinsic disabled channels
+        component.DisabledChannels.Clear();
+        component.DisabledChannels.UnionWith(args.Component.DisabledChannels);
+        // Aurora's Song End
         UpdateChannels(uid, args.Component, ref component.Channels);
     }
 

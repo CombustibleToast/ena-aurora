@@ -1,0 +1,29 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeFlippo
+  storage:
+    back:
+    - SyndicateFlippo
+
+- type: loadout
+  id: SyndicateRepresentativeFlippoCybersun
+  storage:
+    back:
+    - CybersunFlippo
+
+- type: loadout
+  id: SyndicateRepresentativeFlippoInterdyne
+  storage:
+    back:
+    - InterdyneFlippo
+
+- type: loadout
+  id: SyndicateRepresentativeFlippoWaffle
+  storage:
+    back:
+    - WaffleCoFlippo
+
+- type: loadout
+  id: SyndicateRepresentativeFlippoDonk
+  storage:
+    back:
+    - DonkcoLighter

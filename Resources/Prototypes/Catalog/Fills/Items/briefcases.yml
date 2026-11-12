@@ -11,7 +11,7 @@
 
 - type: entity
   id: BriefcaseSyndieSniperBundleFilled
-  parent: BriefcaseBrown
+  parent: [ BaseC3SyndicateContrabandNoValue, BriefcaseBrown ] # Aurora's Song - Added BaseC3SyndicateContrabandNoValue
   suffix: Syndicate, Sniper Bundle
   components:
   # Aurora's Song Start - Make this one bigger for fills
@@ -65,7 +65,7 @@
 
 - type: entity
   id: BriefcaseWeaponHushpupFilled
-  parent: BriefcaseWeapon # Aurora's Song BriefcaseWeaponSmall>BriefcaseWeapon
+  parent: [ BaseC2ContrabandUnredeemable, BriefcaseWeapon ] # Aurora's Song - BriefcaseWeaponSmall>BriefcaseWeapon, added BaseC2ContrabandUnredeemable
   name: secure hushpup case
   components:
   - type: EntityTableContainerFill
@@ -77,7 +77,7 @@
 
 - type: entity
   id: BriefcaseWeaponC20Filled
-  parent: BriefcaseWeaponSmall
+  parent: [ BaseC2ContrabandUnredeemable, BriefcaseWeaponSmall ] # Aurora's Song - Added BaseC2ContrabandUnredeemable
   name: secure C-20r case
   components:
   - type: EntityTableContainerFill
@@ -87,7 +87,7 @@
 
 - type: entity
   id: BriefcaseWeaponBulldogFilled
-  parent: BriefcaseWeapon # Aurora's Song BriefcaseWeaponSmall>BriefcaseWeapon
+  parent: [ BaseC2ContrabandUnredeemable, BriefcaseWeapon ] # Aurora's Song - BriefcaseWeaponSmall>BriefcaseWeapon, added BaseC2ContrabandUnredeemable
   name: secure bulldog case
   components:
   - type: EntityTableContainerFill
@@ -97,7 +97,7 @@
 
 - type: entity
   id: BriefcaseWeaponChinaLakeFilled
-  parent: BriefcaseWeapon
+  parent: [ BaseC3SyndicateContrabandNoValue, BriefcaseWeapon ] # Aurora's Song - Added BaseC3SyndicateContrabandNoValue
   name: secure china lake case
   components:
   - type: EntityTableContainerFill

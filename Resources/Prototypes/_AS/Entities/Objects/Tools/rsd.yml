@@ -1,0 +1,120 @@
+- type: entity
+  parent: BaseItem
+  id: ASRSD
+  name: RSD
+  description: A modified RCD for structural lattice and plating.
+  components:
+  - type: RCD
+    availablePrototypes:
+    - Deconstruct
+    # Standard Structural
+    - Lattice
+    - TrainLattice
+    - LatticeHalfV
+    - LatticeHalfH
+    - Plating
+    - PlatingHalfV
+    - PlatingHalfH
+    - FloorSteel
+    - Catwalk
+    # Wedge
+    - LatticeWedgeN
+    - LatticeWedgeE
+    - LatticeWedgeW
+    - LatticeWedgeS
+    - PlatingWedgeN
+    - PlatingWedgeE
+    - PlatingWedgeW
+    - PlatingWedgeS
+    # NW
+    - LatticeCornerNW
+    - PlatingCornerNW
+    # NW Half
+    - LatticeHalfTiltNWELower
+    - LatticeHalfTiltNWEUpper
+    - LatticeHalfTiltNWSLower
+    - LatticeHalfTiltNWSUpper
+    - PlatingHalfTiltNWELower
+    - PlatingHalfTiltNWEUpper
+    - PlatingHalfTiltNWSLower
+    - PlatingHalfTiltNWSUpper
+    # NE
+    - LatticeCornerNE
+    - PlatingCornerNE
+    # NE Half
+    - LatticeHalfTiltNESLower
+    - LatticeHalfTiltNESUpper
+    - LatticeHalfTiltNEWLower
+    - LatticeHalfTiltNEWUpper
+    - PlatingHalfTiltNESLower
+    - PlatingHalfTiltNESUpper
+    - PlatingHalfTiltNEWLower
+    - PlatingHalfTiltNEWUpper
+    # SW
+    - LatticeCornerSW
+    - PlatingCornerSW
+    # SW Half
+    - LatticeHalfTiltSWNLower
+    - LatticeHalfTiltSWNUpper
+    - LatticeHalfTiltSWELower
+    - LatticeHalfTiltSWEUpper
+    - PlatingHalfTiltSWNLower
+    - PlatingHalfTiltSWNUpper
+    - PlatingHalfTiltSWELower
+    - PlatingHalfTiltSWEUpper
+    # SE
+    - LatticeCornerSE
+    - PlatingCornerSE
+    # SE Half
+    - LatticeHalfTiltSEWLower
+    - LatticeHalfTiltSEWUpper
+    - LatticeHalfTiltSENLower
+    - LatticeHalfTiltSENUpper
+    - PlatingHalfTiltSEWLower
+    - PlatingHalfTiltSEWUpper
+    - PlatingHalfTiltSENLower
+    - PlatingHalfTiltSENUpper
+  - type: LimitedCharges
+    maxCharges: 30
+  - type: Sprite
+    sprite: _AS/Objects/Tools/rsd.rsi
+    state: icon
+  - type: Item
+    size: Normal
+  - type: Clothing
+    sprite: _AS/Objects/Tools/rsd.rsi
+    quickEquip: false
+    slots:
+    - Belt
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 500
+      Plastic: 100
+  - type: StaticPrice
+    price: 55
+    vendPrice: 5000
+  - type: UserInterface
+    interfaces:
+      enum.RcdUiKey.Key:
+        type: RCDMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.RcdUiKey.Key
+
+- type: entity
+  parent: ASRSD
+  id: ASShipyardRSD
+  name: shipyard RSD
+  description: A modified RCD for structural lattice and plating. It has a slot to swipe ID cards.
+  components:
+  - type: RCD
+    isShipyardRCD: true
+  - type: GridAccess
+
+- type: entity
+  parent: ASShipyardRSD
+  id: ASShipyardRSDEmpty
+  suffix: Empty
+  components:
+  - type: LimitedCharges
+    lastCharges: -1

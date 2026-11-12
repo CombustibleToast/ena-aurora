@@ -13,6 +13,9 @@
   suffix: Empty
   description: "Concealed knowledge stirs within, revealed only to those who can pierce the veil." # TheDen
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: LockerForensicMantis
   #- type: AccessReader
   #  access: [["Mantis"]]
   - type: Sprite # TheDen - Edited everything below this point wow
@@ -34,8 +37,9 @@
       params:
         volume: -4
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Metallic # Metal structure instead of wood like the other somber closets
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger: # In case it gets nuked it doesn't cause lag by dumping its contents

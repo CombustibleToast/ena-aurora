@@ -4,9 +4,10 @@
   name: crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _AS/Structures/Storage/Crates/generic.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _AS/Structures/Storage/Crates/generic.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: Reflect
     reflects:
     - Energy
@@ -23,9 +24,10 @@
   name: plastic crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/plastic.rsi
+    sprite: _AS/Structures/Storage/Crates/plastic.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: Structures/Storage/Crates/plastic.rsi
+    sprite: _AS/Structures/Storage/Crates/plastic.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: Construction
     graph: CratePlastic
     node: crateplastic
@@ -42,9 +44,10 @@
   name: freezer
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/freezer.rsi
+    sprite: _AS/Structures/Storage/Crates/freezer.rsi # Aurora's Song - Storage Resprites Batch 1 
   - type: Sprite
-    sprite: Structures/Storage/Crates/freezer.rsi
+    sprite: _AS/Structures/Storage/Crates/freezer.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AntiRottingContainer
   - type: ExplosionResistance
     damageCoefficient: 0.50
@@ -62,9 +65,10 @@
   name: hydroponics crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/hydroponics.rsi
+    sprite: _AS/Structures/Storage/Crates/hydroponics.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/hydroponics.rsi
+    sprite: _AS/Structures/Storage/Crates/hydroponics.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CratePlastic
@@ -72,9 +76,10 @@
   name: medical crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/medical.rsi
+    sprite: _AS/Structures/Storage/Crates/medical.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/medical.rsi
+    sprite: _AS/Structures/Storage/Crates/medical.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateGenericSteel
@@ -83,9 +88,10 @@
   description: Is not actually lead lined. Do not store your plutonium in this.
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/radiation.rsi
+    sprite: _AS/Structures/Storage/Crates/radiation.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/radiation.rsi
+    sprite: _AS/Structures/Storage/Crates/radiation.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CratePlastic
@@ -93,9 +99,10 @@
   name: oxygen crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/o2.rsi
+    sprite: _AS/Structures/Storage/Crates/o2.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/o2.rsi
+    sprite: _AS/Structures/Storage/Crates/o2.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateGenericSteel
@@ -103,9 +110,10 @@
   name: electrical crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/electrical.rsi
+    sprite: _AS/Structures/Storage/Crates/electrical.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/electrical.rsi
+    sprite: _AS/Structures/Storage/Crates/electrical.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateGenericSteel
@@ -113,9 +121,10 @@
   name: engineering crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/engineering.rsi
+    sprite: _AS/Structures/Storage/Crates/engineering.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/engineering.rsi
+    sprite: _AS/Structures/Storage/Crates/engineering.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateGenericSteel
@@ -123,9 +132,10 @@
   name: science crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/science.rsi
+    sprite: _AS/Structures/Storage/Crates/science.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/science.rsi
+    sprite: _AS/Structures/Storage/Crates/science.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateGenericSteel
@@ -133,9 +143,10 @@
   name: surgery crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/surgery.rsi
+    sprite: _AS/Structures/Storage/Crates/surgery.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/surgery.rsi
+    sprite: _AS/Structures/Storage/Crates/surgery.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateGeneric
@@ -143,9 +154,10 @@
   name: web crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/web.rsi
+    sprite: _AS/Structures/Storage/Crates/web.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/web.rsi
+    sprite: _AS/Structures/Storage/Crates/web.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
@@ -198,9 +210,10 @@
   name: secgear crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/sec_gear.rsi
+    sprite: _AS/Structures/Storage/Crates/sec_gear.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/sec_gear.rsi
+    sprite: _AS/Structures/Storage/Crates/sec_gear.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
     access: [["Security"]]
 
@@ -210,9 +223,10 @@
   name: secure engineering crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/engicrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/engicrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/engicrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/engicrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
 #    access: [["Engineering"]]
 
@@ -222,9 +236,10 @@
   name: secure medical crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/medicalcrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/medicalcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/medicalcrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/medicalcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
 #    access: [["Medical"]]
 
@@ -234,9 +249,10 @@
   name: secure chemistry crate
   components:
     - type: Icon
-      sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+      sprite: _AS/Structures/Storage/Crates/chemcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 1
     - type: Sprite
-      sprite: Structures/Storage/Crates/chemcrate_secure.rsi
+      sprite: _AS/Structures/Storage/Crates/chemcrate_secure.rsi # Aurora's Song - Storage Resprites Batch 1
+      offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
     - type: AccessReader
 #      access: [["Chemistry"]]
 
@@ -246,9 +262,10 @@
   name: private crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/privatecrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/privatecrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/privatecrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/privatecrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateBaseSecure
@@ -256,9 +273,10 @@
   name: secure science crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/scicrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/scicrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/scicrate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/scicrate_secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
 #    access: [["Research"]]
 
@@ -268,9 +286,10 @@
   name: plasma crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/plasma.rsi
+    sprite: _AS/Structures/Storage/Crates/plasma.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/plasma.rsi
+    sprite: _AS/Structures/Storage/Crates/plasma.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
 #    access: [["Engineering"], ["Research"], ["Chemistry"]]
 
@@ -280,9 +299,10 @@
   name: secure crate
   components:
     - type: Icon
-      sprite: Structures/Storage/Crates/secure.rsi
+      sprite: _AS/Structures/Storage/Crates/secure.rsi # Aurora's Song - Storage Resprites Batch 1
     - type: Sprite
-      sprite: Structures/Storage/Crates/secure.rsi
+      sprite: _AS/Structures/Storage/Crates/secure.rsi # Aurora's Song - Storage Resprites Batch 1
+      offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
 
 - type: entity
   parent: CrateBaseSecure
@@ -290,9 +310,10 @@
   name: secure hydroponics crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/hydro_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/hydro_secure.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/hydro_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/hydro_secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
 #    access: [["Hydroponics"]]
 
@@ -302,9 +323,10 @@
   name: secure weapon crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/weapon.rsi
+    sprite: _AS/Structures/Storage/Crates/weapon.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: Structures/Storage/Crates/weapon.rsi
+    sprite: _AS/Structures/Storage/Crates/weapon.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["Armory"]]
 
@@ -326,9 +348,10 @@
   name: command crate
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/command.rsi
+    sprite: _AS/Structures/Storage/Crates/command.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: Structures/Storage/Crates/command.rsi
+    sprite: _AS/Structures/Storage/Crates/command.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
 
@@ -339,9 +362,10 @@
   description: A dark steel crate with red bands and a letter S embossed on the front.
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/syndicate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: Structures/Storage/Crates/syndicate_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["SyndicateAgent", "NuclearOperative"]]
 
@@ -353,7 +377,7 @@
   - type: EntityStorage
     airtight: false
   - type: Sprite
-    sprite: Structures/Storage/Crates/livestock.rsi
+    sprite: _AS/Structures/Storage/Crates/livestock.rsi # Aurora's Song - Storage Resprites Batch 1
     layers:
     - state: base
     - state: closed
@@ -363,7 +387,7 @@
       offset: "-0.25,0.625"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Icon
-    sprite: Structures/Storage/Crates/livestock.rsi
+    sprite: _AS/Structures/Storage/Crates/livestock.rsi # Aurora's Song - Storage Resprites Batch 1
     state: base
   - type: Destructible
     thresholds:
@@ -696,7 +720,8 @@
   description: A box overflowing with fun.
   components:
   - type: Sprite
-    sprite: Structures/Storage/Crates/toybox.rsi
+    sprite: _AS/Structures/Storage/Crates/toybox.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: crate
       map: ["enum.StorageVisualLayers.Base"]
@@ -708,7 +733,7 @@
     - state: paper
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Icon
-    sprite: Structures/Storage/Crates/toybox.rsi
+    sprite: _AS/Structures/Storage/Crates/toybox.rsi # Aurora's Song - Storage Resprites Batch 2
     state: crate_icon
 
 - type: entity
@@ -718,7 +743,7 @@
   description: A comfy coffin, excellent place for the vampires and corpses.
   components:
   - type: Sprite
-    sprite: Structures/Storage/Crates/coffin.rsi
+    sprite: _AS/Structures/Storage/Crates/coffin.rsi # Aurora's Song - Storage Resprites Batch 1
     layers:
     - state: base
     - state: closed
@@ -726,7 +751,7 @@
     - state: paper
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Icon
-    sprite: Structures/Storage/Crates/coffin.rsi
+    sprite: _AS/Structures/Storage/Crates/coffin.rsi # Aurora's Song - Storage Resprites Batch 1
     state: base
   - type: Destructible
     thresholds:
@@ -844,9 +869,10 @@
   description: A dark steel crate with red bands and a letter S embossed on the front.
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/syndicate.rsi
+    sprite: _AS/Structures/Storage/Crates/syndicate.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: Structures/Storage/Crates/syndicate.rsi
+    sprite: _AS/Structures/Storage/Crates/syndicate.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
 
 - type: entity
   parent: [StructureWheeled, CrateBaseWeldable]
@@ -854,9 +880,10 @@
   name: trash cart
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/trashcart.rsi
+    sprite: _AS/Structures/Storage/Crates/trashcart.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/trashcart.rsi
+    sprite: _AS/Structures/Storage/Crates/trashcart.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
     - state: closed
@@ -877,9 +904,10 @@
   name: janitorial trash cart
   components:
   - type: Icon
-    sprite: Structures/Storage/Crates/trashcart_jani.rsi
+    sprite: _AS/Structures/Storage/Crates/trashcart_jani.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: Structures/Storage/Crates/trashcart_jani.rsi
+    sprite: _AS/Structures/Storage/Crates/trashcart_jani.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
     - state: closed

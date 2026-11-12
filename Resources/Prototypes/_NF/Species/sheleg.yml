@@ -4,7 +4,7 @@
   roundStart: true
   prototype: MobSheleg
   dollPrototype: AppearanceSheleg
-  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
+  skinColoration: ShelegToned
   defaultSkinTone: "#2A48CC"
   maleFirstNames: NamesShelegFirstMale
   femaleFirstNames: NamesShelegFirstFemale

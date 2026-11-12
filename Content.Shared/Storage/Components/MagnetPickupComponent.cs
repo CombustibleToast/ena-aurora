@@ -6,12 +6,19 @@ namespace Content.Shared.Storage.Components;
 /// <summary>
 /// Applies an ongoing pickup area around the attached entity.
 /// </summary>
+
+/*
+ * Aurora's Song - Magnet Rewrite
+ * Migrated to Content.Shared._AS.Storage.Components
+*/
+
+/*
 [RegisterComponent, NetworkedComponent]
 [AutoGenerateComponentState]
 [AutoGenerateComponentPause]
 public sealed partial class MagnetPickupComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("nextScan")]
+    [DataField]
     [AutoPausedField]
     [AutoNetworkedField]
     public TimeSpan NextScan = TimeSpan.Zero;
@@ -19,10 +26,13 @@ public sealed partial class MagnetPickupComponent : Component
     /// <summary>
     /// What container slot the magnet needs to be in to work.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite), DataField("slotFlags")]
-    public SlotFlags SlotFlags = SlotFlags.BELT;
+    [DataField]
+    public SlotFlags? SlotFlags = Inventory.SlotFlags.BELT;
 
-    [ViewVariables(VVAccess.ReadWrite), DataField("range")]
+    [DataField]
+    public bool RequireActiveHand = false;
+
+    [DataField]
     public float Range = 1f;
 
     // Frontier: togglable magnets
@@ -45,3 +55,4 @@ public sealed partial class MagnetPickupComponent : Component
     public int MagnetTogglePriority = 3;
     // End Frontier: togglable magnets
 }
+*/

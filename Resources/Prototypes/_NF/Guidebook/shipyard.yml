@@ -8,6 +8,7 @@
   - ShipyardAkupara
   - ShipyardAmbition
   - ShipyardApothecary
+  - ShipyardBalena
   - ShipyardBarge
   - ShipyardBaroness
   - ShipyardBazaar
@@ -56,10 +57,12 @@
   - ShipyardProspector
   - ShipyardPulsar
   - ShipyardRetort
+  - ShipyardScavenger # Aurora's Song
   - ShipyardSearchlight
   - ShipyardSkipper
   - ShipyardSpirit
   - ShipyardStasis
+  - ShipyardStrike # Aurora's Song
   - ShipyardSurveyor
   - ShipyardTide
   - ShipyardVagabond
@@ -84,6 +87,11 @@
   id: ShipyardApothecary
   name: guide-entry-shipyard-apothecary
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Apothecary.xml"
+
+- type: guideEntry
+  id: ShipyardBalena
+  name: guide-entry-shipyard-balena
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Balena.xml"
 
 - type: guideEntry
   id: ShipyardBarge
@@ -365,4 +373,14 @@
   id: ShipyardDove
   name: guide-entry-shipyard-dove
   text: "/ServerInfo/_AS/Guidebook/Shipyard/Dove.xml"
+
+- type: guideEntry
+  id: ShipyardScavenger
+  name: guide-entry-shipyard-scavenger
+  text: "/ServerInfo/_AS/Guidebook/Shipyard/Scavenger.xml"
+
+- type: guideEntry
+  id: ShipyardStrike
+  name: guide-entry-shipyard-strike
+  text: "/ServerInfo/_AS/Guidebook/Shipyard/Strike.xml"
 # Aurora's Song end

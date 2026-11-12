@@ -1,0 +1,33 @@
+- type: marking
+  id: LumariChitinidWeevilHead
+  bodyPart: Snout
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: weevil_head
+
+- type: marking
+  id: LumariHeadBeak
+  bodyPart: Snout
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: beak
+
+- type: marking
+  id: LumariHeadFangs
+  bodyPart: Snout
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: fangs
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeJaw
+  bodyPart: Snout
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: jaw_gauze
+

@@ -20,8 +20,10 @@
         - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
           state: generic_panel_open
     - type: Damageable
-      damageContainer: Inorganic
       damageModifierSet: Electronic
+    - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+      damageContainer: Inorganic
+    - type: SparksOnDamage # _Starfall
     - type: Destructible
       thresholds:
         - trigger:

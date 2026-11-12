@@ -1,0 +1,41 @@
+# If you add a new trait, make sure to add the corresponding component to the whitelist in \Resources\Prototypes\Entities\Mobs\Player\clone.yml so it gets copied to clones correctly!
+
+- type: trait
+  id: LightweightDrunk
+  name: trait-lightweight-drunk-name # Aurora's Song: lightweight > lightweight-drunk
+  description: trait-lightweight-drunk-desc # Aurora's Song: lightweight > lightweight-drunk
+  category: Alcohol
+  cost: 1
+  components:
+  - type: LightweightDrunk
+    boozeStrengthMultiplier: 2
+
+- type: trait
+  id: HeavyweightDrunk
+  name: trait-heavyweight-drunk-name
+  description: trait-heavyweight-drunk-desc
+  category: Alcohol
+  cost: 1
+  components:
+  - type: LightweightDrunk
+    boozeStrengthMultiplier: 0.9
+
+- type: trait
+  id: UltraLightweightDrunk
+  name: trait-ultra-lightweight-drunk-name
+  description: trait-ultra-lightweight-drunk-desc
+  category: Alcohol
+  cost: 1
+  components:
+  - type: LightweightDrunk
+    boozeStrengthMultiplier: 4
+
+- type: trait
+  id: AlcoholImmune
+  name: trait-alcohol-immune-name
+  description: trait-alcohol-immune-desc
+  category: Alcohol
+  cost: 1
+  components:
+  - type: LightweightDrunk
+    boozeStrengthMultiplier: 0

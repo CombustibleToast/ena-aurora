@@ -69,3 +69,116 @@
       amount: 8
     - id: NFMagazinePistol35Rubber
       amount: 8
+
+# NT UIV lockers and gun safes
+
+- type: entity
+  id: ASGunSafeNTUIV
+  parent: GunSafeBaseSecure
+  name: gun safe
+  abstract: true
+  components:
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: ASGunSafeExpeditionWT550
+  parent: ASGunSafeNTUIV
+  suffix: UIV, WT550
+  name: WT550 safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ASFillGunSafeUIVWT550
+
+- type: entity
+  id: ASGunSafeExpeditionLecter
+  parent: ASGunSafeNTUIV
+  suffix: UIV, Lecter
+  name: Lecter safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ASFillGunSafeUIVLecter
+
+- type: entity
+  id: ASGunSafeExpeditionDrozd
+  parent: ASGunSafeNTUIV
+  suffix: UIV, Drozd
+  name: Drozd safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ASFillGunSafeUIVDrozd
+
+- type: entity
+  id: ASGunSafeExpeditionMK58
+  parent: ASGunSafeNTUIV
+  suffix: UIV, MK58
+  name: MK58 safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ASFilLGunSafeUIVMK58
+
+- type: entity
+  id: ASGunSafeExpeditionBRDIP15
+  parent: ASGunSafeNTUIV
+  suffix: UIV, BRDIP15
+  name: BRDIP15 safe
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ASFillGunSafeUIVBRDIP15
+
+# region NT UIV gun safe fills
+
+- type: entityTable
+  id: ASFillGunSafeUIVLecter
+  table: !type:AllSelector
+    children:
+    - id: NFWeaponRifleAssaultLecterExpedition
+      amount: 2
+    - id: NFMagazineRifle20
+      amount: 4
+
+- type: entityTable
+  id: ASFillGunSafeUIVDrozd
+  table: !type:AllSelector
+    children:
+    - id: NFWeaponSubMachineGunDrozdExpedition
+      amount: 2
+    - id: NFMagazineSubMachineGun35
+      amount: 4
+
+- type: entityTable
+  id: ASFilLGunSafeUIVMK58
+  table: !type:AllSelector
+    children:
+    - id: NFWeaponPistolMk58Expedition
+      amount: 4
+    - id: NFMagazinePistol35
+      amount: 8
+
+- type: entityTable
+  id: ASFillGunSafeUIVWT550
+  table: !type:AllSelector
+    children:
+    - id: NFWeaponSubMachineGunWt550Expedition
+      amount: 2
+    - id: NFMagazineSubMachineGunTopMounted35
+      amount: 6
+
+- type: entityTable
+  id: ASFillGunSafeUIVBRDIP15
+  table: !type:AllSelector
+    children:
+    - id: ASWeaponPistolBRDIP15Expedition
+      amount: 2
+    - id: MagazineBRDIP15
+      amount: 4

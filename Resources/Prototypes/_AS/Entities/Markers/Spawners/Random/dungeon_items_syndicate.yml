@@ -8,7 +8,7 @@
     layers:
       - state: green
         scale: 0.7, 0.7
-      - sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi
+      - sprite: _AS/Structures/Storage/Crates/syndicate_locked.rsi # Aurora's Song - Storage Resprites Batch 1
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark

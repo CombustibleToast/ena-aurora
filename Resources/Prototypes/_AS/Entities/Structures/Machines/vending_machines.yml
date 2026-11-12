@@ -46,6 +46,61 @@
   - type: ActivatableUIRequiresAccess
 
 - type: entity
+  parent: [BaseStructureDisableAnchoring, BaseStructureDisableScrewing, VendingMachine]
+  id: VendingMachineMarineSurplusVend
+  name: Marine Surplus Vending Machine
+  description: A good marine once said, "For the LARP." No, we don't know either.
+  components:
+  - type: VendingMachine
+    pack: MarineSurplusVendInventory
+    offState: off
+    brokenState: broken
+    normalState: base
+    ejectState: base     # TODO: eject frame, reusing base
+    denyState: base      # TODO: deny frame, reusing base
+    dispenseOnHitChance: 0
+    dispenseOnHitThreshold: 0
+    ejectDelay: 3
+  - type: Sprite
+    sprite: _RMC14/Structures/Machines/VendingMachines/ColMarTech/clothing.rsi
+    layers:
+    - map: ["enum.VendingMachineVisualLayers.Base"]
+      state: "off"
+    - map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      state: "base"
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -9
+    range: 3
+    enabled: false
+    sound:
+      path: /Audio/Ambience/Objects/vending_machine_hum.ogg
+  #  - type: Store
+  #    balance:
+  #      MercCoin: 0 # Waits for the player to put in money
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.45,-0.45,0.45,0.45"
+        density: 200
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+        - BulletImpassable # TODO Remove this after vendor tipping is added.
+
+- type: entity
   parent: [BaseStructureDisableAnchoring, StorePresetExchangeUplink, VendingMachine]
   id: VendingMachineExchangeVend
   name: ExchangeVend
@@ -241,3 +296,124 @@
     pack: ASPTechSLEInventory
   - type: AccessReader
     access: [["HeadOfSecurity"]]
+
+# NanoTrasen CommandVend
+- type: entity
+  parent: [BaseStructureDisableAnchoring, VendingMachine]
+  id: ASVendingMachineNanoVend
+  abstract: true # This one isn't really meant to be spawned in anyhow
+  name: NT Officer Vend
+  description: A vending machine for authorised NanoTrasen agents to acquire high tech equipment.
+  components:
+  - type: VendingMachine
+    pack: ASNanoTrasenOfficerVendA # cus I got rid of the intial pack after finding out I couldn't do a parented setup with them
+    offState: off
+    brokenState: broken
+    normalState: normal-unshaded
+  - type: DatasetVocalizer
+    dataset: NanoTrasenOfficerTechAds # New adverts
+  - type: Sprite
+    sprite: _AS/Structures/Machines/VendingMachines/nanovend.rsi
+    layers:
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.Base"]
+    - state: "off"
+      map: ["enum.VendingMachineVisualLayers.BaseUnshaded"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: AccessReader
+    access: [["ASNanoTrasenCommand"]]
+
+- type: entity
+  parent: ASVendingMachineNanoVend
+  id: ASVendingMachineNanoVendA
+  components:
+  - type: VendingMachine
+    pack: ASNanoTrasenOfficerVendA
+
+- type: entity
+  parent: ASVendingMachineNanoVend
+  id: ASVendingMachineNanoVendB
+  components:
+  - type: VendingMachine
+    pack: ASNanoTrasenOfficerVendB
+
+- type: entity
+  parent: ASVendingMachineNanoVend
+  id: ASVendingMachineNanoVendC
+  components:
+  - type: VendingMachine
+    pack: ASNanoTrasenOfficerVendC
+
+- type: entity
+  parent: ASVendingMachineNanoVend
+  id: ASVendingMachineNanoVendD
+  components:
+  - type: VendingMachine
+    pack: ASNanoTrasenOfficerVendD
+
+#region DEBUG
+
+- type: entity
+  parent: VendingMachineBountyVendPunk
+  id: ASDEBUGVendingMachineRangedWeapons
+  name: All Guns
+  suffix: DEBUG, Guns
+  categories: [ DoNotMap ]
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: VendingMachine
+    pack: ASDEBUGVendingMachineInventoryRangedWeapons
+
+- type: entity
+  parent: VendingMachineClothingPunk
+  id: ASDEBUGVendingMachineMagazines
+  name: All Gun Magazines
+  suffix: DEBUG, Magazines
+  categories: [ DoNotMap ]
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: VendingMachine
+    pack: ASDEBUGVendingMachineInventoryMagazines
+
+- type: entity
+  parent: VendingMachineClothingPunk
+  id: ASDEBUGVendingMachineAmmoBoxes
+  name: All Ammo Boxes
+  suffix: DEBUG, Ammo
+  categories: [ DoNotMap ]
+  components:
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.3,-0.16,0.3,0.16"
+        density: 190
+        mask:
+        - TabletopMachineMask
+        layer:
+        - TabletopMachineLayer
+  - type: VendingMachine
+    pack: ASDEBUGVendingMachineInventoryAmmoBoxes

@@ -11,11 +11,14 @@ consent-window-cards-x-card-text = I am uncomfortable
     with this scene.
 consent-window-cards-x-card-description = [italic]This card informs online admins that the current scene you are in is making you uncomfortable. Do not hesitate to use this button when you feel uncomfortable or trapped - server admins will ensure you are able to leave a situation safely with as little fuss as possible. You will NEVER be "in trouble" for raising a card in good faith, even if the situation resolves itself, seems "minor", or the card was raised in error.[/italic]
 
-consent-window-freetext-placeholder = Put your ERP info here, such as:
-    Sub/Dom/Switch
-    If you are okay with IC noncon
-    Which gender(s) you want your partners to be
-    Likes and dislikes
+# Aurora's Song - Change language around consent preferences to not be entirely ERP focused.
+consent-window-freetext-placeholder = Put your consent info and RP boundaries here, such as:
+   • Themes, situations, or types of roleplay you are or aren't comfortable with
+   • Things players should ask or give you a heads-up about beforehand
+   • Boundaries around violence, injury, captivity, or other intense scenarios
+   • Romantic, sexual, or otherwise ERP-related preferences and boundaries
+   • Preferences regarding partners, dynamics, or erotic scenarios
+   • Anything you enjoy, dislike, or things you would like to avoid
 
 consent-window-saved-changes = Your changes are saved.
 consent-window-unsaved-changes = You have unsaved changes!
@@ -24,7 +27,8 @@ consent-window-exceeded-char-limit = Exceeded character limit: {$length} / {$max
 
 # Verb
 consent-examine-verb = Consent Info
-consent-examine-not-set = This player has no consent preferences set. Ask for consent first before engaging in any erotic roleplay.
+# Aurora's Song - Change language around consent preferences to not be entirely ERP focused.
+consent-examine-not-set = This player has no consent preferences set. Ask for consent first before engaging in any consent-sensitive roleplay.
 
 # Consent toggles
 consent-example1 = Example Consent Toggle

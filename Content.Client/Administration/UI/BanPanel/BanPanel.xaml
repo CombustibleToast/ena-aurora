@@ -44,6 +44,11 @@
             <ScrollContainer>
                 <BoxContainer Name="RolesContainer"  Orientation="Vertical" />
             </ScrollContainer>
+            <!-- Aurora's Song - Radio list (auto-generated) -->
+            <ScrollContainer>
+                <BoxContainer Name="RadioChannelsContainer" Orientation="Vertical" />
+            </ScrollContainer>
+            <!-- End Aurora's Song -->
         </TabContainer>
         <Button Name="SubmitButton" Text="{Loc ban-panel-submit}" HorizontalExpand="True" />
     </BoxContainer>

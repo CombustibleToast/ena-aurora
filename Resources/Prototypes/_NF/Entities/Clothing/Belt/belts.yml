@@ -74,7 +74,7 @@
     sprite: _NF/Clothing/Belt/pilot.rsi
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, NFClothingBeltStorageBase ] # Aurora's Song - ClothingBeltAssasult>NFClothingBeltStorageBase
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, NFClothingBeltStorageBase ] # Aurora's Song - ClothingBeltAssasult>NFClothingBeltStorageBase, Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBeltNfsd
   name: NFSD belt
   description: A tactical assault belt.
@@ -85,7 +85,7 @@
     sprite: _NF/Clothing/Belt/nfsd_belt.rsi
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingBeltSecurityWebbing ]
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingBeltSecurityWebbing ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBeltNfsdWebbing
   name: NFSD webbing
   description: A tactical assault webbing.

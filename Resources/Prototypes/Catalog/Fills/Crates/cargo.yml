@@ -113,7 +113,7 @@
       weight: 0.1
     - id: NFWeaponPistolCHIMP # Frontier: FWeaponPistolCHIMP<NFWeaponPistolCHIMP
       weight: 0.1
-    - id: NFWeaponRifleBarlowsBolt # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+    - id: ASWeaponRifleMosinBolt # Aurora's Song | NFWeaponRifleBarlowsBolt<ASWeaponRifleMosinBolt
     - id: NFWeaponEnergyPistolLaserMakeshift # Frontier: WeaponMakeshiftLaser<NFWeaponEnergyPistolLaserMakeshift
       weight: 0.1
     - id: Sledgehammer

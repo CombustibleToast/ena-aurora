@@ -12,6 +12,7 @@ job-description-commissioner = Manage your department and keep them efficient, q
 job-description-colonial-representative = Represent the interests of the colony and sector, manage civilian affairs, and liaise with command staff to ensure sector stability.
 job-description-site-manager = Oversee manufacturing operations: Power generation, material production, and research & development. Handle manufacturing bounties.
 job-description-site-worker = Maintain production, repair damaged systems, and support operations under the Site Manager's direction.
+job-description-off-duty-officer = An off-duty Officer of the SLE, but on-call for emergency situations.
 
 # ColonialCommand
 job-description-colcomoff = Represent the Auroran Government's interests in the sector.
@@ -21,3 +22,7 @@ job-description-cafjanitor = Keep the sector clean at all costs.
 job-description-cafleader = Command CAF Tactical Teams in high-risk operations.
 job-description-cafmedic = Provide aid in the most dangerous of circumstances.
 job-description-caftrooper = Put down any threats your Commander points you at.
+
+# Corporate
+job-description-syndicate-representative = Represent the Syndicate's interests in the sector.
+job-description-nanotrasen-representative = Represent NanoTrasen's interests in the sector.

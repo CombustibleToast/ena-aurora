@@ -30,8 +30,9 @@ implanter-contained-implant-text = [color=green]{$desc}[/color]
 
 scramble-implant-activated-popup = Your appearance shifts and changes!
 
-## Implant Messages 
+## Implant Messages
 
-# Aurora's Song: Added death time
+# Aurora's Song: Added death time, and revived message
 deathrattle-implant-dead-message = {$user}{$specie} has died at {$grid}{$position}. User has been dead for {$deathtime}.
 deathrattle-implant-critical-message = {$user}{$specie} life signs critical, immediate assistance required at {$grid}{$position}.
+deathrattle-implant-revived-message = {$user}{$specie} has been revived, assistance no longer required.

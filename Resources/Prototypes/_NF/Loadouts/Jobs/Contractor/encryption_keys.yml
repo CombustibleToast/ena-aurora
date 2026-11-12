@@ -7,6 +7,12 @@
   encryptionKeys:
   - EncryptionKeyTraffic
 
+- type: loadout # Aurora's Song - Bluespace alert channel.
+  id: ContractorEncryptionKeyBluespace
+  price: 20
+  encryptionKeys:
+  - EncryptionKeyBluespace
+
 - type: loadout # Aurora's Song - Shipboard encryption key added
   id: ContractorEncryptionKeyShipboard
   hideEffects:

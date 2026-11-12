@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ ClothingHeadBase, ContrabandClothing ]
+  parent: [ ClothingHeadBase, BaseC1Contraband ] # Aurora's Song - Added BaseC1Contraband
   id: ClothingHeadHatHoodTacticalWizardBlue
   categories: [ HideSpawnMenu ]
   name: blue wizard tactical hood

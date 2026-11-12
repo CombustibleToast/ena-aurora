@@ -1,3 +1,4 @@
+using Content.Server.Popups; // Aurora's Song
 using Content.Shared.Chat;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
@@ -8,10 +9,11 @@ using Robust.Shared.Player;
 
 namespace Content.Server.Radio.EntitySystems;
 
-public sealed class HeadsetSystem : SharedHeadsetSystem
+public sealed partial class HeadsetSystem : SharedHeadsetSystem
 {
-    [Dependency] private readonly INetManager _netMan = default!;
-    [Dependency] private readonly RadioSystem _radio = default!;
+    [Dependency] private INetManager _netMan = default!;
+    [Dependency] private RadioSystem _radio = default!;
+    [Dependency] private PopupSystem _popup = default!; // Aurora's Song
 
     public override void Initialize()
     {
@@ -48,6 +50,14 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
             && TryComp(component.Headset, out EncryptionKeyHolderComponent? keys)
             && keys.Channels.Contains(args.Channel.ID))
         {
+            //RMC14
+            if (keys.ReadOnlyChannels.Contains(args.Channel.ID) ||
+                keys.DisabledChannels.Contains(args.Channel.ID)) // Aurora's Song - Check for disabled channel too
+            {
+                _popup.PopupEntity("You hear a crackle as if nothing goes through", uid, uid); // Aurora's Song - Use popup entity here
+                args.Channel = null;
+                return;
+            }
             _radio.SendRadioMessage(uid, args.Message, args.Channel, component.Headset);
             args.Channel = null; // prevent duplicate messages from other listeners.
         }
@@ -58,7 +68,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         base.OnGotEquipped(uid, component, args);
         if (component.IsEquipped && component.Enabled)
         {
-            EnsureComp<WearingHeadsetComponent>(args.Equipee).Headset = uid;
+            EnsureComp<WearingHeadsetComponent>(args.EquipTarget).Headset = uid;
             UpdateRadioChannels(uid, component);
         }
     }
@@ -67,7 +77,7 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
     {
         base.OnGotUnequipped(uid, component, args);
         RemComp<ActiveRadioComponent>(uid);
-        RemComp<WearingHeadsetComponent>(args.Equipee);
+        RemComp<WearingHeadsetComponent>(args.EquipTarget);
     }
 
     public void SetEnabled(EntityUid uid, bool value, HeadsetComponent? component = null)
@@ -102,6 +112,12 @@ public sealed class HeadsetSystem : SharedHeadsetSystem
         // to have an ActiveRadioComponent
 
         var parent = Transform(uid).ParentUid;
+
+        // Aurora's Song Start - Channel toggling
+        if (TryComp(uid, out EncryptionKeyHolderComponent? keys) &&
+            keys.DisabledChannels.Contains(args.Channel))
+            return;
+        // Aurora's Song End
 
         if (parent.IsValid())
         {

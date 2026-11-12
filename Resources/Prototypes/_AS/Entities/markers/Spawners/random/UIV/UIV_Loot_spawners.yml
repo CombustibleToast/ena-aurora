@@ -88,3 +88,345 @@
     table: !type:NestedSelector
       tableId: DungeonLootMercenaryUIVGunsRare
       prob: 1
+
+# region - NT UIV spawners
+- type: entityTable
+  id: SpawnDungeonLootNanoTrasenUIVSuitTable
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 99.9
+      children:
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitCommon
+        weight: 50
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitUncommon
+        weight: 40
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitRare
+        weight: 10
+    # 0.1% chance of the mythical damaged DS hardsuit, which is functionally a Jugsuit with slightly better movement speed
+    - !type:GroupSelector
+      weight: 0.1
+      children:
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitMythical
+
+- type: entityTable
+  id: SpawnDungeonLootNanoTrasenUIVSuitTableT2
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 99.9
+      children:
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitCommon
+        weight: 50
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitUncommon
+        weight: 40
+    # 0.1% chance of the mythical damaged DS hardsuit, which is functionally a Jugsuit with slightly better movement speed
+    - !type:GroupSelector
+      weight: 0.1
+      children:
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitMythical
+
+- type: entityTable
+  id: SpawnDungeonLootNanoTrasenUIVSuitTableT3
+  table: !type:GroupSelector
+    children:
+    - !type:GroupSelector
+      weight: 99.9
+      children:
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitUncommon
+        weight: 10
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitRare
+        weight: 50
+    # 0.1% chance of the mythical damaged DS hardsuit, which is functionally a Jugsuit with slightly better movement speed
+    - !type:GroupSelector
+      weight: 0.1
+      children:
+      - !type:NestedSelector
+        tableId: DungeonLootNanoTrasenUIVSuitMythical
+
+- type: entityTable
+  id: SpawnDungeonLootNanoTrasenUIVLootLooseAll
+  table: !type:GroupSelector
+    children:
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLootLooseCommon
+      weight: 30
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLootLooseUncommon
+      weight: 20
+    - !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLootLooseRare
+      weight: 10
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootNanoTrasenUIVSpawner
+  name: NT UIV Loot Spawner
+  suffix: UIV, ALL SUITS
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Structures/Storage/suit_storage.rsi
+      state: base
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: SpawnDungeonLootNanoTrasenUIVSuitTable
+      prob: 0.8
+
+- type: entity
+  parent: DungeonLootNanoTrasenUIVSpawner
+  id: DungeonLootNanoTrasenUIVSpawnerT2
+  suffix: UIV, T2 SUITS
+  components:
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: SpawnDungeonLootNanoTrasenUIVSuitTableT2
+      prob: 0.8
+
+- type: entity
+  parent: DungeonLootNanoTrasenUIVSpawner
+  id: DungeonLootNanoTrasenUIVSpawnerT3
+  suffix: UIV, T3 SUITS
+  components:
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: SpawnDungeonLootNanoTrasenUIVSuitTableT3
+      prob: 0.75
+
+- type: entity
+  parent: DungeonLootNanoTrasenUIVSpawner
+  id: DungeonLootNanoTrasenUIVGunsSpawner
+  suffix: UIV, Gun Safes
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Structures/Storage/closet.rsi
+      state: shotguncase
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVGunSafes
+      prob: 0.65
+
+- type: entity
+  parent: DungeonLootNanoTrasenUIVSpawner
+  id: DungeonLootNanoTrasenUIVLootCommon
+  suffix: UIV, Loot Common
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLootLooseCommon
+      prob: 0.85
+
+- type: entity
+  parent: DungeonLootNanoTrasenUIVSpawner
+  id: DungeonLootNanoTrasenUIVLootUncommon
+  suffix: UIV, Loot Uncommon
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLootLooseUncommon
+      prob: 0.75
+
+- type: entity
+  parent: DungeonLootNanoTrasenUIVSpawner
+  id: DungeonLootNanoTrasenUIVLootRare
+  suffix: UIV, Loot Rare
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVLootLooseRare
+      prob: 0.7
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootNanoTrasenUIVRareGunSpawner
+  name: NT UIV Rare Gun Spawner
+  suffix: UIV, RARE GUNS
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVRareGuns
+      prob: 0.5
+
+- type: entity
+  parent: MarkerBase
+  id: NanoTrasenVendUIVSpawner
+  name: NT UIV Loot Spawner
+  suffix: UIV, VEND
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Structures/Machines/VendingMachines/secdrobe.rsi
+      state: off
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonNanoTrasenUIVSecDrobe
+      prob: 1
+
+- type: entity
+  parent: MarkerBase
+  id: NanoTrasenBridgeVendUIVSpawner
+  name: NT UIV Loot Spawner
+  suffix: UIV, VEND
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: _AS/Structures/Machines/VendingMachines/nanovend.rsi
+      state: off
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonNanoTrasenUIVOfficerVend
+      prob: 1
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootNanoTrasenUIVSpawnerCaptain
+  name: NT UIV Loot Spawner
+  suffix: UIV, CAPTAIN
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Clothing/OuterClothing/Armor/captain_repeller.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVCaptain
+      prob: 1
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootNanoTrasenUIVSpawnerClutterClothes
+  name: NT UIV Loot Spawner
+  suffix: CLUTTER, CLOTHES
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Clothing/OuterClothing/Coats/warden.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVArmoryClutterClothing
+      prob: 0.7
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootNanoTrasenUIVSpawnerClutterWeapons
+  name: NT UIV Loot Spawner
+  suffix: CLUTTER, WEAPONS
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVArmoryClutterWeapons
+      prob: 0.7
+
+- type: entity
+  parent: MarkerBase
+  id: DungeonLootNanoTrasenUIVSpawnerClutterGeneral
+  name: NT UIV Loot Spawner
+  suffix: CLUTTER, ALL
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Effects/crayondecals.rsi
+      state: North
+      color: red
+    - sprite: Clothing/OuterClothing/Coats/warden.rsi
+      state: icon
+  - type: EntityTableSpawner
+    offset: 0.0
+    table: !type:NestedSelector
+      tableId: DungeonLootNanoTrasenUIVArmoryClutterAll
+      prob: 0.75

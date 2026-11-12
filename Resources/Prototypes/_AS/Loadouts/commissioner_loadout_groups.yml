@@ -30,6 +30,7 @@
 - type: loadoutGroup
   id: CommissionerNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   loadouts:
   - CommissionerClothingNeckSLEBadgeCommissioner
   - CommissionerClothingNeckMantleCommissioner
@@ -45,6 +46,22 @@
   - CommissionerCommissionerPDA
   fallbacks:
   - CommissionerCommissionerPDA
+
+- type: loadoutGroup
+  id: CommissionerBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - PlushieLizardJobHeadofsecurity
+  - PlushieLizardJobCaptain
+  - PlushieLizardJobHeadofpersonnel
+  - PlushieLizardJobResearchdirector
+  - PlushieLizardJobChiefengineer
+  - PlushieLizardJobChiefmedicalofficer
+  subgroups:
+  - SergeantBackpackItems
+  - ContractorBackpackItems
 
 - type: loadoutGroup
   id: CommissionerFace

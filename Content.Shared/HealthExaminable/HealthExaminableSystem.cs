@@ -1,4 +1,5 @@
 using Content.Shared.Damage.Components;
+using Content.Shared.Damage.Systems;
 using Content.Shared.Examine;
 using Content.Shared.FixedPoint;
 using Content.Shared.IdentityManagement;
@@ -7,15 +8,17 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.HealthExaminable;
 
-public sealed class HealthExaminableSystem : EntitySystem
+public sealed partial class HealthExaminableSystem : EntitySystem
 {
-    [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
+    [Dependency] private ExamineSystemShared _examineSystem = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
 
     public override void Initialize()
     {
         base.Initialize();
 
-        SubscribeLocalEvent<HealthExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
+        // _Starfall: Removed separate health examine verb, health info now shows in the default examine menu (see StarfallHealthExamineSystem).
+        // SubscribeLocalEvent<HealthExaminableComponent, GetVerbsEvent<ExamineVerb>>(OnGetExamineVerbs);
     }
 
     private void OnGetExamineVerbs(EntityUid uid, HealthExaminableComponent component, GetVerbsEvent<ExamineVerb> args)
@@ -47,9 +50,10 @@ public sealed class HealthExaminableSystem : EntitySystem
         var msg = new FormattedMessage();
 
         var first = true;
+        var damageSpecifier = _damageable.GetAllDamage((uid, damage));
         foreach (var type in component.ExaminableTypes)
         {
-            if (!damage.Damage.DamageDict.TryGetValue(type, out var dmg))
+            if (!damageSpecifier.DamageDict.TryGetValue(type, out var dmg))
                 continue;
 
             if (dmg == FixedPoint2.Zero)
@@ -88,10 +92,11 @@ public sealed class HealthExaminableSystem : EntitySystem
             msg.AddMarkupOrThrow(chosenLocStr);
         }
 
-        if (msg.IsEmpty)
-        {
-            msg.AddMarkupOrThrow(Loc.GetString($"health-examinable-{component.LocPrefix}-none"));
-        }
+        // _Starfall: "no obvious wounds" message is redundant given we're showing this in the normal examine menu now
+        // if (msg.IsEmpty)
+        // {
+        //     msg.AddMarkupOrThrow(Loc.GetString($"health-examinable-{component.LocPrefix}-none"));
+        // }
 
         // Anything else want to add on to this?
         RaiseLocalEvent(uid, new HealthBeingExaminedEvent(msg), true);

@@ -1,0 +1,438 @@
+- type: marking
+  id: LumariAthamasLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: athamas_l_arm
+
+- type: marking
+  id: LumariAthamasRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: athamas_r_arm
+
+- type: marking
+  id: LumariCharredLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: charred_l_arm
+
+- type: marking
+  id: LumariCharredRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: charred_r_arm
+
+- type: marking
+  id: LumariChimeraLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: chimera_l_arm
+
+- type: marking
+  id: LumariDeathheadLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: deathhead_l_arm
+
+- type: marking
+  id: LumariDeathheadRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: deathhead_r_arm
+
+- type: marking
+  id: LumariFanLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: fan_l_arm
+
+- type: marking
+  id: LumariFanRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: fan_r_arm
+
+- type: marking
+  id: LumariFirewatchLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: firewatch_l_arm
+
+- type: marking
+  id: LumariFirewatchRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: firewatch_r_arm
+
+- type: marking
+  id: LumariGothicLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: gothic_l_arm
+
+- type: marking
+  id: LumariGothicRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: gothic_r_arm
+
+- type: marking
+  id: LumariHandLChimeraMoth
+  bodyPart: LHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: hand_l_chimera_moth
+
+- type: marking
+  id: LumariHandLProstheticMoth
+  bodyPart: LHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: hand_l_prosthetic_moth
+
+- type: marking
+  id: LumariHandLTwistingMoth
+  bodyPart: LHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: hand_l_twisting_moth
+
+- type: marking
+  id: LumariHandRProstheticMoth
+  bodyPart: RHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: hand_r_prosthetic_moth
+
+- type: marking
+  id: LumariHandRTwistingMoth
+  bodyPart: RHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: hand_r_twisting_moth
+
+- type: marking
+  id: LumariJungleLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: jungle_l_arm
+
+- type: marking
+  id: LumariJungleRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: jungle_r_arm
+
+- type: marking
+  id: LumariMoonflyLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: moonfly_l_arm
+
+- type: marking
+  id: LumariMoonflyRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: moonfly_r_arm
+
+- type: marking
+  id: LumariOakwormLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: oakworm_l_arm
+
+- type: marking
+  id: LumariOakwormRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: oakworm_r_arm
+
+- type: marking
+  id: LumariPointyLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: pointy_l_arm
+
+- type: marking
+  id: LumariPointyRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: pointy_r_arm
+
+- type: marking
+  id: LumariProstheticLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: prosthetic_l_arm
+
+- type: marking
+  id: LumariProstheticRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: prosthetic_r_arm
+
+- type: marking
+  id: LumariRaggedLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: ragged_l_arm
+
+- type: marking
+  id: LumariRaggedRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: ragged_r_arm
+
+- type: marking
+  id: LumariRoyalLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: royal_l_arm
+
+- type: marking
+  id: LumariRoyalRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: royal_r_arm
+
+- type: marking
+  id: LumariTwistingLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: twisting_l_arm
+
+- type: marking
+  id: LumariTwistingRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: twisting_r_arm
+
+- type: marking
+  id: LumariWhiteflyLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: whitefly_l_arm
+
+- type: marking
+  id: LumariWhiteflyRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: whitefly_r_arm
+
+- type: marking
+  id: LumariWitchwingLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: witchwing_l_arm
+
+- type: marking
+  id: LumariWitchwingRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/arms.rsi
+    state: witchwing_r_arm
+
+- type: marking
+  id: LumariChitinidPlatedLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: plated_l_arm
+
+- type: marking
+  id: LumariChitinidPlatedRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: plated_r_arm
+
+- type: marking
+  id: LumariChitinidRadiantLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: radiant_l_arm
+
+- type: marking
+  id: LumariChitinidRadiantRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: radiant_r_arm
+
+- type: marking
+  id: LumariChitinidSpottedLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: spotted_l_arm
+
+- type: marking
+  id: LumariChitinidSpottedRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: spotted_r_arm
+
+- type: marking
+  id: LumariChitinidStripesLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: stripes_l_arm
+
+- type: marking
+  id: LumariChitinidStripesRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: stripes_r_arm
+
+- type: marking
+  id: LumariChitinidToxicLArm
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: toxic_l_arm
+
+- type: marking
+  id: LumariChitinidToxicRArm
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: toxic_r_arm
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeArmLeft
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: arm_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeArmRight
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: arm_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeForearmLeft
+  bodyPart: LArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: forearm_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeForearmRight
+  bodyPart: RArm
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: forearm_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHandLeft
+  bodyPart: LHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: hand_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeHandRight
+  bodyPart: RHand
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: hand_r_gauze
+

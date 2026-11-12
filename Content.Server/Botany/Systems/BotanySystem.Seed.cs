@@ -22,16 +22,16 @@ namespace Content.Server.Botany.Systems;
 
 public sealed partial class BotanySystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IRobustRandom _robustRandom = default!;
-    [Dependency] private readonly AppearanceSystem _appearance = default!;
-    [Dependency] private readonly PopupSystem _popupSystem = default!;
-    [Dependency] private readonly SharedHandsSystem _hands = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
-    [Dependency] private readonly RandomHelperSystem _randomHelper = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly ContrabandTurnInSystem _contraband = default!; // Frontier
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IRobustRandom _robustRandom = default!;
+    [Dependency] private AppearanceSystem _appearance = default!;
+    [Dependency] private PopupSystem _popupSystem = default!;
+    [Dependency] private SharedHandsSystem _hands = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private MetaDataSystem _metaData = default!;
+    [Dependency] private RandomHelperSystem _randomHelper = default!;
+    [Dependency] private ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] private ContrabandTurnInSystem _contraband = default!; // Frontier
 
     public override void Initialize()
     {
@@ -119,19 +119,19 @@ public sealed partial class BotanySystem : EntitySystem
         return seed;
     }
 
-    public IEnumerable<EntityUid> AutoHarvest(SeedData proto, EntityCoordinates position, int yieldMod = 1)
-    {
-        if (position.IsValid(EntityManager) &&
-            proto.ProductPrototypes.Count > 0)
-        {
-            if (proto.HarvestLogImpact != null)
-                _adminLogger.Add(LogType.Botany, proto.HarvestLogImpact.Value, $"Auto-harvested {Loc.GetString(proto.Name):seed} at Pos:{position}.");
+    // public IEnumerable<EntityUid> AutoHarvest(SeedData proto, EntityCoordinates position, int yieldMod = 1) Aurora's Song: Self Harvest Removal
+    // {
+    //     if (position.IsValid(EntityManager) &&
+    //         proto.ProductPrototypes.Count > 0)
+    //     {
+    //         if (proto.HarvestLogImpact != null)
+    //             _adminLogger.Add(LogType.Botany, proto.HarvestLogImpact.Value, $"Auto-harvested {Loc.GetString(proto.Name):seed} at Pos:{position}.");
 
-            return GenerateProduct(proto, position, yieldMod);
-        }
+    //         return GenerateProduct(proto, position, yieldMod);
+    //     }
 
-        return Enumerable.Empty<EntityUid>();
-    }
+    //     return Enumerable.Empty<EntityUid>();
+    // }
 
     public IEnumerable<EntityUid> Harvest(SeedData proto, EntityUid user, int yieldMod = 1)
     {

@@ -1,0 +1,18 @@
+
+- type: Tag
+  id: NitrousOxideTank
+
+- type: Tag
+  id: PlasmaTank
+
+- type: Tag
+  id: AirTank
+
+- type: Tag
+  id: ExtendedEmergencyNitrogenTank
+
+- type: Tag
+  id: ClownEmergencyOxygenTank
+
+- type: Tag
+  id: CardboardboxLarge

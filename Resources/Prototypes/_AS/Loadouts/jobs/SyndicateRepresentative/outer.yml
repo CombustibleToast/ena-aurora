@@ -1,0 +1,31 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeForcedClothingOuterEVASuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  equipment:
+    outerClothing: ClothingOuterEVASuitSyndicate
+
+- type: loadout
+  id: SyndicateRepresentativeClothingOuterCoat
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterCoatSyndieCap
+
+- type: loadout
+  id: SyndicateRepresentativeClothingOuterWinterCoatCap
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterWinterSyndieCap
+
+- type: loadout
+  id: SyndicateRepresentativeClothingOuterWinterCoat
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterWinterSyndie

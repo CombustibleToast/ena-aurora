@@ -13,8 +13,8 @@ namespace Content.Server._NF.Bank;
 
 public sealed partial class BankSystem : SharedBankSystem
 {
-    [Dependency] private readonly IServerPreferencesManager _prefsManager = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    [Dependency] private IServerPreferencesManager _prefsManager = default!;
+    [Dependency] private ISharedPlayerManager _playerManager = default!;
 
     private ISawmill _log = default!;
 
@@ -145,6 +145,7 @@ public sealed partial class BankSystem : SharedBankSystem
         return false;
     }
 
+    // Aurora's Song - Expand balance to long
     /// <summary>
     /// Attempts to remove money from a character's bank account without a backing entity.
     /// This should only be used in cases where a character doesn't have a backing entity.
@@ -155,7 +156,7 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <param name="amount">The number of spesos to be withdrawn.</param>
     /// <param name="newBalance">The new value of the bank account.</param>
     /// <returns>true if the transaction was successful, false if it was not.  When successful, newBalance contains the character's new balance.</returns>
-    public bool TryBankWithdraw(ICommonSession session, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount, [NotNullWhen(true)] out int? newBalance)
+    public bool TryBankWithdraw(ICommonSession session, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount, [NotNullWhen(true)] out long? newBalance)
     {
         newBalance = null; // Default return
         if (amount <= 0)
@@ -164,7 +165,7 @@ public sealed partial class BankSystem : SharedBankSystem
             return false;
         }
 
-        int balance = profile.BankBalance;
+        var balance = profile.BankBalance; // Aurora's Song - Expand balance to long
 
         if (balance < amount)
         {
@@ -188,6 +189,7 @@ public sealed partial class BankSystem : SharedBankSystem
         return true;
     }
 
+    // Aurora's Song - Expand balance to long
     /// <summary>
     /// Attempts to add money to a character's bank account.
     /// This should only be used in cases where a character doesn't have a backing entity.
@@ -198,7 +200,7 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <param name="amount">The number of spesos to be deposited.</param>
     /// <param name="newBalance">The new value of the bank account.</param>
     /// <returns>true if the transaction was successful, false if it was not.  When successful, newBalance contains the character's new balance.</returns>
-    public bool TryBankDeposit(ICommonSession session, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount, [NotNullWhen(true)] out int? newBalance)
+    public bool TryBankDeposit(ICommonSession session, PlayerPreferences prefs, HumanoidCharacterProfile profile, int amount, [NotNullWhen(true)] out long? newBalance)
     {
         newBalance = null; // Default return
         if (amount <= 0)
@@ -228,7 +230,7 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <param name="ent">The UID that the bank account is connected to, typically the player controlled mob</param>
     /// <param name="balance">When successful, contains the account balance in spesos. Otherwise, set to 0.</param>
     /// <returns>true if the account was successfully queried.</returns>
-    public bool TryGetBalance(EntityUid ent, out int balance)
+    public bool TryGetBalance(EntityUid ent, out long balance) // Aurora's Song - Expand balance to long
     {
         if (!_playerManager.TryGetSessionByEntity(ent, out var session) ||
             !_prefsManager.TryGetCachedPreferences(session.UserId, out var prefs))
@@ -255,7 +257,7 @@ public sealed partial class BankSystem : SharedBankSystem
     /// <param name="session">The session of the player character to query.</param>
     /// <param name="balance">When successful, contains the account balance in spesos. Otherwise, set to 0.</param>
     /// <returns>true if the account was successfully queried.</returns>
-    public bool TryGetBalance(ICommonSession session, out int balance)
+    public bool TryGetBalance(ICommonSession session, out long balance) // Aurora's Song - Expand balance to long
     {
         if (!_prefsManager.TryGetCachedPreferences(session.UserId, out var prefs))
         {

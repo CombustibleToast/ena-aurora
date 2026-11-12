@@ -1,11 +1,10 @@
 - type: entity
   id: ClothingOuterCoatCultJanitor
   name: cult janitor robes
-  parent:
-  - BaseC3CultContraband
+  parent: # Aurora's Song - BaseC3CultContraband<BaseC2ExpeditionContraband, removed ContrabandClothing
+  - BaseC2ExpeditionContraband
   - ClothingOuterStorageBase
   - ClothingOuterArmorBulletproof
-  - ContrabandClothing
   description: An unholy custodian's garb. Surprisingly comfortable.
   components:
   - type: Sprite
@@ -16,11 +15,10 @@
 - type: entity
   id: ClothingOuterCoatBloodCultRobes
   name: cult robes
-  parent:
-  - BaseC3CultContraband
+  parent: # Aurora's Song - BaseC3CultContraband<BaseC2ExpeditionContraband, removed ContrabandClothing
+  - BaseC2ExpeditionContraband
   - ClothingOuterStorageToggleableBase
   - ClothingOuterArmorBasic
-  - ContrabandClothing
   description: There's no cult without classic red/crimson cult robes with bulletproof vests.
   suffix: Frontier
   components:

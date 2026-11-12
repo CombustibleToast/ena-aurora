@@ -301,7 +301,8 @@
 # Enhanced version of the vanilla Janicart that adds a bucket and mop slot.
 - type: entity
   id: NFVehicleJanicart
-  parent: VehicleJanicart
+  parent: [SolutionTank, SolutionGinormous, VehicleJanicart] # Aurora's Song - Convert to solution
+  name: janicart # Aurora's Song - name fixing due to weird parent
   components:
   - type: ItemSlots
     slots:
@@ -374,26 +375,22 @@
     sprite: Objects/Vehicles/janicart.rsi
   - type: Appearance
   - type: Spillable
-    solution: bucket
+    solution: tank # Aurora's Song - Convert to solution
     spillDelay: 3.0
     spillWhenThrown: false
-  - type: SolutionContainerManager
-    solutions:
-      bucket:
-        maxVol: 800
   - type: DrainableSolution
-    solution: bucket
+    solution: tank # Aurora's Song - Convert to solution
   - type: RefillableSolution
-    solution: bucket
+    solution: tank # Aurora's Song - Convert to solution
   - type: ExaminableSolution
-    solution: bucket
+    solution: tank # Aurora's Song - Convert to solution
   - type: Tag
     tags:
       - Wringer
       - DoorBumpOpener
   - type: Edible  # Aurora's Song - Convert to edible from Drink
     edible: Drink
-    solution: bucket
+    solution: tank # Aurora's Song - Convert to solution
     destroyOnEmpty: false # Aurora's Song: DO NOT EAT IT
   - type: ContainerContainer
     containers:
@@ -737,9 +734,8 @@
 
 # Syndicate
 - type: entity
-  parent:
+  parent: # Aurora's Song - Removed BaseC3SyndicateContraband
   - VehicleHoverbikeMailcarrier
-  - BaseC3SyndicateContraband
   id: VehicleHoverbikeSyndicate
   name: syndicate hoverbike
   description: This thing screams style. And war crimes.
@@ -832,7 +828,6 @@
   name: dumpster
   description: It only has one wheel!
   components:
-  - type: Timer
   - type: TimedSpawner
     prototypes:
     - SpawnGoblinMadeToolMalfunction
@@ -857,9 +852,9 @@
     layers:
     - state: dumpster
       map: ["enum.VehicleVisualLayers.AutoAnimate"]
-    - sprite: _NF/Structures/Storage/magnetbox.rsi
+    - sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
       state: controller
-    - sprite: _NF/Structures/Storage/magnetbox.rsi
+    - sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
       state: controller-on
       visible: False
       map: [ "enum.ToggleableVisuals.Layer" ]

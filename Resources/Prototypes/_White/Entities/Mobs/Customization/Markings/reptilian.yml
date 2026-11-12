@@ -8,6 +8,7 @@
 # TAIL
 - type: marking
   id: SnakeLargeTail
+  parent: EmoteHardThump # Aurora's Song - tail thump.
   bodyPart: Tail
   groupWhitelist: [Reptilian, IPC]      # Aurora's Song -- Removed Slime
   sprites:
@@ -18,6 +19,7 @@
 
 - type: marking
   id: SnakeLargeTailAnimated
+  parent: EmoteHardThump # Aurora's Song - tail thump.
   bodyPart: Tail
   groupWhitelist: []
   sprites:

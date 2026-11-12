@@ -239,7 +239,7 @@ WeaponRifleSVT: NFWeaponRifleSVS
 hydroponicsTrayAnchored: hydroponicsTray
 
 # 2025-03-18 Upstream merge
-NecrosolChemistryBottle: ChemistryBottleNecrosol
+NecrosolChemistryBottle: null # Aurora's Song - Replace with null because it is replaced with arcryox (no bottle atm)
 
 # 2025-03-22 Old proto cleanup
 SignSec: SignSecurity
@@ -366,7 +366,7 @@ GrenadeBlast: NFGrenadeBlast
 GrenadeEMP: NFGrenadeEMP
 GrenadeFlash: NFGrenadeFlash
 GrenadeFrag: NFGrenadeFrag
-Kardashev-MosinNonlethal: NFWeaponRifleBarlowsBoltLessLethal
+Kardashev-MosinNonlethal: ASWeaponRifleMosinBolt # Aurora's Song | just have the lethal version, I'm lazy
 MagazineBoxAntiMateriel: NFAmmunitionBoxRifle60
 MagazineBoxCaselessRifle: null
 MagazineBoxCaselessRiflePractice: null
@@ -556,7 +556,7 @@ WeaponRifleLecterRubber: NFWeaponRifleAssaultLecterLessLethal # ??
 WeaponRifleM90GrenadeLauncher: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher < NFWeaponRifleAssaultM90
 WeaponRifleNovaliteC1: NFWeaponRifleAssaultNovaliteC1
 WeaponRifleSVS: NFWeaponRifleSVS
-WeaponRifleVulcan: NFWeaponRifleAssaultVulcan
+#WeaponRifleVulcan: NFWeaponRifleAssaultVulcan # Aurora's Song - Reattributed during firearm rework
 WeaponShotgunBlunderbuss: NFWeaponShotgunBlunderbuss
 WeaponShotgunBulldog: NFWeaponShotgunBulldog
 WeaponShotgunDoubleBarreled: NFWeaponShotgunDoubleBarreled
@@ -571,9 +571,9 @@ WeaponShotgunKammererNonlethal: NFWeaponShotgunKammererLessLethal
 WeaponShotgunSawn: NFWeaponShotgunSawn
 WeaponShotgunSawnEmpty: NFWeaponShotgunSawnEmpty
 WeaponShotgunSawnNonlethal: NFWeaponShotgunSawnLessLethal
-WeaponSniperCeremonial: NFWeaponRifleCeremonial
+WeaponSniperCeremonial: ASWeaponRifleGarandCeremonial # Aurora's Song | Ceremonial rifle reworked
 WeaponSniperHristov: NFWeaponRifleSniperHristov
-WeaponSniperMosin: NFWeaponRifleBarlowsBolt
+WeaponSniperMosin: ASWeaponRifleMosinBolt # Aurora's Song | Mosin refactored to be the mosin again, and use a magaazine
 WeaponSniperRepeater: NFWeaponRifleRepeater
 WeaponSubMachineGunAtreides: NFWeaponSubMachineGunAtreides
 WeaponSubMachineGunC20r: NFWeaponSubMachineGunC20r

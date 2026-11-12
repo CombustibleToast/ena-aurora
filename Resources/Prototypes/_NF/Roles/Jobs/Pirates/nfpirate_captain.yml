@@ -13,7 +13,6 @@
   startingGear: NFPirateCaptainGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
-  canBeAntag: true
   icon: "JobIconNFPirateCaptain"
   supervisors: job-supervisors-freebooters-union
   weight: 40
@@ -38,6 +37,7 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
+  parent: ContractorGear # Aurora's Song
   id: NFPirateCaptainGear
   equipment:
     belt: ClothingBeltUtility

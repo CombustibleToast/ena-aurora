@@ -20,7 +20,7 @@ public sealed record PlayerInfo(
     bool Connected,
     bool ActiveThisRound,
     TimeSpan? OverallPlaytime,
-    int Balance) // Frontier
+    long Balance) // Frontier // Aurora's Song - Expand balance to long
 {
     private string? _playtimeString;
 

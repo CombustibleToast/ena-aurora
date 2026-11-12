@@ -285,6 +285,7 @@
 # Tails
 - type: marking
   id: SynthLizardTail
+  parent: EmoteHardThump # Aurora's Song - hard tail thump.
   bodyPart: Tail
   groupWhitelist: [IPC]
   sprites:
@@ -293,6 +294,7 @@
 
 - type: marking
   id: SynthLizardTailAnimated
+  parent: EmoteHardThump # Aurora's Song - hard tail thump.
   bodyPart: Tail
   groupWhitelist: []
   sprites:

@@ -1,0 +1,33 @@
+﻿- type: entity
+  abstract: true
+  id: ASClothingLegsBase # LegsBase is effectively identical to NeckBase. It's just here to serve as a parent when needed.
+  parent: [SolutionFood, SolutionToolSmall, Clothing, RecyclableItemClothSmall]
+  components:
+  - type: Item
+    size: Small
+  - type: Clothing
+    quickEquip: true
+    slots:
+    - LEGS # This is pretty much the only difference.
+  - type: Sprite
+    state: icon
+  - type: Butcherable
+    butcheringType: Knife
+    spawned:
+    - id: MaterialCloth1
+      amount: 2
+  - type: PhysicalComposition
+    materialComposition:
+      Cloth: 100
+  - type: Edible
+    requiresSpecialDigestion: true
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 15
+  - type: Tag
+    tags:
+    - ClothMade
+    - Recyclable
+    - WhitelistChameleon

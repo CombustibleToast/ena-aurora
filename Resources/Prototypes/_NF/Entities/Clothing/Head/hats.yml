@@ -140,7 +140,7 @@
     sprite: _NF/Clothing/Head/Hats/pirate_hat_luffy.rsi
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingHeadBaseButcherable ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingHeadHatNfsdBeretGreen
   name: NFSD beret
   description: A green beret for use by NFSD officers.
@@ -152,7 +152,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingHeadBaseButcherable ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingHeadHatNfsdBeretBrown
   name: NFSD beret
   description: A brown beret for use by NFSD officers.
@@ -164,7 +164,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingHeadBaseButcherable ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingHeadHatNfsdBeretCream
   name: NFSD beret
   description: A cream beret for use by NFSD officers.
@@ -176,7 +176,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingHeadBaseButcherable ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingHeadHatNfsdCampaign
   name: NFSD campaign hat
   description: Yeehaw, partner.
@@ -220,7 +220,7 @@
           amount: 3
 
 - type: entity
-  parent: ClothingHeadBaseButcherable
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingHeadBaseButcherable ] # AS: Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingHeadHatNfsdSmallCampaign
   name: NFSD campaign cap
   description: All yee, no haw.
@@ -270,10 +270,23 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadHatBeretHoS
+  parent: ClothingHeadBase # Aurora's Song | ClothingHeadHatBeretHoS > ClothingHeadBase - Contraband inheritance issue
   id: ClothingHeadHatBeretCommander
   name: commander's beret
   description: A black beret with a commander's rank emblem.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/beret_hos.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/beret_hos.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBaseButcherable

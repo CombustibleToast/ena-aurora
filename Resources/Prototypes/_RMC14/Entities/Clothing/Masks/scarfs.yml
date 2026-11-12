@@ -1,0 +1,385 @@
+# Aurora Song - Taken and modified from RMC14 at https://github.com/RMC-14/RMC-14/blob/b6bf62d08cbd3e392d6fe63031a06230955e833e/Resources/Prototypes/_RMC14/Entities/Clothing/Masks/scarfs.yml
+
+- type: entity
+  parent: [ClothingMaskBaseButcherable, BaseFoldable]
+  id: RMCBaseScarfMask
+  abstract: true
+  components:
+  - type: Appearance
+  - type: Foldable
+    canFoldInsideContainer: true
+  - type: FoldableClothing
+    foldedEquippedPrefix: flipped
+    foldedHeldPrefix: flipped
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon
+      map: ["foldedLayer"]
+      visible: false
+  - type: Clothing
+    slots:
+      - mask
+      - neck
+
+- type: entity
+  parent: RMCBaseScarfMask
+  id: RMCBaseScarfDown
+  suffix: down
+  abstract: true
+  components:
+  - type: Foldable
+    folded: true
+  - type: Clothing
+    equippedPrefix: flipped
+  - type: Item
+    heldPrefix: flipped
+  - type: Sprite
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+      visible: false
+    - state: icon
+      map: ["foldedLayer"]
+      visible: true
+
+# SQUADS
+
+- type: entity
+  parent: RMCBaseScarfMask
+  id: RMCMaskScarfAlpha
+  name: alpha tactical wrap
+  description: A tactical wrap used by soldiers to conceal their face.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/alpha.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/alpha.rsi
+  - type: IdentityBlocker
+    coverage: MOUTH
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfAlpha]
+  id: RMCMaskScarfAlphaDown
+  name: alpha tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfBravo
+  name: bravo tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/bravo.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/bravo.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfBravo]
+  id: RMCMaskScarfBravoDown
+  name: bravo tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfCharlie
+  name: charlie tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/charlie.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/charlie.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfCharlie]
+  id: RMCMaskScarfCharlieDown
+  name: charlie tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfDelta
+  name: delta tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/delta.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/delta.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfDelta]
+  id: RMCMaskScarfDeltaDown
+  name: delta tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfEcho
+  name: echo tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/echo.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/echo.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfEcho]
+  id: RMCMaskScarfEchoDown
+  name: echo tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfFoxtrot
+  name: foxtrot tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/foxtrot.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/foxtrot.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfFoxtrot]
+  id: RMCMaskScarfFoxtrotDown
+  name: foxtrot tactical wrap
+
+# COLOURS
+
+#- type: entity # Aurora's Song - Commented out, same as Alpha
+#  parent: RMCMaskScarfAlpha
+#  id: RMCMaskScarfRed
+#  name: red tactical wrap
+#  components:
+#  - type: Sprite
+#    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/alpha.rsi
+#  - type: Clothing
+#    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/alpha.rsi
+
+#- type: entity # Aurora's Song - Commented out, same as Alpha
+#  parent: [RMCBaseScarfDown, RMCMaskScarfRed]
+#  id: RMCMaskScarfRedDown
+#  name: red tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfBlack
+  name: black tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/black.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/black.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfBlack]
+  id: RMCMaskScarfBlackDown
+  name: black tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfGray
+  name: grey tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/gray.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/gray.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfGray]
+  id: RMCMaskScarfGrayDown
+  name: grey tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfGreen
+  name: green tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/green.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/green.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfGreen]
+  id: RMCMaskScarfGreenDown
+  name: green tactical wrap
+
+- type: entity
+  parent: RMCMaskScarfAlpha
+  id: RMCMaskScarfTan
+  name: tan tactical wrap
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/tan.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Scarfs/tan.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskScarfTan]
+  id: RMCMaskScarfTanDown
+  name: tan tactical wrap
+
+# Neckerchief - No flipped icons for these because I cant get it to work thanks yaml code
+
+- type: entity
+  parent: RMCBaseScarfMask
+  id: RMCMaskNeckerchiefAlpha
+  name: alpha neckerchief # Aurora's Song - listed squad
+  description: A simple cloth worn around the neck, adjustable between a loose fit or a more tightly secured style.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/alpha.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/alpha.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefAlpha]
+  id: RMCMaskNeckerchiefAlphaDown
+  name: alpha neckerchief # Aurora's Song - listed squad
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefBravo
+  name: bravo neckerchief # Aurora's Song - listed squad
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/bravo.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/bravo.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefBravo]
+  id: RMCMaskNeckerchiefBravoDown
+  name: bravo neckerchief # Aurora's Song - listed squad
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefCharlie
+  name: charlie neckerchief # Aurora's Song - listed squad
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/charlie.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/charlie.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefCharlie]
+  id: RMCMaskNeckerchiefCharlieDown
+  name: charlie neckerchief # Aurora's Song - listed squad
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefDelta
+  name: delta neckerchief # Aurora's Song - listed squad
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/delta.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/delta.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefDelta]
+  id: RMCMaskNeckerchiefDeltaDown
+  name: delta neckerchief # Aurora's Song - listed squad
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefEcho
+  name: echo neckerchief # Aurora's Song - listed squad
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/echo.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/echo.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefEcho]
+  id: RMCMaskNeckerchiefEchoDown
+  name: echo neckerchief # Aurora's Song - listed squad
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefFoxtrot
+  name: foxtrot neckerchief # Aurora's Song - listed squad
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/foxtrot.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/foxtrot.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefFoxtrot]
+  id: RMCMaskNeckerchiefFoxtrotDown
+  name: foxtrot neckerchief # Aurora's Song - listed squad
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefTan
+  name: tan neckerchief # Aurora's Song - listed color
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/tan.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/tan.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefTan]
+  id: RMCMaskNeckerchiefTanDown
+  name: tan neckerchief # Aurora's Song - listed color
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefBlack
+  name: black neckerchief # Aurora's Song - listed color
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/black.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/black.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefBlack]
+  id: RMCMaskNeckerchiefBlackDown
+  name: black neckerchief # Aurora's Song - listed color
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefGray
+  name: gray neckerchief # Aurora's Song - listed color
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/gray.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/gray.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefGray]
+  id: RMCMaskNeckerchiefGrayDown
+  name: gray neckerchief # Aurora's Song - listed color
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefGreen
+  name: green neckerchief # Aurora's Song - listed color
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/green.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/green.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefGreen]
+  id: RMCMaskNeckerchiefGreenDown
+  name: green neckerchief # Aurora's Song - listed color
+
+- type: entity
+  parent: RMCMaskNeckerchiefAlpha
+  id: RMCMaskNeckerchiefWhite
+  name: white neckerchief # Aurora's Song - listed color
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/white.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Mask/Neckerchief/white.rsi
+
+- type: entity
+  parent: [RMCBaseScarfDown, RMCMaskNeckerchiefWhite]
+  id: RMCMaskNeckerchiefWhiteDown
+  name: white neckerchief # Aurora's Song - listed color

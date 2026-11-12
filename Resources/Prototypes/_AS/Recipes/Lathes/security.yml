@@ -1,23 +1,5 @@
 # Aurora Song
 
-#region .30 marksman rifle
-
-- type: latheRecipe
-  parent: BaseEmptyMagazineRecipe
-  id: ASMagazineMarksmanRifle30Empty
-  result: ASMagazineMarksmanRifle30Empty
-  materials:
-    Steel: 30
-
-- type: latheRecipe
-  parent: BaseEmptyMagazineRecipe
-  id: ASMagazineMarksmanRifle30OverpressureEmpty
-  result: ASMagazineMarksmanRifle30OverpressureEmpty
-  materials:
-    Steel: 30
-
-#endregion
-
 #region .40 Ammo Box
 - type: latheRecipe
   parent: BaseAmmoRecipe
@@ -172,6 +154,140 @@
     Steel: 5000 # box - free, 200 [bullets] * 25 [Steel per bullet]
 
 #endregion
+
+#region .30 long rifle magazines
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineEnblocRifle30LongEmpty
+  result: ASMagazineEnblocRifle30LongEmpty
+  materials:
+    Steel: 20
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineEnblocRifle30Long
+  result: ASMagazineEnblocRifle30Long
+  materials:
+    Steel: 335 # 15 [magazine] + 8 [bullets] * 40 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASSpeedLoaderRifle30LongEmpty
+  result: ASSpeedLoaderRifle30LongEmpty
+  materials:
+    Steel: 20
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASSpeedLoaderRifle30Long
+  result: ASSpeedLoaderRifle30Long
+  materials:
+      Steel: 210 # 10 [speedloader] + 5 [bullets] * 40 [Steel per bullet]
+
+#region .30 Long marksman rifle
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30LongEmpty
+  result: ASMagazineMarksmanRifle30LongEmpty
+  materials:
+    Steel: 30
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineMarksmanRifle30LongOverpressureEmpty
+  result: ASMagazineMarksmanRifle30LongOverpressureEmpty
+  materials:
+    Steel: 30
+
+#endregion
+
+#region .30 long rifle ammo boxes
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30Long
+  result: ASAmmunitionBoxRifle30Long
+  materials:
+    Steel: 2000 # box - free, 50 [bullets] * 40 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongOverpressure
+  result: ASAmmunitionBoxRifle30LongOverpressure
+  materials:
+    Steel: 3000 # box - free, 50 [bullets] * 60 [Steel per bullet]
+    Brass: 3000 # box - free, 50 [bullets] * 60 [Brass per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongPractice
+  result: ASAmmunitionBoxRifle30LongPractice
+  materials:
+    Steel: 1000 # box - free, 50 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongIncendiary
+  result: ASAmmunitionBoxRifle30LongIncendiary
+  materials:
+    Plastic: 3000 # box - free, 50 [bullets] * 60 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongUranium
+  result: ASAmmunitionBoxRifle30LongUranium
+  materials:
+    Plastic: 1500 # box - free, 50 [bullets] * 30 [Plastic per bullet]
+    Uranium: 1500 # box - free, 50 [bullets] * 30 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxRifle30LongRubber
+  result: ASAmmunitionBoxRifle30LongRubber
+  materials:
+    Plastic: 1000 # box - free, 50 [bullets] * 20 [Plastic per bullet]
+    Steel: 1000 # box - free, 50 [bullets] * 20 [Steel per bullet]
+
+#region 8gauge enblocs
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: MagazineShotgunLeverEmpty
+  result: MagazineShotgunLeverEmpty
+  materials:
+    Steel: 25
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: MagazineShotgunLever
+  result: MagazineShotgunLever
+  materials:
+    Steel: 265 # 25 [magazine] + 8 [shells] * 30 [Steel per shell]
+
+# AS8gShellBuckshot
+#region 8gauge shell boxes
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxShellShotgun8gBuckshot
+  result: ASAmmunitionBoxShellShotgun8gBuckshot
+  materials:
+    Steel: 480 # box - free, 16 [shells] * 30 [Steel per shell]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxShellShotgun8gSlug
+  result: ASAmmunitionBoxShellShotgun8gSlug
+  materials:
+    Steel: 960 # Box - free, 16 [Shells] * 60 [Steel per shell]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxShellShotgun8gHE
+  result: ASAmmunitionBoxShellShotgun8gHE
+  materials:
+    Steel: 360 # 8 [shells] * 45 [Steel per shell]
+    Plastic: 240 # 8 [shells] * 30 [Plastic per shell]
+    Plasma: 240 # # 8 [shells] * 30 [Plastic per shell]
 
 #region Misc
 - type: latheRecipe

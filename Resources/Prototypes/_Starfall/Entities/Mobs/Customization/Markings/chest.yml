@@ -1,0 +1,276 @@
+- type: marking
+  id: LumariChestAthamas
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: athamas
+
+- type: marking
+  id: LumariChestCharredChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: charred_chest
+
+- type: marking
+  id: LumariChestChestChimeraFMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_chimera_f_moth
+
+- type: marking
+  id: LumariChestChestChimeraMMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_chimera_m_moth
+
+- type: marking
+  id: LumariChestChestLTwistingFMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_l_twisting_f_moth
+
+- type: marking
+  id: LumariChestChestLTwistingMMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_l_twisting_m_moth
+
+- type: marking
+  id: LumariChestChestRTwistingFMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_r_twisting_f_moth
+
+- type: marking
+  id: LumariChestChestRTwistingMMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_r_twisting_m_moth
+
+- type: marking
+  id: LumariChestChestStarMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: chest_star_moth
+
+- type: marking
+  id: LumariChestDeathheadChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: deathhead_chest
+
+- type: marking
+  id: LumariChestExoBelly
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: exo_belly
+
+- type: marking
+  id: LumariChestFanChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: fan_chest
+
+- type: marking
+  id: LumariChestFirewatchChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: firewatch_chest
+
+- type: marking
+  id: LumariChestGothicChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: gothic_chest
+
+- type: marking
+  id: LumariChestHipScars
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: hip_scars
+
+- type: marking
+  id: LumariChestJungleChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: jungle_chest
+
+- type: marking
+  id: LumariChestMoonflyChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: moonfly_chest
+
+- type: marking
+  id: LumariChestMothBodyClaw
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: moth_body_claw
+
+- type: marking
+  id: LumariChestOakwormChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: oakworm_chest
+
+- type: marking
+  id: LumariChestPointyChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: pointy_chest
+
+- type: marking
+  id: LumariChestRaggedChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: ragged_chest
+
+- type: marking
+  id: LumariChestRoyalChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: royal_chest
+
+- type: marking
+  id: LumariChestTorsoIncisionMoth
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: torso_incision_moth
+
+- type: marking
+  id: LumariChestWhiteflyChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: whitefly_chest
+
+- type: marking
+  id: LumariChestWitchwingChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chest.rsi
+    state: witchwing_chest
+
+- type: marking
+  id: LumariChitinidPlatedChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: plated_chest
+
+- type: marking
+  id: LumariChitinidRadiantChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: radiant_chest
+
+- type: marking
+  id: LumariChitinidSpottedChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: spotted_chest
+
+- type: marking
+  id: LumariChitinidStripesChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: stripes_chest
+
+- type: marking
+  id: LumariChitinidToxicChest
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: toxic_chest
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeChestLeft
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: chest_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeChestRight
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: chest_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeGroin
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: groin_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeStomach
+  bodyPart: Chest
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: stomache_gauze
+

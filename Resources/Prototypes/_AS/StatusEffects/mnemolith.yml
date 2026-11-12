@@ -1,0 +1,6 @@
+- type: entity
+  parent: MobStatusEffectDebuff
+  id: StatusEffectMnemolith
+  name: mnemolith exposure
+  components:
+  - type: MnemolithStatusEffect

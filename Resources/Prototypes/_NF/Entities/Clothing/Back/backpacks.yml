@@ -38,7 +38,7 @@
       collection: CatMeows
 
 - type: entity
-  parent: ClothingBackpackSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingBackpackSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBackpackNfsdBrown
   name: NFSD backpack
   components:

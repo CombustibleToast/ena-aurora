@@ -46,6 +46,7 @@
     Brutepack: 4
     Ointment: 4
     Bloodpack: 4
+    Tourniquet: 4 # Aurora's Song - Present in civ NanoMed, meaningful separate use-case from Gauze
     # Optional / Situational Gear
     BoxBottle: 3
     Defibrillator: 2 # Easily shared between several people
@@ -55,6 +56,7 @@
     MedicalTrackingImplanter: 4294967295 # Frontier - infinite
     SadTromboneImplanter: 10 # Frontier
     BikeHornImplanter: 10 # Frontier
+    WehImplanter: 10 # Frontier - Ported from PR #4248
     LightImplanter: 10 # Frontier
     BoxFolderMedicalDoctor: 4294967295 # Frontier - infinite
     MedTekCartridge: 3 # Frontier

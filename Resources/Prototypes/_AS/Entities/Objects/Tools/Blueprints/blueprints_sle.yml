@@ -1,0 +1,47 @@
+﻿- type: entity
+  parent: NFBaseBlueprintFaxable
+  id: ASBlueprintArsenalSle
+  name: restricted combat blueprint
+  description: A blueprint with combat schematics on it. It can be inserted into a protolathe or techfab, or sent via fax.
+  categories: [HideSpawnMenu, DoNotMap]
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-base
+      color: "#465d69"
+    - state: icon-text
+    - sprite: Objects/Misc/bureaucracy.rsi
+      state: paper_stamp-generic
+      offset: 0.15,-0.1
+      map: ["enum.PaperVisualLayers.Stamp"]
+      visible: false
+    - sprite: Objects/Misc/bureaucracy.rsi
+      state: paper_words
+      map: ["enum.PaperVisualLayers.Writing"]
+      visible: false
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#465d69"
+      - state: inhand-left-text
+      right:
+      - state: inhand-right-base
+        color: "#465d69"
+      - state: inhand-right-text
+  - type: Tag
+    tags:
+    - NFBlueprintAdvanced
+    - Document
+    - Paper
+
+- type: entity # This ammo should be very expensive
+  parent: [ ASBlueprintArsenalSle ]
+  id: ASBlueprintMarksmanRifle30LongOverpressureSLE
+  name: .30 Long rifle Overpressure schematic
+  description: a schematic for fabricating .30 Long rifle Overpressure
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - ASAmmunitionBoxRifle30LongOverpressure
+    - ASMagazineMarksmanRifle30LongOverpressureEmpty

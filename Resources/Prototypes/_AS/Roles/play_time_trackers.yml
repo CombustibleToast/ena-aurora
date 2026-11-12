@@ -24,3 +24,12 @@
 
 - type: playTimeTracker
   id: JobColonialCommandOfficial
+
+- type: playTimeTracker
+  id: JobOffDutyOfficer
+
+- type: playTimeTracker
+  id: JobSyndicateRepresentative
+
+- type: playTimeTracker
+  id: JobNanotrasenRepresentative

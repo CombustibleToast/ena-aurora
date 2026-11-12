@@ -1,0 +1,27 @@
+
+- type: entity
+  parent: ClothingMaskPullableBase
+  id: ClothingMaskBreathCommand
+  name: command breath mask
+  description: A fancy and comfortable breath mask, but functionally identical to the clear plastic ones.
+  components:
+  - type: Item
+    size: Tiny
+  - type: Sprite
+    sprite: Clothing/Mask/breathcommand.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/breathcommand.rsi
+  - type: BreathMask
+  - type: IngestionBlocker
+  - type: Tag
+    tags:
+    - PetWearable
+    - WhitelistChameleon
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50
+      Plastic: 100
+  - type: HideLayerClothing
+    slots:
+    - Snout
+    hideOnToggle: true

@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingMaskGasSecurity ]
   id: ASClothingMaskGasSLE
   name: SLE gas mask
   description: A standard issue Sector Law Enforcement gas mask.
@@ -11,7 +11,7 @@
   - type: CatWearable
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSwat ]
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingMaskGasSwat ]
   id: ASClothingMaskGasSLECommissioner
   name: SLE commissioner gas mask
   description: A gas mask worthy of an SLE Commissioner.

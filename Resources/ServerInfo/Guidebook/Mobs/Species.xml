@@ -48,4 +48,17 @@
   <Box>
   <GuideEntityEmbed Entity="AppearanceOvinia" Caption="Ovinia"/>
   </Box>
+  # Impstation specific species
+  <Box>
+  <GuideEntityEmbed Entity="MobAllulalo" Caption="Allulalo"/>
+  <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
+  </Box>
+  # Starfall Drift species
+  <Box>
+  <GuideEntityEmbed Entity="AppearanceLumari" Caption="Lumari"/>
+  </Box>
+  # Macrocosm Species
+  <Box>
+  <GuideEntityEmbed Entity="MobThaven" Caption="Thaven"/>
+  </Box>
 </Document>

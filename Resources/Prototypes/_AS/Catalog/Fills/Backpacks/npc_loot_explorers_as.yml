@@ -1,0 +1,138 @@
+# EXPLORER NPC LOOT
+## TIER 1
+- type: entity
+  parent: ExplorerDuffelGiftBox
+  id: ASLootBagExplorerT1
+  suffix: T1
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: MercCoin1
+    # Scrap
+    - id: ScrapOre
+      amount: 2
+    - id: SalvageSpawnerScrapCommon
+    - id: SalvageSpawnerScrapValuable100
+      prob: 0.50
+    # Items
+    - id: SalvageSpawnerTreasure
+    - id: SpawnDungeonLootOresFull
+      prob: 0.5
+      amount: 2
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/salvage.rsi
+    state: icon
+
+## TIER 2
+- type: entity
+  parent: ExplorerDuffelGiftBox
+  id: ASLootBagExplorerT2
+  suffix: T2
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: MercCoin1
+    # Scrap
+    - id: ScrapOre
+      amount: 3
+    - id: SalvageSpawnerScrapCommon
+    - id: SalvageSpawnerScrapValuable
+      prob: 0.75
+    # Items
+    - id: SalvageSpawnerTreasure100
+    - id: SalvageSpawnerTreasureValuable100
+      prob: 0.25
+    - id: SpawnDungeonLootOresFull
+      prob: 0.75
+      amount: 2
+    - id: ASWeaponAdvancedHoloflareGun
+      prob: 0.15
+    # Bonus Loot
+    - id: SpawnDungeonLootPartsEngi
+      prob: 0.7
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+  - type: Sprite
+    sprite: _NF/Clothing/Back/Messenger/color.rsi
+    layers:
+    - state: icon-base
+      color: "#766245"
+    - state: icon-sling
+      color: "#5f539a"
+    - state: icon-clasp
+      color: "#eeeeee"
+
+## TIER 3
+- type: entity
+  parent: ExplorerDuffelGiftBox
+  id: ASLootBagExplorerT3
+  suffix: T3
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: MercCoin1
+    # Scrap
+    - id: ScrapOre
+      amount: 4
+    - id: SalvageSpawnerScrapValuable
+    - id: SalvageSpawnerScrapValuable
+      prob: 0.75
+    # Items
+    - id: SalvageSpawnerTreasureValuable100
+    - id: SalvageSpawnerTreasureValuable100
+      prob: 0.50
+    - id: SalvageSpawnerTreasureValuable100
+      prob: 0.25
+    - id: SpawnDungeonLootOresFull
+      amount: 3
+    - id: ASWeaponAdvancedHoloflareGun
+      weight: 0.1
+    # Bonus Loot
+    - id: SpawnDungeonLootPartsEngi
+      amount: 2
+    - id: SpawnDungeonLootVendingRestocks
+      prob: 0.4
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/salvage.rsi
+    state: icon
+
+## TIER 4
+- type: entity
+  parent: ExplorerDuffelGiftBox
+  id: ASLootBagExplorerBoss
+  suffix: T4 Boss
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: MercCoin1
+    # Scrap
+    - id: ScrapOre
+      amount: 8
+    - id: SalvageSpawnerScrapValuable
+      amount: 3
+    # Weapons
+    - id: NFEnergyPickaxe
+      prob: 0.4
+    - id: NFBlueprintEnergyPickaxe
+      prob: 0.05
+    # Armor
+    - id: ClothingOuterHardsuitMaximPrototype
+      prob: 0.1
+    # Items
+    - id: SalvageSpawnerTreasureValuable100
+      amount: 3
+    - id: SpawnDungeonLootOresFull
+      amount: 4
+    # Bonus Loot
+    - id: SpawnDungeonLootPartsEngi
+      amount: 3
+    - id: SpawnDungeonLootVendingRestocks
+      prob: 0.75
+    - id: SpawnDungeonLootFlatpacks
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg

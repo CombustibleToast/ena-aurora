@@ -1,0 +1,15 @@
+- type: entity
+  parent: BaseAction
+  id: ActionToggleBeltLayer
+  name: Toggle belt layer
+  description: Toggles whether your belt appears over or under your outer clothing
+  components:
+  - type: Action
+    useDelay: 1
+    icon:
+      sprite: Clothing/Belt/utility.rsi
+      state: icon
+    checkCanInteract: true
+    autoPopulate: false
+  - type: InstantAction
+    event: !type:ToggleBeltLayerActionEvent

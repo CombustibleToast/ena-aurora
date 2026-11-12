@@ -20,8 +20,9 @@ namespace Content.Client.Shuttles.UI;
 [GenerateTypedNameReferences]
 public sealed partial class ShuttleNavControl : BaseShuttleControl
 {
-    [Dependency] private readonly IMapManager _mapManager = default!;
-    [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
+    [Dependency] private IMapManager _mapManager = default!;
+    [Dependency] private IUserInterfaceManager _uiManager = default!; // Frontier
+    [Dependency] private IEyeManager _eyeManager = default!; // Aurora's Song
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
 
@@ -169,6 +170,13 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var mapPos = _transform.ToMapCoordinates(_coordinates.Value);
         var posMatrix = Matrix3Helpers.CreateTransform(_coordinates.Value.Position, _rotation.Value);
         var ourEntRot = RotateWithEntity ? _transform.GetWorldRotation(xform) : _rotation.Value;
+        // Aurora's Song - rotate handheld mass scanners with the player's eye rotation
+        if (_consoleEntity != null &&
+            EntManager.TryGetComponent<RadarConsoleComponent>(_consoleEntity.Value, out var radar) &&
+            radar.FollowEyeRotation)
+        {
+            ourEntRot -= _eyeManager.CurrentEye.Rotation;
+        }
         var ourEntMatrix = Matrix3Helpers.CreateTransform(_transform.GetWorldPosition(xform), ourEntRot);
         var shuttleToWorld = Matrix3x2.Multiply(posMatrix, ourEntMatrix);
         Matrix3x2.Invert(shuttleToWorld, out var worldToShuttle);

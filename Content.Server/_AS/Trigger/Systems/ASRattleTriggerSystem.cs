@@ -1,4 +1,5 @@
-﻿using Content.Server.Radio.EntitySystems;
+﻿using Content.Server._WF.CartridgeLoader.Cartridges; // Aurora's Song
+using Content.Server.Radio.EntitySystems;
 using Content.Shared.Implants; // Aurora's Song: Retriggers
 using Content.Shared._AS.Traits;
 using Content.Shared.Humanoid;
@@ -14,12 +15,13 @@ using Robust.Shared.Timing; // Aurora's Song: Death Times
 
 namespace Content.Server._AS.Trigger.Systems;
 
-public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComponent>
+public sealed partial class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComponent>
 {
-    [Dependency] private readonly SharedStationSystem _station = default!;
-    [Dependency] private readonly RadioSystem _radioSystem = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IGameTiming _timing = default!; // Aurora's Song: Death Times & Retriggering
+    [Dependency] private SharedStationSystem _station = default!;
+    [Dependency] private RadioSystem _radioSystem = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IGameTiming _timing = default!; // Aurora's Song: Death Times & Retriggering
+    [Dependency] private CriticalImplantTrackerCartridgeSystem _critCatridgeSystem = default!; // Aurora's Song - PDA ringing
 
     // Have old functionality of rattle available for NF and Coyote functionality
     protected override void OnTrigger(Entity<RattleOnTriggerComponent> ent, EntityUid target, ref TriggerEvent args)
@@ -31,10 +33,14 @@ public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComp
             return;
 
         // Coyote
-        if (!TryComp<MobStateComponent>(implanted.ImplantedEntity, out var mobstate)
-            || mobstate.CurrentState == MobState.Alive)
+        if (!TryComp<MobStateComponent>(implanted.ImplantedEntity, out var mobstate))
             return;
 
+        if (_timing.CurTime < ent.Comp.BufferTime) // Minimum cooldown between messages hasn't passed
+        {
+            ent.Comp.Buffered = true;
+            return;
+        }
 
         // Gets location of the implant
         var ownerXform = Transform(target);
@@ -93,7 +99,11 @@ public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComp
             target);
         // End Coyote
 
+        _critCatridgeSystem.OnDeathrattle(); // Aurora's Song - Ping PDAs
         ent.Comp.NextTrigger = _timing.CurTime + ent.Comp.RetriggerDelay; // Aurora's Song: Implant retriggering
+
+        ent.Comp.BufferTime = _timing.CurTime + ent.Comp.BufferDelay; // Set the minimum time between messages
+        ent.Comp.Buffered = false; // We're either not buffering, or sent the buffered message
         args.Handled = true;
     }
 
@@ -105,6 +115,7 @@ public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComp
         while (query.MoveNext(out var mobUid, out var implants, out var state))
         {
             bool retrigger = false;
+            bool buffered = false;
             foreach (var implant in implants.ImplantContainer.ContainedEntities)
             {
                 if(!TryComp<RattleOnTriggerComponent>(implant, out var rattle))
@@ -119,11 +130,17 @@ public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComp
                 {
                     retrigger = true;
                 }
+
+                if (_timing.CurTime > rattle.BufferTime && rattle.Buffered)
+                {
+                    buffered = true; // I hate scoping
+                }
             }
 
-            if(retrigger == true) // At least one implant needs to be retriggered, so tell the body to try and retrigger all of its rattle implants.
+            if (retrigger || buffered) // At least one implant needs to be retriggered, so tell the body to try and retrigger all of its rattle implants.
             {                     // Unfortunantly, we can't just leave it up to the implant to reject a trigger if not enough time has elapsed, as things independent of the timer want to retrigger them too.
-                var deathrattleEvent = new ReTriggerRattleImplantEvent(mobUid, state.CurrentState);
+                // Send the event with the Forced argument, so it will go through even if they are alive.
+                var deathrattleEvent = new ReTriggerRattleImplantEvent(mobUid, state.CurrentState, true);
                 RaiseLocalEvent(mobUid, deathrattleEvent);
             }
         }

@@ -84,6 +84,7 @@
   categories: [ HideSpawnMenu ]
   components:
     - type: SubdermalImplant
+      permanent: true # Aurora's Song - made permanent to prevent current balancing frustrations
       whitelist:
         components:
         - MobState # admeme implanting a chair with tracking implant needs to give the chair mobstate so it can die first
@@ -101,6 +102,7 @@
     #   range: 500
     - type: TriggerOnMobstateChange
       mobState:
+      - Alive # Aurora's Song
       - Critical
       - Dead
     - type: RattleOnTrigger
@@ -163,7 +165,7 @@
     - Syndicate
 
 - type: entity
-  parent: [ BaseSubdermalImplant, StorePresetUplink ]
+  parent: BaseSubdermalImplant
   id: UplinkImplant
   name: uplink implant
   description: This implant lets the user access a hidden Syndicate uplink at will.
@@ -174,9 +176,7 @@
     whitelist:
       components:
       - Hands # prevent mouse buying grenade penguin since its not telepathic
-  - type: Store
-    balance:
-      Telecrystal: 0
+  - type: RemoteStore
   - type: UserInterface
     interfaces:
       enum.StoreUiKey.Key:
@@ -378,6 +378,7 @@
         - MobState # admeme implanting a chair with rattle implant needs to give the chair mobstate so it can die first
     - type: TriggerOnMobstateChange
       mobState:
+      - Alive # Aurora's Song
       - Critical
       - Dead
     - type: RattleOnTrigger

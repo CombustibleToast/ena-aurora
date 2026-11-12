@@ -8,6 +8,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
+using Content.Shared._AS.PersistentSystems; // Aurora's Song
 using Content.Shared.Administration.Logs;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared._Floof.Consent;  //Floofstation
@@ -138,7 +139,7 @@ namespace Content.Server.Database
                 return;
             }
 
-            db.Profile.Remove(profile);
+            profile.PreferenceId = null; // Aurora's Song - Dereference profiles instead of deleting to preserve persistence.
         }
 
         public async Task<Preference> InitPrefsAsync(NetUserId userId, HumanoidCharacterProfile defaultProfile)
@@ -888,6 +889,12 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                 query = query.Where(log => log.RoundId == filter.Round);
             }
 
+            // Aurora's Song - Allow querying admin log ID searches (i.e id:33)
+            if (filter.LogId != null)
+            {
+                query = query.Where(log => log.Id == filter.LogId);
+            }
+
             if (filter.Types != null)
             {
                 query = query.Where(log => filter.Types.Contains(log.Type));
@@ -986,7 +993,11 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
                     players[i] = log.Players[i].PlayerUserId;
                 }
 
-                yield return new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players);
+                // Aurora's Song - Keep sensitive log flag
+                yield return new SharedAdminLog(log.Id, log.Type, log.Impact, log.Date, log.Message, players)
+                {
+                    Sensitive = log.Sensitive,
+                };
             }
         }
 
@@ -1596,6 +1607,55 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
 
         #endregion
 
+        #region Denu Settings
+
+        public async Task<string> LoadDenuSettingsJsonAsync(Guid userId)
+        {
+            await using var db = await GetDb();
+
+            var record = await db.DbContext.DenuSettings
+                .FirstOrDefaultAsync(d => d.PlayerUserId == userId);
+
+            return record?.SettingsJson ?? "{}";
+        }
+
+        public async Task SaveDenuSettingsJsonAsync(Guid userId, string settingsJson)
+        {
+            await using var db = await GetDb();
+
+            var record = await db.DbContext.DenuSettings
+                .FirstOrDefaultAsync(d => d.PlayerUserId == userId);
+
+            if (record == null)
+            {
+                record = new DenuModel.DenuSettings
+                {
+                    PlayerUserId = userId,
+                    SettingsJson = settingsJson
+                };
+
+                db.DbContext.DenuSettings.Add(record);
+            }
+            else
+            {
+                record.SettingsJson = settingsJson;
+            }
+
+            await db.DbContext.SaveChangesAsync();
+        }
+
+        public async Task<Dictionary<int, int>> GetProfileSlotToProfileIdMapAsync(Guid userId)
+        {
+            await using var db = await GetDb();
+
+            return await db.DbContext.Profile
+                .Where(p => p.Preference.UserId == userId)
+                .Select(p => new { p.Slot, p.Id })
+                .ToDictionaryAsync(p => p.Slot, p => p.Id);
+        }
+
+        #endregion
+
         #region Job Whitelists
 
         public async Task<bool> AddJobWhitelist(Guid player, ProtoId<JobPrototype> job)
@@ -1704,6 +1764,494 @@ INSERT INTO player_round (players_id, rounds_id) VALUES ({players[player]}, {id}
             return true;
         }
         // End Frontier: Ghost role handling
+
+        #endregion
+
+        // Aurora
+        // See design documentation: Content.Server/_AS/PersistentSystems/README
+        # region Persistent Game Systems
+
+        #region Character Records
+
+        /// <summary>
+        /// An internal method that builds a Character Record and returns it with timestamp attached.
+        /// </summary>
+        /// <param name="recordType">The type of record this represents.</param>
+        /// <param name="targetCharacterId">The character to create the record under.</param>
+        /// <param name="authorUserId">The author player.</param>
+        /// <param name="authorCharacterId">The author character.</param>
+        /// <param name="roundId">The round the record was created on.</param>
+        /// <remarks>
+        /// This is done so that commit the database to the database can be deferred to
+        /// the same call that creates it's child table entry.
+        /// </remarks>
+        private RecordCharacter BuildCharacterRecord(
+            RecordType recordType,
+            int? targetCharacterId,
+            Guid? authorUserId,
+            int? authorCharacterId,
+            int? roundId)
+        {
+            var record = new RecordCharacter
+            {
+                RecordType = recordType,
+                TargetCharacterId = targetCharacterId,
+                AuthorUserId = authorUserId,
+                AuthorCharacterId = authorCharacterId,
+                RoundId = roundId,
+                CreatedAt = DateTime.UtcNow,
+            };
+
+            return record;
+        }
+
+        /// <inheritdoc cref="BuildCharacterRecord"/>
+        /// <summary>
+        /// Creates a bare CharacterRecord with necessary metadata.
+        /// </summary>
+        /// <returns>The Character record added to the database.</returns>
+        /// <remarks>
+        /// It is recommended to instead call BuildCharacterRecord within a child record creation method and
+        /// create both entries atomically where possible.
+        /// Ensure this always gets paired with a child record entry to persist desired data.
+        /// </remarks>
+        public async Task<RecordCharacter> AddCharacterRecord(
+            RecordType recordType,
+            int? targetCharacterId,
+            Guid? authorUserId,
+            int? authorCharacterId,
+            int? roundId)
+        {
+            await using var db = await GetDb();
+            var record = BuildCharacterRecord(recordType, targetCharacterId, authorUserId, authorCharacterId, roundId);
+            db.DbContext.Add(record);
+            await db.DbContext.SaveChangesAsync();
+            return record;
+        }
+
+        /// <summary>
+        /// Retrieve a single record from id.
+        /// </summary>
+        /// <param name="recordId">The id of the record to be retrieved.</param>
+        /// <returns>The record matching the id if it exists.</returns>
+        public async Task<RecordCharacter?> GetCharacterRecord(int recordId)
+        {
+            await using var db = await GetDb();
+            return await db.DbContext.RecordCharacter.FindAsync(recordId);
+        }
+
+        /// <summary>
+        /// Returns a list of records from the database, filtered by provided parameters. Null parameters applies no filter.
+        /// </summary>
+        /// <inheritdoc cref="FilterCharacterRecords"/>
+        public async Task<List<RecordCharacter>> GetFilteredCharacterRecords(
+            RecordType? recordType,
+            int? targetCharacterId = null,
+            Guid? authorUserId = null,
+            int? authorCharacterId = null,
+            bool? hidden = false,
+            bool? deleted = false)
+        {
+            await using var db = await GetDb();
+            var query = FilterCharacterRecords(
+                db.DbContext,
+                recordType,
+                targetCharacterId,
+                authorUserId,
+                authorCharacterId,
+                hidden,
+                deleted);
+            return await query.ToListAsync();
+        }
+
+        /// <summary>
+        /// Internal method which returns a filtered query of CharacterRecords from the database. Null parameters applies no filter.
+        /// </summary>
+        /// <param name="context">The current db context to operate on.</param>
+        /// <param name="recordType">Type of record.</param>
+        /// <param name="targetCharacterId">Character who is the subject of the record.</param>
+        /// <param name="authorUserId">User who created the record.</param>
+        /// <param name="authorCharacterId">Character who created the record.</param>
+        /// <param name="hidden">Hidden state.</param>
+        /// <param name="deleted">Deletion state.</param>
+        /// <returns>Filtered list of CharacterRecords from the database.</returns>
+        private IQueryable<RecordCharacter> FilterCharacterRecords(
+            ServerDbContext context,
+            RecordType? recordType,
+            int? targetCharacterId = null,
+            Guid? authorUserId = null,
+            int? authorCharacterId = null,
+            bool? hidden = false,
+            bool? deleted = false)
+        {
+            var query = context.RecordCharacter.AsQueryable();
+
+            if (recordType != null)
+                query = query.Where(r => r.RecordType == recordType);
+
+            if (targetCharacterId != null)
+                query = query.Where(r => r.TargetCharacterId == targetCharacterId);
+
+            if (authorUserId != null)
+                query = query.Where(r => r.AuthorUserId == authorUserId);
+
+            if (authorCharacterId != null)
+                query = query.Where(r => r.AuthorCharacterId == authorCharacterId);
+
+            if (hidden != null)
+                query = query.Where(r => r.Hidden == hidden);
+
+            if (deleted != null)
+                query = query.Where(r => r.Deleted == deleted);
+
+            return query.OrderByDescending(r => r.CreatedAt);
+        }
+
+        /// <summary>
+        /// Attempts to hide a record from in game view. This should be used for in character deletions.
+        /// </summary>
+        /// <param name="recordId">Record to be hidden.</param>
+        /// <param name="authorUserId">User trying to hide the record.</param>
+        /// <param name="authorCharacterId">Character trying to hide the record.</param>
+        /// <param name="allowNonAuthor">When set, allows hides not originating from the record's author character.</param>
+        /// <param name="updateEdits">When set, adds an entry to the edit log if successful.</param>
+        /// <returns>The result of the hide attempt.</returns>
+        public Task<RecordUpdateStatus> HideRecord(int recordId,
+            Guid? authorUserId,
+            int? authorCharacterId,
+            bool allowNonAuthor = false,
+            bool updateEdits = false)
+        {
+            return SetHideRecord(recordId, authorUserId, authorCharacterId, true, allowNonAuthor, updateEdits);
+        }
+
+        /// <summary>
+        /// Attempts to unhide a record hidden from in game view.
+        /// </summary>
+        /// <param name="recordId">Record to be unhidden.</param>
+        /// <param name="authorUserId">User trying to unhide the record.</param>
+        /// <param name="authorCharacterId">Character trying to unhide the record.</param>
+        /// <param name="allowNonAuthor">When set, allows unhides not originating from the record's author character.</param>
+        /// <param name="updateEdits">When set, adds an entry to the edit log if successful.</param>
+        /// <returns>The result of the hide attempt.</returns>
+        public Task<RecordUpdateStatus> UnhideRecord(int recordId,
+            Guid? authorUserId,
+            int? authorCharacterId,
+            bool allowNonAuthor = false,
+            bool updateEdits = false)
+        {
+            return SetHideRecord(recordId, authorUserId, authorCharacterId, false,  allowNonAuthor, updateEdits);
+        }
+
+        /// <summary>
+        /// Internal method that attempts to set a record hidden state.
+        /// </summary>
+        /// <param name="recordId">The record to hide/unhide.</param>
+        /// <param name="authorUserId">User trying to change the record hide state.</param>
+        /// <param name="authorCharacterId">Character trying to change the record hide state.</param>
+        /// <param name="hide">The state to set hidden to.</param>
+        /// <param name="allowNonOwner">When set, allows changes not originating from the record's author character.</param>
+        /// <param name="updateEdits">When set, adds an entry to the edit log if successful.</param>
+        /// <returns>Result of the attempt.</returns>
+        private async Task<RecordUpdateStatus> SetHideRecord(int recordId,
+            Guid? authorUserId,
+            int? authorCharacterId,
+            bool hide,
+            bool allowNonOwner,
+            bool updateEdits)
+        {
+            await using var db = await GetDb();
+
+            var existing = await db.DbContext.RecordCharacter
+                .SingleOrDefaultAsync(r => r.Id == recordId);
+
+            if (existing == null)
+                return RecordUpdateStatus.NotFound;
+
+            if (!allowNonOwner && (existing.AuthorCharacterId != authorCharacterId || existing.AuthorCharacterId == null))
+                return RecordUpdateStatus.Prohibited;
+
+            if (existing.Hidden == hide)
+                return RecordUpdateStatus.NoChange;
+
+            existing.Hidden = hide;
+
+            if (updateEdits)
+            {
+                AddRecordEdit(
+                    db.DbContext,
+                    existing,
+                    nameof(RecordCharacter.Hidden),
+                    (!hide).ToString(),
+                    hide.ToString(),
+                    authorUserId,
+                    authorCharacterId);
+            }
+
+            await db.DbContext.SaveChangesAsync();
+            return RecordUpdateStatus.Updated;
+        }
+
+        /// <summary>
+        /// Attempts to delete a record.
+        /// </summary>
+        /// <param name="recordId">The record to try to delete.</param>
+        /// <param name="authorUserId">The user trying to delete the record.</param>
+        /// <returns>The result of the attempt.</returns>
+        /// <remarks>This should only be used for out of character deletions. Use hide for IC deletions.</remarks>
+        public Task<RecordUpdateStatus> DeleteRecord(int recordId, Guid? authorUserId)
+        {
+            return SetDeleteRecord(recordId, authorUserId, true);
+        }
+
+        /// <summary>
+        /// Attempts to undelete a record.
+        /// </summary>
+        /// <param name="recordId">The record to try to undelete.</param>
+        /// <param name="authorUserId">The user trying to undelete the record.</param>
+        /// <returns>The result of the attempt.</returns>
+        public Task<RecordUpdateStatus> UndeleteRecord(int recordId, Guid? authorUserId)
+        {
+            return SetDeleteRecord(recordId, authorUserId, false);
+        }
+
+        /// <summary>
+        /// Attempts to change the deletion state of a record.
+        /// </summary>
+        /// <param name="recordId">The record to attempt to modify.</param>
+        /// <param name="authorUserId">The user trying to modify the record.</param>
+        /// <param name="delete">The deletion state to set the record to.</param>
+        /// <returns>The result of the attempt.</returns>
+        private async Task<RecordUpdateStatus> SetDeleteRecord(int recordId, Guid? authorUserId, bool delete)
+        {
+            await using var db = await GetDb();
+
+            var existing = await db.DbContext.RecordCharacter
+                .SingleOrDefaultAsync(r => r.Id == recordId);
+
+            if (existing == null)
+                return RecordUpdateStatus.NotFound;
+
+            if (existing.Deleted == delete)
+                return RecordUpdateStatus.NoChange;
+
+            existing.Deleted = delete;
+            if (delete)
+            {
+                existing.DeletedAt = DateTime.UtcNow;
+                existing.DeletedById = authorUserId;
+            }
+            else
+            {
+                existing.DeletedAt = null;
+                existing.DeletedById = null;
+            }
+
+            await db.DbContext.SaveChangesAsync();
+            return RecordUpdateStatus.Updated;
+        }
+
+        #endregion
+
+        #region Record Edits
+
+        /// <summary>
+        /// Records an edit on a record and updates most recent edit for the associated record to point to it.
+        /// </summary>
+        /// <param name="context">The db context to operate on.</param>
+        /// <param name="recordCharacter">The record that was edited.</param>
+        /// <param name="field">The field that was edited.</param>
+        /// <param name="oldValue">The old value prior to the edit.</param>
+        /// <param name="newValue">The new value after the edit.</param>
+        /// <param name="authorUserId">The user responsible for the edit.</param>
+        /// <param name="authorCharacterId">The character responsible for the edit.</param>
+        /// <returns>The edit entry created.</returns>
+        private RecordEdit AddRecordEdit(
+            ServerDbContext context,
+            RecordCharacter recordCharacter,
+            string field,
+            string? oldValue,
+            string? newValue,
+            Guid? authorUserId,
+            int? authorCharacterId)
+        {
+            var record = new RecordEdit
+            {
+                RecordCharacterId = recordCharacter.Id,
+                Field = field,
+                OldValue = oldValue,
+                NewValue = newValue,
+                CreatedAt = DateTime.UtcNow,
+                AuthorUserId = authorUserId,
+                AuthorCharacterId = authorCharacterId,
+            };
+            context.RecordEdit.Add(record);
+            recordCharacter.LastEdit = record;
+            return record;
+        }
+
+        /// <summary>
+        /// Gets a list of edits, newest first, for a record.
+        /// </summary>
+        /// <param name="recordId">The record to retrieve edits for.</param>
+        /// <returns>The list of edits for a record.</returns>
+        public async Task<List<RecordEdit>> GetRecordEdits(int recordId)
+        {
+            await using var db = await GetDb();
+            return await db.DbContext.RecordEdit
+                .AsNoTracking()
+                .Where(r => r.RecordCharacterId == recordId)
+                .OrderByDescending(r => r.CreatedAt)
+                .ToListAsync();
+        }
+
+        #endregion
+
+        #region Personal Notes
+
+        /// <summary>
+        /// Create a new PersonalNote record and add it to the database.
+        /// </summary>
+        /// <param name="authorUserId">The author player. used for auditing.</param>
+        /// <param name="characterId">The character to create the note under.</param>
+        /// <param name="title">The title of the note.</param>
+        /// <param name="body">The body of the note.</param>
+        /// <param name="roundId">The round the note was created on.</param>
+        /// <returns>The PersonalNote created in the database.</returns>
+        public async Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int characterId, string title, string body, int roundId)
+        {
+            await using var db = await GetDb();
+
+            // The target in this case matches the author. This maintains indexing search patterns.
+            var characterRecord = BuildCharacterRecord(RecordType.PersonalNote, characterId, authorUserId, characterId, roundId);
+
+            var record = new RecordPersonalNote
+            {
+                RecordCharacter = characterRecord,
+                Body = body,
+                Title = title,
+            };
+
+            db.DbContext.RecordPersonalNote.Add(record);
+            await db.DbContext.SaveChangesAsync();
+            return record;
+        }
+
+        /// <summary>
+        /// Gets a given characters personal notes from the database.
+        /// </summary>
+        /// <param name="characterId">The character who notes to retrieve.</param>
+        /// <returns></returns>
+        public async Task<List<RecordPersonalNote>> GetPersonalNotes(int characterId)
+        {
+            await using var db = await GetDb();
+
+            // Get the character records, matching type PersonalNote and TargetCharacterId, and join with PersonalNote by key.
+            var characterRecords = await FilterCharacterRecords(db.DbContext, RecordType.PersonalNote, characterId)
+                .Include(r => r.RecordPersonalNote)
+                .Include(le => le.LastEdit)
+                .AsNoTracking()
+                .ToListAsync();
+
+            // Navigate the PersonalNote property and return the list of PersonalNotes.
+            return characterRecords
+                .Select(r => r.RecordPersonalNote)
+                .OfType<RecordPersonalNote>()
+                .ToList();
+        }
+
+        /// <summary>
+        /// Attempt to update an existing PersonalNote record in the database and return the result.
+        /// </summary>
+        /// <param name="authorUserId">The author player. used for auditing.</param>
+        /// <param name="authorCharacterId">The character attempting to edit the note.</param>
+        /// <param name="recordId">The record that is trying to be edited.</param>
+        /// <param name="title">The new Title to update the note with. Null leaves title as is.</param>
+        /// <param name="body">The new Body to update the note with. nNull leave the body as is.</param>
+        /// <param name="allowNonOwner">When set, allows edits not originating from the note's author character.</param>
+        /// <returns>The outcome of the attempted edit.</returns>
+        public async Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId,
+            int? authorCharacterId,
+            int recordId,
+            string? title,
+            string? body,
+            bool allowNonOwner = false) // default to not allowing non-author edits.
+        {
+            var result = new RecordUpdateResult();
+
+            await using var db = await GetDb();
+
+            // Retrieved record matching the provided recordId.
+            var existing = await db.DbContext.RecordPersonalNote
+                .Include(r => r.RecordCharacter)
+                .SingleOrDefaultAsync(r => r.RecordCharacterId == recordId);
+
+            // If record not found report not found.
+            if (existing == null)
+            {
+                result.Status = RecordUpdateStatus.NotFound;
+                return result;
+            }
+
+            // Prohibit edits from non owners unless allowNonOwner is set.
+            if (!allowNonOwner && (existing.RecordCharacter.AuthorCharacterId != authorCharacterId || authorCharacterId == null))
+            {
+                result.Status = RecordUpdateStatus.Prohibited;
+                return result;
+            }
+
+            // Prohibit editing deleted notes.
+            if (existing.RecordCharacter.Deleted == true)
+            {
+                result.Status = RecordUpdateStatus.Prohibited;
+                return result;
+            }
+
+            // The list containing the new edit entries made.
+            var edits = new List<RecordEdit>(2);
+
+            // Create an edit if the title has changed.
+            if (title != null && existing.Title != title)
+            {
+                edits.Add(AddRecordEdit(db.DbContext,
+                    existing.RecordCharacter,
+                    nameof(RecordPersonalNote.Title),
+                    existing.Title,
+                    title,
+                    authorUserId,
+                    authorCharacterId));
+                existing.Title = title;
+            }
+
+            // Create an edit if the body has changed.
+            if (body != null && existing.Body != body)
+            {
+                edits.Add(AddRecordEdit(db.DbContext,
+                    existing.RecordCharacter,
+                    nameof(RecordPersonalNote.Body),
+                    existing.Body,
+                    body,
+                    authorUserId,
+                    authorCharacterId));
+                existing.Body = body;
+            }
+
+            // If no changes were made then report no change.
+            if (edits.Count == 0)
+            {
+                result.Status = RecordUpdateStatus.NoChange;
+                return result;
+            }
+
+            // Submit the changes and report update took place.
+            await db.DbContext.SaveChangesAsync();
+            result.Status = RecordUpdateStatus.Updated;
+            result.Edits = edits.Select(e => new Edit(e.Field, e.Id, e.OldValue, e.NewValue)).ToList();
+
+            return result;
+        }
+
+        #endregion
 
         #endregion
 

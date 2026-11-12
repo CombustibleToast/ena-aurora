@@ -4,6 +4,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Utility; // Imp
 using Content.Shared._Impstation.CCVar; // Imp
+using Content.Shared._AS.CCVar; // Aurora's Song
 
 namespace Content.Client.Options.UI.Tabs;
 
@@ -17,6 +18,9 @@ public sealed partial class AccessibilityTab : Control
         Control.AddOptionCheckBox(CCVars.ChatEnableColorName, EnableColorNameCheckBox);
         Control.AddOptionCheckBox(CCVars.AccessibilityColorblindFriendly, ColorblindFriendlyCheckBox);
         Control.AddOptionCheckBox(CCVars.ReducedMotion, ReducedMotionCheckBox);
+        Control.AddOptionCheckBox(ASCCVars.Scopophobia, ScopophobiaCheckBox); // Aurora's Song
+        Control.AddOptionCheckBox(ASCCVars.DisableStellarInteractionParticles, DisableStellarInteractionParticlesCheckBox); // Aurora's Song
+        Control.AddOptionCheckBox(CCVars.DisableAiStatic, DisableAiStaticCheckBox);
         Control.AddOptionPercentSlider(CCVars.ScreenShakeIntensity, ScreenShakeIntensitySlider);
         Control.AddOptionPercentSlider(CCVars.ChatWindowOpacity, ChatWindowOpacitySlider);
         Control.AddOptionPercentSlider(CCVars.SpeechBubbleTextOpacity, SpeechBubbleTextOpacitySlider);

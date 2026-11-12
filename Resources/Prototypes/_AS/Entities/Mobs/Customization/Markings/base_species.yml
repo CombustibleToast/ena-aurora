@@ -4,7 +4,9 @@
 # species restriction list in its entirety for each groupWhitelist property.
 
 # Species for reference, excluding non-roundstart:
+# Allulalo
 # Arachnid
+# Decapoid
 # Diona
 # Dwarf
 # Felinid
@@ -33,11 +35,14 @@
   id: BaseSpeciesEyesStandard
   invertGroupWhitelist: true
   groupWhitelist:
+  - Allulalo
   - Arachnid
+  - Decapoid
   - Diona
   - IPC
   - Moth
   - Vox
+  - Thaven
 
 # Organic - Species who can be assumed to have skin. If you can imagine giving this species a tattoo or a scar, it is
 # probably included. (Because this is used for tattoos and scars.)
@@ -48,6 +53,7 @@
   invertGroupWhitelist: true
   groupWhitelist:
   # Non-standard
+  - Allulalo
   - Moth
   - Vox
   # Inorganic / Skinless
@@ -60,6 +66,7 @@
   invertGroupWhitelist: true
   groupWhitelist:
   # Non-standard
+  - Allulalo
   - Harpy
   - Moth
   - Vox
@@ -73,10 +80,12 @@
   invertGroupWhitelist: true
   groupWhitelist:
   # Non-standard
+  - Allulalo
   - Harpy
   - Moth
   - Vox
   # Inorganic / Skinless
+  - Decapoid
   - Diona
   - IPC
   # Technically Tajaran are missing one pixel off the heel (like, very subtle digitigrade)
@@ -113,8 +122,16 @@
 
 - type: marking
   abstract: true
+  id: BaseSpeciesThaven
+  groupWhitelist: [Thaven]
+  preferredSpecies: [Thaven]
+
+- type: marking
+  abstract: true
   id: BaseSpeciesUndergarmentStandard
   invertGroupWhitelist: true
   groupWhitelist:
+  - Allulalo
   - Vox
   - Reptilian
+  - Thaven

@@ -13,10 +13,14 @@ gun-examine-caliber-35 = .35 pistol ammo
 gun-examine-caliber-45 = .45 pistol ammo
 gun-examine-caliber-45-cap = .45 cap ammo
 gun-examine-caliber-10 = .10 rifle ammo
+#Aurora's Song | insert 8g caliber examine
+gun-examine-caliber-8g = 8 gauge shells
 gun-examine-caliber-12g = 12g shotgun shells
 gun-examine-caliber-25 = .25 rifle ammo
 gun-examine-caliber-20 = .20 rifle ammo
 gun-examine-caliber-30 = .30 rifle ammo
+# Aurora's Song | insert .30 long rifle caliber examine
+gun-examine-caliber-30-long = .30 long rifle ammo
 gun-examine-caliber-60 = .60 rifle ammo
 gun-examine-caliber-asmgt = .35 pistol / .20 rifle / .25 rifle / .30 rifle ammo
 gun-examine-caliber-foam = foam darts
@@ -42,6 +46,14 @@ gun-examine-caliber-40mm-grenade-dart = 40mm grenades / tracking darts
 gun-examine-caliber-rocket = rocket-propelled grenades
 gun-examine-caliber-cannon-ball = cannon balls
 gun-examine-caliber-mail-capsule = mail capsules
+# Imp Station specific
+gun-examine-caliber-leviathan = 155mm rocket-propelled shells
+gun-examine-caliber-fuel = high-pressure ignited welding fuel
+gun-examine-caliber-echion-low = 800J echion bolt
+gun-examine-caliber-echion-medium = 1000J echion bolt
+gun-examine-caliber-echion-high = 1200J echion bolt
+gun-examine-caliber-echion-high-burst = 4400J echion burst
+gun-examine-caliber-echion-hitscan = 800J accelerated echion stream
 
 # Manufacturers (alphabetical please)
 weapon-details-manufacturer-custom-made = Custom Made
@@ -54,6 +66,8 @@ weapon-details-manufacturer-nanotrasen-technologies = NanoTrasen Technologies
 weapon-details-manufacturer-steelbolt-tool-forge = Steelbolt Tool Forge
 # Aurora Song specific
 weapon-details-manufacturer-arcadia-sec-solutions = Arcadia Security Solutions
+# Imp Station specific
+weapon-details-manufacturer-waffle-corp = Waffle Corporation
 
 # Classes (alphabetical please)
 weapon-details-class-assault-rifle = Assault Rifle
@@ -67,3 +81,5 @@ weapon-details-class-shotgun = Shotgun
 weapon-details-class-sniper = Sniper Rifle
 weapon-details-class-submachine-gun = Submachine Gun
 weapon-details-class-tool = Tool
+# Imp Station specific
+weapon-details-class-flamethrower = Flamethrower

@@ -1,0 +1,35 @@
+﻿- type: entity
+  parent: [ ASIDCardStandard, C2ContrabandSyndicateRestrictedUnredeemable ]
+  id: ASSyndicateRepresentativeIDCard
+  name: syndicate representative ID card
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: black
+    - state: stripe_top
+      color: "#e80c0c"
+    - state: stripe_bottom
+      color: "#960606"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: SyndicateCommander
+  - type: IdCard
+    jobIcon: JobIconSyndicate
+
+- type: entity
+  parent: [ ASIDCardStandard, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASNanotrasenRepresentativeIDCard
+  name: nanotrasen representative ID card
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/id_cards.rsi
+    layers:
+    - state: centcom
+    - state: stripe_top
+      color: "#134975"
+    - state: stripe_bottom
+      color: "#0d304d"
+    - sprite: Interface/Misc/job_icons.rsi
+      offset: -0.09375, 0.0625
+      state: Nanotrasen

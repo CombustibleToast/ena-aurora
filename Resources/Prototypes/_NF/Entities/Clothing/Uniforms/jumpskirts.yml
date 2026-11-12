@@ -55,7 +55,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpskirt/security_guard.rsi
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpskirtNfsd
   name: NFSD jumpskirt
   description: A long sleeved jumpskirt produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
@@ -66,7 +66,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpskirt/nfsd_skirt.rsi
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpskirtNfsdShort
   name: NFSD jumpskirt
   description: A short sleeved jumpskirt produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
@@ -77,7 +77,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpskirt/nfsd_skirt_short.rsi
 
 - type: entity
-  parent: ClothingUniformSkirtBase
+  parent: [ ClothingUniformSkirtBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpskirtPublicAffairsLiaison
   name: public affairs liaison jumpskirt
   description: A starched and pressed skirt suit for the public affairs liaison.
@@ -99,7 +99,7 @@
     sprite: _NF/Clothing/Uniforms/Jumpskirt/private_security.rsi
 
 - type: entity
-  parent: ClothingUniformJumpskirtHoP
+  parent: [ ClothingUniformJumpskirtHoP, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingUniformJumpskirtSr
   name: station representative's uniform
   description: A top of the line outfit for Frontier Outpost's station representative. No expense was spared in the tailoring, every stitch is a masterpiece. The fact this suit was even issued shows the trust Central Command is placing in their representative on this outpost.

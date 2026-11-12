@@ -10,11 +10,11 @@ using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
 namespace Content.Client.Holopad;
 
-public sealed class HolopadSystem : SharedHolopadSystem
+public sealed partial class HolopadSystem : SharedHolopadSystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly SpriteSystem _sprite = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private SpriteSystem _sprite = default!;
 
     public override void Initialize()
     {
@@ -48,10 +48,7 @@ public sealed class HolopadSystem : SharedHolopadSystem
         if (!HasComp<HolopadUserComponent>(uid))
             return;
 
-        // Aurora Song: Convert bool to enum - DeltaV changed TypingChangedEvent to use bool,
-        // but our HolopadUserTypingChangedEvent still expects TypingIndicatorState enum
-        var state = ev.IsTyping ? TypingIndicatorState.Typing : TypingIndicatorState.None;
-        var netEv = new HolopadUserTypingChangedEvent(GetNetEntity(uid.Value), state);
+        var netEv = new HolopadUserTypingChangedEvent(GetNetEntity(uid.Value), ev.State);
         RaiseNetworkEvent(netEv);
     }
 

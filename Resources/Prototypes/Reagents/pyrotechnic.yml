@@ -165,7 +165,7 @@
   tileReactions:
   - !type:FlammableTileReaction {}
   tags: # Aurora's Song
-  - IPC
+  - IPCCompatible
   metabolisms:
     Bloodstream:
       effects:
@@ -184,12 +184,12 @@
             Poison: 1
       - !type:Flammable
         multiplier: 0.4
-      # Aurora's Song Start - IPCs can get drunk from welding fuel
+      # Aurora's Song Start - IPCs and Vox can get drunk from welding fuel
       - !type:Drunk
         boozePower: 20 # As potent as ethanol per unit, ethanol gives 2 every 0.05 and this digests at 0.5
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [IPC]
+          type: [IPC, Vox]
       # Aurora's Song End
 
 - type: reagent

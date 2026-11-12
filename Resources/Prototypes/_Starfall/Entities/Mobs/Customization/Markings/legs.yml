@@ -1,0 +1,422 @@
+- type: marking
+  id: LumariAthamasLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: athamas_l_leg
+
+- type: marking
+  id: LumariAthamasRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: athamas_r_leg
+
+- type: marking
+  id: LumariCharredLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: charred_l_leg
+
+- type: marking
+  id: LumariCharredRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: charred_r_leg
+
+- type: marking
+  id: LumariDeathheadLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: deathhead_l_leg
+
+- type: marking
+  id: LumariDeathheadRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: deathhead_r_leg
+
+- type: marking
+  id: LumariFanLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: fan_l_leg
+
+- type: marking
+  id: LumariFanRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: fan_r_leg
+
+- type: marking
+  id: LumariFirewatchLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: firewatch_l_leg
+
+- type: marking
+  id: LumariFirewatchRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: firewatch_r_leg
+
+- type: marking
+  id: LumariFootLChimeraMoth
+  bodyPart: LFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: foot_l_chimera_moth
+
+- type: marking
+  id: LumariFootLProstheticMoth
+  bodyPart: LFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: foot_l_prosthetic_moth
+
+- type: marking
+  id: LumariFootRProstheticMoth
+  bodyPart: RFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: foot_r_prosthetic_moth
+
+- type: marking
+  id: LumariGothicLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: gothic_l_leg
+
+- type: marking
+  id: LumariGothicRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: gothic_r_leg
+
+- type: marking
+  id: LumariJungleLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: jungle_l_leg
+
+- type: marking
+  id: LumariJungleRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: jungle_r_leg
+
+- type: marking
+  id: LumariMoonflyLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: moonfly_l_leg
+
+- type: marking
+  id: LumariMoonflyRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: moonfly_r_leg
+
+- type: marking
+  id: LumariOakwormLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: oakworm_l_leg
+
+- type: marking
+  id: LumariOakwormRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: oakworm_r_leg
+
+- type: marking
+  id: LumariPointyLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: pointy_l_leg
+
+- type: marking
+  id: LumariPointyRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: pointy_r_leg
+
+- type: marking
+  id: LumariRaggedLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: ragged_l_leg
+
+- type: marking
+  id: LumariRaggedRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: ragged_r_leg
+
+- type: marking
+  id: LumariRoyalLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: royal_l_leg
+
+- type: marking
+  id: LumariRoyalRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: royal_r_leg
+
+- type: marking
+  id: LumariSlashedLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: slashed_l_leg
+
+- type: marking
+  id: LumariSlashedRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: slashed_r_leg
+
+- type: marking
+  id: LumariWhiteflyLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: whitefly_l_leg
+
+- type: marking
+  id: LumariWhiteflyRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: whitefly_r_leg
+
+- type: marking
+  id: LumariWitchwingLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: witchwing_l_leg
+
+- type: marking
+  id: LumariWitchwingRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: witchwing_r_leg
+
+- type: marking
+  id: LumariChitinidRadiantLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: radiant_l_leg
+
+- type: marking
+  id: LumariChitinidRadiantRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: radiant_r_leg
+
+- type: marking
+  id: LumariChitinidSpottedLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: spotted_l_leg
+
+- type: marking
+  id: LumariChitinidSpottedRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: spotted_r_leg
+
+- type: marking
+  id: LumariChitinidStripesLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: stripes_l_leg
+
+- type: marking
+  id: LumariChitinidStripesRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: stripes_r_leg
+
+- type: marking
+  id: LumariChitinidToxicLLeg
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: toxic_l_leg
+
+- type: marking
+  id: LumariChitinidToxicRLeg
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: toxic_r_leg
+
+- type: marking
+  id: LumariLegLProstheticMoth
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: leg_l_prosthetic_moth
+
+- type: marking
+  id: LumariLegRProstheticMoth
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: leg_r_prosthetic_moth
+
+- type: marking
+  id: LumariLegLTwistingMoth
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: leg_l_twisting_moth
+
+- type: marking
+  id: LumariLegRTwistingMoth
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: leg_r_twisting_moth
+
+- type: marking
+  id: LumariLegLChimeraMoth
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/legs.rsi
+    state: leg_l_chimera_moth
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeThighLeft
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: thigh_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeThighRight
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: thigh_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeShinLeft
+  bodyPart: LLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: shin_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeShinRight
+  bodyPart: RLeg
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: shin_r_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeFootLeft
+  bodyPart: LFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: foot_l_gauze
+
+- type: marking
+  parent: LumariGauzeBase
+  id: LumariGauzeFootRight
+  bodyPart: RFoot
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/gauze.rsi
+    state: foot_r_gauze
+

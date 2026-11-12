@@ -4101,14 +4101,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -26.5,-26.5
       parent: 1
-- proto: AirlockCaptainLocked
-  entities:
-  - uid: 755
-    components:
-    - type: Transform
-      rot: 1.5707963267948966 rad
-      pos: 15.5,-4.5
-      parent: 1
 - proto: AirlockChemistryGlass
   entities:
   - uid: 1515
@@ -4119,6 +4111,12 @@ entities:
       parent: 1
 - proto: AirlockCommand
   entities:
+  - uid: 755
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 15.5,-4.5
+      parent: 1
   - uid: 1208
     components:
     - type: Transform

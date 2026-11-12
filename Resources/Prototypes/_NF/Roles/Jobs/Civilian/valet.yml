@@ -12,7 +12,6 @@
   supervisors: job-supervisors-sr
   weight: 60
   displayWeight: 10
-  canBeAntag: false
   access:
   - Cargo # Aurora's Song - Cargo access is being undeprecated
   - Maintenance
@@ -21,7 +20,7 @@
   - Aurora # Aurora Song - Changed from Frontier to Aurora
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    implants: [ MindShieldImplant, TrackingImplant ] # Aurora's Song - Added tracking implant
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

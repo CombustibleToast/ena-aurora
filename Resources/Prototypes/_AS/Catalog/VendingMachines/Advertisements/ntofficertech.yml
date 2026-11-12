@@ -1,0 +1,5 @@
+﻿- type: localizedDataset
+  id: NanoTrasenOfficerTechAds
+  values:
+    prefix: advertisement-ntvendtech-
+    count: 5

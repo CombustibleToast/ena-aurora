@@ -1,0 +1,352 @@
+- type: marking
+  id: LumariHairAfro
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: afro
+
+- type: marking
+  id: LumariHairAmazon
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: amazon
+
+- type: marking
+  id: LumariHairBalding
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: balding
+
+- type: marking
+  id: LumariHairBeachWave
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: beach_wave
+
+- type: marking
+  id: LumariHairBedHead
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: bed_head
+
+- type: marking
+  id: LumariHairBeehive
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: beehive
+
+- type: marking
+  id: LumariHairBigAfro
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: big_afro
+
+- type: marking
+  id: LumariHairBixie
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: bixie
+
+- type: marking
+  id: LumariHairBob
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: bob
+
+- type: marking
+  id: LumariHairBowlcut
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: bowlcut
+
+- type: marking
+  id: LumariHairBraid
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: braid
+
+- type: marking
+  id: LumariHairBuisness
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: buisness
+
+- type: marking
+  id: LumariHairBun
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: bun
+
+- type: marking
+  id: LumariHairBuzzCut
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: buzz_cut
+
+- type: marking
+  id: LumariHairCombOver
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: comb_over
+
+- type: marking
+  id: LumariHairCombedAfro
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: combed_afro
+
+- type: marking
+  id: LumariHairCornrows
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: cornrows
+
+- type: marking
+  id: LumariHairCrewCut
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: crew_cut
+
+- type: marking
+  id: LumariHairCurly
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: curly
+
+- type: marking
+  id: LumariHairDavid
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: david
+
+- type: marking
+  id: LumariHairDoubleBuns
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: double_buns
+
+- type: marking
+  id: LumariHairDreadlocks
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: dreadlocks
+
+- type: marking
+  id: LumariHairEltonCutLeft
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: elton_cut_left
+
+- type: marking
+  id: LumariHairEltonCutRight
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: elton_cut_right
+
+- type: marking
+  id: LumariHairElven
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: elven
+
+- type: marking
+  id: LumariHairEmo
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: emo
+
+- type: marking
+  id: LumariHairFeathered
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: feathered
+
+- type: marking
+  id: LumariHairFlatTop
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: flat_top
+
+- type: marking
+  id: LumariHairFloorLengthBedhead
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: floor_length_bedhead
+
+- type: marking
+  id: LumariHairHighBraid
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: high_braid
+
+- type: marking
+  id: LumariHairLongDreadlocks
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: long_dreadlocks
+
+- type: marking
+  id: LumariHairLongParted
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: long_parted
+
+- type: marking
+  id: LumariHairLongUndercut
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: long_undercut
+
+- type: marking
+  id: LumariHairLongUnkempt
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: long_unkempt
+
+- type: marking
+  id: LumariHairLongWavy
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: long_wavy
+
+- type: marking
+  id: LumariHairLowTaperFade
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: low_taper_fade
+
+- type: marking
+  id: LumariHairMessyBangs
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: messy_bangs
+
+- type: marking
+  id: LumariHairPompadour
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: pompadour
+
+- type: marking
+  id: LumariHairShortBraid
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: short_braid
+
+- type: marking
+  id: LumariHairShortParted
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: short_parted
+
+- type: marking
+  id: LumariHairSingleHair
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: single_hair
+
+- type: marking
+  id: LumariHairTiltedBangs
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: tilted_bangs
+
+- type: marking
+  id: LumariHairUndercut
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/hair.rsi
+    state: undercut
+
+- type: marking
+  id: LumariHeadBowlcut
+  bodyPart: Hair
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: bowlcut
+

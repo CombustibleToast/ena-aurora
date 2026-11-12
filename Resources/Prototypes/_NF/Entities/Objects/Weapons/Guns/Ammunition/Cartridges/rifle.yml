@@ -47,7 +47,7 @@
 - type: entity
   id: NFBaseCartridgeRifle60
   name: cartridge (.60 rifle)
-  parent: CartridgeAntiMateriel
+  parent: [ C2ContrabandRestricted, CartridgeAntiMateriel ] # Aurora's Song - Added C2ContrabandRestricted
   abstract: true
   components:
   - type: Tag
@@ -378,7 +378,7 @@
 - type: entity
   id: NFCartridgeRifle60
   name: cartridge (.60 rifle)
-  parent: NFBaseCartridgeRifle60
+  parent: [ NFBaseCartridgeRifle60, C2ContrabandUnredeemableRestricted ] # Aurora's Song - Added C2ContrabandRestricted
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle60
@@ -390,7 +390,7 @@
 - type: entity
   id: NFCartridgeRifle60Rubber
   name: cartridge (.60 rifle, rubber)
-  parent: NFBaseCartridgeRifle60
+  parent: [ NFBaseCartridgeRifle60, C2ContrabandUnredeemableRestricted ] # Aurora's Song - Added C2ContrabandRestricted
   components:
   - type: CartridgeAmmo
     proto: NFBulletRifle60Rubber

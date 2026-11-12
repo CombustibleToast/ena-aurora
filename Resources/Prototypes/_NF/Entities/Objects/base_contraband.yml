@@ -42,7 +42,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Engineering ]
+    allowedDepartments: [ Engineering, Command ] # Aurora's Song - Added Command
 
 - type: entity # Aurora's Song - added for Medical
   parent: BaseC2ContrabandUnredeemable
@@ -50,7 +50,7 @@
   abstract: true
   components:
   - type: Contraband
-    allowedDepartments: [ Medical ]
+    allowedDepartments: [ Medical, Security, Command ] # Aurora's Song - Added Security and Command
 
 - type: entity # Aurora's Song - added for Service
   parent: BaseC2ContrabandUnredeemable
@@ -66,18 +66,19 @@
   abstract: true
   components:
   - type: Contraband
-    severity: Class2Expedition
+    severity: Class2Unregistered # Aurora's Song - Class2Expedition<Class2Unregistered
     turnInValues:
       FrontierUplinkCoin: 1
       ExchangeCoin: 1 # AS
       Doubloon: 1
 
-- type: entity
+- type: entity # Aurora's Song - I cannot modify the turnInValues here for the life of me. This is recommended to be used for C2NoValue, use C2Expedition for C2 with value.
   parent: BaseC2ContrabandUnredeemable
   id: BaseC2Contraband
   abstract: true
   components:
   - type: Contraband
+    severity: Class2Unregistered # Aurora's Song - Class2Expedition<Class2Unregistered
     turnInValues: &noFUCs
       FrontierUplinkCoin: 0
       Doubloon: 0
@@ -91,7 +92,7 @@
     turnInValues:
       FrontierUplinkCoin: 1
       Doubloon: 1 # To give them a reason to fight over it if they desire
-    allowedDepartments: [ Security ]
+    allowedDepartments: [ Security, Command ] # Aurora's Song - Added Command
 # endregion
 
 # region Class 3 Objects
@@ -103,13 +104,12 @@
     severity: Class3General
     allowedDepartments: []
 
-- type: entity
+- type: entity #Use this one for MOST C3(In the expedition area), unless it's meant to be scattered junk, or is a small item.
   parent: BaseC3ContrabandUnredeemable
   id: BaseC3ExpeditionContraband
   abstract: true
   components:
   - type: Contraband
-    severity: Class3Expedition
     turnInValues:
       FrontierUplinkCoin: 2
       ExchangeCoin: 2 # AS
@@ -191,22 +191,22 @@
 
 - type: entity
   parent: BaseC3SyndicateContrabandUnredeemable
-  id: BaseC3SyndicateContrabandNoValue
-  abstract: true
-  components:
-  - type: Contraband
-    turnInValues: *noFUCs
-
-- type: entity
-  parent: BaseC3SyndicateContrabandUnredeemable
   id: BaseC3SyndicateContraband
   abstract: true
   components:
   - type: Contraband
     turnInValues:
-      FrontierUplinkCoin: 1
-      ExchangeCoin: 1 # AS
-      Doubloon: 1
+      FrontierUplinkCoin: 2 # Aurora's Song - 1<2
+      ExchangeCoin: 2 # Aurora's Song - 1<2
+      Doubloon: 2 # Aurora's Song - 1<2
+
+- type: entity
+  parent: BaseC3SyndicateContrabandUnredeemable
+  id: BaseC3SyndicateContrabandNoValue
+  abstract: true
+  components:
+  - type: Contraband
+    turnInValues: *noFUCs
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable

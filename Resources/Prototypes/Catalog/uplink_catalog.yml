@@ -769,11 +769,8 @@
   name: uplink-combat-medipen-name
   description: uplink-combat-medipen-desc
   productEntity: CombatMedipen
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 2
   cost:
-    Telecrystal: 3
+    Telecrystal: 1 #Aurora's Song - from 3 TC > 1 TC
   categories:
   - UplinkChemicals
 
@@ -809,7 +806,7 @@
   description: uplink-cigarettes-desc
   productEntity: CigPackSyndicate
   cost:
-    Telecrystal: 1
+    Telecrystal: 2 #Aurora's Song - from 1 TC > 2 TC
   categories:
   - UplinkChemicals
 
@@ -1125,6 +1122,16 @@
     Telecrystal: 2
   categories:
   - UplinkDisruption
+
+- type: listing
+  id: UplinkTravelCamera
+  name: uplink-travel-camera-name
+  description: uplink-travel-camera-desc
+  productEntity: TravelCamera
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkDeception
 
 # Note: Removed for the time being until surgery/newmed is added. Considered bloat until then.
 # - type: listing
@@ -1775,7 +1782,7 @@
   id: UplinkClothingOuterHardsuitJuggernaut
   name: uplink-clothing-outer-hardsuit-juggernaut-name
   description: uplink-clothing-outer-hardsuit-juggernaut-desc
-  icon: { sprite: /Textures/Structures/Storage/Crates/syndicate.rsi, state: icon }
+  icon: { sprite: /Textures/_AS/Structures/Storage/Crates/syndicate.rsi, state: icon } # Aurora's Song - Storage Resprites Batch 1
   productEntity: CrateCybersunJuggernautBundle
   cost:
     Telecrystal: 12
@@ -2308,3 +2315,20 @@
   - !type:BuyerJobCondition
     whitelist:
     - Lawyer
+
+#Objective items
+
+- type: listing
+  id: uplinkHijackBeacon
+  name: uplink-hijack-beacon-name
+  description: uplink-hijack-beacon-desc
+  productEntity: HijackBeacon
+  categories:
+    - UplinkObjective
+  conditions:
+  - !type:ListingLimitedStockCondition
+    stock: 1
+  - !type:BuyerObjectiveWhitelistCondition
+    whitelist:
+      components:
+      - HijackTradeStationCondition

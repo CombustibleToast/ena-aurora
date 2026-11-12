@@ -42,26 +42,26 @@ using Content.Shared._NF.Lathe; // Frontier
 namespace Content.Server.Lathe
 {
     [UsedImplicitly]
-    public sealed class LatheSystem : SharedLatheSystem
+    public sealed partial class LatheSystem : SharedLatheSystem
     {
-        [Dependency] private readonly IGameTiming _timing = default!;
-        [Dependency] private readonly IPrototypeManager _proto = default!;
-        [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-        [Dependency] private readonly AtmosphereSystem _atmosphere = default!;
-        [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-        [Dependency] private readonly SharedAudioSystem _audio = default!;
-        [Dependency] private readonly ContainerSystem _container = default!;
-        [Dependency] private readonly EmagSystem _emag = default!;
-        [Dependency] private readonly UserInterfaceSystem _uiSys = default!;
-        [Dependency] private readonly MaterialStorageSystem _materialStorage = default!;
-        [Dependency] private readonly PopupSystem _popup = default!;
-        [Dependency] private readonly PuddleSystem _puddle = default!;
-        [Dependency] private readonly ReagentSpeedSystem _reagentSpeed = default!;
-        [Dependency] private readonly SharedSolutionContainerSystem _solution = default!;
-        [Dependency] private readonly StackSystem _stack = default!;
-        [Dependency] private readonly TransformSystem _transform = default!;
-        [Dependency] private readonly RadioSystem _radio = default!;
-        [Dependency] private readonly ContrabandTurnInSystem _contraband = default!; // Frontier
+        [Dependency] private IGameTiming _timing = default!;
+        [Dependency] private IPrototypeManager _proto = default!;
+        [Dependency] private IAdminLogManager _adminLogger = default!;
+        [Dependency] private AtmosphereSystem _atmosphere = default!;
+        [Dependency] private SharedAppearanceSystem _appearance = default!;
+        [Dependency] private SharedAudioSystem _audio = default!;
+        [Dependency] private ContainerSystem _container = default!;
+        [Dependency] private EmagSystem _emag = default!;
+        [Dependency] private UserInterfaceSystem _uiSys = default!;
+        [Dependency] private MaterialStorageSystem _materialStorage = default!;
+        [Dependency] private PopupSystem _popup = default!;
+        [Dependency] private PuddleSystem _puddle = default!;
+        [Dependency] private ReagentSpeedSystem _reagentSpeed = default!;
+        [Dependency] private SharedSolutionContainerSystem _solution = default!;
+        [Dependency] private StackSystem _stack = default!;
+        [Dependency] private TransformSystem _transform = default!;
+        [Dependency] private RadioSystem _radio = default!;
+        [Dependency] private ContrabandTurnInSystem _contraband = default!; // Frontier
 
         /// <summary>
         /// Per-tick cache
@@ -189,11 +189,19 @@ namespace Content.Server.Lathe
                 return false;
             quantity = int.Min(quantity, MaxItemsPerRequest);
 
+            // Coyote Start: We comment out these two checks for the two methods below.
+            /*
             if (!CanProduce(uid, recipe, quantity, component))
                 return false;
 
             foreach (var (mat, amount) in GetAdjustedAmount(component, recipe))
                 _materialStorage.TryChangeMaterialAmount(uid, mat, -amount * quantity);
+            */
+            if (!CheckMaterialAvailability(uid, component, recipe, quantity)) // Coyote: Check material availability (including buffer)
+                return false;
+            if (!DeductMaterials(uid, component, recipe, quantity)) // Coyote: deduct materials (buffer first, then storage)
+                return false;
+            // Coyote End
 
             if (component.Queue.Last is { } node && node.ValueRef.Recipe == recipe.ID)
                 node.ValueRef.ItemsRequested += quantity;
@@ -302,7 +310,9 @@ namespace Content.Server.Lathe
             if (producing == null && component.Queue.First is { } node)
                 producing = node.Value.Recipe;
 
-            var state = new LatheUpdateState(GetAvailableRecipes(uid, component), component.Queue.ToArray(), producing);
+            int? bufferAmount = null; // Coyote: Biomass buffer
+            OnGetBufferAmount?.Invoke(uid, component, ref bufferAmount);  // Coyote: event to get buffer
+            var state = new LatheUpdateState(GetAvailableRecipes(uid, component), component.Queue.ToArray(), producing, bufferAmount); // Coyote: add bufferAmount
             _uiSys.SetUiState(uid, LatheUiKey.Key, state);
         }
 

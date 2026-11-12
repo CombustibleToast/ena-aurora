@@ -19,3 +19,94 @@
     notificationPrefix: prayer-chat-notify-colcom
     verb: prayer-verbs-call
     verbImage: null
+
+- type: entity
+  parent: BaseHandheldInstrument
+  id: MediaPlayerInstrument
+  name: mp3 player
+  description: Ancient technology brought back so you can blast Undertale at everyone at the function.
+  suffix: Regular
+  components:
+  - type: Instrument
+    allowPercussion: true
+    allowProgramChange: true
+  - type: Sprite
+    sprite: _AS/Objects/Fun/Instruments/mediaplayer.rsi
+    state: mediaplayer
+  - type: ActivatableUI
+    inHandsOnly: false
+  - type: Item
+    size: Tiny
+  - type: Construction
+    deconstructionTarget: null
+    graph: MP3Player
+    node: mp3
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentPink
+  suffix: Pink
+  components:
+  - type: Sprite
+    state: mediaplayer_pink
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentBloodred
+  description: This rendition of BIG SHOT is brought to you by the gorlex coorporation. Remember us while you kill them all.
+  suffix: Bloodred
+  components:
+  - type: Sprite
+    state: mediaplayer_bloodred
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentBlue
+  suffix: Blue
+  components:
+  - type: Sprite
+    state: mediaplayer_blue
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentGreen
+  suffix: Green
+  components:
+  - type: Sprite
+    state: mediaplayer_green
+
+- type: entity
+  parent: MediaPlayerInstrument
+  id: MediaPlayerInstrumentRed
+  suffix: Red
+  components:
+  - type: Sprite
+    state: mediaplayer_red
+
+- type: entity
+  parent: BaseItem
+  id: MediaPlayerInstrumentRandomBox
+  name: media player mystery box
+  suffix: Random
+  components:
+  - type: StaticPrice
+    price: 10000 # For some god-forsaken reason this auto adds a zero/10xs the price. Its 100k.
+  - type: Sprite
+    sprite: Objects/Fun/figurines.rsi
+    layers:
+    - state: fig_box
+  - type: SpawnItemsOnUse
+    sound:
+      path: /Audio/Effects/unwrap.ogg
+    items:
+    - id: MysteryFigureBoxTrash
+    - id: MediaPlayerInstrument
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentPink
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentBlue
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentGreen
+      orGroup: MP3Box
+    - id: MediaPlayerInstrumentRed
+      orGroup: MP3Box

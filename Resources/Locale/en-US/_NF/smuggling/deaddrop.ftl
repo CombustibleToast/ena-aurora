@@ -13,7 +13,9 @@ smuggling-report-nfsd-pod = Syndicate drop pod detected. Estimated location: ({$
 smuggling-report-pirate = Plunder ahoy! Syndicate drop pod detected around ({$x}, {$y})
 
 deaddrop-faxed-hint-name = suspicious fax
+# Aurora's Song Start - Changed to Orion from Spinward
 deaddrop-faxed-hint-content = 
     Not much time.
-    Spinward Syndicate needs help.
+    Orion Syndicate needs help. 
+# Aurora's Song End
 deaddrop-faxed-hint-signature = Syndicate Logistics

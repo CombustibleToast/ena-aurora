@@ -1,0 +1,172 @@
+#   Snouts
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - BaseSnout
+  id: ASIPCSnoutBeak
+  sprites:
+    - sprite: _AS/Mobs/Customization/IPC/snouts.rsi
+      state: beak
+
+#   Vox tails
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTail
+    - EmoteHardThump
+  id: IPCVoxTail
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailShort
+    - EmoteHardThump
+  id: IPCVoxTailShort
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailBig
+    - EmoteHardThump
+  id: IPCVoxTailBig
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailSpikes
+    - EmoteHardThump
+  id: IPCVoxTailSpikes
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailDocked
+    - EmoteHardThump
+  id: IPCVoxTailDocked
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailNub
+    - EmoteHardThump
+  id: IPCVoxTailNub
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailRaptor
+    - EmoteHardThump
+  id: IPCVoxTailRaptor
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailShort1
+    - EmoteHardThump
+  id: IPCVoxTailShort1
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailShort2
+    - EmoteHardThump
+  id: IPCVoxTailShort2
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailBalled
+    - EmoteHardThump
+  id: IPCVoxTailBalled
+  forcedColoring: false
+
+- type: marking
+  parent:
+    - BaseSpeciesIPC
+    - VoxTailSplit
+    - EmoteHardThump
+  id: IPCVoxTailSplit
+  forcedColoring: false
+
+# animated Vox variants
+
+- type: marking
+  parent: VoxTailAnimated
+  id: IPCVoxTailAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailShortAnimated
+  id: IPCVoxTailShortAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailBigAnimated
+  id: IPCVoxTailBigAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailSpikesAnimated
+  id: IPCVoxTailSpikesAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailDockedAnimated
+  id: IPCVoxTailDockedAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+- type: marking
+  parent: VoxTailSplitAnimated
+  id: IPCVoxTailSplitAnimated
+  groupWhitelist: []
+  forcedColoring: false
+
+# Fish Markings
+- type: marking
+  id: IPCHeadSideFins
+  bodyPart: HeadSide
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_head.rsi
+    state: head_fins
+
+- type: marking
+  id: IPCArmFinL
+  bodyPart: LArm
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_arms.rsi
+    state: arm_fin_l
+
+- type: marking
+  id: IPCArmFinR
+  bodyPart: RArm
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_arms.rsi
+    state: arm_fin_r
+
+- type: marking
+  id: IPCTailEel
+  parent: EmoteWhipThump
+  bodyPart: Tail
+  groupWhitelist: [IPC]
+  sprites:
+  - sprite: _AS/Mobs/Customization/IPC/ipc_tail.rsi
+    state: tail_eel
+  - sprite: _AS/Mobs/Customization/IPC/ipc_tail.rsi
+    state: tail_eel_overlay

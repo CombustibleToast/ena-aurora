@@ -89,7 +89,7 @@
 
 #Syndicate SWAT Helmet
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingHeadHelmetSwat, ContrabandClothing] # Frontier: added ContrabandClothing, BaseC3SyndicateContraband as parent
+  parent: [C2ContrabandSyndicate, ClothingHeadHelmetSwat, ContrabandClothing] # Aurora's Song - added C2ContrabandSyndicate as parent
   id: ClothingHeadHelmetSwatSyndicate
   name: SWAT helmet
   suffix: Syndicate
@@ -168,7 +168,7 @@
 
 #Cult Helmet
 - type: entity
-  parent: [ClothingHeadHelmetBase, BaseC3CultContrabandNoValue, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3CultContrabandNoValue, ContrabandClothing as parent
+  parent: [ClothingHeadHelmetBase, BaseC2Contraband] # Aurora's Song - BaseMajorContraband<BaseC2Contraband
   id: ClothingHeadHelmetCult
   name: cult helmet
   description: A robust, evil-looking cult helmet.
@@ -191,7 +191,7 @@
 
 #Space Ninja Helmet
 - type: entity
-  parent: [ClothingHeadEVAHelmetBase, BaseC3ContrabandNoValue, ContrabandClothing] # Frontier: BaseMajorContraband<BaseC3ContrabandNoValue, add ContrabandClothing
+  parent: [ClothingHeadEVAHelmetBase, C2ContrabandRestricted] # Aurora's Song - BaseMajorContraband<C2ContrabandRestricted
   id: ClothingHeadHelmetSpaceNinja
   name: space ninja helmet
   description: What may appear to be a simple black garment is in fact a highly sophisticated nano-weave helmet. Standard issue ninja gear.
@@ -246,7 +246,7 @@
 
 #Wizard Helmet
 - type: entity
-  parent: [ClothingHeadHelmetBase, ContrabandClothing] # Frontier: added ContrabandClothing as parent
+  parent: ClothingHeadHelmetBase
   id: ClothingHeadHelmetWizardHelm
   name: wizard helm
   description: Strange-looking helmet that most certainly belongs to a real magic user.
@@ -323,7 +323,7 @@
 
 #Chitinous Helmet
 - type: entity
-  parent: [ ClothingHeadHelmetBase, BaseC3ContrabandNoValue] # Frontier: BaseMajorContraband<BaseC3ContrabandNoValue
+  parent: [ ClothingHeadHelmetBase, BaseC1Contraband] # Aurora's Song - BaseMajorContraband<BaseC1Contraband
   id: ClothingHeadHelmetLing
   name: chitinous helmet
   description: An all-consuming chitinous mass of armor.
@@ -346,7 +346,7 @@
 #ERT HELMETS
 #ERT Leader Helmet
 - type: entity
-  parent: [ BaseCentcommContraband, ClothingHeadHelmetArmoredBase ]
+  parent: [ C2ContrabandNanoTrasenRestricted, ClothingHeadHelmetArmoredBase ] # Aurora's Song - BaseCentcommContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingHeadHelmetERTLeader
   name: ERT leader helmet
   description: An in-atmosphere helmet worn by the leader of a Nanotrasen Emergency Response Team. Has blue highlights.
@@ -420,7 +420,7 @@
       Hair: HEAD
 
 - type: entity
-  parent: [ BaseC3SyndicateContraband, ClothingHeadHelmetBase ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ C2ContrabandSyndicate, ClothingHeadHelmetBase ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingHeadHelmetRaid
   name: syndicate raid helmet
   description: An armored helmet for use with the syndicate raid suit. Very stylish.

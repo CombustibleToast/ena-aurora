@@ -1,15 +1,15 @@
 - type: entity
-  id: ASWeaponRifleMarksmanHZ-3-3-M
-  parent: [ ASBaseWeaponRifleMarksmanChamber30, ASBaseWeaponFrameRifleMarksmanAuroraGunsmith ]
-  name: HZ-3-3-M "Jackhammer"
+  id: ASWeaponRifleMarksmanAF-17M
+  parent: [ BaseC3ContrabandCAFUnredeemable, ASBaseWeaponRifleMarksmanChamber30Long, ASBaseWeaponFrameRifleArtificielFederale ]
+  name: AF-17M "Jackhammer"
   description: |-
-    This rifle rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
+    This rifle made by Artificiel Federale rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
   components: &jackhammerComponents
   - type: Gun
-    minAngle: 2
-    maxAngle: 7
-    angleDecay: 6
-    fireRate: 4
+    minAngle: 2 # Adjusted to be 69% of Soland-Moss minimum angle serving to have a very high intermittent accuracy.
+    maxAngle: 6.8 # Adjusted to be 78% of Soland-Moss maximum angle serving to have very high sustained accuracy.
+    angleDecay: 3 # Allows for full accuracy tap fire at roughly 1.5 RPS.
+    fireRate: 4 # Adjusted to have DPS equal to that of Soland Moss
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Rifles/mjackhammer.rsi
   - type: Clothing
@@ -19,14 +19,14 @@
     steps: 3
     zeroVisible: true
   - type: NFWeaponDetails
-    class: weapon-details-manufacturer-hzi
+    class: weapon-details-manufacturer-af
 
 - type: entity
-  id: ASWeaponRifleMarksmanHZ-3-3-C
-  parent: ASWeaponRifleMarksmanHZ-3-3-M
-  name: HZ-3-3-C "Jackhammer"
+  id: ASWeaponRifleMarksmanAF-17C
+  parent: [ C2ContrabandRestricted, ASWeaponRifleMarksmanAF-17M ]
+  name: AF-17C "Jackhammer"
   description: |-
-    This rifle rehashes an old design, a battle-tested workhorse with many scars. Marked for the SLE Commissioner.
+    This rifle made by Artificiel Federale rehashes an old design, a battle-tested workhorse with many scars. Marked for the SLE Commissioner.
   components:
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Rifles/cjackhammer.rsi
@@ -34,10 +34,150 @@
     sprite: _AS/Objects/Weapons/Guns/Rifles/cjackhammer.rsi
 
 - type: entity
-  id: ASWeaponRifleMarksmanHZ-3-3-MOverpressure
-  parent: [ ASBaseWeaponRifleMarksmanChamber30Overpressure, ASBaseWeaponFrameRifleMarksmanAuroraGunsmith ]
-  name: HZ-3-3-M "Jackhammer"
+  id: ASWeaponRifleMarksmanAF-17MOverpressure
+  parent: [ ASBaseWeaponRifleMarksmanChamber30LongOverpressure, ASBaseWeaponFrameRifleArtificielFederale ]
+  name: AF-17M "Jackhammer"
   description: |-
-    This rifle rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
+    This rifle made by Artificiel Federale rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
   suffix: Overpressure
   components: *jackhammerComponents
+
+- type: entity
+  id: ASWeaponRifleMarksmanVulcan # Aurora's Song - Moved from DeltaV
+  parent: [ ASBaseWeaponRifleMarksmanChamber30Long, ASBaseWeaponFrameRifleArtificielFederale ]
+  name: Vulcan
+  description: |-
+    One of the heaviest small arms to grace the market, this rifle is a modern take on a classic made by Artificiel Federale, informally dubbed the "Right Arm of the Free World".
+  components: &vulcanComponents
+  - type: Gun
+    minAngle: 3.6 # Adjusted to be 80% worse than Jackhammer's minAngle.
+    maxAngle: 7.2 # Adjusted to be 5% worse than Jackhammer's maxAngle.
+    angleDecay: 1.8 # Adjusted to be 11% worse than Jackhammer's angleDecay.
+    fireRate: 3.25 # Adjusted to have 80% of Soland-Moss DPS, at a solid 110 DPS.
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+
+- type: entity
+  id: ASWeaponRifleMarksmanVulcanLessLethal # Aurora's Song - Moved from DeltaV
+  parent: [ ASBaseWeaponRifleMarksmanChamber30LongRubber, ASBaseWeaponFrameRifleArtificielFederale ]
+  name: Vulcan
+  description: |-
+    One of the heaviest small arms to grace the market, this rifle is a modern take on a classic made by Artificiel Federale, informally dubbed the "Right Arm of the Free World".
+  suffix: AS, Less-lethal
+  components: *vulcanComponents
+
+- type: entity
+  id: ASWeaponRifleGarandCeremonial
+  parent: [ ASBaseWeaponRifleEnblocChamber30Long, ASBaseWeaponFrameRifleArtificielFederale ]
+  suffix: AS
+  name: Garand rifle
+  description: |-
+    A ceremonial version of an ancient battle rifle, used for parades and honor guards. The bolt carrier is engraved with the words "lest we forget."
+  components:
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    selectedMode: SemiAuto
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: true
+    autoEject: true
+    soundAutoEject:
+      path: /Audio/_Goobstation/Weapons/Guns/MagOut/garand_eject.ogg
+  - type: Sprite
+    sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
+  - type: Clothing
+    sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
+
+- type: entity
+  id: ASWeaponRifleMosinBolt
+  parent: [ ASBaseWeaponRifleClipChamber30Long, NFBaseWeaponFrameRifleSteelbolt, BaseGunMelee ]
+  name: Mosin bolt-action rifle #please do not look upon my wretched creation, my hubris is boundless and my shame is immeasurable
+  description: A weapon for hunting, or endless trench warfare. Equipped with bayonet.
+  suffix: AS
+  components:
+  - type: Gun
+    fireRate: 0.9
+    availableModes:
+    - SemiAuto
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+    layers:
+    - state: base
+      map: [ "enum.BreechVisuals.Open" ]
+    - state: base1
+      map: [ "enum.SolutionContainerLayers.Fill" ]
+      visible: false
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
+  - type: AltFireMelee
+    attackType: Light
+  - type: BreechLoaded
+    needOpenClose: true
+    openSound:
+      path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_open_chamber.ogg"
+    closeSound:
+      path: "/Audio/_RMC14/Weapons/Guns/Breech/pkd_close_chamber.ogg"
+  - type: GenericVisualizer
+    visuals:
+      enum.BreechVisuals.Open:
+        enum.BreechVisuals.Open:
+          True: {state: bolt-open}
+          False: {state: base}
+
+- type: entity
+  name: Basilisk-11
+  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun ]
+  id: ASWeaponRifleBasilisk
+  description: A fearsome state-of-the-art battle rifle often used by Syndicate agents who care more for violence than secrecy.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Rifles/nemesis.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/Rifles/nemesis.rsi
+  - type: Gun
+    fireRate: 5
+    burstFireRate: 10
+    shotsPerBurst: 3
+    burstCooldown: 0.40
+    minAngle: 2
+    maxAngle: 6
+    angleIncrease: 2
+    angleDecay: 4
+    selectedMode: Burst
+    availableModes:
+      - SemiAuto
+      - Burst
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/nemesis.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
+    boltClosed: null
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ASMagazineBRTopMountedRifle30
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - ASMagazineBRTopMountedRifle30
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

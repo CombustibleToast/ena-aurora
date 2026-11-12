@@ -76,6 +76,7 @@
 - type: loadoutGroup
   id: PilotNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2 # Aurora's Song - Two neck slots
   minLimit: 0
   loadouts:
   - PilotClothingNeckScarfPilot

@@ -38,13 +38,12 @@
     fuelConsumption: 0 # Powered by the noosphere
     fuelLitCost: 0 # Powered by the noosphere
     tankSafe: true
-  - type: SolutionContainerManager
-    solutions:
-      Welder:
-        reagents:
-        - ReagentId: WeldingFuel
-          Quantity: 1
-        maxVol: 1
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 1
+      maxVol: 1
   - type: ToggleableVisuals
     spriteLayer: mantis_lighter_flame
     inhandVisuals:
@@ -70,7 +69,7 @@
       types:
         Heat: 2 # 3 DPS, or 3.75 DPS against psions
         Holy: 1 # 5 total DPS against psionic supernaturals
-  #- type: ItemToggleDamageOtherOnHit # AS - doesn't exist here, yet, maybe later.
+  #- type: ItemToggleDamageOtherOnHit # Aurora's Song - doesn't exist here, yet, maybe later.
   - type: ThrowingAngle
     angle: 180
   - type: Tag

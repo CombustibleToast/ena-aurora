@@ -5,6 +5,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Server.Administration.Logs;
+using Content.Shared._AS.PersistentSystems; // Aurora
 using Content.Shared._Floof.Consent;
 using Content.Shared.Administration.Logs;
 using Content.Shared.CCVar;
@@ -313,11 +314,35 @@ namespace Content.Server.Database
 
         #endregion
 
+        #region Denu Settings
+
+        Task<string> LoadDenuSettingsJsonAsync(Guid userId);
+        Task SaveDenuSettingsJsonAsync(Guid userId, string settingsJson);
+        Task<Dictionary<int, int>> GetProfileSlotToProfileIdMapAsync(Guid userId);
+
+        #endregion
+
         #region IPintel
 
         Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score);
         Task<IPIntelCache?> GetIPIntelCache(IPAddress ip);
         Task<bool> CleanIPIntelCache(TimeSpan range);
+
+        #endregion
+
+        // Aurora Song
+        #region Persistent Game Systems
+
+        Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int authorCharacterId, string title, string body, int roundId);
+        Task<List<RecordPersonalNote>> GetPersonalNotes(int authorCharacterId);
+        Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId, int authorCharacterId, int recordId, string? title, string? body, bool allowNonOwner = false);
+        Task<RecordCharacter?> GetCharacterRecord(int recordId);
+        Task<List<RecordCharacter>> GetFilteredCharacterRecords(RecordType? recordType, int? targetCharacterId = null, Guid? authorUserId = null, int? authorCharacterId = null, bool? hidden = false, bool? deleted = false);
+        Task<RecordUpdateStatus> HideRecord(int recordId, Guid? authorUserId, int? authorCharacterId, bool allowNonOwner = false, bool updateEdits = false);
+        Task<RecordUpdateStatus> UnhideRecord(int recordId, Guid? authorUserId, int? authorCharacterId, bool allowNonOwner = false, bool updateEdits = false);
+        Task<RecordUpdateStatus> DeleteRecord(int recordId, Guid? authorUserId);
+        Task<RecordUpdateStatus> UndeleteRecord(int recordId, Guid? authorUserId);
+        Task<List<RecordEdit>> GetRecordEdits(int recordId);
 
         #endregion
 
@@ -368,7 +393,7 @@ namespace Content.Server.Database
         public string? Payload { get; set; }
     }
 
-    public sealed class ServerDbManager : IServerDbManager
+    public sealed partial class ServerDbManager : IServerDbManager
     {
         public static readonly Counter DbReadOpsMetric = Metrics.CreateCounter(
             "db_read_ops",
@@ -382,10 +407,10 @@ namespace Content.Server.Database
             "db_executing_ops",
             "Amount of active database operations. Note that some operations may be waiting for a database connection.");
 
-        [Dependency] private readonly IConfigurationManager _cfg = default!;
-        [Dependency] private readonly IResourceManager _res = default!;
-        [Dependency] private readonly ILogManager _logMgr = default!;
-        [Dependency] private readonly ISerializationManager _serialization = default!;
+        [Dependency] private IConfigurationManager _cfg = default!;
+        [Dependency] private IResourceManager _res = default!;
+        [Dependency] private ILogManager _logMgr = default!;
+        [Dependency] private ISerializationManager _serialization = default!;
 
         private ServerDbBase _db = default!;
         private LoggingProvider _msLogProvider = default!;
@@ -985,6 +1010,26 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.RemoveJobWhitelist(player, job));
         }
 
+        // DEN Start: Denu
+        public Task<string> LoadDenuSettingsJsonAsync(Guid userId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.LoadDenuSettingsJsonAsync(userId));
+        }
+
+        public Task SaveDenuSettingsJsonAsync(Guid userId, string settingsJson)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.SaveDenuSettingsJsonAsync(userId, settingsJson));
+        }
+
+        public Task<Dictionary<int, int>> GetProfileSlotToProfileIdMapAsync(Guid userId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetProfileSlotToProfileIdMapAsync(userId));
+        }
+        // DEN End
+
         // Frontier: ghost role DB ops
         public Task AddGhostRoleWhitelist(Guid player, ProtoId<GhostRolePrototype> ghostRole)
         {
@@ -1003,6 +1048,71 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.RemoveGhostRoleWhitelist(player, ghostRole));
         }
         // End Frontier
+
+        // Aurora Song
+        #region Persistent Game Systems
+
+        public Task<RecordCharacter?> GetCharacterRecord(int recordId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetCharacterRecord(recordId));
+        }
+
+        public Task<List<RecordCharacter>> GetFilteredCharacterRecords(RecordType? recordType, int? targetCharacterId = null, Guid? authorUserId = null, int? authorCharacterId = null, bool? hidden = false, bool? deleted = false)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetFilteredCharacterRecords(recordType, targetCharacterId, authorUserId, authorCharacterId, hidden, deleted));
+        }
+
+        public Task<RecordUpdateStatus> HideRecord(int recordId, Guid? authorUserId, int? authorCharacterId, bool allowNonOwner = false, bool updateEdits = false)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.HideRecord(recordId, authorUserId, authorCharacterId, allowNonOwner,  updateEdits));
+        }
+
+        public Task<RecordUpdateStatus> UnhideRecord(int recordId, Guid? authorUserId, int? authorCharacterId, bool allowNonOwner = false,  bool updateEdits = false)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UnhideRecord(recordId, authorUserId, authorCharacterId, allowNonOwner, updateEdits));
+        }
+
+        public Task<RecordUpdateStatus> DeleteRecord(int recordId, Guid? authorUserId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.DeleteRecord(recordId, authorUserId));
+        }
+
+        public Task<RecordUpdateStatus> UndeleteRecord(int recordId, Guid? authorUserId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UndeleteRecord(recordId, authorUserId));
+        }
+
+        public Task<List<RecordEdit>> GetRecordEdits(int recordId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetRecordEdits(recordId));
+        }
+
+        public Task<RecordPersonalNote> AddPersonalNote(Guid authorUserId, int authorCharacterId, string title, string body, int roundId)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.AddPersonalNote(authorUserId, authorCharacterId, title, body, roundId));
+        }
+
+        public Task<List<RecordPersonalNote>> GetPersonalNotes(int authorCharacterId)
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetPersonalNotes(authorCharacterId));
+        }
+
+        public Task<RecordUpdateResult> UpdatePersonalNote(Guid? authorUserId, int authorCharacterId, int recordId, string? title, string? body, bool allowNonOwner)
+        {
+            DbWriteOpsMetric.Inc();
+            return RunDbCommand(() => _db.UpdatePersonalNote(authorUserId, authorCharacterId, recordId, title, body, allowNonOwner));
+        }
+
+        #endregion
 
         public Task<bool> UpsertIPIntelCache(DateTime time, IPAddress ip, float score)
         {

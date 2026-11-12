@@ -28,8 +28,9 @@
     buckleOffset: "0,-0.05"
   - type: Pullable
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -48,7 +49,7 @@
         sound:
           collection: MetalBreak
   - type: StaticPrice
-    price: 15 # Frontier: 50<15
+    price: 20 # Frontier: 50<15 # Aurora's Song 15>20
 
 #Starts unanchored, cannot be rotated while anchored
 - type: entity
@@ -401,7 +402,15 @@
       map: ["foldedLayer"]
       visible: false
   - type: Item
-    size: Huge
+    size: Large # Aurora's Song - Huge > Large
+  # Aurora's Song Start
+    shape:
+    - 0,0,3,0
+    storedSprite:
+      sprite: Structures/Furniture/folding_chair.rsi
+      state: folding_folded
+    storedOffset: 0, -9
+    # Aurora's Song End
   - type: Appearance
   - type: MeleeWeapon
     damage:
@@ -451,8 +460,9 @@
     graph: Seat
     node: stoolCard
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Card
+  - type: Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -521,3 +531,8 @@
   components:
   - type: Sprite
     state: xeno-chair
+  # Aurora's Song Start
+  - type: Construction
+    graph: ASseats
+    node: xenoChair
+  # Aurora's Song End

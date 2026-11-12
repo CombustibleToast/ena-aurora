@@ -1,0 +1,49 @@
+﻿- type: entity
+  id: ASBaseSpeedLoaderRifle30Long #Frustrating that in the end this essentially just ends up being a magazine and not a speed loader, but it is what it is
+  name: speed loader (.30 Long rifle)
+  suffix: AS
+  parent: [ BaseC1Contraband, BaseItem, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+    - ASSpeedLoaderRifle30Long
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+      - ASCartridgeRifle30Long
+    capacity: 5
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/LightRifle/light_rifle_speed_loader.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: base-5
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 6
+    zeroVisible: false
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+
+- type: entity
+  id: ASSpeedLoaderRifle30LongEmpty
+  name: speed loader (.30 Long rifle, any)
+  parent: ASBaseSpeedLoaderRifle30Long
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ASSpeedLoaderRifle30Long
+  name: speed loader (.30 Long rifle)
+  parent: ASBaseSpeedLoaderRifle30Long
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30Long

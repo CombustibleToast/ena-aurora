@@ -81,3 +81,87 @@
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/Pistols/hz-1-3.rsi
   - type: NFWeaponDetails
+
+- type: entity
+  parent: [ ASBaseWeaponDartChamber, ASBaseWeaponFrameDart]
+  id: ASTrackingPistol
+  name: Tracking Dart Pistol
+  description: Single shot pistol able to fire tracking darts
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Pistols/trackingpistol.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Pistols/trackingpistol.rsi
+  - type: StaticPrice
+    price: 50
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+
+#region Den
+- type: entity
+  id: ASWeaponPistolBRDIP15BSO
+  parent: [ NFBaseWeaponPistolChamber35, ASBaseWeaponFramePistolBeckerSchulz ]
+  name: BRDIP-15(B)
+  suffix: AS
+  description: A rugged and reliable handgun, outfitted with a heavy muzzle counterweight. Favoured by special forces and well-off security personnel.
+  components:
+  - type: Gun
+    burstFireRate: 15
+    shotsPerBurst: 3
+    burstCooldown: 0.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+  - type: Tag
+    tags:
+    - BRDIP_15
+    - Sidearm
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Guns/Pistols/BRDIP_15.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _DEN/Objects/Weapons/Guns/Pistols/BRDIP_15.rsi
+  - type: ItemSlots # It has its own special magazines
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: MagazineBRDIP15
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+          - MagazineBRDIP15
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgePistol35
+        priority: 1
+        whitelist:
+          tags:
+          - NFCartridgePistol35
+
+- type: entity
+  id: ASWeaponPistolBRDIP15
+  parent: [ ASWeaponPistolBRDIP15BSO ]
+  name: BRDIP-15
+  suffix: AS
+  components:
+  - type: Sprite
+    sprite: _DEN/Objects/Weapons/Guns/Pistols/BRDIP_15_standard.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _DEN/Objects/Weapons/Guns/Pistols/BRDIP_15_standard.rsi

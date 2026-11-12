@@ -13,7 +13,6 @@
   startingGear: NFPirateFirstMateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true
-  canBeAntag: true
   icon: "JobIconNFPirateFirstMate"
   supervisors: job-supervisors-captain
   weight: 30
@@ -38,6 +37,7 @@
     prototype: FrontierBirthdayGift
 
 - type: startingGear
+  parent: ContractorGear # Aurora's Song
   id: NFPirateFirstMateGear
   equipment:
     belt: ClothingBeltUtility

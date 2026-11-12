@@ -11,10 +11,10 @@ namespace Content.Shared.Implants;
 
 public abstract partial class SharedSubdermalImplantSystem : EntitySystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
+    [Dependency] private INetManager _net = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -215,8 +215,11 @@ public readonly record struct ImplantRemovedEvent
 /// </summary>
 public sealed class ReTriggerRattleImplantEvent(
     EntityUid implanted,
-    MobState currentState) : EventArgs
+    MobState currentState,
+    bool forced = false) : EventArgs // Aurora's Song: If forced is true, listening code may force their triggers to happen that may otherwise be prevented
 {
     public readonly EntityUid Implanted = implanted;
     public readonly MobState CurrentState = currentState;
+    public readonly bool Forced = forced;
+    // Aurora's Song: Only force this if absolutely necessary, or if the person has already been dead. You WILL accidentally set off someones macrobomb otherwise.
 }

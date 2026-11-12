@@ -1,7 +1,7 @@
 # Syndicate bomb suit
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - ClothingOuterSuitBomb
   - ContrabandClothing
   id: ClothingOuterSuitBombSyndie

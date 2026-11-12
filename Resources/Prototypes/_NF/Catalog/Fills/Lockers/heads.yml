@@ -78,6 +78,7 @@
       entity_storage: !type:AllSelector
         children:
         - id: WeaponCaseHeavyCdet
+          amount: 2 # Aurora's Song - Increase fill, so CR has 4 CDETs in total
         - id: NFWeaponPistolMk58
           amount: 1
         - id: NFMagazinePistol35

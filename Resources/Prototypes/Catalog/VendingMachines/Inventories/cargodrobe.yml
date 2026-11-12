@@ -13,7 +13,7 @@
     ClothingHeadHatCargosoft: 3
     ClothingHeadBandBrown: 3
     ClothingHeadsetCargo: 3
-    EncryptionKeyCargo: 10
+    # EncryptionKeyCargo: 10  # Aurora's Song - Made obsolete
     ClothingOuterWinterCargo: 2
     ClothingOuterCoatBomberCargo: 2 # Imp
     ClothingShoesBootsWinterCargo: 2

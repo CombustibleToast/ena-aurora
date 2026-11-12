@@ -7,11 +7,13 @@ namespace Content.Shared.Administration.Logs;
 [Serializable, NetSerializable]
 public sealed class AdminLogsEuiState : EuiStateBase
 {
-    public AdminLogsEuiState(int roundId, Dictionary<Guid, string> players, int roundLogs)
+    // Aurora's Song - Sensitive log permission
+    public AdminLogsEuiState(int roundId, Dictionary<Guid, string> players, int roundLogs, bool canViewSensitiveLogs)
     {
         RoundId = roundId;
         Players = players;
         RoundLogs = roundLogs;
+        CanViewSensitiveLogs = canViewSensitiveLogs; // Aurora's Song - Sensitive log permission
     }
 
     public bool IsLoading { get; set; }
@@ -21,9 +23,12 @@ public sealed class AdminLogsEuiState : EuiStateBase
     public Dictionary<Guid, string> Players { get; }
 
     public int RoundLogs { get; }
+
+    public bool CanViewSensitiveLogs { get; } // Aurora's Song - Sensitive log permission
 }
 
-public static class AdminLogsEuiMsg
+// Aurora's Song - Make partial
+public static partial class AdminLogsEuiMsg
 {
     [Serializable, NetSerializable]
     public sealed class SetLogFilter : EuiMessageBase

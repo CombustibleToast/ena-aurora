@@ -51,6 +51,12 @@
     - id: FlashlightLantern
     - id: Floodlight
     - id: FlashlightSeclite
+    - id: ASHandheldFloodlight # Aurora
+    - id: ASShoulderFlashlight # Aurora
+    - id: ASHandheldTacticalFloodlight # Aurora
+      weight: 0.5
+    - id: ASShoulderTaclight # Aurora
+      weight: 0.5
 
 # region Lighters
 - type: entityTable
@@ -86,6 +92,10 @@
       - id: WeaponFlareGun
       - id: NFAmmunitionBoxShellShotgunFlare
     - id: NFWeaponHoloflareGun
+    - id: ASWeaponAdvancedHoloflareGun # Aurora Song
+      weight: 0.5
+    - id: ASWeaponExperimentalHoloflareGun # Aurora Song
+      weight: 0.1
 
 # region Lockers
 - type: entityTable
@@ -533,6 +543,7 @@
       - id: VendingMachineRoboDrobe
       - id: VendingMachineGeneDrobe
       - id: VendingMachineViroDrobe
+      - id: VendingMachineSecDrobe # Aurora's Song
     - !type:NestedSelector
       tableId: TableDungeonLootGeneralVendomatsContraband
       weight: 0.05
@@ -595,7 +606,7 @@
       - id: VendingMachineClothingPunk
       - id: VendingMachineBountyVendPunk
       - id: VendingMachineSyndieContraband
-      - id: VendingMachineSomberMantis # Aurora
+      - id: VendingMachineSomberMantis # Aurora's Song
 
 # region Flatpacks
 - type: entityTable

@@ -1,0 +1,64 @@
+<!--
+SPDX-FileCopyrightText: 2026 Mora <trixxedheart@gmail.com>
+
+SPDX-License-Identifier: MIT
+-->
+
+<Control xmlns="https://spacestation14.io" xmlns:profile="clr-namespace:Content.Client.Lobby.UI.ProfileEditorControls" xmlns:graphics="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client" xmlns:ui="clr-namespace:Content.Client.UserInterface.Controls">
+    <!-- Character Portrait -->
+    <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+        <PanelContainer Name="PortraitPanel" Access="Public" MinSize="180 200" MaxSize="190 200" HorizontalAlignment="Center">
+            <PanelContainer.PanelOverride>
+                <graphics:StyleBoxFlat BackgroundColor="#101318" BorderColor="#303A66" BorderThickness="1" ContentMarginLeftOverride="2" ContentMarginTopOverride="2" ContentMarginRightOverride="2" ContentMarginBottomOverride="2" />
+            </PanelContainer.PanelOverride>
+            <PanelContainer HorizontalExpand="True" VerticalExpand="True">
+                <TextureRect Name="PortraitStaticBackground" TexturePath="/Textures/Interface/Nano/square_black.png" Stretch="Scale" HorizontalExpand="True" VerticalExpand="True" />
+                <CenterContainer HorizontalExpand="True" VerticalExpand="True">
+                    <profile:ProfilePreviewSpriteView Name="CharacterPreview" SetSize="160 184" MinSize="160 184" Scale="4 4" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="-10 -7 10 7" SpriteOffset="True" OverrideDirection="South" />
+                </CenterContainer>
+                <CenterContainer HorizontalExpand="True" VerticalExpand="True"><Label Name="NoPhotoLabel" Text="{Loc 'general-station-record-console-no-photo'}" Visible="False" FontColorOverride="#999999" Align="Center" HorizontalAlignment="Center" VerticalAlignment="Center" /></CenterContainer>
+            </PanelContainer>
+        </PanelContainer>
+        <BoxContainer Orientation="Vertical" HorizontalExpand="True">
+            <!-- Name Header -->
+            <PanelContainer Name="RecordHeader" Access="Public" HorizontalExpand="True">
+                <PanelContainer.PanelOverride>
+                    <graphics:StyleBoxFlat BackgroundColor="#181B22" BorderColor="#303A66" BorderThickness="0 0 0 1" ContentMarginLeftOverride="8" ContentMarginTopOverride="4" ContentMarginRightOverride="8" ContentMarginBottomOverride="4" />
+                </PanelContainer.PanelOverride>
+                <BoxContainer HorizontalExpand="True">
+                    <Label Name="RecordName" StyleClasses="LabelBig" VerticalAlignment="Center"/>
+                    <Label Name="Pronouns" FontColorOverride="#777777" Margin="8 0" VerticalAlignment="Center" /> <!-- go my pro nouns -->
+                    <Control HorizontalExpand="True" />
+                    <Button Visible="False" Name="DeleteButton" Text="{Loc 'general-station-record-console-delete'}" />
+                    <Button Visible="False" Name="RestoreButton" Text="{Loc 'general-station-record-console-restore'}" />
+                </BoxContainer>
+            </PanelContainer>
+            <!-- Data columns -->
+            <ui:AlternatingBGContainer Name="FieldsContainer" HorizontalExpand="True" VerticalExpand="True">
+            <PanelContainer Name="DurationRow" Visible="False"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-duration'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <LineEdit Name="DurationEdit" PlaceHolder="{Loc 'general-station-record-console-duration-placeholder'}" MinWidth="120" MaxWidth="180" HorizontalExpand="False" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="AgeRow"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-age'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="Age" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="JobRow"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-job'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="Title" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="SpeciesRow"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-species'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="Species" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="GenderRow"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-gender'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="Gender" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="RegisteredRow" Visible="False"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-registered'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="RegisteredAt" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="ArchivedRow" Visible="False"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-archived'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="ArchivedAt" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="ArchivedByRow" Visible="False"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-archived-by'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="ArchivedBy" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="ArchiveReasonRow" Visible="False"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-reason'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="ArchiveReason" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="FingerprintRow"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-fingerprint'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="Fingerprint" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="DnaRow"><BoxContainer Margin="6 2"><Label Text="{Loc 'general-station-record-console-field-dna'}" MinWidth="155" StyleClasses="LabelKeyText" FontColorOverride="#84A4D4" />
+                <Label Name="Dna" HorizontalExpand="True" /></BoxContainer></PanelContainer>
+            <PanelContainer Name="FieldsFill" VerticalExpand="True" />
+            </ui:AlternatingBGContainer>
+        </BoxContainer>
+    </BoxContainer>
+</Control>

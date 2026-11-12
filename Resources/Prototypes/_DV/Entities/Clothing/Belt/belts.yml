@@ -1,3 +1,52 @@
+# SPDX-FileCopyrightText: 2023 Colin-Tel
+# SPDX-FileCopyrightText: 2023 Tad "Taddy" Johnson
+# SPDX-FileCopyrightText: 2025 Blitz
+# SPDX-FileCopyrightText: 2025 Jakumba
+# SPDX-FileCopyrightText: 2025 Rosycup
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
+
+- type: entity
+  parent: ClothingBeltStorageBase
+  id: ClothingBeltCeremonial
+  name: ceremonial belt
+  description: A blue-and-white belt with assorted pockets and pouches.
+  components:
+  - type: Sprite
+    sprite: _DV/Clothing/Belt/ceremonial.rsi
+  - type: Clothing
+    sprite: _DV/Clothing/Belt/ceremonial.rsi
+  - type: Storage
+    whitelist:
+      tags:
+        - CigPack
+        - Taser
+        - SecBeltEquip
+        - Radio
+        - Flashlight
+      components:
+        - Stunbaton
+        - FlashOnTrigger
+        - Flash
+        - Handcuff
+        - BallisticAmmoProvider
+        - Ammo
+        - PowerCell
+        - TimerTrigger # Aurora's Song - OnUseTimerTrigger>TimerTrigger
+  - type: ItemMapper
+    mapLayers:
+      flashbang:
+        whitelist:
+          components:
+          - FlashOnTrigger
+      stunbaton:
+        whitelist:
+          components:
+          - Stunbaton
+    sprite: Clothing/Belt/belt_overlay.rsi
+  - type: Appearance
+
 - type: entity
   parent: [NFClothingSBeltStorageHolsterMedkitBase] # Aurora - Add explosion resist
   id: ClothingBeltCorpsmanWebbing
@@ -8,3 +57,59 @@
     sprite: _DV/Clothing/Belt/corpsman.rsi
   - type: Clothing
     sprite: _DV/Clothing/Belt/corpsman.rsi
+  - type: ItemSlots
+    slots:
+      medkit:
+        name: clothing-belt-medkit
+        priority: -1
+        whitelist:
+          tags:
+          - Medkit
+          #- Portafib #Aurora's Song | Not a tag we use, yet
+          - Compactdefib #Den change
+          #- Rollerbed #Aurora's Song | Not a tag we use, yet
+        insertOnInteract: true
+      holster:
+        name: clothing-belt-sidearm
+        whitelist:
+          tags:
+          - Sidearm
+        ejectSound: #Den edit
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
+        insertOnInteract: true
+        insertSound: #Den edit
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
+      radio:
+        name: clothing-belt-radio
+        priority: -2
+        whitelist:
+          tags:
+            - Radio
+        insertOnInteract: true
+  - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
+    mapLayers:
+      medkit:
+        whitelist:
+          tags:
+          - Medkit
+      baton:
+        whitelist:
+          components:
+          - Stunbaton
+      gasgrenade:
+        whitelist:
+          tags:
+            - Grenade
+      slp:
+        whitelist:
+          tags:
+          - Sidearm
+    sprite: _DV/Clothing/Belt/belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
+      medkit: !type:ContainerSlot {}
+      radio: !type:ContainerSlot {}
+  - type: Appearance

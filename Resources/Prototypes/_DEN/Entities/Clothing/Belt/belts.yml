@@ -1,9 +1,3 @@
-# SPDX-FileCopyrightText: 2025 ASaltySeabass
-# SPDX-FileCopyrightText: 2025 Rosycup
-# SPDX-FileCopyrightText: 2025 sleepyyapril
-#
-# SPDX-License-Identifier: AGPL-3.0-or-later AND MIT
-
 # Mantis belts start
 - type: entity
   parent: [ClothingBeltMantis, BaseFoldable]
@@ -115,3 +109,133 @@
         - id: PersonalAISomber
         - id: MantisTailorsKnife
 # Mantis belts end
+
+- type: entity
+  parent: [ClothingBeltBase, ClothingSlotBase]
+  id: ClothingBeltKatanaSheathSingle
+  name: katana sheath
+  description: An ornate belt designed to hold a katana. Earned through experience and hard work.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Belt/katanasheathsingle.rsi
+    state: sheath
+  - type: Clothing
+    sprite: _DEN/Clothing/Belt/katanasheathsingle.rsi
+  - type: Item
+    size: Large
+  - type: ItemSlots
+    slots:
+      item:
+        name: Katana
+        insertVerbText: sheath-insert-verb
+        ejectVerbText: sheath-eject-verb
+        insertSound: /Audio/Items/sheath.ogg # Aurora's Song | use basegame sounds, we don't have SimpleStation14's custom sounds
+        ejectSound: /Audio/Items/unsheath.ogg # Aurora's Song | use basegame sounds, we don't have SimpleStation14's custom sounds
+        whitelist:
+          tags:
+          - Katana
+  - type: ItemMapper
+    mapLayers:
+      sheath-sabre:
+        whitelist:
+          tags:
+          - Katana
+  - type: Appearance
+  - type: Tag
+    tags:
+    - BeltSlotNotBelt
+
+- type: entity
+  parent: [ ClothingBeltStorageBase, ContentsExplosionResistanceBase, C2ContrabandNanoTrasenNoValueRestricted ] # Aurora's Song - Add Explosion Resistance, Added C2ContrabandNanoTrasenNoValueRestricted
+  id: ClothingBeltBSOWebbing
+  name: blueshield webbing
+  description: A robust chest rig made to fit the needs of a blueshield officer.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Belt/blueshieldwebbing.rsi
+  - type: Clothing
+    sprite: _DEN/Clothing/Belt/blueshieldwebbing.rsi
+    # Aurora's Song Start - Sizing Parity Tweak
+  - type: Item
+    size: Large
+    shape:
+    - 0,0,3,3
+    # Aurora's Song End
+  - type: ItemSlots
+    slots:
+      medkit:
+        name: clothing-belt-medkit
+        priority: -1
+        whitelist:
+          tags:
+          - Medkit
+          #- Portafib #Aurora's Song | Not a tag we use, yet
+          - Compactdefib
+          # - Rollerbed #Aurora's Song | Not a tag we use, yet
+        insertOnInteract: true
+      holster:
+        name: clothing-belt-sidearm
+        whitelist:
+          tags:
+          - Sidearm
+        ejectSound: #Den edit
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
+        insertOnInteract: true
+        insertSound: #Den edit
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
+      radio:
+        name: clothing-belt-radio
+        priority: -2
+        whitelist:
+          tags:
+            - Radio
+        insertOnInteract: true
+  - type: ExplosionResistance # Aurora's Song - Add Explosion Resistance
+    damageCoefficient: 0.1
+  - type: ItemMapper # For item overlays
+    mapLayers:
+      medkit:
+        whitelist:
+          tags:
+          - Medkit
+      baton:
+        whitelist:
+          components:
+          - Stunbaton
+      gasgrenade:
+        whitelist:
+          tags:
+            - Grenade
+      slp:
+        whitelist:
+          tags:
+          - Sidearm
+      BRDIP_15:
+        whitelist:
+          tags:
+            - BRDIP_15
+      pulsepdw:
+        whitelist:
+          tags:
+            - PulsePDW
+    sprite: _DEN/Clothing/Belt/BSO_belt_overlay.rsi
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+      holster: !type:ContainerSlot {}
+      medkit: !type:ContainerSlot {}
+      radio: !type:ContainerSlot {}
+  - type: Appearance
+
+- type: entity
+  parent: ClothingBeltBSOWebbing
+  id: ClothingBeltBSOWebbingFilled
+  name: blueshield webbing
+  description: A robust chest rig made to fit the needs of a blueshield officer.
+  suffix: Filled # TheDen
+  components:
+  - type: EntityTableContainerFill # Aurora's Song | replace old StorageFill with EntityTable fill
+    containers: # #Aurora's Song | Just gave it a standard Secbelt fill, though this webbing isn't used anywhere
+      storagebase: !type:NestedSelector
+        tableId: BeltSecurityEntityTable

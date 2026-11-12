@@ -15,16 +15,17 @@ namespace Content.Shared.Damage.Systems;
 
 public sealed partial class DamageableSystem : EntitySystem
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly INetManager _netMan = default!;
-    [Dependency] private readonly MobThresholdSystem _mobThreshold = default!;
-    [Dependency] private readonly IConfigurationManager _config = default!;
-    [Dependency] private readonly SharedChemistryGuideDataSystem _chemistryGuideData = default!;
-    [Dependency] private readonly SharedExplosionSystem _explosion = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private INetManager _netMan = default!;
+    [Dependency] private MobThresholdSystem _mobThreshold = default!;
+    [Dependency] private IConfigurationManager _config = default!;
+    [Dependency] private SharedChemistryGuideDataSystem _chemistryGuideData = default!;
+    [Dependency] private SharedExplosionSystem _explosion = default!;
 
-    private EntityQuery<AppearanceComponent> _appearanceQuery;
-    private EntityQuery<DamageableComponent> _damageableQuery;
+    [Dependency] private EntityQuery<AppearanceComponent> _appearanceQuery = default!;
+    [Dependency] private EntityQuery<DamageableComponent> _damageableQuery = default!;
+    [Dependency] private EntityQuery<InjurableComponent> _injurableQuery = default!;
 
     public float UniversalAllDamageModifier { get; private set; } = 1f;
     public float UniversalAllHealModifier { get; private set; } = 1f;
@@ -66,6 +67,20 @@ public sealed partial class DamageableSystem : EntitySystem
                 new DamageVisualizerGroupData(ent.Comp.DamagePerGroup.Keys.ToList()),
                 appearance
             );
+
+            if (ent.Comp.Displacement != null)
+            {
+                _appearance.SetData(
+                    ent,
+                    DamageVisualizerKeys.Displacement,
+                    ent.Comp.Displacement.Value.Id,
+                    appearance
+                );
+            }
+            else
+            {
+                _appearance.RemoveData(ent, DamageVisualizerKeys.Displacement);
+            }
         }
 
         // TODO DAMAGE

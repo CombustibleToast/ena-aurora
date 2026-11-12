@@ -27,6 +27,8 @@
   - ClothingBeltBandolier
   - NFBaseClothingNeckHolsterThigh
   - NFBaseClothingNeckSheathThigh
+  - Tourniquet # Aurora's Song - No better staticPack for this to slot into w/ the MercFab
+  - ASClothingBeltSheath # Aurora's Song - Add saber sheath
 
 - type: latheRecipePack
   id: NFMercenaryStorageStatic
@@ -60,6 +62,7 @@
   - NFAmmunitionBoxShellShotgunBuckshot
   - NFAmmunitionBoxRifle20
   - NFAmmunitionBoxRifle30
+  - ASAmmunitionBoxRifle30Long # Aurora's SOng
   - CrossbowBolt
   - CrossbowBoltBroadhead
   - NFAmmunitionBoxShellShotgunBeanbag
@@ -79,6 +82,8 @@
   - NFSpeedLoaderPistol45Empty
   - NFSpeedLoaderPistol35
   - NFSpeedLoaderPistol45
+  - ASSpeedLoaderRifle30LongEmpty # Aurora's Song
+  - ASSpeedLoaderRifle30Long # Aurora's Song
 
 - type: latheRecipePack
   id: NFMercenaryTechfabDynamicDeprecated
@@ -122,7 +127,7 @@
   - ClothingShoesBootsMagMercenary
 ## Utilities
   - NFForensicPad
-  - ClothingEyesHudBountyHunter
+  - ASClothingEyesHudUniversal # Aurora's Song - Universal Status HUD
   - ClothingEyesPunkInfoShades
   - PinpointerUniversalNF
   - NFHandcuffs
@@ -179,6 +184,8 @@
   - NFMagazinePistol35
   - NFMagazineClipRifle20
   - NFMagazineRifle30
+  - ASMagazineEnblocRifle30LongEmpty # Aurora's Song
+  - ASMagazineEnblocRifle30Long # Aurora's Song
   - ASMagazinePistol40Empty # Aurora Song
   - ASMagazinePistol40OverpressureEmpty # Aurora Song
   - ASMagazinePistol40 # Aurora Song

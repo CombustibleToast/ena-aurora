@@ -11,10 +11,16 @@
   physicalDesc: reagent-physical-desc-mnemolith
   flavor: mnemolith
   color: "#313b4a"
+  tags: [ IPCCompatible ] # Aurora's Song - IPCs can have nightmares too, as a treat
   metabolisms:
     Bloodstream: # Aurora's Song - Medicine>Bloodstream
       metabolismRate: 0.1 # 1u lasts 10 seconds, so 15u lasts 2 minutes 30 seconds
       effects:
+      # Aurora's Song - Add Mnemolith shader
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectMnemolith
+        time: 16
+        type: Set
       - !type:PopupMessage
         type: Local
         visualType: Medium

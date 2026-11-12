@@ -43,6 +43,67 @@
     containers:
       cell_slot: !type:ContainerSlot
 
+- type: entity
+  id: ASBaseWeaponEnergyPistolFireModesMagnum
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mode-disabler
+      map: [ "Firemode" ]
+      shader: unshaded
+    - state: mag-unshaded-4
+      map: [ "enum.GunVisualLayers.MagUnshaded" ]
+      shader: unshaded
+  - type: Battery
+    maxCharge: 1005
+    startingCharge: 1005
+  - type: BatteryAmmoProvider
+    proto: BulletEnergyGunMagnum
+    fireCost: 100
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+    soundEmpty:
+      path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
+  - type: BatteryWeaponFireModes # Firemode Refactor, EnergyGunFireModes > BatteryWeaponFireModes
+    fireModes:
+    - proto: BulletEnergyGunMagnum
+      fireCost: 100
+      #name: lethal # Firemode Refactor
+      #state: lethal # Firemode Refactor
+    - proto: NFBulletDisabler
+      fireCost: 50
+      #name: disabling # Firemode Refactor
+      #state: disabler # Firemode Refactor
+      pacifismAllowedMode: true # Aurora's Song
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.BatteryWeaponFireModeVisuals.State: # Firemode Refactor
+        Firemode:
+          BulletEnergyGunMagnum: { state: mode-lethal } # Firemode Refactor, lethal > BulletEnergyGunMagnum
+          NFBulletDisabler: { state: mode-disabler } # Firemode Refactor, disabler > NFBulletDisabler
+
+- type: entity
+  id: ASBaseWeaponEnergyRifleEmp
+  parent: NFBaseWeaponEnergyRifleEmp
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-energybolt-emp
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
+  - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
+    proto: HitscanEmp
+    fireCost: 500
+
 # region - battery rifle frames | Aurora Song
 - type: entity
   id: ASBaseWeaponFrameBatteryRifle
@@ -96,6 +157,25 @@
     - FullAuto
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-dual-optics
+
+- type: entity
+  id: ASBaseWeaponFramePulseRifle
+  parent: [ NFBaseWeaponEncumbranceRifle, BaseWeaponBattery ]
+  abstract: true
+  components:
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Gun
+    fireRate: 1.5
+  - type: BatteryAmmoProvider
+    proto: NFPulse
+    fireCost: 100
+  - type: Battery
+    maxCharge: 3000 # 30 shots of 25 heat is already strong as fuck, no way am I giving this the 40'000 of upstream
+    startingCharge: 3000
+
 
 # endregion - battery rifle frames | Aurora Song
 
@@ -153,6 +233,79 @@
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-dual-optics
 
+- type: entity
+  id: ASBaseWeaponFrameEnergyPistolHighCap
+  parent: [ NFBaseWeaponEncumbrancePistol, BaseWeaponBatterySmall ]
+  suffix: Aurora's Song
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Gun
+    projectileSpeed: 30
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: Battery
+    maxCharge: 1005
+    startingCharge: 1005
+  - type: BatterySelfRecharger # 20 seconds to fully recharge, but it does not do so if it has been fired in the last 5 seconds.
+    autoRechargeRate: 50
+    autoRechargePauseTime: 5
+  - type: StaticPrice
+    price: 1000
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+
+- type: entity
+  id: ASBaseWeaponManufacturerNanoTrasen
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 3.5
+    maxAngle: 7
+    angleIncrease: 0.25
+    angleDecay: 1
+    fireRate: 3.5
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+- type: entity
+  id: ASBaseWeaponFramePulsePistol
+  parent: [ NFBaseWeaponEncumbrancePistol, BaseWeaponBatterySmall ]
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-unshaded-4
+      map: [ "enum.GunVisualLayers.MagUnshaded" ]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+    #zeroVisible: false # Aurora's Song | Not sure why this is here when the magVisual is already applied. Plus this component lacks this field in our repo.
+  - type: Gun
+    fireRate: 1.5
+  - type: BatteryAmmoProvider
+    proto: NFPulse
+    fireCost: 100
+  - type: Battery
+    maxCharge: 1500 # 30 shots of 25 heat is already strong as fuck, no way am I giving this the 40'000 of upstream
+    startingCharge: 1500
 
 # region - battery rifles | Aurora Song
 - type: entity
@@ -183,7 +336,7 @@
 - type: entity
   categories: [ HideSpawnMenu ] # Renamed Xray Cannon for cyborgs.
   name: volatile particle driver
-  parent: [BaseWeaponBattery, BaseC3Contraband]
+  parent: [BaseWeaponBattery, BaseC2ContrabandUnredeemable]
   id: WeaponXrayCannonCyborg
   description: An advanced energy weapon that uses high-energy particles to damage targets.
   components:
@@ -254,6 +407,41 @@
   - type: BatterySelfRecharger # Recharges 1 shot per 1 seconds
     autoRechargeRate: 25
 
+- type: entity
+  name: Mk.1 UE pulse rifle
+  parent: [ ASBaseWeaponFramePulseRifle, BaseC3ContrabandCentCommLowValue, ASBaseWeaponManufacturerNanoTrasen ]
+  description: the MK.1 "Unit-Expeditionary" pulse rifle is a limited production run from NanoTrasen, designed for commando units targeting HVTs in high-risk environments.
+  id: ASWeaponMk1UEPulseRifle
+  components:
+  - type: Wieldable
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -1.2
+    maxAngle: -4.3
+  - type: Item
+    size: Huge
+    shape:
+    - 0,0,4,1
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-unshaded-4
+      map: [ "enum.GunVisualLayers.MagUnshaded" ]
+      shader: unshaded
+  - type: Appearance
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  name: emp emitter # The same as the standard version, except its hitscan and longer range
+  parent: [ASBaseWeaponEnergyRifleEmp, WeaponEmpEmitter]
+  id: ASWeaponEmpEmitter
+  suffix: Aurora's Song
+
 # endregion - battery rifles | Aurora Song
 # region - battery pistols | Aurora Song
 - type: entity
@@ -280,3 +468,215 @@
     magState: mag
     steps: 5
     zeroVisible: true
+
+- type: entity
+  name: EG-4 energy magnum
+  parent: [ ASBaseWeaponFrameEnergyPistolHighCap, ASBaseWeaponEnergyPistolFireModesMagnum, C2ContrabandNanoTrasenRestricted, ASBaseWeaponManufacturerNanoTrasen ]
+  id: ASWeaponEG4EnergyMagnum
+  description: An advanced energy pistol with a rotating staged power system that allows for shots that are both high power and rapid fire.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mode-disabler
+      shader: unshaded
+      map: [ "Firemode" ]
+    - state: mag-unshaded-4
+      map: [ "enum.GunVisualLayers.MagUnshaded" ]
+      shader: unshaded
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+    - Back
+    sprite: _Goobstation/Objects/Weapons/Guns/Battery/erevolver.rsi
+
+- type: entity
+  id: ASWeaponEnergyPistolPulse
+  parent: [ ASBaseWeaponFramePulsePistol, ASBaseWeaponManufacturerNanoTrasen ] #removed contraband cus this thing has expedition spawn variants to assign it
+  name: pulse pistol
+  suffix: Aurora's Song
+  description: |-
+    A state of the art energy pistol favoured as a sidearm by the NT operatives. On the handle is a label that says 'for authorized use only.'
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
+  - type: Battery
+    maxCharge: 1500
+    startingCharge: 1500
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  id: ASWeaponEnergyCharonMagnum
+  parent: [ ASBaseWeaponManufacturerNanoTrasen, ASBaseWeaponFrameEnergyPistolHighCap, C2ContrabandNanoTrasenRestricted]
+  name: Mk.II charon magnum
+  suffix: Aurora's Song
+  description: |-
+    Multiple fire modes, a sleek chassis, the Mk.II charon is an effective attempt to miniaturise the firing system of the energy shotgun and specialise it for new enagement profiles.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/energy_magnum.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-unshaded-1
+      visible: false
+      map: [ "enum.GunVisualLayers.MagUnshaded" ]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Appearance
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/energy_magnum.rsi
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: BatteryAmmoProvider
+    proto: ASBulletLaserMagnum # Aurora's Song - Uses list below
+    fireCost: 140
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: ASBulletLaserMagnum
+      fireCost: 140 # 2 seconds to regen per shot in this mode
+    - proto: ASBulletLaserWindowPiercingMagnum
+      fireCost: 140 # 2 seconds to regen per shot in this mode
+    - proto: NFBulletDisabler
+      fireCost: 80 # 1.1428 seconds to regen per shot in this mode
+      pacifismAllowedMode: true
+  - type: BatterySelfRecharger
+    autoRechargeRate: 70
+    autoRechargePauseTime: 6
+
+- type: entity
+  id: ASWeaponAdvancedHoloflareGun
+  parent: NFWeaponHoloflareGun
+  name: advanced holoflare pistol
+  description: |-
+    An upgraded model of the holoflare pistol, boasting a more robust battery.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Battery/advanced_holoflare.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-3
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+    - state: mode-cyan
+      shader: unshaded
+      map: [ "Firemode" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Battery
+    maxCharge: 1440
+    startingCharge: 1440
+  - type: BatterySelfRecharger
+    autoRechargeRate: 6
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: false
+  - type: Appearance
+  - type: StaticPrice
+    price: 2500
+
+- type: entity
+  id: ASWeaponExperimentalHoloflareGun
+  parent: NFWeaponHoloflareGun
+  name: experimental holoflare pistol
+  description: |-
+    An experimental holoflare pistol with a micro-reactor battery
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Battery/experimental_holoflare.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-1
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+    - state: mode-cyan
+      shader: unshaded
+      map: [ "Firemode" ]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Battery
+    maxCharge: 240
+    startingCharge: 240
+  - type: BatterySelfRecharger
+    autoRechargeRate: 33
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: true
+  - type: Appearance
+  - type: StaticPrice
+    price: 10000
+
+- type: entity
+  name: energy shotgun # Yeah I ripped this from upstream's files too because it wasn't initialising the prototype and I'm lazy, sue me
+  parent: [BaseWeaponBattery, BaseGunWieldable, C2ContrabandNanoTrasenRestricted, ASBaseWeaponManufacturerNanoTrasen]
+  id: ASWeaponEnergyShotgun
+  description: A limited run energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon. # Aurora's Song | Not one of a kind
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: Appearance
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
+  - type: Gun
+    fireRate: 2
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: BatteryAmmoProvider
+    proto: ASBulletLaserSpread # Aurora's Song - Uses list below, now
+    fireCost: 80
+  - type: BatteryWeaponFireModes
+    fireModes: # Aurora's Song | Moved to AS variants
+    - proto: ASBulletLaserSpread
+      fireCost: 80
+    - proto: ASBulletLaserSpreadNarrow
+      fireCost: 80
+    - proto: ASBulletDisablerSmgSpread
+      fireCost: 48
+      pacifismAllowedMode: true
+  - type: Item
+    size: Large
+    sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi
+    heldPrefix: energy
+  - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
+  - type: Battery
+    maxCharge: 480
+    startingCharge: 480
+  - type: BatterySelfRecharger
+    autoRechargeRate: 50
+    autoRechargePauseTime: 6

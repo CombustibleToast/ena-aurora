@@ -1,4 +1,5 @@
 using System.Numerics;
+using Content.Server._AS.Shuttles; // Aurora's Song
 using Content.Server._NF.Shipyard.Systems;
 using Content.Server.DoAfter;
 using Content.Server.EUI;
@@ -36,22 +37,22 @@ namespace Content.Server._NF.CryoSleep;
 
 public sealed partial class CryoSleepSystem : EntitySystem
 {
-    [Dependency] private readonly EntityManager _entityManager = default!;
-    [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly ContainerSystem _container = default!;
-    [Dependency] private readonly EuiManager _euiManager = null!;
-    [Dependency] private readonly MindSystem _mind = default!;
-    [Dependency] private readonly InteractionSystem _interaction = default!;
-    [Dependency] private readonly DoAfterSystem _doAfter = default!;
-    [Dependency] private readonly MobStateSystem _mobSystem = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly ShipyardSystem _shipyard = default!; // For the FoundOrganics method
-    [Dependency] private readonly GhostSystem _ghost = default!;
-    [Dependency] private readonly MapSystem _map = default!;
-    [Dependency] private readonly TransformSystem _transform = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
+    [Dependency] private EntityManager _entityManager = default!;
+    [Dependency] private ActionBlockerSystem _actionBlocker = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private ContainerSystem _container = default!;
+    [Dependency] private EuiManager _euiManager = null!;
+    [Dependency] private MindSystem _mind = default!;
+    [Dependency] private InteractionSystem _interaction = default!;
+    [Dependency] private DoAfterSystem _doAfter = default!;
+    [Dependency] private MobStateSystem _mobSystem = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private ShipyardSystem _shipyard = default!; // For the FoundOrganics method
+    [Dependency] private GhostSystem _ghost = default!;
+    [Dependency] private MapSystem _map = default!;
+    [Dependency] private TransformSystem _transform = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IPlayerManager _player = default!;
 
     private readonly Dictionary<NetUserId, StoredBody?> _storedBodies = new();
     private EntityUid? _storageMap;
@@ -301,6 +302,7 @@ public sealed partial class CryoSleepSystem : EntitySystem
         _transform.SetCoordinates(bodyId, new EntityCoordinates(storage, Vector2.Zero));
 
         RaiseLocalEvent(bodyId, new CryosleepEnterEvent(cryopod, mind?.UserId), true);
+        RaiseLocalEvent(new ASCrewEnteredCryoEvent(bodyId)); // Aurora's Song: Used for shuttle crew records
 
         if (cryo.CryosleepDoAfter != null && _doAfter.GetStatus(cryo.CryosleepDoAfter) == DoAfterStatus.Running)
             _doAfter.Cancel(cryo.CryosleepDoAfter);

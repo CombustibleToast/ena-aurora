@@ -1,0 +1,492 @@
+- type: marking
+  id: LumariWingsAthamas
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: athamas_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: athamas_secondary
+
+- type: marking
+  id: LumariWingsBee
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: bee_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: bee_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: bee_tertiary
+
+- type: marking
+  id: LumariWingsBeetle
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: beetle_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: beetle_secondary
+
+- type: marking
+  id: LumariWingsMothtruebutterfly
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: cattleheart_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: cattleheart_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: cattleheart_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: cattleheart_quaternary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: cattleheart_quinary
+
+- type: marking
+  id: LumariWingsCharred
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: charred_primary
+
+- type: marking
+  id: LumariWingsDbushy
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: dbushy_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: dbushy_secondary
+
+- type: marking
+  id: LumariWingsDeathhead
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: deathhead_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: deathhead_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: deathhead_tertiary
+
+- type: marking
+  id: LumariWingsDefault
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: default_primary
+
+- type: marking
+  id: LumariWingsEpipyropidae
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: epipyropidae_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: epipyropidae_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: epipyropidae_tertiary
+
+- type: marking
+  id: LumariWingsFan
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: fan_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: fan_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: fan_tertiary
+
+- type: marking
+  id: LumariWingsFeathery
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: feathery_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: feathery_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: feathery_tertiary
+
+- type: marking
+  id: LumariWingsFirewatch
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: firewatch_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: firewatch_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: firewatch_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: firewatch_quaternary
+
+- type: marking
+  id: LumariWingsFlannel
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: flannel_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: flannel_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: flannel_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: flannel_quaternary
+
+- type: marking
+  id: LumariWingsGlasswing
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: glasswing_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: glasswing_secondary
+
+- type: marking
+  id: LumariWingsGothic
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: gothic_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: gothic_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: gothic_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: gothic_quaternary
+
+- type: marking
+  id: LumariWingsJungle
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: jungle_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: jungle_secondary
+
+- type: marking
+  id: LumariWingsLadybug
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: ladybug_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: ladybug_secondary
+
+- type: marking
+  id: LumariWingsMaple
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: maple_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: maple_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: maple_tertiary
+
+- type: marking
+  id: LumariWingsMoffra
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: moffra_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: moffra_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: moffra_quaternary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: moffra_quinary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: moffra_senary
+
+- type: marking
+  id: LumariWingsMothfirefly
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: mothfirefly_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: mothfirefly_secondary
+
+- type: marking
+  id: LumariWingsOaktreeHopper
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: oaktree_hopper_primary
+
+- type: marking
+  id: LumariWingsOakworm
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: oakworm_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: oakworm_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: oakworm_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: oakworm_quaternary
+
+- type: marking
+  id: LumariWingsOrigins
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: origins_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: origins_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: origins_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: origins_quaternary
+
+- type: marking
+  id: LumariWingsPlasmafire
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: plasmafire_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: plasmafire_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: plasmafire_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: plasmafire_quaternary
+
+- type: marking
+  id: LumariWingsPointy
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: pointy_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: pointy_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: pointy_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: pointy_quaternary
+
+- type: marking
+  id: LumariWingsRhinobeetle
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: rhinobeetle_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: rhinobeetle_secondary
+
+- type: marking
+  id: LumariWingsRoyal
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: royal_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: royal_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: royal_tertiary
+
+- type: marking
+  id: LumariWingsSnoth
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: snoth_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: snoth_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: snoth_tertiary
+
+- type: marking
+  id: LumariWingsStellar
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stellar_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stellar_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stellar_quaternary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stellar_quinary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stellar_senary
+
+- type: marking
+  id: LumariWingsStubby
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stubby_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: stubby_secondary
+
+- type: marking
+  id: LumariWingsSwirly
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: swirly_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: swirly_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: swirly_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: swirly_quaternary
+
+- type: marking
+  id: LumariWingsTattered
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: tattered_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: tattered_secondary
+
+- type: marking
+  id: LumariWingsUnderwing
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: underwing_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: underwing_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: underwing_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: underwing_quaternary
+
+- type: marking
+  id: LumariWingsWartorn
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: wartorn_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: wartorn_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: wartorn_tertiary
+
+- type: marking
+  id: LumariWingsWhitefly
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: whitefly_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: whitefly_secondary
+
+- type: marking
+  id: LumariWingsWingsBackstabbed
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: wings_backstabbed_primary
+
+- type: marking
+  id: LumariWingsWitchwing
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: witchwing_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: witchwing_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: witchwing_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: witchwing_quaternary
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: witchwing_quinary
+
+- type: marking
+  id: LumariChitinidWingsBee
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: bee_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: bee_secondary
+
+- type: marking
+  id: LumariChitinidWingsDefault
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: default
+
+- type: marking
+  id: LumariChitinidWingsHoneypot
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: honeypot_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: honeypot_secondary
+
+- type: marking
+  id: LumariChitinidWingsSmooth
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: smooth
+
+- type: marking
+  id: LumariChitinidWingsStubby
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: stubby
+
+- type: marking
+  id: LumariChitinidWingsTailess
+  bodyPart: Tail
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: tailess
+

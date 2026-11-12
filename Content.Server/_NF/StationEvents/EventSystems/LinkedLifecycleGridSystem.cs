@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Server.StationEvents.Components;
+using Content.Server._NF.Salvage;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared.Humanoid;
 using Content.Shared.Mech.Components;
@@ -11,13 +12,18 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Content.Shared._Goobstation.Vehicles;
 using Content.Server._AS.Touched;
+using Content.Shared.Tag; // Aurora's Song
+using Robust.Shared.Prototypes; // Aurora's Song
 
 namespace Content.Server.StationEvents.Events;
 
-public sealed class LinkedLifecycleGridSystem : EntitySystem
+public sealed partial class LinkedLifecycleGridSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private TagSystem _tagSystem = default!; // Aurora's Song
+
+    private static readonly ProtoId<TagPrototype> TrashProto = "Trash"; // Aurora's Song
 
     public override void Initialize()
     {
@@ -99,13 +105,13 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
 
         // Begin Aurora Song
         var itemQuery = AllEntityQuery<TouchedComponent, TransformComponent>();
-        while (itemQuery.MoveNext(out var touched, out var xform))
+        while (itemQuery.MoveNext(out var uid, out var touched, out var xform))
         {
             if (xform.GridUid == null || xform.MapUid == null || xform.GridUid != grid || xform.ParentUid != grid || xform.Anchored != false ||
-                touched.Touched == false)
+                touched.Touched == false || _tagSystem.HasTag(uid, TrashProto))
                 continue;
 
-            var (targetUid, targetXform) = GetParentToReparent(touched.Owner, xform);
+            var (targetUid, targetXform) = GetParentToReparent(uid, xform);
 
             reparentEntities.Add(((targetUid, targetXform), targetXform.MapUid!.Value, _transform.GetWorldPosition(targetXform)));
         }
@@ -158,6 +164,10 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
             if (handledMindContainers.Contains(mobUid))
                 continue;
 
+            // Aurora's Song: If we have salvage mob restrictions and are on the UIV, we're about to be deleted and don't want to be considered
+            if (HasComp<NFSalvageMobRestrictionsComponent>(mobUid))
+                continue;
+
             var (targetUid, targetXform) = GetParentToReparent(mobUid, xform);
 
             reparentEntities.Add(((targetUid, targetXform), targetXform.MapUid!.Value, _transform.GetWorldPosition(targetXform)));
@@ -191,7 +201,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
     // Deletes a grid, reparenting every humanoid and player character that's on it.
     public void UnparentPlayersFromGrid(EntityUid grid, bool deleteGrid, bool ignoreLifeStage = false)
     {
-        if (!EntityManager.EntityExists(grid))
+        if (!Exists(grid))
             return;
 
         if (!ignoreLifeStage && TerminatingOrDeleted(grid))

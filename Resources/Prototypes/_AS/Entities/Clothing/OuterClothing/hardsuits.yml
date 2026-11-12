@@ -12,19 +12,21 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSleCombat
   - type: ExplosionResistance
-    damageCoefficient: 0.4
+    damageCoefficient: 0.2 # .4 > .2 Very hard to explode
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
+        Blunt: 0.6 # .5 > .6 Easier to beat
         Slash: 0.6
-        Piercing: 0.55 #buff 40% to 45% piercing resist
-        Heat: 0.60
-        Radiation: 0.50
-        Caustic: 0.7
+        Piercing: 0.45 # .55 > .45 Harder to shoot, 5% diff on most merc suits
+        Heat: 0.4 # .6 > .4 Harder to burn
+        Radiation: 0.4 # .5 > .4 Harder to irradiate
+        Caustic: 0.4 # .7 > .4 Harder to super burn
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85 #increased speed from .75 to .85, this suit can be painful to wear because of the speed
+    walkModifier: 0.9 # .85 > .9 Better movement
+    sprintModifier: 0.9 # .85 > .9 Better movement
+  - type: StaminaResistance # Stun resist, inline with bloodred values here
+    damageCoefficient: 0.75
 
 - type: entity
   parent: ClothingOuterHardsuitSleCombat
@@ -202,6 +204,11 @@
         Heat: 0.65
         Radiation: 0.6
         Caustic: 0.8
+  - type: DamageOnShootProtection # Enough to really cushion the blow from firing a Leviathan, but not enough to stop the knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 4
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95
@@ -367,6 +374,11 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: Item
     size: Huge
   - type: ClothingSpeedModifier
@@ -452,6 +464,11 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -535,6 +552,11 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -618,6 +640,11 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -703,6 +730,11 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -786,6 +818,11 @@
         Heat: 0.5
         Radiation: 0.5
         Caustic: 0.5
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -877,6 +914,11 @@
         Heat: 0.20
         Radiation: 0.10
         Caustic: 0.20
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -968,6 +1010,11 @@
         Heat: 0.20
         Radiation: 0.10
         Caustic: 0.20
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -1059,6 +1106,11 @@
         Heat: 0.20
         Radiation: 0.10
         Caustic: 0.20
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -1150,6 +1202,11 @@
         Heat: 0.20
         Radiation: 0.10
         Caustic: 0.20
+  - type: DamageOnShootProtection # Enough to allow firing the Leviathian without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
@@ -1160,3 +1217,240 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
+
+# Aurora's Song - Suffixed NT Sec hardsuits
+- type: entity
+  parent: [ClothingOuterHardsuitBase, C2ContrabandNanoTrasenRestricted]
+  id: ASClothingOuterHardsuitConstable # Just a reskin of base security hardsuit with different stats and description
+  name: constable hardsuit
+  suffix: Aurora's Song
+  description: An NT Security issued "Constable" hardsuit, usually seen on stations during bad times.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/security.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/security.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Radiation: 0.75
+        Heat: 0.6
+        Caustic: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadHelmetHardsuitConstable
+  - type: Tag
+    tags:
+    - CorgiWearable
+    - Hardsuit
+    - WhitelistChameleon
+
+#Brigmed suit version
+- type: entity
+  parent: [ClothingOuterHardsuitBase, C2ContrabandNanoTrasenRestricted]
+  id: ASClothingOuterHardsuitShedu # Just a reskin of base brigmed hardsuit with different stats and description
+  name: shedu hardsuit
+  suffix: Aurora's Song
+  description: An NT issued "Shedu" MedSec hardsuit. Less armour plating than the Constable, but faster.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/brigmedic.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/brigmedic.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.3
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Radiation: 0.75
+        Heat: 0.8
+        Caustic: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadHelmetHardsuitShedu
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, C2ContrabandNanoTrasenRestricted]
+  id: ASClothingOuterHardsuitHauberk # Just a reskin of base warden hardsuit with different stats and description
+  name: hauberk hardsuit
+  suffix: Aurora's Song
+  description: The NT answer to hard riots and low pressure at the same time, reserved for Wardens.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/security-warden.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/security-warden.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.5
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.4
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.4
+        Slash: 0.4
+        Piercing: 0.7
+        Radiation: 0.75
+        Heat: 0.8
+        Caustic: 0.7
+  - type: ClothingSpeedModifier
+    walkModifier: 0.85
+    sprintModifier: 0.85
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadHelmetHardsuitHauberk
+
+- type: entity
+  parent: [ClothingOuterHardsuitBase, C2ContrabandNanoTrasenRestricted]
+  id: ASClothingOuterHardsuitGolem # Just a reskin of base HoS hardsuit with different stats and description
+  name: golem hardsuit
+  suffix: Aurora's Song
+  description: NT Security's finest offering, reserved for a HoS usually. Wonder how it got here...
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/security-red.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/security-red.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.45
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.6
+        Radiation: 0.5
+        Caustic: 0.6
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.875
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadHelmetHardsuitGolem
+
+- type: entity
+  parent: [ ClothingOuterHardsuitBase, BaseC3NanoTrasenContraband ] # BaseCommandContraband<BaseC2ContrabandUnredeemable
+  id: ASClothingOuterHardsuitSatanus # Just a Death Squad suit with different stats and description
+  name: damaged satanus hardsuit
+  suffix: Aurora's Song
+  description: A damaged looking hardsuit, still sporting some intimidatingly heavy plating. A scratched up serial reading DS-### is barely readable on the chestplate. What the hell is this?
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+  - type: PressureProtection
+    highPressureMultiplier: 0.1
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.3
+  - type: StaminaResistance
+    damageCoefficient: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.3
+        Slash: 0.3
+        Piercing: 0.3
+        Heat: 0.3
+        Radiation: 0.3
+        Caustic: 0.3
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.8
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadHelmetHardsuitSatanus
+
+# Suffixed NT Sec hardsuits - Unremoveables for NPC use
+- type: entity
+  parent: [ASClothingOuterHardsuitConstable, ContrabandClothing]
+  name: constable hardsuit
+  suffix: Aurora, NPC
+  id: ASClothingOuterHardsuitConstableUnremoveable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ASClothingOuterHardsuitShedu, ContrabandClothing]
+  name: shedu hardsuit
+  suffix: Aurora, NPC
+  id: ASClothingOuterHardsuitSheduUnremoveable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ASClothingOuterHardsuitHauberk, ContrabandClothing]
+  name: hauberk hardsuit
+  suffix: Aurora, NPC
+  id: ASClothingOuterHardsuitHauberkUnremoveable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ASClothingOuterHardsuitGolem, ContrabandClothing]
+  name: golem hardsuit
+  suffix: Aurora, NPC
+  id: ASClothingOuterHardsuitGolemUnremoveable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ ClothingOuterHardsuitBlueshield, C2ContrabandNanoTrasenRestricted, ContrabandClothing]
+  name: gargoyle hardsuit
+  suffix: Aurora, NPC
+  id: ASClothingOuterHardsuitGargoyleUnremoveable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ASClothingOuterHardsuitSatanus, ContrabandClothing]
+  name: damaged satanus hardsuit
+  suffix: Aurora, NPC
+  id: ASClothingOuterHardsuitSatanusUnremoveable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+
+- type: entity
+  parent: [ BaseCentcommContraband, ClothingOuterHardsuitSyndieCommander ] #Possibly could be BaseC2ContrabandUnredeemable
+  id: ClothingOuterHardsuitCallisto
+  name: callisto hardsuit
+  suffix: Aurora's Song
+  description: A protective hardsuit worn by the leader of an NT emergency response team.
+  components:
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/ERTSuits/ertleader.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitERTLeader
+

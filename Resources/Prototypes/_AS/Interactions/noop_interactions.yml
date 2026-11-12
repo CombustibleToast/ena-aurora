@@ -1,0 +1,21 @@
+﻿- type: Interaction
+  id: KnockOnOther
+  parent: [BaseGlobal, KnockOn]
+  priority: 2
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+    - !type:EntityWhitelistRequirement
+      whitelist:
+        tags:
+        - SiliconOrIPCEmotes
+
+- type: Interaction
+  id: Poke
+  parent: [BaseGlobal, BaseHands]
+  priority: 0
+  delay: 0
+  range: {max: 1.2}
+  action:
+    !type:NoOpAction

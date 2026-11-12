@@ -9,9 +9,10 @@
   examineText: contraband-examine-text-Class2
   showDepartmentsAndJobs: true
 
-- type: contrabandSeverity
-  id: Class2Expedition
-  examineText: contraband-examine-text-Class2Expedition
+# Aurora's Song - Depricated C2E
+#- type: contrabandSeverity
+#  id: Class2Expedition
+#  examineText: contraband-examine-text-Class2Expedition
 
 # Class 3 contraband - highly destructive things, things associated with non-NT factions
 - type: contrabandSeverity
@@ -34,9 +35,10 @@
   id: Class3Wizard
   examineText: contraband-examine-text-Class3Wizard
 
-- type: contrabandSeverity
-  id: Class3Expedition
-  examineText: contraband-examine-text-Class3Expedition
+# Aurora's Song - Depricated C3E
+#- type: contrabandSeverity
+#  id: Class3Expedition
+#  examineText: contraband-examine-text-Class3Expedition
 
 # Class 3 contraband - mobs
 - type: contrabandSeverity

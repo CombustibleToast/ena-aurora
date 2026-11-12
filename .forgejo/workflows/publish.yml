@@ -1,0 +1,119 @@
+name: Publish
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+on:
+  workflow_dispatch:
+  # Frontier: re-enabled autopublish
+  schedule:
+    - cron: '40 8 * * 1,4,6' # UTC 07:40 Mo Th Sa
+
+jobs:
+  build:
+    runs-on: ubuntu-dotnet # Aurora's Song
+
+    steps:
+    - name: Fail if we are attempting to run on the master branch
+      if: ${{GITHUB.REF_NAME == 'master' && github.repository == 'space-wizards/space-station-14'}}
+      run: exit 1
+
+    - name: Install dependencies
+      run: | # Aurora's Song - Add update and requests and yaml
+        sudo apt-get update
+        sudo apt-get install -y python3-paramiko python3-lxml python3-requests python3-yaml
+
+    - uses: actions/checkout@v7
+      with:
+        submodules: 'recursive'
+        fetch-depth: 0
+        filter: blob:none
+        token: ${{ secrets.CL_ACCESS_TOKEN }}
+    # Aurora's Song
+    # - name: Setup .NET Core
+    #   uses: https://github.com/actions/setup-dotnet@v5 # Aurora's Song concat full URL
+    #   with:
+    #     dotnet-version: 10.0.x
+
+    - name: Get Engine Tag
+      run: |
+        cd RobustToolbox
+        git fetch --depth=1
+
+    - name: Save old changelog
+      run: cp Resources/Changelog/Aurora.yml Old.yml
+
+    - name: Update changelog
+      run: | # Aurora's Song - Use AS version until upstream updates theirs
+        dotnet tool install --global AuroraSong.ChangelogTool --version 1.0.1
+        export PATH="$PATH:/root/.dotnet/tools"
+        ss14-changelog update -d Resources/Changelog
+      env:
+        REPO: ${{ github.repository }}
+        # BRANCH: stable # Aurora's Song
+        CHANGELOG_REPO_PATH: Resources/Changelog
+        # EXTRA_CATEGORIES: Admin,Maps,Rules # Aurora's Song
+        GITHUB_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+        # Aurora's Song Start
+        PRIMARY_CHANGELOG: Aurora
+        PR_PROVIDER: Forgejo
+        # Aurora's Song End
+
+    - name: Commit and push changelog changes
+      id: changelog
+      run: | # Aurora's Song - Change to our bot and codeberg
+        git config user.name "AuroraSongBot"
+        git config user.email "bot@aurorasong.gay"
+        if [ -n "$(git status --porcelain Resources/Changelog)" ]; then
+          git add Resources/Changelog
+          git commit -m "Update changelog"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+        fi
+      env:
+        CL_ACCESS_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+
+    # - name: Create PR from stable to master
+    #   if: steps.changelog.outputs.committed == 'true'
+    #   env:
+    #     GH_TOKEN: ${{ secrets.CL_ACCESS_TOKEN }}
+    #   run: |
+    #     if [ -z "$(gh pr list --repo "$GITHUB_REPOSITORY" --head stable --base master --state open --json number --jq '.[].number')" ]; then
+    #       gh pr create --repo "$GITHUB_REPOSITORY" --base master --head stable --title "Update changelog" --body "Sync from release to master."
+    #     fi
+
+    - name: Install dependencies
+      run: dotnet restore
+
+    - name: Build Packaging
+      run: dotnet build Content.Packaging --configuration Release --no-restore /m
+
+    - name: Package server
+      run: dotnet run --project Content.Packaging server --platform win-x64 --platform win-arm64 --platform linux-x64 --platform linux-arm64 --platform osx-x64 --platform osx-arm64
+
+    - name: Package client
+      run: dotnet run --project Content.Packaging client --no-wipe-release
+
+    - name: Publish version
+      run: Tools/publish_multi_request.py
+      env:
+        PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
+        # GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }} # Aurora's Song
+
+    - name: Move changelog for Discord publish
+      run: mv Old.yml Resources/Changelog/Old.yml
+    
+    - name: Publish changelog (Discord)
+      run: Tools/actions_changelogs_since_last_run.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+        SS14_CHANGELOG_DEBUG: true
+
+#     Aurora Song Commented out because we don't have RSS
+#     - name: Publish changelog (RSS)
+#       continue-on-error: true
+#       run: Tools/actions_changelog_rss.py
+#       env:
+#         CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}

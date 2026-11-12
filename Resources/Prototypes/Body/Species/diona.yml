@@ -4,16 +4,16 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Head:
-      limit: 2
+      limit: 4 # Aurora's Song: 2 > 4
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 2 #imp
+      limit: 4 # Aurora's Song: 2 > 4
       required: false
     enum.HumanoidVisualLayers.HeadSide:
-      limit: 2 #imp
+      limit: 4 # Aurora's Song: 2 > 4
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 2
+      limit: 3 # Aurora's Song: 2 > 3
       required: false
     enum.HumanoidVisualLayers.LArm:
       limit: 1
@@ -27,14 +27,18 @@
     enum.HumanoidVisualLayers.RLeg:
       limit: 1
       required: false
+    enum.HumanoidVisualLayers.Tail: # Aurora's Song: Added tail marking group
+      limit: 2
+      required: false
     enum.HumanoidVisualLayers.Overlay:
       limit: 1
-      required: true
-      default: [ DionaVineOverlay ]
+      required: false # Aurora's Song: true > false
+      # default: [ DionaVineOverlay ] - Aurora's Song
 
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceDiona
+  categories: [ HideSpawnMenu ]
   name: diona appearance
   components:
   - type: Inventory
@@ -100,7 +104,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Sap
-        Quantity: 300
+        Quantity: 600
   - type: Reactive
     groups:
       Flammable: [ Touch ]
@@ -151,7 +155,7 @@
           - MobLayer
   - type: Speech
     speechVerb: Plant
-    allowedEmotes: ['Chirp']
+    allowedEmotes: ['Chirp', 'Multichirp'] # Aurora's Song - add multichirp
   - type: Vocal
     sounds:
       Male: UnisexDiona
@@ -174,7 +178,7 @@
   - type: FTLKnockdownImmune # Frontier
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic
   id: OrganDiona
   abstract: true
   suffix: Diona

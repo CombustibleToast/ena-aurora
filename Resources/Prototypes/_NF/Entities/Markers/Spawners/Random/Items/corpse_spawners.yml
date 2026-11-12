@@ -8,7 +8,7 @@
     sprite: Markers/jobs.rsi
     layers:
     - state: green
-    - sprite: Structures/Storage/Crates/coffin.rsi
+    - sprite: _AS/Structures/Storage/Crates/coffin.rsi # Aurora's Song - Storage Resprites Batch 1
       state: base
     - sprite: _NF/Markers/general.rsi
       state: questionmark

@@ -6,10 +6,10 @@ using Content.Shared.Labels.EntitySystems;
 
 namespace Content.Server._NF.Station.Systems;
 
-public sealed class StationRenameHolopadsSystem : EntitySystem
+public sealed partial class StationRenameHolopadsSystem : EntitySystem
 {
-    [Dependency] private readonly StationSystem _stationSystem = default!;
-    [Dependency] private readonly LabelSystem _label = default!; // TODO: use LabelSystem directly instead of this.
+    [Dependency] private StationSystem _stationSystem = default!;
+    [Dependency] private LabelSystem _label = default!; // TODO: use LabelSystem directly instead of this.
 
     public override void Initialize()
     {
@@ -22,7 +22,7 @@ public sealed class StationRenameHolopadsSystem : EntitySystem
         SyncHolopadsNames(uid);
     }
 
-    private void SyncHolopadsNames(EntityUid stationUid)
+    public void SyncHolopadsNames(EntityUid stationUid) // Aurora's Song - Public method to allow post init renames
     {
         // update all holopads that belong to this station grid
         var query = EntityQueryEnumerator<HolopadComponent>();

@@ -89,6 +89,7 @@
       amount: -20
     - !type:PlantAdjustMutationMod
       amount: 0.1
+    - !type:PlantRemoveKudzu
   metabolisms:
     Bloodstream:
       effects:
@@ -237,7 +238,7 @@
       - !type:HealthChange
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Rat ]
+          type: [ Rat, Thaven ] # Aurora's Song - Thaven Safely Breathe Gases
           inverted: true
         - !type:ReagentCondition
           reagent: Ammonia
@@ -251,7 +252,7 @@
         probability: 0.12
         conditions:
         - !type:MetabolizerTypeCondition
-          type: [ Rat, Vox ]
+          type: [ Rat, Vox, Thaven ] # Aurora's Song - Thaven Safely Breathe Gases ]
           inverted: true
         - !type:ReagentCondition
           reagent: Ammonia
@@ -290,6 +291,16 @@
         - !type:MetabolizerTypeCondition
           type: [ Vox ]
         factor: -4
+      - !type:Oxygenate # DeltaV - Harpy air quality sensitivty
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Harpy ]
+        factor: -4
+      - !type:Oxygenate #macro, thaven don't suffocate from any gases
+        scaling: true
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Thaven ]
 
 
 - type: reagent

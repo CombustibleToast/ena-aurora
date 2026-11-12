@@ -1,0 +1,19 @@
+<Document>
+  # Lumari
+
+  <Box>
+    <GuideEntityEmbed Entity="AppearanceLumari" Caption=""/>
+  </Box>
+
+  Lumari are a species of sophont insectoids similar to moth people, but with a much wider variety of bug-like appearances. Their features may resemble moths, beetles, bees, and other insects.
+
+  Lumari hail from the Starfall sector, where their ancestors shared a world with Aranei, Dionae, and Lithoids.
+
+  Like moth people, Lumari can gain nutrition from plant fibers that most other species find indigestible, and they prefer somewhat cooler environments.
+
+  Their insect blood cannot be replenished from iron in the same way as ordinary blood.
+
+  Their wings provide better acceleration in zero gravity, though they still require equipment to move when stranded in open space.
+
+  They take [color=#1e90ff]30% less Cold damage[/color], but suffer [color=#ffa500]30% more Heat damage and catch fire more easily[/color].
+</Document>

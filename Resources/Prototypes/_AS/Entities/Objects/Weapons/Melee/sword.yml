@@ -1,6 +1,6 @@
 ﻿- type: entity
   name: Sweeping Song
-  parent: [ CaptainSabre, BaseC3Contraband ] # Frontier: BaseCommandContraband<BaseC1Contraband
+  parent: [ CaptainSabre, C2ContrabandRestricted ]
   id: SweepingSongGAMBLING
   description: Do you hear death's sweet song? It sings to us.
   components:

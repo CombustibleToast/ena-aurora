@@ -42,7 +42,7 @@
         - Write
 
 - type: entity
-  parent: BasePDA
+  parent: [ BasePDA, C2ContrabandUnredeemableRestricted ]
   id: ASBaseSecurityPDA # copy of BaseSecurityPDA from NF with different sprite directory
   abstract: true
   components:
@@ -71,11 +71,6 @@
   components:
   - type: Pda
     id: ASMedicIDCard
-    penSlot:
-      priority: -1
-      whitelist:
-        tags:
-        - Write
   - type: PdaBorderColor
     borderColor: "#d7d7d0"
     accentVColor: "#2a4b5b"
@@ -97,6 +92,7 @@
     - AstroNavCartridge
     - MedTekCartridge
     - NanoChatCartridge # Auroras Song
+    - CriticalImplantTrackerCartridge # Aurora's Song
 
 #region Service
 
@@ -108,11 +104,6 @@
   components:
   - type: Pda
     id: ASServiceWorkerIDCard
-    penSlot:
-      priority: -1
-      whitelist:
-        tags:
-        - Write
   - type: PdaBorderColor
     borderColor: "#d7d7d0"
     accentVColor: "#2a4b5b"
@@ -267,6 +258,32 @@
     id: ASSergeantIDCard
     bookSlot: # Frontier
       startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-assergeant
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-assergeant
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: OffDutyOfficerPDA
+  name: off-duty officer PDA
+  description: Whosoever bears this PDA puts the law on their back.
+  components:
+  - type: Pda
+    id: OffDutyOfficerIDCard
+    bookSlot:
+      startingItem: HyperlinkBookSLESop
       priority: -2
       whitelist:
         tags:
@@ -443,7 +460,7 @@
       - NanoChatCartridge # Auroras Song
 
 - type: entity
-  parent: ASBaseSecurityPDA
+  parent: [ ASBaseSecurityPDA, BaseC3ContrabandCAFUnredeemable ]
   id: CAFLeaderPDA
   name: CAF Leader PDA
   suffix: Leader
@@ -664,3 +681,53 @@
       map: [ "enum.PdaVisualLayers.IdLight" ]
       shader: "unshaded"
       visible: false
+
+#region Corporate
+
+- type: entity
+  parent: [ SyndiCommanderPDA, C2ContrabandSyndicateRestrictedUnredeemable]
+  id: ASSyndicateRepresentativePDA
+  name: syndicate representative PDA
+  description: How many did you have to sacrifice to get here?
+  components:
+  - type: Pda
+    id: ASSyndicateRepresentativeIDCard
+    penSlot:
+      startingItem: CyberPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: CartridgeLoader
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - BountyContractsCartridge
+      - AstroNavCartridge
+      - NanoChatCartridge
+
+- type: entity
+  parent: [ SrPDA, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASNanotrasenRepresentativePDA
+  name: nanotrasen representative PDA
+  description: Looks like it's been clawed on.
+  components:
+  - type: Pda
+    id: ASNanotrasenRepresentativeIDCard
+    penSlot:
+      startingItem: PenCentcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: CartridgeLoader
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - BountyContractsCartridge
+      - AstroNavCartridge
+      - NanoChatCartridge

@@ -22,7 +22,7 @@
 
 - type: entity
   id: ASWeaponShotgunBailiff
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
+  parent: [ C2ContrabandRestricted, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ]
   name: Bailiff
   description: |-
     A tube-fed shotgun with full-auto capacity. The commisoner's trusty longarm, It always finds its way back to its true master.
@@ -69,6 +69,37 @@
     capacity: 6
   - type: NFWeaponDetails
     manufacturer: weapon-details-colonial-weapon-manufacturer
+  - type: UniqueAction
+  - type: PumpAction
+
+- type: entity
+  parent: [ C2ContrabandNanoTrasenRestricted, ASBaseLeverActionShotgun, ASBaseWeaponShotgunChamber8gMagFed, NFBaseWeaponEncumbranceRifle, ASBaseWeaponFrameShotgunNanotrasen]
+  id: ASWeaponShotgunLeverChester
+  name: Chester
+  description: |-
+    A lever-action shotgun chambered in 8 gauge. Hard hitting, loud action, cowboy vibes.
+  components:
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0
+  - type: Sprite
+    sprite: _Goobstation/Objects/Weapons/Guns/Lever/chester.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _Goobstation/Objects/Weapons/Guns/Lever/chester.rsi
+  - type: Gun
+    fireRate: 1.1
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+
+- type: entity
+  parent: [ C2ContrabandNanoTrasenRestricted, ASWeaponShotgunLeverChester ]
+  id: ASWeaponShotgunLeverChesterRegistered
 
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ] # Parented to Nanotrasen shotgun, as it's a modified enforcer
@@ -120,3 +151,5 @@
     capacity: 6
   - type: NFWeaponDetails
     manufacturer: weapon-details-colonial-weapon-manufacturer
+  - type: UniqueAction
+  - type: PumpAction

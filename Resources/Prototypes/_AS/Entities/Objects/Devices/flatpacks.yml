@@ -1,7 +1,19 @@
+# region Mercenary
+
+- type: entity
+  parent: BaseNFFlatpack
+  id: AmmoFridgeFlatpack
+  name: AmmoFridge flatpack
+  description: A flatpack used for constructing a AmmoFridge.
+  components:
+  - type: Flatpack
+    entity: AmmoFridge
+  - type: StaticPrice
+    vendPrice: 7500
 # region SLE
 
 - type: entity
-  parent: HoverbikeFlatpack
+  parent: [ C2ContrabandUnredeemableRestricted, HoverbikeFlatpack ]
   id: HoverbikeSLEFlatpack
   name: SLE hoverbike flatpack
   description: A flatpack used for constructing an SLE hoverbike. Keys already slotted in the ignition.
@@ -12,7 +24,7 @@
     price: 2000
 
 - type: entity
-  parent: NfsdTechFabFlatpack
+  parent: [ C2ContrabandUnredeemableRestricted, NfsdTechFabFlatpack ]
   id: ASTechFabSLEFlatpack
   name: SLE techfab flatpack
   description: A flatpack used for constructing an SLE techfab.
@@ -27,16 +39,17 @@
 
 # region Engineering
 
-- type: entity
-  parent: BaseNFFlatpack
-  id: PoweredTinyFanFlatpack
-  name: powered tiny fan flatpack
-  description: A flatpack used for constructing a powered tiny fan.
-  components:
-  - type: Flatpack
-    entity: PoweredAtmosDeviceFanTiny
-  - type: StaticPrice
-    vendPrice: 12500
+# Removed as Tiny Fan is more easily abusable, and the directional serve its purpose fine without
+# - type: entity
+#   parent: BaseNFFlatpack
+#   id: PoweredTinyFanFlatpack
+#   name: powered tiny fan flatpack
+#   description: A flatpack used for constructing a powered tiny fan.
+#   components:
+#   - type: Flatpack
+#     entity: PoweredAtmosDeviceFanTiny
+#   - type: StaticPrice
+#     vendPrice: 12500
 
 - type: entity
   parent: BaseNFFlatpack

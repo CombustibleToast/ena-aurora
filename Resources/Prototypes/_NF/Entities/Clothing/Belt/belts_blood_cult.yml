@@ -1,8 +1,7 @@
 - type: entity
-  parent:
-  - BaseC3CultContraband
+  parent: # Aurora's Song - Added BaseC1Contraband, Removed ContrabandClothing
+  - BaseC1Contraband
   - ClothingBeltBase
-  - ContrabandClothing
   id: ClothingBeltCultForceField
   name: cult runic belt buckle
   components:
@@ -18,10 +17,9 @@
     spread: 90
 
 - type: entity
-  parent:
-  - BaseC3CultContrabandUnredeemable
+  parent: # Aurora's Song - Added BaseC1Contraband, Removed ContrabandClothing
+  - BaseC1Contraband
   - NFClothingBeltStorageHolsterBase
-  - ContrabandClothing
   id: ClothingBeltCultWebbing
   name: cult webbing
   description: A webbing with pockets lined with waterproof (water, huh?) material.

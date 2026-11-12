@@ -23,6 +23,46 @@
   equipment:
     eyes: ClothingEyesEyepatch
 
+#Aurora's Song - Colorful glasses start
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulPink
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulPink
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulRed
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulRed
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulYellow
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulYellow
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulGreen
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulGreen
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulBlue
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulBlue
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulPurple
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulPurple
+
+#Aurora's Song - Colorful glasses end
+
 #Aurora Song- Mantis drip merge start
 - type: loadout
   id: ContractorClothingEyesGlassesMantis

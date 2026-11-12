@@ -1,0 +1,48 @@
+- type: entity
+  name: mercenary gravity shield
+  parent: EnergyShield
+  id: EnergyShieldMercenary
+  description: A prototype energy shield utilizing gravitic fields to be able to reflect both kinetic and energy projectiles. The field imparts significant 'drag' on the user, slowing them.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Melee/merc_e_shield.rsi
+  - type: Item
+    sprite: _AS/Objects/Weapons/Melee/merc_e_shield.rsi
+  - type: Contraband
+    severity: Class2
+    turnInValues:
+    allowedDepartments: [ Security, Command ]
+  - type: PointLight
+    color: yellow
+  - type: Reflect
+    reflectProb: 0.20
+    damageOnReflectModifier: 0.6
+    spread: 70 # 2x standard. It 'bends' rather than reflecting
+    reflects:
+      - Energy
+      - NonEnergy
+  - type: Blocking # Greatshield values
+    passiveBlockModifier:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.7 
+        Piercing: 0.6 
+        Heat: 0.6 
+    activeBlockModifier:
+      coefficients:
+        Blunt: 0.9 
+        Slash: 0.7 
+        Piercing: 0.6 
+        Heat: 0.6 
+      flatReductions:
+        Heat: 3
+        Blunt: 3
+        Slash: 3
+        Piercing: 3
+  - type: ComponentToggler
+    components:
+    - type: DisarmMalus
+      malus: 0.6
+    - type: HeldSpeedModifier # Half active block malus
+      walkModifier: 0.85
+      sprintModifier: 0.85

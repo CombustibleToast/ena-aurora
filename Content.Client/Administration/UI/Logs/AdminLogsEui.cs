@@ -13,12 +13,12 @@ using static Content.Shared.Administration.Logs.AdminLogsEuiMsg;
 namespace Content.Client.Administration.UI.Logs;
 
 [UsedImplicitly]
-public sealed class AdminLogsEui : BaseEui
+public sealed partial class AdminLogsEui : BaseEui
 {
-    [Dependency] private readonly IClyde _clyde = default!;
-    [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
-    [Dependency] private readonly IFileDialogManager _dialogManager = default!;
-    [Dependency] private readonly ILogManager _log = default!;
+    [Dependency] private IClyde _clyde = default!;
+    [Dependency] private IUserInterfaceManager _uiManager = default!;
+    [Dependency] private IFileDialogManager _dialogManager = default!;
+    [Dependency] private ILogManager _log = default!;
 
     private const char CsvSeparator = ',';
     private const string CsvQuote = "\"";
@@ -39,6 +39,7 @@ public sealed class AdminLogsEui : BaseEui
         LogsControl.NextButton.OnPressed += _ => NextLogs();
         LogsControl.PopOutButton.OnPressed += _ => PopOut();
         LogsControl.ExportLogs.OnPressed += _ => ExportLogs();
+        InitializeSensitiveLogs(); // Aurora's Song - Sensitive logs
 
         _sawmill = _log.GetSawmill("admin.logs.ui");
     }
@@ -107,10 +108,11 @@ public sealed class AdminLogsEui : BaseEui
             // Buffer is set to 4KB for performance reasons. As the average export of 1000 logs is ~200KB
             await using var writer = new StreamWriter(file.Value.fileStream, bufferSize: 4096);
             await writer.WriteLineAsync(CsvHeader);
-            foreach (var child in LogsControl.LogsContainer.Children)
+            foreach (var logLabel in LogsControl.VisibleLogLabels()) // Aurora's Song - Support wrapped sensitive log rows
             {
-                if (child is not AdminLogLabel logLabel || !child.Visible)
-                    continue;
+                // Aurora's Song - Visibility filtering and wrapped sensitive log rows are handled by VisibleLogLabels().
+                // if (child is not AdminLogLabel logLabel || !child.Visible)
+                //     continue;
 
                 var log = logLabel.Log;
 
@@ -198,6 +200,7 @@ public sealed class AdminLogsEui : BaseEui
         LogsControl.SetCurrentRound(s.RoundId);
         LogsControl.SetPlayers(s.Players);
         LogsControl.UpdateCount(round: s.RoundLogs);
+        LogsControl.SetSensitiveLogControlsVisible(s.CanViewSensitiveLogs); // Aurora's Song - Sensitive admin log permission
 
         if (!FirstState)
         {
@@ -212,6 +215,10 @@ public sealed class AdminLogsEui : BaseEui
     public override void HandleMessage(EuiMessageBase msg)
     {
         base.HandleMessage(msg);
+
+        // Aurora's Song - Sensitive admin log revealing
+        if (HandleSensitiveLogMessage(msg))
+            return;
 
         switch (msg)
         {

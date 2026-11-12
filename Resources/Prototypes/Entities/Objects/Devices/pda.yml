@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [ BaseItem, StorePresetUplink ] #PDA's have uplinks so they have to inherit the data.
+  parent: [ BaseItem ]
   id: BasePDA
   name: PDA
   description: Personal Data Assistant.
@@ -132,6 +132,7 @@
         type: InstrumentBoundUserInterface
       enum.HealthAnalyzerUiKey.Key:
         type: HealthAnalyzerBoundUserInterface
+  - type: RemoteStore # PDAs can access uplinks so they need this component.
   - type: Tag
     tags:
     - DoorBumpOpener
@@ -1144,7 +1145,7 @@
     - DoorBumpOpener
 
 - type: entity
-  parent: [ BasePDA, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: [ BasePDA, C2ContrabandSyndicateUnredeemable ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateUnredeemable, So you don't accidentally sell your PDA
   id: SyndiPDA
   name: syndicate PDA
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
@@ -1169,7 +1170,7 @@
       - NanoChatCartridge # Auroras Song
 
 - type: entity
-  parent: [ SyndiPDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ SyndiPDA, C2ContrabandSyndicateUnredeemable ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateUnredeemable, So you don't accidentally sell your PDA
   id: SyndiOperativePDA
   name: syndicate operative PDA
   description: Death to NT!
@@ -1188,7 +1189,7 @@
     state: pda-syndi-operative
 
 - type: entity
-  parent: [ SyndiOperativePDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ SyndiOperativePDA, C2ContrabandSyndicateUnredeemable ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicateUnredeemable, So you don't accidentally sell your PDA
   id: SyndiCorpsmanPDA
   name: syndicate corpsman PDA
   description: Commander... I need to cook!
@@ -1211,7 +1212,7 @@
       - MedTekCartridge
 
 - type: entity
-  parent: [ SyndiOperativePDA, BaseC3SyndicateContraband] # Aurora's Song - BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [ SyndiOperativePDA, C2ContrabandUnredeemableRestricted ] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnredeemableRestricted, So you don't accidentally sell your PDA
   id: SyndiCommanderPDA
   name: syndicate commander PDA
   description: So what are we, some kind of Nukie squad?
@@ -1588,7 +1589,7 @@
     state: pda-seniorcourier
 
 - type: entity
-  parent: [ BaseC3PirateContrabandNoValue, BasePDA ] # Frontier: BaseMajorContraband<BaseC3PirateContrabandNoValue
+  parent: [ BaseC1Contraband, BasePDA ] # Aurora's Song - BaseMajorContraband<BaseC1Contraband
   id: NinjaPDA
   name: ninja PDA
   description: You stealthy bastard, you!

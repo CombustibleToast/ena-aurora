@@ -1,0 +1,93 @@
+- type: vendingMachineInventory
+  id: MarineSurplusVendInventory
+  startingInventory:
+  # Uniforms
+    JumpsuitMarineSurplus: 4294967295 # Infinite
+    JumpsuitMarineSurplusDesert: 4294967295 # Infinite
+    JumpsuitMarineSurplusSnow: 4294967295 # Infinite
+    JumpsuitMarineSurplusClassic: 4294967295 # Infinite
+    JumpsuitMarineSurplusUrban: 4294967295 # Infinite
+  # Scarfs
+    RMCMaskScarfAlphaDown: 4294967295 # Infinite
+    RMCMaskScarfBravoDown: 4294967295 # Infinite
+    RMCMaskScarfCharlieDown: 4294967295 # Infinite
+    RMCMaskScarfDeltaDown: 4294967295 # Infinite
+    RMCMaskScarfEchoDown: 4294967295 # Infinite
+    RMCMaskScarfFoxtrotDown: 4294967295 # Infinite
+    RMCMaskScarfBlackDown: 4294967295 # Infinite
+    RMCMaskScarfGrayDown: 4294967295 # Infinite
+    RMCMaskScarfGreenDown: 4294967295 # Infinite
+    RMCMaskScarfTanDown: 4294967295 # Infinite
+  # Neckerchiefs
+    RMCMaskNeckerchiefAlphaDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefBravoDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefCharlieDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefDeltaDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefEchoDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefFoxtrotDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefTanDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefBlackDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefGrayDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefGreenDown: 4294967295 # Infinite
+    RMCMaskNeckerchiefWhiteDown: 4294967295 # Infinite
+  # Berets
+    CMHeadBeret: 4294967295 # Infinite
+    CMHeadBeretJungle: 4294967295 # Infinite
+    CMHeadBeretDesert: 4294967295 # Infinite
+    CMHeadBeretSnow: 4294967295 # Infinite
+    CMHeadBeretClassic: 4294967295 # Infinite
+    CMHeadBeretUrban: 4294967295 # Infinite
+    CMHeadBeretTan: 4294967295 # Infinite
+    CMHeadBeretEngineer: 4294967295 # Infinite
+    RMCHeadBeretGreen: 4294967295 # Infinite
+    RMCHeadBeretPurple: 4294967295 # Infinite
+  # Squad Berets
+    RMCHeadBeretSquadAlpha: 4294967295 # Infinite
+    RMCHeadBeretSquadBravo: 4294967295 # Infinite
+    RMCHeadBeretSquadCharlie: 4294967295 # Infinite
+    RMCHeadBeretSquadDelta: 4294967295 # Infinite
+    RMCHeadBeretSquadEcho: 4294967295 # Infinite
+    RMCHeadBeretSquadFoxtrot: 4294967295 # Infinite
+    RMCHeadBeretSquadIntel: 4294967295 # Infinite
+  # Caps
+    RMCHeadCapFlippable: 4294967295 # Infinite
+    RMCHeadCapFlippableDesert: 4294967295 # Infinite
+    RMCHeadCapFlippableSnow: 4294967295 # Infinite
+    RMCHeadCapFlippableClassic: 4294967295 # Infinite
+    RMCHeadCapFlippableUrban: 4294967295 # Infinite
+  # Beanies
+    RMCHeadBeanie: 4294967295 # Infinite
+    RMCHeadBeanieTan: 4294967295 # Infinite
+    RMCHeadBeanieGray: 4294967295 # Infinite
+    RMCHeadBeanieGreen: 4294967295 # Infinite
+  # Durag
+    RMCHeadDurag: 4294967295 # Infinite
+    RMCHeadDuragBlack: 4294967295 # Infinite
+  # Peaked Caps
+    CMHeadCapPeakedFormal: 4294967295 # Infinite
+    CMHeadCapPeakedService: 4294967295 # Infinite
+  # Flap Caps
+    CMHeadFlapCap: 4294967295 # Infinite
+    CMHeadFlapCapDesert: 4294967295 # Infinite
+    CMHeadFlapCapSnow: 4294967295 # Infinite
+    CMHeadFlapCapClassic: 4294967295 # Infinite
+    CMHeadFlapCapUrban: 4294967295 # Infinite
+  # Soft Caps
+    RMCHeadBlueSoftCap: 4294967295 # Infinite
+    RMCHeadYellowSoftCap: 4294967295 # Infinite
+  # Civilian
+    RMCHeadCapTruckerRed: 4294967295 # Infinite
+    RMCHeadCapTruckerBlue: 4294967295 # Infinite
+    RMCHeadCapWeyamart: 4294967295 # Infinite
+    RMCHeadCapPizzaGalaxy: 4294967295 # Infinite
+    RMCHeadCowboyHatLight: 4294967295 # Infinite
+    RMCHeadCowboyHatDark: 4294967295 # Infinite
+    RMCHeadFedoraBrown: 4294967295 # Infinite
+    RMCHeadFedoraTan: 4294967295 # Infinite
+    RMCHeadFedoraGrey: 4294967295 # Infinite
+    RMCHeadUshanka: 4294967295 # Infinite
+  # Glasses
+    RMCGlassesAviators: 4294967295 # Infinite
+    RMCGlassesAviatorsSilver: 4294967295 # Infinite
+    RMCHipsterGlasses: 4294967295 # Infinite
+    RMCHippieGlasses: 4294967295 # Infinite

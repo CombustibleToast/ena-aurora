@@ -19,6 +19,10 @@
     proto: NFGrenadeFrag
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-gorlex-steel-works
+  # Aurora's Song Start - RMC Pump Action
+  - type: UniqueAction
+  - type: PumpAction
+  # Aurora's Song End
 
 - type: entity
   id: NFWeaponLauncherRocket
@@ -114,11 +118,19 @@
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/Launchers/nfsd_lake.rsi
     layers:
-      - state: base
-        map: ["enum.GunVisualLayers.Base"]
+    - state: base
+      map: [ "enum.BreechVisuals.Open" ] # Aurora's Song - RMC Breech Loading
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Launchers/nfsd_lake.rsi
   - type: StaticPrice
     price: 50
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+  # Aurora's Song Start - RMC Breech Loading
+  - type: GenericVisualizer
+    visuals:
+      enum.BreechVisuals.Open:
+        enum.BreechVisuals.Open:
+          True: {state: bolt-open}
+          False: {state: base}
+  # Aurora's Song End

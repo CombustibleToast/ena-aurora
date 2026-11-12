@@ -240,19 +240,23 @@ public sealed partial class AdminLogsControl : Control
     {
         ShownLogs = 0;
 
-        foreach (var child in LogsContainer.Children)
+        // Aurora's Song Start - Sensitive admin log controls
+        for (var i = 0; i < LogsContainer.ChildCount; i++)
         {
-            if (child is not AdminLogLabel log)
-            {
+            var child = LogsContainer.GetChild(i);
+            var log = GetLogLabel(child);
+            if (log == null)
                 continue;
-            }
 
             child.Visible = ShouldShowLog(log);
+            UpdateSeparatorVisibility(child, i);
+
             if (child.Visible)
             {
                 ShownLogs++;
             }
         }
+        // Aurora's Song End
 
         UpdateCount();
     }
@@ -292,7 +296,8 @@ public sealed partial class AdminLogsControl : Control
             return false;
 
         // Check search
-        if (!label.Log.Message.Contains(LogSearch.Text, StringComparison.OrdinalIgnoreCase))
+        // Aurora's Song - Keep server-filtered sensitive results visible while redacted, moved OrdinalIgnoreCase into MatchesLogSearch
+        if (!MatchesLogSearch(label.Log, LogSearch.Text))
             return false;
 
         return true;
@@ -478,7 +483,8 @@ public sealed partial class AdminLogsControl : Control
                 ShownLogs++;
             }
 
-            LogsContainer.AddChild(label);
+            // Aurora's Song - Sensitive admin log controls
+            LogsContainer.AddChild(CreateSensitiveLogControl(label, log));
             LogsContainer.AddChild(separator);
         }
 

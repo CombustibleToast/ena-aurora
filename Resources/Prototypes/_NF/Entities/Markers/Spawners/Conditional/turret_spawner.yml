@@ -29,6 +29,22 @@
     prototypes:
     - WeaponTurretSyndicate
 
+#Aurora's Song | Rogue NT turrets for the UIV
+- type: entity
+  id: SpawnMoBWeaponTurretNanoTrasenRogue
+  parent: MarkerBase
+  name: NanoTrasen rogue ballistic turret spawner
+  suffix: Hostile, Aurora's Song
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - sprite: Objects/Weapons/Guns/Turrets/turrets.rsi
+      state: syndie_lethal
+  - type: ConditionalSpawner
+    prototypes:
+    - WeaponTurretNanoTrasenRogue
+
 # NT
 - type: entity
   id: SpawnMobWeaponTurretLaserNanoTrasenDeployed

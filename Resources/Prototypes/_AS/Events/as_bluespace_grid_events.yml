@@ -1,0 +1,46 @@
+﻿- type: entity
+  id: ASBluespaceNanoTrasenCrash
+  name: Aurora Bluespace Monitoring
+  parent: BaseStationEventShortDelay
+  components:
+  - type: StationEvent
+    startRadioAnnouncement: station-event-bluespace-generic-ftl-start-announcement
+    startRadioAnnouncementChannel: Bluespace
+    warningRadioAnnouncement: station-event-bluespace-generic-ftl-warning-announcement
+    warningRadioAnnouncementChannel: Bluespace
+    endRadioAnnouncement: station-event-bluespace-generic-ftl-end-announcement
+    endRadioAnnouncementChannel: Bluespace
+    earliestStart: 80
+    minimumPlayers: 15
+    weight: 1
+    duration: 1800
+    maxDuration: 2400
+    reoccurrenceDelay: 360 #6 hours
+  - type: BluespaceErrorRule
+    groups:
+      grid: !type:GridSpawnGroup
+        nameLoc:
+        - station-event-bluespace-name-UnidentifiedVessel
+        minCount: 4
+        maxCount: 5
+        minimumDistance: 1500
+        maximumDistance: 2500
+        addComponents:
+        - type: Gravity
+          enabled: true
+          inherent: true
+        - type: IFF
+          color: "#E10F9B"
+        - type: LinkedLifecycleGridParent
+        - type: ProtectedGrid
+          preventArtifactTriggers: true
+        - type: PreventPilot
+        - type: DeletionCensusExempt
+        - type: ForceAnchor
+        paths:
+        - /Maps/_AS/Bluespace/NTMaul.yml
+  - type: ActiveRadio
+    channels:
+    - Bluespace
+  - type: Speech
+    speechVerb: Robotic

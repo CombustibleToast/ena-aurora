@@ -12,6 +12,8 @@
     GrenadeStinger: 4
     Flash: 10
     FlashlightNfsdLite: 10
+    ASHandheldTacticalFloodlight: 10 # Aurora's Song
+    ASShoulderTaclight: 10 # Aurora's Song
     HoloprojectorNfsd: 4
     Tourniquet: 5
     ClothingEyesGlassesSunglasses: 5

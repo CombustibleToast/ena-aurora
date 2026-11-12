@@ -1,4 +1,19 @@
-﻿#region Medical
+﻿#region Civilian
+
+- type: entity
+  parent: SpawnPointSecurityOfficer
+  id: SpawnPointOffDutyOfficer
+  name: off duty officer
+  components:
+  - type: SpawnPoint
+    job_id: OffDutyOfficer
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: sle-off-duty-officer
+
+#region Medical
 
 - type: entity
   id: SpawnPointMedic
@@ -139,3 +154,31 @@
       - state: green
       - sprite: _AS/Markers/jobs.rsi
         state: colcom
+
+#region Corporate
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointSyndicateRepresentative
+  name: Syndicate representative
+  components:
+  - type: SpawnPoint
+    job_id: SyndicateRepresentative
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _AS/Markers/jobs.rsi
+      state: cr
+
+- type: entity
+  parent: SpawnPointJobBase
+  id: SpawnPointNanotrasenRepresentative
+  name: NanoTrasen representative
+  components:
+  - type: SpawnPoint
+    job_id: NanotrasenRepresentative
+  - type: Sprite
+    layers:
+    - state: green
+    - sprite: _AS/Markers/jobs.rsi
+      state: cr

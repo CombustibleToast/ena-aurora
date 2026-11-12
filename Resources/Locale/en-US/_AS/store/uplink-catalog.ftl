@@ -24,6 +24,12 @@ uplink-mercenary-shotgun1-desc = Old reliable, rack and shoot. Marked for Suplus
 uplink-mercenary-smg1-name = Surplus Drozd
 uplink-mercenary-smg1-desc = Based on an old design, this SMG is still more than capable of putting rounds down-range.
 
+uplink-mercenary-truncheon-name = Truncheon
+uplink-mercenary-truncheon-desc = A rigid, steel-studded baton, meant to harm. On the handle is a label that says 'for authorized use only.'
+
+uplink-mercenary-plasteelarmingsword-name = Plasteel Arming Sword
+uplink-mercenary-plasteelarmingsword-desc = An ancient design manufactured with modern materials and machines for a very specific target demographic.
+
 uplink-mercenary-gauze-name = Gauze Roll
 uplink-mercenary-gauze-desc = A full roll of Gauze, for the merc on the go.
 
@@ -68,6 +74,9 @@ uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacke
 
 # region Security Uplink
 
+uplink-security-ldr-name = Star Tech LDR
+uplink-security-ldr-desc = A high-quality assault rifle chambered in .20 rifle.
+
 uplink-security-explosivegrenades-box-name = Explosive Grenade Box
 uplink-security-explosivegrenades-box-desc = A box containing 4 HE grenades.
 
@@ -79,6 +88,9 @@ uplink-security-energy-sword-desc = An energy sword with an orange blade, for th
 
 uplink-security-frag-bundle-name = NGP-40 Fragmentation Bundle
 uplink-security-frag-bundle-desc = A bundle containing an NGP-40 type launcher, and ten fragmentation grenades.
+
+uplink-security-off-duty-officer-bundle-name = Off-Duty Officer Bundle
+uplink-security-off-duty-officer-bundle-desc = A bundle of equipment to quickly prep an off-duty SLE Officer.
 
 uplink-security-baton-bundle-name = NGP-40 Baton Bundle
 uplink-security-baton-bundle-desc = A bundle containing an NGP-40 type launcher, and ten baton grenades.
@@ -125,6 +137,12 @@ uplink-sle-softsuit-patrol-corpsman-desc = The standard-issue SLE space proof su
 uplink-sle-softsuit-patrol-commissioner-name = SLE Commissioner Patrol Softsuit
 uplink-sle-softsuit-patrol-commissioner-desc = The standard-issue SLE space proof suit for patrol duty. Marked for the Commissioner.
 
+uplink-security-prison-tracking-implanter-name = Prison Tracking Implant
+uplink-security-prison-tracking-implanter-desc = A subermal implant meant for tracking prisoners.
+
+uplink-security-blueprint-30-lr-op = .30 Long rifle Blueprint
+uplink-security-blueprint-30-lr-op-desc = A blueprint containing a license for an SLE techfab to produce .30 Long rifle boxes, and magazines.
+
 # region ExchangeVend - Aurora
 store-category-exchangehardsuits = EVA Suits
 store-category-exchangearmor = Armor
@@ -169,3 +187,6 @@ uplink-exchange-ap4c-desc = A compact submachine gun chambered in .40 pistol. Ba
 
 uplink-exchange-mk32-name = Mk32 Universal
 uplink-exchange-mk32-desc = The Mark 32 Offensive Handgun. Has an OD-Green grip. Chambered in .45.
+
+uplink-exchange-energy-shield-name = Mercenary Gravity Shield
+uplink-exchange-energy-shield-desc = Prototype energy shield. First iteration offered to mercenaries for field testing. Exchanges the ability to deflect energy weapons reliably for more generalized protection against all projectiles.

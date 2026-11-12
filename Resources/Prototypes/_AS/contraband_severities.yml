@@ -1,0 +1,35 @@
+﻿- type: contrabandSeverity
+  id: Class2Syndicate
+  examineText: contraband-examine-text-Class2Syndicate
+
+- type: contrabandSeverity
+  id: Class2NanoTrasen
+  examineText: contraband-examine-text-Class2NanoTrasen
+
+- type: contrabandSeverity
+  id: Class2Restricted
+  examineText: contraband-examine-text-Class2Restricted
+
+- type: contrabandSeverity
+  id: Class2SyndicateRestricted
+  examineText: contraband-examine-text-Class2SyndicateRestricted
+
+- type: contrabandSeverity
+  id: Class2NanoTrasenRestricted
+  examineText: contraband-examine-text-Class2NanoTrasenRestricted
+
+- type: contrabandSeverity
+  id: Class3Restricted
+  examineText: contraband-examine-text-Class3Restricted
+
+- type: contrabandSeverity
+  id: Class3NanoTrasen
+  examineText: contraband-examine-text-Class3NanoTrasen
+
+- type: contrabandSeverity
+  id: Class3NanoTrasenCentComm
+  examineText: contraband-examine-text-Class3NanoTrasenCentComm
+
+- type: contrabandSeverity
+  id: Class3ColonialArmedForces
+  examineText: contraband-examine-text-Class3ColonialArmedForces

@@ -65,6 +65,16 @@
     factions:
     - NanoTrasen
 
+# Aurora's Song Start | Ballistic turret for NT UIV
+- type: entity
+  parent: BaseWeaponBallisticTurret
+  id: WeaponTurretNanoTrasenRogue
+  suffix: NanoTrasen, Rogue
+  components:
+  - type: NpcFactionMember
+    factions:
+    - ASNanoTrasenRogue
+
 - type: entity
   parent: BaseWeaponBallisticTurret
   id: WeaponTurretHostile
@@ -112,6 +122,7 @@
       SoundTargetInLOS: !type:SoundPathSpecifier
         path: /Audio/Animals/snake_hiss.ogg
   - type: Damageable
+  - type: Injurable
     damageContainer: Biological
   - type: Destructible
     thresholds:

@@ -1847,13 +1847,6 @@ entities:
     - type: Transform
       pos: 10.5,-7.5
       parent: 1
-- proto: ComputerAdvancedRadar
-  entities:
-  - uid: 477
-    components:
-    - type: Transform
-      pos: 1.5,-0.5
-      parent: 1
 - proto: ComputerBroken
   entities:
   - uid: 446
@@ -1861,6 +1854,11 @@ entities:
     - type: Transform
       rot: 3.141592653589793 rad
       pos: -0.5,-2.5
+      parent: 1
+  - uid: 477
+    components:
+    - type: Transform
+      pos: 1.5,-0.5
       parent: 1
 - proto: ComputerIFF
   entities:

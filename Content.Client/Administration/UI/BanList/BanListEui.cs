@@ -11,9 +11,9 @@ using Robust.Client.UserInterface;
 namespace Content.Client.Administration.UI.BanList;
 
 [UsedImplicitly]
-public sealed class BanListEui : BaseEui
+public sealed partial class BanListEui : BaseEui
 {
-    [Dependency] private readonly IUserInterfaceManager _ui = default!;
+    [Dependency] private IUserInterfaceManager _ui = default!;
 
     private BanListIdsPopup? _popup;
 
@@ -27,6 +27,7 @@ public sealed class BanListEui : BaseEui
 
         RoleBanControl = BanWindow.RoleBanList;
         RoleBanControl.LineIdsClicked += OnLineIdsClicked;
+        InitializeRadioBanList(); // Aurora's Song
     }
 
     private BanListWindow BanWindow { get; }
@@ -62,6 +63,7 @@ public sealed class BanListEui : BaseEui
         s.Bans.Sort((a, b) => a.BanTime.CompareTo(b.BanTime));
         BanControl.SetBans(s.Bans);
         RoleBanControl.SetRoleBans(s.RoleBans);
+        SetRadioBans(s.RadioBans); // Aurora's Song
     }
 
     public override void Opened()

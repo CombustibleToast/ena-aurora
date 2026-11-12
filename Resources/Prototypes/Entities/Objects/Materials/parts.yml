@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: BaseItem
+  parent: MaterialBaseRecycleable # Aurora's Song - Make rods recycleable
   id: PartBase
   components:
   - type: Sprite
@@ -9,22 +9,14 @@
   - type: Item
     sprite: Objects/Materials/parts.rsi
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: FlimsyMetallic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 100
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
   - type: Tag
     tags:
     - ConstructionMaterial
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
-  parent: PartBase
+  parent: [PartBase, BaseQuickConstructionMaterial] # DEN add quick construction parent
   id: PartRodMetal
   name: metal rod
   suffix: Full
@@ -47,12 +39,10 @@
     - state: rods_5
       map: ["base"]
   - type: Item
-    size: Normal
     heldPrefix: rods
   - type: Construction
     graph: MetalRod
     node: MetalRod
-  - type: Appearance
   - type: FloorTile
     outputs:
     - Lattice
@@ -61,20 +51,19 @@
     price: 0
   - type: StackPrice
     price: 5 # Frontier: 7.5<5 - TODO: material value rework
-  - type: Extractable
-    grindableSolutionName: rod
-  - type: SolutionContainerManager
-    solutions:
-      rod:
-        reagents:
-        - ReagentId: Iron
-          Quantity: 4.5
-        - ReagentId: Carbon
-          Quantity: 0.5
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Iron
+        Quantity: 4.5
+      - ReagentId: Carbon
+        Quantity: 0.5
   - type: GuideHelp
     guides:
     - ExpandingRepairingStation
   - type: ConstructionMaterials # Frontier
+  - type: QuickConstructable # DEN quick construction
+    category: MetalRod
 
 - type: entity
   parent: PartRodMetal

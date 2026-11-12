@@ -1,15 +1,18 @@
+using System.Linq;
 using Content.Shared.Damage;
 using Content.Shared.Damage.Components;
 using Content.Shared.Damage.Systems;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
+using Content.Shared.Mobs; // Impstation
+using Content.Shared.Standing; // Impstation
 
 namespace Content.Shared.Blocking;
 
 public sealed partial class BlockingSystem
 {
-    [Dependency] private readonly DamageableSystem _damageable = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private DamageableSystem _damageable = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
 
     private void InitializeUser()
     {
@@ -20,6 +23,22 @@ public sealed partial class BlockingSystem
         SubscribeLocalEvent<BlockingUserComponent, ContainerGettingInsertedAttemptEvent>(OnInsertAttempt);
         SubscribeLocalEvent<BlockingUserComponent, AnchorStateChangedEvent>(OnAnchorChanged);
         SubscribeLocalEvent<BlockingUserComponent, EntityTerminatingEvent>(OnEntityTerminating);
+
+        SubscribeLocalEvent<BlockingUserComponent, MobStateChangedEvent>(OnMobStateChanged); // Impstation
+        SubscribeLocalEvent<BlockingUserComponent, DownedEvent>(OnDowned); // Impstation
+    }
+
+    // imp add
+    private void OnMobStateChanged(EntityUid uid, BlockingUserComponent comp, MobStateChangedEvent args)
+    {
+        if (args.NewMobState != MobState.Alive)
+            UserStopBlocking(uid, comp);
+    }
+
+    // imp add
+    private void OnDowned(EntityUid uid, BlockingUserComponent comp, DownedEvent downed)
+    {
+        UserStopBlocking(uid, comp);
     }
 
     private void OnParentChanged(EntityUid uid, BlockingUserComponent component, ref EntParentChangedMessage args)
@@ -56,11 +75,12 @@ public sealed partial class BlockingSystem
             return;
 
         var blockFraction = blocking.IsBlocking ? blocking.ActiveBlockFraction : blocking.PassiveBlockFraction;
+        var modifier = blocking.IsBlocking ? blocking.ActiveBlockDamageModifier : blocking.PassiveBlockDamageModifer;
         blockFraction = Math.Clamp(blockFraction, 0, 1);
         _damageable.TryChangeDamage((item, dmgComp), blockFraction * args.OriginalDamage);
 
         var modify = new DamageModifierSet();
-        foreach (var key in dmgComp.Damage.DamageDict.Keys)
+        foreach (var key in modifier.Coefficients.Keys.Concat(modifier.FlatReduction.Keys))
         {
             modify.Coefficients.TryAdd(key, 1 - blockFraction);
         }
@@ -102,6 +122,6 @@ public sealed partial class BlockingSystem
     private void UserStopBlocking(EntityUid uid, BlockingUserComponent component)
     {
         if (TryComp<BlockingComponent>(component.BlockingItem, out var blockComp) && blockComp.IsBlocking)
-            StopBlocking(component.BlockingItem.Value, blockComp, uid);
+            StopBlocking((component.BlockingItem.Value, blockComp), uid); // imp - changed to Entity<T>
     }
 }

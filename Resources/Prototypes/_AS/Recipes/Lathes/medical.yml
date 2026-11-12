@@ -1,0 +1,7 @@
+﻿- type: latheRecipe # Aurora's Song - If upstream ever adds a tourniquet latheRecipe this will have to get exploded probably
+  id: Tourniquet
+  result: Tourniquet
+  completetime: 1
+  materials: # Total material sheet is equal to construction menu gauze, but half split to plastic. Priced with Mercenary TechFab use in mind, so it isn't a /great/ value or anything.
+    Cloth: 100
+    Plastic: 100

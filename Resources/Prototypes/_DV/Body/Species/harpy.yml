@@ -18,7 +18,7 @@
       default: [ HarpyEarsDefault ]
     enum.HumanoidVisualLayers.Chest:
       limit: 4 # Aurora's Song -- 1 > 4
-      required: true
+      required: false # Aurora's Song - Let harpies be naked
       default: [ HarpyChestDefault ]
     enum.HumanoidVisualLayers.LArm:
       limit: 2
@@ -31,8 +31,8 @@
 #      limit: 2
 #      required: false
     enum.HumanoidVisualLayers.RArmExtension:
-      limit: 2
-      required: false
+      limit: 1
+      required: true
       default: [ HarpyWingDefaultHuescale ]
     enum.HumanoidVisualLayers.LHand:
       limit: 2
@@ -155,7 +155,7 @@
   - type: Speech
     speechSounds: Harpy
     speechVerb: Harpy
-    allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Honk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'Beep', 'HarpyRev', 'HarpyCaw', 'Squish', 'Chitter', 'Chirp', 'Squeak', 'Click'] # Aurora's Song - Remove Harpy in front of unified emotes
+    allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Honk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'Beep', 'HarpyRev', 'HarpyCaw', 'Squish', 'Chitter', 'Chirp', 'Squeak', 'Click', 'Whirr', 'Yawn'] # Aurora's Song - Remove Harpy in front of unified emotes, added 'whirr', 'yawn'.
   - type: Vocal
     sounds:
       Male: SoundsHarpy
@@ -181,10 +181,19 @@
 #    - DoorBumpOpener # Frontier
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic # Aurora's Song - OrganBase>OrganBaseOrganic
   id: OrganHarpy
   abstract: true
   suffix: harpy
+
+# Aurora's Song START - Harpy metabolizer for sensitive lungs
+- type: entity
+  id: OrganHarpyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Harpy, Animal ]
+# Aurora's Song END
 
 - type: entity
   parent: OrganHarpy
@@ -199,6 +208,16 @@
   - type: VisualOrganMarkings
     markingData:
       group: Harpy
+
+# DeltaV START - Harpy internals for sensitive lungs
+- type: entity
+  parent: OrganHarpy
+  id: OrganHarpyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DV/Mobs/Species/Harpy/organs.rsi
+# DeltaV END
 
 - type: entity
   parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganHarpyExternal ] # Aurora's Song - Add sexed organs
@@ -250,7 +269,7 @@
   id: OrganHarpyFootRight
 
 - type: entity
-  parent: [ OrganBaseLungs, OrganHarpy, OrganHumanInternal, OrganAnimalMetabolizer ] # Aurora's Song - HumanMetabolizer>AnimalMetabolizer
+  parent: [ OrganBaseLungs, OrganHarpyInternal, OrganHarpyMetabolizer ] # Aurora Song- Added unique harpy metabolizer and internals
   id: OrganHarpyLungs
   name: lungs
   description: An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs.

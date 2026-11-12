@@ -1,6 +1,7 @@
 using Content.Server._NF.Radio; // Frontier
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
+using Content.Server.Popups; // Aurora's Song
 using Content.Server.Power.Components;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -22,33 +23,40 @@ namespace Content.Server.Radio.EntitySystems;
 /// <summary>
 ///     This system handles intrinsic radios and the general process of converting radio messages into chat messages.
 /// </summary>
-public sealed class RadioSystem : EntitySystem
+public sealed partial class RadioSystem : EntitySystem
 {
-    [Dependency] private readonly INetManager _netMan = default!;
-    [Dependency] private readonly IReplayRecordingManager _replay = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
+    [Dependency] private INetManager _netMan = default!;
+    [Dependency] private IReplayRecordingManager _replay = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private PopupSystem _popup = default!; // Aurora's Song
+    [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
 
     // set used to prevent radio feedback loops.
     private readonly HashSet<string> _messages = new();
-
-    private EntityQuery<TelecomExemptComponent> _exemptQuery;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<IntrinsicRadioReceiverComponent, RadioReceiveEvent>(OnIntrinsicReceive);
         SubscribeLocalEvent<IntrinsicRadioTransmitterComponent, EntitySpokeEvent>(OnIntrinsicSpeak);
-
-        _exemptQuery = GetEntityQuery<TelecomExemptComponent>();
     }
 
     private void OnIntrinsicSpeak(EntityUid uid, IntrinsicRadioTransmitterComponent component, EntitySpokeEvent args)
     {
         if (args.Channel != null && component.Channels.Contains(args.Channel.ID))
         {
+            // Aurora's Song Start - Readonly intrinsic channels
+            if (component.ReadOnlyChannels.Contains(args.Channel.ID) ||
+                TryComp<ActiveRadioComponent>(uid, out var active) && active.DisabledChannels.Contains(args.Channel.ID))
+            {
+                _popup.PopupEntity("You hear a crackle as if nothing goes through", uid, uid);
+                args.Channel = null;
+                return;
+            }
+            // Aurora's Song End
             SendRadioMessage(uid, args.Message, args.Channel, uid);
             args.Channel = null; // prevent duplicate messages from other listeners.
         }
@@ -141,7 +149,7 @@ public sealed class RadioSystem : EntitySystem
         var chatMsg = new MsgChatMessage { Message = chat };
         var ev = new RadioReceiveEvent(message, messageSource, channel, radioSource, chatMsg);
 
-        var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource);
+        var sendAttemptEv = new RadioSendAttemptEvent(channel, radioSource, messageSource); // Aurora's Song - Pass the speaker for radio bans
         RaiseLocalEvent(ref sendAttemptEv);
         RaiseLocalEvent(radioSource, ref sendAttemptEv);
         var canSend = !sendAttemptEv.Cancelled;
@@ -160,7 +168,8 @@ public sealed class RadioSystem : EntitySystem
             if (!radio.ReceiveAllChannels)
             {
                 if (!radio.Channels.Contains(channel.ID) || (TryComp<IntercomComponent>(receiver, out var intercom) &&
-                                                             !intercom.SupportedChannels.Contains(channel.ID)))
+                                                             !intercom.SupportedChannels.Contains(channel.ID)) ||
+                    radio.DisabledChannels.Contains(channel.ID)) // Aurora's Song - Ignore disabled channels
                     continue;
             }
 

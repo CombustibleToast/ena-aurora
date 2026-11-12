@@ -1,7 +1,7 @@
 #region SLE
 
 - type: entity
-  parent: ClothingBackpackSecurity
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingBackpackSecurity ]
   id: ASClothingBackpackSLENavy
   name: SLE backpack
   description: A sturdy backpack used by Sector Law Enforcement personnel.
@@ -20,7 +20,7 @@
 
 #region CAF
 - type: entity
-  parent: [ ClothingBackpackERTLeader, BaseCentcommContraband ] # Frontier - note: NFBackpack sets max size, fails to insert some ERT loadout items
+  parent: [ ClothingBackpack, BaseC3ContrabandCAFUnredeemable ] # adding contrband for CAF, reparented to normal backpack to avoid overwrite
   id: ClothingBackpackCAFLeader
   name: CAF leader backpack
   description: A spacious backpack with lots of pockets, worn by the Commander of a CAF Tactical Team.
@@ -31,6 +31,8 @@
     grid:
     - 0,0,10,3
     maxItemSize: Huge
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
 
 - type: entity
   parent: ClothingBackpackCAFLeader

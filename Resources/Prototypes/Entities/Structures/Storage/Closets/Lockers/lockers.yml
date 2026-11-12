@@ -70,8 +70,8 @@
     stateBaseClosed: cap
     stateDoorOpen: cap_open
     stateDoorClosed: cap_door
-  - type: AccessReader
-    access: [["Captain"]]
+  # - type: AccessReader # Aurora's Song: Un-Captains ship owners
+  #  access: [["Captain"]]
 
 - type: entity
   id: LockerHeadOfPersonnel
@@ -379,6 +379,9 @@
   name: gun safe
   components:
   - type: Appearance
+  - type: Sprite
+    sprite: _AS/Structures/Storage/Lockers/shotguncase.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: EntityStorageVisuals
     stateBaseClosed: shotguncase
     stateDoorOpen: shotguncase_open
@@ -454,6 +457,7 @@
         hard: True
         restitution: 0
         friction: 0.4
+  - type: EntityStorage
 
 - type: entity
   parent: LockerPrisoner

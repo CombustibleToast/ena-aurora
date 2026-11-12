@@ -21,7 +21,7 @@ public sealed partial class RoleBanListLine : BoxContainer, IBanListLine<SharedB
         IdsHidden.OnPressed += IdsPressed;
 
         BanListEui.SetData(this, ban);
-        Role.Text = string.Join(", ", ban.Roles ?? []);
+        Role.Text = FormatScope(ban); // Aurora's Song
     }
 
     private void IdsPressed(ButtonEventArgs buttonEventArgs)

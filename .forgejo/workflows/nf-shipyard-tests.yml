@@ -1,0 +1,61 @@
+name: Build & Run Shipyard Tests
+
+on:
+  pull_request:
+    branches: [ "master" ]
+    paths:
+      - "Resources/Maps/_NF/Shuttles/**/*.yml" # Ship grids
+      - "Resources/Prototypes/_NF/Shipyard/**/*.yml" # Shipyard prototypes
+      - "Content.IntegrationTests/Tests/_NF/ShipyardTests.cs" # Shipyard tests
+      - "Resources/Maps/_AS/Shuttles/**/*.yml" # Aurora Song Ship grids
+      - "Resources/Prototypes/_AS/Shipyard/**/*.yml" # Aurora Song Shipyard prototypes
+
+jobs:
+  build:
+    if: github.event.pull_request.draft == false && github.actor != 'FrontierATC'
+    strategy:
+      matrix:
+        os: [ubuntu-dotnet] # Aurora's Song
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - name: Checkout Master
+      uses: actions/checkout@v7
+
+    - name: Setup Submodule
+      run: |
+        git submodule update --init --recursive
+
+    - name: Pull engine updates
+      uses: https://github.com/space-wizards/submodule-dependency@v0.1.5 # Aurora's Song
+
+    - name: Update Engine Submodules
+      run: |
+        cd RobustToolbox/
+        git submodule update --init --recursive
+
+    # Aurora's Song
+    # - name: Setup .NET Core
+    #   uses: actions/setup-dotnet@v4.1.0
+    #   with:
+    #     dotnet-version: 9.0.x
+
+    - name: Install Dependencies
+      run: dotnet restore
+
+    - name: Build Project
+      run: dotnet build --configuration DebugOpt --no-restore /p:WarningsAsErrors=nullable /m
+
+    - name: Run Shipyard Tests
+      # shell: pwsh # Aurora's Song - Use bash
+      run: |
+        DOTNET_gcServer=1 dotnet test --no-build --configuration DebugOpt Content.IntegrationTests/Content.IntegrationTests.csproj --filter FullyQualifiedName~ShipyardTest -- NUnit.ConsoleOut=0 NUnit.MapWarningTo=Failed
+  ci-success:
+    name: Build & Run Shipyard Tests
+    needs:
+      - build
+    runs-on: ubuntu-dotnet # Aurora's Song
+    steps:
+      - name: CI succeeded
+        run: exit 0

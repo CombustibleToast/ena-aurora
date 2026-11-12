@@ -1,0 +1,67 @@
+﻿#region - Ammo and ammoboxes
+- type: entity
+  id: ASBlueprintShotgun8gMunitionsBasic
+  parent: NFBaseBlueprintExpeditionArmory
+  name: 8 gauge shotgun ammo schematic
+  description: A schematic for crafting enblocs and boxes of 8 gauge buckshot.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - MagazineShotgunLeverEmpty
+    - MagazineShotgunLever
+    - ASAmmunitionBoxShellShotgun8gBuckshot
+
+# These have got to be SUPREMELY rare as loot
+- type: entity
+  id: ASBlueprintShotgun8gSlug
+  parent: NFBaseBlueprintExpeditionArmory
+  name: 8 gauge shotgun slug schematic
+  description: a schematic for fabricating 8 gauge slugs
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - ASAmmunitionBoxShellShotgun8gSlug
+    - MagazineShotgunLeverEmpty
+
+- type: entity
+  id: ASBlueprintShotgun8gHE
+  parent: NFBaseBlueprintExpeditionArmory
+  name: 8 gauge shotgun HE slug schematic
+  description: a schematic for fabricating 8 gauge HE slugs
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - ASAmmunitionBoxShellShotgun8gHE
+    - MagazineShotgunLeverEmpty
+
+- type: entity # This ammo should be supremely rare.
+  parent: [ NFBaseBlueprintExpeditionArmory ]
+  id: ASBlueprintMarksmanRifle30LongOverpressure
+  name: .30 Long rifle Overpressure schematic
+  description: a schematic for fabricating .30 Long rifle Overpressure
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - ASAmmunitionBoxRifle30LongOverpressure
+    - ASMagazineMarksmanRifle30LongOverpressureEmpty
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionArmory
+  id: ASBlueprintAmmoEchionCanisterCybersun
+  name: Echion canister blueprint
+  description: A blueprint with a schematic of an Echion canister. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CybersunEchionCanisterRecipe
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionSalvage
+  id: ASBlueprintAmmoEchionCanisterPunk
+  name: Echion canister blueprint
+  description: A blueprint with a schematic of an Echion Canister. It has a certain smell. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - PunkEchionCanisterRecipe
+

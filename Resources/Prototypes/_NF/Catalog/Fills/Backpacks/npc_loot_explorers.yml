@@ -133,6 +133,8 @@
     # Weapons
     - id: NFWeaponPka
       prob: 0.4
+    - id: ASWeaponAdvancedHoloflareGun # Aurora
+      prob: 0.2
     # Armor
     - id: ClothingOuterHardsuitSpatio
       prob: 0.3
@@ -223,6 +225,8 @@
     - id: NFWeaponPka
       prob: 0.4
       amount: 2
+    - id: ASWeaponExperimentalHoloflareGun # Aurora
+      prob: 0.1
     # Armor
     - id: ClothingOuterHardsuitLuxury
       prob: 0.2

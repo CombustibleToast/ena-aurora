@@ -35,6 +35,7 @@
 - type: loadoutGroup
   id: CorpsmanNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   hidden: true
   loadouts:
   - CorpsmanClothingNeckSLEBadgeCorpsman

@@ -204,6 +204,7 @@
       whitelist: # Aurora's Song - Switched to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -328,6 +329,7 @@
       whitelist: # Aurora's Song - Switched to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 
@@ -460,7 +462,7 @@
   id: UplinkSecurityEmitter
   name:  uplink-security-emitter-name
   description: uplink-security-emitter-desc
-  productEntity: WeaponEmpEmitter
+  productEntity: ASWeaponEmpEmitter # Aurora's Song: Use the hitscan version
   icon: { sprite: _NF/Objects/Weapons/Guns/Battery/emp.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 1
@@ -491,6 +493,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -512,14 +515,15 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
-- type: listing
-  id: UplinkSecurityVulcan
-  name:  uplink-security-vulcan-name
-  description: uplink-security-vulcan-desc
-  productEntity: NFWeaponRifleAssaultVulcan
-  icon: { sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi, state: icon }
+- type: listing # Aurora's Song - Added StarTech LDR
+  id: UplinkSecurityLDR
+  name:  uplink-security-ldr-name
+  description: uplink-security-ldr-desc
+  productEntity: ASWeaponRifleAssaultStarTechLDR
+  icon: { sprite: _AS/Objects/Weapons/Guns/Rifles/ldrifle.rsi, state: icon }
   cost:
     FrontierUplinkCoin: 4
   categories:
@@ -533,6 +537,29 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
+        - Commissioner
+
+- type: listing
+  id: UplinkSecurityVulcan
+  name:  uplink-security-vulcan-name
+  description: uplink-security-vulcan-desc
+  productEntity: ASWeaponRifleMarksmanVulcan # Aurora's song - Changed from NFWeaponRifleVulcan to ASWeaponRifleMarksmanVulcan
+  icon: { sprite: _DV/Objects/Weapons/Guns/Rifles/vulcan.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 7
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -554,6 +581,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -717,6 +745,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -738,6 +767,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -759,6 +789,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 #region bundles
@@ -781,6 +812,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -802,6 +834,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -855,6 +888,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -897,6 +931,28 @@
         - Lieutenant
         - Commissioner
         - Sergeant
+
+- type: listing # Aurora's Song - Added Off Duty Officer Bundle
+  id: UplinkSecurityOffDutyOfficerBundle
+  name: uplink-security-off-duty-officer-bundle-name
+  description: uplink-security-off-duty-officer-bundle-desc
+  productEntity: ASClothingBackpackDuffelSLEOffDutyOfficerBundle
+  icon: { sprite: _AS/Clothing/Back/Duffels/sle_navy.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 20
+  categories:
+    - UplinkSecurityBundles
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Commissioner
+        - Sergeant
+        - OffDutyOfficer
 
 #region utililty
 - type: listing
@@ -1096,11 +1152,12 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched Sheriff to Commissioner, added LT and Sgt. to whitelist.
-        - Lieutenant
-        - Sergeant
-        - Commissioner
+    # - !type:BuyerJobCondition # Aurora's Song - Removed job condition
+    #   whitelist: # Aurora's Song - Switched Sheriff to Commissioner, added LT and Sgt. to whitelist.
+    #     - Lieutenant
+    #     - Sergeant
+    #     - Commissioner
+    #     - OffDutyOfficer
 
 - type: listing
   id: UplinkSecurityTeleShield
@@ -1137,6 +1194,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1158,6 +1216,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1166,6 +1225,22 @@
   description: uplink-security-cash1000-desc
   productEntity: SpaceCash1000
   icon: { sprite: Objects/Economy/cash.rsi, state: cash_1000 }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
+- type: listing # Aurora's Song - Added Prison Tracking Implanter to uplink
+  id: UplinkSecurityPrisonTrackingImplanter
+  name:  uplink-security-prison-tracking-implanter-name
+  description: uplink-security-prison-tracking-implanter-desc
+  productEntity: PrisonTrackingImplanter
+  icon: { sprite: Objects/Specific/Medical/implanter.rsi, state: implanter0 }
   cost:
     FrontierUplinkCoin: 1
   categories:
@@ -1212,6 +1287,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1233,6 +1309,29 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
+        - Commissioner
+
+- type: listing # Aurora's Song - Added so SLE can purchase magazines for Vulcan/AF-17C
+  id: UplinkSecurityMagazineRifle30Long
+  name: uplink-security-30longriflemagazine-name
+  description: uplink-security-30longriflemagazine-desc
+  productEntity: ASBoxMagazineRifle30Long
+  icon: { sprite: _NF/Objects/Storage/boxes.rsi, state: icon-magazine }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityAmmo
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1292,6 +1391,51 @@
           - SecurityUplink
 
 - type: listing
+  id: UplinkSecurityMagazineRifle30Rubber
+  name:  uplink-security-30riflemagazine-rubber-name
+  description: uplink-security-30riflemagazine-rubber-desc
+  productEntity: NFBoxMagazineRifle30Rubber
+  icon: { sprite: _NF/Objects/Storage/boxes.rsi, state: icon-magazine }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+  - !type:BuyerJobCondition
+    whitelist: # Aurora's Song - Switched NFSD to SLE roles
+    - Lieutenant
+    - Sergeant
+    - OffDutyOfficer
+    - Commissioner
+
+- type: listing # Aurora's Song - Added so SLE can purchase magazines for Vulcan/AF-17C
+  id: UplinkSecurityMagazineRifle30LongRubber
+  name: uplink-security-30longriflemagazine-rubber-name
+  description: uplink-security-30longriflemagazine-rubber-desc
+  productEntity: ASBoxMagazineRifle30LongRubber
+  icon: { sprite: _NF/Objects/Storage/boxes.rsi, state: icon-magazine }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+  - UplinkSecurityAmmo
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+  - !type:BuyerJobCondition
+    whitelist: # Aurora's Song - Switched NFSD to SLE roles
+    - Lieutenant
+    - Sergeant
+    - OffDutyOfficer
+    - Commissioner
+
+
+- type: listing
   id: UplinkSecurity20RifleMagazineRubber
   name: uplink-security-20riflemagazine-rubber-name
   description: uplink-security-20riflemagazine-rubber-desc
@@ -1316,17 +1460,18 @@
   cost:
     FrontierUplinkCoin: 1
   categories:
-    - UplinkSecurityAmmo
+  - UplinkSecurityAmmo
   conditions:
-    - !type:StoreWhitelistCondition
-      whitelist:
-        tags:
-        - SecurityUplink
-    - !type:BuyerJobCondition
-        whitelist: # Aurora's Song - Switched NFSD to SLE roles
-          - Lieutenant
-          - Sergeant
-          - Commissioner
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+  - !type:BuyerJobCondition
+    whitelist: # Aurora's Song - Switched NFSD to SLE roles
+    - Lieutenant
+    - Sergeant
+    - OffDutyOfficer
+    - Commissioner
 
 - type: listing
   id: UplinkSecuritySpeedloader
@@ -1445,6 +1590,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1515,6 +1661,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1536,6 +1683,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1589,6 +1737,7 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Sergeant
+        - OffDutyOfficer
         - Commissioner
 
 - type: listing
@@ -1610,3 +1759,26 @@
       whitelist: # Aurora's Song - Switched NFSD to SLE roles
         - Lieutenant
         - Commissioner
+
+# Aurora's Song - added "region blueprints" and its contents
+#region blueprints
+- type: listing
+  id: UplinkSecurityBlueprint30LongRifleOverpressure
+  name:  uplink-security-blueprint-30-lr-op
+  description: uplink-security-blueprint-30-lr-op-desc
+  productEntity: ASBlueprintMarksmanRifle30LongOverpressureSLE
+  icon: { sprite: _NF/Objects/Tools/blueprints.rsi, state: icon-full-sle }
+  cost:
+    FrontierUplinkCoin: 100
+  categories:
+  - UplinkSecurityBlueprints
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - SecurityUplink
+  - !type:BuyerJobCondition
+    whitelist: # Aurora's Song - Switched NFSD to SLE roles
+    - Lieutenant
+    - Sergeant # Purposefully left out Off-Duty officer, to avoid spending 500+ SCU on a few officers who are not going to be at the outpost, blueprints are meant to be ugrades for on duty.
+    - Commissioner

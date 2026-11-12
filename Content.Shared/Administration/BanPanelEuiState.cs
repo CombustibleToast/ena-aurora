@@ -2,6 +2,7 @@ using System.Net;
 using Content.Shared.Database;
 using Content.Shared.Eui;
 using Content.Shared.Roles;
+using Content.Shared.Radio; // Aurora's Song
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 
@@ -57,6 +58,7 @@ public sealed record Ban
         NoteSeverity severity,
         ProtoId<JobPrototype>[]? bannedJobs,
         ProtoId<AntagPrototype>[]? bannedAntags,
+        ProtoId<RadioChannelPrototype>[]? radioChannels, // Aurora's Song
         bool erase)
     {
         Target = target;
@@ -70,6 +72,7 @@ public sealed record Ban
         Severity = severity;
         BannedJobs = bannedJobs;
         BannedAntags = bannedAntags;
+        RadioChannels = radioChannels; // Aurora's Song
         Erase = erase;
     }
 
@@ -84,5 +87,6 @@ public sealed record Ban
     public readonly NoteSeverity Severity;
     public readonly ProtoId<JobPrototype>[]? BannedJobs;
     public readonly ProtoId<AntagPrototype>[]? BannedAntags;
+    public readonly ProtoId<RadioChannelPrototype>[]? RadioChannels; // Aurora's Song
     public readonly bool Erase;
 }

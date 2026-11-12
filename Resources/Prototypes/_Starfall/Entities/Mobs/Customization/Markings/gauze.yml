@@ -1,0 +1,9 @@
+# Gauze markings are in the .yml of their respective category, this just makes sure we use the same color for all them
+- type: marking
+  abstract: true
+  id: LumariGauzeBase
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#E8E1D2"

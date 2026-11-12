@@ -122,6 +122,8 @@
   abstract: true
   components:
   - type: ShuttleConsole
+    maxZoom: 3, 3 # Aurora's Song - These values are in Vector2 format, just keep them both the same and everything is nicies
+    initialZoom: 2, 2 # Aurora's Song
   - type: ActivatableUI
     key: enum.ShuttleConsoleUiKey.Key
   - type: UserInterface
@@ -220,10 +222,11 @@
   - type: Tag
     tags:
       - Syndicate
+    # Aurora's Song Start - Parity with Shuttle Console
   - type: RadarConsole
-    maxRange: 384
   - type: WorldLoader
-    radius: 1536
+    radius: 256
+    # Aurora's Song End
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -708,8 +711,9 @@
     energy: 4.0
     color: "#3c5eb5"
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
+  - type: Injurable
+    damageContainer: StructuralInorganic
 
 - type: entity
   parent: ComputerComms
@@ -1236,8 +1240,9 @@
     speechVerb: Robotic
     speechSounds: Pai
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: GuideHelp
     guides:
     - Cloning
@@ -1749,10 +1754,10 @@
     workingPowerDraw: 1000
   - type: Computer
     board: StationAiFixerCircuitboard
-  - type: AccessReader
-    access: [ [ "ResearchDirector" ] ]
-  - type: Lock
-    unlockOnClick: false
+  #- type: AccessReader - Aurora's Song start: We don't have a research director, and frankly I don't think we should be locking the ability to revive the AI? I'm up to discuss it though
+  #  access: [ [ "ResearchDirector" ] ]
+  #- type: Lock
+  #  unlockOnClick: false - Aurora's Song End
   - type: StationAiFixerConsole
   - type: ItemSlotsLock
     slots:

@@ -18,11 +18,11 @@
     - state: stc_label
 
 - type: entity
-  parent: EncryptionKey
+  parent: [ EncryptionKey, C2ContrabandUnredeemableRestricted ] # Aurora Song - Added Restricted contraband status.
   id: EncryptionKeyNfsd
   name: SLE encryption key # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
   categories: [ DoNotMap ]
-  description: An encryption key for the New Frontier Sheriff's Department channel.
+  description: An encryption key for the Sector Law Enforcement channel. # Aurora Song - NFSD > SLE
   components:
   - type: EncryptionKey
     channels: # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
@@ -37,7 +37,7 @@
     - state: nfsd_label
 
 - type: entity
-  parent: EncryptionKey
+  parent: [ EncryptionKey, C2ContrabandUnredeemableRestricted ] # Aurora Song - Added Restricted contraband status.
   id: EncryptionKeyDoc
   name: medical dispatch encryption key
   categories: [ DoNotMap ]
@@ -49,6 +49,7 @@
     - Medical
     - Greeting # Aurora's Song - Added Greeting, to allow medical command to help onboard
     - Command
+    - Bluespace # Aurora's Song
     defaultChannel: Common
   - type: Item
     sprite: _NF/Objects/Devices/encryption_keys.rsi

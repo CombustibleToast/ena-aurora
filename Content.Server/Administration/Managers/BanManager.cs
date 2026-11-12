@@ -26,18 +26,18 @@ namespace Content.Server.Administration.Managers;
 
 public sealed partial class BanManager : IBanManager, IPostInjectInit
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly IServerDbManager _db = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly ILocalizationManager _localizationManager = default!;
-    [Dependency] private readonly ILogManager _logManager = default!;
-    [Dependency] private readonly INetManager _netManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IEntitySystemManager _systems = default!;
-    [Dependency] private readonly ITaskManager _taskManager = default!;
-    [Dependency] private readonly UserDbDataManager _userDbData = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IChatManager _chat = default!;
+    [Dependency] private IServerDbManager _db = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private ILocalizationManager _localizationManager = default!;
+    [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private INetManager _netManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IEntitySystemManager _systems = default!;
+    [Dependency] private ITaskManager _taskManager = default!;
+    [Dependency] private UserDbDataManager _userDbData = default!;
 
     private ISawmill _sawmill = default!;
 
@@ -78,6 +78,15 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             modernHwids,
             false,
             type: BanType.Role);
+        // Aurora's Song - Persisted radio bans.
+        var radioBans = await _db.GetBansAsync(
+            netChannel.RemoteEndPoint.Address,
+            player.UserId,
+            hwId,
+            modernHwids,
+            false,
+            type: BanType.Radio);
+        // End Aurora's Song
 
         var userRoleBans = new List<BanDef>();
         foreach (var ban in roleBans)
@@ -88,6 +97,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         cancel.ThrowIfCancellationRequested();
         _cachedBanExemptions[player] = flags;
         _cachedRoleBans[player] = userRoleBans;
+        _cachedRadioBans[player] = radioBans; // Aurora's Song - Radio Ban
 
         SendRoleBans(player);
     }
@@ -95,6 +105,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
     private void ClearPlayerData(ICommonSession player)
     {
         _cachedBanExemptions.Remove(player);
+        _cachedRadioBans.Remove(player); // Aurora's Song - Radio Ban
     }
 
     public void Restart()
@@ -117,6 +128,11 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
         {
             roleBans.RemoveAll(ban => DateTimeOffset.Now > ban.ExpirationTime);
         }
+
+        // Aurora's Song - Radio Ban
+        foreach (var radioBans in _cachedRadioBans.Values)
+            radioBans.RemoveAll(ban => DateTimeOffset.Now > ban.ExpirationTime);
+        // End Aurora's Song
     }
 
     #region Server Bans
@@ -441,17 +457,17 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             : null;
     }
 
-    public bool IsRoleBanned(ICommonSession player, List<ProtoId<JobPrototype>> jobs)
+    public bool IsRoleBanned(ICommonSession player, params List<ProtoId<JobPrototype>> jobs)
     {
         return IsRoleBanned<JobPrototype>(player, jobs);
     }
 
-    public bool IsRoleBanned(ICommonSession player, List<ProtoId<AntagPrototype>> antags)
+    public bool IsRoleBanned(ICommonSession player, params List<ProtoId<AntagPrototype>> antags)
     {
         return IsRoleBanned<AntagPrototype>(player, antags);
     }
 
-    private bool IsRoleBanned<T>(ICommonSession player, List<ProtoId<T>> roles) where T : class, IPrototype
+    private bool IsRoleBanned<T>(ICommonSession player, params List<ProtoId<T>> roles) where T : class, IPrototype
     {
         var bans = GetRoleBans(player.UserId);
 

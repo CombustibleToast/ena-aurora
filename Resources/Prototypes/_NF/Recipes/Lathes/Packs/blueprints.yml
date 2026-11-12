@@ -27,6 +27,7 @@
   - SurveillanceCameraRouterCircuitboard
   - SurveillanceCameraMonitorCircuitboard
   - SurveillanceWirelessCameraMonitorCircuitboard
+  - SignalControlComputerCircuitboard # Aurora's Song - Signal Control Computer
   # AdvancedEntertainment
   - ComputerTelevisionCircuitboard
   - SynthesizerInstrument
@@ -120,6 +121,7 @@
   # RapidConstruction
   - ShipyardRCD
   - ShipyardRCDAmmo
+  - ASShipyardRSD # Aurora's Song - RSD
   # ConstructionBags
   - ConstructionBagOfHolding
   # HardsuitsSpecialized
@@ -458,7 +460,7 @@
   - ClothingOuterArmorBulletproofNF
   - ClothingOuterCoatBHTrench
   - PinpointerUniversalNF
-  - ClothingEyesHudBountyHunter
+  - ASClothingEyesHudUniversal # Aurora's Song - Universal Status HUD
   - NFForensicPad
   # ImprovedPistolAmmo
   - NFAmmunitionBoxPistol35Overpressure

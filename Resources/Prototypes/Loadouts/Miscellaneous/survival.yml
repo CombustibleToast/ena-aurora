@@ -20,6 +20,7 @@
     - Reptilian
     - Vulpkanin
     - Ovinia # Den Addition
+    - Thaven # MACRO
 
 - type: loadoutEffectGroup
   id: EffectSpeciesVox
@@ -78,6 +79,7 @@
     - Human
     - Reptilian
     - Vulpkanin
+    - Thaven # MACRO - Thaven
 
 - type: loadoutEffectGroup
   id: OxygenBreatherMimeMoth

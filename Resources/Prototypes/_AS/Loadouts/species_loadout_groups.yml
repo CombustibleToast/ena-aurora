@@ -1,4 +1,17 @@
 - type: loadoutGroup
+  id: ASDecapoidSpeciesSpecific
+  name: loadout-group-breath-tool # if visible, rename
+  minLimit: 2
+  maxLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutDecapoidBreathTool
+  - LoadoutSpeciesAquaticFullTank
+  fallbacks:
+  - LoadoutDecapoidBreathTool
+  - LoadoutSpeciesAquaticFullTank
+
+- type: loadoutGroup
   id: SLESpeciesSpecific
   name: loadout-group-breath-tool # if visible, rename
   minLimit: 2
@@ -23,3 +36,30 @@
   - SLEForcedClothingOuterEVASuitSLE
   fallbacks:
   - SLEForcedClothingOuterEVASuitSLE
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeForcedHelmet
+  name: loadout-group-contractor-head
+  hidden: true # Auto applied to Sheleg
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SyndicateRepresentativeForcedHelmetSyndicate
+
+- type: loadoutGroup
+  id: SyndicateRepresentativeForcedOuterClothing
+  name: loadout-group-contractor-outerclothing
+  hidden: true # Auto applied to Sheleg
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - SyndicateRepresentativeForcedClothingOuterEVASuit
+
+- type: loadoutGroup
+  id: NanotrasenRepresentativeForcedOuterClothing
+  name: loadout-group-contractor-outerclothing
+  hidden: true # Auto applied to Sheleg
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - NanotrasenRepresentativeForcedClothingOuterEVASuit

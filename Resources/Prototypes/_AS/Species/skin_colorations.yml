@@ -2,3 +2,8 @@
   id: HumanAnimal
   strategy: !type:ClampedHsvColoration {}
   altStrategy: !type:HumanTonedSkinColoration {}
+
+- type: skinColoration
+  id: ShelegToned
+  strategy: !type:ClampedHsvColoration {}
+  altStrategy: !type:ShelegTonedSkinColoration {}

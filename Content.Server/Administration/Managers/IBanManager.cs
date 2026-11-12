@@ -3,6 +3,7 @@ using System.Net.Sockets;
 using System.Threading.Tasks;
 using Content.Shared.Database;
 using Content.Shared.Roles;
+using Content.Shared.Radio; // Aurora's Song
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
@@ -74,7 +75,7 @@ public interface IBanManager
     /// <param name="player">The player.</param>
     /// <param name="antags">A list of valid antag prototype IDs.</param>
     /// <returns>Returns True if an active role ban is found for this player for any of the listed roles.</returns>
-    public bool IsRoleBanned(ICommonSession player, List<ProtoId<AntagPrototype>> antags);
+    public bool IsRoleBanned(ICommonSession player, params List<ProtoId<AntagPrototype>> antags);
 
     /// <summary>
     /// Checks if the player is currently banned from any of the listed roles.
@@ -82,7 +83,7 @@ public interface IBanManager
     /// <param name="player">The player.</param>
     /// <param name="jobs">A list of valid job prototype IDs.</param>
     /// <returns>Returns True if an active role ban is found for this player for any of the listed roles.</returns>
-    public bool IsRoleBanned(ICommonSession player, List<ProtoId<JobPrototype>> jobs);
+    public bool IsRoleBanned(ICommonSession player, params List<ProtoId<JobPrototype>> jobs);
 
     /// <summary>
     /// Gets a list of prototype IDs with the player's job bans.
@@ -112,6 +113,12 @@ public interface IBanManager
     /// </summary>
     /// <param name="pSession">Player's session</param>
     public void SendRoleBans(ICommonSession pSession);
+
+    // Aurora's Song - Radio Bans
+    void CreateRadioBan(CreateRadioBanInfo banInfo);
+    bool IsRadioBanned(ICommonSession player, ProtoId<RadioChannelPrototype> channel);
+    HashSet<ProtoId<RadioChannelPrototype>>? GetRadioBans(NetUserId playerUserId);
+    // End Aurora's Song
 }
 
 /// <summary>

@@ -55,7 +55,6 @@
   - type: ActionGrant
     actions:
     - ActionJumpToCore
-    - ActionSurvCameraLights
     - ActionAIViewLaws
     - ActionOpenRemoteDevicesMenu # Corvax-Next-AiRemoteControl
   - type: UserInterface
@@ -76,6 +75,8 @@
     transmitFrequencyId: ShuttleTimer
   - type: RadarConsole
     followEntity: false
+    maxRange: 768 # The same as a standard 
+    maxIffRange: 1100 # a bit over sqrt(2) * 768
   - type: HolographicAvatar
     layerData:
     - sprite: Mobs/Silicon/station_ai.rsi
@@ -84,12 +85,14 @@
   - type: Tag
     tags:
     - CanPilot
+    - StationAi # Aurora's Song - Allows them to be downloaded to intellicards
 
 - type: entity
   id: StationAiBrainShipmind
   parent: BaseItem
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
+  - type: Alerts # Aurora's Song - Allows the shipmind to see its own battery state and health when in the core
   - type: BlockMovement
     blockInteraction: false
   - type: SiliconLawBound
@@ -154,6 +157,7 @@
   - type: MobState
     allowedStates:
     - Alive
+    - Dead # Aurora's Song - Allows the shipmind to be Dead
   - type: Appearance
   - type: GuideHelp
     guides:
@@ -179,6 +183,8 @@
     - NamesFirstShipmind
     - NamesLastShipmind
     nameFormat: name-format-shipmind
+  - type: Physics # Aurora's Song
+    bodyType: KinematicController # Aurora's Song - Positronic brains become KinematicControllers when made sentient, but shipminds never do for some reason. Prevents throwing asserts in debug mode.
 
 - type: entity
   id: BorgChassisShipmind
@@ -213,6 +219,8 @@
           - BorgModuleShipmind
       hasMindState: remote_eyes
       noMindState: remote_eyes_empty
+    - type: Touched # Aurora's Song - Prevents shipmind cyborg from being despawned
+      touched: True # Aurora's Song
     - type: ShowHealthBars
     - type: InteractionPopup
       interactSuccessString: petting-success-syndicate-cyborg

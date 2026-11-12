@@ -1,3 +1,4 @@
+using Content.Client.RichText;
 using Content.Client.UserInterface.Systems.Chat.Controls;
 using Content.Shared._EE.CCVars; // EE - chat stacking
 using Content.Shared.Chat;
@@ -20,13 +21,13 @@ namespace Content.Client.UserInterface.Systems.Chat.Widgets;
 [Virtual]
 public partial class ChatBox : UIWidget
 {
-    [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly ILogManager _log = default!;
+    [Dependency] private IEntityManager _entManager = default!;
+    [Dependency] private ILogManager _log = default!;
 
     private readonly ISawmill _sawmill;
     private readonly ChatUIController _controller;
-    [Dependency] private readonly IConfigurationManager _cfg = default!; // EE - Chat stacking
-    [Dependency] private readonly ILocalizationManager _loc = default!; // EE - Chat stacking
+    [Dependency] private IConfigurationManager _cfg = default!; // EE - Chat stacking
+    [Dependency] private ILocalizationManager _loc = default!; // EE - Chat stacking
 
     public bool Main { get; set; }
 
@@ -174,9 +175,9 @@ public partial class ChatBox : UIWidget
         }
     }
 
-    private void OnNewHighlights(string highlighs)
+    private void OnNewHighlights(string highlights)
     {
-        _controller.UpdateHighlights(highlighs);
+        _controller.UpdateHighlights(highlights);
     }
 
     public void AddLine(string message, Color color, int repeat = 0) // EE - Chat stacking - repeat
@@ -185,6 +186,7 @@ public partial class ChatBox : UIWidget
         formatted.PushColor(color);
         formatted.AddMarkupOrThrow(message);
         formatted.Pop();
+        Contents.AddMessage(formatted, tagsAllowed: UserFormattableTags.ChatAllowedTags); // DEN - Whitelist specific tags
 
         // EE - Chat stacking
         if (repeat != 0)
@@ -197,8 +199,6 @@ public partial class ChatBox : UIWidget
                                 ));
         }
         // End EE - Chat stacking
-
-        Contents.AddMessage(formatted, tagsAllowed: null);
     }
 
     public void Focus(ChatSelectChannel? channel = null)
@@ -236,6 +236,7 @@ public partial class ChatBox : UIWidget
             return;
 
         ChatInput.ChannelSelector.Select(toSelect);
+        _controller.CurrentChannel = toSelect; // DeltaV - Alt Chat Indicators
     }
 
     private void OnInputKeyBindDown(GUIBoundKeyEventArgs args)
@@ -268,12 +269,14 @@ public partial class ChatBox : UIWidget
         _controller.UpdateSelectedChannel(this);
 
         // Warn typing indicator about change
-        _controller.NotifyChatTextChange();
+        // _controller.NotifyChatTextChange(); // DeltaV
+        _controller.NotifySpecificChatTextChange(SelectedChannel); // DeltaV - Alt Chat Indicators
     }
 
     private void OnFocusEnter(LineEditEventArgs args)
     {
         // Warn typing indicator about focus
+        _controller.CurrentChannel = SelectedChannel; // DeltaV - Alt Chat Indicators
         _controller.NotifyChatFocus(true);
     }
 

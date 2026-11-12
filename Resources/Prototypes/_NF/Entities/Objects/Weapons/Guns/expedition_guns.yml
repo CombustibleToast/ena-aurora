@@ -45,7 +45,7 @@
 # For syndicate/pirate labeled guns
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - BaseExpeditionWeaponTier1
   id: BaseExpeditionWeaponTier1Syndicate
   abstract: true
@@ -66,14 +66,14 @@
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - BaseExpeditionWeaponTier2
   id: BaseExpeditionWeaponTier2Syndicate
   abstract: true
 
 - type: entity
   parent:
-  - BaseC3SyndicateContraband
+  - C2ContrabandSyndicate # Aurora's Song - BaseC3SyndicateContraband<C2ContrabandSyndicate
   - BaseExpeditionWeaponTier3
   id: BaseExpeditionWeaponTier3Syndicate
   abstract: true
@@ -90,6 +90,43 @@
   - BaseC3SyndicateContraband
   - BaseExpeditionWeaponTier5
   id: BaseExpeditionWeaponTier5Syndicate
+  abstract: true
+
+# Aurora's Song - NanoTrasen labeled contraband
+
+- type: entity
+  parent:
+  - BaseC3NanoTrasenContrabandLowValue
+  - BaseExpeditionWeaponTier1
+  id: BaseExpeditionWeaponTier1NanoTrasen
+  abstract: true
+
+- type: entity
+  parent:
+  - BaseC3NanoTrasenContrabandLowValue
+  - BaseExpeditionWeaponTier2
+  id: BaseExpeditionWeaponTier2NanoTrasen
+  abstract: true
+
+- type: entity
+  parent:
+  - BaseC3NanoTrasenContrabandLowValue
+  - BaseExpeditionWeaponTier3
+  id: BaseExpeditionWeaponTier3NanoTrasen
+  abstract: true
+
+- type: entity
+  parent:
+  - BaseC3NanoTrasenContraband
+  - BaseExpeditionWeaponTier4
+  id: BaseExpeditionWeaponTier4NanoTrasen
+  abstract: true
+
+- type: entity
+  parent:
+  - BaseC3NanoTrasenContraband
+  - BaseExpeditionWeaponTier5
+  id: BaseExpeditionWeaponTier5NanoTrasen
   abstract: true
 
 # region Tier 1
@@ -141,16 +178,16 @@
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1Syndicate
-  - NFWeaponRifleBarlowsBolt
+  - ASWeaponRifleMosinBolt
   categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleBarlowsBoltExpedition
+  id: ASWeaponRifleMosinBoltExpedition
 
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - NFWeaponRifleCeremonial
+  - ASWeaponRifleGarandCeremonial # Aurora's Song | refactor Ceremonial rifle to be more unique
   categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleCeremonialExpedition
+  id: ASWeaponRifleGarandCeremonialExpedition # Aurora's Song | Ceremonial rifle reworked
 
 - type: entity
   parent:
@@ -190,6 +227,7 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverPython45Expedition
 
+
 ## Revolvers
 - type: entity
   parent:
@@ -218,6 +256,13 @@
   - NFWeaponRevolverWard45
   categories: [ HideSpawnMenu ]
   id: NFWeaponRevolverWard45Expedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - NFWeaponRevolverInspector
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponRevolverInspectorExpedition
 
 ## Shotguns
 - type: entity
@@ -320,6 +365,13 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunWt550Expedition
 
+- type: entity # Aurora's Song | BSO Wt550 with proper contraband components
+  parent:
+  - C2ContrabandNanoTrasenRestricted # Aurora's Song - BaseExpeditionWeaponTier3NanoTrasen<C2ContrabandNanoTrasenRestricted
+  - WeaponSubMachineGunWt550BSO
+  categories: [ HideSpawnMenu ]
+  id: WeaponSubMachineGunWt550BSOExpedition
+
 - type: entity
   parent:
   - BaseExpeditionWeaponTier3
@@ -333,6 +385,14 @@
   - NFWeaponSubMachineGunAtreides
   categories: [ HideSpawnMenu ]
   id: NFWeaponSubMachineGunAtreidesExpedition
+
+## Energy
+- type: entity #Aurora's Song | EG-4 for UIV, not for general loot pools
+  parent:
+  - BaseExpeditionWeaponTier3NanoTrasen
+  - ASWeaponEG4EnergyMagnum
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEG4EnergyMagnumExpedition
 
 # region Tier 4
 ## Shotguns
@@ -350,6 +410,11 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponShotgunBulldogExpedition
 
+- type: entity # Aurora's Song | Lever action shotgun with NT branding, 8 gauge.
+  parent: [C2ContrabandNanoTrasenRestricted, BaseExpeditionWeaponTier4NanoTrasen, ASWeaponShotgunLeverChester] # Aurora's Song - C2ContrabandUnregistered<C2ContrabandNanoTrasenRestricted
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponShotgunLeverChesterExpedition
+
 ## Rifles
 - type: entity
   parent:
@@ -358,12 +423,12 @@
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleAssaultSmExpedition
 
-- type: entity
-  parent:
-  - BaseExpeditionWeaponTier4
-  - NFWeaponRifleAssaultVulcan
-  categories: [ HideSpawnMenu ]
-  id: NFWeaponRifleAssaultVulcanExpedition
+#- type: entity - Aurora's Song - Moved to AS Expedition weapons.
+#  parent:
+#  - BaseExpeditionWeaponTier4
+#  - NFWeaponRifleAssaultVulcan
+#  categories: [ HideSpawnMenu ]
+#  id: NFWeaponRifleAssaultVulcanExpedition
 
 ## SMGs
 - type: entity #The infamous C-20r, should be a Tier 4 in value | Aurora Song
@@ -388,6 +453,13 @@
   - NFWeaponEnergyPistolLaserAntique
   categories: [ HideSpawnMenu ]
   id: NFWeaponEnergyPistolLaserAntiqueExpedition
+
+- type: entity #Aurora's Song | Pulse Pistol for NT Captains, possible loot drop.
+  parent:
+  - BaseExpeditionWeaponTier4NanoTrasen
+  - NFWeaponEnergyPistolPulse
+  categories: [ HideSpawnMenu ]
+  id: NFWeaponEnergyPistolPulseExpedition
 
 # region Tier 5
 # Turrets

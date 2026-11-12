@@ -29,7 +29,8 @@ public enum GeneralStationRecordConsoleKey : byte
 ///     Other states are erroneous.
 /// </summary>
 [Serializable, NetSerializable]
-public sealed class GeneralStationRecordConsoleState : BoundUserInterfaceState
+// Aurora's Song: Make partial to allow for extension of the state with additional fields.
+public sealed partial class GeneralStationRecordConsoleState : BoundUserInterfaceState
 {
     /// <summary>
     /// Current selected key.

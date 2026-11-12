@@ -34,10 +34,10 @@
   - UplinkWeaponry
 
 - type: listing
-  id: UplinkNFRifleBarlows
+  id: UplinkASRifleMosin # Aurora Song - restored mosin rifle
   name: uplink-rifle-mosin-name
   description: uplink-rifle-mosin-desc
-  productEntity: NFWeaponRifleBarlowsBolt
+  productEntity: ASWeaponRifleMosinBolt # Aurora Song - reworked mosin rifle
   cost:
     Telecrystal: 1
   categories:

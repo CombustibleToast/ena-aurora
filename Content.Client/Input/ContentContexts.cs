@@ -1,3 +1,4 @@
+using Content.Shared._RMC14.Input; // RMC Unique Action System
 using Content.Shared.Input;
 using Robust.Shared.Input;
 
@@ -85,6 +86,10 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.SmartEquipPocket1);
             human.AddFunction(ContentKeyFunctions.SmartEquipPocket2);
             human.AddFunction(ContentKeyFunctions.SmartEquipSuitStorage);
+            // Aurora's Song Start - Legs/Feet Smart Equip
+            human.AddFunction(ContentKeyFunctions.SmartEquipLegs);
+            human.AddFunction(ContentKeyFunctions.SmartEquipFeet);
+            // Aurora's Song End
             human.AddFunction(ContentKeyFunctions.OpenBackpack);
             human.AddFunction(ContentKeyFunctions.OpenBelt);
             human.AddFunction(ContentKeyFunctions.OpenWallet); // Frontier
@@ -99,7 +104,7 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.Arcade1);
             human.AddFunction(ContentKeyFunctions.Arcade2);
             human.AddFunction(ContentKeyFunctions.Arcade3);
-
+            human.AddFunction(CMKeyFunctions.CMUniqueAction); // RMC Unique Action System
             // actions should be common (for ghosts, mobs, etc)
             common.AddFunction(ContentKeyFunctions.OpenActionsMenu);
 

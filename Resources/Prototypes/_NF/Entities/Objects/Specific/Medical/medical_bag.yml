@@ -35,7 +35,8 @@
   - type: Dumpable
   - type: MagnetPickup
     magnetEnabled: false
-    magnetCanBeEnabled: false
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: false Aurora's Song - Magnet Rewrite
   # Frontier: toggle magnet from White Dream (keeping this in case it's useful as a future note)
   - type: ItemToggle
     soundActivate: &soundActivate
@@ -57,3 +58,6 @@
           True: { visible: True }
           False: { visible: False }
   # End Frontier
+  - type: TimerTrigger # Aurora's Song - Magnet Rewrite
+    delay: 5
+    looping: true

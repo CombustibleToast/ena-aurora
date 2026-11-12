@@ -39,11 +39,11 @@ public sealed partial class SalvageSystem
      * Handles actively running a salvage expedition.
      */
 
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!; // Frontier
-    [Dependency] private readonly DamageableSystem _damageable = default!; // AS
-    [Dependency] private readonly IPlayerManager _players = default!; // Coyote
-    [Dependency] private readonly SharedBuckleSystem _buckle = default!; // AS
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private GameTicker _gameTicker = default!; // Frontier
+    [Dependency] private DamageableSystem _damageable = default!; // AS
+    [Dependency] private IPlayerManager _players = default!; // Coyote
+    [Dependency] private SharedBuckleSystem _buckle = default!; // AS
 
     private void InitializeRunner()
     {
@@ -291,7 +291,7 @@ public sealed partial class SalvageSystem
 
                             // Get a list of all grid positions on the destination map
                             List<Vector2> gridCoords = new();
-                            var gridQuery = EntityManager.AllEntityQueryEnumerator<MapGridComponent, TransformComponent>();
+                            var gridQuery = AllEntityQuery<MapGridComponent, TransformComponent>();
                             while (gridQuery.MoveNext(out var _, out _, out var xform))
                             {
                                 if (xform.MapID == mapId)
@@ -365,7 +365,9 @@ public sealed partial class SalvageSystem
                 comp.Warped = true;
             } // End Aurora's Song
 
-            if (remaining < TimeSpan.Zero)
+            // Aurora's Song - OnFTLStarted cleans up the map after the last shuttle actually leaves.
+            // Do not delete an expired expedition out from under a shuttle that can't FTL yet.
+            if (remaining < TimeSpan.Zero && !HasShuttleOnMap(uid))
                 QueueDel(uid);
         }
 
@@ -567,6 +569,23 @@ public sealed partial class SalvageSystem
         }
         return false;
     }
+
+    // Aurora's Song Start - Fix exped shuttle deletion
+    /// <summary>
+    /// Checks whether any shuttle grid is still present on a map.
+    /// </summary>
+    private bool HasShuttleOnMap(EntityUid mapUid)
+    {
+        var query = EntityQueryEnumerator<ShuttleComponent, TransformComponent>();
+        while (query.MoveNext(out _, out _, out var xform))
+        {
+            if (xform.MapUid == mapUid)
+                return true;
+        }
+
+        return false;
+    }
+    // Aurora's Song End
 
     // Aurora's Song
     /// <summary>

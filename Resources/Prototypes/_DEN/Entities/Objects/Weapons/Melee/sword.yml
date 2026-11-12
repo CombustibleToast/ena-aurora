@@ -75,6 +75,8 @@
     slots:
     - Back
     - suitStorage
+  - type: StaticPrice
+    price: 2000
 
 - type: entity # Please expect this to need rebalancing...
   parent: BaseSword # Aurora: Remove psionic and mantis contra

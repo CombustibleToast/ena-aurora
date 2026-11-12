@@ -152,6 +152,10 @@
           prob: 0.3
         - id: SprayPainter
           prob: 0.7
+        - id: ASHandheldFloodlight # Aurora
+          prob: 0.5
+        - id: ASShoulderFlashlight # Aurora
+          prob: 0.3
 
 # Science
 

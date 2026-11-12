@@ -37,6 +37,16 @@
       - id: RockGuitarInstrument
       - id: MusicBoxInstrument
       - id: ViolaInstrument
+    # Aurora's Song Start - Obtainable MP3 Players
+    - !type:GroupSelector
+      weight: 2.5
+      children:
+      - id: MediaPlayerInstrument
+      - id: MediaPlayerInstrumentPink
+      - id: MediaPlayerInstrumentBlue
+      - id: MediaPlayerInstrumentGreen
+      - id: MediaPlayerInstrumentRed
+    # Aurora's Song End
 
 - type: entityTable
   id: VarietyInstrumentTable
@@ -119,6 +129,16 @@
       weight: 0.1
       children:
       - id: DawInstrumentMachineCircuitboard
+    # Aurora's Song Start - Obtainable MP3 Players
+    - !type:GroupSelector
+      weight: 0.01
+      children:
+      - id: MediaPlayerInstrument
+      - id: MediaPlayerInstrumentPink
+      - id: MediaPlayerInstrumentBlue
+      - id: MediaPlayerInstrumentGreen
+      - id: MediaPlayerInstrumentRed
+    # Aurora's Song End
 
 - type: entityTable
   id: SalvageInstrumentTable

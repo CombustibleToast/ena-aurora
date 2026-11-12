@@ -85,7 +85,7 @@
   text: species-name-ipc
 
 - type: quickPhrase
-  id: SpeciesKThavenPhrase
+  id: SpeciesThavenPhrase
   parent: BaseCrewSpeciesPhrase
   text: species-name-thaven
 

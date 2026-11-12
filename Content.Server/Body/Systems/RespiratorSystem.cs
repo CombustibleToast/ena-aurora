@@ -2,6 +2,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Components;
 using Content.Server.Chat.Systems;
+using Content.Shared._AS.Medical;
 using Content.Shared.Body.Systems;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
@@ -21,6 +22,7 @@ using Content.Shared.EntityEffects.Effects.Body;
 using Content.Shared.EntityEffects.Effects.Damage;
 using Content.Shared.Metabolism;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.SSDIndicator; // Wayfarer, needed to check if something has the component.
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -28,20 +30,20 @@ using Robust.Shared.Timing;
 namespace Content.Server.Body.Systems;
 
 [UsedImplicitly]
-public sealed class RespiratorSystem : EntitySystem
+public sealed partial class RespiratorSystem : EntitySystem
 {
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
-    [Dependency] private readonly AlertsSystem _alertsSystem = default!;
-    [Dependency] private readonly AtmosphereSystem _atmosSys = default!;
-    [Dependency] private readonly BodySystem _body = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly DamageableSystem _damageableSys = default!;
-    [Dependency] private readonly LungSystem _lungSystem = default!;
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly SharedEntityConditionsSystem _entityConditions = default!;
-    [Dependency] private readonly SharedSolutionContainerSystem _solutionContainerSystem = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private IPrototypeManager _protoMan = default!;
+    [Dependency] private AlertsSystem _alertsSystem = default!;
+    [Dependency] private AtmosphereSystem _atmosSys = default!;
+    [Dependency] private BodySystem _body = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private DamageableSystem _damageableSys = default!;
+    [Dependency] private LungSystem _lungSystem = default!;
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private SharedEntityConditionsSystem _entityConditions = default!;
+    [Dependency] private SharedSolutionContainerSystem _solutionContainerSystem = default!;
 
     private static readonly ProtoId<MetabolismStagePrototype> RespirationStage = new("Respiration");
 
@@ -86,6 +88,9 @@ public sealed class RespiratorSystem : EntitySystem
             respirator.NextUpdate += respirator.AdjustedUpdateInterval;
 
             if (_mobState.IsDead(uid))
+                continue;
+
+            if (!HasComp<ASMedicalBountyComponent>(uid) && TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD) // Wayfarer: Prevents SSD clients from breathing to prevent offline asphyx deaths. // Aurora's Song - Forces medical bounties to breathe
                 continue;
 
             UpdateSaturation(uid, -(float)respirator.UpdateInterval.TotalSeconds, respirator);

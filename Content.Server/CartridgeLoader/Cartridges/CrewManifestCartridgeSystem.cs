@@ -3,18 +3,19 @@ using Content.Server.Station.Systems;
 using Content.Shared.CartridgeLoader;
 using Content.Shared.CartridgeLoader.Cartridges;
 using Content.Shared.CCVar;
+using Content.Shared.CrewManifest;
 using Robust.Shared.Configuration;
 using Robust.Shared.Containers;
 using Robust.Shared.Prototypes;
 
 namespace Content.Server.CartridgeLoader.Cartridges;
 
-public sealed class CrewManifestCartridgeSystem : EntitySystem
+public sealed partial class CrewManifestCartridgeSystem : EntitySystem
 {
-    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
-    [Dependency] private readonly IConfigurationManager _configManager = default!;
-    [Dependency] private readonly CrewManifestSystem _crewManifest = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
+    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
+    [Dependency] private IConfigurationManager _configManager = default!;
+    [Dependency] private CrewManifestSystem _crewManifest = default!;
+    [Dependency] private StationSystem _stationSystem = default!;
 
     private static readonly EntProtoId CartridgePrototypeName = "CrewManifestCartridge";
 
@@ -57,14 +58,15 @@ public sealed class CrewManifestCartridgeSystem : EntitySystem
         if (!Resolve(uid, ref component))
             return;
 
-        var owningStation = _stationSystem.GetOwningStation(uid);
+        // Coyote: make crew manifest global
+        // var owningStation = _stationSystem.GetOwningStation(uid);
+        //
+        // if (owningStation is null)
+        //     return;
 
-        if (owningStation is null)
-            return;
+        var entries = _crewManifest.GetCrewManifest(); // Coyote: remove name
 
-        var (stationName, entries) = _crewManifest.GetCrewManifest(owningStation.Value);
-
-        var state = new CrewManifestUiState(stationName, entries);
+        var state = new CrewManifestUiState(entries); // Coyote: remove name
         _cartridgeLoader.UpdateCartridgeUiState(loaderUid, state);
     }
 

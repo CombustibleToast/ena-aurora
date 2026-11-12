@@ -109,7 +109,6 @@
   - type: Speech
     speechSounds: Sheleg
     speechVerb: Sheleg
-#    allowedEmotes: [ 'Belch' ]
   - type: TypingIndicator
     proto: sheleg
   - type: Butcherable
@@ -121,7 +120,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: Cryoxadone
-        Quantity: 300
+        Quantity: 600 # Aurora's Song - 300>600 - Solution refactor
   - type: MeleeWeapon
     soundHit:
       collection: Punch
@@ -218,18 +217,19 @@
   - type: PassiveDamage
     allowedStates:
     - Alive
-    damageCap: 100
     damage:
       types:
         Heat: -0.025
-  - type: BlockInjection
-    blockHypospray: true
-    blockInjectOnProjectile: true
+  # Aurora's Song Edit: BlockInjection rewrite
+  - type: SpeciesBlockInjection
+    messageSelf: sheleg-injector-component-blocked-user
+    messageOther: sheleg-injector-component-blocked-other
+  # End Aurora's Song Edit
   - type: InventorySlotFriction
   - type: AutoToggleableOuterClothing
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic # Aurora's Song - OrganBase>OrganBaseOrganic
   id: OrganSheleg
   abstract: true
   suffix: Sheleg
@@ -355,8 +355,9 @@
   components:
   - type: MetabolizerTagWhitelist # Aurora's Song - Replace Sheleg metabolizer with a tag whitelist for chems
     tags:
+    - Aphrodisiac
     - Cryogenic
-    - Sheleg
+    - ShelegCompatible
     - Toxin
     - Narcotic
     stages: [ "Bloodstream" ]
@@ -364,6 +365,11 @@
 - type: entity
   parent: [ OrganBaseStomach, OrganShelegInternal, OrganShelegMetabolizer ]
   id: OrganShelegStomach
+  # Aurora's Song Start - Revert Sheleg stomach efficiency back to 1
+  components:
+  - type: Metabolizer
+    efficiencyModifier: 2
+  # Aurora's Song End
 
 - type: entity
   parent: [ OrganBaseLiver, OrganShelegInternal, OrganShelegMetabolizer ]

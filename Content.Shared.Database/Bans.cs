@@ -14,6 +14,11 @@ public enum BanType : byte
     /// A ban from playing one or more roles.
     /// </summary>
     Role,
+
+    /// <summary>
+    /// Aurora's Song - A ban from transmitting on one or more radio channels.
+    /// </summary>
+    Radio,
 }
 
 /// <summary>

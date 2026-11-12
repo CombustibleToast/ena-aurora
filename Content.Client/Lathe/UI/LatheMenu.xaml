@@ -1,8 +1,9 @@
-<DefaultWindow
+<controls:FancyWindow
     xmlns="https://spacestation14.io"
     xmlns:gfx="clr-namespace:Robust.Client.Graphics;assembly=Robust.Client"
     xmlns:system="clr-namespace:System;assembly=System.Runtime"
     xmlns:ui="clr-namespace:Content.Client.Materials.UI"
+    xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
     Title="{Loc 'lathe-menu-title'}"
     MinSize="550 450"
     SetSize="750 500">
@@ -159,7 +160,13 @@
                         Orientation="Vertical"
                         VerticalExpand="True"
                         HorizontalExpand="True">
-                        <ui:MaterialStorageControl Name="MaterialsList"
+                        <!-- Coyote: Biomass buffer display row -->
+                    <BoxContainer Name="BufferContainer" Orientation="Horizontal" Margin="5">
+                        <Label Text="Biomass Buffer: " />
+                        <Label Name="BufferLabel" Text="0" HorizontalAlignment="Right" />
+                    </BoxContainer>
+                    <!-- End Coyote-->
+                    <ui:MaterialStorageControl Name="MaterialsList"
                                 SizeFlagsStretchRatio="8"/>
                     </BoxContainer>
                 </PanelContainer>
@@ -168,4 +175,4 @@
 
     </BoxContainer>
 
-</DefaultWindow>
+</controls:FancyWindow>

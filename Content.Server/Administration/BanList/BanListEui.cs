@@ -12,11 +12,11 @@ using Robust.Shared.Network;
 
 namespace Content.Server.Administration.BanList;
 
-public sealed class BanListEui : BaseEui
+public sealed partial class BanListEui : BaseEui
 {
-    [Dependency] private readonly IAdminManager _admins = default!;
-    [Dependency] private readonly IPlayerLocator _playerLocator = default!;
-    [Dependency] private readonly IServerDbManager _db = default!;
+    [Dependency] private IAdminManager _admins = default!;
+    [Dependency] private IPlayerLocator _playerLocator = default!;
+    [Dependency] private IServerDbManager _db = default!;
 
     public BanListEui()
     {
@@ -44,7 +44,7 @@ public sealed class BanListEui : BaseEui
 
     public override EuiStateBase GetNewState()
     {
-        return new BanListEuiState(BanListPlayerName, Bans, RoleBans);
+        return new BanListEuiState(BanListPlayerName, Bans, RoleBans, RadioBans); // Aurora's Song - Add Radio Bans
     }
 
     private void OnPermsChanged(AdminPermsChangedEventArgs args)
@@ -59,6 +59,7 @@ public sealed class BanListEui : BaseEui
     {
         await LoadBansCore(userId, BanType.Server, Bans);
         await LoadBansCore(userId, BanType.Role, RoleBans);
+        await LoadRadioBans(userId); // Aurora's Song
     }
 
     private async Task LoadBansCore(NetUserId userId, BanType banType, List<SharedBan> list)
@@ -105,6 +106,7 @@ public sealed class BanListEui : BaseEui
     {
         Bans.Clear();
         RoleBans.Clear();
+        ClearRadioBans(); // Aurora's Song
 
         var userId = new NetUserId(BanListPlayer);
         BanListPlayerName = (await _playerLocator.LookupIdAsync(userId))?.Username ??

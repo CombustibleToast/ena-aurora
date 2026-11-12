@@ -7,9 +7,6 @@
   id: DeathAcidifier
 
 - type: Tag
-  id: DrinkGlass
-
-- type: Tag
   id: Ingredient
 
 - type: Tag
@@ -37,9 +34,32 @@
   id: Wringer
 #endregion
 
+#region weapon group tags
+- type: Tag
+  id: Baton
+
+#endregion
+
 #region .30 rifle
 - type: Tag
+  id: ASMagazineBRTopMountedRifle30
+
+- type: Tag
   id: ASMagazineMarksmanRifle30
+#endregion
+
+#region .30 long rifle
+- type: Tag
+  id: ASCartridgeRifle30Long
+
+- type: Tag
+  id: ASMagazineMarksmanRifle30Long
+
+- type: Tag
+  id: ASMagazineEnblocRifle30Long
+
+- type: Tag
+  id: ASSpeedLoaderRifle30Long
 #endregion
 
 #region .40 pistol
@@ -75,10 +95,13 @@
 
 #region Chems
 - type: Tag
+  id: Aphrodisiac
+
+- type: Tag
   id: Cryogenic
 
 - type: Tag
-  id: IPC
+  id: IPCCompatible
 
 - type: Tag
   id: Narcotic
@@ -87,7 +110,15 @@
   id: Toxin
 
 - type: Tag
-  id: Sheleg
+  id: ShelegCompatible
+#endregion
+
+#region shotgun 8g
+- type: Tag
+  id: ShellShotgun8g
+
+- type: Tag
+  id: MagazineShotgunLever
 #endregion
 
 #region Docking Tags

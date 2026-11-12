@@ -40,3 +40,113 @@
     - id: ClothingHeadHelmetSyndicate
     - id: ClothingMaskPilot
     - id: JetpackBlackFilled
+
+# NT UIV suit lockers
+- type: entity
+  id: SuitStorageUIVNTEmpty
+  parent: SuitStorageBase
+  suffix: NT UIV, Empty
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  id: SuitStorageUIVNTGeneric
+  parent: SuitStorageBase
+  suffix: NT UIV, Generic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageUIVNTGeneric
+
+- type: entityTable
+  id: FillSuitStorageUIVNTGeneric
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterHardsuitEVA
+    - id: ClothingOuterHardsuitPilot
+
+- type: entity
+  id: SuitStorageUIVNTConstable
+  parent: SuitStorageBase
+  suffix: NT UIV, Constable
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageUIVNTConstable
+
+- type: entityTable
+  id: FillSuitStorageUIVNTConstable
+  table: !type:AllSelector
+    children:
+    - id: ASClothingOuterHardsuitConstable
+
+- type: entity
+  id: SuitStorageUIVNTShedu
+  parent: SuitStorageBase
+  suffix: NT UIV, Shedu
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageUIVNTShedu
+
+- type: entityTable
+  id: FillSuitStorageUIVNTShedu
+  table: !type:AllSelector
+    children:
+    - id: ASClothingOuterHardsuitShedu
+
+- type: entity
+  id: SuitStorageUIVNTHauberk
+  parent: SuitStorageBase
+  suffix: NT UIV, Hauberk
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageUIVNTHauberk
+
+- type: entityTable
+  id: FillSuitStorageUIVNTHauberk
+  table: !type:AllSelector
+    children:
+    - id: ASClothingOuterHardsuitHauberk
+
+- type: entity
+  id: SuitStorageUIVNTGolem
+  parent: SuitStorageBase
+  suffix: NT UIV, Golem
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageUIVNTGolem
+
+- type: entityTable
+  id: FillSuitStorageUIVNTGolem
+  table: !type:AllSelector
+    children:
+    - id: ASClothingOuterHardsuitGolem
+
+- type: entity
+  id: SuitStorageUIVNTSatanus
+  parent: SuitStorageBase
+  suffix: NT UIV, Satanus
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: FillSuitStorageUIVNTSatanus
+
+- type: entityTable
+  id: FillSuitStorageUIVNTSatanus
+  table: !type:AllSelector
+    children:
+    - id: ASClothingOuterHardsuitSatanus

@@ -1,16 +1,28 @@
+# region class 2
 - type: entity
-  id: BaseColcommContraband
   parent: BaseC2ContrabandUnredeemable
+  id: BaseColcommContraband
   abstract: true
   components:
   - type: Contraband
     allowedDepartments: [ ColonialCommand ]
 
-# multiple departments restricted contraband
 - type: entity
-  id: BaseColcommCommandContraband
   parent: BaseC2ContrabandUnredeemable
+  id: BaseColcommCommandContraband
   abstract: true
   components:
   - type: Contraband
     allowedDepartments: [ ColonialCommand, Command ]
+
+#region class 3
+
+- type: entity # Aurora's Song - For Equipment so dangerous, that should it be found in anyones possesion it warrants rapid escalation.
+  parent: BaseC3ContrabandUnredeemable
+  id: BaseClass3Restricted
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ ColonialCommand ]
+    severity: Class3Restricted
+

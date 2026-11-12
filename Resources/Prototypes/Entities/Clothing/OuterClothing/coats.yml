@@ -12,8 +12,8 @@
 - type: entity
   parent: [ ClothingOuterArmorBase, ClothingOuterStorageBase, AllowSuitStorageClothing, BaseC1Contraband ] # Aurora's Song - BaseSecurityContraband>BaseC1Contraband
   id: ClothingOuterCoatDetective
-  name: detective armored trenchcoat
-  description: An 18th-century multi-purpose trenchcoat. Someone who wears this means serious business.
+  name: detective's armored trenchcoat
+  description: An 20th-century trenchcoat with an armored underlay. Someone who wears this means serious business.
   components:
   - type: Sprite
     sprite: Clothing/OuterClothing/Coats/detective.rsi
@@ -93,7 +93,7 @@
     damageCoefficient: 0.9
 
 - type: entity
-  parent: [ClothingOuterArmorHoS, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingOuterArmorHoS, C2ContrabandNanoTrasenRestricted] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingOuterCoatHoSTrench
   name: head of security's armored trenchcoat
   description: A greatcoat enhanced with a special alloy for some extra protection and style for those with a commanding presence.
@@ -127,7 +127,7 @@
         id: SyndieHandyFlag
 
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterStorageEdible
   id: ClothingOuterCoatTrench
   name: trench coat
   description: A comfy trench coat.
@@ -143,15 +143,6 @@
     modifiers:
       coefficients:
         Slash: 0.95
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 20
 
 - type: entity
   parent: ClothingOuterStorageFoldableBase
@@ -328,7 +319,7 @@
     sprite: Clothing/OuterClothing/Coats/pirate.rsi
 
 - type: entity
-  parent: [ClothingOuterArmorWarden, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingOuterArmorWarden, C2ContrabandNanoTrasen] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterCoatWarden
   name: warden's armored jacket
   description: A sturdy, utilitarian jacket designed to protect a warden from any brig-bound threats.
@@ -352,7 +343,7 @@
 - type: entity
   parent: ClothingOuterStorageBase
   id: ClothingOuterClownPriest
-  name: robes of the honkmother
+  name: honkmother coat
   description: Meant for a clown of the cloth.
   components:
   - type: Sprite
@@ -361,7 +352,7 @@
     sprite: Clothing/OuterClothing/Coats/clownpriest.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, BaseC3Contraband] # Frontier: BaseMajorContraband<BaseC3Contraband
+  parent: [ClothingOuterStorageBase, C2ContrabandSyndicate] # Aurora's Song - BaseMajorContraband<C2ContrabandSyndicate
   id: ClothingOuterDogi
   name: samurai dogi
   description: Dogi is a type of traditional Japanese clothing. The dogi is made of heavy, durable fabric, it is practical in combat and stylish in appearance. It is decorated with intricate patterns and embroidery on the back.
@@ -389,7 +380,7 @@
     sprite: Clothing/OuterClothing/Coats/windbreaker_paramedic.rsi
 
 - type: entity
-  parent: [ClothingOuterStorageBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing as parent
+  parent: [ClothingOuterStorageBase, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterCoatSyndieCap
   name: syndicate's coat
   description: The syndicate's coat is made of durable fabric, with gilded patterns.
@@ -400,7 +391,7 @@
     sprite: Clothing/OuterClothing/Coats/syndicate/coatsyndiecap.rsi
 
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterCoatHoSTrench, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterCoatHoSTrench] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterCoatSyndieCapArmored
   name: syndicate's armored coat
   description: The syndicate's armored coat is made of durable fabric, with gilded patterns.

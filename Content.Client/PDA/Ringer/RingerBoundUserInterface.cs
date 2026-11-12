@@ -66,6 +66,8 @@ namespace Content.Client.PDA.Ringer
             }
 
             _menu.TestRingerButton.Disabled = ringer.Active;
+            _menu.SetVolumeRange(ringer.MinVolume, ringer.MaxVolume); // Aurora's Song
+            _menu.UpdateVolume(ringer.Volume); // Aurora's Song - Show volume on menu open
         }
 
         private void OnTestRingtoneButtonPressed()
@@ -88,7 +90,7 @@ namespace Content.Client.PDA.Ringer
             if (!TryGetRingtone(out var ringtone))
                 return;
 
-            SendPredictedMessage(new RingerSetRingtoneMessage(ringtone));
+            SendPredictedMessage(new RingerSetRingtoneMessage(ringtone, _menu.RingerVolume)); // Aurora's Song - Add volume
             _menu.SetRingerButton.Disabled = true;
 
             Timer.Spawn(333,

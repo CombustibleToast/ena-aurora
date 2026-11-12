@@ -3,6 +3,8 @@ using Content.Shared.PDA;
 using Robust.Shared.Utility;
 using Content.Shared.CartridgeLoader;
 using Content.Client.Message;
+using Content.Client.Playtime; // Aurora's Song
+using Content.Shared._AS.PersistentSystems; // Aurora's Song
 using Content.Shared._AS.Utils; // Aurora's Song - Allow round timer to go over 24h
 using Content.Shared._NF.Bank;
 using Robust.Client.UserInterface;
@@ -17,9 +19,10 @@ namespace Content.Client.PDA
     [GenerateTypedNameReferences]
     public sealed partial class PdaMenu : PdaWindow
     {
-        [Dependency] private readonly IClipboardManager _clipboard = null!;
-        [Dependency] private readonly IGameTiming _gameTiming = default!;
-        [Dependency] private readonly IEntitySystemManager _entitySystem = default!;
+        [Dependency] private IClipboardManager _clipboard = null!;
+        [Dependency] private IGameTiming _gameTiming = default!;
+        [Dependency] private IEntitySystemManager _entitySystem = default!;
+        [Dependency] private ClientsidePlaytimeTrackingManager _playtimeTracking = default!; // Aurora's Song
         private readonly ClientGameTicker _gameTicker;
 
         public const int HomeView = 0;
@@ -30,10 +33,13 @@ namespace Content.Client.PDA
 
         private string _pdaOwner = Loc.GetString("comp-pda-ui-unknown");
         private string _owner = Loc.GetString("comp-pda-ui-unknown");
+        private string _idNumber = Loc.GetString("comp-pda-ui-unknown"); // Aurora add id number to pda
         private string _jobTitle = Loc.GetString("comp-pda-ui-unassigned");
         private string _stationName = Loc.GetString("comp-pda-ui-unknown");
         private string _alertLevel = Loc.GetString("comp-pda-ui-unknown");
         private string _instructions = Loc.GetString("comp-pda-ui-unknown");
+        private double _playtime = 0; // Aurora's Song - Playtime tracker
+
 
         private string _balance = Loc.GetString("comp-pda-ui-unknown"); // Frontier
         private string _shuttleDeed = Loc.GetString("comp-pda-ui-unknown"); // Frontier
@@ -156,7 +162,7 @@ namespace Content.Client.PDA
             {
                 _pdaOwner = state.PdaOwnerInfo.ActualOwnerName;
                 PdaOwnerLabel.SetMarkup(Loc.GetString("comp-pda-ui-owner",
-                    ("actualOwnerName", _pdaOwner)));
+                    ("actualOwnerName", FormattedMessage.EscapeText(_pdaOwner)))); // Aurora's Song - Escape text to prevent errors
                 PdaOwnerLabel.Visible = true;
             }
             else
@@ -165,28 +171,36 @@ namespace Content.Client.PDA
             }
 
 
-            if (state.PdaOwnerInfo.IdOwner != null || state.PdaOwnerInfo.JobTitle != null)
+            if (state.PdaOwnerInfo.IdOwner != null || state.PdaOwnerInfo.IdNumber != null) // Aurora add id number to pda
             {
                 _owner = state.PdaOwnerInfo.IdOwner ?? Loc.GetString("comp-pda-ui-unknown");
-                _jobTitle = state.PdaOwnerInfo.JobTitle ?? Loc.GetString("comp-pda-ui-unassigned");
+                _idNumber = state.PdaOwnerInfo.IdNumber ?? ""; // Aurora add id number to pda
                 IdInfoLabel.SetMarkup(Loc.GetString("comp-pda-ui",
-                    ("owner", _owner),
-                    ("jobTitle", _jobTitle)));
+                    ("owner", FormattedMessage.EscapeText(_owner)),
+                    ("canonIdNumber", FormattedMessage.EscapeText(_idNumber)))); // Aurora's Song - swaped out job for id number, Escape text to prevent errors
             }
             else
             {
                 IdInfoLabel.SetMarkup(Loc.GetString("comp-pda-ui-blank"));
             }
 
+            // Aurora's Song Start - add id number to pda
+            _jobTitle = state.PdaOwnerInfo.JobTitle ?? Loc.GetString("comp-pda-ui-unassigned");
+            JobInfoLabel.SetMarkup(Loc.GetString("comp-pda-ui-job",
+                ("jobTitle", FormattedMessage.EscapeText(_jobTitle))));
+            // Aurora's Song End
+
             _stationName = state.StationName ?? Loc.GetString("comp-pda-ui-unknown");
             StationNameLabel.SetMarkup(Loc.GetString("comp-pda-ui-station",
-                ("station", _stationName)));
+                ("station", FormattedMessage.EscapeText(_stationName)))); // Aurora's Song - Escape text to prevent errors
 
             _balance = BankSystemExtensions.ToSpesoString(state.Balance); // Frontier
-            BalanceLabel.SetMarkup(Loc.GetString("comp-pda-ui-balance", ("balance", _balance))); // Frontier
+            BalanceLabel.SetMarkup(Loc.GetString("comp-pda-ui-balance",
+                ("balance", FormattedMessage.EscapeText(_balance)))); // Frontier, Aurora's Song - Escape text to prevent errors
 
             _shuttleDeed = state.OwnedShipName ?? ""; // Frontier
-            ShuttleDeedLabel.SetMarkup(Loc.GetString("comp-pda-ui-shuttle-deed", ("shipname", _shuttleDeed))); // Frontier
+            ShuttleDeedLabel.SetMarkup(Loc.GetString("comp-pda-ui-shuttle-deed",
+                ("shipname", FormattedMessage.EscapeText(_shuttleDeed)))); // Frontier, Aurora's Song - Escape text to prevent errors
             ShuttleDeedLabel.Visible = !string.IsNullOrEmpty(state.OwnedShipName); // Frontier
 
             var stationTime = _gameTiming.CurTime.Subtract(_gameTicker.RoundStartTimeSpan);
@@ -220,6 +234,10 @@ namespace Content.Client.PDA
                 "comp-pda-ui-station-alert-level-instructions",
                 ("instructions", _instructions))
             );
+            // Aurora's Song - Start - I might as well get my grubby paws in here too
+            _playtime = Math.Round(_playtimeTracking.PlaytimeMinutesToday / 60f, 1);
+            PlaytimeLabel.SetMarkup(Loc.GetString("lobby-state-playtime-comment-normal", ("hours", _playtime)));
+            // Aurora's Song - End
 
             AddressLabel.Text = state.Address?.ToUpper() ?? " - ";
 
@@ -379,6 +397,8 @@ namespace Content.Client.PDA
             StationTimeLabel.SetMarkup(Loc.GetString("comp-pda-ui-station-time",
                 ("time", RoundTimerUtils.ToString(stationTime)))); // Aurora's Song - Allow round timer to go over 24h
 
+            DateLabel.Text = CanonicalFormat.CanonDateTime().ToString("yyyy-MM-dd HH:mm"); // Aurora's Song - add canon datetime to display.
+
             // Frontier
             if (_roundEndTime is not null)
             {
@@ -391,6 +411,7 @@ namespace Content.Client.PDA
                 }
             }
             // End Frontier
+            UpdateLocalShiftTimeTooltips(stationTime); // Aurora's Song
         }
     }
 }

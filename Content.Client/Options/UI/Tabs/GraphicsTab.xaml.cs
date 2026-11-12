@@ -12,7 +12,7 @@ namespace Content.Client.Options.UI.Tabs;
 [GenerateTypedNameReferences]
 public sealed partial class GraphicsTab : Control
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
 
     public GraphicsTab()
     {
@@ -23,6 +23,7 @@ public sealed partial class GraphicsTab : Control
         Control.AddOptionCheckBox(CCVars.AmbientOcclusion, AmbientOcclusionCheckBox);
         Control.AddOption(new OptionFullscreen(Control, _cfg, FullscreenCheckBox));
         Control.AddOption(new OptionLightingQuality(Control, _cfg, DropDownLightingQuality));
+        AddStarfallParticleOptions(); // _Starfall: Particle quality.
 
         Control.AddOptionDropDown(
             CVars.DisplayUIScale,

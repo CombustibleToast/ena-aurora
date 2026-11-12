@@ -19,3 +19,82 @@
   - FloorTileItemWoodLargeRed
   - FloorTileItemWoodParquetRed
   - FloorTileItemWoodChessRed
+
+- type: latheRecipePack
+  id: XenoTiles
+  recipes:
+  - FloorTileItemXeno
+  - FloorTileItemXenoSteel
+  - FloorTileItemXenoSteelCorner
+  - FloorTileItemXenoMaint
+
+- type: latheRecipePack
+  id: N14Tiles
+  recipes:
+  - FloorTileItemMetalBlue
+  - FloorTileItemMetalBlueSolid
+  - FloorTileItemMetalGreen
+  - FloorTileItemMetalGreenSolid
+  - FloorTileItemMetalGrey
+  - FloorTileItemMetalGreySolid
+  - FloorTileItemMetalGreyDark
+  - FloorTileItemMetalGreyDarkSolid
+  - FloorTileItemMetalPurple
+  - FloorTileItemMetalPurpleSolid
+  - FloorTileItemMetalRed
+  - FloorTileItemMetalRedSolid
+  - FloorTileItemMetalTeal
+  - FloorTileItemMetalTealSolid
+  - FloorTileItemMetalWhite
+  - FloorTileItemMetalWhiteSolid
+  - FloorTileItemMetalYellow
+  - FloorTileItemMetalYellowSolid
+  - FloorTileItemMetalFreezer
+  - FloorTileItemMetalIndustrial
+  - FloorTileItemMetalMS13
+  - FloorTileItemMetalGrate
+  - FloorTileItemMetalSolid
+  - FloorTileItemWoodOak
+  - FloorTileItemWoodHouse
+  - FloorTileItemWoodMaple
+  - FloorTileItemCarpetRed
+
+# Somber tiles
+- type: latheRecipePack
+  id: ASSomberTilesStatic
+  recipes:
+  - FloorTileItemSomberSteel
+  - FloorTileItemSomberSteelBandedDark
+  - FloorTileItemSomberSteelBandedMagenta
+  - FloorTileItemSomberSteelBandedPurple
+  - FloorTileItemSomberSteelCheckerDark
+  - FloorTileItemSomberSteelCheckerMagenta
+  - FloorTileItemSomberSteelCheckerPurple
+  - FloorTileItemSomberSteelDiagonal
+  - FloorTileItemSomberSteelDiagonalDark
+  - FloorTileItemSomberSteelDiagonalMagenta
+  - FloorTileItemSomberSteelDiagonalMini
+  - FloorTileItemSomberSteelDiagonalMiniDark
+  - FloorTileItemSomberSteelDiagonalMiniMagenta
+  - FloorTileItemSomberSteelDiagonalMiniPurple
+  - FloorTileItemSomberSteelDiagonalPurple
+  - FloorTileItemSomberSteelHerringbone
+  - FloorTileItemSomberSteelMini
+  - FloorTileItemSomberSteelMono
+  - FloorTileItemSomberSteelMonoDark
+  - FloorTileItemSomberSteelMonoEye
+  - FloorTileItemSomberSteelOffset
+  - FloorTileItemSomberSteelPavement
+  - FloorTileItemSomberSteelPavementVertical
+  - FloorTileItemSomberMnemolithRough
+  - FloorTileItemSomberMnemolithSmooth
+  - FloorTileItemSomberWood
+  - FloorTileItemSomberWoodChess
+  - FloorTileItemSomberWoodLarge
+  - FloorTileItemSomberWoodParquet
+  - FloorTileItemSomberWoodPattern
+  - FloorTileItemSomberAmaranth
+  - FloorTileItemSomberAmaranthEye
+  - FloorTileItemSomberGlass
+  - FloorTileItemSomberGlassPlasma
+  - FloorTileItemSomberGlassUranium

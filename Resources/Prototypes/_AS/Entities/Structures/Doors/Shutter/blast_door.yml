@@ -1,0 +1,23 @@
+﻿- type: entity
+  id: ASBlastDoorIndestructible
+  parent: BlastDoor
+  name: plastitanium blast door
+  suffix: indestructible, AS
+  description: This door is made of plastitanium, a material that is nearly indestructible. It can withstand extreme forces and is resistant to most forms of damage.
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Shutters/blastdoor.rsi
+    color: "#9ce68a"
+    layers:
+    - state: closed
+      map: [ "enum.DoorVisualLayers.Base" ]
+    - state: welded
+      map: [ "enum.WeldableLayers.BaseWelded" ]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 9000000 #Psuedo indestructible, because parenting.
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

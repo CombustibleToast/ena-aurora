@@ -25,8 +25,10 @@
   - type: Sprite
     drawdepth: Objects
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: Electronic
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: SparksOnDamage # _Starfall
   - type: Destructible
     thresholds:
     - trigger:

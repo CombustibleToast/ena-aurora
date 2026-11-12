@@ -2,7 +2,7 @@
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
-  parent: ClothingShoesBootsCombat
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingShoesBootsCombat ]
   id: ASClothingShoesBootsSLEDarkBlue
   name: SLE dark blue boots
   description: Stylish boots for running in circles on a deck during emergencies.
@@ -13,7 +13,7 @@
     sprite: _AS/Clothing/Shoes/Boots/sle_brown_boots.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ClothingShoesBootsCombat
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingShoesBootsCombat ]
   id: ASClothingShoesBootsSLELightBlue
   name: SLE light blue boots
   description: Stylish boots for running in circles on a deck during emergencies.
@@ -32,3 +32,33 @@
   id: ASClothingShoesBootsSLELightBlueFilled
   parent: [ASClothingShoesBootsSLELightBlue, ClothingShoesBootsCombatFilled]
 
+#region Corporate
+
+- type: entity
+  parent: [ ClothingShoesMilitaryBase, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingShoesHighheelBootsNanotrasen
+  name: nanotrasen official's heel boots
+  description: An EXPENSIVE pair of black suede platform ankle boots, with block heels. Arguably a deadly weapon.
+  components:
+  - type: MeleeWeapon
+    damage:
+      types:
+        Piercing: 6
+  - type: Sprite
+    sprite: _Funkystation/Clothing/Shoes/Boots/heelboots.rsi
+  - type: Clothing
+    sprite: _Funkystation/Clothing/Shoes/Boots/heelboots.rsi
+    clothingVisuals:
+      shoes:
+      - state: equipped-FEET
+        offset: "0, -0.03125"
+  - type: FootstepModifier
+    footstepSoundCollection:
+      collection: FootstepHighHeels
+      params:
+        variation: 0.09
+
+- type: entity
+  parent: [ASClothingShoesHighheelBootsNanotrasen, C2ContrabandSyndicateRestrictedUnredeemable ]
+  id: ASClothingShoesHighheelBootsSyndicate
+  name: syndicate official's heel boots

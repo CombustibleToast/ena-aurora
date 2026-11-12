@@ -5,9 +5,10 @@
   description: Feels incredibly flimsy.
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/biodegradable.rsi
+    sprite: _AS/Structures/Storage/Crates/biodegradable.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/biodegradable.rsi
+    sprite: _AS/Structures/Storage/Crates/biodegradable.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: Construction
     graph: CratePlasticBiodegradable
     node: crateplasticbiodegradable
@@ -24,9 +25,10 @@
   name: uranium crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/radiation_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/radiation_secure.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/radiation_secure.rsi
+    sprite: _AS/Structures/Storage/Crates/radiation_secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateSecgear
@@ -70,9 +72,10 @@
   name: ammo crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/ammo.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/ammo.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
 
 - type: entity
   parent: CratePirate
@@ -103,9 +106,10 @@
   name: mccargo freezer
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/mccargo.rsi
+    sprite: _AS/Structures/Storage/Crates/mccargo.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/mccargo.rsi
+    sprite: _AS/Structures/Storage/Crates/mccargo.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 # Mercenary
 - type: entity
@@ -114,9 +118,10 @@
   name: mercenary crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/secure_mercenary.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_mercenary.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/secure_mercenary.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_mercenary.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["Mercenary"]]
 
@@ -126,9 +131,10 @@
   name: private security crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/secure_privatesec.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_privatesec.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/secure_privatesec.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_privatesec.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
   - type: AccessReader
     access: [["Mercenary"]]
 
@@ -138,9 +144,10 @@
   name: secure ammo crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/secure_ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_ammo.rsi # Aurora's Song - Storage Resprites Batch 1
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/secure_ammo.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_ammo.rsi # Aurora's Song - Storage Resprites Batch 1
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 1
   - type: AccessReader
     access: [["Mercenary"]]
 
@@ -150,9 +157,10 @@
   name: secure firearms crate
   components:
   - type: Icon
-    sprite: _NF/Structures/Storage/Crates/secure_firearms.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_firearms.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Sprite
-    sprite: _NF/Structures/Storage/Crates/secure_firearms.rsi
+    sprite: _AS/Structures/Storage/Crates/secure_firearms.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
 
 - type: entity
   parent: CrateLivestock

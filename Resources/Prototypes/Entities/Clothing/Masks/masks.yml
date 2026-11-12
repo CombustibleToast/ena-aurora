@@ -42,7 +42,7 @@
   - type: IngestionBlocker # Goobstation
 
 - type: entity
-  parent: [ClothingMaskGas, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [ClothingMaskGas, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingMaskGasSyndicate
   name: syndicate gas mask
   description: A close-fitting tactical mask that can be connected to an air supply.
@@ -95,7 +95,7 @@
   - type: IngestionBlocker
 
 - type: entity
-  parent: [ ClothingMaskGasAtmos, BaseCentcommContraband ]
+  parent: [ ClothingMaskGasAtmos, BaseC3ContrabandCentCommLowValue ] # Aurora's Song - BaseCentcommContraband<BaseC3ContrabandCentCommLowValue
   id: ClothingMaskGasCentcom
   name: CentComm gas mask
   description: Oooh, gold and green. Fancy! This should help as you sit in your office.
@@ -214,7 +214,6 @@
     tags:
     - ClownMask
     - WhitelistChameleon
-    - IPCMaskWearable # EE - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -270,7 +269,7 @@
     - Snout
 
 - type: entity
-  parent: [ClothingMaskClownBase, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ClothingMaskClownBase, BaseC1Contraband] # Aurora's Song - BaseSecurityContraband<BaseC1Contraband
   id: ClothingMaskClownSecurity
   name: security clown wig and mask
   description: A debatably oxymoronic but protective mask and wig.
@@ -310,9 +309,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -330,7 +326,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - IPCMaskWearable # EE - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -414,7 +409,7 @@
     accent: StutteringAccent
 
 - type: entity
-  parent: [ ClothingMaskGas, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [ ClothingMaskGas, BaseC1Contraband ] # Aurora's Song - BaseSecurityContraband<BaseC1Contraband
   id: ClothingMaskGasSwat
   name: swat gas mask
   description: A elite issue Security gas mask.
@@ -462,7 +457,7 @@
     id: ClothingMaskGasMercenary # Frontier
 
 - type: entity
-  parent: [ ClothingMaskGas, BaseCentcommContraband ]
+  parent: [ ClothingMaskGas, C2ContrabandNanoTrasenRestricted ] # Aurora's Song - BaseCentcommContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingMaskGasERT
   name: ert gas mask
   description: The gas mask of the elite squad of the ERT.
@@ -528,7 +523,6 @@
     tags:
     - HamsterWearable
     - WhitelistChameleon
-    - IPCMaskWearable # EE - IPCs
   - type: HideLayerClothing
     slots:
     - Snout
@@ -549,9 +543,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -568,9 +559,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -587,9 +575,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -606,9 +591,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -625,9 +607,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -644,9 +623,6 @@
   - type: HideLayerClothing
     slots:
     - Snout
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskBase
@@ -655,15 +631,15 @@
   description: Stylish neck gaiter for your neck, can protect from the cosmic wind?...
   components:
   - type: Sprite
-    sprite: Clothing/Mask/neckgaiter.rsi
+    sprite: _AS/Clothing/Mask/neckgaiter.rsi # Aurora's Song - Neck Gaiters Go In Neck
   - type: Clothing
-    sprite: Clothing/Mask/neckgaiter.rsi
+    sprite: _AS/Clothing/Mask/neckgaiter.rsi # Aurora's Song - Neck Gaiters Go In Neck
+    slots: [ mask, neck] # Aurora's Song - Neck Gaiters Go In Neck
   - type: IdentityBlocker
     coverage: MOUTH
   - type: Tag
     tags:
     - WhitelistChameleon
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskNeckGaiter
@@ -671,9 +647,9 @@
   name: red neck gaiter
   components:
   - type: Sprite
-    sprite: Clothing/Mask/neckgaiterred.rsi
+    sprite:  _AS/Clothing/Mask/neckgaiterred.rsi # Aurora's Song - Neck Gaiters Go In Neck
   - type: Clothing
-    sprite: Clothing/Mask/neckgaiterred.rsi
+    sprite: _AS/Clothing/Mask/neckgaiterred.rsi # Aurora's Song - Neck Gaiters Go In Neck
 
 - type: entity
   parent: ClothingMaskClownBase
@@ -765,9 +741,6 @@
   - type: EyeProtection
   - type: BreathMask
   - type: IdentityBlocker
-  - type: Tag
-    tags:
-    - IPCMaskWearable # EE - IPCs
 
 - type: entity
   parent: ClothingMaskGas
@@ -776,10 +749,10 @@
   description: A gas mask with built in welding goggles and face shield. Looks like a skull, clearly designed by a nerd.
   components:
   - type: Sprite
-    sprite: Clothing/Mask/welding-gas.rsi
+    sprite: _AS/Clothing/Mask/welding-gas.rsi # Aurora's Song - Redirect to AS for toggle hiding
     state: icon
   - type: Clothing
-    sprite: Clothing/Mask/welding-gas.rsi
+    sprite: _AS/Clothing/Mask/welding-gas.rsi # Aurora's Song - Redirect to AS for toggle hiding
   - type: FlashImmunity
   - type: EyeProtection
   - type: PhysicalComposition

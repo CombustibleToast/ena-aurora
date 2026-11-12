@@ -1,0 +1,509 @@
+- type: constructionGraph
+  id: MantisFurniture
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: SomberChairCushion
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Cloth
+              amount: 4
+              doAfter: 2
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberChairLeather
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 3
+              doAfter: 2
+            - material: Cloth
+              amount: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberChairLeatherMantisWheelchair
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 3
+              doAfter: 3
+            - material: Cloth
+              amount: 3
+            - material: Eidolite
+              amount: 1
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberChairWood
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 3
+              doAfter: 2
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberPsychBed
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 3
+            - material: Cloth
+              amount: 4
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberDresser
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 3
+              doAfter: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: BookshelfSomber
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberCloset
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 3
+            - material: WoodPlank
+              amount: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberWallCloset
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Steel
+              amount: 4
+              doAfter: 3
+            - material: WoodPlank
+              amount: 2
+            - material: ElectrumScrap
+              amount: 1
+        - to: LockerForensicMantis
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Steel
+              amount: 5
+              doAfter: 3
+            - material: WoodPlank
+              amount: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberMannequin
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberNoticeBoard
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 2
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberFireplace
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 4
+            - material: Mnemolith
+              amount: 2
+            - material: Eidolite
+              amount: 2
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberHangingBrazier
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Eidolite
+              amount: 1
+              doAfter: 3
+            - material: ElectrumScrap
+              amount: 1
+        - to: SomberMirror
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Glass
+              amount: 2
+              doAfter: 2
+            - material: ElectrumScrap
+              amount: 1
+        - to: LightSomberEidoliteWellLamp
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Eidolite
+              amount: 3
+              doAfter: 3
+            - material: Mnemolith
+              amount: 1
+        - to: LightSomberEidoliteFloorLamp
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Eidolite
+              amount: 3
+              doAfter: 3
+            - material: Mnemolith
+              amount: 3
+        - to: WallDecorSomberPsi
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: ElectrumScrap
+              amount: 1
+              doAfter: 2
+        - to: WallDecorSomberEye
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Cloth
+              amount: 1
+              doAfter: 2
+            - material: Eidolite
+              amount: 1
+            - material: ElectrumScrap
+              amount: 1
+
+    - node: SomberChairCushion
+      entity: SomberChairCushion
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberChairLeather
+      entity: SomberChairLeather
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberChairLeatherMantisWheelchair
+      entity: SomberChairLeatherMantisWheelchair
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialEidolite1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberChairWood
+      entity: SomberChairWood
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberPsychBed
+      entity: SomberPsychBed
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberDresser
+      entity: SomberDresser
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: BookshelfSomber
+      entity: BookshelfSomber
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberCloset
+      entity: SomberCloset
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberWallCloset
+      entity: SomberWallCloset
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: LockerForensicMantis
+      entity: LockerForensicMantis
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberMannequin
+      entity: SomberMannequin
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+              pickup: true
+              emptyAtUser: true
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberNoticeBoard
+      entity: SomberNoticeBoard
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberFireplace
+      entity: SomberFireplace
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialMnemolith1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: MaterialEidolite1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberHangingBrazier
+      entity: SomberHangingBrazier
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialEidolite1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: SomberMirror
+      entity: SomberMirror
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetGlass1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: LightSomberEidoliteWellLamp
+      entity: LightSomberEidoliteWellLamp
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialEidolite1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialMnemolith1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: LightSomberEidoliteFloorLamp
+      entity: LightSomberEidoliteFloorLamp
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialEidolite1
+              amount: 3
+            - !type:SpawnPrototype
+              prototype: MaterialMnemolith1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: WallDecorSomberPsi
+      entity: WallDecorSomberPsi
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+    - node: WallDecorSomberEye
+      entity: WallDecorSomberEye
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: MaterialEidolite1
+              amount: 1
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3

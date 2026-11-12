@@ -64,7 +64,7 @@
     turnInValues:
     allowedDepartments: [ Security, Command ]
   - type: FactionClothing # Aurora Song, prevent CDETs from targeting
-    faction: ColonialCommandClothing
+    faction: AuroranColony
 
 - type: entity
   parent: ClothingOuterHardsuitSyndieElite
@@ -101,4 +101,4 @@
     turnInValues:
     allowedDepartments: [ Security, Command ]
   - type: FactionClothing # Aurora Song, prevent CDETs from targeting
-    faction: ColonialCommandClothing
+    faction: AuroranColony

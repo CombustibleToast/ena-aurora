@@ -8,8 +8,9 @@
     price: 625
   - type: InteractionOutline
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -33,7 +34,7 @@
   - type: Climbable
   - type: Sprite
     noRot: true
-    sprite: /Textures/_NF/Structures/Storage/magnetbox.rsi
+    sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
   - type: Appearance
   - type: GenericVisualizer
     visuals:
@@ -48,7 +49,7 @@
   - type: Storage
     grid:
     - 0,0,19,9 # DeltaV: Expanded to ore bag of holding storage
-    maxItemSize: Normal
+    maxItemSize: Large # Aurora Song, expanded from Normal to Large
     storageOpenSound: /Audio/Effects/closetopen.ogg
     storageCloseSound: /Audio/Effects/closetclose.ogg
   - type: UserInterface
@@ -63,7 +64,8 @@
   - type: MagnetPickup
     range: 1.5 # Ore bag has a range of 1.0
     magnetEnabled: false
-    magnetCanBeEnabled: false
+    useItemToggle: true # Aurora's Song - Magnet Rewrite
+    # magnetCanBeEnabled: false Aurora's Song - Magnet Rewrite
   - type: Fixtures
     fixtures:
       fix1:
@@ -87,6 +89,22 @@
   - type: ItemToggleExamine
     on: item-toggle-examine-magnet-on
     off: item-toggle-examine-magnet-off
+    # Aurora's Song - Magnet Rewrite
+  - type: TimerTrigger 
+    delay: 2
+    looping: true
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: DeviceLinkSink
+    ports:
+      - On
+      - Off
+      - Toggle
+      - Trigger
+    # Aurora's Song Edit End
 
 #region ore box
 - type: entity
@@ -141,6 +159,8 @@
       - CableCoil
       components:
       - ConstructionMaterials
+      - MachineBoard # Aurora Song
+      - Flatpack # Aurora Song
     blacklist:
       tags:
       - PrizeTicket

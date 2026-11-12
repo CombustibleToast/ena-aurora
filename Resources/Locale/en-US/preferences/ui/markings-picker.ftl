@@ -51,9 +51,13 @@ markings-layer-Chest = Chest
 markings-layer-Head = Head
 markings-layer-Snout = Snout
 markings-layer-SnoutCover = Snout (Cover)
+# Aurora's Song
+markings-layer-NeckFluff = Neck Fluff
 markings-layer-HeadSide = Head (Side)
 markings-layer-HeadTop = Head (Top)
 markings-layer-Eyes = Eyes
+# Aurora's Song
+markings-layer-HeadOverlay = Head (Overlay)
 markings-layer-RArm = Right Arm
 markings-layer-LArm = Left Arm
 markings-layer-RHand = Right Hand

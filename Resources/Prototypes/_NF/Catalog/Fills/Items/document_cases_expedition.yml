@@ -11,3 +11,5 @@
         - id: NFBlueprintWeaponLaserCannon
         - id: NFBlueprintWeaponXrayCannon
         - id: NFBlueprintWeaponTemperatureGun
+        - id: ASBlueprintShotgun8gSlug # Aurora's Song
+        - id: ASBlueprintShotgun8gHE # Aurora's Song

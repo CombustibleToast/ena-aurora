@@ -1,0 +1,31 @@
+﻿#region NanoTrasen Mob Damage Modifiers
+- type: damageModifierSet
+  id: MobHostileNanoTrasenDamageModifierEasy
+  coefficients: # For grunts and other low-tier NT hostiles
+    Blunt: 0.9
+    Slash: 0.9
+    Piercing: 0.85
+    Poison: 1.1
+    Caustic: 1.1 #Good ballistic plating but not enough coverage renders them vulnerable to caustics
+
+- type: damageModifierSet
+  id: MobHostileNanoTrasenDamageModifierMed
+  coefficients: # More resilient troops and rogue ERT officers
+    Blunt: 0.8
+    Slash: 0.8
+    Piercing: 0.75
+    Heat: 0.85
+    Radiation: 0.8
+    Poison: 1
+    Caustic: 1
+
+- type: damageModifierSet
+  id: MobHostileNanoTrasenDamageModifierHard
+  coefficients: # Abandon all hope, the Death Squad have entered
+    Blunt: 0.3
+    Slash: 0.3
+    Piercing: 0.3
+    Heat: 0.3
+    Radiation: 0.3
+    Poison: 0.5
+    Caustic: 0.4

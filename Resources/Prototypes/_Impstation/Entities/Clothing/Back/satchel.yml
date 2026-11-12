@@ -1,0 +1,13 @@
+- type: entity
+  parent: ClothingBackpackSatchel
+  id: ClothingBackpackSatchelCommandveteran
+  name: command veteran satchel
+  description: A sleek satchel, earned through a long career as command.
+  components:
+  - type: Storage
+    grid:
+    - 0,0,1,4
+    - 3,0,6,4
+    - 8,0,9,4
+  - type: Sprite
+    sprite: Clothing/Back/Satchels/commandveteran.rsi

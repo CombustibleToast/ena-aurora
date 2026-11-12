@@ -96,6 +96,9 @@
     doAfterDuration: 6
   - type: DoAfter
   - type: UseDelay
+  - type: Tag #Den change for BSO/Corpsman/CMO rig compatability
+    tags:
+    - Compactdefib
 
 - type: entity
   id: DefibrillatorSyndicate

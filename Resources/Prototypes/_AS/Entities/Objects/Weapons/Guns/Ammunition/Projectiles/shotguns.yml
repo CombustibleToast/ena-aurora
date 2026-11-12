@@ -1,0 +1,61 @@
+﻿#region Pellets
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ASPelletShotgun8g
+  name: pellet (8g)
+  parent: NFBasePellet
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 15
+        Structural: 15
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ASProjectileSlug8g
+  name: slug (8g)
+  description: If you're seeing this, you're dead.
+  parent: NFBasePellet
+  components:
+  - type: Projectile
+    damage:
+      types: # 50% more damage across board than 12g
+        Piercing: 60
+        Structural: 23
+
+- type: entity
+  id: ASProjectileSlug8gHE
+  name: blast slug
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
+    layers:
+    - state: slug
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 13
+    intensitySlope: 7
+    maxIntensity: 10
+    canCreateVacuum: false
+
+#region Spread patterns
+- type: entity
+  id: ASPelletLowShotgunSpread
+  abstract: true
+  components:
+  - type: ProjectileSpread
+    count: 5 # six total, includes the spread as a bullet
+    spread: 10
+
+#region Completed Shell Projectiles
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: ASPelletShotgunSpread8g
+  parent: [ASPelletLowShotgunSpread, ASPelletShotgun8g]
+  components:
+  - type: ProjectileSpread
+    proto: ASPelletShotgun8g

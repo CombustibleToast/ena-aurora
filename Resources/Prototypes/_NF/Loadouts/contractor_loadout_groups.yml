@@ -212,6 +212,38 @@
   - ContractorClothingUniformJumpsuitMilitaryColorLightBrown
   - ContractorClothingUniformJumpsuitMilitaryColorBrown
   - ContractorClothingUniformJumpsuitCoyotePants # Aurora's Song - Shirtless Coyote Pants
+  - ContractorClothingUniformJumpsuitJackalPants # Aurora's Song - coyote pants recolor
+  - ContractorClothingUniformJumpsuitWolfPants # Aurora's Song - coyote pants recolor
+  - ContractorClothingUniformJumpsuitHoundPants # Aurora's Song - coyote pants recolor
+  - ContractorClothingUniformJumpsuitMilitaryBrat # Aurora's Song - Military Brat Outfit
+  - ContractorClothingUniformJumpsuitMilitaryBratAcidWash # Aurora's Song - Military Brat Outfit
+  - ContractorClothingUniformJumpsuitMilitaryBratCargonia # Aurora's Song - Military Brat Outfit
+  - ContractorClothingUniformJumpsuitMilitaryBratDenim # Aurora's Song - Military Brat Outfit
+  - ContractorClothingUniformJumpsuitMilitaryBratKhaki # Aurora's Song - Military Brat Outfit
+   # Aurora's Song Start - skinny jeans 
+  - ContractorClothingUniformJumpsuitDenimSkinnyJeans 
+  - ContractorClothingUniformJumpsuitBlackDenimSkinnyJeans
+  - ContractorClothingUniformJumpsuitBrownSkinnyJeans
+  - ContractorClothingUniformJumpsuitCamoSkinnyJeans
+  - ContractorClothingUniformJumpsuitBloodRedSkinnyJeans
+  - ContractorClothingUniformJumpsuitGreenSkinnyJeans
+  - ContractorClothingUniformJumpsuitOrangeSkinnyJeans
+  - ContractorClothingUniformJumpsuitPinkSkinnyJeans
+  - ContractorClothingUniformJumpsuitPurpleSkinnyJeans
+  - ContractorClothingUniformJumpsuitYellowSkinnyJeans 
+  # Aurora's Song End - skinny jeans 
+  # Aurora's Song Start - shorts 
+  - ContractorClothingUniformJumpsuitPupShorts 
+  - ContractorClothingUniformJumpsuitDarkPupShorts
+  - ContractorClothingUniformJumpsuitKitShorts
+  - ContractorClothingUniformJumpsuitPuppyShorts
+  # Aurora's Song End - shorts
+  # Aurora's Song Start - baggy pants
+  - ContractorClothingUniformJumpsuitBlackBaggyPants
+  - ContractorClothingUniformJumpsuitBrownBaggyPants
+  - ContractorClothingUniformJumpsuitCamoBaggyPants
+  - ContractorClothingUniformJumpsuitBaggyJeans
+  # Aurora's Song End - baggy pants
   - ContractorClothingUniformJumpskirtBlackElegantDress
   - ContractorClothingUniformJumpskirtRedElegantDress
   - ContractorClothingUniformJumpskirtGreenElegantDress
@@ -686,6 +718,7 @@
 - type: loadoutGroup
   id: ContractorNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2 # Aurora's Song - Two neck slots
   minLimit: 0
   loadouts:
   - ContractorClothingNeckCloakMantisDark # Aurora Song - Mantis drip merge
@@ -826,6 +859,12 @@
   - ContractorClothingEyesGlassesCheapSunglasses
   - ContractorClothingEyesBlindfold
   - ContractorClothingEyesEyepatch
+  - ContractorClothingEyesGlassesColorfulPink # Aurora's Song - Colorful glasses
+  - ContractorClothingEyesGlassesColorfulRed # Aurora's Song - Colorful glasses
+  - ContractorClothingEyesGlassesColorfulYellow # Aurora's Song - Colorful glasses
+  - ContractorClothingEyesGlassesColorfulGreen # Aurora's Song - Colorful glasses
+  - ContractorClothingEyesGlassesColorfulBlue # Aurora's Song - Colorful glasses
+  - ContractorClothingEyesGlassesColorfulPurple # Aurora's Song - Colorful glasses
   - ContractorClothingEyesGlassesMantis  # Aurora Song - Mantis drip merge
   - ContractorClothingEyesGlassesMantisTinted  # Aurora Song - Mantis drip merge
   - ContractorClothingEyesGlassesMantisBlindfold  # Aurora Song - Mantis drip merge
@@ -890,6 +929,39 @@
   - ContractorCrayonBox
   - ContractorSoapNT
   - PlushieLizard
+  # Aurora's Song Start - The avalanche of job wehs begins here:
+  - PlushieSpaceLizard
+  - PlushieLizardJobMedicalintern
+  - PlushieLizardJobResearchassistant
+  - PlushieLizardJobSecuritycadet
+  - PlushieLizardJobServiceworker
+  - PlushieLizardJobTechnicalassistant
+  - PlushieLizardJobPassenger
+  - PlushieLizardJobBartender
+  - PlushieLizardJobBoxer
+  - PlushieLizardJobBotanist
+  - PlushieLizardJobChaplain
+  - PlushieLizardJobChef
+  - PlushieLizardJobClown
+  - PlushieLizardJobJanitor
+  - PlushieLizardJobLawyer
+  - PlushieLizardJobLibrarian
+  - PlushieLizardJobMime
+  - PlushieLizardJobMusician
+  - PlushieLizardJobPsychologist
+  - PlushieLizardJobReporter
+  - PlushieLizardJobZookeeper
+  - PlushieLizardJobAtmospherictechnician
+  - PlushieLizardJobCargotechnician
+  - PlushieLizardJobChemist
+  - PlushieLizardJobDetective
+  - PlushieLizardJobMedicaldoctor
+  - PlushieLizardJobParamedic
+  - PlushieLizardJobSalvagespecialist
+  - PlushieLizardJobScientist
+  - PlushieLizardJobSecurityofficer
+  - PlushieLizardJobStationengineer
+  # Aurora's Song End
   - ContractorPlushieSharkGrey
   - ContractorPlushieSharkBlue
   - ContractorPlushieSharkPink
@@ -926,8 +998,13 @@
   - ContractorBriefcaseBrownFilled
   - ContractorToolboxEmergency
   - ContractorToolboxMechanical
-  - ContractorMantisMeleeCane # Aurora's Song - Mantis drip merge
   - ContractorCane
+  - ContractorOffsetCane # Aurora's Song - for mobility impaired trait
+  - ContractorOffsetCaneClown # Aurora's Song - for mobility impaired trait
+  - ContractorOffsetCaneMime # Aurora's Song - for mobility impaired trait
+  - ContractorOffsetCaneNT # Aurora's Song - for mobility impaired trait
+  - ContractorOffsetCaneWood # Aurora's Song - for mobility impaired trait
+  - ContractorMantisMeleeCane # Aurora's Song - Mantis drip merge
   - ContractorLGBTQHandyFlag
   - ContractorNTHandyFlag
   - ContractorBalloonNT
@@ -1014,12 +1091,15 @@
   - ContractorASBoxSurvivalExtendedFeroxi # Aurora Song
   - ContractorASBoxSurvivalAvali # Aurora Song
   - ContractorASBoxSurvivalExtendedAvali # Aurora Song
+  - ContractorASBoxSurvivalDecapoid # Aurora Song
+  - ContractorASBoxSurvivalExtendedDecapoid # Aurora Song
   fallbacks:
   - ContractorNFBoxSurvival
   - ContractorNFBoxSurvivalNitrogen
   - ContractorNFBoxSurvivalSheleg
   - ContractorASBoxSurvivalFeroxi # Aurora Song
   - ContractorASBoxSurvivalAvali # Aurora Song
+  - ContractorASBoxSurvivalDecapoid # Aurora Song
 
 - type: loadoutGroup
   id: ContractorEncryptionKey
@@ -1029,8 +1109,9 @@
   loadouts:
   - ContractorEncryptionKeyTraffic
   - ContractorEncryptionKeyShipboard # Aurora's Song - Shipboard encryption key added
+  - ContractorEncryptionKeyBluespace # Aurora's Song
   - ContractorEncryptionKeyMedical
-  - ContractorEncryptionKeyCargo
+  #- ContractorEncryptionKeyCargo - Aurora's Song - Made obsolete.
   - ContractorEncryptionKeyEngineering
   - ContractorEncryptionKeyScience
   fallbacks:
@@ -1053,6 +1134,7 @@
   loadouts:
   - ContractorAppraisalCartridge
   - ContractorMedTekCartridge
+  - ContractorCriticalImplantTrackerCartridge # Wayfarer
   - ContractorNetProbeCartridge
   - ContractorLogProbeCartridge
 
@@ -1066,6 +1148,7 @@
   - ContractorLightImplanter
   - ContractorBikeHornImplanter
   - ContractorSadTromboneImplanter
+  - ContractorWehImplanter
   - ContractorMimePowersImplanter
   - ContractorBibleUserImplanter
   fallbacks:
@@ -1082,6 +1165,7 @@
   - ContractorSidearmMK58
   - ContractorSidearmLaserPistol
   - ContractorSidearmDisabler
+  - ContractorSidearmCrusherDagger # Aurora's Song - For Decas
 
 - type: loadoutGroup # Aurora's Song - Ammo group for Contractor
   id: ContractorAmmo

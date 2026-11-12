@@ -1,0 +1,165 @@
+# SPDX-FileCopyrightText: 2025 Sir Warock
+# SPDX-FileCopyrightText: 2025 SixplyDev
+# SPDX-FileCopyrightText: 2025 sheepie
+# SPDX-FileCopyrightText: 2025 sleepyyapril
+#
+# SPDX-License-Identifier: MIT AND AGPL-3.0-or-later
+
+# Blueshield Armour Vest
+- type: entity
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, C2ContrabandNanoTrasenRestricted] # Aurora's Song - change to NanoTrasen Contraband
+  id: ClothingBlueshieldArmourVest
+  name: blueshield's security armour
+  description: An armoured vest with the badge of the blueshield
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/Armor/bso_armour.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/Armor/bso_armour.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.60
+        Slash: 0.60
+        Piercing: 0.65
+        Heat: 0.70
+  - type: StaminaResistance # do not add these to other equipment or mobs, we don't want to microbalance these everywhere
+    damageCoefficient: 0.75
+  - type: ExplosionResistance
+    damageCoefficient: 0.8
+  - type: StaticPrice
+    price: 350
+
+- type: entity
+  parent: ClothingBlueshieldArmourVest
+  id: ClothingBlueshieldArmoredJacket
+  name: blueshield's armored jacket
+  description: A jacket with sewn-in reinforcement layers.
+  components:
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.7
+        Heat: 0.70
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_jacket.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_jacket.rsi
+  - type: Item
+    size: Normal
+  - type: StaticPrice
+    price: 250
+
+- type: entity
+  parent: ClothingBlueshieldArmourVest
+  id: ClothingBlueshieldArmoredCowboyJacket
+  name: blueshield's armored cowboy jacket
+  description: A jacket to protect important people in wild areas.
+  components:
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
+    modifiers:
+      coefficients:
+        Blunt: 0.6
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.70
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_cowboy_jacket.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_cowboy_jacket.rsi
+  - type: Item
+    size: Normal
+  - type: StaticPrice
+    price: 400
+
+- type: entity
+  parent: [ClothingOuterBaseMedium, AllowSuitStorageClothing, ClothingOuterStorageFoldableBase, C2ContrabandNanoTrasenRestricted] # Aurora's Song - change to NanoTrasen Contraband
+  id: ClothingBlueshieldArmoredCoat
+  name: blueshield's armored coat
+  description: A coat for cold winter seasons with sewn in plates.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_coat.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_coat.rsi
+  - type: Item
+    size: Normal
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.60
+        Slash: 0.60
+        Piercing: 0.65
+        Heat: 0.70
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: TemperatureProtection
+    heatingCoefficient: 0.1
+    coolingCoefficient: 0.1
+  - type: StaticPrice
+    price: 300
+
+- type: entity
+  parent: [ClothingOuterStorageFoldableBaseOpened, ClothingBlueshieldArmoredCoat]
+  id: ClothingBlueshieldArmoredCoatOpen
+  name: blueshield's armored coat
+  suffix: Opened
+
+- type: entity
+  parent: ClothingBlueshieldArmourVest
+  id: ClothingBlueshieldArmoredMarine
+  name: blueshield's armored marine vest
+  description: A vest from the blueshield's time in the marines.
+  components:
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.55
+        Piercing: 0.4
+        Heat: 0.70
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_marine.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_marine.rsi
+  - type: Item
+    size: Normal
+  - type: StaticPrice
+    price: 475
+
+- type: entity
+  parent: ClothingBlueshieldArmourVest
+  id: ClothingBlueshieldArmoredVest
+  name: blueshield's armored vest
+  description: A vest with sewn-in reinforcement layers.
+  components:
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_vest.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_vest.rsi
+  - type: Item
+    size: Normal
+
+- type: entity
+  parent: ClothingBlueshieldArmourVest
+  id: ClothingBlueshieldArmoredKimono
+  name: blueshield's armored kimono
+  description: As times evolve, so must the Blueshield.
+  components:
+  - type: Armor # Aurora's Song - Each BSO item should have its own armor values
+    modifiers:
+      coefficients:
+        Blunt: 0.55
+        Slash: 0.45
+        Piercing: 0.7
+        Heat: 0.60
+  - type: Sprite
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_kimono.rsi
+  - type: Clothing
+    sprite: _Goobstation/Clothing/OuterClothing/Armor/blueshield_kimono.rsi
+  - type: Item
+    size: Normal
+  - type: StaticPrice
+    price: 350

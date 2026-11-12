@@ -71,10 +71,9 @@
   - type: StaticPrice
     price: 80
   - type: Riggable
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      battery:
-        maxVol: 5
+    - SolutionRiggable
   - type: InjectableSolution
     solution: battery
   - type: DrawableSolution
@@ -91,6 +90,9 @@
     guides:
     - Security
     # - Antagonists # Frontier: guidebook entry removed
+  - type: Tag
+    tags:
+    - Baton
 
 - type: entity
   name: truncheon
@@ -145,6 +147,7 @@
         visible: false
         shader: unshaded
     - type: Flash
+    - type: RevolutionaryConverter
     - type: LimitedCharges
       maxCharges: 5
     - type: MeleeWeapon
@@ -174,6 +177,7 @@
     - type: GuideHelp
       guides:
       - Security
+    - type: SpaceGarbage # Aurora's Song
     # - Antagonists # Frontier: guidebook entry removed
 
 - type: entity
@@ -187,7 +191,7 @@
 
 - type: entity
   name: portable flasher
-  parent: [BaseMachine, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseMachine, C2ContrabandRestricted] # Aurora's Song - BaseSecurityContraband<C2ContrabandRestricted
   id: PortableFlasher
   description: An ultrabright flashbulb with a proximity trigger, useful for making an area security-only.
   components:

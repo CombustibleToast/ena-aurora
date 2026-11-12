@@ -20,6 +20,17 @@
   - /Audio/Voice/Human/whistle_2.ogg
   - /Audio/Voice/Human/whistle_3.ogg
   - /Audio/Voice/Human/whistle_4.ogg
-  - /Audio/_NF/Voice/Sheleg/sheleg_whistle_1.ogg
-  - /Audio/_NF/Voice/Sheleg/sheleg_whistle_2.ogg
+  # Aurora's Song Edit: Sheleg sound replacement
+  #- /Audio/_AS/Voice/Sheleg/sheleg_whistle_1.ogg
+  #- /Audio/_AS/Voice/Sheleg/sheleg_whistle_2.ogg
+  # Aurora's Song Edit End
 # End Frontier
+
+# Aurora's Song
+- type: soundCollection
+  id: HarpyYawns
+  files:
+  - /Audio/Voice/Human/female_yawn_1.ogg
+  - /Audio/Voice/Human/male_yawn_1.ogg
+
+# Aurora's Song End

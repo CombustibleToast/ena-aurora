@@ -66,6 +66,7 @@
 - type: loadoutGroup
   id: ColonialRepresentativeNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   minLimit: 0
   loadouts:
   - ColonialRepresentativeClothingNeckCloakColonialRepresentative
@@ -87,6 +88,12 @@
   maxLimit: 6
   loadouts:
   - ColonialRepresentativeASPouchColonialRepresentative
+  - PlushieLizardJobCaptain
+  - PlushieLizardJobHeadofpersonnel
+  - PlushieLizardJobHeadofsecurity
+  - PlushieLizardJobResearchdirector
+  - PlushieLizardJobChiefengineer
+  - PlushieLizardJobChiefmedicalofficer
   subgroups:
   - ContractorBackpackItems
 

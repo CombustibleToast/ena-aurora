@@ -1,6 +1,80 @@
-﻿
+# T2
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseBRDPIExpedition
+  suffix: Dungeon, BRDPI 15
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponPistolBRDIP15Expedition
+          amount: 1
+        - id: MagazineBRDIP15
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseBRDPIBSOExpedition
+  suffix: Dungeon, BRDPI 15
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponPistolBRDIP15BSOExpedition
+          amount: 1
+        - id: MagazineBRDIP15
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseInspectorExpedition
+  suffix: Dungeon, Inspector
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponRevolverInspectorExpedition
+          amount: 1
+        - id: NFSpeedLoaderPistol45
+          amount: 2
 
 # T3
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShuvitExpeditionT1
+  suffix: Dungeon, Kasyre
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponShuvitExpedition
+          amount: 1
+        - id: PunkEchionCanister
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseCasperExpeditionT2
+  suffix: Dungeon, Kasyre
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponEchionCasperExpedition
+          amount: 1
+        - id: PunkEchionCanister
+          amount: 4
+
 - type: entity
   parent: WeaponCaseLong
   id: WeaponCaseKasyreExpedition
@@ -44,6 +118,81 @@
         - id: ASWeaponShotgunFalchionExpedition
           amount: 1
         - id: NFAmmunitionBoxShellShotgunBuckshot
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseShort
+  id: WeaponCaseShortAdderExpeditionT3
+  suffix: Dungeon, Adder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponEchionAdderExpedition
+          amount: 1
+        - id: EchionCanister
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAnacondaExpeditionT3
+  suffix: Dungeon, Anaconda
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponAnacondaExpedition
+          amount: 1
+        - id: NFAmmunitionBoxRifle60
+          amount: 1
+        - id: SpeedLoaderAnaconda
+          amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseXiuhcoatlExpeditionT3
+  suffix: Dungeon, Anaconda
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponFlamerXiuhcoatlExpedition
+          amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAkurraExpeditionT4
+  suffix: Dungeon, Akurra
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponEchionAkurraExpedition
+          amount: 1
+        - id: EchionCanister
+          amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongVulcanExpeditionT5
+  suffix: Dungeon, Vulcan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponRifleMarksmanVulcan
+          amount: 1
+        - id: ASMagazineMarksmanRifle30Long
           amount: 2
 
 - type: entity
@@ -93,6 +242,23 @@
 
 - type: entity
   parent: WeaponCaseLong
+  id: WeaponCaseChesterExpeditionT4
+  suffix: Dungeon, Chester
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponShotgunLeverChesterExpedition
+          amount: 1
+        - id: MagazineShotgunLever
+          amount: 2
+        - id: ASBlueprintShotgun8gMunitionsBasic
+          amount: 1
+
+- type: entity
+  parent: WeaponCaseLong
   id: WeaponCaseLongHushpupExpeditionT4
   suffix: Dungeon, Hushpup
   categories: [ HideSpawnMenu ]
@@ -105,3 +271,67 @@
           amount: 1
         - id: NFAmmunitionBoxShellShotgunBuckshot
           amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongBasiliskExpeditionT5
+  suffix: Dungeon, Basilisk-11
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponRifleBasiliskExpedition
+          amount: 1
+        - id: ASMagazineBRTopMountedRifle30
+          amount: 3
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAnankeExpeditionT5
+  suffix: Dungeon, Ananke
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponEchionAnankeExpedition
+          amount: 1
+        - id: EchionCanister
+          amount: 4
+
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseGlykonExpeditionT5
+  suffix: Dungeon, Glykon
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponEchionGlykonExpedition
+          amount: 1
+        - id: EchionCanister
+          amount: 4
+
+- type: entity
+  parent: WeaponCaseHeavy
+  id: WeaponCaseLeviathanExpeditionT6
+  suffix: Dungeon, Leviathan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: LeviathanTCBeacon
+          amount: 1
+        - id: CartridgeBazookaExp
+          amount: 1
+        - id: CartridgeBazookaCon
+          amount: 1
+        - id: CartridgeBazookaInc
+          amount: 1

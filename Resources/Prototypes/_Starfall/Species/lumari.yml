@@ -1,0 +1,12 @@
+- type: species
+  id: Lumari
+  name: species-name-lumari
+  roundStart: true
+  prototype: MobLumari
+  defaultSkinTone: "#ffda93"
+  dollPrototype: AppearanceLumari
+  skinColoration: HumanAnimal
+  maleFirstNames: NamesMothFirstMale
+  femaleFirstNames: NamesMothFirstFemale
+  lastNames: NamesMothLast
+

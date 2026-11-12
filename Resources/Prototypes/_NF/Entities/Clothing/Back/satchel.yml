@@ -26,7 +26,7 @@
     sprite: _NF/Clothing/Back/Satchels/pilot.rsi
 
 - type: entity
-  parent: ClothingBackpackSatchelSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingBackpackSatchelSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingBackpackSatchelNfsdBrown
   name: NFSD satchel
   components:

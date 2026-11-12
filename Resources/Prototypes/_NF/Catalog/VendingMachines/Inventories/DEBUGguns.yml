@@ -29,16 +29,16 @@
     NFWeaponSubMachineGunWt550: 4294967295
     NFWeaponSubMachineGunTypewriter: 4294967295
   # Rifles
-    NFWeaponRifleBarlowsBolt: 4294967295
+    ASWeaponRifleMosinBolt: 4294967295 # Aurora's Song | Mosin reworked
     NFWeaponRifleMusket: 4294967295
-    NFWeaponRifleCeremonial: 4294967295
+    ASWeaponRifleGarandCeremonial: 4294967295 # Aurora's Song | Ceremonial rifle reworked
     NFWeaponRifleSVS: 4294967295
     NFWeaponRifleRepeater: 4294967295
   # Assault Rifles
     NFWeaponRifleAssaultSm: 4294967295
     NFWeaponRifleAssaultM90: 4294967295
     NFWeaponRifleAssaultLecter: 4294967295
-    NFWeaponRifleAssaultVulcan: 4294967295
+    ASWeaponRifleMarksmanVulcan: 4294967295 # Aurora's Song | Reworked Vulcan, and re-attributed to AS given scope.
     NFWeaponRifleAssaultJackdaw: 4294967295
     NFWeaponRifleAssaultGestio: 4294967295
     NFWeaponRifleAssaultNovaliteC1: 4294967295
@@ -71,7 +71,7 @@
   # Energy Rifles
     NFWeaponEnergyRifleCarbine: 4294967295
     NFWeaponEnergyRiflePulse: 4294967295
-    WeaponEmpEmitter: 4294967295
+    ASWeaponEmpEmitter: 4294967295 # Aurora's Song: Use the Hitscan version
     NFWeaponEnergyRifleCarbinePractice: 4294967295
     NFWeaponEnergyRifleTemperature: 4294967295
   # Energy Assault Rifles

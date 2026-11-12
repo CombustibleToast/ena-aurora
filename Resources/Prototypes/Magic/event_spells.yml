@@ -80,7 +80,7 @@
         orGroup: Guns
       - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
         orGroup: Guns
-      - id: NFWeaponRifleBarlowsBolt # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
+      - id: ASWeaponRifleMosinBolt # Aurora's Song | NFWeaponRifleBarlowsBolt<ASWeaponRifleMosinBolt
         orGroup: Guns
       - id: NFWeaponRifleSniperHristov # Frontier: WeaponSniperHristov<NFWeaponRifleSniperHristov
         orGroup: Guns

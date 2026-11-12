@@ -14,14 +14,14 @@ using System.Diagnostics.CodeAnalysis;
 namespace Content.Shared.Nutrition.EntitySystems;
 
 [UsedImplicitly]
-public sealed class ThirstSystem : EntitySystem
+public sealed partial class ThirstSystem : EntitySystem
 {
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IPrototypeManager _prototype = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly MovementSpeedModifierSystem _movement = default!;
-    [Dependency] private readonly SharedJetpackSystem _jetpack = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IPrototypeManager _prototype = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private MovementSpeedModifierSystem _movement = default!;
+    [Dependency] private SharedJetpackSystem _jetpack = default!;
 
     private static readonly ProtoId<SatiationIconPrototype> ThirstIconOverhydratedId = "ThirstIconOverhydrated";
     private static readonly ProtoId<SatiationIconPrototype> ThirstIconThirstyId = "ThirstIconThirsty";
@@ -154,7 +154,8 @@ public sealed class ThirstSystem : EntitySystem
         }
 
         // Update UI
-        if (ThirstComponent.ThirstThresholdAlertTypes.TryGetValue(component.CurrentThirstThreshold, out var alertId))
+        // _Funkystation - Suppressed Bodily Cues
+        if (!IsThirstAlertSuppressed(uid, component.CurrentThirstThreshold) && ThirstComponent.ThirstThresholdAlertTypes.TryGetValue(component.CurrentThirstThreshold, out var alertId))
         {
             _alerts.ShowAlert(uid, alertId);
         }

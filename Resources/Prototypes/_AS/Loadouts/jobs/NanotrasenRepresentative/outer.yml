@@ -1,0 +1,31 @@
+﻿- type: loadout
+  id: NanotrasenRepresentativeForcedClothingOuterEVASuit
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  equipment:
+    outerClothing: ASClothingOuterEVASuitNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingOuterCoat
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ASClothingOuterCoatNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingOuterWinterCoat
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ASClothingOuterWinterNanotrasenRepresentative
+
+- type: loadout
+  id: NanotrasenRepresentativeClothingOuterWinterCoatFur
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ASClothingOuterWinterNanotrasenRepresentativeFur

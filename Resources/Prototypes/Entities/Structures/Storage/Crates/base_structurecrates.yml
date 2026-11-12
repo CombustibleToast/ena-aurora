@@ -9,11 +9,12 @@
   - type: Transform
     noRot: true
   - type: Icon
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _AS/Structures/Storage/Crates/generic.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   - type: Sprite
     noRot: true
-    sprite: Structures/Storage/Crates/generic.rsi
+    sprite: _AS/Structures/Storage/Crates/generic.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
@@ -42,8 +43,9 @@
   - type: PlaceableSurface
     isPlaceable: false # defaults to closed.
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: Metallic
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -89,10 +91,11 @@
   - type: LockVisuals
   - type: AccessReader
   - type: Icon
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _AS/Structures/Storage/Crates/secure.rsi # Aurora's Song - Storage Resprites Batch 2
     state: icon
   - type: Sprite
-    sprite: Structures/Storage/Crates/secure.rsi
+    sprite: _AS/Structures/Storage/Crates/secure.rsi # Aurora's Song - Storage Resprites Batch 2
+    offset: 0,0.125 # Aurora's Song - Storage Resprites Batch 2
     layers:
     - state: base
     - state: closed
@@ -108,8 +111,9 @@
       offset: "-0.5,0"
       map: ["enum.PaperLabelVisuals.Layer"]
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:

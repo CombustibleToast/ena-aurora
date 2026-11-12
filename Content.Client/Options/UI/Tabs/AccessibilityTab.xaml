@@ -8,6 +8,9 @@
                 <Label Text="{Loc 'ui-options-accessability-header-visuals'}"
                        StyleClasses="LabelKeyText"/>
                 <CheckBox Name="ReducedMotionCheckBox" Text="{Loc 'ui-options-reduced-motion'}" />
+                <CheckBox Name="ScopophobiaCheckBox" Text="{Loc 'ui-options-scopophobia'}" ToolTip="{Loc 'ui-options-scopophobia-tooltip'}" /> <!-- Aurora's Song -->
+                <CheckBox Name="DisableStellarInteractionParticlesCheckBox" Text="{Loc 'ui-options-disable-stellar-interaction-particles'}" ToolTip="{Loc 'ui-options-disable-stellar-interaction-particles-tooltip'}" /> <!-- Aurora's Song -->
+                <CheckBox Name="DisableAiStaticCheckBox" Text="{Loc 'ui-options-disable-ai-static'}" />
                 <CheckBox Name="EnableColorNameCheckBox" Text="{Loc 'ui-options-enable-color-name'}" />
                 <CheckBox Name="ColorblindFriendlyCheckBox" Text="{Loc 'ui-options-colorblind-friendly'}" />
                 <ui:OptionSlider Name="ScreenShakeIntensitySlider" Title="{Loc 'ui-options-screen-shake-intensity'}" />

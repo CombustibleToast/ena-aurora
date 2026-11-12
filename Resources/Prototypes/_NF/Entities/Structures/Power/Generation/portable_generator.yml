@@ -34,18 +34,18 @@
 
 - type: entity
   parent:
+  - SolutionLarge # Aurora's Song - Convert to solution
   - BaseGeneratorShuttle
   - PortableGeneratorJrPacman
   id: PortableGeneratorJrPacmanShuttle
+  name: J.R.P.A.C.M.A.N. portable generator # Aurora's Song - fix name issue
   suffix: Welding Fuel, 6 kW, Ship
   components:
-    - type: SolutionContainerManager
-      solutions:
-        tank:
-          maxVol: 200 # Frontier - 50<200
-          reagents:
-          - ReagentId: WeldingFuel
-            Quantity: 70 # Frontier - 35<70
+    - type: Solution # Aurora's Song - Convert to solution
+      solution:
+        reagents:
+        - ReagentId: WeldingFuel
+          Quantity: 70 # Frontier - 35<70
 
 - type: entity
   name: D-K portable generator

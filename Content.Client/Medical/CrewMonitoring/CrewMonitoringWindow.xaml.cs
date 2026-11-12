@@ -24,8 +24,8 @@ namespace Content.Client.Medical.CrewMonitoring;
 [GenerateTypedNameReferences]
 public sealed partial class CrewMonitoringWindow : FancyWindow
 {
-    [Dependency] private readonly IEntityManager _entManager = default!;
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IEntityManager _entManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
     private readonly SharedTransformSystem _transformSystem;
     private readonly SpriteSystem _spriteSystem;
 
@@ -278,6 +278,19 @@ public sealed partial class CrewMonitoringWindow : FancyWindow
             };
 
             statusContainer.AddChild(nameLabel);
+
+            // Wayfarer: Inactivity indicator for SSD characters
+            var inactiveLabel = new Label()
+            {
+                SetWidth = 5,
+                StyleClasses = { "LabelSubText" },
+                FontColorOverride = new Color(9, 169, 9),
+                Align = Label.AlignMode.Right,
+                Text = sensor.IsSpaceSleepDisorder ? "Zzz" : "",
+            };
+            statusContainer.AddChild(inactiveLabel);
+            // End Wayfarer
+
 
             // User job container
             var jobContainer = new BoxContainer()

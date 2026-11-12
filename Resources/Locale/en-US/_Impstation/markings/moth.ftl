@@ -234,7 +234,7 @@ marking-MothGlasswing-glasswing1 = Outer
 marking-MothGlasswing-glasswing2 = Inner
 marking-MothGlasswing-glasswing3 = Stripe
 
-marking-MothRhinoBeetle = Whings (Rhino Beetle)
+marking-MothRhinoBeetle = Wings (Rhino Beetle)
 marking-MothRhinoBeetle-rhinobeetle1 = Outline
 marking-MothRhinoBeetle-rhinobeetle2 = Shine
 marking-MothRhinoBeetle-rhinobeetle3 = Wings

@@ -54,18 +54,28 @@
     price: 800
   - type: ResearchClient
   - type: TechnologyDatabase
-  - type: MaterialStorageMagnetPickup # Frontier
-    range: 0.30 # Frontier
+#  - type: MaterialStorageMagnetPickup # Frontier #Aurora's song, moved to baseLatheMagnet
+#    range: 0.30 # Frontier
   - type: ApcPowerReceiver
     powerLoad: 150
   - type: PowerState
     idlePowerDraw: 150
     workingPowerDraw: 1000
 
-# a lathe that can be sped up with space lube / slowed down with glue
+# Aurora's Song - Start
+# a lathe that has magnet
 - type: entity
   abstract: true
   parent: BaseLathe
+  id: BaseLatheMagnet
+  components:
+  - type: MaterialStorageMagnetPickup
+#Aurora's Song -End
+
+# a lathe that can be sped up with space lube / slowed down with glue
+- type: entity
+  abstract: true
+  parent: BaseLatheMagnet # Aurora's Song
   id: BaseLatheLube
   components:
   - type: ReagentSpeed
@@ -73,16 +83,20 @@
     modifiers:
       SpaceLube: 0.5 # Frontier: 0.25<0.5 (we double dip on time with lube and machine parts)
       SpaceGlue: 5
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      lube:
-        maxVol: 250
+    - SolutionLatheLube
   - type: Spillable
     solution: lube
   - type: RefillableSolution
     solution: lube
   - type: ExaminableSolution
     solution: lube
+
+- type: entity
+  parent: [SolutionLube, SolutionLarge]
+  id: SolutionLatheLube # Its own prototype since some lathes might interface with solutions in other ways
+  categories: [ HideSpawnMenu ]
 
 - type: entity
   abstract: true
@@ -222,6 +236,7 @@
     staticPacks:
     - NFChemistryBasicStatic # Frontier
     - NFSurgeryBasicStatic # Frontier
+    - ImpProtoStatic # Impstation
     dynamicPacks:
     - AdvancedTools
     - ScienceEquipment
@@ -376,7 +391,7 @@
 
 - type: entity
   id: Biofabricator
-  parent: BaseLathe
+  parent: BaseLatheMagnet # Aurora's Song
   name: biocube fabricator
   description: Produces animal cubes using biomass.
   categories: [ HideSpawnMenu ] # Frontier
@@ -583,7 +598,7 @@
       - NFBlueprintAdvanced # Frontier
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseLatheMagnet # Aurora's Song
   id: UniformPrinter
   name: uniform printer
   description: Prints new or replacement uniforms.
@@ -705,9 +720,16 @@
     spriteLayers:
     - beaker
   # End Frontier: item mapper
+  # Coyote Start: Biogenerator Buffer System
+  - type: BiogeneratorBuffer
+    current: 0
+    max: 200
+    regenAmount: 5
+    regenInterval: 15 # Wayfarer: 10<15
+  # End Coyote
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseLatheMagnet # Aurora's Song
   id: OreProcessor
   name: ore processor
   description: It produces sheets and ingots using ores.
@@ -732,6 +754,7 @@
       whitelist:
         tags:
           - Ore
+          - Ingot # Aurora's Song - Allow gold and silver bars to be alloyed into electrum.
     - type: Lathe
       idleState: icon
       runningState: building
@@ -763,7 +786,7 @@
     - AdvancedSmelting
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseLatheMagnet # Aurora's Song
   id: Sheetifier
   name: sheet-meister 2000
   description: A very sheety machine.
@@ -797,13 +820,11 @@
   - type: OreSiloClient # Frontier
 
 - type: entity
-  parent: BaseLathe
+  parent: BaseLatheMagnet #Aurora's Song
   id: CutterMachine
   name: cutter machine
   description: This is a cutter. It cuts. Add variety to your station floor with eye-pleasing patterns! Don't stick your fingers in.
   components:
-  - type: Transform
-    noRot: false
   - type: Sprite
     sprite: Structures/Machines/cuttermachine.rsi
     snapCardinals: true
@@ -826,15 +847,23 @@
     - FloorSteelTilesStatic
     - FloorWhiteTilesStatic
     - FloorMaintsTilesStatic
+    - FloorIndustrialTilesStatic
     - FloorWoodTilesStatic
     - FloorConcreteTilesStatic
     - CircuitFloorsStatic
     - FloorMarbleTilesStatic
+    - FloorShuttleTilesStatic
+    - PlasticTilesStatic
+    - CarpetTilesStatic
+    - PreciousTilesStatic
     - Carpets # Frontier
     - NFFloorsMiscStatic # Frontier
     - NFFloorTiles # Frontier
     - NFFloorTilesCarpet # Frontier
     - CorvaxWoodTiles # Aurora's Song
+    - XenoTiles # Aurora's Song
+    - N14Tiles # Aurora's Song
+    - ASSomberTilesStatic # Aurora's Song
     dynamicPacks:
     - FauxTiles
   - type: EmagLatheRecipes # Frontier

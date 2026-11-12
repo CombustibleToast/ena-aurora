@@ -1,5 +1,6 @@
 using System.Linq;
 using Content.Shared.Administration.Logs;
+using Content.Shared._Starfall.Offering; // _Starfall: Offering System
 using Content.Shared.CombatMode;
 using Content.Shared.Cuffs;
 using Content.Shared.Cuffs.Components;
@@ -21,20 +22,20 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Strip;
 
-public abstract class SharedStrippableSystem : EntitySystem
+public abstract partial class SharedStrippableSystem : EntitySystem
 {
-    [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
+    [Dependency] private SharedInteractionSystem _interactionSystem = default!;
 
-    [Dependency] private readonly SharedUserInterfaceSystem _ui = default!;
+    [Dependency] private SharedUserInterfaceSystem _ui = default!;
 
-    [Dependency] private readonly InventorySystem _inventorySystem = default!;
+    [Dependency] private InventorySystem _inventorySystem = default!;
 
-    [Dependency] private readonly SharedCuffableSystem _cuffableSystem = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfterSystem = default!;
-    [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] private SharedCuffableSystem _cuffableSystem = default!;
+    [Dependency] private SharedDoAfterSystem _doAfterSystem = default!;
+    [Dependency] private SharedHandsSystem _handsSystem = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
 
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] private ISharedAdminLogManager _adminLogger = default!;
 
     public override void Initialize()
     {
@@ -316,7 +317,7 @@ public abstract class SharedStrippableSystem : EntitySystem
         var prefix = stealth ? "stealthily " : "";
         _adminLogger.Add(LogType.Stripping, LogImpact.Low, $"{ToPrettyString(user):actor} is trying to {prefix}strip the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s {slot} slot");
 
-        _interactionSystem.DoContactInteraction(user, item);
+        _interactionSystem.DoContactInteraction(user, item, null, true); // Stellar - Interaction particles
 
         var doAfterArgs = new DoAfterArgs(EntityManager, user, time, new StrippableDoAfterEvent(false, true, slot), user, target, item)
         {
@@ -405,6 +406,11 @@ public abstract class SharedStrippableSystem : EntitySystem
 
         if (!CanStripInsertHand(user, target, held, handName))
             return;
+
+        // _Starfall Start: Offering System
+        var attempt = new StripHandInsertAttemptEvent(user.Owner, target.Owner, held, handName);
+        RaiseLocalEvent(ref attempt);
+        // _Starfall: End
 
         var (time, stealth) = GetStripTimeModifiers(user, target, null, targetStrippable.HandStripDelay);
 
@@ -516,6 +522,13 @@ public abstract class SharedStrippableSystem : EntitySystem
         if (!CanStripRemoveHand(user, target, item, handName))
             return;
 
+        // _Starfall Start: Offering System
+        var attempt = new StripHandRemoveAttemptEvent(user.Owner, target.Owner, item, handName);
+        RaiseLocalEvent(item, ref attempt);
+        if (attempt.Handled)
+            return;
+        // _Starfall End
+
         var (time, stealth) = GetStripTimeModifiers(user, target, null, targetStrippable.HandStripDelay);
 
         if (!stealth)
@@ -530,7 +543,7 @@ public abstract class SharedStrippableSystem : EntitySystem
         var prefix = stealth ? "stealthily " : "";
         _adminLogger.Add(LogType.Stripping, LogImpact.Low, $"{ToPrettyString(user):actor} is trying to {prefix}strip the item {ToPrettyString(item):item} from {ToPrettyString(target):target}'s hands");
 
-        _interactionSystem.DoContactInteraction(user, item);
+        _interactionSystem.DoContactInteraction(user, item, null, true); // Stellar - Interaction particles
 
         var doAfterArgs = new DoAfterArgs(EntityManager, user, time, new StrippableDoAfterEvent(false, false, handName), user, target, item)
         {
@@ -628,8 +641,13 @@ public abstract class SharedStrippableSystem : EntitySystem
         if (args.Handled || !args.Complex || args.Target == args.User)
             return;
 
+        // Begin Stellar Changes - don't play an interact particle for examining the strip UI
         if (TryOpenStrippingUi(args.User, (uid, component)))
+        {
             args.Handled = true;
+            args.InteractionParticle = false;
+        }
+        // End Stellar Changes - don't play an interact particle for examining the strip UI
     }
 
     /// <summary>

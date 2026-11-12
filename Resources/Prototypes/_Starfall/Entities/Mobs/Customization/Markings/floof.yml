@@ -1,0 +1,287 @@
+- type: marking
+  id: LumariFloofAthamasFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: athamas_floof
+
+- type: marking
+  id: LumariFloofBeeFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: bee_floof
+
+- type: marking
+  id: LumariFloofBeetleFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: beetle_floof
+
+- type: marking
+  id: LumariFloofCharredFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: charred_floof
+
+- type: marking
+  id: LumariFloofDbushyFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: dbushy_floof
+
+- type: marking
+  id: LumariFloofDefaultFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: default_floof
+
+- type: marking
+  id: LumariFloofEpipyropidaeFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: epipyropidae_floof
+
+- type: marking
+  id: LumariFloofFanFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: fan_floof
+
+- type: marking
+  id: LumariFloofFeatheryFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: feathery_floof
+
+- type: marking
+  id: LumariFloofFirewatchFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: firewatch_floof
+
+- type: marking
+  id: LumariFloofFlannelFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: flannel_floof
+
+- type: marking
+  id: LumariFloofGlasswingFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: glasswing_floof
+
+- type: marking
+  id: LumariFloofGothicFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: gothic_floof
+
+- type: marking
+  id: LumariFloofJungleFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: jungle_floof
+
+- type: marking
+  id: LumariFloofLadybugFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: ladybug_floof
+
+- type: marking
+  id: LumariFloofMapleFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: maple_floof
+
+- type: marking
+  id: LumariFloofMothfireflyFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: mothfirefly_floof
+
+- type: marking
+  id: LumariFloofMothtruebutterflyFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: mothtruebutterfly_floof
+
+- type: marking
+  id: LumariFloofOaktreeHopperFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: oaktree_hopper_floof
+
+- type: marking
+  id: LumariFloofOakwormFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: oakworm_floof
+
+- type: marking
+  id: LumariFloofOriginsFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: origins_floof
+
+- type: marking
+  id: LumariFloofPlasmafireFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: plasmafire_floof
+
+- type: marking
+  id: LumariFloofPointyFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: pointy_floof
+
+- type: marking
+  id: LumariFloofRhinobeetleFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: rhinobeetle_floof
+
+- type: marking
+  id: LumariFloofRoyalFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: royal_floof
+
+- type: marking
+  id: LumariFloofSnothFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: snoth_floof_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: snoth_floof_secondary
+
+- type: marking
+  id: LumariFloofStellarFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: stellar_floof
+
+- type: marking
+  id: LumariFloofSwirlyFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: swirly_floof
+
+- type: marking
+  id: LumariFloofUnderwingFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: underwing_floof
+
+- type: marking
+  id: LumariFloofWartornFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: wartorn_floof
+
+- type: marking
+  id: LumariFloofWhiteflyFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: whitefly_floof
+
+- type: marking
+  id: LumariFloofWingsBackstabbedFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: wings_backstabbed_floof
+
+- type: marking
+  id: LumariFloofWitchwingFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/floof.rsi
+    state: witchwing_floof
+
+- type: marking
+  id: LumariChitinidBeeSnout
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_wings.rsi
+    state: bee_tertiary
+- type: marking
+  id: LumariMoffraFloof
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/wings.rsi
+    state: moffra_tertiary
+- type: marking
+  id: LumariFloofless
+  bodyPart: NeckFluff
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: Effects/text.rsi
+    state: blank

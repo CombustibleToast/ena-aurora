@@ -1,0 +1,17 @@
+- type: loadout
+  id: NanotrasenRepresentativeTowel
+  name: centcom towel
+  inhand:
+  - TowelColorCentcom
+
+- type: loadout
+  id: NanotrasenRepresentativeBalloon
+  name: nanotrasen balloon
+  inhand:
+  - BalloonNT
+
+- type: loadout
+  id: NanotrasenRepresentativeHandyFlag
+  name: Nanotrasen flag
+  inhand:
+  - NTHandyFlag

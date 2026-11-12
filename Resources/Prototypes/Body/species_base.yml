@@ -26,12 +26,6 @@
         color: "#FF0000"
       Burn:
         sprite: Mobs/Effects/burn_damage.rsi
-  - type: GenericVisualizer
-    visuals:
-      enum.CreamPiedVisuals.Creamed:
-        clownedon:
-          True: { visible: true }
-          False: { visible: false }
   - type: StatusIcon
     bounds: -0.5,-0.5,0.5,0.5
   - type: JobStatus
@@ -82,10 +76,8 @@
     - RatvarianLanguage
     - PressureImmunity
     - Muted
-    - TemporaryBlindness
     - Pacified
     - Flashed
-    - RadiationProtection
     - Adrenaline
   - type: Identity
   - type: IdExaminable
@@ -127,6 +119,9 @@
     factions:
     - NanoTrasen
   - type: CreamPied
+    sprite:
+      sprite: Effects/creampie.rsi
+      state: creampie_human
   - type: ParcelWrapOverride
     parcelPrototype: WrappedParcelHumanoid
     wrapDelay: 5
@@ -156,6 +151,8 @@
     price: 1500 # Kidnapping a living person and selling them for cred is a good move.
     deathPenalty: 0.01 # However they really ought to be living and intact, otherwise they're worth 100x less.
   - type: CanEscapeInventory # Frontier: Carrying system from nyanotrasen.
+  - type: RandomPrice
+    maxRandomPrice: 20000
   - type: Tag
     tags:
     - CanPilot
@@ -184,7 +181,6 @@
   - type: PassiveDamage
     allowedStates:
     - Alive
-    damageCap: 20
     damage:
       types:
         Heat: -0.07
@@ -219,7 +215,7 @@
     normalBodyTemperature: 310.15
     thermalRegulationTemperatureThreshold: 2
   - type: Perishable
-    rotAfter: 1200 # starcup: increase time to rot from 10 minutes to 20
+    rotAfter: 2400 # Aurora's Song: increase time to rot from 20 minutes to 40
   - type: Butcherable
     butcheringType: Spike
     spawned:
@@ -236,4 +232,5 @@
     alternateState: Standing
   - type: StunVisuals
   - type: ToggleUndergarment # Aurora's Song - Add undergarment toggle
+  - type: ToggleBeltLayer # Aurora's Song - Add belt layer toggle
   - type: Carriable # Aurora's Song - Move carriable to species base

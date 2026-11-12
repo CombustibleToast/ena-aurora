@@ -18,7 +18,7 @@
   id: ChestChimeraMaleMoth
   bodyPart: Chest
   groupWhitelist: [ Moth ]
-  sexRestriction: [ Male, Unsexed ]
+  sexRestriction: [ Male ] # Aurora's Song
   coloring:
     default:
       type:
@@ -41,7 +41,7 @@
   id: ChestTwistingLeftMaleMoth
   bodyPart: Chest
   groupWhitelist: [ Moth ]
-  sexRestriction: [ Male, Unsexed ]
+  sexRestriction: [ Male ] # Aurora's Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/chest.rsi
     state: twistingleftm
@@ -59,7 +59,7 @@
   id: ChestTwistingRightMaleMoth
   bodyPart: Chest
   groupWhitelist: [ Moth ]
-  sexRestriction: [ Male, Unsexed ]
+  sexRestriction: [ Male ] # Aurora's Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/chest.rsi
     state: twistingrightm
@@ -668,7 +668,7 @@
 - type: marking
   id: LunaWings
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: luna1
@@ -678,7 +678,7 @@
 - type: marking
   id: MothBee
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: bee1
@@ -690,7 +690,7 @@
 - type: marking
   id: MothBeetleTail
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: beetle1
@@ -702,15 +702,15 @@
 - type: marking
   id: MothFirefly
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: firefly2
 
 - type: marking
   id: MothFireflyOverlay
-  bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  bodyPart: Overlay
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: firefly1
@@ -719,7 +719,7 @@
 - type: marking
   id: MothGlasswing
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: glasswing1
@@ -731,7 +731,7 @@
 - type: marking
   id: MothRhinoBeetle
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: rhinobeetle1
@@ -743,7 +743,7 @@
 - type: marking
   id: MothSnoth
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: snoth1
@@ -753,7 +753,7 @@
 - type: marking
   id: MothTrueButterfly
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: truebutterfly1
@@ -765,7 +765,7 @@
 - type: marking
   id: WingsBackstabbed
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: backstabbed
@@ -773,7 +773,7 @@
 - type: marking
   id: WingsDragonfly
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: dragonfly1
@@ -785,7 +785,7 @@
 - type: marking
   id: WingsFly
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: fly1
@@ -797,7 +797,7 @@
 - type: marking
   id: WingsLanternfly
   bodyPart: Tail
-  groupWhitelist: [ Moth ]
+  groupWhitelist: [ Moth,Fairy ] # Aurora Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/Moth/tail.rsi
     state: lanternfly

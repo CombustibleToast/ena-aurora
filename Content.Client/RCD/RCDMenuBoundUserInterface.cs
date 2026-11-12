@@ -12,7 +12,7 @@ using Robust.Shared.Utility;
 namespace Content.Client.RCD;
 
 [UsedImplicitly]
-public sealed class RCDMenuBoundUserInterface : BoundUserInterface
+public sealed partial class RCDMenuBoundUserInterface : BoundUserInterface
 {
     private const string TopLevelActionCategory = "Main";
 
@@ -24,10 +24,17 @@ public sealed class RCDMenuBoundUserInterface : BoundUserInterface
             ["Airlocks"] = ("rcd-component-airlocks", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/airlocks.png"))),
             ["Electrical"] = ("rcd-component-electrical", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/multicoil.png"))),
             ["Lighting"] = ("rcd-component-lighting", new SpriteSpecifier.Texture(new ResPath("/Textures/Interface/Radial/RCD/lighting.png"))),
+            // Aurora's Song Start - RSD
+            ["Structural"] = ("rcd-component-structural", new SpriteSpecifier.Texture(new ResPath("/Textures/Tiles/lattice.png"))),
+            ["StructuralNW"] = ("rcd-component-structural-nw", new SpriteSpecifier.Texture(new ResPath("/Textures/_Mono/Tiles/lattice/nw.png"))),
+            ["StructuralNE"] = ("rcd-component-structural-ne", new SpriteSpecifier.Texture(new ResPath("/Textures/_Mono/Tiles/lattice/ne.png"))),
+            ["StructuralSW"] = ("rcd-component-structural-sw", new SpriteSpecifier.Texture(new ResPath("/Textures/_Mono/Tiles/lattice/sw.png"))),
+            ["StructuralSE"] = ("rcd-component-structural-se", new SpriteSpecifier.Texture(new ResPath("/Textures/_Mono/Tiles/lattice/se.png"))),
+            // Aurora's Song End
         };
 
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private ISharedPlayerManager _playerManager = default!;
 
     private SimpleRadialMenu? _menu;
 

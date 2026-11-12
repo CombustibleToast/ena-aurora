@@ -1,5 +1,33 @@
 ﻿- type: entity
   parent:
+  - BaseExpeditionWeaponTier2
+  - ASWeaponPistolBRDIP15
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponPistolBRDIP15Expedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier1
+  - ASWeaponEchionBSShuvit
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponShuvitExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - ASWeaponPistolBRDIP15BSO
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponPistolBRDIP15BSOExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - ASWeaponEchionCasperSlide
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionCasperExpedition
+
+- type: entity
+  parent:
   - BaseExpeditionWeaponTier3
   - ASWeaponKasyreLasRifle
   categories: [ HideSpawnMenu ]
@@ -21,6 +49,34 @@
 
 - type: entity
   parent:
+  - BaseExpeditionWeaponTier3
+  - WeaponPlasmaAdder
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionAdderExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - WeaponAnaconda
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponAnacondaExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - WeaponFlamerXiuhcoatl
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponFlamerXiuhcoatlExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - WeaponPlasmaAkurra
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionAkurraExpedition
+
+- type: entity
+  parent:
   - BaseExpeditionWeaponTier4
   - ASWeaponRifleAssaultEstoc
   categories: [ HideSpawnMenu ]
@@ -39,3 +95,34 @@
   - ASWeaponShotgunHushpup
   categories: [ HideSpawnMenu ]
   id: ASWeaponShotgunHushpupExpedition
+
+- type: entity
+  parent: [ ASWeaponRifleMarksmanVulcan, BaseExpeditionWeaponTier5 ]
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponRifleMarksmanVulcanExpedition
+
+- type: entity
+  parent: [ASWeaponEnergyPistolPulse, BaseC3NanoTrasenContrabandLowValue, BaseExpeditionWeaponTier5]
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEnergyPistolPulseExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - ASWeaponRifleBasilisk
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponRifleBasiliskExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - WeaponPlasmaAnanke
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionAnankeExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - WeaponPlasmaGlykon
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionGlykonExpedition

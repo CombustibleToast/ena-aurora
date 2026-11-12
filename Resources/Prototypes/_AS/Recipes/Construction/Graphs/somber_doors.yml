@@ -1,0 +1,53 @@
+- type: constructionGraph
+  id: ASSomberDoors
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: somberAmaranthDoor
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: WoodPlank
+              amount: 8
+              doAfter: 8
+            - material: ElectrumScrap
+              amount: 1
+              doAfter: 1
+
+        - to: somberMnemolithDoor
+          completed:
+            - !type:SnapToGrid {}
+          steps:
+            - material: Mnemolith
+              amount: 10
+              doAfter: 8
+
+    - node: somberAmaranthDoor
+      entity: SomberAmaranthDoor
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 8
+            - !type:SpawnPrototype
+              prototype: ScrapElectrum
+              amount: 1
+          steps:
+            - tool: Anchoring
+              doAfter: 8
+
+    - node: somberMnemolithDoor
+      entity: SomberMnemolithDoor
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialMnemolith1
+              amount: 10
+          steps:
+            - tool: Anchoring
+              doAfter: 8

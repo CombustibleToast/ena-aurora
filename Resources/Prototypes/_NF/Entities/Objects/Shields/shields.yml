@@ -1,6 +1,6 @@
 - type: entity
   name: NFSD energy shield
-  parent: [BaseC2ContrabandUnredeemable, EnergyShield]
+  parent: [C2ContrabandNanoTrasenRestricted, EnergyShield] # Aurora's Song - Added C2ContrabandNanoTrasenRestricted
   id: EnergyShieldNfsd
   components:
   - type: Sprite

@@ -1,0 +1,9 @@
+﻿- type: loadout
+  id: SyndicateRepresentativeClothingFormalJumpsuit
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSyndieFormal
+
+- type: loadout
+  id: SyndicateRepresentativeClothingFormalJumpskirt
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtSyndieFormalDress

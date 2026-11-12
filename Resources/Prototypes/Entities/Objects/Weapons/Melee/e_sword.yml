@@ -76,7 +76,7 @@
 
 - type: entity
   name: energy sword
-  parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseMeleeWeaponEnergy, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: EnergySword
   description: A very loud & dangerous sword with a beam made of pure, concentrated plasma. Cuts through unarmored targets like butter.
   components:
@@ -93,10 +93,13 @@
     sprite: Objects/Weapons/Melee/e_sword-inhands.rsi
   - type: StaticPrice
     price: 2500
+  - type: Tag # Aurora's Song - Allow energy swords to be put into boot storage
+    tags:
+    - Knife
 
 - type: entity
   name: energy dagger
-  parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseMeleeWeaponEnergy, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: EnergyDaggerLoud
   description: A not as loud and dangerous dagger with a beam made of pure, concentrated plasma. This one is completely undisguised.
   components:
@@ -157,10 +160,13 @@
     energy: 2.7
     color: white
     netsync: false
+  - type: Tag # Aurora's Song - Allow energy daggers to be put into boot storage
+    tags:
+    - Knife
 
 - type: entity
   name: pen
-  parent: [BaseMeleeWeaponEnergy, BaseC3SyndicateContraband] # Frontier: added BaseC3SyndicateContraband
+  parent: [BaseMeleeWeaponEnergy, C2ContrabandUnregistered] # Aurora's Song - added C2ContrabandUnregistered
   id: EnergyDagger
   suffix: E-Dagger
   description: 'A dark ink pen.'
@@ -189,6 +195,7 @@
       types:
         Slash: 10
         Heat: 10
+    deactivatedSecret: true
   - type: ComponentToggler
     components:
     - type: Sharp
@@ -236,11 +243,12 @@
   - type: Tag
     tags:
     - Write
+    - Knife # Aurora's Song - Allow energy daggers to be put into boot storage
   - type: Contraband # Frontier
     hideValues: true # Frontier
 
 - type: entity
-  parent: [BaseItem, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseItem, C2ContrabandUnregistered] # Aurora's Song - BaseSyndicateContraband<C2ContrabandUnregistered
   id: EnergyDaggerBox
   name: e-dagger box
   suffix: E-Dagger

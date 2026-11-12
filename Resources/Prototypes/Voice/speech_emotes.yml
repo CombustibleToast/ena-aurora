@@ -140,7 +140,7 @@
   name: chat-emote-name-squish
   category: Vocal
   available: false
-  icon: Interface/Emotes/squish.png
+  icon: _Funkystation/Interface/Emotes/Slime/squish.png # Funky change
   whitelist:
     components:
     - Vocal
@@ -153,6 +153,65 @@
     - squishing
     - squishes
     - squished # Frontier
+
+# Funky start
+- type: emote
+  id: Slosh
+  name: chat-emote-name-slosh
+  category: Vocal
+  available: false
+  icon: _Funkystation/Interface/Emotes/Slime/slosh.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-slosh"]
+  chatTriggers:
+    - slosh
+    - sloshing
+    - sloshes
+
+- type: emote
+  id: Fizz
+  name: chat-emote-name-fizz
+  category: Vocal
+  available: false
+  icon: _Funkystation/Interface/Emotes/Slime/fizz.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-fizz"]
+  chatTriggers:
+    - fizz
+    - fizzing
+    - fizzes
+    - carbonate
+    - carbonating
+    - carbonates
+
+- type: emote # RMC port
+  id: Wobble
+  name: chat-emote-name-wobble
+  category: Vocal
+  available: false
+  icon: _Funkystation/Interface/Emotes/Slime/wobble.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-wobble"]
+  chatTriggers:
+    - wobble
+    - wobbling
+    - wobbles
+# Funky end
 
 - type: emote
   id: Chitter
@@ -434,8 +493,8 @@
     components:
     - MobState
   chatMessages: ["chat-emote-msg-deathgasp"]
-  # chatTriggers: # DeltaV - Remove from the emote wheel
-  # - deathgasp
+  chatTriggers:
+   - deathgasp
 
 - type: emote
   id: MonkeyDeathgasp
@@ -471,8 +530,12 @@
   id: Weh
   name: chat-emote-name-weh
   category: Vocal
+  available: false # Aurora's Song - Granted through Speech.allowedEmotes.
   icon: Interface/Emotes/weh.png
   chatMessages: ["chat-emote-msg-weh"]
+  chatTriggers: # Funky
+    - weh
+    - wehs
 
 - type: emote
   id: Hew

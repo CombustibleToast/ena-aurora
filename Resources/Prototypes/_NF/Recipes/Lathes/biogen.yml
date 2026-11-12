@@ -12,7 +12,7 @@
   id: BioGenCondimentRecipe
   parent: BioGenFoodRecipe
   materials:
-    Biomass: 18
+    Biomass: 10 #Aurora's Song 18>10
 
 - type: latheRecipe
   abstract: true
@@ -30,10 +30,9 @@
   result: HydroponicsSoilNutritionFlatpack
   categories:
   - Tools
-  completetime: 200
-  applyMaterialDiscount: false
+  completetime: 200  
   materials:
-    Biomass: 1600
+    Biomass: 800 #Aurora's Song 1600>800
 
 - type: latheRecipe
   id: NFBioGenWoodPlank
@@ -48,7 +47,7 @@
   parent: BaseMaterialsNoDiscountRecipe
   completetime: 10
   materials:
-    Biomass: 40
+    Biomass: 20 # Aurora's Song 40>20
 
 - type: latheRecipe
   id: NFBioGenPaperSheet
@@ -60,46 +59,41 @@
 - type: latheRecipe
   id: NFBioGenFoodMeat
   result: FoodMeat
-  parent: BioGenFoodRecipe
-  applyMaterialDiscount: false
+  parent: BioGenFoodRecipe  
   completetime: 10
   materials:
-    Biomass: 35
+    Biomass: 20 #Aurora's Song 35>20
 
 #region Meat
 
 - type: latheRecipe
   id: NFBioGenFoodMeatWholeChicken
   result: FoodMeatWholeChicken
-  parent: BioGenFoodRecipe
-  applyMaterialDiscount: false
+  parent: BioGenFoodRecipe 
   completetime: 20
   materials:
-    Biomass: 70
+    Biomass: 50 #Aurora's Song 70>50
 
 - type: latheRecipe
   id: NFBioGenFoodMeatWholePenguin
   result: FoodMeatWholePenguin
-  parent: BioGenFoodRecipe
-  applyMaterialDiscount: false
+  parent: BioGenFoodRecipe  
   completetime: 30
   materials:
-    Biomass: 105
+    Biomass: 50 #Aurora's Song 105>50
 
 - type: latheRecipe
   id: NFBioGenFoodMeatWholeDuck
   result: FoodMeatWholeDuck
-  parent: BioGenFoodRecipe
-  applyMaterialDiscount: false
+  parent: BioGenFoodRecipe  
   completetime: 20
   materials:
-    Biomass: 70
+    Biomass: 50 #Aurora's Song 70>50
 
 - type: latheRecipe
   id: NFBioGenFoodMeatCrab
   result: FoodMeatCrab
-  parent: BioGenFoodRecipe
-  applyMaterialDiscount: false
+  parent: BioGenFoodRecipe  
   completetime: 10
   materials:
     Biomass: 25 #Crab is a more specific recipe, also crabs are smaller so I pressume the cut of crab meat is easier to make than a full steak
@@ -107,11 +101,10 @@
 - type: latheRecipe
   id: NFBioGenFoodMeatBacon
   result: FoodMeatBacon
-  parent: BioGenFoodRecipe
-  applyMaterialDiscount: false
+  parent: BioGenFoodRecipe  
   completetime: 10
   materials:
-    Biomass: 35 
+    Biomass: 20 #Aurora's Song 35>20 
 
 #region Cubes
 

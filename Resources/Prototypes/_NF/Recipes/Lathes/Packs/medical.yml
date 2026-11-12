@@ -19,6 +19,7 @@
   - Brutepack
   - Ointment
   - Gauze
+  - Tourniquet # Aurora's Song - Not really a "topical" per say, but, feels more fitting here than NFMedicalStatic
 
 - type: latheRecipePack
   id: NFMedicalClothingStatic

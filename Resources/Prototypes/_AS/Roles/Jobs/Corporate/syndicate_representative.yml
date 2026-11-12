@@ -1,0 +1,58 @@
+﻿- type: job
+  id: SyndicateRepresentative
+  name: job-name-syndicate-representative
+  description: job-description-syndicate-representative
+  icon: "JobIconSyndicate"
+  playTimeTracker: JobSyndicateRepresentative
+  requirements:
+  - !type:OverallPlaytimeRequirement
+    time: 86400 # 24 hours
+  whitelisted: true
+  startingGear: SyndicateRepresentativeGear
+  alwaysUseSpawner: true
+  requireAdminNotify: true
+  supervisors: job-supervisors-syndicate
+  weight: 180
+  displayWeight: 56
+  access:
+  - Mercenary
+  - SyndicateAgent
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+    - type: CommandStaff
+    - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: SyndicateRepresentativeGear
+  equipment:
+    pocket1: NFWeaponEnergyPistolDisabler
+  storage:
+    back:
+    - RubberStampSyndicate
+    - ContrabandPermitFolderSyndicate
+  encryptionKeys:
+  - EncryptionKeyCommon
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  licenses:
+   - LicenseContrabandHandlingSyndicate
+
+- type: chameleonOutfit
+  id: SyndicateRepresentativeChameleonOutfit
+  job: SyndicateRepresentative
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadBeretSyndie
+    outerClothing: ClothingOuterWinterSyndieCap
+    neck: ClothingNeckScarfStripedSyndieRed
+    gloves: ClothingHandsGlovesCaptainflightgloves
+    shoes: ASClothingShoesHighheelBootsSyndicate
+

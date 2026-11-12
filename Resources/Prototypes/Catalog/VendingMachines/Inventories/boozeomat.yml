@@ -4,6 +4,9 @@
     DrinkGlass: 20 #Kept glasses at top for ease to differentiate from booze.
     DrinkShotGlass: 10
     DrinkGlassCoupeShaped: 5
+    DrinkVacuumFlask: 5 # Imp
+    DrinkVacuumFlaskXL: 2 # Imp
+    DrinkFlaskBar: 5 # Imp
     DrinkSakeCupEmpty: 5 #Frontier
     DrinkShaker: 5
     DrinkJigger: 5
@@ -50,6 +53,7 @@
     DrinkSakeBottleFull: 3
     DrinkBeerCan: 5
     DrinkWineCan: 5
+    BoxFoodColoring: 2 #imp item
     DrinkAngobittersBottleFull: 3 # DeltaV - Angostura Bitters Bottle
     DrinkDisposableCup: 5 # #imp
     EthylredoxrazineAutoInjector: 2 # Frontier so bartenders can jab someone dying of alcohol poisoning

@@ -1,5 +1,6 @@
 using System.Numerics;
 using Content.Client.Hands.Systems;
+using Content.Shared._RMC14.Weapons.Ranged; // Aurora's Song - Crosshair Updates Based On RMC Pump/Bolt
 using Content.Shared.Weapons.Ranged.Components;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -72,13 +73,25 @@ public sealed class CombatModeIndicatorsOverlay : Overlay
         var isGunBolted = true;
         if (_entMan.TryGetComponent(handEntity, out ChamberMagazineAmmoProviderComponent? chamber))
             isGunBolted = chamber.BoltClosed ?? true;
-
+        // Aurora's Song Start - Crosshair Updates Based On RMC Pump/Bolt
+        var isGunReady = true;
+        if (_entMan.TryGetComponent(handEntity, out PumpActionComponent? pump))
+            isGunReady = pump.Pumped;
+        if (_entMan.TryGetComponent(handEntity, out BreechLoadedComponent? breech))
+            isGunReady = breech is { Ready: true, Open: false };
+        // Aurora's Song End
 
         var mousePos = mouseScreenPosition.Position;
         var uiScale = (args.ViewportControl as Control)?.UIScale ?? 1f;
         var limitedScale = uiScale > 1.25f ? 1.25f : uiScale;
 
-        var sight = isHandGunItem ? (isGunBolted ? _gunSight : _gunBoltSight) : _meleeSight;
+        // Aurora's Song Start - Crosshair Updates Based On RMC Pump/Bolt
+        var sight = isHandGunItem
+            ? (isGunBolted && isGunReady
+                ? _gunSight
+                : _gunBoltSight)
+            : _meleeSight;
+        // Aurora's Song End
         DrawSight(sight, args.ScreenHandle, mousePos, limitedScale * Scale);
     }
 

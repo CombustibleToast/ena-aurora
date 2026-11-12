@@ -18,7 +18,7 @@
       required: true
       default: [ MothWingsDefault ]
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 1
+      limit: 2
       required: false
     enum.HumanoidVisualLayers.UndergarmentTop:
       limit: 1
@@ -103,8 +103,6 @@
       0: Alive
       50: Critical
       75: Dead
-  - type: SizeAttribute
-    short: true
   - type: Speech
     speechSounds: Fairy
     speechVerb: Fairy
@@ -133,7 +131,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: FairyBlood
-        Quantity: 50
+        Quantity: 120 # 1L of blood
   - type: Item # fairies are like mice, you can pick them up quickly and store them in a lot of places
     size: Small
     heldPrefix: 0
@@ -141,6 +139,12 @@
     size: "Small"
     shape:
     - 0,1,0,0
+  - type: Clothing
+    quickEquip: false
+    sprite: null
+    equippedPrefix: 0
+    slots:
+    - HEAD
   - type: Vocal
     sounds:
       Male: FairySpeech
@@ -184,9 +188,12 @@
     enabled: true
     radius: 2
     energy: 10
+  - type: Temperature
+    currentTemperature: 310.15
+    specificHeat: 820
 
 - type: entity
-  parent: OrganBase
+  parent: OrganBaseOrganic
   id: OrganFairy
   abstract: true
   suffix: Fairy
@@ -285,15 +292,14 @@
   parent: [ OrganBaseStomach, OrganFairyInternal, OrganFairyMetabolizer ]
   id: OrganFairyStomach
   components:
-  - type: SolutionContainerManager
+  - type: SolutionManager
     solutions:
-      stomach:
-        maxVol: 30
-      food:
-        maxVol: 5
-        reagents:
-        - ReagentId: UncookedAnimalProteins
-          Quantity: 5
+    - SolutionFairyStomach
+
+- type: entity
+  parent: [SolutionTiny, SolutionStomach]
+  id: SolutionFairyStomach
+  categories: [ HideSpawnMenu ]
 
 - type: entity
   parent: [ OrganBaseLiver, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]

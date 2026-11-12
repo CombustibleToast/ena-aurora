@@ -17,7 +17,7 @@ namespace Content.Shared.PDA
         public bool HasUplink;
         public bool CanPlayMusic;
         public string? Address;
-        public int Balance; // Frontier
+        public long Balance; // Frontier // Aurora's Song - Expand balance to long
         public string? OwnedShipName; // Frontier
         public TimeSpan? RoundEndTime; // Frontier
 
@@ -29,7 +29,7 @@ namespace Content.Shared.PDA
             bool hasPai,
             bool hasBook,
             PdaIdInfoText pdaOwnerInfo,
-            int balance, // Frontier
+            long balance, // Frontier // Aurora's Song - Expand balance to long
             string? ownedShipName, // Frontier
             TimeSpan? roundEndTime, // Frontier
             string? stationName,
@@ -58,6 +58,7 @@ namespace Content.Shared.PDA
     {
         public string? ActualOwnerName;
         public string? IdOwner;
+        public string? IdNumber; // Aurora's Song
         public string? JobTitle;
         public string? StationAlertLevel;
         public Color StationAlertColor;

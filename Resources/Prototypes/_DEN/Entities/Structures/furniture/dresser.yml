@@ -4,11 +4,15 @@
   name: somber dresser
   description: "An expensive dresser made of gloomy, patterned wood with electrum accents."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberDresser
   - type: Sprite
     sprite: _DEN/Structures/Furniture/furniture.rsi
     state: somberdresser
   - type: Damageable
     damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:
@@ -48,6 +52,7 @@
     state: somberdresser
   - type: Damageable
     damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
     damageContainer: Inorganic
   - type: StaticPrice
     price: 125

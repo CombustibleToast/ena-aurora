@@ -3,6 +3,7 @@
   - BaseC3ContrabandNoValue
   - ClothingShoesClown
   id: ClothingShoesClownModWhoopie
+  name: clown shoes # Aurora's Song - fixed naming issue
   suffix: "Whoopie"
   description: "The modified standard-issue clowning shoes. Damn they're so soft!"
   components:
@@ -17,19 +18,20 @@
 
 - type: entity
   parent:
+  - SolutionFood # Aurora's Song - Convert to solution
+  - SolutionTiny # Aurora's Song - Convert to solution
   - BaseC3ContrabandNoValue
   - ClothingShoesClown
   id: ClothingShoesClownModKetchup
+  name: clown shoes # Aurora's Song - fixed naming issue
   suffix: "Ketchup"
   description: "The modified standard-issue clowning shoes. Damn they're soggy!"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Ketchup
-          Quantity: 30
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Ketchup
+        Quantity: 30
   - type: DrawableSolution
     solution: food
   - type: DrainableSolution
@@ -47,21 +49,22 @@
 
 - type: entity
   parent:
+  - SolutionFood # Aurora's Song - Convert to solution
+  - SolutionTiny # Aurora's Song - Convert to solution
   - BaseC3ContrabandNoValue
   - ClothingShoesClown
   id: ClothingShoesClownModMustarchup
+  name: clown shoes # Aurora's Song - fixed naming issue
   suffix: "Mustarchup"
   description: "The modified standard-issue clowning shoes. Damn they're very soggy!"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Ketchup
-          Quantity: 15
-        - ReagentId: Mustard
-          Quantity: 15
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Ketchup
+        Quantity: 15
+      - ReagentId: Mustard
+        Quantity: 15
   - type: DrawableSolution
     solution: food
   - type: DrainableSolution
@@ -79,19 +82,20 @@
 
 - type: entity
   parent:
+  - SolutionFood # Aurora's Song - Convert to solution
+  - SolutionTiny # Aurora's Song - Convert to solution
   - BaseC3ContrabandNoValue
   - ClothingShoesClown
   id: ClothingShoesClownModUltimate
+  name: clown shoes # Aurora's Song - fixed naming issue
   suffix: "Ultimate"
   description: "The modified standard-issue clowning shoes. Damn they're soft and soggy!"
   components:
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Ketchup
-          Quantity: 30
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Ketchup
+        Quantity: 30
   - type: DrawableSolution
     solution: food
   - type: DrainableSolution

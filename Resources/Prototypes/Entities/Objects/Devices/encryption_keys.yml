@@ -58,7 +58,7 @@
   id: EncryptionKeyCentCom
   name: central command encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by captain's bosses.
+  description: An encryption key used by NanoTrasen Central Command. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -70,11 +70,11 @@
     - state: nano_label
 
 - type: entity
-  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseCentcommCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [EncryptionKey, C2ContrabandRestricted] # Aurora's Song - BaseCentcommCommandContraband<C2ContrabandRestricted
   id: EncryptionKeyStationMaster
   name: station master encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by station's bosses.
+  description: An encryption key used by sector command. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -86,10 +86,11 @@
     - Security
     - Sle # Frontier - Aurora Song: Changed from Nfsd to Sle (Sector Law Enforcement)
     - Service
-    - Supply
+    # - Supply  Aurora's Song - Made obsolete.
     - Traffic # Frontier
     - Greeting # Frontier
     - Shipboard # Aurora's Song - Shipboard channel, incredibly short range
+    - Bluespace # Aurora's Song
     defaultChannel: Command
   - type: Sprite
     layers:
@@ -97,11 +98,11 @@
     - state: cap_label
 
 - type: entity
-  parent: [EncryptionKey, BaseC2ContrabandUnredeemable] # Frontier: BaseCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [EncryptionKey, C2ContrabandRestricted] # Aurora's Song - BaseCommandContraband<C2ContrabandRestricted
   id: EncryptionKeyCommand
   name: command encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by crew's bosses.
+  description: An encryption key used by sector command. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -120,7 +121,7 @@
   id: EncryptionKeyEngineering
   name: engineering encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by the engineers.
+  description: An encryption key used by Damascus employees. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -138,7 +139,7 @@
   parent: [EncryptionKey, RecyclableItemDeviceTiny] # Frontier: added RecyclableItemDeviceTiny, removed BaseMedicalContraband
   id: EncryptionKeyMedical
   name: medical encryption key
-  description: An encryption key used by those who save lives.
+  description: An encryption key used by medical staff. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -205,7 +206,7 @@
     - state: robotics_label
 
 - type: entity
-  parent: [ EncryptionKey, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityLawyerContraband<BaseC2ContrabandUnredeemable
+  parent: [ EncryptionKey, C2ContrabandRestricted ] # Aurora's Song - BaseSecurityLawyerContraband<C2ContrabandRestricted
   id: EncryptionKeySecurity
   name: security encryption key
   categories: [ DoNotMap ] # Frontier
@@ -228,7 +229,7 @@
   id: EncryptionKeyService
   name: service encryption key
   categories: [ DoNotMap ] # Frontier
-  description: An encryption key used by the service staff, tasked with keeping the station full, happy and clean.
+  description: An encryption key used by Port service staff, tasked with keeping the station full, happy and clean. # Aurora's Song - Changed description.
   components:
   - type: EncryptionKey
     channels:
@@ -243,7 +244,7 @@
     - EncryptionService
 
 - type: entity
-  parent: [EncryptionKey, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [EncryptionKey, C2ContrabandSyndicate] # Aurora's Song - BaseSyndicateContraband<C2ContrabandSyndicate
   id: EncryptionKeySyndie
   name: blood-red encryption key
   categories: [ DoNotMap ] # Frontier
@@ -277,7 +278,7 @@
     - state: ai_label
 
 - type: entity
-  parent: [ EncryptionKey, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: [ EncryptionKey, BaseC1Contraband ] # Aurora's Song - BaseSyndicateContraband<BaseC1Contraband
   id: EncryptionKeyBinarySyndicate
   name: binary translator key
   description: A syndicate encryption key that translates binary signals used by silicons.

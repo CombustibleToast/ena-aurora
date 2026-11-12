@@ -1,0 +1,7 @@
+﻿- type: accessLevel
+  id: ASNanoTrasenCommand
+  name: id-card-access-level-nt-command
+
+- type: accessLevel
+  id: ASNanoTrasenSecurity
+  name: id-card-access-level-nt-security

@@ -1,0 +1,196 @@
+﻿#todo: spawner for each individual mob type, with loot backpacks as variety
+- type: entity
+  name: Nanotrasen Grunt Spawner
+  id: ASSpawnMobNanotrasenGrunt
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/Head/Helmets/security.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTSecGruntMk58
+    - MobNTSecGruntStunstick
+
+- type: entity
+  name: Nanotrasen Trooper Spawner
+  id: ASSpawnMobNanotrasenTrooper
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/OuterClothing/Hardsuits/security.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/security.rsi
+      state: off-equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTSecTrooperLecter
+    - MobNTSecTrooperLaser
+
+- type: entity
+  name: Nanotrasen Medic Spawner
+  id: ASSpawnMobNanotrasenMedic
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/OuterClothing/Hardsuits/brigmedic.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/brigmedic.rsi
+      state: off-equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTSecMedTroopDrozd
+    - MobNTSecMedTroopWt550
+
+- type: entity
+  name: Nanotrasen Warden Spawner
+  id: ASSpawnMobNanotrasenWarden
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/OuterClothing/Hardsuits/security-warden.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/security-warden.rsi
+      state: off-equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTSecWarden
+
+- type: entity
+  name: Nanotrasen HoS Spawner
+  id: ASSpawnMobNanotrasenHoS
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/security.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/OuterClothing/Hardsuits/security-red.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hardsuits/security-red.rsi
+      state: off-equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/combatboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTSecHoS
+
+- type: entity
+  name: Nanotrasen Captain Spawner
+  id: ASSpawnMobNanotrasenCaptain
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/captaineveningattire.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/OuterClothing/Armor/captain_repeller.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hats/captaincrushercap.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/captainjumpboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTFieldCaptain
+
+- type: entity
+  name: Nanotrasen BSO Spawner
+  id: ASSpawnMobNanotrasenBSO
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+  - type: Sprite
+    layers:
+    - state: red
+    - state: ai
+    - sprite: _NF/Mobs/Species/Templates/human.rsi
+      state: human
+    - sprite: Clothing/Uniforms/Jumpsuit/captaineveningattire.rsi
+      state: equipped-INNERCLOTHING
+    - sprite: Clothing/OuterClothing/Armor/captain_repeller.rsi
+      state: equipped-OUTERCLOTHING
+    - sprite: Clothing/Head/Hats/captaincrushercap.rsi
+      state: equipped-HELMET
+    - sprite: Clothing/Shoes/Boots/captainjumpboots.rsi
+      state: equipped-FEET
+  - type: RandomSpawner
+    prototypes:
+    - MobNTBlueshield
+    rarePrototypes:
+    - MobNTDeathSquad
+    rareChance: 0.01
+
+- type: entity
+  name: Nanotrasen DS Spawner
+  id: ASSpawnMobNanotrasenCommando
+  parent: MarkerBase
+  suffix: AI, HOSTILE
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - state: ai
+        - sprite: _NF/Mobs/Species/Templates/human.rsi
+          state: human
+        - sprite: Clothing/Uniforms/Jumpsuit/deathsquad.rsi
+          state: equipped-INNERCLOTHING
+        - sprite: Clothing/OuterClothing/Hardsuits/deathsquad.rsi
+          state: equipped-OUTERCLOTHING
+        - sprite: Clothing/Head/Hardsuits/deathsquad.rsi
+          state: equipped-HELMET
+        - sprite: Clothing/Shoes/Boots/captainjumpboots.rsi
+          state: equipped-FEET
+    - type: RandomSpawner
+      prototypes:
+        - MobNTDeathSquad

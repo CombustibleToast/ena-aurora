@@ -38,7 +38,7 @@
 - type: entity
   id: NFBaseMagazineDrumRifle20
   name: drum magazine (.20 rifle)
-  parent: [ BaseC2ContrabandUnredeemable, RecyclableItemSteelTiny, BaseMagazineRifle ] # Drum mags are restricted | Aurora
+  parent: [ C2ContrabandRestricted, RecyclableItemSteelTiny, BaseMagazineRifle ] # Aurora's Song - Added C2ContrabandRestricted
   abstract: true
   components:
   - type: Tag

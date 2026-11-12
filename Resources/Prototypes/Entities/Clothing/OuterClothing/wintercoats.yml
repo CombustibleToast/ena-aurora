@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingOuterStorageBase
+  parent: ClothingOuterStorageEdible
   id: ClothingOuterWinterCoat
   name: winter coat
   description: A heavy jacket made from 'synthetic' animal furs.
@@ -21,15 +21,6 @@
     priceMultiplier: 0
   - type: ZombificationResistance
     zombificationResistanceCoefficient: 0.55
-  - type: Edible
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 30
   - type: Tag
     tags:
     - ClothMade
@@ -169,7 +160,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterCE
 
 - type: entity
-  parent: [ ClothingOuterWinterCoatToggleable, BaseCentcommContraband ]
+  parent: [ ClothingOuterWinterCoatToggleable, BaseC3ContrabandCentCommLowValue ] # Aurora's Song - BaseC3ContrabandCentCommLowValue>BaseCentcommContraband
   id: ClothingOuterWinterCentcom
   name: CentComm winter coat
   components:
@@ -362,7 +353,7 @@
 
 ##########################################################
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterArmorHoS, ClothingOuterWinterCoatToggleable] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [C2ContrabandNanoTrasenRestricted, ClothingOuterArmorHoS, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityCommandContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingOuterWinterHoS
   name: head of security's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a head of security from any brig-bound threats and hypothermic events.
@@ -381,7 +372,7 @@
 ##########################################################
 
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterWinterCoatToggleable] # Frontier: BaseSecurityCommandContraband<BaseC2ContrabandUnredeemable
+  parent: [C2ContrabandNanoTrasenRestricted, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityCommandContraband<C2ContrabandNanoTrasenRestricted
   id: ClothingOuterWinterHoSUnarmored
   name: head of security's winter coat
   description: A sturdy coat, a warm coat, but not an armored coat.
@@ -672,7 +663,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterSci
 
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterWinterCoatToggleable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [C2ContrabandNanoTrasen, ClothingOuterWinterCoatToggleable] # Aurora's Song -  BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterWinterSec
   name: security winter coat
   components:
@@ -726,7 +717,7 @@
 
 ################################################################
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [C2ContrabandNanoTrasen, ClothingOuterArmorWarden, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterWinterWarden
   name: warden's armored winter coat
   description: A sturdy, utilitarian winter coat designed to protect a warden from any brig-bound threats and hypothermic events.
@@ -745,7 +736,7 @@
 ################################################################
 
 - type: entity
-  parent: [BaseC2ContrabandUnredeemable, ClothingOuterWinterCoatToggleable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [C2ContrabandNanoTrasen, ClothingOuterWinterCoatToggleable] # Aurora's Song - BaseSecurityContraband<C2ContrabandNanoTrasen
   id: ClothingOuterWinterWardenUnarmored
   name: warden's winter coat
   description: A sturdy coat, a warm coat, but not an armored coat.
@@ -769,7 +760,7 @@
     clothingPrototype: ClothingHeadHatHoodWinterWarden
 
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterWinterCoatToggleable, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterWinterCoatToggleable] # Aurora's Song -  BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterWinterSyndieCap
   name: syndicate's winter coat
   description: "The syndicate's winter coat is made of durable fabric, with gilded patterns, and coarse wool."
@@ -794,7 +785,7 @@
 
 ##############################################################
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterWinterWarden, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterWinterWarden] # Aurora's Song -  BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterWinterSyndieCapArmored
   name: syndicate's armored winter coat
   description: "The syndicate's armored winter coat is made of durable fabric, with gilded patterns, and coarse wool."
@@ -808,7 +799,7 @@
 ##############################################################
 
 - type: entity
-  parent: [BaseC3SyndicateContraband, ClothingOuterWinterCoatToggleable, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, added ContrabandClothing as parent
+  parent: [C2ContrabandSyndicate, ClothingOuterWinterCoatToggleable] # Aurora's Song -  BaseSyndicateContraband<C2ContrabandSyndicate
   id: ClothingOuterWinterSyndie
   name: syndicate's winter coat
   description: Insulated winter coat, looks like a merch from "Syndieland".
@@ -875,13 +866,11 @@
       - cobwebs
     ignoreReagents:
       - Fiber
-  - type: SolutionContainerManager
-    solutions: # 15 (3 (fiber count of web) * 5 (to craft)) + 5 (magical crafting bonus)
-      food:
-        maxVol: 20
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 20
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Fiber
+        Quantity: 50 # 50 (10 (fiber count of web) * 5 (to craft))
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHatHoodWinterWeb
 

@@ -19,21 +19,6 @@
 
 - type: marking
   abstract: true
-  id: BaseEyes
-  bodyPart: Eyes
-  coloring:
-    default:
-      type:
-        !type:EyeColoring
-          negative: true
-
-- type: marking
-  abstract: true
-  id: BaseChest
-  bodyPart: Chest
-
-- type: marking
-  abstract: true
   id: BaseHead
   bodyPart: Head
 
@@ -49,13 +34,104 @@
 
 - type: marking
   abstract: true
+  id: BaseEyes
+  bodyPart: Eyes
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+        negative: true
+
+- type: marking
+  abstract: true
   id: BaseSnout
   bodyPart: Snout
 
 - type: marking
   abstract: true
+  id: BaseChest
+  bodyPart: Chest
+
+- type: marking
+  abstract: true
+  id: BaseRightArm
+  bodyPart: RArm
+
+- type: marking
+  abstract: true
+  id: BaseRightHand
+  bodyPart: RHand
+
+- type: marking
+  abstract: true
+  id: BaseLeftArm
+  bodyPart: LArm
+
+- type: marking
+  abstract: true
+  id: BaseLeftHand
+  bodyPart: LHand
+
+- type: marking
+  abstract: true
+  id: BaseRightLeg
+  bodyPart: RLeg
+
+- type: marking
+  abstract: true
+  id: BaseRightFoot
+  bodyPart: RFoot
+
+- type: marking
+  abstract: true
+  id: BaseLeftLeg
+  bodyPart: LLeg
+
+- type: marking
+  abstract: true
+  id: BaseLeftFoot
+  bodyPart: LFoot
+
+- type: marking
+  abstract: true
   id: BaseTail
   bodyPart: Tail
+
+- type: marking
+  abstract: true
+  id: BaseTailOverlay
+  bodyPart: TailOverlay
+
+# Emote Granters
+## Grants a certain emote on a marking.
+
+- type: marking
+  abstract: true
+  id: EmoteHardThump
+  emoteGrants:
+  - emote: Thump
+    sounds: ReptilianBodyEmotes
+
+- type: marking
+  abstract: true
+  id: EmoteWhipThump
+  emoteGrants:
+  - emote: Thump
+    sounds: ThavenTailEmotes
+
+- type: marking
+  abstract: true
+  id: EmoteSmallHardThump
+  emoteGrants:
+  - emote: Thump
+    sounds: AllulaloTailEmotes
+
+- type: marking
+  abstract: true
+  id: EmoteFlutter
+  emoteGrants:
+  - emote: Flutter
+    sounds: MothBodyEmotes
 
 # Cyberlimbs
 ## (These are basic IPC parts, but they're also prosthetic markings for other species.)
@@ -67,9 +143,11 @@
   id: BaseArmsCyberlimb
   invertGroupWhitelist: true
   groupWhitelist:
+  - Allulalo
   - Harpy
   - Vox
   - Diona
+  - Decapoid
 
 ## Exclude anything that doesn't have standard legs (e.g. if any taurs are ever added)
 - type: marking
@@ -78,6 +156,8 @@
   id: BaseLegsCyberlimb
   invertGroupWhitelist: true
   groupWhitelist:
+  - Allulalo
   - Harpy
   - Vox
   - Diona
+  - Decapoid

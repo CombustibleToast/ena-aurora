@@ -8,14 +8,16 @@
   components:
   - type: Pacified
 
-- type: trait
-  id: LightweightDrunk
-  name: trait-lightweight-name
-  description: trait-lightweight-desc
-  category: Quirks
-  components:
-  - type: LightweightDrunk
-    boozeStrengthMultiplier: 2
+# Aurora's Song: superseded by /Resources/Prototypes/_AS/Traits/alcohol.yml
+# - type: trait
+#   id: LightweightDrunk
+#   name: trait-lightweight-drunk-name # Aurora's Song: lightweight > lightweight-drunk
+#   description: trait-lightweight-drunk-desc # Aurora's Song: lightweight > lightweight-drunk
+#   category: Alcohol
+#   cost: 1
+#   components:
+#   - type: LightweightDrunk
+#     boozeStrengthMultiplier: 2
 
 - type: trait
   id: Snoring

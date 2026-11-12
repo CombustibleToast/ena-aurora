@@ -10,7 +10,7 @@
       - state: green
         scale: 0.7, 0.7
       - sprite: Objects/Misc/desk_bell.rsi
-        state: normal
+        state: icon-bell # Aurora's Song - normal>icon-bell
       - sprite: _NF/Markers/general.rsi
         state: questionmark
         color: red
@@ -31,7 +31,7 @@
       - state: green
         scale: 0.7, 0.7
       - sprite: Objects/Misc/desk_bell.rsi
-        state: normal
+        state: icon-bell # Aurora's Song - normal>icon-bell
       - sprite: _NF/Markers/general.rsi
         state: questionmark
         color: red
@@ -138,7 +138,7 @@
   - type: Sprite
     layers:
       - state: green
-      - sprite: Structures/Storage/Crates/hydroponics.rsi
+      - sprite: _AS/Structures/Storage/Crates/hydroponics.rsi # Aurora's Song - Storage Resprites Batch 2
         state: icon
       - sprite: _NF/Markers/general.rsi
         state: questionmark

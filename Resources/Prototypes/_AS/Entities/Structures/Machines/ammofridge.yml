@@ -1,0 +1,38 @@
+- type: entity
+  parent: [SmartFridge]
+  id: AmmoFridge
+  name: AmmoFridge
+  description: A jury rigged modification of the SmartFridge made by someone who git tired of ammo being everywhere, keeps the bullets fresh.
+  components:
+  - type: DatasetVocalizer
+    dataset: AmmoFridgeAds
+  - type: Sprite
+    sprite: _AS/Structures/Machines/ammofridge.rsi
+    snapCardinals: true
+    layers:
+    - state: ammo_fridge
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: ammo_fridge_door
+      map: ["enum.StorageVisualLayers.Door"]
+      shader: unshaded
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: SmartFridge
+    whitelist:
+      components:
+      - BallisticAmmoProvider
+      - DrainableSolution
+    blacklist:  # Needed here otherwise it can fit all the items that a regular SmartFridge can
+     components:
+      - Edible
+      - FitsInDispenser
+      - Pill
+      - Produce
+      - Seed
+     tags:
+      - PillCanister
+      - Bottle
+      - Syringe
+      - ChemDispensable
+  - type: Machine
+    board: AmmoFridgeCircuitboard

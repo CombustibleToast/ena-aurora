@@ -113,7 +113,7 @@ namespace Content.Shared.Preferences
         public Gender Gender { get; private set; } = Gender.Male;
 
         [DataField] // Frontier: Bank balance
-        public int BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance
+        public long BankBalance { get; private set; } = DefaultBalance; // Frontier: Bank balance // Aurora's Song - Expand balance to long
 
         /// <summary>
         /// Stores markings, eye colors, etc for the profile.
@@ -150,6 +150,7 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode.SpawnAsOverflow;
 
         public HumanoidCharacterProfile(
+            int? profileId, // Aurora's Song - add profile ID
             string name,
             string flavorText,
             string nsfwFlavorText,
@@ -158,7 +159,7 @@ namespace Content.Shared.Preferences
             int age,
             Sex sex,
             Gender gender,
-            int bankBalance,
+            long bankBalance, // Aurora's Song - Expand balance to long
             HumanoidCharacterAppearance appearance,
             SpawnPriorityPreference spawnPriority,
             Dictionary<ProtoId<JobPrototype>, JobPriority> jobPriorities,
@@ -167,6 +168,7 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
         {
+            ProfileId = profileId; // Aurora's Song - add profile ID
             Name = name;
             FlavorText = flavorText;
             NsfwFlavorText = nsfwFlavorText;
@@ -192,14 +194,15 @@ namespace Content.Shared.Preferences
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
             Dictionary<string, RoleLoadout> loadouts)
-            : this(other.Name, other.FlavorText, other.NsfwFlavorText, other.CharacterConsent, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority,
+            : this(other.ProfileId, other.Name, other.FlavorText, other.NsfwFlavorText, other.CharacterConsent, other.Species, other.Age, other.Sex, other.Gender, other.BankBalance, other.Appearance, other.SpawnPriority, // Aurora's Song - add profile ID
                 jobPriorities, other.PreferenceUnavailable, antagPreferences, traitPreferences, loadouts)
         {
         }
 
         /// <summary>Copy constructor</summary>
         public HumanoidCharacterProfile(HumanoidCharacterProfile other)
-            : this(other.Name,
+            : this(other.ProfileId, // Aurora's Song - add profile ID
+                other.Name,
                 other.FlavorText,
                 other.NsfwFlavorText,
                 other.CharacterConsent,
@@ -336,7 +339,7 @@ namespace Content.Shared.Preferences
         }
 
         // Frontier: this is probably an issue and should be removed.
-        public HumanoidCharacterProfile WithBankBalance(int bankBalance)
+        public HumanoidCharacterProfile WithBankBalance(long bankBalance) // Aurora's Song - Expand balance to long
         {
             return new(this) { BankBalance = bankBalance };
         }

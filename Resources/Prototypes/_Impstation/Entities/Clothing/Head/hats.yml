@@ -1,3 +1,23 @@
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatCaptaincrushercap
+  name: captain's crusher cap
+  description: "A captain's cap with the so-called fifty mission crush, losing its structure from extended use. A prized symbol of veteran status. It bears a winged star on the front."
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/captaincrushercap.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/captaincrushercap.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+  - type: SentienceTarget
+    flavorKind: station-event-random-sentience-flavor-inanimate
+    weight: 0.0002 # 5,000 times less likely than 1 regular animal
+  - type: BlockMovement
+
 - type: entity
   parent: ClothingHeadBase
   id: ClothingHeadHatPompombow

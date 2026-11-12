@@ -1,0 +1,123 @@
+﻿- type: startingGear
+  id: ASNanoTrasenRogueGruntMk58
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ClothingHeadHelmetBasic #ClothingHeadHelmetSwat for harder difficulty later
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorBasic
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecGruntMk58
+
+- type: startingGear
+  id: ASNanoTrasenRogueGruntBaton
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ClothingHeadHelmetBasic
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterArmorBasic
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecGruntBaton
+  inhand:
+    - Stunbaton
+
+- type: startingGear
+  id: ASNanoTrasenRogueOfficerLecter
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ASClothingHeadHelmetHardsuitConstableUnremoveable
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackLecter
+    outerClothing: ASClothingOuterHardsuitConstableUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecGruntLecter
+
+- type: startingGear
+  id: ASNanoTrasenRogueOfficerLaser
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ASClothingHeadHelmetHardsuitConstableUnremoveable
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackLaser
+    outerClothing: ASClothingOuterHardsuitConstableUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecGruntLaser
+
+- type: startingGear
+  id: ASNanoTrasenRogueOfficerDrozd
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ASClothingHeadHelmetHardsuitSheduUnremoveable
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackDrozd
+    outerClothing: ASClothingOuterHardsuitSheduUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecMedicDrozd
+
+- type: startingGear
+  id: ASNanoTrasenRogueOfficerWt550
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ASClothingHeadHelmetHardsuitSheduUnremoveable
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackWT550
+    outerClothing: ASClothingOuterHardsuitSheduUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecMedicWt550
+
+- type: startingGear
+  id: ASNanoTrasenRogueWarden
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ASClothingHeadHelmetHardsuitHauberkUnremoveable
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackEnforcer
+    outerClothing: ASClothingOuterHardsuitHauberkUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecWarden
+
+- type: startingGear
+  id: ASNanoTrasenRogueHoS
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoS
+    head: ASClothingHeadHelmetHardsuitGolemUnremoveable
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackGarand
+    outerClothing: ASClothingOuterHardsuitGolemUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_SecHoS
+
+- type: startingGear
+  id: ASNanoTrasenRogueFieldCaptain
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCaptaineveningattire
+    head: ClothingHeadHatCaptaincrushercap
+    shoes: ClothingShoesBootsCaptainjumpboots
+    gloves: ClothingHandsGlovesColorBlackCombatPulsePistol
+    outerClothing: ClothingOuterArmorCaptainRepeller
+    back: NanoTrasenBackpackLoot_Captain
+  inhand:
+  - CaptainSabre
+
+- type: startingGear
+  id: ASNanoTrasenRogueBlueShield
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecUnsensored
+    head: ClothingHeadHelmetHardsuitBlueshield
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackCombatChester
+    outerClothing: ASClothingOuterHardsuitGargoyleUnremoveable
+    belt: ClothingBeltBSOWebbing
+    back: NanoTrasenBackpackLoot_Blueshield
+
+- type: startingGear
+  id: ASNanoTrasenRogueDeathSquad
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDeathSquad
+    head: ASClothingHeadHelmetHardsuitSatanus
+    shoes: ClothingShoesBootsCombat
+    gloves: ClothingHandsGlovesColorBlackCombatPulseRifle
+    outerClothing: ASClothingOuterHardsuitSatanusUnremoveable
+    belt: ClothingBeltSecurity
+    back: NanoTrasenBackpackLoot_DeathSquad

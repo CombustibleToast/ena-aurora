@@ -860,9 +860,9 @@
 
 - type: entity
   name: energy shotgun
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
+  parent: [BaseWeaponBattery, BaseGunWieldable, BaseC3NanoTrasenContraband] # Aurora's Song | BaseGrandTheftContraband<BaseC2ContrabandUnredeemable<BaseCeNanoTrasenContraband
   id: WeaponEnergyShotgun
-  description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
+  description: A limited run energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon. # Aurora's Song | Not one of a kind
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Battery/energy_shotgun.rsi
@@ -884,17 +884,17 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
-    proto: NFBulletLaserSpread # Frontier: use NF variant
+    proto: ASBulletLaserSpreadNarrow # Aurora's Song | moved to AS variant
     fireCost: 80
   - type: BatteryWeaponFireModes
-    # Frontier: move to NF variants
-    # fireModes:
-    # - proto: BulletLaserSpreadNarrow
-    #   fireCost: 80
-    # - proto: BulletDisablerSmgSpread
-    #   fireCost: 48
-    #   pacifismAllowedMode: true
-    # End Frontier: move to NF variants
+    fireModes: # Aurora's Song | Moved to AS variants
+    - proto: ASBulletLaserSpreadNarrow
+      fireCost: 80
+    - proto: ASBulletDisablerSmgSpread
+      fireCost: 48
+      pacifismAllowedMode: true # Aurora's Song - Allow pacifism
+    - proto: ASBulletLaserSpread # Aurora's Song | moved to AS variant
+      fireCost: 80 # Aurora's Song - Moved down here to the fireMode list
   - type: Item
     size: Large
     sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi
@@ -905,8 +905,8 @@
     startingCharge: 480
 
 - type: entity
-  name: energy magnum
-  parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Frontier: BaseGrandTheftContraband<BaseC2ContrabandUnredeemable
+  name: energy magnum # Aurora's Song | A lot of the edits made to this prototype are of no real import as I had to make my own implementation under our namespace
+  parent: [BaseWeaponBatterySmall, BaseC3NanoTrasenContraband] # Aurora's Song | BaseGrandTheftContraband<BaseC2ContrabandUnredeemable<BaseCeNanoTrasenContraband
   id: WeaponEnergyMagnum
   description: A high powered self-charging energy pistol designed for elite security personnel. It has has three firing modes allowing for either high damage, window piercing, or non-lethal disabling.
   components:
@@ -930,8 +930,8 @@
     tags:
     - HighRiskItem
     - Sidearm
-  - type: StealTarget
-    stealGroup: WeaponEnergyMagnum
+  #- type: StealTarget # Aurora's Song | No thieves in our sandbox
+  #  stealGroup: WeaponEnergyMagnum
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
@@ -946,7 +946,7 @@
       fireCost: 150
     - proto: BulletDisabler
       fireCost: 62.5
-      pacifismAllowedMode: true
+      pacifismAllowedMode: true # Aurora's Song
   - type: BatterySelfRecharger
     autoRechargeRate: 48
     autoRechargePauseTime: 10

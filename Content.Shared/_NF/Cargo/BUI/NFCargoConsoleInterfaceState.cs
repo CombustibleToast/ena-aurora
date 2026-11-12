@@ -7,12 +7,12 @@ public sealed class NFCargoConsoleInterfaceState(
     string name,
     int count,
     int capacity,
-    int balance,
+    long balance, // Aurora's Song - Expand balance to long
     List<NFCargoOrderData> orders) : BoundUserInterfaceState
 {
     public string Name = name;
     public int Count = count;
     public int Capacity = capacity;
-    public int Balance = balance;
+    public long Balance = balance; // Aurora's Song - Expand balance to long
     public List<NFCargoOrderData> Orders = orders;
 }

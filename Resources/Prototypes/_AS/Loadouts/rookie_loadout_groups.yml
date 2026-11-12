@@ -24,6 +24,7 @@
 - type: loadoutGroup
   id: RookieNeck
   name: loadout-group-contractor-neck
+  maxLimit: 2
   hidden: true
   loadouts:
   - RookieClothingNeckSLEBadgeRookie

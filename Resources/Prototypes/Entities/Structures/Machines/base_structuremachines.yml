@@ -23,8 +23,10 @@
         layer:
         - MachineLayer
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallic
+  - type: Injurable
+    damageContainer: StructuralInorganic
+  - type: SparksOnDamage # _Starfall
   - type: Destructible
     thresholds:
     - trigger:
@@ -57,6 +59,7 @@
   - type: LightningTarget
     priority: 1
   - type: BindToStation # Frontier
+  - type: TooShortForUiBlacklist # MACRO
 
 - type: entity
   abstract: true

@@ -1,0 +1,329 @@
+- type: marking
+  id: LumariAntennasAthamas
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: athamas
+
+- type: marking
+  id: LumariAntennasBanner
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: banner_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: banner_secondary
+
+- type: marking
+  id: LumariAntennasBeads
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: beads_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: beads_secondary
+
+- type: marking
+  id: LumariAntennasCharred
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: charred
+
+- type: marking
+  id: LumariAntennasDbushy
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: dbushy
+
+- type: marking
+  id: LumariAntennasDcurvy
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: dcurvy
+
+- type: marking
+  id: LumariAntennasDefault
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: default
+
+- type: marking
+  id: LumariAntennasDfan
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: dfan
+
+- type: marking
+  id: LumariAntennasDpointy
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: dpointy
+
+- type: marking
+  id: LumariAntennasFeathery
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: feathery
+
+- type: marking
+  id: LumariAntennasFirewatch
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: firewatch
+
+- type: marking
+  id: LumariAntennasFlowing
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: flowing
+
+- type: marking
+  id: LumariAntennasGray
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: gray
+
+- type: marking
+  id: LumariAntennasJewled
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: jewled_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: jewled_secondary
+
+- type: marking
+  id: LumariAntennasJungle
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: jungle
+
+- type: marking
+  id: LumariAntennasMaple
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: maple
+
+- type: marking
+  id: LumariAntennasMoffra
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: moffra
+
+- type: marking
+  id: LumariAntennasOakworm
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: oakworm
+
+- type: marking
+  id: LumariAntennasOrigins
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: origins
+
+- type: marking
+  id: LumariAntennasPlasmafire
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: plasmafire
+
+- type: marking
+  id: LumariAntennasReinforced
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: reinforced
+
+- type: marking
+  id: LumariAntennasRoyal
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: royal
+
+- type: marking
+  id: LumariAntennasStriped
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: striped
+
+- type: marking
+  id: LumariAntennasTattered
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: tattered
+
+- type: marking
+  id: LumariAntennasUnderwing
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: underwing_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: underwing_secondary
+
+- type: marking
+  id: LumariAntennasWhitefly
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: whitefly
+
+- type: marking
+  id: LumariAntennasWitchwing
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/antennae.rsi
+    state: witchwing
+
+- type: marking
+  id: LumariChitinidAntennasBee
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: bee
+
+- type: marking
+  id: LumariChitinidAntennasCurly
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: curly
+
+- type: marking
+  id: LumariChitinidAntennasDefault
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: default
+
+- type: marking
+  id: LumariChitinidAntennasFirefly
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: firefly_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: firefly_secondary
+
+- type: marking
+  id: LumariChitinidAntennasGray
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: gray
+
+- type: marking
+  id: LumariChitinidAntennasLong
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: long
+
+- type: marking
+  id: LumariChitinidAntennasRadar
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: radar
+
+- type: marking
+  id: LumariChitinidAntennasShort
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: short
+
+- type: marking
+  id: LumariChitinidAntennasSlick
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: slick
+
+- type: marking
+  id: LumariChitinidAntennasSpeed
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: speed
+
+- type: marking
+  id: LumariChitinidAntennasWeevil
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_antennas.rsi
+    state: weevil
+
+- type: marking
+  id: LumariHeadMothbeetlehorn
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: mothbeetlehorn
+
+- type: marking
+  id: LumariAntennaless
+  bodyPart: HeadTop
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: Effects/text.rsi
+    state: blank

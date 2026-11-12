@@ -36,7 +36,7 @@
 #region SLE Base
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLE
   name: SLE jumpsuit
   description: A long-sleeved jumpsuit for SLE Officers.
@@ -47,7 +47,7 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShort
   name: SLE short-sleeve jumpsuit
   description: A short-sleeved jumpsuit for SLE Officers.
@@ -58,7 +58,7 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_short.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassic
   name: SLE classic jumpsuit
   description: A classic jumpsuit for SLE Officers. Smells like scientists trying to get you in trouble.
@@ -69,7 +69,7 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jump_classic.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitPublicAffairsLiaison
   name: public affairs liaison jumpsuit
   description: A starched and pressed suit for the public affairs liaison.
@@ -82,7 +82,7 @@
 #region SLE Rookie
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLERookie
   name: SLE jumpsuit
   suffix: Rookie
@@ -98,7 +98,7 @@
       - state: equipped-INNERCLOTHING-rke
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShortRookie
   name: SLE short-sleeve jumpsuit
   suffix: Rookie
@@ -114,7 +114,7 @@
       - state: equipped-INNERCLOTHING-rke
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassicRookie
   name: SLE classic jumpsuit
   suffix: Rookie
@@ -132,7 +132,7 @@
 #region SLE Officer
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEOfficer
   name: SLE jumpsuit
   suffix: Officer
@@ -148,7 +148,7 @@
       - state: equipped-INNERCLOTHING-off
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShortOfficer
   name: SLE short-sleeve jumpsuit
   suffix: Officer
@@ -164,7 +164,7 @@
       - state: equipped-INNERCLOTHING-off
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassicOfficer
   name: SLE classic jumpsuit
   suffix: Officer
@@ -182,7 +182,7 @@
 #region SLE Sergeant
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLESergeant
   name: SLE jumpsuit
   suffix: Sergeant
@@ -198,7 +198,7 @@
       - state: equipped-INNERCLOTHING-sgt
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShortSergeant
   name: SLE short-sleeve jumpsuit
   suffix: Sergeant
@@ -214,7 +214,7 @@
       - state: equipped-INNERCLOTHING-sgt
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassicSergeant
   name: SLE classic jumpsuit
   suffix: Sergeant
@@ -232,7 +232,7 @@
 #region SLE Lieutenant
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLELieutenant
   name: SLE jumpsuit
   suffix: Lieutenant
@@ -248,7 +248,7 @@
       - state: equipped-INNERCLOTHING-lt
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShortLieutenant
   name: SLE short-sleeve jumpsuit
   suffix: Lieutenant
@@ -264,7 +264,7 @@
       - state: equipped-INNERCLOTHING-lt
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassicLieutenant
   name: SLE classic jumpsuit
   suffix: Lieutenant
@@ -282,7 +282,7 @@
 #region SLE Corpsman
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLECorpsman
   name: SLE jumpsuit
   suffix: Corpsman
@@ -298,7 +298,7 @@
       - state: equipped-INNERCLOTHING-crp
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShortCorpsman
   name: SLE short-sleeve jumpsuit
   suffix: Corpsman
@@ -314,7 +314,7 @@
       - state: equipped-INNERCLOTHING-crp
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassicCorpsman
   name: SLE classic jumpsuit
   suffix: Corpsman
@@ -332,7 +332,7 @@
 #region SLE Commissioner
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLECommissioner
   name: SLE jumpsuit
   suffix: Commissioner
@@ -348,7 +348,7 @@
       - state: equipped-INNERCLOTHING-com
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEShortCommissioner
   name: SLE short-sleeve jumpsuit
   suffix: Commissioner
@@ -364,7 +364,7 @@
       - state: equipped-INNERCLOTHING-com
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLEClassicCommissioner
   name: SLE classic jumpsuit
   suffix: Commissioner
@@ -382,7 +382,7 @@
 #region SLE Tactical
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLETacBlack
   name: SLE tactical jumpsuit
   description: A tactical jumpsuit for officers in the field.
@@ -393,7 +393,7 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_black.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLETacGray
   name: SLE tactical jumpsuit
   description: A tactical jumpsuit for officers in the field.
@@ -404,7 +404,7 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_gray.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLETacCamo
   name: SLE tactical jumpsuit
   description: A tactical jumpsuit for officers in the field.
@@ -415,7 +415,7 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_tac_camo.rsi
 
 - type: entity
-  parent: ClothingUniformBase
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformBase ]
   id: ASClothingUniformJumpsuitSLETacCream
   name: SLE tactical jumpsuit
   description: A tactical jumpsuit for officers in the field.
@@ -428,7 +428,7 @@
 #region Command
 
 - type: entity
-  parent: ClothingUniformJumpsuitHoP
+  parent: [ C2ContrabandUnredeemableRestricted, ClothingUniformJumpsuitHoP ]
   id: ASClothingUniformJumpsuitColonialRepresentative
   name: colonial representative's uniform
   description: A distinguished outfit for the frontier's colonial representative. Every detail speaks of authority and colonial administration.
@@ -451,6 +451,60 @@
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/colcomformal.rsi
 
+#region Marine Surplus
+# I don't know why the colors for these look weird to what they're labeled as for the .rsis, but I assigned them to what I think looked correct
+
+- type: entity
+  parent: ClothingUniformBase
+  id: JumpsuitMarineSurplus
+  name: marine jungle uniform
+  description: Standard-issue Marine uniform. Patches and markings removed for surplus issue.
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/desert.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/desert.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusDesert
+  name: marine desert uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/classic.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/classic.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusSnow
+  name: marine snow uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/snow.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/snow.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusClassic
+  name: marine classic uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/jungle.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/jungle.rsi
+
+- type: entity
+  parent: JumpsuitMarineSurplus
+  id: JumpsuitMarineSurplusUrban
+  name: marine urban uniform
+  components:
+  - type: Sprite
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/urban.rsi
+  - type: Clothing
+    sprite: _RMC14/Objects/Clothing/Uniforms/Marine/standard/urban.rsi
+
 #region Misc
 
 - type: entity
@@ -463,3 +517,343 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/coyotepants.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/coyotepants.rsi
+
+- type: entity # Aurora's Song - coyote pants recolor
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitJackalPants
+  name: jackal pants
+  description: A pair of common jackal cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/jackalpants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/jackalpants.rsi
+
+- type: entity # Aurora's Song - coyote pants recolor
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWolfPants
+  name: wolf pants
+  description: A pair of common wolf cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/wolfpants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/wolfpants.rsi
+
+- type: entity # Aurora's Song - coyote pants recolor
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHoundPants
+  name: hound pants
+  description: A pair of common hound cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/houndpants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/houndpants.rsi
+
+- type: entity
+  parent: [ ClothingUniformBase,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBrat
+  name: military brat's cargo pants
+  description: For the ones who've done horrible things and looked cute doing them.
+  components:
+  - type: Sprite
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/militarybrat.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _DEN/Clothing/Uniforms/Jumpsuit/militarybrat.rsi
+  - type: Foldable
+    canFoldInsideContainer: true
+    foldVerbText: fold-verb
+    unfoldVerbText: unfold-verb
+  - type: FoldableClothing
+    foldedEquippedPrefix: folded
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratAcidWash
+  name: acid wash jargo pants
+  description: A style of faded denim that used to be absolutely inescapable in the 2480s.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratacidwash.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratacidwash.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratCargonia
+  name: cargo brat's military pants
+  description: Perfect for any radical cargonian that wants to look cute doing every crime in space law.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratcargonia.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratcargonia.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratDenim
+  name: bratty jargo pants
+  description: For the ones who will believe anyone that says what they're selling is "Genuine Earth-made denim."
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratdenim.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratdenim.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitMilitaryBrat,  BaseFoldable ]
+  id: ClothingUniformJumpsuitMilitaryBratKhaki
+  name: military brat's khargo pants
+  description: For the ones who've done horrible things and looked khute doing them.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratkhaki.rsi
+    layers:
+    - state: icon
+      map: [ "unfoldedLayer" ]
+    - state: icon-folded
+      map: [ "foldedLayer" ]
+      visible: false
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/militarybratkhaki.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDenimSkinnyJeans
+  name: denim skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/denim_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/denim_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlackDenimSkinnyJeans
+  name: black skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_denim_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_denim_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrownSkinnyJeans
+  name: brown skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCamoSkinnyJeans
+  name: camo green skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBloodRedSkinnyJeans
+  name: blood red skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/blood_red_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/blood_red_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitGreenSkinnyJeans
+  name: green skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/green_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/green_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitOrangeSkinnyJeans
+  name: orange skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/orange_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/orange_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPinkSkinnyJeans
+  name: pink skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pink_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pink_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPurpleSkinnyJeans
+  name: purple skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/purple_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/purple_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitYellowSkinnyJeans
+  name: yellow skinny jeans
+  description: A reminder of years gone by and studded belts worn.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/yellow_skinny.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/yellow_skinny.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPupShorts
+  name: pup shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pup_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/pup_shorts.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitDarkPupShorts
+  name: dark pup shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/dark_pup_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/dark_pup_shorts.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitKitShorts
+  name: kit shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/kit_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/kit_shorts.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitPuppyShorts
+  name: puppy shorts
+  description: A pair of shorts, tastefully rolled up to show-off what you got.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/puppy_shorts.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/puppy_shorts.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBlackBaggyPants
+  name: baggy pants
+  description: A pair of sturdy, loose fitting pants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_baggy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/black_baggy.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBrownBaggyPants
+  name: brown baggy pants
+  description: A pair of sturdy, loose fitting pants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_baggy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/brown_baggy.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitCamoBaggyPants
+  name: camo green baggy pants
+  description: A pair of sturdy, loose fitting pants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_baggy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/camo_baggy.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitBaggyJeans
+  name: baggy jeans
+  description: A pair of sturdy, loose fitting jants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/baggy_jeans.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/baggy_jeans.rsi
+
+#region Nanotrasen
+
+- type: entity
+  parent: [ClothingUniformBase, C2ContrabandNanoTrasenRestrictedUnredeemable]
+  id: ASClothingUniformJumpsuitNanotrasenRepresentativeTurtleneck
+  name: nanotrasen representative's turtleneck
+  description: An expensive blend of wools make this sweater exceptionally comfy, without being itchy at all!
+  components:
+  - type: Sprite
+    sprite: _Funkystation/Clothing/Uniforms/Jumpsuit/nanotrasen_representative_sweater.rsi
+  - type: Clothing
+    sprite: _Funkystation/Clothing/Uniforms/Jumpsuit/nanotrasen_representative_sweater.rsi
+
+- type: entity
+  parent: [ ClothingUniformJumpsuitSr, C2ContrabandNanoTrasenRestrictedUnredeemable ]
+  id: ASClothingUniformJumpsuitNanotrasenRepresentative
+  name: nanotrasen representative's uniform

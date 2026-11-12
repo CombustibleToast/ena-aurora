@@ -113,10 +113,19 @@ uplink-security-30riflemagazine-desc = A box containing 4 filled .30 rifle (over
 uplink-security-30riflemagazine-rubber-name = .30 Rifle Rubber Magazines
 uplink-security-30riflemagazine-rubber-desc = a Box containing 4 filled .30 rifle (rubber) magazines.
 
+# Aurora's Song - Added for uplink localization of .30Lg Standard mags
+uplink-security-30longriflemagazine-name = .30 Long Rifle Magazines
+uplink-security-30longriflemagazine-desc = A box containing 4 filled .30 Long rifle magazines.
+
+# Aurora's Song - Added for uplink localization of .30Lg Rubber mags
+uplink-security-30longriflemagazine-rubber-name = .30 Long Rifle Rubber Magazines
+uplink-security-30longriflemagazine-rubber-desc = a Box containing 4 filled .30 Long rifle (rubber) magazines.
+
+# Aurora's Song Added
 uplink-security-wt550magazine-name = .35 +P Top-mounted Magazines
 uplink-security-wt550magazine-desc = A box containing 3 filled .35 pistol (overpressure) top-mounted magazines.
 
-#Aurora's Song Added
+# Aurora's Song Added
 uplink-security-wt550magazine-rubber-name = .35 Rubber Top-mounted Magazines
 uplink-security-wt550magazine-rubber-desc = A box containing 3 filled .35 pistol (rubber) top-mounted magazines.
 

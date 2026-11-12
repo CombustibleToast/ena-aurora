@@ -1,0 +1,9 @@
+- type: entity
+  id: SfSparkIgnitionSource
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 0.5
+  - type: IgnitionSource
+    ignited: true
+    temperature: 800

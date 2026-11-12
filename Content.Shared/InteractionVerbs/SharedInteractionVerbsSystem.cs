@@ -18,18 +18,18 @@ using static Content.Shared.InteractionVerbs.InteractionVerbPrototype.EffectTarg
 
 namespace Content.Shared.InteractionVerbs;
 
-public abstract class SharedInteractionVerbsSystem : EntitySystem
+public abstract partial class SharedInteractionVerbsSystem : EntitySystem
 {
     private readonly InteractionAction.VerbDependencies _verbDependencies = new();
     private List<InteractionVerbPrototype> _globalPrototypes = default!;
 
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedDoAfterSystem _doAfters = default!;
-    [Dependency] private readonly ContestsSystem _contests = default!;
-    [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly SharedPopupSystem _popups = default!;
-    [Dependency] private readonly IPrototypeManager _protoMan = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedDoAfterSystem _doAfters = default!;
+    [Dependency] private ContestsSystem _contests = default!;
+    [Dependency] private INetManager _net = default!;
+    [Dependency] private SharedPopupSystem _popups = default!;
+    [Dependency] private IPrototypeManager _protoMan = default!;
+    [Dependency] private IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -180,6 +180,8 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
         }
 
         CreateVerbEffects(proto.EffectSuccess, Success, proto, args);
+
+        OnInteractionVerbPerformed(proto, args); // Aurora's Song - Interaction particles
     }
 
     #endregion
@@ -277,6 +279,7 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
         verb.Text = proto.Name;
         verb.Message = proto.Description;
         verb.DoContactInteraction = proto.DoContactInteraction;
+        ApplyInteractionParticleTiming(proto, verb); // Aurora's Song - Interaction particles
         verb.Priority = proto.Priority;
         verb.Icon = proto.Icon;
         verb.Category = VerbCategory.Interaction;

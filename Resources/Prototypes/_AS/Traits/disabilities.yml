@@ -1,0 +1,9 @@
+- type: trait
+  id: MetabolicCrashes
+  name: trait-metabolic-crashes-name
+  description: trait-metabolic-crashes-desc
+  category: Disabilities
+  cost: 0
+  speciesBlacklist: [IPC]
+  components:
+  - type: MetabolicCrashesScheduler

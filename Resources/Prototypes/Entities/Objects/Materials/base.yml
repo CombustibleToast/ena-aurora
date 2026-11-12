@@ -1,0 +1,53 @@
+﻿- type: entity
+  abstract: true
+  parent: [SolutionCryo, SolutionCompositeNormalStackable, BaseItem]
+  id: MaterialBaseRecycleable # Aurora's Song - Basically move everything but the Material component up a level from MaterialBase to allow recycling
+  description: A raw material.
+  components:
+  - type: Appearance
+  - type: Sprite
+    sprite: Objects/Materials/materials.rsi
+  - type: Item
+    sprite: Objects/Materials/materials.rsi
+    size: Normal
+#  - type: Material
+  - type: Tag
+    tags:
+    - DroneUsable # Frontier
+    - RawMaterial
+  - type: Damageable
+  - type: Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Extractable
+    grindableSolutionName: composite
+
+# Aurora's Song - Start -
+# This code adds a parent to MaterialBase with most of MaterialBase's properties, except the Material component
+# Which prevents recycling.  By then using the parent of Materialbase, we can selectively make items recycleable
+- type: entity
+  abstract: true
+  parent: MaterialBaseRecycleable
+  id: MaterialBase
+  components:
+  - type: Material
+# Aurora's Song - End
+
+- type: entity
+  abstract: true
+  parent: MaterialBase
+  id: BaseSheet
+  components:
+  - type: Tag
+    tags:
+    - Sheet
+    - ConstructionMaterial
+  - type: StaticPrice
+    price: 0

@@ -23,11 +23,11 @@ public sealed partial class SalvageSystem
     public static readonly EntProtoId CoordinatesDisk = "CoordinatesDisk";
     public static readonly ProtoId<LocalizedDatasetPrototype> PlanetNames = "NamesBorer";
 
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!; // Frontier
-    [Dependency] private readonly SalvageSystem _salvage = default!; // Frontier
+    [Dependency] private SharedPopupSystem _popupSystem = default!; // Frontier
+    [Dependency] private SalvageSystem _salvage = default!; // Frontier
 
     private const float ShuttleFTLMassThreshold = 50f; // Frontier
-    private const float ShuttleFTLRange = 150f; // Frontier
+    private const float ShuttleFTLRange = 50f; // Frontier, Aurora's Song 150>50
 
     private void OnSalvageClaimMessage(EntityUid uid, SalvageExpeditionConsoleComponent component, ClaimSalvageMessage args)
     {
@@ -129,13 +129,25 @@ public sealed partial class SalvageSystem
             return;
 
         // Based on SalvageSystem.Runner:OnConsoleFTLAttempt
-        if (!TryComp(entity, out TransformComponent? xform)) // Get the console's grid (if you move it, rip you)
+        if (!TryComp(entity, out TransformComponent? xform) ||
+            xform.GridUid is not { } shuttle) // Get the console's grid (if you move it, rip you) // Aurora's Song - Get the shuttle grid so its FTL cooldown can be checked.
         {
             PlayDenySound((entity, component));
             _popupSystem.PopupEntity(Loc.GetString("salvage-expedition-shuttle-not-found"), entity, PopupType.MediumCaution);
             UpdateConsoles((station.Value, data));
             return;
         }
+
+        // Aurora's Song Start - Prevent ending an expedition before the FTL is ready
+        // Fixes a bug where the shuttle and everyone on it to get deleted with the map.
+        if (HasComp<FTLComponent>(shuttle))
+        {
+            PlayDenySound((entity, component));
+            _popupSystem.PopupEntity(Loc.GetString("shuttle-ftl-recharge"), entity, PopupType.MediumCaution);
+            UpdateConsoles((station.Value, data));
+            return;
+        }
+        // Aurora's Song End
 
         // Frontier: check if any player characters or friendly ghost roles are outside
         var query = EntityQueryEnumerator<MindContainerComponent, MobStateComponent, TransformComponent>();

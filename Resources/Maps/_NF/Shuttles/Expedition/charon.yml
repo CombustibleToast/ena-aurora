@@ -791,7 +791,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -1.5,1.5
       parent: 1
-- proto: AirlockCaptainLocked
+- proto: AirlockCommand
   entities:
   - uid: 721
     components:

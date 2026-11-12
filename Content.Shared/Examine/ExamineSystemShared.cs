@@ -4,6 +4,7 @@ using Content.Shared.Ghost;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Photography; // Aurora's Song
 using JetBrains.Annotations;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
@@ -15,11 +16,13 @@ namespace Content.Shared.Examine
 {
     public abstract partial class ExamineSystemShared : EntitySystem
     {
-        [Dependency] private readonly OccluderSystem _occluder = default!;
-        [Dependency] private readonly SharedTransformSystem _transform = default!;
-        [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-        [Dependency] private readonly SharedInteractionSystem _interactionSystem = default!;
-        [Dependency] protected readonly MobStateSystem MobStateSystem = default!;
+        [Dependency] private OccluderSystem _occluder = default!;
+        [Dependency] private SharedTransformSystem _transform = default!;
+        [Dependency] private SharedContainerSystem _containerSystem = default!;
+        [Dependency] private SharedInteractionSystem _interactionSystem = default!;
+        [Dependency] protected MobStateSystem MobStateSystem = default!;
+
+        [Dependency] private EntityQuery<GhostComponent> _ghostQuery = default!;
 
         public const float MaxRaycastRange = 100;
 
@@ -43,8 +46,6 @@ namespace Content.Shared.Examine
 
         protected const float ExamineBlurrinessMult = 2.5f;
 
-        private EntityQuery<GhostComponent> _ghostQuery;
-
         /// <summary>
         ///     Creates a new examine tooltip with arbitrary info.
         /// </summary>
@@ -65,6 +66,11 @@ namespace Content.Shared.Examine
 
             if (!InRangeUnOccluded(examiner, entity, ExamineDetailsRange))
                 return false;
+
+            // Aurora's Song Start - Allow photos to detail examine
+            if (HasComp<PictureTakerComponent>(examiner))
+                return true;
+            // Aurora's Song End
 
             // Is the target hidden in a opaque locker or something? Currently this check allows players to examine
             // their organs, if they can somehow target them. Really this should be with userSeeInsideSelf: false, and a
@@ -268,7 +274,7 @@ namespace Content.Shared.Examine
             //Add an entity description if one is declared
             if (!string.IsNullOrEmpty(metadata.EntityDescription))
             {
-                message.AddText(metadata.EntityDescription);
+                message.AddMarkupOrThrow(metadata.EntityDescription);
                 hasDescription = true;
             }
 

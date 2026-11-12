@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NC Mail Pod
   description: A cramped yet reliable shuttle for delivering packages.
-  price: 12500 # 10826 0.05 11367.3
+  price: 13000 # 10826 0.05 11367.3 || Aurora's Song - 12500 -> 13000 to fix shipyard test fails
   category: Micro
   group: Sr
   access: Mail

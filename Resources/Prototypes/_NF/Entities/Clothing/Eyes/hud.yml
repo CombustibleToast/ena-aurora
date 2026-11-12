@@ -1,5 +1,5 @@
 - type: entity
-  parent: ClothingEyesHudSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingEyesHudSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingEyesHudNfsd
   name: NFSD hud
   description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and criminal records.
@@ -22,7 +22,7 @@
   - type: ShowJobIcons
 
 - type: entity
-  parent: [ClothingEyesHudMedical, ClothingEyesHudNfsd]
+  parent: [ ClothingEyesHudMedical, ClothingEyesHudNfsd ]
   id: ClothingEyesHudNfsdMed
   name: brigmedic hud
   description: An eye display that looks like a mixture of medical and nfsd huds.
@@ -36,7 +36,7 @@
     node: medsecHud
 
 - type: entity
-  parent: ClothingEyesHudSecurity
+  parent: [ C2ContrabandNanoTrasenNoValueRestricted, ClothingEyesHudSecurity ] # Aurora's Song - Added C2ContrabandNanoTrasenNoValueRestricted
   id: ClothingEyesHudNfsdPatch
   name: NFSD hud eyepatch
   description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and criminal records.

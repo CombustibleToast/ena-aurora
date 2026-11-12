@@ -1,0 +1,19 @@
+- type: constructionGraph
+  id: MP3Player
+  start: daw
+  graph:
+  - node: daw
+    entity: DawInstrumentMachineCircuitboard
+    edges:
+    - to: mp3
+      steps:
+      - tool: Cutting
+        doAfter: 5
+      - material: Cable
+        amount: 2
+        doAfter: 2
+      - material: Plastic
+        amount: 2
+        doAfter: 2
+  - node: mp3
+    entity: MediaPlayerInstrument

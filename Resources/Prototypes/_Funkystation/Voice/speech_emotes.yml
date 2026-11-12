@@ -1,0 +1,15 @@
+- type: emote
+  id: Gurgle
+  name: chat-emote-name-gurgle
+  category: Vocal
+  available: false
+  blacklist:
+    components:
+    - BorgChassis
+  chatMessages: [chat-emote-msg-gurgle]
+  chatTriggers:
+  - gurgle
+  - gurgles
+  - gurgled
+  - gurgling
+

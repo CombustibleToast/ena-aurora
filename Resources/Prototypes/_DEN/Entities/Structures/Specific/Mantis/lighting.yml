@@ -7,13 +7,15 @@
   components:
   - type: Sprite
     sprite: _DEN/Structures/Lighting/LightPosts/lampeidolitewell.rsi
-    drawdepth: Objects
+    drawdepth: FloorObjects # Aurora's Song: Fixes rendering on top of things it shouldn't
     snapCardinals: true
     noRot: true
     layers:
     - state: base
     - state: glow
       shader: unshaded
+      visible: false # Aurora's Song - Keep the glow in sync with the light.
+      map: [ "enum.ToggleableVisuals.Layer" ] # Aurora's Song
   - type: Fixtures
     fixtures:
       fix1:
@@ -35,6 +37,14 @@
     softness: 1.1
     color: "#d9418d"
   - type: Appearance
+  # Aurora's Song start - Hide the glow layer while the lamp is switched off.
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: { visible: true }
+          False: { visible: false }
+  # Aurora's Song end
   - type: ItemTogglePointLight
   - type: ItemToggle
     predictable: false
@@ -48,10 +58,23 @@
       params:
         volume: -2
         variation: 0.05
+  # Aurora's Song start - Allow buttons and other signaling devices to toggle Mantis lights.
+  - type: TriggerOnSignal
+  - type: DeviceLinkSink
+    ports:
+    - Trigger
+  - type: ItemToggleOnTrigger
+    predicted: false
+    showPopup: false
+  # Aurora's Song end
   - type: UnpoweredFlashlight # Powered by the noosphere
+  - type: Construction # Aurora's Song - Track the completed construction graph node.
+    graph: MantisFurniture
+    node: LightSomberEidoliteWellLamp
   - type: Damageable
-    damageContainer: Inorganic
     damageModifierSet: Metallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -73,7 +96,7 @@
             max: 3
           MaterialMnemolith1:
             min: 1
-            max: 3
+            max: 1 # Aurora's Song - Match construction recipe cost
       - !type:PlaySoundBehavior
         sound:
           collection: MetalGlassBreak
@@ -115,6 +138,9 @@
     enabled: false
     radius: 4
     energy: 6
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: LightSomberEidoliteFloorLamp
 
 - type: entity
   parent: LightSomberEidoliteFloorLamp

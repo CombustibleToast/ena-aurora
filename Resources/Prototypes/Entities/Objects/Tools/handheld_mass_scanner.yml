@@ -18,6 +18,7 @@
   - type: RadarConsole
     maxRange: 256
     followEntity: true
+    followEyeRotation: true # Aurora's Song - rotate with the user's eye rotation
   - type: Appearance
   - type: BatteryVisuals
   - type: GenericVisualizer

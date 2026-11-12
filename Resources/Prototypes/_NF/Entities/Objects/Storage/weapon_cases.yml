@@ -40,6 +40,7 @@
       - WeaponCaseInsertable
       tags:
       - Cartridge
+      - NFBlueprintAdvanced
 
 - type: entity
   name: weapon case
@@ -71,6 +72,7 @@
       - WeaponCaseInsertable
       tags:
       - Cartridge
+      - NFBlueprintAdvanced
 
 - type: entity
   name: ammo case
@@ -86,13 +88,13 @@
 
 - type: entity
   name: explosives case
-  parent: WeaponCaseShort
+  parent: [WeaponCaseShort, ContentsExplosionResistanceBase] # Aurora's Song - Added ContentsExplosionResistanceBase for examine
   id: WeaponCaseShortExplosives
   description: A reinforced casing for storing explosives.
   suffix: Short
   components:
   - type: ExplosionResistance
-    damageCoefficient: 0.2
+    damageCoefficient: 0.1 # Aurora's Song - Slightly buffed explosion resistance 0.2 > 0.1
   - type: Sprite
     sprite: _NF/Objects/Storage/Cases/explosivescaseshort.rsi
   - type: Item
@@ -151,3 +153,4 @@
       - Armor
       tags:
       - Cartridge
+      - NFBlueprintAdvanced

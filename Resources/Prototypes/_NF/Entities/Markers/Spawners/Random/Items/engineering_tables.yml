@@ -242,9 +242,9 @@
     - !type:NestedSelector
       tableId: TableDungeonLootEngineeringPowerCells
       weight: 0.25
-    - !type:NestedSelector
-      tableId: TableDungeonLootEngineeringCraftingComponents
-      weight: 0.30
+#    - !type:NestedSelector # Aurora's Song - removed to reduce the amount of random useless clutter spawned
+#      tableId: TableDungeonLootEngineeringCraftingComponents
+#      weight: 0.30
 
 # region Capacitors
 - type: entityTable # Random stack size: 1 to 5

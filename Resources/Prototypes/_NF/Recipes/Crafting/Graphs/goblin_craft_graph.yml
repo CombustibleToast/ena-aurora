@@ -658,7 +658,7 @@
       - component: GoblinVehicle
         name: construction-graph-component-goblin-vehicle
         icon:
-          sprite: _NF/Structures/Storage/magnetbox.rsi
+          sprite: _AS/Structures/Storage/magnetbox.rsi # Aurora's Song - Storage Resprites Batch 2
           state: rubbishbox
         doAfter: 1
       - component: NFChairFolding

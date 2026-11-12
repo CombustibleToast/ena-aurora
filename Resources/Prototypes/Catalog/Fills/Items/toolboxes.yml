@@ -16,6 +16,7 @@
         - !type:GroupSelector
           children:
           - id: FlashlightLantern
+          - id: ASHandheldFloodlight # Aurora
           - id: Flare
           - id: GlowstickGreen
         # Low-chance items
@@ -106,6 +107,8 @@
           prob: 0.7
         - id: ClothingHeadHatHardhatBlue
           prob: 0.5
+        - id: ASHandheldFloodlight # Aurora
+          prob: 0.3
 
 - type: entity
   id: ToolboxMechanicalFilledAllTools
@@ -173,6 +176,37 @@
   id: FoolboxTable
   table: !type:AllSelector
     children:
+    - !type:GroupSelector # Fun clothing
+      prob: 0.75
+      children:
+      - !type:NestedSelector
+        tableId: ClownOtherJobTable
+        weight: 6
+      - id: SprayFlowerPin
+      - id: ClothingHeadHatMagician
+      - id: ClothingHeadSafari
+      - id: ClothingHeadHatPirate
+      - id: ClothingHeadHatWizardFake
+      - id: ClothingHeadHatCowboyRed
+      - id: ClothingHeadHatBowlerHat
+      - id: ClothingHeadHatWitch
+      - id: ClothingOuterCoatExpensive
+      - id: ClothingOuterGhostSheet
+      - id: ClothingOuterHospitalGown
+      - id: ClothingShoesBling
+        weight: 0.5
+      - id: ClothingOuterCoatSpaceAsshole
+        weight: 0.5
+      - !type:NestedSelector
+        tableId: AllPartyHatsTable
+      - !type:NestedSelector
+        tableId: InsulsTable
+      - !type:GroupSelector # ~1/115
+        weight: 0.175
+        children:
+        - id: ClothingHeadHatCatEars
+        - id: ClothingHeadHatFancyCrown
+        - id: ClothingHeadHatChameleon
     - !type:GroupSelector # Offensive clown items
       children:
       - !type:NestedSelector
@@ -210,37 +244,6 @@
       - id: FoodBanana
       - id: FoodPieBananaCream
         weight: 0.75
-    - !type:GroupSelector # Fun clothing
-      prob: 0.75
-      children:
-      - !type:NestedSelector
-        tableId: ClownOtherJobTable
-        weight: 6
-      - id: SprayFlowerPin
-      - id: ClothingHeadHatMagician
-      - id: ClothingHeadSafari
-      - id: ClothingHeadHatPirate
-      - id: ClothingHeadHatWizardFake
-      - id: ClothingHeadHatCowboyRed
-      - id: ClothingHeadHatBowlerHat
-      - id: ClothingHeadHatWitch
-      - id: ClothingOuterCoatExpensive
-      - id: ClothingOuterGhostSheet
-      - id: ClothingOuterHospitalGown
-      - id: ClothingShoesBling
-        weight: 0.5
-      - id: ClothingOuterCoatSpaceAsshole
-        weight: 0.5
-      - !type:NestedSelector
-        tableId: AllPartyHatsTable
-      - !type:NestedSelector
-        tableId: InsulsTable
-      - !type:GroupSelector # ~1/115
-        weight: 0.175
-        children:
-        - id: ClothingHeadHatCatEars
-        - id: ClothingHeadHatFancyCrown
-        - id: ClothingHeadHatChameleon
 
 - type: entityTable
   id: ClownOtherJobTable

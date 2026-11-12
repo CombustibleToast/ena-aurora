@@ -1,0 +1,19 @@
+- type: traitCategory
+  id: BloodSwapTraits
+  name: trait-category-blood-swap
+  maxTraitPoints: 1
+
+- type: traitCategory
+  id: IPCSpeechSynth
+  name: trait-category-synthesizer
+  maxTraitPoints: 1
+
+- type: traitCategory
+  id: Alcohol
+  name: trait-category-alcohol
+  maxTraitPoints: 1
+
+- type: traitCategory
+  id: ArmRemovalTraits
+  name: trait-category-arm-removal
+  maxTraitPoints: 1

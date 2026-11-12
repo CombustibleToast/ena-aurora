@@ -1,0 +1,208 @@
+# region ears 
+- type: marking
+  id: FeroxiEarsDouble
+  bodyPart: HeadSide
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/ear_markings.rsi
+    state: feroxi-ears-double
+
+# region fins
+# main bit goes on head to layer under hair, then a little stupid back bit goes on HeadTop to layer over. i know this sucks but shhhhh
+- type: marking
+  id: FeroxiFin
+  bodyPart: Head
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin
+
+- type: marking
+  id: FeroxiFinBig
+  bodyPart: Head
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-big
+
+- type: marking
+  id: FeroxiFinTipped
+  bodyPart: Head
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-tip
+
+- type: marking
+  id: FeroxiFinBigTipped
+  bodyPart: Head
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-big
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-big-tip
+    
+# ears but not really
+- type: marking
+  id: FeroxiFinBack
+  bodyPart: HeadTop
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-back
+
+- type: marking
+  id: FeroxiFinBigBack
+  bodyPart: HeadTop
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-big-back
+
+- type: marking
+  id: FeroxiFinTippedBack
+  bodyPart: HeadTop
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-back
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-tip-back
+
+- type: marking
+  id: FeroxiFinBigTippedBack
+  bodyPart: HeadTop
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-big-back
+  - sprite: _AS/Mobs/Customization/Feroxi/fin_markings.rsi
+    state: feroxi-fin-big-tip-back
+
+# region tail
+- type: marking
+  id: FeroxiRoboticTail
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
+  bodyPart: Tail
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-uppertip
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-lowertip
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-thingy
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-endsegment
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-midsegment
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-basesegment
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-joints-dark
+
+- type: marking
+  id: FeroxiRoboticTailDorsal
+  parent: EmoteWhipThump # Aurora's Song - tail whip.
+  bodyPart: Tail
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-uppertip
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-lowertip
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-thingy
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-endsegment
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-midsegment
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-basesegment
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-joints-dark
+  - sprite: _DV/Mobs/Customization/Feroxi/tail_markings.rsi 
+    state: feroxi-dorsal
+
+- type: marking
+  id: FeroxiRoboticTailJointGlowOverlay
+  bodyPart: Tail
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-joints-glow
+  shader: unshaded
+
+- type: marking
+  id: FeroxiRoboticTailJointColorableOverlay
+  bodyPart: Tail
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/tail_markings.rsi
+    state: feroxi-tail-robot-joints
+
+# region body
+- type: marking
+  id: FeroxiTorsoGlowGills
+  bodyPart: Chest
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-torso-gills
+  shader: unshaded
+
+- type: marking
+  id: FeroxiLArmGlowGills
+  bodyPart: LArm
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-larm-gills
+  shader: unshaded
+
+- type: marking
+  id: FeroxiRArmGlowGills
+  bodyPart: RArm
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-rarm-gills
+  shader: unshaded
+
+- type: marking
+  id: FeroxiLLegGlowGills
+  bodyPart: LLeg
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-lleg-gills
+  shader: unshaded
+
+- type: marking
+  id: FeroxiRLegGlowGills
+  bodyPart: RLeg
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/body_markings.rsi
+    state: feroxi-rleg-gills
+  shader: unshaded
+
+# region head
+- type: marking
+  id: FeroxiCheekBarbels
+  bodyPart: HeadSide
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/head_markings.rsi
+    state: feroxi-cheek-barbels
+
+- type: marking
+  id: FeroxiEyebrowBarbels
+  bodyPart: HeadSide
+  groupWhitelist: [ Feroxi ]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Feroxi/head_markings.rsi
+    state: feroxi-eyebrow-barbels

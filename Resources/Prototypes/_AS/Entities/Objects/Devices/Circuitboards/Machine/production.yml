@@ -12,3 +12,20 @@
       Glass: 1
       Bluespace: 2
       Anomalite: 1
+
+- type: entity
+  parent: BaseMachineCircuitboard
+  id: AmmoFridgeCircuitboard
+  name: AmmoFridge machine board
+  description: A machine printed circuit board for a AmmoFridge.
+  components:
+  - type: Sprite
+    state: service
+  - type: MachineBoard
+    prototype: AmmoFridge
+    requirements:
+      Manipulator: 2 # Aurora's Song - Move Manipulator to requirements
+    stackRequirements:
+      Glass: 5
+      Plasteel: 5
+

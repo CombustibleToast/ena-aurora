@@ -12,6 +12,8 @@ public sealed class LogFilter
 
     public string? Search { get; set; }
 
+    public int? LogId { get; set; } // Aurora's Song - Allow querying admin log ID searches (i.e id:33)
+
     public HashSet<LogType>? Types { get; set; }
 
     public HashSet<LogImpact>? Impacts { get; set; }

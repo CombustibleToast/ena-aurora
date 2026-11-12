@@ -4,11 +4,15 @@
   name: somber chaise lounge
   description: "Technically it's a chaise \"longue,\" which is French for \"long chair,\" but you do lounge on it."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberPsychBed
   - type: Sprite
     sprite: _DEN/Structures/Furniture/furniture.rsi
     state: somberpsychbed
   - type: Damageable
     damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:

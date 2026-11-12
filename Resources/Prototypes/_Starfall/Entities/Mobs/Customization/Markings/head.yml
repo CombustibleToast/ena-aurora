@@ -1,0 +1,256 @@
+- type: marking
+  id: LumariHeadAthamas
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: athamas
+
+- type: marking
+  id: LumariHeadBottomHalf
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: bottom_half
+
+- type: marking
+  id: LumariHeadCharredHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: charred_head
+
+- type: marking
+  id: LumariHeadDeathheadHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: deathhead_head
+
+- type: marking
+  id: LumariHeadEyeRimScarLeft
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eye_rim_scar_left
+
+- type: marking
+  id: LumariHeadEyeRimScarRight
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eye_rim_scar_right
+
+- type: marking
+  id: LumariHeadEyeScarLeft
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eye_scar_left
+
+- type: marking
+  id: LumariHeadEyeScarRight
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eye_scar_right
+
+- type: marking
+  id: LumariHeadFanHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: fan_head
+
+- type: marking
+  id: LumariHeadFirewatchHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: firewatch_head
+
+- type: marking
+  id: LumariHeadGothicHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: gothic_head
+
+- type: marking
+  id: LumariHeadHeadBadmoltMoth
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: head_badmolt_moth
+
+- type: marking
+  id: LumariHeadHeadChimeraMoth
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: head_chimera_moth
+
+- type: marking
+  id: LumariHeadHeadTwistingMoth
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: head_twisting_moth
+
+- type: marking
+  id: LumariHeadJungleHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: jungle_head
+
+- type: marking
+  id: LumariHeadMoonflyHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: moonfly_head
+
+- type: marking
+  id: LumariHeadMothBurnL
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: moth_burn_l
+
+- type: marking
+  id: LumariHeadMothBurnR
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: moth_burn_r
+
+- type: marking
+  id: LumariHeadMothFaceClaw
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: moth_face_claw
+
+- type: marking
+  id: LumariHeadMothSlashL
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: moth_slash_l
+
+- type: marking
+  id: LumariHeadMothSlashR
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: moth_slash_r
+
+- type: marking
+  id: LumariHeadOakwormHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: oakworm_head
+
+- type: marking
+  id: LumariHeadPointyHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: pointy_head
+
+- type: marking
+  id: LumariHeadRaggedHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: ragged_head
+
+- type: marking
+  id: LumariHeadRoyalHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: royal_head
+
+- type: marking
+  id: LumariHeadTopHalf
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: top_half
+
+- type: marking
+  id: LumariHeadWhiteflyHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: whitefly_head
+
+- type: marking
+  id: LumariHeadWitchwingHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: witchwing_head
+
+- type: marking
+  id: LumariChitinidRadiantHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: radiant_head
+
+- type: marking
+  id: LumariChitinidSpottedHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: spotted_head
+
+- type: marking
+  id: LumariChitinidStripesHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: stripes_head
+
+- type: marking
+  id: LumariChitinidToxicHead
+  bodyPart: Head
+  groupWhitelist: [ Lumari ]
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/chitinid_parts.rsi
+    state: toxic_head
+

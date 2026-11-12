@@ -100,6 +100,7 @@ public sealed partial class ProfilePreviewSpriteView
             return; // Frontier
 
         var spawnSys = EntMan.System<StationSpawningSystem>();
+        var clearedNeck = false; // Aurora's Song - Shared neck slot preview
 
         foreach (var group in roleLoadout.SelectedLoadouts.OrderBy(x => roleProto!.Groups.FindIndex(e => e == x.Key))) // Frontier
         {
@@ -107,6 +108,8 @@ public sealed partial class ProfilePreviewSpriteView
             {
                 if (!_prototypeManager.Resolve(loadout.Prototype, out var loadoutProto))
                     continue;
+
+                PrepareNeckLoadoutPreview(loadoutProto, ref clearedNeck); // Aurora's Song - Shared neck slot preview.
 
                 spawnSys.EquipStartingGear(PreviewDummy, loadoutProto);
             }

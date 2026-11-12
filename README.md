@@ -1,5 +1,5 @@
 <div class="header" align="center">
-<img alt="Frontier Station" height="300" src="https://github.com/AuroraSong14/Aurora-Song-14/blob/master/Resources/Textures/_AS/Logo/logo.png" />
+<img alt="Aurora Sector" height="300" src="https://wiki.aurorasong.gay/resources/assets/Auroras_Song_Logo.png" />
 </div>
 
 Aurora Song is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
@@ -12,19 +12,19 @@ If you want to host or create content for Aurora Song, this is the repo you need
 
 <div class="header" align="center">
 
-[Discord](https://discord.gg/zUXmPrwbbM) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Wiki](https://wiki.aurorasong.net/index.php)
+[Discord](https://discord.gg/zUXmPrwbbM) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Wiki](https://wiki.aurorasong.gay/index.php)
 
 </div>
 
 ## Documentation/Wiki
 
-Our [wiki](https://wiki.aurorasong.net/index.php) has documentation on Aurora Song's content.
+Our [wiki](https://wiki.aurorasong.gay/index.php) has documentation on Aurora Song's content.
 
 ## Contributing
 
 We are happy to accept contributions from anybody. Get in Discord if you want to help, and don't be afraid to ask for help of your own!
 
-If you make any contributions, note that any changes made to files belonging to our upstream should be properly marked with comments (see the "Changes to upstream files" section in [CONTRIBUTING.md](https://github.com/AuroraSong14/Aurora-Song-14/blob/master/CONTRIBUTING.md)).
+If you make any contributions, note that any changes made to files belonging to our upstream should be properly marked with comments (see the "Changes to upstream files" section in [CONTRIBUTING.md](https://codeberg.org/Aurora-Song/Aurora-Song-14/src/branch/master/CONTRIBUTING.md)).
 
 ## AI-generated contributions disclaimer
 This project does not accept low-effort or wholesale AI-generated contributions. Examples include, but are not limited to:
@@ -39,7 +39,7 @@ Exceptions to this are simple tools like Rider's single-line completion feature.
 
 1. Clone this repo:
 ```shell
-git clone https://github.com/AuroraSong14/Aurora-Song-14.git
+git clone https://codeberg.org/Aurora-Song/Aurora-Song-14.git
 ```
 2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
 ```shell
@@ -54,7 +54,7 @@ Build the server using `dotnet build`.
 
 ## License
 
-Read [LEGAL.md](https://github.com/AuroraSong14/Aurora-Song-14/blob/master/LEGAL.md) for legal information regarding code licensing, including a table of attributions for each namespace within the codebase.
+Read [LEGAL.md](https://codeberg.org/Aurora-Song/Aurora-Song-14/src/branch/master/LEGAL.md) for legal information regarding code licensing, including a table of attributions for each namespace within the codebase.
 
 Most assets are licensed under CC-BY-SA 3.0 unless stated otherwise. Assets have their license and the copyright in the metadata file. Example.
 
@@ -74,7 +74,7 @@ Content under these subdirectories originate from their respective forks and may
 
 | Subdirectory | Fork Name | Fork Repository | License |
 |--------------|-----------|-----------------|---------|
-| `_AS` | Aurora Song | https://github.com/AuroraSong14/Aurora-Song-14/ | AGPL 3.0
+| `_AS` | Aurora Song | https://codeberg.org/Aurora-Song/Aurora-Song-14 | AGPL 3.0 |
 | `_NF` | Frontier Station | https://github.com/new-frontiers-14/frontier-station-14 | AGPL 3.0 |
 | `_CD` | Cosmatic Drift | https://github.com/cosmatic-drift-14/cosmatic-drift | MIT |
 | `_Corvax` | Corvax | https://github.com/space-syndicate/space-station-14 | MIT |
@@ -86,6 +86,7 @@ Content under these subdirectories originate from their respective forks and may
 | `_Goobstation` | Goob Station | https://github.com/Goob-Station/Goob-Station | AGPL 3.0 |
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
+| `_Starfall` | Starfall Drift | https://github.com/Starfall-Drift/Starfall-Drift | MIT |
 | `Nyanotrasen` | Nyanotrasen | https://github.com/Nyanotrasen/Nyanotrasen | MIT |
 
 Additional repos that we have ported features from without subdirectories are listed below.

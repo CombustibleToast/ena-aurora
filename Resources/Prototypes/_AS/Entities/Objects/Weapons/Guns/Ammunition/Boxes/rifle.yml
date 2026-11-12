@@ -1,0 +1,125 @@
+﻿# Aurora Song
+#region base
+- type: entity
+  id: ASBaseAmmunitionBoxRifle30Long
+  parent: NFBaseAmmunitionBox
+  name: ammunition box (.30 Long rifle)
+  abstract: true
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ASCartridgeRifle30Long
+    proto: ASCartridgeRifle30Long
+    capacity: 50
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/rifle.rsi
+
+- type: entity
+  id: ASAmmunitionBoxRifle30Long
+  parent: ASBaseAmmunitionBoxRifle30Long
+  name: ammunition box (.30 Long rifle)
+  components:
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+      - ASCartridgeRifle30Long
+    proto: ASCartridgeRifle30Long
+  - type: Sprite
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+      color: "#5b7b8c"
+    - state: decal-calibre-30L
+    - state: mag-1
+      map: [ "enum.GunVisualLayers.Mag" ]
+
+- type: entity
+  id: ASAmmunitionBoxRifle30LongOverpressure
+  parent: ASAmmunitionBoxRifle30Long
+  name: ammunition box (.30 Long rifle, overpressure)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30LongOverpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#5b7b8c"
+    - state: decal-01
+      color: "#ff8d00"
+    - state: decal-calibre-30L
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ASAmmunitionBoxRifle30LongIncendiary
+  parent: ASAmmunitionBoxRifle30Long
+  name: ammunition box (.30 Long rifle, incendiary)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30LongIncendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#5b7b8c"
+    - state: decal-01
+      color: "#ff0000"
+    - state: decal-calibre-30L
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ASAmmunitionBoxRifle30LongUranium
+  parent: ASAmmunitionBoxRifle30Long
+  name: ammunition box (.30 Long rifle, uranium)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30LongUranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#5b7b8c"
+    - state: decal-01
+      color: "#00ff00"
+    - state: decal-calibre-30L
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ASAmmunitionBoxRifle30LongPractice
+  parent: ASAmmunitionBoxRifle30Long
+  name: ammunition box (.30 Long rifle, practice)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30LongPractice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#5b7b8c"
+    - state: decal-01
+      color: "#dddddd"
+    - state: decal-calibre-30L
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+
+- type: entity
+  id: ASAmmunitionBoxRifle30LongRubber
+  parent: ASAmmunitionBoxRifle30Long
+  name: ammunition box (.30 Long rifle, rubber)
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgeRifle30LongRubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+      color: "#5b7b8c"
+    - state: decal-01
+      color: "#00b0ff"
+    - state: decal-calibre-30L
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]

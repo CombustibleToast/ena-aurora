@@ -25,3 +25,76 @@
     materialComposition:
       Glass: 250
       Steel: 200
+
+- type: entity
+  name: pocket floodlight
+  parent: [BaseLamp, RecyclableItemDeviceSmall]
+  id: ASHandheldFloodlight
+  description: A compact and highly portable floodlight.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Tools/handheld_floodlight.rsi
+    layers:
+      - state: flashlight
+      - state: flashlight-overlay
+        shader: unshaded
+        visible: false
+        map: [ "light" ]
+  - type: Item
+    sprite: _AS/Objects/Tools/handheld_floodlight.rsi
+    size: Small
+    heldPrefix: off
+  - type: ToggleableVisuals
+    spriteLayer: light
+    inhandVisuals:
+      left:
+      - state: on-inhand-left
+      right:
+      - state: on-inhand-right
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+        blacklist:
+          tags:
+          - MantisCaster
+  - type: PointLight
+    enabled: false
+    radius: 5
+    netsync: false
+  - type: Clothing
+    sprite: _AS/Objects/Tools/handheld_floodlight.rsi
+    quickEquip: false
+    equippedPrefix: off
+    slots:
+      - Belt
+
+- type: entity
+  name: tactical floodlight
+  parent: [ASHandheldFloodlight, BaseC2ContrabandUnredeemable]
+  id: ASHandheldTacticalFloodlight
+  description: A robust pocket floodlight used by mercenaries and private security.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Tools/tactical_floodlight.rsi
+  - type: Item
+    sprite: _AS/Objects/Tools/tactical_floodlight.rsi
+  - type: PointLight
+    enabled: false
+    color: "#cce6ff"
+    radius: 7
+    netsync: false
+  - type: Clothing
+    sprite: _AS/Objects/Tools/tactical_floodlight.rsi
+    quickEquip: false
+    equippedPrefix: off
+    slots:
+      - Belt
+  - type: MeleeWeapon
+    wideAnimationRotation: 90
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      collection: MetalThud

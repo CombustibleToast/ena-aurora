@@ -36,6 +36,7 @@ namespace Content.Shared.Humanoid
         Fire,
         LArmExtension, // Frontier: a species-specific extension layer, e.g. for harpy wings
         RArmExtension, // Frontier: a species-specific extension layer, e.g. for harpy wings
+        HeadOverlay, // Aurora's Song - markings that render over head features such as eyes
 
     }
 }

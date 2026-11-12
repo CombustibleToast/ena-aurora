@@ -4,6 +4,9 @@
   name: somber mannequin
   description: "A gloomy mannequin with only slightly unsettling electrum eyes, made to display clothes."
   components:
+  - type: Construction # Aurora's Song
+    graph: MantisFurniture
+    node: SomberMannequin
   - type: Sprite
     sprite: _DEN/Structures/Decoration/mannequin.rsi
     state: sombermannequin
@@ -21,6 +24,7 @@
     - map: [ "head" ]
   - type: Damageable
     damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:

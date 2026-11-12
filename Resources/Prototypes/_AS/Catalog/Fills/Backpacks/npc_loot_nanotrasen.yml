@@ -1,0 +1,338 @@
+﻿- type: entity
+  parent: BaseItem
+  id: NanoTrasenBackpackLoot
+  name: NT officer backpack
+  description: LOOT! LOOT! LOOT!
+  abstract: true
+  categories: [HideSpawnMenu]
+  suffix: NPC Loot
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/security.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Back/Backpacks/security.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: Item
+    size: Normal
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash10
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecGruntMk58
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Grunt, Mk58
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash2500
+    - id: NFWeaponPistolMk58Expedition
+    - id: NFMagazinePistol35
+    - id: NFMagazinePistol35
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: SmokeGrenade
+      prob: 0.5
+      orGroup: payload
+    - id: GrenadeFlashBang
+      prob: 0.5
+      orGroup: payload
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecGruntBaton
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Grunt, Baton
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash2500
+    - id: Brutepack
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: SmokeGrenade
+      prob: 0.5
+      orGroup: payload
+    - id: GrenadeFlashBang
+      prob: 0.5
+      orGroup: payload
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecGruntLecter
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Grunt, Lecter
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash5000
+    - id: NFWeaponRifleAssaultLecterExpedition
+    - id: NFMagazineRifle20
+    - id: NFMagazineRifle20
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: ExplosivePayload
+      prob: 0.2
+      orGroup: payload
+    - id: GrenadeFlashBang
+      prob: 0.5
+      orGroup: payload
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecGruntLaser
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Grunt, Laser
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash5000
+    - id: NFWeaponEnergyRifleCarbineExpedition
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    - id: ExplosivePayload
+      prob: 0.2
+      orGroup: payload
+    - id: GrenadeFlashBang
+      prob: 0.5
+      orGroup: payload
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecMedicDrozd
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Medic, Drozd
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash2500
+    - id: NFWeaponSubMachineGunDrozdExpedition
+    - id: NFMagazineSubMachineGun35
+    - id: NFMagazineSubMachineGun35
+    - id: Gauze
+    - id: Gauze
+    - id: EmergencyMedipen
+      prob: 0.6
+    - id: StimulantAutoInjector
+      prob: 0.6
+    - id: HemostasisAutoInjector
+      prob: 0.6
+    - id: PolyAutoInjector
+      prob: 0.33
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecMedicWt550
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Medic, WT
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash2500
+    - id: NFWeaponSubMachineGunWt550Expedition
+    - id: NFMagazineSubMachineGunTopMounted35
+    - id: NFMagazineSubMachineGunTopMounted35
+    - id: Gauze
+    - id: Gauze
+    - id: EmergencyMedipen
+      prob: 0.6
+    - id: StimulantAutoInjector
+      prob: 0.6
+    - id: HemostasisAutoInjector
+      prob: 0.6
+    - id: PolyAutoInjector
+      prob: 0.33
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecWarden
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Warden
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash5000
+    - id: NFWeaponShotgunEnforcerExpedition
+      orGroup: Weapon
+    - id: ASWeaponEnergyShotgun
+      orGroup: Weapon
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: JetpackSecurityFilled
+    - id: ClothingOuterCoatWarden
+      orGroup: DripOuter
+    - id: ClothingHeadHatBeretWarden
+      orGroup: DripHead
+    - id: ClothingOuterWinterWardenUnarmored
+      orGroup: DripOuter
+    - id: ClothingOuterWinterWarden
+      orGroup: DripOuter
+    - id: ClothingHeadHatWarden
+      orGroup: DripHead
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_SecHoS
+  name: NT officer backpack
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: HoS
+  components:
+  - type: SpawnItemsOnUse
+    items:
+    - id: SpaceCash5000
+    - id: ASWeaponRifleGarandCeremonialExpedition
+    - id: ASMagazineEnblocRifle30Long
+    - id: ASMagazineEnblocRifle30Long
+    - id: SpaceCash5000
+      prob: 0.8
+    - id: EncryptionKeyNanotrasen
+    - id: JetpackSecurityFilled
+    - id: ASWeaponEnergyCharonMagnum
+      prob: 0.05
+    - id: SpawnDungeonLootMaterialsBasicFull
+      prob: 0.5
+    - id: ClothingOuterCoatHoSTrench
+      orGroup: DripOuter
+    - id: ClothingNeckMantleHOS
+      orGroup: DripOuter
+    - id: ClothingHeadHatHoshat
+      orGroup: DripHead
+    - id: ClothingHeadHatBeretHoS
+      orGroup: DripHead
+    sound:
+      path: /Audio/Items/jumpsuit_equip.ogg
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_Captain
+  name: NT Captain's bag
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: Captain
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/commandveteran.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Back/Backpacks/commandveteran.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: SpawnItemsOnUse
+    items:
+    - id: ASWeaponEG4EnergyMagnumExpedition
+      orGroup: gun
+    - id: ASWeaponEnergyPistolPulseExpedition
+      orGroup: gun
+    - id: SpaceCash10000
+    - id: SpaceCash10000
+      prob: 0.8
+    - id: ClothingBackpackSatchelCommandveteran
+      orGroup: DripBag
+    - id: ClothingBackpackCommandveteran
+      orGroup: DripBag
+    - id: ClothingBackpackDuffelCommVet
+      orGroup: DripBag
+    - id: EncryptionKeyNanotrasen
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_Blueshield
+  name: NT Blueshield's bag
+  description: Oh boy a backpack full of loot left behind by a dead person!
+  suffix: BSO
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/commandveteran.rsi
+    state: icon
+  - type: Clothing
+    sprite: Clothing/Back/Backpacks/commandveteran.rsi
+    quickEquip: false
+    slots:
+    - back
+  - type: SpawnItemsOnUse
+    items:
+    - id: WeaponCaseChesterExpeditionT4
+      orGroup: gun
+    - id: WeaponSubMachineGunWt550BSOExpedition
+      orGroup: gun
+    - id: SpaceCash10000
+    - id: ClothingOuterHardsuitBlueshield
+    - id: ClothingBlueshieldArmoredKimono
+      orGroup: outer
+    - id: ClothingBlueshieldArmoredVest
+      orGroup: outer
+    - id: ClothingBlueshieldArmourVest
+      orGroup: outer
+    - id: ClothingBlueshieldArmoredMarine
+      orGroup: outer
+    - id: ClothingBlueshieldArmoredJacket
+      orGroup: outer
+    - id: ClothingBlueshieldArmoredCoat
+      orGroup: outer
+    - id: ClothingBlueshieldArmoredCowboyJacket
+      orGroup: outer
+    - id: SpaceCash10000
+      prob: 0.8
+
+- type: entity
+  parent: NanoTrasenBackpackLoot
+  id: NanoTrasenBackpackLoot_DeathSquad
+  name: Commando's lootbag
+  description: What the hell was that...
+  components:
+    - type: Sprite
+      sprite: Clothing/Back/Backpacks/ertsec.rsi
+    - type: Clothing
+      sprite: Clothing/Back/Backpacks/ertsec.rsi
+      quickEquip: false
+      slots:
+      - back
+    - type: SpawnItemsOnUse
+      items:
+        - id: ASWeaponMk1UEPulseRifle
+        - id: ASClothingOuterHardsuitSatanus

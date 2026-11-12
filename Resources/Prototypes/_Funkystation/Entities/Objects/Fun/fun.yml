@@ -1,0 +1,18 @@
+- type: entity
+  id: BoxFunBoxing
+  parent: CardboardBoxLargeService
+  name: boxing box
+  description: Want to set up an underground fight club or host a tournament amongst station crew? This order is for you!
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ClothingHandsGlovesBoxingRed
+        - id: ClothingHandsGlovesBoxingBlue
+        - id: ClothingHandsGlovesBoxingYellow
+        - id: ClothingHandsGlovesBoxingGreen
+        - id: UniformShortsRed
+          amount: 3
+        - id: UniformShortsRedWithTop
+          amount: 3

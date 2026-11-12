@@ -12,3 +12,25 @@
       tags:
       - DroneUsable
       - HighRiskItem
+
+- type: entity # I confess I basically copy/pasted the syndicate shuttleconsole circuitboard
+  parent: [ BaseComputerCircuitboard, BaseC2ContrabandSecure ]
+  id: SLEShuttleConsoleCircuitboard
+  name: SLE shuttle console board
+  description: A computer printed circuit board for an SLE shuttle console.
+  components:
+  - type: ComputerBoard
+    prototype: ComputerShuttleSLE
+
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: SignalControlComputerCircuitboard
+  name: signal control computer board
+  description: A computer printed circuit board for a signal control computer.
+  components:
+  - type: Sprite
+    state: cpu_engineering
+  - type: ComputerBoard
+    prototype: ComputerSignalConsole
+  - type: ComputerTabletopBoard
+    prototype: ComputerTabletopSignalConsole

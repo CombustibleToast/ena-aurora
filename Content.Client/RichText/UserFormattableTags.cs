@@ -22,4 +22,28 @@ public static class UserFormattableTags
         typeof(ItalicTag),
         typeof(MonoTag),
     ];
+
+    /// <summary>
+    /// Tags allowed in Silicon UIs. Extends from BaseAllowedTags.
+    /// </summary>
+    public static readonly Type[] SiliconAllowedTags =
+    [
+        ..BaseAllowedTags,
+        typeof(ScrambleTag)
+    ];
+
+    // DEN Start - allow in-message coloring and formatting
+    /// <summary>
+    /// A list of tags that wouldn't cause any issues to render inside a message.
+    /// </summary>
+    public static readonly Type[] ChatAllowedTags =
+    [
+        typeof(BoldItalicTag),
+        typeof(BoldTag),
+        typeof(ColorTag),
+        typeof(ItalicTag),
+        typeof(MonoTag),
+        typeof(FontTag), // Aurora's Song - Make font size changeable
+    ];
+    // DEN End
 }

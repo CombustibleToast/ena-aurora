@@ -452,6 +452,14 @@
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fluffy
 
+- type: marking # Aurora's Song - Custom wagging variant
+  id: VulpTailFluffyAnimated
+  bodyPart: Tail
+  groupWhitelist: []
+  sprites:
+    - sprite: _AS/Mobs/Customization/Vulpkanin/tail_markings.rsi
+      state: fluffy_wag
+
 - type: marking
   id: VulpTailDalmatianAnimated # Aurora's Song - Support wagging
   bodyPart: Tail

@@ -1,0 +1,65 @@
+- type: entity
+  parent: PosterBase
+  id: ASChameleonPoster
+  name: chameleon poster
+  description: A poster that can be changed to display various designs.
+  components:
+  - type: Sprite
+    state: poster1_legit
+  - type: ChameleonDecoration
+    group: Poster
+    selected: PosterLegitHereForYourSafety
+  - type: Construction
+    graph: ASChameleonPoster
+    node: poster
+  - type: ActivatableUI
+    key: enum.ChameleonDecorationUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonDecorationUiKey.Key:
+        type: ChameleonDecorationBoundUserInterface
+  - type: InteractionOutline
+
+- type: entity
+  parent: PaintingBase
+  id: ASChameleonPainting
+  name: chameleon painting
+  description: A framed canvas that can be changed to display various designs.
+  components:
+  - type: Sprite
+    state: painting0
+  - type: ChameleonDecoration
+    group: Painting
+    selected: PaintingEmpty
+  - type: Construction
+    graph: ASChameleonPainting
+    node: painting
+  - type: ActivatableUI
+    key: enum.ChameleonDecorationUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonDecorationUiKey.Key:
+        type: ChameleonDecorationBoundUserInterface
+  - type: InteractionOutline
+
+- type: entity
+  parent: BaseSign
+  id: ASChameleonSign
+  name: chameleon sign
+  description: A wall sign that can be changed to display various designs.
+  components:
+  - type: Sprite
+    state: security
+  - type: ChameleonDecoration
+    group: Sign
+    selected: SignSecurity
+  - type: Construction
+    graph: ASChameleonSign
+    node: sign
+  - type: ActivatableUI
+    key: enum.ChameleonDecorationUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ChameleonDecorationUiKey.Key:
+        type: ChameleonDecorationBoundUserInterface
+  - type: InteractionOutline

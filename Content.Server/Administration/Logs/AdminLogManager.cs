@@ -28,17 +28,17 @@ namespace Content.Server.Administration.Logs;
 
 public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogManager
 {
-    [Dependency] private readonly IConfigurationManager _configuration = default!;
-    [Dependency] private readonly ILogManager _logManager = default!;
-    [Dependency] private readonly IServerDbManager _db = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IDynamicTypeFactory _typeFactory = default!;
-    [Dependency] private readonly IReflectionManager _reflection = default!;
-    [Dependency] private readonly IDependencyCollection _dependencies = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
-    [Dependency] private readonly ISharedPlaytimeManager _playtime = default!;
-    [Dependency] private readonly ISharedChatManager _chat = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private IConfigurationManager _configuration = default!;
+    [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private IServerDbManager _db = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IDynamicTypeFactory _typeFactory = default!;
+    [Dependency] private IReflectionManager _reflection = default!;
+    [Dependency] private IDependencyCollection _dependencies = default!;
+    [Dependency] private ISharedPlayerManager _player = default!;
+    [Dependency] private ISharedPlaytimeManager _playtime = default!;
+    [Dependency] private ISharedChatManager _chat = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     public const string SawmillId = "admin.logs";
 
@@ -311,7 +311,14 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         Add(type, LogImpact.Medium, ref handler);
     }
 
+    // Aurora's Song Start - Allow excluding sensitive flag so we don't have to change every call.
     public override void Add(LogType type, LogImpact impact, [System.Runtime.CompilerServices.InterpolatedStringHandlerArgument("")] ref LogStringHandler handler)
+    {
+        Add(type, impact, false, ref handler);
+    }
+
+    // Aurora's Song - Allow log to mark sensitive content.
+    public override void Add(LogType type, LogImpact impact, bool sensitive, [System.Runtime.CompilerServices.InterpolatedStringHandlerArgument("")] ref LogStringHandler handler)
     {
         var message = handler.ToStringAndClear();
         if (!Enabled)
@@ -344,9 +351,11 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             Impact = impact,
             Date = DateTime.UtcNow,
             Message = message,
+            Sensitive = sensitive, // Aurora's Song - Sensitive Logs
             Json = json,
             Players = players,
         };
+        // Aurora's Song End
 
         DoAdminAlerts(players, message, impact, handler);
 

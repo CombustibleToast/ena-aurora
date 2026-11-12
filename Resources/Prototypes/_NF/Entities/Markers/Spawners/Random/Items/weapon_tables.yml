@@ -121,6 +121,7 @@
       #- id: SpearSharkMinnow Aurora: Moved to t2
       - id: CaptainSabre
       - id: ClothingHandsGlovesNorthStar
+      - id: ClothingHandsBaghNakh
       - id: ToolboxSyndicate
       #- id: WeaponCrusherDagger  # Aurora: move to t3
       #- id: WeaponCrusher # Aurora: move to t3
@@ -204,10 +205,11 @@
       - id: WeaponCaseShortLuckyExpedition
       - id: WeaponCaseShortDeckardExpedition
       #- id: WeaponCaseShortRitland45Expedition
-      - id: WeaponCaseLongBarlowsBoltExpedition
+      - id: WeaponCaseLongMosinExpedition # Aurora's Song | Mosin reworked
       - id: WeaponCaseLongRepeaterExpedition
       - id: WeaponCaseLongSniperCeremonialExpedition
       - id: WeaponCaseShortSvalinnExpedition # Svalinn to T1 | Aurora Song
+      - id: WeaponCaseShuvitExpeditionT1 # Aurora Song
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier2
@@ -235,6 +237,7 @@
       - id: WeaponCaseLongMusketExpedition # Musket to T2 | Aurora Song
       - id: WeaponCaseLongLaserCarbineExpedition # Laser Carbine to T2 | Aurora Song
       - id: WeaponCaseShortPython45Expedition # Aurora: Pyhton to T2
+      - id: WeaponCaseCasperExpeditionT2 # Aurora
       - id: WeaponCaseLongTypewriterExpedition # Aurora's Song Typewriter to T2
     - !type:NestedSelector
       weight: 0.05
@@ -262,6 +265,9 @@
       - id: WeaponCaseKasyreExpedition # Aurora Weapon
       - id: WeaponCaseShortCobra # Cobra to T3 | Aurora Song
       - id: WeaponCaseShortN1984Expedition # N1984 to T3 | Aurora Song
+      - id: WeaponCaseShortAdderExpeditionT3 # Aurora
+      - id: WeaponCaseAnacondaExpeditionT3 # Aurora
+      - id: WeaponCaseXiuhcoatlExpeditionT3 # Aurora
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier4
@@ -275,7 +281,7 @@
       weight: 0.95
       children:
       - id: WeaponCaseLongSm
-      - id: WeaponCaseLongVulcanExpedition
+#      - id: WeaponCaseLongVulcanExpedition # Aurora's Song - Reattributed, and moved to T5
       - id: WeaponCaseLongBulldog
       - id: WeaponCaseLongEnforcerExpedition
       - id: WeaponCaseShortAntiqueLaserExpedition
@@ -286,6 +292,7 @@
       - id: WeaponCaseLongC20r # C20r to T4 | Aurora Song
       - id: WeaponCaseAP4CExpeditionT4 # Aurora
       - id: WeaponCaseLongEstocExpeditionT4 # Aurora
+      - id: WeaponCaseAkurraExpeditionT4 # Aurora
       - id: WeaponCaseLongHristovExpedition # Aurora's Song Hristov to T4
       - id: WeaponCaseLongHushpupExpeditionT4 # Aurora's Song
     - !type:NestedSelector
@@ -302,11 +309,15 @@
       children:
       #- id: WeaponCaseLongLauncherRocketExpedition #Aurora: t6
       #- id: WeaponCaseLongLauncherChinaLake #  #Aurora: t6
+      - id: WeaponCaseLongVulcanExpeditionT5 # Aurora's Song - Moved from T4 to T5 following major buff.
       - id: WeaponCaseHeavyLightMachineGunL6
       - id: WeaponCaseLongEnergyGunExpedition
       - id: WeaponCaseLongLaserCannonExpedition
       - id: WeaponCaseLongEstocExpeditionT5 # Aurora
       #- id: WeaponCaseHeavyAsmgtExpeditions  #Aurora: t6
+      - id: WeaponCaseLongBasiliskExpeditionT5 # Aurora
+      - id: WeaponCaseAnankeExpeditionT5 # Aurora
+      - id: WeaponCaseGlykonExpeditionT5 # Aurora
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier6
@@ -399,9 +410,9 @@
   id: TableDungeonLootWeaponsAmmunition
   table: !type:GroupSelector
     children:
-    - !type:NestedSelector
-      weight: 0.15
-      tableId: TableDungeonLootWeaponsAmmunitionRubber
+    # - !type:NestedSelector Aurora's Song commented out
+    #   weight: 0.15
+    #   tableId: TableDungeonLootWeaponsAmmunitionRubber
     - !type:NestedSelector
       weight: 0.3
       tableId: TableDungeonLootWeaponsAmmunitionLethal
@@ -411,9 +422,9 @@
     - !type:NestedSelector
       weight: 0.15
       tableId: TableDungeonLootWeaponsAmmunitionUranium
-    - !type:NestedSelector
-      weight: 0.05
-      tableId: TableDungeonLootWeaponsAmmunitionPractice
+    # - !type:NestedSelector Aurora's Song commented out
+    #   weight: 0.05
+    #   tableId: TableDungeonLootWeaponsAmmunitionPractice
 
 # region ammo lethal
 - type: entityTable
@@ -421,6 +432,7 @@
   table: !type:GroupSelector
     children:
     - id: WeaponCaseShortAmmoBoxLethal45
+    - id: WeaponCaseShortEchionCanisterSyndicate # Aurora
     - !type:GroupSelector
       children:
       - id: WeaponCaseShortAmmoBoxLethal20
@@ -469,6 +481,7 @@
     - id: WeaponCaseShortAmmoBoxIncendiary35
     - id: WeaponCaseShortAmmoBoxIncendiaryShotgun
     - id: WeaponCaseShortAmmoBoxIncendiary45
+    - id: WeaponCaseShortEchionCanisterSyndicate # Aurora
 
 # region ammo uranium
 - type: entityTable
@@ -482,16 +495,16 @@
     - id: WeaponCaseShortAmmoBoxUranium45
 
 # region ammo practice
-- type: entityTable
-  id: TableDungeonLootWeaponsAmmunitionPractice
-  table: !type:GroupSelector
-    children:
-    - id: WeaponCaseShortAmmoBoxPractice20
-    - id: WeaponCaseShortAmmoBoxPractice30
-    - id: WeaponCaseShortAmmoBoxPractice35
-    - id: WeaponCaseShortAmmoBoxPractice25
-    - id: WeaponCaseShortAmmoBoxPracticeShotgun
-    - id: WeaponCaseShortAmmoBoxPractice45
+# - type: entityTable
+#   id: TableDungeonLootWeaponsAmmunitionPractice
+#   table: !type:GroupSelector
+#     children:
+#     - id: WeaponCaseShortAmmoBoxPractice20
+#     - id: WeaponCaseShortAmmoBoxPractice30
+#     - id: WeaponCaseShortAmmoBoxPractice35
+#     - id: WeaponCaseShortAmmoBoxPractice25
+#     - id: WeaponCaseShortAmmoBoxPracticeShotgun
+#     - id: WeaponCaseShortAmmoBoxPractice45
 
 # region combined
 - type: entityTable

@@ -11,7 +11,7 @@
 - type: reaction
   id: BuzzochloricBees
   reactants:
-    Saxoite: # do you like jazz (not sorry)
+    Brass: # do you like jazz (not sorry)
       amount: 1
     Fiber: # bees are fuzzy
       amount: 1
@@ -143,20 +143,20 @@
   products:
     Laughter: 2
 
-- type: reaction
-  id: CreateCrystals
-  quantized: true
-  minTemp: 374
-  reactants:
-    Sugar:
-      amount: 15
-    Water:
-      amount: 15
-    Ethanol:
-      amount: 5
-  effects:
-    - !type:SpawnEntity
-      entity: ShardCrystalRandom
+#- type: reaction # imp, food coloring see imp/fun.yml
+#  id: CreateCrystals
+#  quantized: true
+#  minTemp: 374
+#  reactants:
+#    Sugar:
+#      amount: 15
+#    Water:
+#      amount: 15
+#    Ethanol:
+#      amount: 5
+#  effects:
+#    - !type:SpawnEntity
+#      entity: ShardCrystalRandom
 
 - type: reaction
   id: Gunpowder

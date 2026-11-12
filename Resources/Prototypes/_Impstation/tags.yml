@@ -1,0 +1,19 @@
+# PUT YOUR TAGS IN ALPHABETICAL ORDER
+
+- type: Tag
+  id: CartridgeBazooka
+
+- type: Tag
+  id: Crystal # BountyCrystal
+
+- type: Tag
+  id: EchionGun
+
+- type: Tag
+  id: Plushie
+
+- type: Tag
+  id: SpeedLoaderAM
+
+- type: Tag
+  id: WeldingTool

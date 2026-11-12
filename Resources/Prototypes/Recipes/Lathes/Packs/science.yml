@@ -9,6 +9,7 @@
   - ExosuitFabricatorMachineCircuitboard
   - CutterMachineCircuitboard
   - BorgChargerCircuitboard
+  - StationAiFixerCircuitboard # Aurora's Song - adds station AI restoration console
 
 ## Dynamic
 
@@ -21,6 +22,7 @@
   - AnomalyLocatorWide
   - HoloprojectorField
   - SignallerAdvanced
+  - SignalControlComputerCircuitboard # Aurora's Song - Signal Control Computer
   # - DeviceQuantumSpinInverter # Frontier
   - DeviceDesynchronizer
   - NFClothingBackpackHarmpack # Frontier: use NF variant
@@ -96,6 +98,7 @@
   - ComputerTelevisionCircuitboard
   - SurveillanceWirelessCameraMovableCircuitboard
   - SurveillanceWirelessCameraAnchoredCircuitboard
+  - SignalControlComputerCircuitboard # Aurora's Song - Signal Control Computer
 
 - type: latheRecipePack
   id: MechBoards

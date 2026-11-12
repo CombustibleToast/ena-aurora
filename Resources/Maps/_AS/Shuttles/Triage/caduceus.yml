@@ -6527,6 +6527,13 @@ entities:
     - type: Transform
       pos: 7.5,-8.5
       parent: 1
+- proto: AmbulanceLootSpawner
+  entities:
+  - uid: 3482
+    components:
+    - type: Transform
+      pos: 3.5,-6.5
+      parent: 1
 - proto: LockerChiefMedicalOfficerFilled
   entities:
   - uid: 631

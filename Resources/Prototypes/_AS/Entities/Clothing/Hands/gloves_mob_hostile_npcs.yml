@@ -1,0 +1,203 @@
+﻿# Gloves with a fake Lecter visual for hostile NPCs.
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackLecter
+  name: combat gloves
+  suffix: lect
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi
+        state: inhand-left
+
+# Gloves with a fake LaserCarbine visual for hostile NPCs.
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackLaser
+  name: combat gloves
+  suffix: laser
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+        state: inhand-left
+
+# Gloves with a fake Drozd visual for hostile NPCs.
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackDrozd
+  name: combat gloves
+  suffix: drozd
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+        state: inhand-left
+
+# Gloves with a fake WT-550 visual for hostile NPCs.
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackWT550
+  name: combat gloves
+  suffix: laser
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
+        state: inhand-left
+
+# Gloves with a fake Enforcer visual for hostile NPCs.
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackEnforcer
+  name: combat gloves
+  suffix: enforcer
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Shotguns/enforcer_inhands_64x.rsi
+        state: inhand-right
+
+# Gloves with a fake Garand visual for hostile NPCs
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackGarand
+  name: combat gloves
+  suffix: garand
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+      color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: _DV/Objects/Weapons/Guns/Rifles/ceremonial_grand.rsi
+        state: inhand-right
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackCombatPulsePistol
+  name: combat gloves
+  suffix: combat
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+    color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Battery/pulse_pistol.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackCombatChester
+  name: combat gloves
+  suffix: combat
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+    color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: _Goobstation/Objects/Weapons/Guns/Lever/chester.rsi
+        state: inhand-left
+
+- type: entity
+  parent: ClothingHandsGlovesColorBlackSMG
+  id: ClothingHandsGlovesColorBlackCombatPulseRifle
+  name: combat gloves
+  suffix: combat
+  description: Some gloves with reinforced knuckles and a sleek design, perfect for combat situations.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Color/color.rsi
+    layers:
+    - state: icon
+    color: "#535353"
+  - type: Clothing
+    clothingVisuals:
+      gloves:
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        color: "#535353"
+      - sprite: Objects/Weapons/Guns/Battery/pulse_rifle.rsi
+        state: inhand-left

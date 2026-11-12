@@ -1,0 +1,137 @@
+- type: marking
+  id: LumariEyesDefault
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: default_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: default_secondary
+
+- type: marking
+  id: LumariHeadEyesSoft
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+    layers:
+      eyes_soft_skin:
+        type:
+          !type:SkinColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eyes_soft
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eyes_heterochromia_soft
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: eyes_soft_skin
+
+- type: marking
+  id: LumariHeadMothbiggereyes
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: mothbiggereyes_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/head.rsi
+    state: mothbiggereyes_secondary
+
+- type: marking
+  id: LumariHeadMotheyeliner
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+    layers:
+      motheyeliner_primary:
+        type:
+          !type:SimpleColoring
+            color: "#000000"
+      motheyeliner_tertiary:
+        type:
+          !type:SimpleColoring
+            color: "#000000"
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: motheyeliner_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: motheyeliner_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: motheyeliner_tertiary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: motheyeliner_quaternary
+
+- type: marking
+  id: LumariEyesReflectiveSoft
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+    layers:
+      reflective_eyes_soft_tertiary:
+        type:
+          !type:SkinColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflective_eyes_soft_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflective_eyes_soft_secondary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflective_eyes_soft_tertiary
+
+- type: marking
+  id: LumariEyesReflectiveBig
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflectivebiggereyes_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflectivebiggereyes_secondary
+
+- type: marking
+  id: LumariEyesReflective
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflectiveeyes_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: reflectiveeyes_secondary
+
+- type: marking
+  id: LumariEyesTiny
+  bodyPart: Eyes
+  groupWhitelist: [ Lumari ]
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+  sprites:
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: tiny_eyes_primary
+  - sprite: _Starfall/Mobs/Customization/Lumari/eyes.rsi
+    state: tiny_eyes_secondary
+

@@ -109,6 +109,10 @@
     # Items
     - id: ClothingNeckIFFNeutral
       prob: 0.2
+    - id: ASShoulderTaclight # Aurora
+      prob: 0.1
+    - id: ASHandheldTacticalFloodlight # Aurora
+      prob: 0.1
     # Bonus Loot T1
     - id: SpaceCash1000
       prob: 0.9
@@ -164,6 +168,10 @@
     # Items
     - id: ClothingNeckIFFNeutral
       prob: 0.2
+    - id: ASShoulderTaclight # Aurora
+      prob: 0.1
+    - id: ASHandheldTacticalFloodlight # Aurora
+      prob: 0.1
     # Bonus Loot T2
     - id: SpaceCash2500
       prob: 0.9
@@ -226,6 +234,10 @@
     # Items
     - id: ClothingNeckIFFNeutral
       prob: 0.2
+    - id: ASShoulderTaclight # Aurora
+      prob: 0.1
+    - id: ASHandheldTacticalFloodlight # Aurora
+      prob: 0.1
     # Bonus Loot T2
     - id: SpaceCash2500
       prob: 0.9
@@ -285,6 +297,10 @@
     # Items
     - id: ClothingNeckIFFNeutral
       prob: 0.2
+    - id: ASShoulderTaclight # Aurora
+      prob: 0.1
+    - id: ASHandheldTacticalFloodlight # Aurora
+      prob: 0.1
     # Bonus Loot T2
     - id: SpaceCash2500
       prob: 0.9

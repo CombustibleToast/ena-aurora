@@ -7,7 +7,7 @@
   - type: ContainerFill
     containers:
       key_slots:
-      - EncryptionKeyScience
+      # - EncryptionKeyScience  Aurora's Song
       - EncryptionKeyCommon
   - type: Sprite
     sprite: _DEN/Clothing/Ears/Headsets/mantis.rsi

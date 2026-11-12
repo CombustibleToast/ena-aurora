@@ -12,7 +12,6 @@
   supervisors: job-supervisors-sr
   weight: 100
   displayWeight: 40
-  canBeAntag: false
   access:
   - Service
   - Janitor
@@ -24,7 +23,7 @@
     holiday: GarbageDay
     prototype: NFWeaponRevolverInspector
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    implants: [ MindShieldImplant, TrackingImplant ] # Aurora's Song - Added tracking implant
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
